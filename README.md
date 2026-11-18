@@ -15,7 +15,7 @@ CrashGuard is a low-cost system that detects a vehicle crash on an ESP32 microco
 
 Author: Mritula S, B.Tech Cybersecurity and IoT, SRIHER. Academic, non-commercial project. Software only: the car and radio experiments are the author's and are not part of these results.
 
-## Honest status
+##status
 
 | Area | Status |
 |---|---|
