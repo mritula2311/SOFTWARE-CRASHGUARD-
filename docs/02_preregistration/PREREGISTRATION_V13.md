@@ -1,0 +1,95 @@
+# Preregistration V13: paper items P0 (H-C3 refit) and P1 (two-stage alert in ns-3), and two checks
+
+<!-- header:start -->
+| Field | Value |
+|---|---|
+| Status | current |
+| Date | 2026-11-15 |
+| Owner | Mritula S |
+| Scope | Hypotheses, settings, criteria and kill rules of the paper items P0 (refit of the H-C3 stress test on the development fold) and P1 (the two-stage alert R3 in ns-3), plus the zero-spacing duty check and the optional boot-epoch variant. |
+| Evidence labels used | MEASURED_SOFTWARE, TRACE_DRIVEN, SIMULATED, FORMAL, ANALYTICAL, NOT_RUN |
+| Abbreviations | ACK = acknowledgement frame; MAC = message authentication code; NHTSA = National Highway Traffic Safety Administration; OS-DR = overhear-and-suppress retries with deadlines; SF = spreading factor (LoRa); SW-420 = a vibration switch module; UA-SCT = uncertainty-aware SCT |
+<!-- header:end -->
+
+Date: 2026-11-15. Branch `final`, after tag `round3-v1`. Key prefix `pp.`. This file is committed before the P0 refit, the P1 ns-3 runs, the zero-spacing check and the Tamarin variant are run. Nothing in this file tunes an algorithm: the frozen code of tag `redesign-v1.1` (the two-stage alert of `ar_r3`, the early-exit decisions of `s6_early`, the generator of `fin_synth`) is used as it is. The decisions of Parts A and B listed at the top of the paper prompt are applied; where they conflict with the item text, the decisions win.
+
+Labels: MEASURED_SOFTWARE, SIMULATED, TRACE_DRIVEN, FORMAL, ANALYTICAL, NOT_RUN. No hardware label is used.
+
+## 0. What was looked at before this file
+
+The H-C3 code (`src/crashguard/fin_c.py`), its stored keys (`f.c.*`, `f.holm.hc3.*`), the provenance note in `docs/05_data_code/SYNTHETIC_PROVENANCE.md`, the ns-3 application (`xsim/ns3/xsim_alert.cc`), the custom-simulator two-stage code (`src/crashguard/ar_r3.py`) and the stored T1 results (`r3.t1.*`). No result of the refit and no ns-3 two-stage result existed when this file was written.
+
+## 1. P0: refit of the H-C3 stress test
+
+### 1.1 What the stored H-C3 read (provenance)
+
+The stored H-C3 verdict (`f.holm.hc3.*`, SUPPORTED, frontal barrier only) comes from `fin_c.main`: the generator was fitted to the descriptors of all 913 pooled NHTSA records (development, validation and sealed folds together), the fidelity check compared the generator with the same 913 records (in-sample), and the real smallest range was read from `p.b2.<mode>.smallest.config`, which is computed on the pooled records. The file `docs/03_results/H_C3_PROVENANCE.md` lists this with the code lines. The paper uses only the refit verdict below. The stored original is shown beside it and is not changed.
+
+### 1.2 Refit (rules fixed here)
+
+1. The generator (`fin_synth.fit` and `fin_synth.calibrate`, unchanged code, unchanged settings, seeds as in `fin_c`) is fitted to the descriptors of the NHTSA **development** fold only (543 records: `fold == dev` in `data/processed/pp_pool.joblib`).
+2. **Fidelity gate.** For each mode, the two-sample Kolmogorov-Smirnov statistic of each of the five descriptors (peak, duration, delta-V, asymmetry, shape) between the generator (1,000 pulses, seed block 500,000) and the real **validation and sealed** records of that mode (pooled, 370 records) must be at most 0.20 for all five (D_MAX as in V5). The statistic against the development fold (in-sample) is reported next to it and is not used for the decision. A mode that fails is excluded, as in V5.
+3. **Grid and criterion.** The sensor-range grid, the 1,000 synthetic pulses per passing mode (seed block 100,000), the 0.80 rule with the lower bootstrap bound, the ladder of ranges and the criterion are those of V5 H-C3: for every overlapping mode that passed (frontal barrier, pole), the smallest synthetic range is within one range step of the real result `p.b2.<mode>.smallest.config`. If no overlapping mode passes: NOT_RUN (the hypothesis then counts as not supported in the family; p = 1).
+4. **Holm.** H-C3 enters the 18-hypothesis family of V5 with p = 0.001 if the criterion holds in all passing overlapping modes and 1.0 otherwise (as in V5). The other 17 p-values are the stored ones. The Holm step is recomputed; a stored verdict is changed only inside the new keys `pp.p0.*`.
+5. Original and refit are reported side by side (fidelity statistics, passing modes, synthetic smallest range, step difference, verdict).
+6. The assumption-sensitivity variants (shift, family mix and others) are not rerun; they stay EXPLORATORY and refer to the stored original generator.
+
+### 1.3 Corrections from the release-finish list (F0)
+
+Checked against `results/results.json` and written into the paper macros, not changed in any tagged key: early-exit 5-seed mean recall gain +0.0155 (1% target) and +0.0015 (5% target), the seed-42 values +0.0300 and +0.00365 are not headline numbers; the +-32 g restoration gain over plain is 1.3 points (interval upper end just below zero), not a gain against the spline; OS-DR gained in 7 of 32 cells and lost in 8; -0.003 [-0.011, +0.003] belongs to P3 against P1e (N28), not to UA-SCT; the figure "SW-420 p = 0.125" is not used anywhere (no key supports it). Any document that still carries a stale value is corrected by an addendum in the same commit.
+
+## 2. P1: the two-stage alert R3 in ns-3
+
+### 2.1 Hypotheses (as in the combined run, V11 section 4)
+
+Provisional alert (flash, 14 bytes) sent at the early-exit decision, followed by the full 97-byte alert at the 1.8 s window or an authenticated CANCEL (14 bytes, three transmissions) when the full-window decision does not alarm. Per cell of the ns-3 scenario:
+
+- **H-P1a.** The provisional alert reaches the base at least 0.8 s earlier at the median: the paired difference (single-stage full-alert arrival minus flash arrival, same event index and run seed, in the two separate runs) over crash events that alarm in both stages and arrive in both runs, evaluated at extra loss p = 0 and p = 0.3; both medians must be at least 0.8 s.
+- **H-P1b.** Retractions are under 20% of the provisional alerts at the 1% false-alarm target. This clause depends on the detector only (not on any link or simulator); it is read from `ar.r3.a1.retraction_share` and is the same in every link model.
+- **H-P1c.** Extra transmit airtime (two-stage total over single-stage total, minus one) is under 40%, **and** the delivery of crash events by the two-stage scheme is not worse than the single-stage scheme by more than 2 points, at every loss p in {0, 0.1, 0.3, 0.6}.
+
+### 2.2 ns-3 settings (fixed here)
+
+| Item | Setting |
+|---|---|
+| Program | `xsim/ns3/xsim_alert.cc`, new policies `r3s` (single-stage) and `r3t` (two-stage); existing policies are untouched. ns-3.48 and the lorawan module as in `docs/03_results/XSIM_BUILD.md` |
+| Scenario | 60 vehicles in a disc of radius 1,500 m, one gateway at the centre, 97-byte confirmed alert (84-byte payload plus 13 bytes overhead), flash and CANCEL 14 bytes (1-byte payload), one simulated hour per run, Poisson events at 10 per vehicle-hour, no burst, heartbeats off, duty limit 1% (36 s per hour). Class A, one transmission per MAC call; receive windows 0.1 s and 0.2 s as for the application policies |
+| Base spreading factor | SF7 and SF9 (the two ns-3 can express in this module; SF11 and SF12 are not run) |
+| Calibration sensitivity settings | both settings of the redesign addendum: (a) the custom simulator's sensitivities compiled into the patched module (`--sensShipped=0`), (b) the shipped ns-3 values (`--sensShipped=1`) |
+| Extra loss | p in {0, 0.1, 0.3, 0.6} per direction (as `ar_r3`) on top of the path-loss model |
+| ADR and backoff | off (`SetUplinkAdrBit(false)`, no ADR in the network server); no application backoff |
+| Events | each ns-3 event takes one triggered de-duplicated VZCrash test event of seed 42 at the 1% target (`results/tables/s6_events_seed42_a1.csv`: alarm of the early-exit rule, alarm of the full-window forest, label, decision time of the early-exit rule), drawn uniformly with a hash of (run seed, event index), the same draw in `r3s` and `r3t`. Non-crash triggered events send flashes and CANCELs as well and count in airtime |
+| Timing | single-stage: the full alert is ready at 1.808 s after the crash if the full-window forest alarms. Two-stage: the flash is ready at the early decision time plus 0.008 s if the early rule alarms; the full alert is ready at 1.808 s if the full-window forest alarms; if the early rule alarmed and the full-window forest does not, three CANCEL transmissions follow at 1.808 s, 0.3 s apart (unconfirmed) |
+| Retry | a confirmed message is repeated at once after a failed outcome, at most 4 transmissions per message. One radio: messages of one vehicle are sent in order, so the full alert waits for a flash still in progress. A new event of a vehicle that still has messages pending is dropped; the dropped events are counted per run and removed from both runs of that seed |
+| Runs | seeds 1 to 60 for each cell and policy (the two policies share the seed, hence the events and the draw of vehicle positions), 2 policies x 2 SF x 2 settings x 4 losses x 60 runs = 1,920 runs |
+| Reception time | the earliest reception of the message at the gateway (not the ACK), measured from the crash instant, as in the other ns-3 scenarios |
+| Delivery of a crash event | single-stage: the full alert is received. Two-stage: the full alert is received, or, when the early rule alarmed and the full-window forest did not, the flash is received and none of the three CANCEL messages is received (as in `ar_r3`) |
+| Airtime | transmit seconds of all messages of the events, from the PHY transmission log |
+
+### 2.3 Statistics
+
+Clusters are runs (one hour each). A bootstrap resamples runs with replacement (2,000 resamples, seed 42) and recomputes the median of the pooled paired differences (H-P1a), the airtime ratio (ratio of sums) and the delivery difference (H-P1c). One-sided bootstrap p = (count + 1) / (resamples + 1), floor 0.0005. For H-P1a the p-value of a cell is the larger of the two losses; for H-P1c the largest of the airtime and delivery p-values over the four losses.
+
+**Holm family:** the 8 tests H-P1a and H-P1c in each of the 4 cells (SF7 and SF9, two sensitivity settings), family size 8 (at most 10). H-P1b is a data-side clause and is not in the family.
+
+### 2.4 Verdicts and the cross-simulator rule
+
+- **ns-3 verdict "R3 holds in ns-3":** H-P1b holds and all 8 tests are SUPPORTED (point criterion met and Holm-adjusted p below 0.05). "Partly": H-P1b holds and at least one cell passes both of its tests. Otherwise "does not hold in ns-3".
+- **Main-text rule (decision 4 of the paper prompt, which overrides the item text):** the two-stage alert is in the main text if it holds in at least two of three link models (custom simulator: `ar.holm.hr3`; trace-driven: T1c and T3; ns-3: this item), and the ns-3 verdict is printed either way. If it holds in fewer than two, it goes to the supplement as simulator-dependent.
+- A cross-simulator verdict table lists, per clause, the custom simulator, the trace-driven result and each ns-3 cell. NOT_RUN is a verdict, not a failure.
+
+### 2.5 Kill rules
+
+If the ns-3 program does not build or a policy cannot be expressed, the item is NOT_RUN with the reason, and R3 is counted as holding in two of three link models with ns-3 NOT_RUN. If more than 5% of events are dropped in a cell, the cell is reported and the verdict for that cell is marked UNRELIABLE (it counts as not holding). If a run records a transmission that exceeds the duty limit, the run is reported and excluded with its pair.
+
+## 3. Zero-spacing control check (decision 1)
+
+Before the paper states that D1's trace gain is retry timing, the exploratory control Z0 (retry at once, no hold, base spreading factor, 12 tries; `r3_t1`, key `r3.t1.explore.*`) is checked on the held-out devices: (a) every Z0 delivery is within the same 10 s deadline (invariant `late_delivery`); (b) the airtime of Z0 per alert and per device, as a share of the 36 s hourly budget of the 1% limit and of the 10% limit named in the paper prompt, with the maximum possible airtime of a Z0 alert (12 transmissions) and the number of such alerts per hour that would exhaust the 1% budget. **Rule:** Z0 is valid if no single Z0 alert can exceed the 1% hourly budget and the deadline invariant holds. If a single Z0 alert can exceed it, Z0 is marked invalid and the paper says so. The 1% budget used throughout the repository is stricter than the 10% in the prompt: both are reported. Keys `pp.c6.z0.*`.
+
+## 4. Optional: boot-epoch variant for the car-reboot lemma (time-boxed to 2 hours)
+
+The lemma "an alert id (epoch, sequence) sent before a car reboot is never reused after it" (L5, `formal/crash_alert_fresh.spthy`) was not proved or refuted. Variant: the car keeps a boot-epoch counter in one non-volatile write per boot and adds it to the alert id; the freshness model of `crash_alert_fresh.spthy` is copied, the id becomes (boot counter, epoch, sequence), and the same lemma is tried with the same tool settings (Tamarin 1.12.0, Maude 3.5.1, single thread, 5 GB). It is a **design variant**, not a change to the frozen design. Whatever the outcome (proved, refuted, not finished within the limits), it is reported as such under `pp.c4.variant.*` with label FORMAL, and the variant model file is added to the supplement.
+
+## 5. Not done in this file
+
+No hardware measurement, no tuning, no new hypothesis outside this file. Items P2 to P6 of the paper prompt write and check documents from stored results only.

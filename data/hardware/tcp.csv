@@ -1,0 +1,6 @@
+metric,value,unit,origin
+connect_time,40,ms,HARDWARE
+avg_latency,2,ms,HARDWARE
+packet_size,78,bytes,HARDWARE
+throughput,312,bps,HARDWARE
+loss,0,pct,HARDWARE

@@ -1,0 +1,155 @@
+# Round 3 results: simulator-independent evidence (T1 to T4)
+
+<!-- header:start -->
+| Field | Value |
+|---|---|
+| Status | current |
+| Date | 2026-11-14 |
+| Owner | Mritula S |
+| Scope | Round 3 results: trace-driven replay, Tamarin and timed checks, two-stage alert on real crash data, energy budget. |
+| Evidence labels used | MEASURED_SOFTWARE, TRACE_DRIVEN, SIMULATED, FORMAL, ANALYTICAL, NOT_RUN |
+| Abbreviations | ACK = acknowledgement frame; CPU = central processing unit; CRC = cyclic redundancy check; ESP32 = a Wi-Fi microcontroller family (Espressif); GPS = Global Positioning System; LoRa = long-range radio modulation; NHTSA = National Highway Traffic Safety Administration; RSSI = received signal strength indicator; SNR = signal-to-noise ratio; UA-SCT = uncertainty-aware SCT; WSL = Windows Subsystem for Linux |
+<!-- header:end -->
+
+Hypotheses, thresholds and kill criteria are in `docs/02_preregistration/PREREGISTRATION_V14.md` (committed before any T1, T2 or T3 run). Branch `final`; all algorithms are the frozen ones of `redesign-v1.1`; nothing was tuned. Labels: TRACE_DRIVEN, FORMAL, MEASURED_SOFTWARE, SIMULATED, ANALYTICAL, NOT_RUN. No hardware data is used.
+
+## T1. Trace-driven replay on LoED (TRACE_DRIVEN)
+
+Data: LoED (Zenodo record 4121430, CC BY 4.0; arXiv 2010.14211): 188 daily files, 8,055,823 frames kept after the CRC, counter and message-type filters, 8,503 device addresses seen. 2,975 devices have at least 300 frames and an admissible start position (5,363 have fewer than 300 frames; 165 have no segment of at least 41 frames). Split by hashed device address: 1,543 DEVELOPMENT, 1,432 HELD-OUT. The second dataset (Brno and Tampere authors, Zenodo 6228358, CC BY 4.0) holds one device (1,527 messages), so no split by device is possible; it is not used.
+
+### Link statistics (what the custom simulator assumed away)
+
+| Half | Devices | Loss below 10% (L) | 10% to 40% (M) | 40% or more (H) | Loss quantiles 5, 25, 50, 75, 95% | Pooled loss | P(loss, next frame lost) | Ratio to pooled | Lag-1 autocorrelation | Mean burst (frames) | Bursts of 2 or more |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| DEVELOPMENT | 1,543 | 51 | 105 | 1,387 | 0.15, 0.67, 0.87, 0.93, 0.96 | 0.722 | 0.818 | 1.13 | 0.320 | 5.5 | 67% |
+| HELD-OUT | 1,432 | 45 | 90 | 1,297 | 0.15, 0.68, 0.87, 0.93, 0.96 | 0.702 | 0.821 | 1.17 | 0.391 | 5.6 | 67% |
+
+Median RSSI -106 dBm and SNR -4.0 dB over all kept frames (5th percentile -115 dBm and -13.2 dB). Losses are positively correlated from frame to frame (a lost frame is followed by another lost frame more often than the pooled loss rate says), which the independent-loss simulator did not have. Most devices are weak links: the union over nine gateways still misses most of their frames, and 90% of the HELD-OUT devices fall in group H. Group L holds 45 devices and group M 90, so their tests are the least precise.
+
+### Delivery of a Critical alert within 10 s on HELD-OUT devices (mean over devices of the mean over 300 start frames)
+
+| Policy | L (45 devices) | M (90 devices) | H (1,297 devices) | H, 95% interval | Transmissions per alert, H |
+|---|---|---|---|---|---|
+| D1 | 99.8% | 95.8% | 49.3% | 47.8% to 50.8% | 5.01 |
+| quick retries | 99.7% | 94.4% | 42.7% | 41.2% to 44.1% | 3.88 |
+| severity table | 99.6% | 91.5% | 32.8% | 31.6% to 34.1% | 3.26 |
+| UA-SCT | 99.1% | 87.4% | 25.6% | 24.5% to 26.7% | 1.84 |
+| fixed 3 retries | 99.6% | 91.5% | 32.8% | 31.6% to 34.1% | 3.26 |
+| LoRaWAN-style confirmed uplink | 99.6% | 91.7% | 33.4% | 32.1% to 34.7% | 2.76 |
+| Nessa-style | 99.7% | 94.4% | 42.7% | 41.2% to 44.1% | 4.06 |
+| zero-spacing control (EXPLORATORY, not preregistered) | 99.9% | 96.1% | 54.0% | | 5.98 |
+
+### Hypotheses (preregistered in V14)
+
+| Hypothesis | Result | Interval | Raw p | Verdict (Holm, 7 tests) |
+|---|---|---|---|---|
+| H-T1a, group L: D1 not worse than the best baseline (quick) by more than 2 points | best minus D1 = -0.1 points | -0.2 to 0.0 points (upper limit at most 2) | below 0.001 | SUPPORTED |
+| H-T1a, group M: D1 not worse than the best baseline (quick) by more than 2 points | best minus D1 = -1.4 points | -2.1 to -0.8 points (upper limit at most 2) | below 0.001 | SUPPORTED |
+| H-T1a, group H: D1 not worse than the best baseline (quick) by more than 2 points | best minus D1 = -6.7 points | -6.8 to -6.5 points (upper limit at most 2) | below 0.001 | SUPPORTED |
+| H-T1b: D1 beats quick retries by at least 2 points on group H | D1 minus quick = 6.7 points | 6.5 to 6.8 points | below 0.001 | SUPPORTED |
+| H-T1c: the provisional alert of R3 stays within the R3 bounds on the traces (all three groups) | median earlier 1.87 s (L), 1.87 s (M), 1.87 s (H); extra airtime 37%, 33%, 31% (upper limits 39%, 35%, 31%); delivery difference 0.1, 1.8, 9.2 points | lower limits of the delivery difference 0.0, 1.2, 9.0 points | about 0.002 | SUPPORTED |
+
+### How to read it (limits stated before the run and one found by the control)
+
+- **Delivery on the replay is decided by the number of attempts that finish before the deadline.** Attempt k sees the reception state of frame s + k, so the spacing of retries (seconds) and the spreading factor have no effect on reception, and nothing penalises an aggressive policy: there is no crowd, no collision and no duty sharing in a single-link replay. Quick retries and the Nessa-style policy have the same delivery on every device because both complete five attempts; the severity table and fixed 3 retries have the same delivery because both hold 5 s and complete four.
+- **The zero-spacing control** (retry at once, no hold, base spreading factor, up to 12 tries; added after the HELD-OUT run to separate retry timing from anything else, so it is EXPLORATORY and outside the Holm family) delivered 54.0% on group H, above D1 (49.3%). D1's gain over quick retries on the traces therefore comes from shorter retry spacing and more attempts, not from a mechanism that the traces can show; the traces cannot show the value of load-aware spacing, which is what D1's table is for.
+- The traces are uplink receptions, not ACK exchanges; downlink loss follows from the uplink loss rate (symmetric links); the devices are mostly static sensors, not vehicles; the union over nine gateways counts frames not heard by any gateway, so an idle gateway inflates loss; frames are seconds to hours apart, so loss at the scale of a retry is not observed.
+- The ns-3 result (D1 gain not reproduced, V12 addendum C) and this one agree on the point that matters for the claim: D1's advantage is not established beyond retry timing.
+
+## T2. Formal guarantees (FORMAL)
+
+### T2.1 Security models (Tamarin 1.12.0, Maude 3.5.1, WSL Ubuntu 24.04, one thread)
+
+Models: `formal/crash_alert_auth.spthy` (final design M1, per-vehicle key kdf(master, vehicle), ACK bound to vehicle id and alert field; built with `-D=M0` for the earlier shared-key design, in which one cell key signs both alerts and ACKs) and `formal/crash_alert_fresh.spthy` (GPS-epoch freshness with a window of two epochs, an unbounded seen-set, sequence-in-second numbers s1 to s3, car reboot, base reboot, and the no-time fallback alert). Tool output: `formal/out/`. The models are symbolic with perfect cryptography; they say nothing about the implementation. The seen-set is unbounded (ring eviction is quantified in R1, not here), and the base counter check of the no-time alert is not modelled.
+
+| Lemma | Model | Result | Expected (V14) |
+|---|---|---|---|
+| auth | M1 | verified | verified |
+| L1 alert authenticity | M1 | verified | verified |
+| L2 ACK authenticity per vehicle | M1 | verified | verified |
+| L3 no cross-vehicle suppression | M1 | verified | verified |
+| L1 on the shared-key design | M0 | falsified | falsified |
+| L2 on the shared-key design | M0 | falsified | falsified |
+| L3' cell-wide ACK suppression found on the shared-key design | M0 | falsified | falsified |
+| executable (time-stamped alert accepted) | M1 | verified | verified |
+| executable after a car reboot | M1 | verified | verified |
+| L4 replay outside the window | M1 | verified | verified |
+| L4b at most one acceptance while the seen-set is intact | M1 | verified | verified |
+| L5 no double acceptance with a car reboot | M1 | verified | verified |
+| L5 alert ids not reused after a car reboot | M1 | timeout | verified |
+| L5 alert ids not reused after a car reboot, at most 3 ticks | M1 (3 ticks) | timeout | verified |
+| L6 replay inside the window after a base reboot | M1 | falsified | falsified |
+| L7 a no-time alert can be accepted epochs after it was sent | M1 | verified | verified |
+
+Reading: on M1 the tool proves that an accepted alert was sent by that vehicle (L1), that a car stops only on an ACK for its own accepted alert (L2), that a node compromised elsewhere cannot stop another vehicle (L3), that a time-stamped alert is accepted only in its own or the next epoch (L4), that no alert is accepted twice while the seen-set is intact (L4b) and that this holds across a car reboot. On M0 it finds the attack: with one cell key, a compromised node can sign an ACK for any alert and stop a vehicle that the base never heard (and can also sign alerts as another vehicle). L6 is refuted as expected: after a base reboot a replay inside the window is accepted again. L7 shows that a no-time alert can be accepted epochs after it was sent (no window for that mode).
+
+**Not proved.** The lemma that an alert id (epoch and sequence number) sent before a car reboot is never reused after it did not finish: no result within 294 s (default search) and 421 s (at most three ticks); an induction variant of the earlier formulation timed out at 522 s. There is no proof and no counterexample, so H-T2sec as written (L1 to L5 proved) is NOT met; the part that is proved is stated above, and the argument for ids (boot takes at least one second, so the epoch differs) stays an argument, not a tool result. The numbers of the runs are in `formal/out/`.
+
+### T2.2 Timed guarantee (FORMAL by exhaustive enumeration; the tool is not UPPAAL)
+
+UPPAAL could not be used (academic licence and a registration step that this run cannot complete). The retry logic is a deterministic automaton over time on air, listen windows, holds and the duty gate, so the frozen policy code was enumerated exhaustively: D1 over all 4,096 failure histories of the 12 rounds before the alert, all loss patterns of the leading 8 attempts, and 0 to 35 s of airtime already used in the hour (`r3_t2_timed.py`). Random gaps take the end of their support (the worst case). Crash at 0, deadline 10 s, SF9, 1% duty. Worst-case time from the crash to reception at the base when the initial k uplinks are lost (inf = not delivered before the deadline):
+
+| Policy | k = 0 | 1 | 2 | 3 | 4 | 5 | 6 |
+|---|---|---|---|---|---|---|---|
+| D1 | 2.38 s | 3.32 s | 4.71 s | 6.31 s | 7.46 s | 8.39 s | 9.79 s |
+| quick retries | 2.38 s | 3.62 s | 5.31 s | 7.21 s | 9.11 s | inf | inf |
+| severity table | 7.38 s | 8.32 s | 9.26 s | inf | inf | inf | inf |
+| UA-SCT | 2.38 s | 8.32 s | inf | inf | inf | inf | inf |
+| fixed 3 retries | 7.38 s | 8.32 s | 9.26 s | inf | inf | inf | inf |
+| LoRaWAN-style confirmed uplink | 2.38 s | 6.32 s | inf | inf | inf | inf | inf |
+| Nessa-style | 2.38 s | 3.45 s | 5.39 s | 7.44 s | inf | inf | inf |
+
+H-T2: D1's worst case is not longer than quick retries' for every k from 0 to 6 (holds); no run of 134,144 exceeded the 36 s hourly allowance (0 breaches). Quick retries cannot deliver within 10 s after 5 or 6 initial losses; D1 can (9.79 s at k = 6), because it retries at once and keeps the base spreading factor in the worst case. This is a statement about the frozen policy code in a single-link model with the stated timing, not about a radio; the check agrees with the trace result that D1's advantage is more attempts inside the deadline.
+
+## T3. Two-stage alert on real crash data (MEASURED_SOFTWARE)
+
+Data: the de-duplicated VZCrash test split, stored per-event decisions of `s6_early` (seed 42; thresholds chosen on validation; no refit; the split was already scored once by `s6_early` and used again by R3), and the NHTSA pulses of `nhtsa.py`.
+
+| Target | Triggered events | Crash events that alarm in both stages | Median provisional decision | Median earlier than the full decision (95% interval) | Retraction share (95% interval) |
+|---|---|---|---|---|---|
+| 1% false alarms | 5,750 | 2,397 | 50 ms | 1750 ms (1750 to 1750) | 10.8% (9.7% to 12.0%) |
+| 5% false alarms | 5,750 | 3,809 | 100 ms | 1700 ms (1700 to 1700) | 1.2% (0.9% to 1.5%) |
+
+At the 1% target 67% of those crash events are decided at the 50 ms checkpoint, 12% at 100 ms, 6% at 200 ms, 3% at 400 ms and 5% at 800 ms. H-T3a (SUPPORTED): the median provisional decision is 1750 ms earlier than the full decision (lower limit 1750 ms, bound 800 ms). H-T3b (SUPPORTED): the retraction share is 10.8% with an upper limit of 12.0%, bound 20%.
+
+### Severity class of the provisional window against the full window
+
+VZCrash: 2,647 crash events with a provisional alarm; class agreement 99.8% (99.7% to 100.0%). This carries almost no information: VZCrash has no severity labels and the computed full-window class is 0 for nearly every event (counts of classes 0 to 3: {"0": 2643, "1": 4, "2": 0, "3": 0}).
+
+NHTSA pulses (sensor model at 16 g and 100 Hz; class from `severity.py`), share of pulses whose class from the window truncated at the given length equals the class from the full window:
+
+| Pulses | n | 50 ms | 100 ms | 200 ms | 400 ms | 800 ms | Weighted by the VZCrash decision times |
+|---|---|---|---|---|---|---|---|
+| frontal barrier | 116 | 3% | 36% | 98% | 100% | 100% | 19% |
+| side impactor | 60 | 52% | 97% | 100% | 100% | 100% | 60% |
+
+The two-stage alert is early because most provisional decisions are made at 50 ms, and at that length the truncated window does not yet carry the severity class of a frontal crash (it agrees for about 3% of the frontal pulses); the 14-byte flash of R3 does not carry a class, so the design does not depend on it, but a severity-carrying provisional alert would have to wait for 200 ms. Time to decision on the NHTSA pulses is NOT_RUN: no early-exit detector is trained on them, and applying the VZCrash-trained forest would be an unplanned transfer test.
+
+H-T3c (SUPPORTED): the end-to-end earlier arrival (median at least 0.8 s) holds in 2 of 3 link models: the custom simulator (`ar.r3`, SIMULATED), and the trace-driven replay (T1c, TRACE_DRIVEN, median 1.87 s); ns-3 is NOT_RUN (the ns-3 application has no two-stage alert) and counts as not holding.
+
+## T4. Post-crash survivability budget (ANALYTICAL)
+
+Inputs read in opened documents (2026-11-15): SX1276/77/78/79 datasheet Rev. 4 (Semtech, March 2015; copy hosted by Adafruit): transmit current 120 mA at +20 dBm and 87 mA at +17 dBm (PA_BOOST), 29 mA at +13 dBm and 20 mA at +7 dBm (RFO), LoRa receive 11.5 mA at 125 kHz; ESP32 Series Datasheet v5.3 (Espressif), Table 4-2: CPU on with the radio off, 160 MHz, 27 to 44 mA (44 mA used), deep sleep 10 uA; u-blox NEO-6 data sheet GPS.G6-HW-09005-E, Table 11: NEO-6M tracking 39 mA, acquisition 47 mA at 3.0 V. ASSUMPTIONS, not read in an opened document: 3.3 V at the three parts; converter efficiency 0.85; a capacitor usable from 5.0 V down to 3.0 V; no ESR loss; GPS already tracking; the node awake from the crash to the end of the schedule. No hypothesis is tested.
+
+Energy drawn from the store for one Critical alert schedule at +17 dBm (all uplinks lost up to the 10 s deadline; and delivery after k lost uplinks), and the smallest capacitor that supplies the all-lost schedule:
+
+| Policy | All lost: energy | Transmissions | Smallest capacitor | k = 0 | k = 2 | k = 4 | k = 6 |
+|---|---|---|---|---|---|---|---|
+| D1 | 4.97 J | 8 | 0.62 F | 0.95 J | 1.95 J | 2.95 J | 3.95 J |
+| quick retries | 4.70 J | 5 | 0.59 F | 0.95 J | 2.44 J | 4.38 J | 4.70 J (not delivered) |
+| severity table | 4.08 J | 4 | 0.51 F | 2.56 J | 3.56 J | 4.08 J (not delivered) | 4.08 J (not delivered) |
+| UA-SCT | 3.62 J | 2 | 0.45 F | 0.95 J | 3.62 J (not delivered) | 3.62 J (not delivered) | 3.62 J (not delivered) |
+| fixed 3 retries | 4.08 J | 4 | 0.51 F | 2.56 J | 3.56 J | 4.08 J (not delivered) | 4.08 J (not delivered) |
+| LoRaWAN-style confirmed uplink | 3.90 J | 3 | 0.49 F | 0.95 J | 3.90 J (not delivered) | 3.90 J (not delivered) | 3.90 J (not delivered) |
+| Nessa-style | 4.55 J | 5 | 0.57 F | 0.95 J | 2.31 J | 4.55 J (not delivered) | 4.55 J (not delivered) |
+
+Usable energy of the stated capacitors: 0.22 F: 1.76 J, 0.47 F: 3.76 J, 1.0 F: 8.00 J, 2.2 F: 17.60 J. Most of the energy is the ESP32 and the GPS staying awake for the 10 s window (about 3.2 J), not the radio: the policies differ by about 1 J. At +17 dBm a 1 F capacitor supplies every policy's full schedule; a 0.47 F capacitor supplies none of the all-lost schedules but supplies a delivery after up to six losses for D1 (3.95 J). At +20 dBm the all-lost schedules need 3.8 J to 5.6 J. This depends on the assumed converter and voltage window and on keeping the GPS powered.
+
+## Deviations from the preregistration and slips (also in DECISIONS.md)
+
+- T2.2 used exhaustive enumeration of the frozen code instead of UPPAAL (not obtainable); TChecker was not built (time).
+- The L5 id-uniqueness lemma was reformulated once after the earlier formulation timed out (the formulation in V14 was the statement that alert ids are unique across reboots); neither formulation finished.
+- A zero-spacing control policy was added to T1 after the HELD-OUT run and is labelled EXPLORATORY; the preregistered numbers were recomputed after its addition and are unchanged (all 167 stored keys equal).
+- `replay_alert` gained two optional arguments (initial airtime used, a transmission trace) after the T1 run, for T2.2 and T4; the T1 results were recomputed and are unchanged.
+- The T1 population is dominated by weak links (90% of HELD-OUT devices in group H); the group limits were fixed before the loss rates were computed and were not changed.
+- T3 reuses the stored seed-42 decisions on the de-duplicated test split, which `s6_early` and R3 had already used; no model was refitted.

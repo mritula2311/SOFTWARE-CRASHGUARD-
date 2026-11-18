@@ -1,0 +1,3 @@
+*.sh text eol=lf
+c_bundle/** -text
+data/simulated_hardware/** -text

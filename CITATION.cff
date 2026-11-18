@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below. No DOI has been issued."
+title: "CrashGuard: evaluation, benchmark and audit software for ESP32 crash detection and LoRa alerting"
+type: software
+authors:
+  - family-names: "S"
+    given-names: "Mritula"
+    affiliation: "SRIHER"
+license: Apache-2.0
+repository-code: "https://github.com/mritula2311/SOFTWARE-CRASHGUARD-"
+abstract: "Software and data-science part of CrashGuard: severity estimation from clipped crash pulses, a compact crash detector, a LoRa alert-delivery simulator, a protocol model check and a duplicate audit. The code is Apache-2.0. Data derived from VZCrash are CC BY-NC 4.0."
+keywords:
+  - crash detection
+  - LoRa
+  - benchmark
+  - audit
+date-released: "2026-11-13"

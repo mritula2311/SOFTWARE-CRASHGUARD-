@@ -1,0 +1,10 @@
+{
+  "title": "CrashGuard: evaluation, benchmark and audit software for ESP32 crash detection and LoRa alerting",
+  "upload_type": "software",
+  "description": "Software and data-science part of CrashGuard (B.Tech project, SRIHER). Code is Apache-2.0. Artefacts derived from the VZCrash dataset (surrogate-generator parameters, audit lists) are CC BY-NC 4.0 with attribution to the VZCrash authors; raw third-party data are not included. Hardware results are not part of this release.",
+  "creators": [{"name": "S, Mritula", "affiliation": "SRIHER"}],
+  "license": "Apache-2.0",
+  "access_right": "open",
+  "keywords": ["crash detection", "LoRa", "benchmark", "audit", "ESP32"],
+  "notes": "No DOI is claimed in the repository; Zenodo issues one on release. VZCrash-derived files in release/ carry CC BY-NC 4.0."
+}

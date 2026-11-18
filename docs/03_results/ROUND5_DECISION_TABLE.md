@@ -1,0 +1,35 @@
+# Round 5 decision table, session 1
+
+<!-- header:start -->
+| Field | Value |
+|---|---|
+| Status | current |
+| Date | 2026-11-15 |
+| Owner | Mritula S |
+| Scope | One row per round-5 hypothesis tested so far: result, label, Holm-adjusted p, nearest prior work, allowed wording and destination. |
+| Evidence labels used | MEASURED_SOFTWARE, SIMULATED_HW_FORMAT, SIMULATED, FORMAL, ANALYTICAL, NOT_RUN |
+| Abbreviations | ACK = acknowledgement frame; MCU = microcontroller unit; NHTSA = National Highway Traffic Safety Administration; SF = spreading factor (LoRa) |
+<!-- header:end -->
+
+One row per hypothesis tested so far. Holm over the family of 13 (V16 section 9). Allowed wording is the most that the evidence supports; nearest prior work is from `NOVELTY_MATRIX_2021PLUS.md` (abstract level).
+
+| Hypothesis | Algorithm | Statement | Result | Label | p (raw) | p (Holm) | Verdict | Nearest prior work | Allowed wording | Where it goes |
+|---|---|---|---|---|---|---|---|---|---|---|
+| H-L1 | L1 | side accuracy at least 0.90 under every physical installation and NHTSA balanced accuracy at least 0.90 | 0.986 pooled (lowest installation 0.95); NHTSA 0.975 | SIMULATED_HW_FORMAT, MEASURED_SOFTWARE | < 1e-9 | < 1e-9 | supported | gravity-aided alignment in navigation; no crash side-rule use found | In simulated logs and on real pulses under synthetic rotations, a gravity and braking-direction calibration restores the side rule; mirror images are not recovered | main text candidate |
+| H-L2a | L2 | near-miss false-alarm rate falls by 25% at equal recall | relative change -0.545 | MEASURED_SOFTWARE | 0.9615 | 1.0000 | not supported | user or time-gate confirmation (abstract level) | Post-event speed, stillness and orientation features did not lower the near-miss false-alarm rate | negatives register |
+| H-L2b | L2 | retraction share falls by 3 points at equal budget and recall | fall 0.014 | MEASURED_SOFTWARE | 0.0675 | 0.4723 | not supported | same | The retraction share fell by 1.4 points, below the 3 required | negatives register |
+| H-L3 | L3 | recall within 1 point and at least 50% lower energy | recall loss -0.022; energy ratio 0.247 | MEASURED_SOFTWARE, ANALYTICAL | 0.0005 | 0.0050 | supported | threshold wake-up before a classifier is common in fall detection | On VZCrash clips, an accelerometer-only FIFO with the gyro off in idle kept recall; the estimated sensor and MCU current is lower by a large margin if the active share is as measured on dataset clips (analytical, datasheet currents) | main text candidate with limits |
+| H-L4 | L4 | ladder gains 3 points near the SF7 edge, no cell worse by 1 point | edge gain 0.098; worst lower limit -0.0090 | SIMULATED (ns-3 only) | 0.0005 | 0.0050 | supported | SF escalation after failures is standard (SF12 Well); `quick` exists | In ns-3 a spreading-factor ladder raised delivery within 10 s near the SF7 range edge; not confirmed in a second simulator | supplement |
+| H-L5 | L5 | co-designed point lowers P90 time to awareness by 10% in two of three link models | no change in any model | MEASURED_SOFTWARE + link-model labels | 1.0000 | 1.0000 | not supported | none found | No gain from re-choosing the early-exit thresholds at a fixed confirm stage | negatives register |
+
+| H-L6 | L6 | crash-weighted placement covers 10 points more 2022 crashes than population-weighted at every k | difference 1.1, 1.8, 3.4, 5.6 points at k = 50, 100, 200, 400 | MEASURED_SOFTWARE, ANALYTICAL | 0.0005 | 0.0050 | not supported | gateway placement by coverage and clustering (title level); none by crash locations found | Crash-weighted placement covered more held-out crashes than population-weighted placement at every k, by 2 to 6 points under an assumed 4 km range; the margin of 10 points was not reached | negatives register (margin not met) |
+| H-L7a | L7 | Tamarin proves forward secrecy, authenticity and ACK binding of the ratchet | executable undecided: time limit, forward_secrecy undecided: 5 GB heap exhausted, authenticity undecided: 5 GB heap exhausted, ack_binding not run: time box ended | FORMAL (bounded: three keys, window 0, no boot) | 1.0000 | 1.0000 | not supported | hash-chain key updates for LoRaWAN (title level) | Bounded model of the ratchet: see the outcomes; no claim beyond the proved lemmas and three keys | supplement |
+| H-L7b | L7 | resynchronisation within the window of 8 for every enumerated sequence | 1,398,101 sequences, no violation | FORMAL (exhaustive enumeration) | < 1e-9 | < 1e-9 | supported | as above | For every event sequence of length up to 10 the base accepts exactly when the gap is within 8; only reboots open a gap | supplement |
+| H-L8a | L8 | at most R = 6 high-confidence forwards per hour from one compromised vehicle | maximum 6 over 232,966 states | FORMAL (exhaustive bounded model; true by construction of the counter) | < 1e-9 | < 1e-9 | supported | misbehaviour detection by position plausibility (title level) | An invariant of the counter and quarantine machine; not a proof about position arithmetic | supplement |
+| H-L8b | L8 | no legitimate alert is quarantined in the replay | 1 of 2,000 vehicle-hours quarantined | SIMULATED + MEASURED_SOFTWARE rate | 1.0000 | 1.0000 | not supported | as above | A per-minute spacing rule quarantines a legitimate vehicle about once in 2,000 vehicle-hours at the measured rate | negatives register |
+| H-L10a | L10 | a further benchmark has more than 1% identical test windows | UCI HAR 0 identical, SisFall random split 0 identical | MEASURED_SOFTWARE | 1.0000 | 1.0000 | not supported | benchmark audits for other data types (title level) | In UCI HAR and SisFall no exact duplicate windows were found across splits; C1 is not general across these two sets | main text as a narrowing of C1 |
+| H-L10b | L10 | removing leaked windows changes a baseline by more than 1 point | NOT_RUN (no leak found) | NOT_RUN | 1.0000 | 1.0000 | not supported | - | - | not applicable |
+
+L11 (ADDED-AFTER-SESSION-1, own family of one, outside the family of 13): H-L11a not supported; both-channel mirrors detected in 100% of 100 held-out installations (false detection 0%); accelerometer-only flips of x and y in 57% and 89%, below the 95% required. Label MEASURED_SOFTWARE (real signals, synthetic transformations). Goes to the negatives register for the preregistered criterion; the both-channel result is reported as a limited finding next to L1.
+
+Not run (reasons in the result keys `r5.notrun.*`): L3 NHTSA side accuracy (equal by construction), the custom-simulator part of L4, seeds 0 to 4, the 5% run of L5, the road-length and LoED-calibrated parts of L6, H-L10b, H-L11b.

@@ -1,0 +1,16 @@
+numpy==1.26.4
+pandas==2.2.2
+pyarrow==16.1.0
+scipy==1.13.1
+scikit-learn==1.5.1
+lightgbm==4.4.0
+matplotlib==3.9.2
+datasets==2.20.0
+huggingface_hub==0.24.5
+pytest==8.3.2
+hypothesis==6.112.1
+ruff==0.5.7
+ziglang==0.17.1
+# CPU wheel for the 1D CNNs of the positive-results push: pip install torch==2.15.0 --index-url https://download.pytorch.org/whl/cpu
+torch==2.15.0
+cryptography==50.0.0  # used by rd_firmware and rd_policy (added in the final verification run; it was missing from the pins)

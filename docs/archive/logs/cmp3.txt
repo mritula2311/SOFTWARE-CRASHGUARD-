@@ -1,0 +1,26 @@
+99661 entries in A, 99639 in B, 25 differ (relative tolerance 1e-06)
+  export.decision_agreement: 1.0 | ABSENT
+  export.equivalence_passes: True | ABSENT
+  export.max_abs_diff: 1.858075479033161e-07 | NOT_RUN
+  export_severity.nhtsa.c.class_mismatches: 0 | ABSENT
+  export_severity.nhtsa.c.max_abs_diff.asi: 4.0582418470158643e-07 | ABSENT
+  export_severity.nhtsa.c.max_abs_diff.dv_res_kmh: 1.3526733212643194e-05 | NOT_RUN
+  export_severity.nhtsa.c.max_abs_diff.peak_pulse_g: 2.1994326822039056e-06 | ABSENT
+  export_severity.nhtsa.c.max_abs_diff.pulse_ms: 1.52587890625e-05 | ABSENT
+  export_severity.nhtsa.c.max_abs_diff.thiv_kmh: 9.069358405611183e-06 | ABSENT
+  export_severity.nhtsa.c.max_abs_diff.tilt_corrected_deg: 0.0005351279895501326 | ABSENT
+  export_severity.nhtsa.c.max_abs_diff.tilt_deg: 0.02797645516693592 | ABSENT
+  export_severity.nhtsa.c.roll_correction_applied_mismatches: 0 | ABSENT
+  export_severity.nhtsa.c.rollover_flag_mismatches: 0 | ABSENT
+  export_severity.nhtsa.c.thiv_hit_mismatches: 0 | ABSENT
+  export_severity.vzcrash_test.c.class_mismatches: 0 | ABSENT
+  export_severity.vzcrash_test.c.max_abs_diff.asi: 3.0657410665657636e-07 | ABSENT
+  export_severity.vzcrash_test.c.max_abs_diff.dv_res_kmh: 1.8026044857677448e-05 | NOT_RUN
+  export_severity.vzcrash_test.c.max_abs_diff.peak_pulse_g: 2.0098523716427508e-06 | ABSENT
+  export_severity.vzcrash_test.c.max_abs_diff.pulse_ms: 1.52587890625e-05 | ABSENT
+  export_severity.vzcrash_test.c.max_abs_diff.thiv_kmh: 3.0289207895606296e-05 | ABSENT
+  export_severity.vzcrash_test.c.max_abs_diff.tilt_corrected_deg: 0.05082013829515475 | ABSENT
+  export_severity.vzcrash_test.c.max_abs_diff.tilt_deg: 0.06354616389500956 | ABSENT
+  export_severity.vzcrash_test.c.roll_correction_applied_mismatches: 0 | ABSENT
+  export_severity.vzcrash_test.c.rollover_flag_mismatches: 0 | ABSENT
+  export_severity.vzcrash_test.c.thiv_hit_mismatches: 0 | ABSENT

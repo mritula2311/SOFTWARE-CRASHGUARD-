@@ -1,0 +1,5 @@
+kind,sequence,bytes,rssi_dbm,snr_db_min,snr_db_max,origin
+TEST,7,26,-27,9.5,10.0,HARDWARE
+TEST,8,26,-27,9.5,10.0,HARDWARE
+TEST,9,26,-27,9.5,10.0,HARDWARE
+TELEMETRY,30,78,-28,10.25,10.25,HARDWARE
