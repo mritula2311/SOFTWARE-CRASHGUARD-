@@ -1,13 +1,13 @@
 numpy==1.26.4
 pandas==2.2.2
-pyarrow==16.1.0
+pyarrow==23.0.1
 scipy==1.13.1
 scikit-learn==1.5.1
-lightgbm==4.4.0
+lightgbm==4.6.0
 matplotlib==3.9.2
-datasets==2.20.0
+datasets==5.0.1
 huggingface_hub==0.24.5
-pytest==8.3.2
+pytest==9.0.3
 hypothesis==6.112.1
 ruff==0.5.7
 ziglang==0.17.1
