@@ -1,0 +1,75 @@
+{
+ "holm": [
+  {
+   "name": "H-T1a-L",
+   "met": 1,
+   "p_raw": 0.0,
+   "p": 0.0004997501249375312,
+   "p_holm": 0.0034982508745627187,
+   "supported": true
+  },
+  {
+   "name": "H-T1a-M",
+   "met": 1,
+   "p_raw": 0.0,
+   "p": 0.0004997501249375312,
+   "p_holm": 0.0034982508745627187,
+   "supported": true
+  },
+  {
+   "name": "H-T1a-H",
+   "met": 1,
+   "p_raw": 0.0,
+   "p": 0.0004997501249375312,
+   "p_holm": 0.0034982508745627187,
+   "supported": true
+  },
+  {
+   "name": "H-T1b",
+   "met": 1,
+   "p_raw": 0.0,
+   "p": 0.0004997501249375312,
+   "p_holm": 0.0034982508745627187,
+   "supported": true
+  },
+  {
+   "name": "H-T1c",
+   "met": 1,
+   "p_raw": 0.0,
+   "p": 0.001996007984031936,
+   "p_holm": 0.0034982508745627187,
+   "supported": true
+  },
+  {
+   "name": "H-T3a",
+   "met": 1,
+   "p_raw": 0.0,
+   "p": 0.0004997501249375312,
+   "p_holm": 0.0034982508745627187,
+   "supported": true
+  },
+  {
+   "name": "H-T3b",
+   "met": 1,
+   "p_raw": 0.0,
+   "p": 0.0004997501249375312,
+   "p_holm": 0.0034982508745627187,
+   "supported": true
+  }
+ ],
+ "hT2": true,
+ "hT2sec": {
+  "core": true,
+  "attack": true,
+  "l6": true,
+  "l5_ids": "timeout",
+  "all": false
+ },
+ "hT3c": {
+  "custom": true,
+  "trace": true,
+  "ns3": false,
+  "n": 2,
+  "met": true
+ }
+}

@@ -1,0 +1,308 @@
+{
+ "10.1109/tmc.2020.3006905": {
+  "status": "OK",
+  "title": "Timestamp Scheme to Mitigate Replay Attacks in Secure ZigBee Networks",
+  "container": "IEEE Transactions on Mobile Computing",
+  "year": 2020
+ },
+ "10.1109/jsen.2022.3193504": {
+  "status": "OK",
+  "title": "Comparative Analysis of an Urban LoRaWAN Deployment: Real World Versus Simulation",
+  "container": "IEEE Sensors Journal",
+  "year": 2022
+ },
+ "10.1109/twc.2021.3136029": {
+  "status": "OK",
+  "title": "A Configurable Mathematical Model for Single-Gateway LoRaWAN Performance Analysis",
+  "container": "IEEE Transactions on Wireless Communications",
+  "year": 2022
+ },
+ "10.1109/tii.2021.3124054": {
+  "status": "OK",
+  "title": "Adding Redundancy to LoRaWAN for Emergency Communications at the Factory Floor",
+  "container": "IEEE Transactions on Industrial Informatics",
+  "year": 2022
+ },
+ "10.1016/j.comcom.2023.12.013": {
+  "status": "OK",
+  "title": "Downlink Spreading Factor selection in LoRaWAN",
+  "container": "Computer Communications",
+  "year": 2024
+ },
+ "10.1109/ccnc51644.2023.10060330": {
+  "status": "OK",
+  "title": "Mobility Adaptive Data Rate Based on Kalman Filter for LoRa-Empowered IoT Applications",
+  "container": "2023 IEEE 20th Consumer Communications &amp; Networking Conference (CCNC)",
+  "year": 2023
+ },
+ "10.1109/jiot.2025.3609239": {
+  "status": "OK",
+  "title": "Enhanced Adaptive Data Rate and Power Control for Resilient and Energy-Efficient LoRaWAN",
+  "container": "IEEE Internet of Things Journal",
+  "year": 2025
+ },
+ "10.3390/s23104609": {
+  "status": "OK",
+  "title": "Evaluation of a Restoration Algorithm Applied to Clipped Tibial Acceleration Signals",
+  "container": "Sensors",
+  "year": 2023
+ },
+ "10.11591/eei.v12i4.4662": {
+  "status": "OK",
+  "title": "Lane change decision aid and warning system using LoRa-based vehicle-to-vehicle communication technology",
+  "container": "Bulletin of Electrical Engineering and Informatics",
+  "year": 2023
+ },
+ "10.1038/s41598-025-13465-7": {
+  "status": "OK",
+  "title": "Developing real-time IoT-based public safety alert and emergency response systems",
+  "container": "Scientific Reports",
+  "year": 2025
+ },
+ "10.1109/jsen.2021.3130120": {
+  "status": "OK",
+  "title": "A Reconstruction Filter for Saturated Accelerometer Signals Due to Insufficient FSR in Foot-Mounted Inertial Navigation System",
+  "container": "IEEE Sensors Journal",
+  "year": 2022
+ },
+ "10.1109/tii.2021.3075440": {
+  "status": "OK",
+  "title": "A Secure and LoRaWAN Compatible User Authentication Protocol for Critical Applications in the IoT Environment",
+  "container": "IEEE Transactions on Industrial Informatics",
+  "year": 2022
+ },
+ "10.1002/dac.5692": {
+  "status": "OK",
+  "title": "Real\u2010time Internet of LoRa Things (IoLT)\u2010based accident detection and prevention system in vehicular networks towards smart city",
+  "container": "International Journal of Communication Systems",
+  "year": 2023
+ },
+ "10.14569/ijacsa.2025.0160671": {
+  "status": "OK",
+  "title": "Real Time Accident Detection and Emergency Response Using Drones, Machine Learning and LoRa Communication",
+  "container": "International Journal of Advanced Computer Science and Applications",
+  "year": 2025
+ },
+ "10.46632/jeae/4/2/1": {
+  "status": "OK",
+  "title": "U-Bend Accident Prevention Through Lora Communication",
+  "container": "Journal on Electronic and Automation Engineering",
+  "year": 2025
+ },
+ "10.1109/lcomm.2021.3113134": {
+  "status": "OK",
+  "title": "Reliability and Energy Consumption of LoRa With Bidirectional Traffic",
+  "container": "IEEE Communications Letters",
+  "year": 2021
+ },
+ "10.1038/s41598-024-59058-8": {
+  "status": "OK",
+  "title": "A novel single-channel edge computing LoRa gateway for real-time confirmed messaging",
+  "container": "Scientific Reports",
+  "year": 2024
+ },
+ "10.1109/access.2023.3234188": {
+  "status": "OK",
+  "title": "Delay Optimization in LoRaWAN by Employing Adaptive Scheduling Algorithm With Unsupervised Learning",
+  "container": "IEEE Access",
+  "year": 2023
+ },
+ "10.3390/math12213371": {
+  "status": "OK",
+  "title": "An Adaptive Data Rate Algorithm for Power-Constrained End Devices in Long Range Networks",
+  "container": "Mathematics",
+  "year": 2024
+ },
+ "10.4273/ijvss.13.3.10": {
+  "status": "OK",
+  "title": "Prediction of Occupant Injuries for Improved eCall Efficiency",
+  "container": "International Journal of Vehicle Structures and Systems",
+  "year": 2021
+ },
+ "10.1109/mits.2022.3155178": {
+  "status": "OK",
+  "title": "Expected Effect of Adopting the eCall System on Reducing Traffic-Related Deaths and Social Costs",
+  "container": "IEEE Intelligent Transportation Systems Magazine",
+  "year": 2023
+ },
+ "10.1016/j.trip.2026.102109": {
+  "status": "OK",
+  "title": "Predicting specific injury patterns from crash data: a GIDAS-based and manufacturer-independent logistic regression approach for next generation eCall",
+  "container": "Transportation Research Interdisciplinary Perspectives",
+  "year": 2026
+ },
+ "10.1016/j.acap.2022.02.016": {
+  "status": "OK",
+  "title": "Advanced Automatic Crash Notification Algorithm for Children",
+  "container": "Academic Pediatrics",
+  "year": 2022
+ },
+ "10.4271/2022-28-0399": {
+  "status": "OK",
+  "title": "Motorcycle Crash Severity Estimation for Effective Emergency Response",
+  "container": "SAE Technical Paper Series",
+  "year": 2022
+ },
+ "10.1109/jiot.2025.3593886": {
+  "status": "OK",
+  "title": "Privacy-Preserving Lightweight LoRaWAN Authentication Protocol for IoT Applications",
+  "container": "IEEE Internet of Things Journal",
+  "year": 2025
+ },
+ "10.1109/access.2022.3200397": {
+  "status": "OK",
+  "title": "A Novel Session Key Update Scheme for LoRaWAN",
+  "container": "IEEE Access",
+  "year": 2022
+ },
+ "10.3390/s21175838": {
+  "status": "OK",
+  "title": "A Key Management Protocol Based on the Hash Chain Key Generation for Securing LoRaWAN Networks",
+  "container": "Sensors",
+  "year": 2021
+ },
+ "10.1504/ijsnet.2025.149892": {
+  "status": "OK",
+  "title": "Security analysis and improvement of key exchange protocol in LoRaWAN network",
+  "container": "International Journal of Sensor Networks",
+  "year": 2025
+ },
+ "10.1080/03772063.2023.2225465": {
+  "status": "OK",
+  "title": "MAKA: Multi-Factor Authentication and Key Agreement Scheme for LoRa-Based Smart Grid Communication Services",
+  "container": "IETE Journal of Research",
+  "year": 2023
+ },
+ "10.1016/j.peva.2024.102446": {
+  "status": "OK",
+  "title": "Probabilistic performance evaluation of the class-A device in LoRaWAN protocol on the MAC layer",
+  "container": "Performance Evaluation",
+  "year": 2024
+ },
+ "10.3390/s21041444": {
+  "status": "OK",
+  "title": "DG-LoRa: Deterministic Group Acknowledgment Transmissions in LoRa Networks for Industrial IoT Applications",
+  "container": "Sensors",
+  "year": 2021
+ },
+ "10.4314/fuoyejet.v9i2.9": {
+  "status": "OK",
+  "title": "Integrating Fairness in Current Consumption of End Devices in Time-Slotted LoRa-based Wireless Sensor Network",
+  "container": "FUOYE Journal of Engineering and Technology",
+  "year": 2024
+ },
+ "10.26636/jtit.2026.4.2789": {
+  "status": "OK",
+  "title": "Gateway-level Early Warning of LoRaWAN Link Degradation Using LoED Measurements",
+  "container": "Journal of Telecommunications and Information Technology",
+  "year": 2026
+ },
+ "10.1109/access.2026.3746655": {
+  "status": "OK",
+  "title": "A Signal-Aware Framework for Data Quality Assessment and Missing Data Mitigation in LoRaWAN Environmental IoT Networks",
+  "container": "IEEE Access",
+  "year": 2026
+ },
+ "10.30857/2786-5371.2025.1.7": {
+  "status": "OK",
+  "title": "Computer modelling of LoRa network parameters using the FLoRa simulator",
+  "container": "Technologies and Engineering",
+  "year": 2025
+ },
+ "10.3390/s25051602": {
+  "status": "OK",
+  "title": "Performance Evaluation of a Mesh-Topology LoRa Network",
+  "container": "Sensors",
+  "year": 2025
+ },
+ "10.1016/j.iot.2026.102012": {
+  "status": "OK",
+  "title": "A terrain-aware Fresnel zone simulator for LoRa link feasibility in non-Urban areas",
+  "container": "Internet of Things",
+  "year": 2026
+ },
+ "10.1109/jsen.2026.3724900": {
+  "status": "OK",
+  "title": "Peak-Aware Saturation Compensation for Low-Range Accelerometer Channels in Transient Impact Sensing",
+  "container": "IEEE Sensors Journal",
+  "year": 2026
+ },
+ "10.1080/15389588.2021.1982615": {
+  "status": "OK",
+  "title": "Delta-v slope as an indicator of injury",
+  "container": "Traffic Injury Prevention",
+  "year": 2021
+ },
+ "10.4271/2021-01-0892": {
+  "status": "OK",
+  "title": "Reconstructing Vehicle and Occupant Motion from EDR Data in High Yaw Velocity Crashes",
+  "container": "SAE Technical Paper Series",
+  "year": 2021
+ },
+ "10.51583/ijltemas.2026.150600052": {
+  "status": "OK",
+  "title": "Direction-Aware Telematics Crash Detection and Injury Plausibility Scoring for False Injury Claim Mitigation",
+  "container": "International Journal of Latest Technology in Engineering Management &amp; Applied Science",
+  "year": 2026
+ },
+ "10.3390/make8100298": {
+  "status": "OK",
+  "title": "Auditing Multimodal Fusion Benchmarks: Leakage, Attribution, and Calibration in Elderly Fall Detection",
+  "container": "Machine Learning and Knowledge Extraction",
+  "year": 2026
+ },
+ "10.1016/j.measurement.2026.123369": {
+  "status": "OK",
+  "title": "Evaluating pre-impact fall detection: A user-independent assessment of deep learning models on the KFall dataset",
+  "container": "Measurement",
+  "year": 2026
+ },
+ "10.3390/a17120556": {
+  "status": "OK",
+  "title": "Human Activity Recognition: A Comparative Study of Validation Methods and Impact of Feature Extraction in Wearable Sensors",
+  "container": "Algorithms",
+  "year": 2024
+ },
+ "10.1038/s41598-026-73854-4": {
+  "status": "OK",
+  "title": "High-optimized crash severity prediction: a calibrated, leakage-aware ensemble stacking framework for deployment-ready decision making",
+  "container": "Scientific Reports",
+  "year": 2026
+ },
+ "10.32604/cmc.2022.022610": {
+  "status": "OK",
+  "title": "TinyML-Based Fall Detection for Connected Personal Mobility Vehicles",
+  "container": "Computers, Materials &amp; Continua",
+  "year": 2022
+ },
+ "10.55041/ijcope.v2i5.043": {
+  "status": "OK",
+  "title": "Smart Vehicle Safety System Using IoT and Machine Learning for Accident Detection and Adaptive Cruise Control",
+  "container": "International Journal of Creative and Open Research in Engineering and Management",
+  "year": 2026
+ },
+ "10.1016/j.aap.2021.106149": {
+  "status": "OK",
+  "title": "A data-driven, kinematic feature-based, near real-time algorithm for injury severity prediction of vehicle occupants",
+  "container": "Accident Analysis &amp; Prevention",
+  "year": 2021
+ },
+ "10.1115/1.4063033": {
+  "status": "OK",
+  "title": "A Lightweight Pre-Crash Occupant Injury Prediction Model Distills Knowledge From Its Post-Crash Counterpart",
+  "container": "Journal of Biomechanical Engineering",
+  "year": 2024
+ },
+ "10.69651/pijhss05021060": {
+  "status": "OK",
+  "title": "Development of an Integrated Disaster Detector and Alert System",
+  "container": "Pantao (International Journal of the Humanities and Social Sciences)",
+  "year": 2026
+ },
+ "10.14445/22315381/ijett-v70i5p211": {
+  "status": "OK",
+  "title": "LoED: LoRa and Edge Computing based System Architecture for Sustainable Forest Monitoring",
+  "container": "International Journal of Engineering Trends and Technology",
+  "year": 2022
+ }
+}

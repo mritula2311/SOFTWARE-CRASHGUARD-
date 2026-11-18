@@ -1,0 +1,83 @@
+tool: Proverif 2.05. Cryptographic protocol verifier, by Bruno Blanchet, Vincent Cheval, and Marc Sylvestre
+command: proverif formal/proverif/carid_frozen_chain.pv ; time limit 320 s
+Process 0 (that is, the initial process):
+(
+    {1}out(ch, e0)
+) | (
+    {2}!
+    {3}let v: bitstring = vehicle in
+    {4}in(ch, el: bitstring);
+    {5}let e1: bitstring = nxt(el) in
+    {6}new i1: bitstring;
+    {7}event CarSend(v,mk(e1,s1),i1);
+    {8}out(c, mk(e1,s1));
+    {9}let e2: bitstring = nxt(e1) in
+    {10}new i2: bitstring;
+    {11}event CarSend(v,mk(e2,s1),i2);
+    {12}out(c, mk(e2,s1));
+    {13}out(ch, e2)
+)
+
+--  Process 1 (that is, process 0, with let moved downwards):
+(
+    {1}out(ch, e0)
+) | (
+    {2}!
+    {4}in(ch, el: bitstring);
+    {6}new i1: bitstring;
+    {5}let e1: bitstring = nxt(el) in
+    {3}let v: bitstring = vehicle in
+    {7}event CarSend(v,mk(e1,s1),i1);
+    {8}out(c, mk(e1,s1));
+    {10}new i2: bitstring;
+    {9}let e2: bitstring = nxt(e1) in
+    {11}event CarSend(v,mk(e2,s1),i2);
+    {12}out(c, mk(e2,s1));
+    {13}out(ch, e2)
+)
+
+-- Query event(CarSend(v_1,a,i1_1)) && event(CarSend(v_1,a,i2_1)) ==> i1_1 = i2_1 in process 1.
+Translating the process into Horn clauses...
+select mess(ch[],el_1)/-5000
+Completing...
+Termination warning: mess(ch[],el_1) -> attacker(el_1)
+Selecting 0
+Starting query event(CarSend(v_1,a,i1_1)) && event(CarSend(v_1,a,i2_1)) ==> i1_1 = i2_1
+200 rules inserted. Base: 200 rules (2 with conclusion selected). Queue: 5 rules.
+400 rules inserted. Base: 400 rules (2 with conclusion selected). Queue: 5 rules.
+600 rules inserted. Base: 600 rules (2 with conclusion selected). Queue: 5 rules.
+800 rules inserted. Base: 800 rules (2 with conclusion selected). Queue: 5 rules.
+1000 rules inserted. Base: 1000 rules (2 with conclusion selected). Queue: 5 rules.
+1200 rules inserted. Base: 1200 rules (2 with conclusion selected). Queue: 5 rules.
+1400 rules inserted. Base: 1400 rules (2 with conclusion selected). Queue: 5 rules.
+1600 rules inserted. Base: 1600 rules (2 with conclusion selected). Queue: 5 rules.
+1800 rules inserted. Base: 1800 rules (2 with conclusion selected). Queue: 5 rules.
+2000 rules inserted. Base: 2000 rules (2 with conclusion selected). Queue: 5 rules.
+2200 rules inserted. Base: 2200 rules (2 with conclusion selected). Queue: 5 rules.
+2400 rules inserted. Base: 2400 rules (2 with conclusion selected). Queue: 5 rules.
+2600 rules inserted. Base: 2600 rules (2 with conclusion selected). Queue: 5 rules.
+2800 rules inserted. Base: 2800 rules (2 with conclusion selected). Queue: 5 rules.
+3000 rules inserted. Base: 3000 rules (2 with conclusion selected). Queue: 5 rules.
+3200 rules inserted. Base: 3200 rules (2 with conclusion selected). Queue: 5 rules.
+3400 rules inserted. Base: 3400 rules (2 with conclusion selected). Queue: 5 rules.
+3600 rules inserted. Base: 3600 rules (2 with conclusion selected). Queue: 5 rules.
+3800 rules inserted. Base: 3800 rules (2 with conclusion selected). Queue: 5 rules.
+4000 rules inserted. Base: 4000 rules (2 with conclusion selected). Queue: 5 rules.
+4200 rules inserted. Base: 4200 rules (2 with conclusion selected). Queue: 5 rules.
+4400 rules inserted. Base: 4400 rules (2 with conclusion selected). Queue: 5 rules.
+4600 rules inserted. Base: 4600 rules (2 with conclusion selected). Queue: 5 rules.
+4800 rules inserted. Base: 4800 rules (2 with conclusion selected). Queue: 5 rules.
+5000 rules inserted. Base: 5000 rules (2 with conclusion selected). Queue: 5 rules.
+5200 rules inserted. Base: 5200 rules (2 with conclusion selected). Queue: 5 rules.
+5400 rules inserted. Base: 5400 rules (2 with conclusion selected). Queue: 5 rules.
+5600 rules inserted. Base: 5600 rules (2 with conclusion selected). Queue: 5 rules.
+5800 rules inserted. Base: 5800 rules (2 with conclusion selected). Queue: 5 rules.
+6000 rules inserted. Base: 6000 rules (2 with conclusion selected). Queue: 5 rules.
+6200 rules inserted. Base: 6200 rules (2 with conclusion selected). Queue: 5 rules.
+6400 rules inserted. Base: 6400 rules (2 with conclusion selected). Queue: 5 rules.
+6600 rules inserted. Base: 6600 rules (2 with conclusion selected). Queue: 5 rules.
+6800 rules inserted. Base: 6800 rules (2 with conclusion selected). Queue: 5 rules.
+7000 rules inserted. Base: 7000 rules (2 with conclusion selected). Queue: 5 rules.
+7200 rules inserted. Base: 7200 rules (2 with conclusion selected). Queue: 5 rules.
+7400 rules inserted. Base: 7400 rules (2 with conclusion selected). Queue: 5 rules.
+exit code: 124 ; wall time 320 s ; peak memory 1303 MB

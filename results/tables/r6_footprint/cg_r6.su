@@ -1,0 +1,4 @@
+firmware_r6/cg_r6.c:5:6:cg_micro_tag	80	static
+firmware_r6/cg_r6.c:20:6:cg_micro_pack	48	static
+firmware_r6/cg_r6.c:27:5:cg_micro_verify	64	static
+firmware_r6/cg_r6.c:36:7:cg_forest	32	static

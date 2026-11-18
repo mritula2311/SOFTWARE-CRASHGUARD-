@@ -1,0 +1,16 @@
+event_id,split,label,peak_g,class
+62058,test,2,51.85031509399414,normal_driving
+55945,test,2,52.62335205078125,normal_driving
+63940,train,2,49.00856018066406,normal_driving
+61250,train,2,50.52666473388672,normal_driving
+62134,train,2,43.56269836425781,normal_driving
+57553,train,2,53.740028381347656,normal_driving
+61643,train,2,54.60795593261719,normal_driving
+61166,train,2,45.13266372680664,normal_driving
+63797,train,2,52.44701385498047,normal_driving
+62072,train,2,46.3919792175293,normal_driving
+61888,train,2,52.00077438354492,normal_driving
+55215,train,2,52.702415466308594,normal_driving
+61818,train,2,52.30913543701172,normal_driving
+385560,validation,1,2679954.5,near_miss
+63031,validation,2,46.20571517944336,normal_driving

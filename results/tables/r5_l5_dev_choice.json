@@ -1,0 +1,9 @@
+{
+ "chosen": 0,
+ "params": {
+  "grid": "full",
+  "objective": "cap",
+  "alpha": 0.01
+ },
+ "rule": "V16 7.3: highest mean validation reduction over the link models; ties go to the earlier (smaller) iteration"
+}

@@ -1,0 +1,16 @@
+lemma: forward_secrecy
+command: tamarin-prover  --prove=forward_secrecy formal/ratchet.spthy
+maude tool: 'maude'
+ checking version: 3.5.1. OK.
+ checking installation: OK.
+[Theory Ratchet] Theory loaded
+[Theory Ratchet] Theory translated
+[Theory Ratchet] Derivation checks started
+[Theory Ratchet] Derivation checks ended
+[Theory Ratchet] Theory closed
+[Saturating Sources] Step 1 (Max 5)
+[Saturating Sources] Done
+tamarin-prover: Heap exhausted;
+tamarin-prover: Current maximum heap size is 5368709120 bytes (5120 MB).
+tamarin-prover: Use `+RTS -M<size>' to increase it.
+exit code: 251 ; wall time 462 s

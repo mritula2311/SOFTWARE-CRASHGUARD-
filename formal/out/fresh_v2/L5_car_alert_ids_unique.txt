@@ -1,0 +1,13 @@
+lemma: L5_car_alert_ids_unique
+command: tamarin-prover  --prove=L5_car_alert_ids_unique /tmp/f.spthy
+maude tool: 'maude'
+ checking version: 3.5.1. OK.
+ checking installation: OK.
+[Theory CrashAlertFresh] Theory loaded
+[Theory CrashAlertFresh] Theory translated
+[Theory CrashAlertFresh] Derivation checks started
+[Theory CrashAlertFresh] Derivation checks ended
+[Theory CrashAlertFresh] Theory closed
+[Saturating Sources] Step 1 (Max 5)
+[Saturating Sources] Done
+exit code: 124 ; wall time 294 s

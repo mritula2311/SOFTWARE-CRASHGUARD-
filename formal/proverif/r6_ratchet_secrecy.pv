@@ -1,0 +1,31 @@
+(* Round 6, R6-3 H-R6-3a, secrecy part. ProVerif 2.05, symbolic. Same hash ratchet as r6_ratchet_auth.pv, three steps. The alert payloads p1, p2, p3 are private names encrypted under K_1, K_2, K_3.
+   The attacker compromises the vehicle after step 3 and receives the CURRENT key K_3 (the car has erased K_1 and K_2). Past alerts must stay secret: attacker(p1) and attacker(p2) must be false,
+   attacker(p3) is expected to be true (the compromised current key can read the current alert). Run again with `-D=NOERASE` semantics is not needed: K_1 and K_2 are simply not given. *)
+free c: channel.
+const lab: bitstring.
+const vehicleId: bitstring.
+free p1: bitstring [private].
+free p2: bitstring [private].
+free p3: bitstring [private].
+fun kdf(bitstring, bitstring): bitstring.
+fun h(bitstring, bitstring): bitstring.
+fun senc(bitstring, bitstring): bitstring.
+reduc forall m: bitstring, k: bitstring; sdec(senc(m, k), k) = m.
+
+query attacker(p1).
+query attacker(p2).
+query attacker(p3).
+
+let Car(master: bitstring, v: bitstring) =
+  let k0 = kdf(master, v) in
+  let k1 = h(k0, lab) in
+  let k2 = h(k1, lab) in
+  let k3 = h(k2, lab) in
+  out(c, (v, senc(p1, k1)));
+  out(c, (v, senc(p2, k2)));
+  out(c, (v, senc(p3, k3)));
+  out(c, k3).
+
+process
+  new master: bitstring;
+  Car(master, vehicleId)

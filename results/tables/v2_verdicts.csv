@@ -1,0 +1,13 @@
+hypothesis,verdict,reason,p_raw,p_holm,origin
+H-A1,SUPPORTED,criterion met and the Holm-adjusted p-value is below 0.05,0.001,0.009000000000000001,MEASURED_SOFTWARE
+H-A2,NOT SUPPORTED,counts against: no narrowing in the lowest tercile,1.0,1.0,MEASURED_SOFTWARE
+H-A3,NOT SUPPORTED,containment of the reference delta-V is below 0.90,1.0,1.0,MEASURED_SOFTWARE
+H-B1,NOT SUPPORTED,no variant gains 3 points with an interval above zero in 6 of the 10 burst cells,1.0,1.0,SIMULATED
+H-B2,MIXED,"the upper 95% bound of the harm exceeds 2 points for some variant and cell, but no interval lies entirely above 2 points",0.742,1.0,SIMULATED
+H-B3,NOT SUPPORTED,not evaluable because H-B1 is not met,,,SIMULATED
+H-D1,NOT SUPPORTED,the median time saved is below 100 ms; the under-triage interval lies entirely above zero,0.981,1.0,MEASURED_SOFTWARE
+H-D2,MIXED,"criterion met, but the Holm-adjusted p-value is not below 0.05",0.055,0.385,MEASURED_SOFTWARE
+H-E1,NOT SUPPORTED,the gain is below 2 points or its interval includes zero,1.0,1.0,SIMULATED
+H-E2,SUPPORTED,formula: both work factors above 2^32,,,ANALYTICAL
+H-F1,NOT SUPPORTED,2 ratio and p combinations have a positive optimal Critical hold,,,ANALYTICAL
+H-F2,SUPPORTED,criterion met and the Holm-adjusted p-value is below 0.05,0.001,0.009000000000000001,SIMULATED

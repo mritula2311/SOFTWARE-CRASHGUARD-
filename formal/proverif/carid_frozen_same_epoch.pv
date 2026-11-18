@@ -1,0 +1,48 @@
+(* A3 (PREREGISTRATION_V15 section 4): FROZEN design, ProVerif 2.05.
+   Alert id = (epoch, seq): the epoch is the GPS second of the alert, seq the number of the alert within that second; a car reboot loses seq (it starts again at s1).
+   Here the environment chooses the epoch at every boot (any term), so a reboot may complete inside the second in which an earlier alert was sent. Every boot is one replicated instance;
+   two instances model two boots of the same car. Property (the lemma of the task): two different alert instances never have the same id.
+   EXPECTED: the query is false (an attack: both boots send (e, s1) with the same e). The same-second reboot is the case that the frozen design's timing assumption excludes (see carid_frozen_next_epoch.pv). *)
+
+free c: channel.
+fun kdf(bitstring, bitstring): bitstring.
+fun mac(bitstring, bitstring): bitstring.
+fun mk(bitstring, bitstring): bitstring [data].
+const s1: bitstring.
+const s2: bitstring.
+free vehicle: bitstring.
+
+event CarSend(bitstring, bitstring, bitstring).   (* vehicle, alert id, instance *)
+event CarSendId(bitstring, bitstring).
+event BaseAccept(bitstring, bitstring).
+event Revealed(bitstring).
+
+(* the lemma: distinct alert instances never share an id *)
+query v: bitstring, a: bitstring, i1: bitstring, i2: bitstring;
+  event(CarSend(v, a, i1)) && event(CarSend(v, a, i2)) ==> i1 = i2.
+
+(* authenticity of the base's acceptance (non-injective): an accepted alert was sent, unless the vehicle's key was revealed *)
+query v: bitstring, a: bitstring;
+  event(BaseAccept(v, a)) ==> (event(CarSendId(v, a)) || event(Revealed(v))).
+
+let Boot(km: bitstring, v: bitstring) =
+  in(c, e: bitstring);
+  new i1: bitstring;
+  event CarSendId(v, mk(e, s1));
+  event CarSend(v, mk(e, s1), i1);
+  out(c, (v, mk(e, s1), mac(kdf(km, v), (v, mk(e, s1)))));
+  new i2: bitstring;
+  event CarSendId(v, mk(e, s2));
+  event CarSend(v, mk(e, s2), i2);
+  out(c, (v, mk(e, s2), mac(kdf(km, v), (v, mk(e, s2))))).
+
+let Base(km: bitstring) =
+  !( in(c, (v: bitstring, a: bitstring, t: bitstring));
+     if t = mac(kdf(km, v), (v, a)) then event BaseAccept(v, a) ).
+
+let Reveal(km: bitstring) =
+  !( in(c, w: bitstring); event Revealed(w); out(c, kdf(km, w)) ).
+
+process
+  new km: bitstring;
+  ( !Boot(km, vehicle) | Base(km) | Reveal(km) )

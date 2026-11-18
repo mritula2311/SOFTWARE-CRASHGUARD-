@@ -1,0 +1,4 @@
+true_class,not_triggered,triggered_pred_negative,triggered_pred_crash
+crash,149,223,3735
+near_miss,3353,149,130
+normal_driving,14770,762,751

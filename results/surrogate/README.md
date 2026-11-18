@@ -1,0 +1,4 @@
+# VZCrash-style surrogate windows (parameters only)
+
+VZCrash is released under CC BY-NC 4.0 (Hugging Face `vzc-research-chapter/VZCrash`, revision 42e1482d005c0e545379d6cfa4939486c9fe4249; author reply 2026-11-12). The fitted parameters in this folder are therefore released under CC BY-NC 4.0 with attribution to the VZCrash authors (Bianconcini et al., arXiv 2606.06074). Code: Apache-2.0 (`crashguard/fin_surr.py`).
+Only summary parameters are released (class share; per class means and covariances of transformed summary statistics; axis-share means). No record, window or hash is stored. The generator matches only the marginals that were validated (`f.f2.surrogate.ks.*` in `results/results.json`); the others are not matched. Detector scores on surrogate windows are not comparable with scores on real data. The surrogate is not unbiased and is not a substitute for VZCrash.

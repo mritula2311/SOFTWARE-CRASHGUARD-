@@ -1,0 +1,145 @@
+tool: Proverif 2.05. Cryptographic protocol verifier, by Bruno Blanchet, Vincent Cheval, and Marc Sylvestre
+command: proverif formal/proverif/carid_frozen_same_epoch.pv ; time limit 320 s
+Process 0 (that is, the initial process):
+{1}new km: bitstring;
+(
+    {2}!
+    {3}let km_1: bitstring = km in
+    {4}let v: bitstring = vehicle in
+    {5}in(c, e: bitstring);
+    {6}new i1: bitstring;
+    {7}event CarSendId(v,mk(e,s1));
+    {8}event CarSend(v,mk(e,s1),i1);
+    {9}out(c, (v,mk(e,s1),mac(kdf(km_1,v),(v,mk(e,s1)))));
+    {10}new i2: bitstring;
+    {11}event CarSendId(v,mk(e,s2));
+    {12}event CarSend(v,mk(e,s2),i2);
+    {13}out(c, (v,mk(e,s2),mac(kdf(km_1,v),(v,mk(e,s2)))))
+) | (
+    {14}let km_2: bitstring = km in
+    {15}!
+    {16}in(c, (v_1: bitstring,a: bitstring,t: bitstring));
+    {17}if (t = mac(kdf(km_2,v_1),(v_1,a))) then
+    {18}event BaseAccept(v_1,a)
+) | (
+    {19}let km_3: bitstring = km in
+    {20}!
+    {21}in(c, w: bitstring);
+    {22}event Revealed(w);
+    {23}out(c, kdf(km_3,w))
+)
+
+--  Process 1 (that is, process 0, with let moved downwards):
+{1}new km: bitstring;
+(
+    {2}!
+    {5}in(c, e: bitstring);
+    {6}new i1: bitstring;
+    {4}let v: bitstring = vehicle in
+    {7}event CarSendId(v,mk(e,s1));
+    {8}event CarSend(v,mk(e,s1),i1);
+    {3}let km_1: bitstring = km in
+    {9}out(c, (v,mk(e,s1),mac(kdf(km_1,v),(v,mk(e,s1)))));
+    {10}new i2: bitstring;
+    {11}event CarSendId(v,mk(e,s2));
+    {12}event CarSend(v,mk(e,s2),i2);
+    {13}out(c, (v,mk(e,s2),mac(kdf(km_1,v),(v,mk(e,s2)))))
+) | (
+    {15}!
+    {16}in(c, (v_1: bitstring,a: bitstring,t: bitstring));
+    {14}let km_2: bitstring = km in
+    {17}if (t = mac(kdf(km_2,v_1),(v_1,a))) then
+    {18}event BaseAccept(v_1,a)
+) | (
+    {20}!
+    {21}in(c, w: bitstring);
+    {22}event Revealed(w);
+    {19}let km_3: bitstring = km in
+    {23}out(c, kdf(km_3,w))
+)
+
+-- Query event(CarSend(v_2,a_1,i1_1)) && event(CarSend(v_2,a_1,i2_1)) ==> i1_1 = i2_1 in process 1.
+Translating the process into Horn clauses...
+Completing...
+Starting query event(CarSend(v_2,a_1,i1_1)) && event(CarSend(v_2,a_1,i2_1)) ==> i1_1 = i2_1
+goal reachable: attacker(e_1) -> event(CarSend(vehicle[],mk(e_1,s1),i1_1)) && event(CarSend(vehicle[],mk(e_1,s1),i1_2))
+Abbreviations:
+i1_1 = i1[e = e_1,!1 = @sid]
+i1_2 = i1[e = e_1,!1 = @sid_1]
+
+Derivation:
+Abbreviations:
+i1_1 = i1[e = e_1,!1 = @sid]
+i1_2 = i1[e = e_1,!1 = @sid_1]
+
+1. We assume as hypothesis that
+attacker(e_1).
+
+2. The message e_1 that the attacker may have by 1 may be received at input {5}.
+So event CarSend(vehicle[],mk(e_1,s1),i1_2) may be executed at {8}.
+event(CarSend(vehicle[],mk(e_1,s1),i1_2)).
+
+3. The message e_1 that the attacker may have by 1 may be received at input {5}.
+So event CarSend(vehicle[],mk(e_1,s1),i1_1) may be executed at {8}.
+event(CarSend(vehicle[],mk(e_1,s1),i1_1)).
+
+4. By 3, event(CarSend(vehicle[],mk(e_1,s1),i1_1)).
+By 2, event(CarSend(vehicle[],mk(e_1,s1),i1_2)).
+The goals are reached, combined in the following fact:
+event(CarSend(vehicle[],mk(e_1,s1),i1_1)) && event(CarSend(vehicle[],mk(e_1,s1),i1_2)).
+
+
+A more detailed output of the traces is available with
+  set traceDisplay = long.
+
+new km: bitstring creating km_4 at {1}
+
+in(c, a_1) at {5} in copy a_2
+
+new i1: bitstring creating i1_3 at {6} in copy a_2
+
+event CarSendId(vehicle,mk(a_1,s1)) at {7} in copy a_2
+
+event CarSend(vehicle,mk(a_1,s1),i1_3) at {8} in copy a_2 (goal)
+
+out(c, (~M,mk(~M_1,~M_2),~M_3)) with ~M = vehicle, ~M_1 = a_1, ~M_2 = s1, ~M_3 = mac(kdf(km_4,vehicle),(vehicle,mk(a_1,s1))) at {9} in copy a_2
+
+new i2: bitstring creating i2_1 at {10} in copy a_2
+
+event CarSendId(vehicle,mk(a_1,s2)) at {11} in copy a_2
+
+event CarSend(vehicle,mk(a_1,s2),i2_1) at {12} in copy a_2
+
+out(c, (~M_4,mk(~M_5,~M_6),~M_7)) with ~M_4 = vehicle, ~M_5 = a_1, ~M_6 = s2, ~M_7 = mac(kdf(km_4,vehicle),(vehicle,mk(a_1,s2))) at {13} in copy a_2
+
+in(c, a_1) at {5} in copy a_3
+
+new i1: bitstring creating i1_4 at {6} in copy a_3
+
+event CarSendId(vehicle,mk(a_1,s1)) at {7} in copy a_3
+
+event CarSend(vehicle,mk(a_1,s1),i1_4) at {8} in copy a_3 (goal)
+
+The event CarSend(vehicle,mk(a_1,s1),i1_3) is executed at {8} in copy a_2.
+The event CarSend(vehicle,mk(a_1,s1),i1_4) is executed at {8} in copy a_3.
+A trace has been found.
+RESULT event(CarSend(v_2,a_1,i1_1)) && event(CarSend(v_2,a_1,i2_1)) ==> i1_1 = i2_1 is false.
+-- Query event(BaseAccept(v_2,a_1)) ==> event(CarSendId(v_2,a_1)) || event(Revealed(v_2)) in process 1.
+Translating the process into Horn clauses...
+Completing...
+Starting query event(BaseAccept(v_2,a_1)) ==> event(CarSendId(v_2,a_1)) || event(Revealed(v_2))
+goal reachable: b-event(Revealed(w_1)) && attacker(w_1) && attacker(a_1) -> event(BaseAccept(w_1,a_1))
+goal reachable: b-event(CarSendId(vehicle[],mk(e_1,s1))) && attacker(e_1) -> event(BaseAccept(vehicle[],mk(e_1,s1)))
+goal reachable: b-event(CarSendId(vehicle[],mk(e_1,s2))) && b-event(CarSendId(vehicle[],mk(e_1,s1))) && attacker(e_1) -> event(BaseAccept(vehicle[],mk(e_1,s2)))
+RESULT event(BaseAccept(v_2,a_1)) ==> event(CarSendId(v_2,a_1)) || event(Revealed(v_2)) is true.
+
+--------------------------------------------------------------
+Verification summary:
+
+Query event(CarSend(v_2,a_1,i1_1)) && event(CarSend(v_2,a_1,i2_1)) ==> i1_1 = i2_1 is false.
+
+Query event(BaseAccept(v_2,a_1)) ==> event(CarSendId(v_2,a_1)) || event(Revealed(v_2)) is true.
+
+--------------------------------------------------------------
+
+exit code: 0 ; wall time 0 s ; peak memory 9 MB

@@ -1,0 +1,43 @@
+(* Round 7 B2.2: quarantine on resolved ids. The base counts a strike against a vehicle only for a frame whose pseudonym resolves to that vehicle AND whose tag verifies AND that is not in the seen-set (rule B of the
+   quarantine analysis, applied after resolution). A frame that does not resolve or fails the tag only touches a cell-level counter (not modelled: it names no vehicle).
+   Query: a strike against v implies that v sent an implausible alert, unless v's key was revealed (no framing), in the injective form (a replay of a verified frame is not counted twice). Executability: a strike can
+   occur. The attacker may replay, alter and inject frames and may reveal keys. ProVerif 2.05. *)
+free c: channel.
+const tagA: bitstring.
+const tagP: bitstring.
+const bad: bitstring.
+const good: bitstring.
+fun kdf(bitstring, bitstring): bitstring.
+fun prf(bitstring, bitstring): bitstring.
+fun mac(bitstring, bitstring): bitstring.
+table window(bitstring, bitstring, bitstring).
+table seen(bitstring, bitstring).
+
+event CarSentBad(bitstring, bitstring).
+event Strike(bitstring, bitstring).
+event Revealed(bitstring).
+
+query v: bitstring, a: bitstring; inj-event(Strike(v, a)) ==> (inj-event(CarSentBad(v, a)) || event(Revealed(v))).
+query v: bitstring, a: bitstring; event(Strike(v, a)).
+
+let Car(km: bitstring) =
+  in(c, (v: bitstring, kind: bitstring));
+  new a: bitstring;
+  let kv = kdf(km, v) in
+  let p = prf(kv, (tagP, a)) in
+  insert window(p, v, a);
+  if kind = bad then ( event CarSentBad(v, a); out(c, (p, kind, mac(kv, (tagA, p, kind, a)))) )
+  else out(c, (p, kind, mac(kv, (tagA, p, kind, a)))).
+
+let Base(km: bitstring) =
+  !( in(c, (p: bitstring, kind: bitstring, t: bitstring));
+     get window(=p, v, a) in
+     if t = mac(kdf(km, v), (tagA, p, kind, a)) then
+     get seen(=v, =a) in 0 else
+     ( insert seen(v, a); if kind = bad then event Strike(v, a) ) ).
+
+let Reveal(km: bitstring) = !( in(c, w: bitstring); event Revealed(w); out(c, kdf(km, w)) ).
+
+process
+  new km: bitstring;
+  ( !Car(km) | Base(km) | Reveal(km) )

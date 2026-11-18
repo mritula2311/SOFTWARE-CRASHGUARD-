@@ -1,0 +1,361 @@
+tool: Proverif 2.05. Cryptographic protocol verifier, by Bruno Blanchet, Vincent Cheval, and Marc Sylvestre
+command: proverif /mnt/d/crashguard-software/crashguard-software/formal/proverif/r7_lemmas_alert.pv
+Process 0 (that is, the initial process):
+{1}new km: bitstring;
+(
+    {2}!
+    {3}let km_1: bitstring = km in
+    {4}let v: bitstring = vehicle in
+    {5}new b: bitstring;
+    {6}in(c, e: bitstring);
+    (
+        {7}let b_1: bitstring = b in
+        {8}let s: bitstring = s1 in
+        {9}new i: bitstring;
+        {10}let a: bitstring = mkid(b_1,e,s) in
+        {11}let kv: bitstring = kdf(km_1,v) in
+        {12}let p: bitstring = prf(kv,(tagP,a)) in
+        {13}let ct: bitstring = senc(kdf(kv,tagE),a,i) in
+        {14}event CarSendId(v,a);
+        {15}event CarSend(v,a,i);
+        {16}insert window(p,v,a);
+        {17}out(c, (p,ct,mac(kv,(tagA,p,ct,a))))
+    ) | (
+        {18}let b_2: bitstring = b in
+        {19}let s_1: bitstring = s2 in
+        {20}new i_1: bitstring;
+        {21}let a_1: bitstring = mkid(b_2,e,s_1) in
+        {22}let kv_1: bitstring = kdf(km_1,v) in
+        {23}let p_1: bitstring = prf(kv_1,(tagP,a_1)) in
+        {24}let ct_1: bitstring = senc(kdf(kv_1,tagE),a_1,i_1) in
+        {25}event CarSendId(v,a_1);
+        {26}event CarSend(v,a_1,i_1);
+        {27}insert window(p_1,v,a_1);
+        {28}out(c, (p_1,ct_1,mac(kv_1,(tagA,p_1,ct_1,a_1))))
+    )
+) | (
+    {29}let km_2: bitstring = km in
+    {30}!
+    {31}in(c, (p_2: bitstring,ct_2: bitstring,t: bitstring));
+    {36}get window(=p_2,v_1: bitstring,a_2: bitstring) in
+    {32}if (t = mac(kdf(km_2,v_1),(tagA,p_2,ct_2,a_2))) then
+    {35}get seen(=v_1,=a_2) in
+        0
+    else
+        {33}insert seen(v_1,a_2);
+        {34}event BaseAccept(v_1,a_2)
+) | (
+    {37}let km_3: bitstring = km in
+    {38}!
+    {39}in(c, w: bitstring);
+    {40}event Revealed(w);
+    {41}out(c, kdf(km_3,w))
+)
+
+--  Process 1 (that is, process 0, with let moved downwards):
+{1}new km: bitstring;
+(
+    {2}!
+    {5}new b: bitstring;
+    {6}in(c, e: bitstring);
+    {4}let v: bitstring = vehicle in
+    {3}let km_1: bitstring = km in
+    (
+        {9}new i: bitstring;
+        {8}let s: bitstring = s1 in
+        {7}let b_1: bitstring = b in
+        {10}let a: bitstring = mkid(b_1,e,s) in
+        {14}event CarSendId(v,a);
+        {15}event CarSend(v,a,i);
+        {11}let kv: bitstring = kdf(km_1,v) in
+        {12}let p: bitstring = prf(kv,(tagP,a)) in
+        {16}insert window(p,v,a);
+        {13}let ct: bitstring = senc(kdf(kv,tagE),a,i) in
+        {17}out(c, (p,ct,mac(kv,(tagA,p,ct,a))))
+    ) | (
+        {20}new i_1: bitstring;
+        {19}let s_1: bitstring = s2 in
+        {18}let b_2: bitstring = b in
+        {21}let a_1: bitstring = mkid(b_2,e,s_1) in
+        {25}event CarSendId(v,a_1);
+        {26}event CarSend(v,a_1,i_1);
+        {22}let kv_1: bitstring = kdf(km_1,v) in
+        {23}let p_1: bitstring = prf(kv_1,(tagP,a_1)) in
+        {27}insert window(p_1,v,a_1);
+        {24}let ct_1: bitstring = senc(kdf(kv_1,tagE),a_1,i_1) in
+        {28}out(c, (p_1,ct_1,mac(kv_1,(tagA,p_1,ct_1,a_1))))
+    )
+) | (
+    {30}!
+    {31}in(c, (p_2: bitstring,ct_2: bitstring,t: bitstring));
+    {36}get window(=p_2,v_1: bitstring,a_2: bitstring) in
+    {29}let km_2: bitstring = km in
+    {32}if (t = mac(kdf(km_2,v_1),(tagA,p_2,ct_2,a_2))) then
+    {35}get seen(=v_1,=a_2) in
+        0
+    else
+        {33}insert seen(v_1,a_2);
+        {34}event BaseAccept(v_1,a_2)
+) | (
+    {38}!
+    {39}in(c, w: bitstring);
+    {40}event Revealed(w);
+    {37}let km_3: bitstring = km in
+    {41}out(c, kdf(km_3,w))
+)
+
+-- Query event(CarSend(v_2,a_3,i1)) && event(CarSend(v_2,a_3,i2)) ==> i1 = i2 in process 1.
+Translating the process into Horn clauses...
+Completing...
+Starting query event(CarSend(v_2,a_3,i1)) && event(CarSend(v_2,a_3,i2)) ==> i1 = i2
+goal reachable: attacker(e_1) -> event(CarSend(vehicle[],mkid(b_3,e_1,s1),i_2)) && event(CarSend(vehicle[],mkid(b_3,e_1,s1),i_2))
+Abbreviations:
+b_3 = b[!1 = @sid]
+i_2 = i[e = e_1,!1 = @sid]
+goal reachable: attacker(e_1) -> event(CarSend(vehicle[],mkid(b_3,e_1,s2),i_2)) && event(CarSend(vehicle[],mkid(b_3,e_1,s2),i_2))
+Abbreviations:
+b_3 = b[!1 = @sid]
+i_2 = i_1[e = e_1,!1 = @sid]
+RESULT event(CarSend(v_2,a_3,i1)) && event(CarSend(v_2,a_3,i2)) ==> i1 = i2 is true.
+-- Query event(BaseAccept(v_2,a_3)) ==> event(CarSendId(v_2,a_3)) || event(Revealed(v_2)) in process 1.
+Translating the process into Horn clauses...
+Completing...
+Starting query event(BaseAccept(v_2,a_3)) ==> event(CarSendId(v_2,a_3)) || event(Revealed(v_2))
+goal reachable: b-event(CarSendId(vehicle[],mkid(b_3,e_1,s1))) && attacker(e_1) -> event(BaseAccept(vehicle[],mkid(b_3,e_1,s1)))
+Abbreviations:
+b_3 = b[!1 = @sid]
+goal reachable: b-event(CarSendId(vehicle[],mkid(b_3,e_1,s2))) && attacker(e_1) -> event(BaseAccept(vehicle[],mkid(b_3,e_1,s2)))
+Abbreviations:
+b_3 = b[!1 = @sid]
+RESULT event(BaseAccept(v_2,a_3)) ==> event(CarSendId(v_2,a_3)) || event(Revealed(v_2)) is true.
+-- Query inj-event(BaseAccept(v_2,a_3)) ==> inj-event(CarSendId(v_2,a_3)) || event(Revealed(v_2)) in process 1.
+Translating the process into Horn clauses...
+Completing...
+Starting query inj-event(BaseAccept(v_2,a_3)) ==> inj-event(CarSendId(v_2,a_3)) || event(Revealed(v_2))
+goal reachable: @sid ≠ @sid_1 && b-inj-event(CarSendId(vehicle[],mkid(b_3,e_1,s1)),@occ14_1) && attacker(e_1) -> inj-event(BaseAccept(vehicle[],mkid(b_3,e_1,s1)),@occ34_1) && inj-event(BaseAccept(vehicle[],mkid(b_3,e_1,s1)),@occ34_2)
+Abbreviations:
+b_3 = b[!1 = @sid_2]
+i_2 = i[e = e_1,!1 = @sid_2]
+@occ34_1 = @occ34[a_2 = mkid(b_3,e_1,s1),v_1 = vehicle[],t = mac(kdf(km[],vehicle[]),(tagA,prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),mkid(b_3,e_1,s1))),ct_2 = senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),p_2 = prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),!1 = @sid]
+@occ34_2 = @occ34[a_2 = mkid(b_3,e_1,s1),v_1 = vehicle[],t = mac(kdf(km[],vehicle[]),(tagA,prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),mkid(b_3,e_1,s1))),ct_2 = senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),p_2 = prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),!1 = @sid_1]
+@occ14_1 = @occ14[e = e_1,!1 = @sid_2]
+
+Derivation:
+Abbreviations:
+b_3 = b[!1 = @sid]
+i_2 = i[e = e_1,!1 = @sid]
+@occ34_1 = @occ34[a_2 = mkid(b_3,e_1,s1),v_1 = vehicle[],t = mac(kdf(km[],vehicle[]),(tagA,prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),mkid(b_3,e_1,s1))),ct_2 = senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),p_2 = prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),!1 = @sid_1]
+@occ34_2 = @occ34[a_2 = mkid(b_3,e_1,s1),v_1 = vehicle[],t = mac(kdf(km[],vehicle[]),(tagA,prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),mkid(b_3,e_1,s1))),ct_2 = senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),p_2 = prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),!1 = @sid_2]
+@occ14_1 = @occ14[e = e_1,!1 = @sid]
+
+1. We assume as hypothesis that
+attacker(e_1).
+
+2. The message e_1 that the attacker may have by 1 may be received at input {6}.
+The event CarSendId(vehicle[],mkid(b_3,e_1,s1)) (with occurrence name @occ14_1) may be executed at {14}.
+So the message (prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),mac(kdf(km[],vehicle[]),(tagA,prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),mkid(b_3,e_1,s1)))) may be sent to the attacker at output {17}.
+attacker((prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),mac(kdf(km[],vehicle[]),(tagA,prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),mkid(b_3,e_1,s1))))).
+
+3. By 2, the attacker may know (prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),mac(kdf(km[],vehicle[]),(tagA,prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),mkid(b_3,e_1,s1)))).
+Using the function 3-proj-3-tuple the attacker may obtain mac(kdf(km[],vehicle[]),(tagA,prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),mkid(b_3,e_1,s1))).
+attacker(mac(kdf(km[],vehicle[]),(tagA,prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),mkid(b_3,e_1,s1)))).
+
+4. By 2, the attacker may know (prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),mac(kdf(km[],vehicle[]),(tagA,prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),mkid(b_3,e_1,s1)))).
+Using the function 2-proj-3-tuple the attacker may obtain senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2).
+attacker(senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2)).
+
+5. By 2, the attacker may know (prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),mac(kdf(km[],vehicle[]),(tagA,prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),mkid(b_3,e_1,s1)))).
+Using the function 1-proj-3-tuple the attacker may obtain prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))).
+attacker(prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1)))).
+
+6. By 5, the attacker may know prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))).
+By 4, the attacker may know senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2).
+By 3, the attacker may know mac(kdf(km[],vehicle[]),(tagA,prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),mkid(b_3,e_1,s1))).
+Using the function 3-tuple the attacker may obtain (prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),mac(kdf(km[],vehicle[]),(tagA,prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),mkid(b_3,e_1,s1)))).
+attacker((prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),mac(kdf(km[],vehicle[]),(tagA,prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),mkid(b_3,e_1,s1))))).
+
+7. The message e_1 that the attacker may have by 1 may be received at input {6}.
+The event CarSendId(vehicle[],mkid(b_3,e_1,s1)) (with occurrence name @occ14_1) may be executed at {14}.
+So the entry window(prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),vehicle[],mkid(b_3,e_1,s1)) may be inserted in a table at insert {16}.
+table(window(prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),vehicle[],mkid(b_3,e_1,s1))).
+
+8. The message (prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),mac(kdf(km[],vehicle[]),(tagA,prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),mkid(b_3,e_1,s1)))) that the attacker may have by 6 may be received at input {31}.
+The entry window(prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),vehicle[],mkid(b_3,e_1,s1)) that may be in a table by 7 may be read at get {36}.
+So event BaseAccept(vehicle[],mkid(b_3,e_1,s1)) may be executed at {34} in session @sid_2.
+inj-event(BaseAccept(vehicle[],mkid(b_3,e_1,s1)),@occ34_2).
+
+9. By 8, inj-event(BaseAccept(vehicle[],mkid(b_3,e_1,s1)),@occ34_2).
+The goal is reached, represented in the following fact:
+inj-event(BaseAccept(vehicle[],mkid(b_3,e_1,s1)),@occ34_2).
+
+10. The message (prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),mac(kdf(km[],vehicle[]),(tagA,prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),mkid(b_3,e_1,s1)))) that the attacker may have by 6 may be received at input {31}.
+The entry window(prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),vehicle[],mkid(b_3,e_1,s1)) that may be in a table by 7 may be read at get {36}.
+So event BaseAccept(vehicle[],mkid(b_3,e_1,s1)) may be executed at {34} in session @sid_1.
+inj-event(BaseAccept(vehicle[],mkid(b_3,e_1,s1)),@occ34_1).
+
+11. By 10, inj-event(BaseAccept(vehicle[],mkid(b_3,e_1,s1)),@occ34_1).
+The goal is reached, represented in the following fact:
+inj-event(BaseAccept(vehicle[],mkid(b_3,e_1,s1)),@occ34_1).
+
+12. By 11, inj-event(BaseAccept(vehicle[],mkid(b_3,e_1,s1)),@occ34_1).
+By 9, inj-event(BaseAccept(vehicle[],mkid(b_3,e_1,s1)),@occ34_2).
+We have @occ34_1 ≠ @occ34_2.
+The goals for injectivity are reached, combined in the following fact:
+inj-event(BaseAccept(vehicle[],mkid(b_3,e_1,s1)),@occ34_1) && inj-event(BaseAccept(vehicle[],mkid(b_3,e_1,s1)),@occ34_2).
+
+
+A more detailed output of the traces is available with
+  set traceDisplay = long.
+
+new km: bitstring creating km_4 at {1}
+
+new b: bitstring creating b_4 at {5} in copy a_3
+
+in(c, a_4) at {6} in copy a_3
+
+new i_1: bitstring creating i_3 at {20} in copy a_3
+
+new i: bitstring creating i_4 at {9} in copy a_3
+
+event CarSendId(vehicle,mkid(b_4,a_4,s1)) at {14} in copy a_3
+
+event CarSend(vehicle,mkid(b_4,a_4,s1),i_4) at {15} in copy a_3
+
+insert window(prf(kdf(km_4,vehicle),(tagP,mkid(b_4,a_4,s1))),vehicle,mkid(b_4,a_4,s1)) at {16} in copy a_3
+
+out(c, (~M,~M_1,~M_2)) with ~M = prf(kdf(km_4,vehicle),(tagP,mkid(b_4,a_4,s1))), ~M_1 = senc(kdf(kdf(km_4,vehicle),tagE),mkid(b_4,a_4,s1),i_4), ~M_2 = mac(kdf(km_4,vehicle),(tagA,prf(kdf(km_4,vehicle),(tagP,mkid(b_4,a_4,s1))),senc(kdf(kdf(km_4,vehicle),tagE),mkid(b_4,a_4,s1),i_4),mkid(b_4,a_4,s1))) at {17} in copy a_3
+
+in(c, (~M,~M_1,~M_2)) with ~M = prf(kdf(km_4,vehicle),(tagP,mkid(b_4,a_4,s1))), ~M_1 = senc(kdf(kdf(km_4,vehicle),tagE),mkid(b_4,a_4,s1),i_4), ~M_2 = mac(kdf(km_4,vehicle),(tagA,prf(kdf(km_4,vehicle),(tagP,mkid(b_4,a_4,s1))),senc(kdf(kdf(km_4,vehicle),tagE),mkid(b_4,a_4,s1),i_4),mkid(b_4,a_4,s1))) at {31} in copy a_5
+
+get window(prf(kdf(km_4,vehicle),(tagP,mkid(b_4,a_4,s1))),vehicle,mkid(b_4,a_4,s1)) at {36} in copy a_5
+
+get seen(=vehicle,=mkid(b_4,a_4,s1)): else branch taken at {35} in copy a_5
+
+in(c, (~M,~M_1,~M_2)) with ~M = prf(kdf(km_4,vehicle),(tagP,mkid(b_4,a_4,s1))), ~M_1 = senc(kdf(kdf(km_4,vehicle),tagE),mkid(b_4,a_4,s1),i_4), ~M_2 = mac(kdf(km_4,vehicle),(tagA,prf(kdf(km_4,vehicle),(tagP,mkid(b_4,a_4,s1))),senc(kdf(kdf(km_4,vehicle),tagE),mkid(b_4,a_4,s1),i_4),mkid(b_4,a_4,s1))) at {31} in copy a_6
+
+get window(prf(kdf(km_4,vehicle),(tagP,mkid(b_4,a_4,s1))),vehicle,mkid(b_4,a_4,s1)) at {36} in copy a_6
+
+get seen(=vehicle,=mkid(b_4,a_4,s1)): else branch taken at {35} in copy a_6
+
+insert seen(vehicle,mkid(b_4,a_4,s1)) at {33} in copy a_6
+
+event BaseAccept(vehicle,mkid(b_4,a_4,s1)) at {34} in copy a_6 (goal)
+
+insert seen(vehicle,mkid(b_4,a_4,s1)) at {33} in copy a_5
+
+event BaseAccept(vehicle,mkid(b_4,a_4,s1)) at {34} in copy a_5 (goal)
+
+The event BaseAccept(vehicle,mkid(b_4,a_4,s1)) is executed at {34} in copy a_5.
+The event BaseAccept(vehicle,mkid(b_4,a_4,s1)) is executed at {34} in copy a_6.
+A trace has been found.
+RESULT inj-event(BaseAccept(v_2,a_3)) ==> inj-event(CarSendId(v_2,a_3)) || event(Revealed(v_2)) is false.
+RESULT (but event(BaseAccept(v_2,a_3)) ==> event(CarSendId(v_2,a_3)) || event(Revealed(v_2)) is true.)
+-- Query not event(BaseAccept(v_2,a_3)) in process 1.
+Translating the process into Horn clauses...
+Completing...
+Starting query not event(BaseAccept(v_2,a_3))
+goal reachable: attacker(e_1) -> event(BaseAccept(vehicle[],mkid(b_3,e_1,s1)))
+Abbreviations:
+b_3 = b[!1 = @sid]
+
+Derivation:
+Abbreviations:
+b_3 = b[!1 = @sid]
+i_2 = i[e = e_1,!1 = @sid]
+
+1. We assume as hypothesis that
+attacker(e_1).
+
+2. The message e_1 that the attacker may have by 1 may be received at input {6}.
+So the message (prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),mac(kdf(km[],vehicle[]),(tagA,prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),mkid(b_3,e_1,s1)))) may be sent to the attacker at output {17}.
+attacker((prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),mac(kdf(km[],vehicle[]),(tagA,prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),mkid(b_3,e_1,s1))))).
+
+3. By 2, the attacker may know (prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),mac(kdf(km[],vehicle[]),(tagA,prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),mkid(b_3,e_1,s1)))).
+Using the function 3-proj-3-tuple the attacker may obtain mac(kdf(km[],vehicle[]),(tagA,prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),mkid(b_3,e_1,s1))).
+attacker(mac(kdf(km[],vehicle[]),(tagA,prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),mkid(b_3,e_1,s1)))).
+
+4. By 2, the attacker may know (prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),mac(kdf(km[],vehicle[]),(tagA,prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),mkid(b_3,e_1,s1)))).
+Using the function 2-proj-3-tuple the attacker may obtain senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2).
+attacker(senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2)).
+
+5. By 2, the attacker may know (prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),mac(kdf(km[],vehicle[]),(tagA,prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),mkid(b_3,e_1,s1)))).
+Using the function 1-proj-3-tuple the attacker may obtain prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))).
+attacker(prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1)))).
+
+6. By 5, the attacker may know prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))).
+By 4, the attacker may know senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2).
+By 3, the attacker may know mac(kdf(km[],vehicle[]),(tagA,prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),mkid(b_3,e_1,s1))).
+Using the function 3-tuple the attacker may obtain (prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),mac(kdf(km[],vehicle[]),(tagA,prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),mkid(b_3,e_1,s1)))).
+attacker((prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),mac(kdf(km[],vehicle[]),(tagA,prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),mkid(b_3,e_1,s1))))).
+
+7. The message e_1 that the attacker may have by 1 may be received at input {6}.
+So the entry window(prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),vehicle[],mkid(b_3,e_1,s1)) may be inserted in a table at insert {16}.
+table(window(prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),vehicle[],mkid(b_3,e_1,s1))).
+
+8. The message (prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),mac(kdf(km[],vehicle[]),(tagA,prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),senc(kdf(kdf(km[],vehicle[]),tagE),mkid(b_3,e_1,s1),i_2),mkid(b_3,e_1,s1)))) that the attacker may have by 6 may be received at input {31}.
+The entry window(prf(kdf(km[],vehicle[]),(tagP,mkid(b_3,e_1,s1))),vehicle[],mkid(b_3,e_1,s1)) that may be in a table by 7 may be read at get {36}.
+So event BaseAccept(vehicle[],mkid(b_3,e_1,s1)) may be executed at {34}.
+event(BaseAccept(vehicle[],mkid(b_3,e_1,s1))).
+
+9. By 8, event(BaseAccept(vehicle[],mkid(b_3,e_1,s1))).
+The goal is reached, represented in the following fact:
+event(BaseAccept(vehicle[],mkid(b_3,e_1,s1))).
+
+
+A more detailed output of the traces is available with
+  set traceDisplay = long.
+
+new km: bitstring creating km_4 at {1}
+
+new b: bitstring creating b_4 at {5} in copy a_3
+
+in(c, a_4) at {6} in copy a_3
+
+new i_1: bitstring creating i_3 at {20} in copy a_3
+
+event CarSendId(vehicle,mkid(b_4,a_4,s2)) at {25} in copy a_3
+
+event CarSend(vehicle,mkid(b_4,a_4,s2),i_3) at {26} in copy a_3
+
+insert window(prf(kdf(km_4,vehicle),(tagP,mkid(b_4,a_4,s2))),vehicle,mkid(b_4,a_4,s2)) at {27} in copy a_3
+
+out(c, (~M,~M_1,~M_2)) with ~M = prf(kdf(km_4,vehicle),(tagP,mkid(b_4,a_4,s2))), ~M_1 = senc(kdf(kdf(km_4,vehicle),tagE),mkid(b_4,a_4,s2),i_3), ~M_2 = mac(kdf(km_4,vehicle),(tagA,prf(kdf(km_4,vehicle),(tagP,mkid(b_4,a_4,s2))),senc(kdf(kdf(km_4,vehicle),tagE),mkid(b_4,a_4,s2),i_3),mkid(b_4,a_4,s2))) at {28} in copy a_3
+
+new i: bitstring creating i_4 at {9} in copy a_3
+
+event CarSendId(vehicle,mkid(b_4,a_4,s1)) at {14} in copy a_3
+
+event CarSend(vehicle,mkid(b_4,a_4,s1),i_4) at {15} in copy a_3
+
+insert window(prf(kdf(km_4,vehicle),(tagP,mkid(b_4,a_4,s1))),vehicle,mkid(b_4,a_4,s1)) at {16} in copy a_3
+
+out(c, (~M_3,~M_4,~M_5)) with ~M_3 = prf(kdf(km_4,vehicle),(tagP,mkid(b_4,a_4,s1))), ~M_4 = senc(kdf(kdf(km_4,vehicle),tagE),mkid(b_4,a_4,s1),i_4), ~M_5 = mac(kdf(km_4,vehicle),(tagA,prf(kdf(km_4,vehicle),(tagP,mkid(b_4,a_4,s1))),senc(kdf(kdf(km_4,vehicle),tagE),mkid(b_4,a_4,s1),i_4),mkid(b_4,a_4,s1))) at {17} in copy a_3
+
+in(c, (~M_3,~M_4,~M_5)) with ~M_3 = prf(kdf(km_4,vehicle),(tagP,mkid(b_4,a_4,s1))), ~M_4 = senc(kdf(kdf(km_4,vehicle),tagE),mkid(b_4,a_4,s1),i_4), ~M_5 = mac(kdf(km_4,vehicle),(tagA,prf(kdf(km_4,vehicle),(tagP,mkid(b_4,a_4,s1))),senc(kdf(kdf(km_4,vehicle),tagE),mkid(b_4,a_4,s1),i_4),mkid(b_4,a_4,s1))) at {31} in copy a_5
+
+get window(prf(kdf(km_4,vehicle),(tagP,mkid(b_4,a_4,s1))),vehicle,mkid(b_4,a_4,s1)) at {36} in copy a_5
+
+get seen(=vehicle,=mkid(b_4,a_4,s1)): else branch taken at {35} in copy a_5
+
+insert seen(vehicle,mkid(b_4,a_4,s1)) at {33} in copy a_5
+
+event BaseAccept(vehicle,mkid(b_4,a_4,s1)) at {34} in copy a_5 (goal)
+
+The event BaseAccept(vehicle,mkid(b_4,a_4,s1)) is executed at {34} in copy a_5.
+A trace has been found.
+RESULT not event(BaseAccept(v_2,a_3)) is false.
+
+--------------------------------------------------------------
+Verification summary:
+
+Query event(CarSend(v_2,a_3,i1)) && event(CarSend(v_2,a_3,i2)) ==> i1 = i2 is true.
+
+Query event(BaseAccept(v_2,a_3)) ==> event(CarSendId(v_2,a_3)) || event(Revealed(v_2)) is true.
+
+Query inj-event(BaseAccept(v_2,a_3)) ==> inj-event(CarSendId(v_2,a_3)) || event(Revealed(v_2)) is false.
+
+Query not event(BaseAccept(v_2,a_3)) is false.
+
+--------------------------------------------------------------
+
+exit code: 0 ; wall time 0 s

@@ -1,0 +1,482 @@
+{
+ "supplied": {
+  "front": {
+   "front": 10,
+   "rear": 0,
+   "left": 0,
+   "right": 0,
+   "no_trigger": 0
+  },
+  "rear": {
+   "front": 0,
+   "rear": 9,
+   "left": 0,
+   "right": 0,
+   "no_trigger": 1
+  },
+  "left": {
+   "front": 0,
+   "rear": 0,
+   "left": 10,
+   "right": 0,
+   "no_trigger": 0
+  },
+  "right": {
+   "front": 0,
+   "rear": 0,
+   "left": 0,
+   "right": 9,
+   "no_trigger": 1
+  }
+ },
+ "V00_base": {
+  "front": {
+   "front": 19,
+   "rear": 0,
+   "left": 0,
+   "right": 0,
+   "no_trigger": 1
+  },
+  "rear": {
+   "front": 0,
+   "rear": 19,
+   "left": 0,
+   "right": 0,
+   "no_trigger": 1
+  },
+  "left": {
+   "front": 0,
+   "rear": 0,
+   "left": 20,
+   "right": 0,
+   "no_trigger": 0
+  },
+  "right": {
+   "front": 0,
+   "rear": 0,
+   "left": 0,
+   "right": 19,
+   "no_trigger": 1
+  }
+ },
+ "T_x15": {
+  "front": {
+   "front": 19,
+   "rear": 0,
+   "left": 0,
+   "right": 0,
+   "no_trigger": 1
+  },
+  "rear": {
+   "front": 0,
+   "rear": 19,
+   "left": 0,
+   "right": 0,
+   "no_trigger": 1
+  },
+  "left": {
+   "front": 0,
+   "rear": 0,
+   "left": 20,
+   "right": 0,
+   "no_trigger": 0
+  },
+  "right": {
+   "front": 0,
+   "rear": 0,
+   "left": 0,
+   "right": 19,
+   "no_trigger": 1
+  }
+ },
+ "T_x30": {
+  "front": {
+   "front": 20,
+   "rear": 0,
+   "left": 0,
+   "right": 0,
+   "no_trigger": 0
+  },
+  "rear": {
+   "front": 0,
+   "rear": 19,
+   "left": 0,
+   "right": 0,
+   "no_trigger": 1
+  },
+  "left": {
+   "front": 0,
+   "rear": 0,
+   "left": 20,
+   "right": 0,
+   "no_trigger": 0
+  },
+  "right": {
+   "front": 0,
+   "rear": 0,
+   "left": 0,
+   "right": 17,
+   "no_trigger": 3
+  }
+ },
+ "T_y15": {
+  "front": {
+   "front": 20,
+   "rear": 0,
+   "left": 0,
+   "right": 0,
+   "no_trigger": 0
+  },
+  "rear": {
+   "front": 0,
+   "rear": 19,
+   "left": 0,
+   "right": 0,
+   "no_trigger": 1
+  },
+  "left": {
+   "front": 0,
+   "rear": 0,
+   "left": 19,
+   "right": 0,
+   "no_trigger": 1
+  },
+  "right": {
+   "front": 0,
+   "rear": 0,
+   "left": 0,
+   "right": 20,
+   "no_trigger": 0
+  }
+ },
+ "T_y30": {
+  "front": {
+   "front": 20,
+   "rear": 0,
+   "left": 0,
+   "right": 0,
+   "no_trigger": 0
+  },
+  "rear": {
+   "front": 0,
+   "rear": 19,
+   "left": 0,
+   "right": 0,
+   "no_trigger": 1
+  },
+  "left": {
+   "front": 0,
+   "rear": 0,
+   "left": 20,
+   "right": 0,
+   "no_trigger": 0
+  },
+  "right": {
+   "front": 0,
+   "rear": 0,
+   "left": 0,
+   "right": 20,
+   "no_trigger": 0
+  }
+ },
+ "F_x": {
+  "front": {
+   "front": 0,
+   "rear": 20,
+   "left": 0,
+   "right": 0,
+   "no_trigger": 0
+  },
+  "rear": {
+   "front": 20,
+   "rear": 0,
+   "left": 0,
+   "right": 0,
+   "no_trigger": 0
+  },
+  "left": {
+   "front": 0,
+   "rear": 0,
+   "left": 20,
+   "right": 0,
+   "no_trigger": 0
+  },
+  "right": {
+   "front": 0,
+   "rear": 0,
+   "left": 0,
+   "right": 20,
+   "no_trigger": 0
+  }
+ },
+ "F_y": {
+  "front": {
+   "front": 20,
+   "rear": 0,
+   "left": 0,
+   "right": 0,
+   "no_trigger": 0
+  },
+  "rear": {
+   "front": 0,
+   "rear": 19,
+   "left": 0,
+   "right": 0,
+   "no_trigger": 1
+  },
+  "left": {
+   "front": 0,
+   "rear": 0,
+   "left": 0,
+   "right": 19,
+   "no_trigger": 1
+  },
+  "right": {
+   "front": 0,
+   "rear": 0,
+   "left": 19,
+   "right": 0,
+   "no_trigger": 1
+  }
+ },
+ "S_10Hz": {
+  "front": {
+   "front": 6,
+   "rear": 0,
+   "left": 0,
+   "right": 0,
+   "no_trigger": 14
+  },
+  "rear": {
+   "front": 0,
+   "rear": 4,
+   "left": 0,
+   "right": 0,
+   "no_trigger": 16
+  },
+  "left": {
+   "front": 0,
+   "rear": 0,
+   "left": 6,
+   "right": 0,
+   "no_trigger": 14
+  },
+  "right": {
+   "front": 0,
+   "rear": 0,
+   "left": 0,
+   "right": 5,
+   "no_trigger": 15
+  }
+ },
+ "S_jit1": {
+  "front": {
+   "front": 19,
+   "rear": 0,
+   "left": 0,
+   "right": 0,
+   "no_trigger": 1
+  },
+  "rear": {
+   "front": 0,
+   "rear": 19,
+   "left": 0,
+   "right": 0,
+   "no_trigger": 1
+  },
+  "left": {
+   "front": 0,
+   "rear": 0,
+   "left": 20,
+   "right": 0,
+   "no_trigger": 0
+  },
+  "right": {
+   "front": 0,
+   "rear": 0,
+   "left": 0,
+   "right": 19,
+   "no_trigger": 1
+  }
+ },
+ "S_drop05": {
+  "front": {
+   "front": 20,
+   "rear": 0,
+   "left": 0,
+   "right": 0,
+   "no_trigger": 0
+  },
+  "rear": {
+   "front": 0,
+   "rear": 20,
+   "left": 0,
+   "right": 0,
+   "no_trigger": 0
+  },
+  "left": {
+   "front": 0,
+   "rear": 0,
+   "left": 20,
+   "right": 0,
+   "no_trigger": 0
+  },
+  "right": {
+   "front": 0,
+   "rear": 0,
+   "left": 0,
+   "right": 20,
+   "no_trigger": 0
+  }
+ },
+ "N_x2": {
+  "front": {
+   "front": 19,
+   "rear": 0,
+   "left": 0,
+   "right": 0,
+   "no_trigger": 1
+  },
+  "rear": {
+   "front": 0,
+   "rear": 20,
+   "left": 0,
+   "right": 0,
+   "no_trigger": 0
+  },
+  "left": {
+   "front": 0,
+   "rear": 0,
+   "left": 20,
+   "right": 0,
+   "no_trigger": 0
+  },
+  "right": {
+   "front": 0,
+   "rear": 0,
+   "left": 0,
+   "right": 19,
+   "no_trigger": 1
+  }
+ },
+ "N_x4": {
+  "front": {
+   "front": 20,
+   "rear": 0,
+   "left": 0,
+   "right": 0,
+   "no_trigger": 0
+  },
+  "rear": {
+   "front": 0,
+   "rear": 20,
+   "left": 0,
+   "right": 0,
+   "no_trigger": 0
+  },
+  "left": {
+   "front": 0,
+   "rear": 0,
+   "left": 20,
+   "right": 0,
+   "no_trigger": 0
+  },
+  "right": {
+   "front": 0,
+   "rear": 0,
+   "left": 0,
+   "right": 19,
+   "no_trigger": 1
+  }
+ },
+ "B_08": {
+  "front": {
+   "front": 19,
+   "rear": 0,
+   "left": 0,
+   "right": 0,
+   "no_trigger": 1
+  },
+  "rear": {
+   "front": 0,
+   "rear": 20,
+   "left": 0,
+   "right": 0,
+   "no_trigger": 0
+  },
+  "left": {
+   "front": 0,
+   "rear": 0,
+   "left": 20,
+   "right": 0,
+   "no_trigger": 0
+  },
+  "right": {
+   "front": 0,
+   "rear": 0,
+   "left": 0,
+   "right": 19,
+   "no_trigger": 1
+  }
+ },
+ "P_3": {
+  "front": {
+   "front": 18,
+   "rear": 0,
+   "left": 0,
+   "right": 0,
+   "no_trigger": 2
+  },
+  "rear": {
+   "front": 0,
+   "rear": 19,
+   "left": 0,
+   "right": 0,
+   "no_trigger": 1
+  },
+  "left": {
+   "front": 0,
+   "rear": 0,
+   "left": 18,
+   "right": 0,
+   "no_trigger": 2
+  },
+  "right": {
+   "front": 0,
+   "rear": 0,
+   "left": 0,
+   "right": 17,
+   "no_trigger": 3
+  }
+ },
+ "P_8": {
+  "front": {
+   "front": 20,
+   "rear": 0,
+   "left": 0,
+   "right": 0,
+   "no_trigger": 0
+  },
+  "rear": {
+   "front": 0,
+   "rear": 20,
+   "left": 0,
+   "right": 0,
+   "no_trigger": 0
+  },
+  "left": {
+   "front": 0,
+   "rear": 0,
+   "left": 20,
+   "right": 0,
+   "no_trigger": 0
+  },
+  "right": {
+   "front": 0,
+   "rear": 0,
+   "left": 0,
+   "right": 20,
+   "no_trigger": 0
+  }
+ }
+}

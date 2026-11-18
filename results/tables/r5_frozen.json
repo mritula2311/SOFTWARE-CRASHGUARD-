@@ -1,0 +1,245 @@
+{
+ "l1": {
+  "data": {},
+  "files": {
+   "src/crashguard/boot.py": "f6a39bc90796191f4b19bb27fca2eb239fafa4baa040d8dc017ee2c02824b806",
+   "src/crashguard/direction.py": "4a0c444c2b3aeebe857a619f8a94fd6e4df396886ddc85350a129e111cd9164d",
+   "src/crashguard/hwsim_v2.py": "fd30cd6854f2e32c0bfda9701636268c7fa5a1d15bd4431e128759d8b2f5303a",
+   "src/crashguard/nhtsa.py": "e08d874996ec687ebaa4392bfbd4858bae4e73097b040285db8bd644ebd23ec3",
+   "src/crashguard/r5_common.py": "1d4b173f4478102b0e14e6ee9f4d5e8bb46a12f02f5453960535c0aca4068b35",
+   "src/crashguard/r5_l1.py": "373f90d0e0108d40962e0b21cdebb8d1f041df1de4b3e69260b7854825b587e4",
+   "src/crashguard/severity.py": "5db8d0347e07ee5624a4b0e445596e2644fc5714c639ab552890f6bc045c92a4",
+   "src/crashguard/severity_study.py": "16c0ed494e4d643d649a47ec170cedc6f3c7b87ae0888879f737099184f94e1d",
+   "src/crashguard/sh_events.py": "3f186994c8a671905e73dcd7846567336bdebce95c8e303abb723b44b9355230"
+  },
+  "git_head": "55743368472c681a25aea1a38b4c9630189ad846",
+  "params": {
+   "a_min": 1.0,
+   "a_still": 0.15,
+   "ang_stale": 10.0,
+   "g_still": 3.0,
+   "h_min_g": 0.05,
+   "sd_still": 0.02,
+   "seg_min_s": 2.0,
+   "seg_trim_s": 0.25,
+   "still_s": 2.0,
+   "straight_dps": 5.0
+  },
+  "params_sha256": "cdff2e3a051d6ef691749cc3fa1f0c9ac1deeddbb979d618ef66445265c038f2"
+ },
+ "l10": {
+  "data": {
+   "data/raw/r5_l10/sisfall.zip": "dd0f9cf14134e95be79d9962855ba3bded13a4dedb3fa96fc265277d459aa6b3",
+   "data/raw/r5_l10/uci_har.zip": "c00b803081a5c797cd5e4b83700a9810b38d53d9d84e01917e090e1fdbc81031"
+  },
+  "files": {
+   "src/crashguard/r5_common.py": "1d4b173f4478102b0e14e6ee9f4d5e8bb46a12f02f5453960535c0aca4068b35",
+   "src/crashguard/r5_l10.py": "48d8006e968a592ef8057a90d698c064b3cb1396264666c76cdb255440704c26"
+  },
+  "git_head": "f17ce7c1d67e5abeb9257e75572569d375a97181",
+  "params": {
+   "har_channels": [
+    "total_acc",
+    "body_acc",
+    "body_gyro"
+   ],
+   "seed": 42,
+   "step": 100,
+   "test_frac": 0.2,
+   "thresh": 0.01,
+   "win": 200
+  },
+  "params_sha256": "8906794d9b602c8a64ba9e06e29e3d62b205e42b33db152c2729b109471ff792"
+ },
+ "l11": {
+  "data": {
+   "data/processed/r5_l11_cache.pkl": "8d834d3eb95252e915b6255fd5b8f29cbf91132b98637f89e78288fb083f7787",
+   "results/tables/r5_l11_dev_choice.json": "d73a9b642b5672f07cc94749c824f6410fa9f785202050801a9977cf1c1426ba",
+   "results/tables/r5_l11_dev_log.json": "f2b1c3bb8521e2cfa37c482f378734a5955d7539d2e948fedef711f0d6322757"
+  },
+  "files": {
+   "src/crashguard/data.py": "621033fc74f55873ee55e9d980a3fa46ec5c0f70155180c581606555d281505f",
+   "src/crashguard/features.py": "100fd94cef397696fabbd8204c6404cc8d3560746793d4eda25dbc440a13c94f",
+   "src/crashguard/r5_common.py": "1d4b173f4478102b0e14e6ee9f4d5e8bb46a12f02f5453960535c0aca4068b35",
+   "src/crashguard/r5_l11.py": "ba8176f8b2c4f998d9fdc4ec500e9291718d307a021f1001b20cffda587c9980"
+  },
+  "git_head": "f17ce7c1d67e5abeb9257e75572569d375a97181",
+  "params": {
+   "a_long": 0.3,
+   "s0": 1.0,
+   "theta": 0.0,
+   "v_min": 5.0,
+   "w_min": 5.0
+  },
+  "params_sha256": "591f61368cb14c3eb70ed16abc4f0696cfa538f5ae146fb1f0461769688cf6c9"
+ },
+ "l2": {
+  "data": {
+   "data/processed/r5_det_seed42.pkl": "a5146f731979e94b7b2a6cbde96ded6bc617455b44dabd025626c4822a8eb921",
+   "data/processed/r5_l2_post.parquet": "a9558a00b40c49058ad146cbfd49e99c5fe48ff1f6d3d623a3f6ac9b9766d30e"
+  },
+  "files": {
+   "src/crashguard/config.py": "b7a72fc7a5d50ea7e186d15aaa4ef5826b70cad5d1c2b9dcfedd86269fa24af9",
+   "src/crashguard/detector_extra.py": "c9c3d8db2cd07531a6c4bbca8e775aede0f9fdf53717e9b8a08f92a85e7312e1",
+   "src/crashguard/early.py": "5febd62fc1d24e478cb515e3ce4b8e7d0dbd573fb77ba62e6f85a3cb6bb0abbb",
+   "src/crashguard/features.py": "100fd94cef397696fabbd8204c6404cc8d3560746793d4eda25dbc440a13c94f",
+   "src/crashguard/r5_common.py": "1d4b173f4478102b0e14e6ee9f4d5e8bb46a12f02f5453960535c0aca4068b35",
+   "src/crashguard/r5_det.py": "640fc626a1484b06d37081b9646eaf89a242f15021645ab1bb13c2647db15987",
+   "src/crashguard/r5_l2.py": "817524fe80a17ffb7fd4272ad9ed337395fc8f3a8a2bc2b2e52fa5aee9ff6134",
+   "src/crashguard/windows_cache.py": "8191c34e287c27718fc21e56e8b6fbb951c610fd9e55c17d3eeb56a5b8ffb528"
+  },
+  "git_head": "55743368472c681a25aea1a38b4c9630189ad846",
+  "params": {
+   "alpha": 0.01,
+   "class_weight": "balanced",
+   "model": "logistic",
+   "w": 2
+  },
+  "params_sha256": "c8f6cc61e89cca305995f14521dfaaf08ec11df3cf0028f11e61e45908ad25e0"
+ },
+ "l3": {
+  "data": {
+   "data/processed/r5_det_seed42.pkl": "a5146f731979e94b7b2a6cbde96ded6bc617455b44dabd025626c4822a8eb921",
+   "data/processed/r5_l3_cache.pkl": "8aa311bf415c4ac253435ba63b25d6df680d9f9b9f56572405d26db4a0829f47"
+  },
+  "files": {
+   "src/crashguard/config.py": "b7a72fc7a5d50ea7e186d15aaa4ef5826b70cad5d1c2b9dcfedd86269fa24af9",
+   "src/crashguard/detector_extra.py": "c9c3d8db2cd07531a6c4bbca8e775aede0f9fdf53717e9b8a08f92a85e7312e1",
+   "src/crashguard/features.py": "100fd94cef397696fabbd8204c6404cc8d3560746793d4eda25dbc440a13c94f",
+   "src/crashguard/r5_common.py": "1d4b173f4478102b0e14e6ee9f4d5e8bb46a12f02f5453960535c0aca4068b35",
+   "src/crashguard/r5_det.py": "640fc626a1484b06d37081b9646eaf89a242f15021645ab1bb13c2647db15987",
+   "src/crashguard/r5_l3.py": "d4db59b91b397a9eabcffe8cecf783a128b27cff508f069240adfd6d6ad5a067",
+   "src/crashguard/windows_cache.py": "8191c34e287c27718fc21e56e8b6fbb951c610fd9e55c17d3eeb56a5b8ffb528"
+  },
+  "git_head": "55743368472c681a25aea1a38b4c9630189ad846",
+  "params": {
+   "alpha": 0.01,
+   "l_gyro_ms": 30,
+   "retrain": true,
+   "t_mot": 0.3
+  },
+  "params_sha256": "833a2c383ee0c54a09bcf1ff7203c1a2bc191a7778d362f1114a92de23b99b3a"
+ },
+ "l4": {
+  "data": {
+   "results/tables/r5_l4_dev_cells.json": "1429e9fad361ae2b00df0086e25b3c64ac45696b2651a18b16b15ec6c2a942b0"
+  },
+  "files": {
+   "src/crashguard/lora.py": "ac1e7ff21bc68c025344da0c7d3a4050a3e0eff91832cf10b61417637ca5ef01",
+   "src/crashguard/r5_common.py": "1d4b173f4478102b0e14e6ee9f4d5e8bb46a12f02f5453960535c0aca4068b35",
+   "src/crashguard/r5_l4.py": "99fc06225badb2f9a0ebd422d1f5a57eb4e7095bea6bc344c54f1430de38a68f",
+   "xsim/ns3/xsim_alert.cc": "5484616807bc89bb090a193482236ef84ac5778c1b7566831f89dacfb5fe528c"
+  },
+  "git_head": "55743368472c681a25aea1a38b4c9630189ad846",
+  "params": {
+   "err": 2.0,
+   "k": 2,
+   "m0": 0.0
+  },
+  "params_sha256": "a043a310e552df0f6d5468766d23434edc73add08ef5f3d7ad3fad270d2ad32b"
+ },
+ "l5": {
+  "data": {
+   "data/processed/r3_t1_links.pkl": "5178f20b8a123d5fc62c639d348cd03cead72a4653f7494c3fdfa55f7bbfeaee",
+   "data/processed/r5_det_seed42.pkl": "a5146f731979e94b7b2a6cbde96ded6bc617455b44dabd025626c4822a8eb921"
+  },
+  "files": {
+   "src/crashguard/ar_r3.py": "d7743d093c03f5ec17aef4cd0bca087d286c0170c20c4aa5c835e7bcb42d5f8b",
+   "src/crashguard/early.py": "5febd62fc1d24e478cb515e3ce4b8e7d0dbd573fb77ba62e6f85a3cb6bb0abbb",
+   "src/crashguard/lora.py": "ac1e7ff21bc68c025344da0c7d3a4050a3e0eff91832cf10b61417637ca5ef01",
+   "src/crashguard/packet.py": "6b6684c18691238a93171828aafd73312d25890850bc593df08eb32146c30edc",
+   "src/crashguard/pp_r3_ns3.py": "9e37a4807055d5ecaac1f41bbfd22aa44b1e9de1a86aa8a9bf2c607f67e189f7",
+   "src/crashguard/r3_t1_extract.py": "ad558a383f589ba8882111b8421f42786a8233e87b06e413870cd11b90b04854",
+   "src/crashguard/r5_common.py": "1d4b173f4478102b0e14e6ee9f4d5e8bb46a12f02f5453960535c0aca4068b35",
+   "src/crashguard/r5_det.py": "640fc626a1484b06d37081b9646eaf89a242f15021645ab1bb13c2647db15987",
+   "src/crashguard/r5_l2.py": "817524fe80a17ffb7fd4272ad9ed337395fc8f3a8a2bc2b2e52fa5aee9ff6134",
+   "src/crashguard/r5_l5.py": "8fa0fe6d4320d81573f1fca3e3ff6bb1737bc544ffadc9f704e36fb21eafc28e"
+  },
+  "git_head": "55743368472c681a25aea1a38b4c9630189ad846",
+  "params": {
+   "alpha": 0.01,
+   "grid": "full",
+   "objective": "cap"
+  },
+  "params_sha256": "12d5488d21a58c7323532da55d3e3b6784d9ac1084be917e14952c59746eecee"
+ },
+ "l6": {
+  "data": {
+   "data/raw/r5_fars/cities15000.zip": "ce7a405587d6d68ee7ed78743770b42d663e0ef1971e6193a6c14e54f1af207e",
+   "data/raw/r5_fars/fars2019.zip": "0974abb92cfb04fa022631a838a3f46555025f2b011ee78ecad15bcf86c60f31",
+   "data/raw/r5_fars/fars2020.zip": "b2806902b3da9b45c632499f82e1c74fd108238ae7f67e108ebf40360ee4c9c3",
+   "data/raw/r5_fars/fars2021.zip": "743c19a13884614430d295289e655c5ad32b0a025a11e5b2149dfb57acae389b",
+   "data/raw/r5_fars/fars2022.zip": "989448d7a2f3964264c96a3cdb220f6c413c782a33eb759781f520c5acb5f744"
+  },
+  "files": {
+   "src/crashguard/r5_common.py": "1d4b173f4478102b0e14e6ee9f4d5e8bb46a12f02f5453960535c0aca4068b35",
+   "src/crashguard/r5_l6.py": "be921f43f134c314dacdd2080f9621f9b93677c5418a0432a0beaf31605f612a"
+  },
+  "git_head": "f17ce7c1d67e5abeb9257e75572569d375a97181",
+  "params": {
+   "cell_deg": 0.02,
+   "dev_years": [
+    2019,
+    2020,
+    2021
+   ],
+   "held_year": 2022,
+   "ks": [
+    50,
+    100,
+    200,
+    400
+   ],
+   "r_cov_km": 4.0
+  },
+  "params_sha256": "34059b5aaa831e93f735d49bb758c676a5fae406d9f16373042e91e91a8e9ad8"
+ },
+ "l7": {
+  "data": {},
+  "files": {
+   "formal/ratchet.spthy": "0a8f3c046299376e9e18304daae2a2631147026544dc61938fc1e7561ab47284",
+   "formal/ratchet3.spthy": "bbe1c48448c0409e69913c7182dd70f7215558f35002d76760eca0320505e6e3",
+   "src/crashguard/r5_common.py": "1d4b173f4478102b0e14e6ee9f4d5e8bb46a12f02f5453960535c0aca4068b35",
+   "src/crashguard/r5_l7.py": "a86b8668abfd7f6fef3303060a5ee71fd9cec43eb043cd31cd31e2898150a64b"
+  },
+  "git_head": "f17ce7c1d67e5abeb9257e75572569d375a97181",
+  "params": {
+   "MAX_BOOTS": 3,
+   "MAX_LEN": 10,
+   "W": 8
+  },
+  "params_sha256": "ad9f6f3eef2bf14099caf17615027d4a1a7b16bfdd181b1d37032a4c0dc0bd4e"
+ },
+ "l8": {
+  "data": {
+   "data/processed/r5_det_seed42.pkl": "a5146f731979e94b7b2a6cbde96ded6bc617455b44dabd025626c4822a8eb921"
+  },
+  "files": {
+   "src/crashguard/r5_common.py": "1d4b173f4478102b0e14e6ee9f4d5e8bb46a12f02f5453960535c0aca4068b35",
+   "src/crashguard/r5_det.py": "640fc626a1484b06d37081b9646eaf89a242f15021645ab1bb13c2647db15987",
+   "src/crashguard/r5_l2.py": "817524fe80a17ffb7fd4272ad9ed337395fc8f3a8a2bc2b2e52fa5aee9ff6134",
+   "src/crashguard/r5_l8.py": "d66d636e9ae540adb47a7e8a897177f12c4ef1e6bb73581ab182ff3f706b7d15"
+  },
+  "git_head": "f17ce7c1d67e5abeb9257e75572569d375a97181",
+  "params": {
+   "H": 60,
+   "M": 4,
+   "Q": 10,
+   "R": 6
+  },
+  "params_sha256": "5dd34c3ece605334c361a79126c502ec2ff1ded7907d810a8541a226af401f24"
+ },
+ "l9": {
+  "data": {},
+  "files": {
+   "src/crashguard/r5_common.py": "1d4b173f4478102b0e14e6ee9f4d5e8bb46a12f02f5453960535c0aca4068b35",
+   "src/crashguard/r5_l9.py": "d2b299d6f19920a6ffe4a23999dac5934266a8817b9c74997f681b182701fd41"
+  },
+  "git_head": "f17ce7c1d67e5abeb9257e75572569d375a97181",
+  "params": {
+   "F_PRE": 0.1,
+   "PHI": 0.5
+  },
+  "params_sha256": "ce1f5f0d103cbb8b80db350c219349265e9402183eb440d81717d99815e01823"
+ }
+}

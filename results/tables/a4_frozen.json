@@ -1,0 +1,26 @@
+{
+ "a1": {
+  "gap": 0.0,
+  "reserve": 4,
+  "after_confirm": false
+ },
+ "chosen_iteration": 3,
+ "qualified": [
+  3,
+  2,
+  1,
+  0,
+  4
+ ],
+ "rule": "PREREGISTRATION_V15 section 2.4",
+ "sources": {
+  "src/crashguard/a4_a1.py": "cbfc357a2b4d4647ce1ba221f21b584608bbf8c06a4811f54755a0004c352046",
+  "src/crashguard/a4_a1_ns3.py": "b5a34c6c9fa6cf40622baea5446820ccb9012147104f6ca90ed320c8be560e86",
+  "src/crashguard/a4_a2.py": "4ba6f6b644fdeba8c6acaaece2cb162bbc59f48f4b1e4542a459de78d0989b2f",
+  "src/crashguard/a4_common.py": "3bfb95e9c2e2cc2aeedf4daad66d82fce6c60f6baf9c51f416ff39c65d16cdb0",
+  "src/crashguard/a4_analyse.py": "f946d60628a9f85f6eae1fc658e71c304c0033311f6e0e9b3efb7ea4499fe32a",
+  "src/crashguard/a4_dev.py": "344280fb4d05d12661592948c22db3c013a66179ed6744b14c03b5ec5052246b",
+  "xsim/ns3/xsim_alert.cc": "e77798bb914307ede7ae86bca483f29086c01f2d745d5b41a9e34326904a5ff8"
+ },
+ "params_file_sha256": "9a7f4296485aad5a5496f4061869526ea3eedb2ecc493943fdc73ab4de60aa4f"
+}

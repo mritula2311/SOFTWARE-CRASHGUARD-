@@ -1,0 +1,45 @@
+(* Round 7 B2.1 sensitivity control: the pseudonym design, but the boot counter is also sent in clear (it is the same for all alerts of a vehicle in one boot). The equivalence must FAIL: it shows that the result depends on not sending boot and counter in clear. *)
+(* Round 7 B2.1 (docs/02_preregistration/PREREGISTRATION_V18.md section 3.2): unlinkability of alerts under the pseudonymous id.
+   Design: the id field of the alert is the pseudonym p = prf(k_v, <tagP, boot, ctr>); boot and ctr are NOT sent (the base recovers them from the window entry that p matches); the position and the other payload are
+   encrypted under a key derived from k_v with the nonce <boot, ctr>; the tag is mac(k_v, <tagA, p, ct>). The base holds a table window(p, v, boot, ctr) of the pseudonyms it precomputed (the sequential window of m pseudonyms
+   is abstracted by an entry that exists for every alert the vehicle sends: resynchronisation succeeds) and a seen-set of (v, boot, ctr). The attacker controls the channel (listens, replays, injects, alters) and holds no vehicle key.
+   Test: diff-equivalence between 'two alerts of the same vehicle' (left) and 'two alerts of two vehicles' (right). The file ends with the strong form (unbounded many alerts: all from one vehicle against each from a new vehicle),
+   selected by the macro line below. ProVerif 2.05, symbolic model with perfect cryptography. Out of scope: timing, radio fingerprints, a key-holding attacker. 
+   The boot counter of a vehicle is the same value in all its alerts of one boot (boot = prf(k_v, tagB)); the counter is fresh per alert. *)
+free c: channel.
+const tagA: bitstring.
+const tagP: bitstring.
+const tagB: bitstring.
+const tagE: bitstring.
+const tagACK: bitstring.
+const mAlert: bitstring.
+const mAck: bitstring.
+fun kdf(bitstring, bitstring): bitstring.
+fun prf(bitstring, bitstring): bitstring.
+fun mac(bitstring, bitstring): bitstring.
+fun senc(bitstring, bitstring, bitstring): bitstring.
+reduc forall k: bitstring, n: bitstring, m: bitstring; sdec(k, n, senc(k, n, m)) = m.
+table window(bitstring, bitstring, bitstring, bitstring).
+table seen(bitstring, bitstring, bitstring).
+
+let Alert(master: bitstring, v: bitstring) =
+  new ctr: bitstring; new payload: bitstring;
+  let kv = kdf(master, v) in
+  let boot = prf(kv, tagB) in
+  let p = prf(kv, (tagP, boot, ctr)) in
+  insert window(p, v, boot, ctr);
+  let ct = senc(kdf(kv, tagE), (boot, ctr), payload) in
+  out(c, (mAlert, p, boot, ct, mac(kv, (tagA, p, boot, ct)))).
+
+let Base(master: bitstring) =
+  in(c, (=mAlert, p: bitstring, bt: bitstring, ct: bitstring, t: bitstring));
+  get window(=p, v, b, k) in
+  let kv = kdf(master, v) in
+  if t = mac(kv, (tagA, p, bt, ct)) then
+  get seen(=v, =b, =k) in 0 else
+  ( insert seen(v, b, k); out(c, (mAck, p, mac(kv, (tagACK, p)))) ).
+
+(* two alerts: same vehicle (left) against two vehicles (right) *)
+process
+  new master: bitstring; new idA: bitstring; new idB: bitstring;
+  ( !Base(master) | Alert(master, idA) | Alert(master, choice[idA, idB]) )

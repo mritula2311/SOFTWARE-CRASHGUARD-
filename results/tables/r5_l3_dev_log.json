@@ -1,0 +1,87 @@
+[
+ {
+  "params": {
+   "t_mot": 0.5,
+   "l_gyro_ms": 30,
+   "retrain": true,
+   "alpha": 0.01
+  },
+  "val_recall_a": 0.6216216216216216,
+  "val_recall_b": 0.6242068155111633,
+  "val_recall_loss": -0.0025851938895417037,
+  "val_fa_a": 0.009992145911510602,
+  "val_fa_b": 0.009992145911510602,
+  "active_share": 0.06479802578947737,
+  "energy_ratio": 0.1158804865656824,
+  "missed": 4,
+  "iteration": 0
+ },
+ {
+  "params": {
+   "t_mot": 0.3,
+   "l_gyro_ms": 30,
+   "retrain": true,
+   "alpha": 0.01
+  },
+  "val_recall_a": 0.6216216216216216,
+  "val_recall_b": 0.6303172737955347,
+  "val_recall_loss": -0.008695652173913104,
+  "val_fa_a": 0.009992145911510602,
+  "val_fa_b": 0.009992145911510602,
+  "active_share": 0.20317611428656931,
+  "energy_ratio": 0.2467001080440256,
+  "missed": 1,
+  "iteration": 1
+ },
+ {
+  "params": {
+   "t_mot": 1.0,
+   "l_gyro_ms": 30,
+   "retrain": true,
+   "alpha": 0.01
+  },
+  "val_recall_a": 0.6216216216216216,
+  "val_recall_b": 0.5466509988249119,
+  "val_recall_loss": 0.07497062279670974,
+  "val_fa_a": 0.009992145911510602,
+  "val_fa_b": 0.009992145911510602,
+  "active_share": 0.01497370691735442,
+  "energy_ratio": 0.06877766410254095,
+  "missed": 1434,
+  "iteration": 2
+ },
+ {
+  "params": {
+   "t_mot": 0.5,
+   "l_gyro_ms": 70,
+   "retrain": true,
+   "alpha": 0.01
+  },
+  "val_recall_a": 0.6216216216216216,
+  "val_recall_b": 0.6251468860164512,
+  "val_recall_loss": -0.003525264394829586,
+  "val_fa_a": 0.009992145911510602,
+  "val_fa_b": 0.009992145911510602,
+  "active_share": 0.06479802578947737,
+  "energy_ratio": 0.1158804865656824,
+  "missed": 4,
+  "iteration": 3
+ },
+ {
+  "params": {
+   "t_mot": 0.5,
+   "l_gyro_ms": 30,
+   "retrain": false,
+   "alpha": 0.01
+  },
+  "val_recall_a": 0.6216216216216216,
+  "val_recall_b": 0.6216216216216216,
+  "val_recall_loss": 0.0,
+  "val_fa_a": 0.009992145911510602,
+  "val_fa_b": 0.009992145911510602,
+  "active_share": 0.06479802578947737,
+  "energy_ratio": 0.1158804865656824,
+  "missed": 4,
+  "iteration": 4
+ }
+]

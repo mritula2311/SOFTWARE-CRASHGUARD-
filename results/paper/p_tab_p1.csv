@@ -1,0 +1,19 @@
+Rate (Hz),Range (g),Role,Model,Macro-F1,Under-triage,Over-triage,Balanced accuracy
+100,+-16,best of (a) to (c) on validation,anchored,"0.578 [0.426, 0.690]","0.355 [0.209, 0.507]","0.363 [0.276, 0.452]","0.570 [0.432, 0.693]"
+100,+-16,best deployable direct model on validation,"1D CNN, augmented (none mode)","0.746 [0.636, 0.832]","0.323 [0.203, 0.481]","0.097 [0.038, 0.158]","0.761 [0.645, 0.849]"
+100,+-16,"difference, direct minus base (sealed fold, paired)",,"0.169 [0.046, 0.291]","-0.032 [-0.197, 0.125]",,
+100,+-32,best of (a) to (c) on validation,fill + ridge,"0.735 [0.638, 0.818]","0.274 [0.135, 0.433]","0.073 [0.019, 0.138]","0.820 [0.752, 0.880]"
+100,+-32,best deployable direct model on validation,"1D CNN, augmented (inferred mode)","0.803 [0.705, 0.874]","0.306 [0.175, 0.455]","0.113 [0.065, 0.157]","0.811 [0.741, 0.875]"
+100,+-32,"difference, direct minus base (sealed fold, paired)",,"0.068 [0.005, 0.138]","0.032 [-0.050, 0.117]",,
+100,+-64,best of (a) to (c) on validation,fill + ridge,"0.801 [0.711, 0.884]","0.242 [0.111, 0.375]","0.016 [0.000, 0.038]","0.863 [0.799, 0.925]"
+100,+-64,best deployable direct model on validation,"1D CNN, augmented (inferred mode)","0.841 [0.758, 0.905]","0.161 [0.069, 0.264]","0.105 [0.056, 0.157]","0.858 [0.767, 0.928]"
+100,+-64,"difference, direct minus base (sealed fold, paired)",,"0.040 [-0.033, 0.108]","-0.081 [-0.167, 0.000]",,
+200,+-16,best of (a) to (c) on validation,anchored,"0.635 [0.467, 0.746]","0.290 [0.143, 0.455]","0.242 [0.160, 0.327]","0.606 [0.475, 0.733]"
+200,+-16,best deployable direct model on validation,"1D CNN, augmented (none mode)","0.669 [0.505, 0.777]","0.290 [0.164, 0.449]","0.177 [0.097, 0.247]","0.645 [0.506, 0.774]"
+200,+-16,"difference, direct minus base (sealed fold, paired)",,"0.035 [-0.053, 0.164]","0.000 [-0.138, 0.152]",,
+200,+-32,best of (a) to (c) on validation,fill + ridge,"0.711 [0.603, 0.809]","0.194 [0.083, 0.328]","0.161 [0.092, 0.233]","0.795 [0.667, 0.882]"
+200,+-32,best deployable direct model on validation,"1D CNN, augmented (inferred mode)","0.760 [0.575, 0.859]","0.290 [0.163, 0.433]","0.129 [0.073, 0.180]","0.718 [0.563, 0.847]"
+200,+-32,"difference, direct minus base (sealed fold, paired)",,"0.049 [-0.087, 0.134]","0.097 [0.020, 0.180]",,
+200,+-64,best of (a) to (c) on validation,anchored,"0.848 [0.768, 0.907]","0.097 [0.019, 0.189]","0.177 [0.112, 0.241]","0.872 [0.776, 0.938]"
+200,+-64,best deployable direct model on validation,"direct GBM, augmented (inferred mode)","0.822 [0.698, 0.921]","0.129 [0.043, 0.235]","0.129 [0.077, 0.182]","0.833 [0.707, 0.932]"
+200,+-64,"difference, direct minus base (sealed fold, paired)",,"-0.025 [-0.089, 0.026]","0.032 [0.000, 0.085]",,

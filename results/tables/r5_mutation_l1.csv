@@ -1,0 +1,29 @@
+id,file,description,status
+L101,src/crashguard/r5_l1.py,stillness: or becomes and,KILLED
+L102,src/crashguard/r5_l1.py,gyro limit boundary,KILLED
+L103,src/crashguard/r5_l1.py,bias gate loosened tenfold,KILLED
+L104,src/crashguard/r5_l1.py,standard deviation test dropped,KILLED
+L105,src/crashguard/r5_l1.py,still window too short,KILLED
+L106,src/crashguard/r5_l1.py,speed-change threshold exclusive,KILLED
+L107,src/crashguard/r5_l1.py,segment length minimum loosened,KILLED
+L108,src/crashguard/r5_l1.py,segment run continues across a sign change,KILLED
+L109,src/crashguard/r5_l1.py,speed-change sign dropped,KILLED
+L110,src/crashguard/r5_l1.py,lateral axis sign,KILLED
+L111,src/crashguard/r5_l1.py,vertical part not removed,KILLED
+L112,src/crashguard/r5_l1.py,gravity not subtracted in the segment,SURVIVED
+L113,src/crashguard/r5_l1.py,horizontal minimum dropped,KILLED
+L114,src/crashguard/r5_l1.py,straight-line check dropped,KILLED
+L115,src/crashguard/r5_l1.py,gravity direction not normalised,KILLED
+L116,src/crashguard/r5_l1.py,rotation applied transposed,KILLED
+L117,src/crashguard/r5_l1.py,gravity angle formula,KILLED
+L118,src/crashguard/r5_l1.py,stale test inverted,KILLED
+L119,src/crashguard/r5_l1.py,gravity not rotated with the mounting,KILLED
+L120,src/crashguard/r5_l1.py,gyro not rotated,KILLED
+L121,src/crashguard/r5_l1.py,calibration drive acceleration sign,KILLED
+L122,src/crashguard/r5_l1.py,GPS speed sign,KILLED
+L123,src/crashguard/r5_l1.py,no upside-down rotations in the random family,KILLED
+L124,src/crashguard/r5_l1.py,tilt range doubled,KILLED
+L125,src/crashguard/r5_l1.py,NHTSA window not rotated,KILLED
+L126,src/crashguard/r5_l1.py,bootstrap lower limit,KILLED
+L127,src/crashguard/r5_l1.py,rotated gravity not added in the NHTSA part,SURVIVED
+L128,src/crashguard/r5_l1.py,raw and L1 columns swapped,KILLED

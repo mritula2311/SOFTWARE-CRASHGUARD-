@@ -1,0 +1,288 @@
+# Documentation index
+
+<!-- header:start -->
+| Field | Value |
+|---|---|
+| Status | current |
+| Date | 2026-11-14 |
+| Owner | Mritula S |
+| Scope | Index of every document in the repository, one line each, and the meaning of the study identifiers. |
+| Evidence labels used | none (this file reports no result) |
+<!-- header:end -->
+
+Every document starts with a small table: status, date, owner, scope, the evidence labels it uses and the abbreviations it uses. Evidence labels: MEASURED_SOFTWARE (computed from a dataset), SIMULATED (simulation with stated assumptions), ANALYTICAL (formula), HARDWARE (the author's logs, not read here), NOT_RUN. Old paths (before 2026-11-13) are mapped in `docs/07_log/PATH_MAP.md`.
+
+## Top level
+
+| Document | Scope |
+|---|---|
+| [`CHANGELOG.md`](../CHANGELOG.md) | Release history of the repository, newest entry on top. |
+| [`CITATION.md`](../CITATION.md) | How to cite this repository and the third-party datasets, with the licence of each. |
+| [`README.md`](../README.md) | Project purpose, honest status table, how to reproduce, licence, citation, data statement. |
+
+## 00 Overview: status, claims, requirements, architecture, limits
+
+| Document | Scope |
+|---|---|
+| [`docs/00_overview/ARCHITECTURE.md`](00_overview/ARCHITECTURE.md) | Modules and data flow of the system and of the software pipeline. |
+| [`docs/00_overview/CLAIMS_FOR_COVER_LETTER.md`](00_overview/CLAIMS_FOR_COVER_LETTER.md) | Each claim with its evidence label, section and verdict; no claim is stronger than its label. |
+| [`docs/00_overview/LIMITATIONS.md`](00_overview/LIMITATIONS.md) | Plain list of what the software work cannot show and the assumptions a reader must know. |
+| [`docs/00_overview/PRD.md`](00_overview/PRD.md) | Original requirements for the software side and what counts as done. |
+| [`docs/00_overview/PROJECT_STATUS.md`](00_overview/PROJECT_STATUS.md) | Verdict table per hypothesis, positive and negative results, limits, licence split, how to cite. |
+
+## 01 Protocol: alert packet, protocols, attack cases, threat model
+
+| Document | Scope |
+|---|---|
+| [`docs/01_protocol/ATTACK_CASES.md`](01_protocol/ATTACK_CASES.md) | The attack suite: every case, its expected and observed behaviour (generated). |
+| [`docs/01_protocol/PACKET_FORMAT.md`](01_protocol/PACKET_FORMAT.md) | Alert packet (97 bytes), ACK (26 bytes), authentication tag and counter rules. |
+| [`docs/01_protocol/PROTOCOL_MODEL.md`](01_protocol/PROTOCOL_MODEL.md) | Bounded model check of the alert protocol (explicit-state search, within stated bounds). |
+| [`docs/01_protocol/PROTOCOL_SCT.md`](01_protocol/PROTOCOL_SCT.md) | Severity-classified transmission: retry table, fast path, flash and hold. |
+| [`docs/01_protocol/PROTOCOL_UA_SCT.md`](01_protocol/PROTOCOL_UA_SCT.md) | Uncertainty-aware severity-classified transmission: the class interval and escalation rule. |
+| [`docs/01_protocol/THREAT_MODEL_SPOOFING.md`](01_protocol/THREAT_MODEL_SPOOFING.md) | Threat model for the bounded-signal study on stored windows (no attack code acts on a sensor). |
+
+## 02 Preregistration: designs and hypotheses written before the runs
+
+| Document | Scope |
+|---|---|
+| [`docs/02_preregistration/ALGORITHMS.md`](02_preregistration/ALGORITHMS.md) | Algorithm proposals N14 to N16: baselines, splits, metrics and rules, with a revision log. |
+| [`docs/02_preregistration/EXPERIMENTS.md`](02_preregistration/EXPERIMENTS.md) | Experiment list with metrics, figures and origin labels (original plan). |
+| [`docs/02_preregistration/EXPERIMENTS_EXTRA.md`](02_preregistration/EXPERIMENTS_EXTRA.md) | Extra experiments X1 to X7 (N17 to N23): baselines, splits, metrics, decision rules. |
+| [`docs/02_preregistration/PREREGISTRATION.md`](02_preregistration/PREREGISTRATION.md) | Hypotheses H-a to H-c for UA-SCT, written before the runs. |
+| [`docs/02_preregistration/PREREGISTRATION_V11.md`](02_preregistration/PREREGISTRATION_V11.md) | Combined run: simulated hardware-format validation (family S) and architecture and protocol candidates (family R), written before the runs. |
+| [`docs/02_preregistration/PREREGISTRATION_V12.md`](02_preregistration/PREREGISTRATION_V12.md) | Redesign round: data roles, algorithms, hypotheses, tests and kill criteria for D1 to D4, written before any development or fresh-grid run. |
+| [`docs/02_preregistration/PREREGISTRATION_V13.md`](02_preregistration/PREREGISTRATION_V13.md) | Hypotheses, settings, criteria and kill rules of the paper items P0 (refit of the H-C3 stress test on the development fold) and P1 (the two-stage alert R3 in ns-3), plus the zero-spacing duty check and the optional boot-epoch variant. |
+| [`docs/02_preregistration/PREREGISTRATION_V14.md`](02_preregistration/PREREGISTRATION_V14.md) | Round 3 (T1 to T4): trace-driven replay, formal proofs and timed checks, two-stage alert on real crash data; hypotheses, thresholds, kill criteria, one Holm family. |
+| [`docs/02_preregistration/PREREGISTRATION_V15.md`](02_preregistration/PREREGISTRATION_V15.md) | Round 4 (A1 short provisional alert, A2 receiver diversity, A3 second prover): designs, hypotheses, thresholds, test statistics, data roles, kill criteria, one Holm family of five. |
+| [`docs/02_preregistration/PREREGISTRATION_V16.md`](02_preregistration/PREREGISTRATION_V16.md) | Round 5 (L1 mounting calibration, L2 post-event corroboration, L3 wake-on-motion, L4 spreading-factor ladder, L5 threshold co-design, L6 gateway placement, L7 forward-secure keys, L8 flood containment, L9 dispatch rule, L10 benchmark audit): data roles, designs, hypotheses, statistics, kill rules, one Holm family of 13. |
+| [`docs/02_preregistration/PREREGISTRATION_V17.md`](02_preregistration/PREREGISTRATION_V17.md) | Round 6 (micro-confirm, sequential early exit, prover extensions, bounds): designs, hypotheses, thresholds, data roles and kill criteria, committed before any run. |
+| [`docs/02_preregistration/PREREGISTRATION_V18.md`](02_preregistration/PREREGISTRATION_V18.md) | Preregistration V18 (round 7): duty-budget reserve and pseudonymous ids; hypotheses, thresholds, seeds and the Holm family, committed before any run. |
+| [`docs/02_preregistration/PREREGISTRATION_V19.md`](02_preregistration/PREREGISTRATION_V19.md) | Preregistration V19 (round 7b): a reserve sized for four follow-up events, tested on fresh seeds; hypotheses, thresholds, seeds, formal bounds and the Holm family, committed before any run. |
+| [`docs/02_preregistration/PREREGISTRATION_V2.md`](02_preregistration/PREREGISTRATION_V2.md) | Five algorithm studies, written before any v2 result. |
+| [`docs/02_preregistration/PREREGISTRATION_V3.md`](02_preregistration/PREREGISTRATION_V3.md) | Studies X1 to X3 and X5 to X8 and the sensor-selection study, with addenda. |
+| [`docs/02_preregistration/PREREGISTRATION_V4.md`](02_preregistration/PREREGISTRATION_V4.md) | Positive-results push P1 to P4, sealed split, with addenda. |
+| [`docs/02_preregistration/PREREGISTRATION_V5.md`](02_preregistration/PREREGISTRATION_V5.md) | Finishing study (blocks B, C, F, G), with addenda. |
+| [`docs/02_preregistration/PREREGISTRATION_V7.md`](02_preregistration/PREREGISTRATION_V7.md) | Release study: physics generator gates, reruns of every earlier algorithm, protocol-layer algorithms OS-DR and GS-CA, hypotheses and pass criteria. |
+
+## 03 Results: result summaries, negatives, claim evidence
+
+| Document | Scope |
+|---|---|
+| [`docs/03_results/A4_A3_PROVERIF.md`](03_results/A4_A3_PROVERIF.md) | ProVerif 2.05 models of the car-reboot alert-id lemma for the frozen design and the boot-counter variant, with outputs and the reading of each result. |
+| [`docs/03_results/A4_CODE_VERIFICATION.md`](03_results/A4_CODE_VERIFICATION.md) | Code verification of the round-4 modules before the freeze: tests, known-answer reproductions, mutation testing. |
+| [`docs/03_results/A4_DECISION_TABLE.md`](03_results/A4_DECISION_TABLE.md) | One row per round-4 hypothesis: result, label, interval, nearest prior work, allowed wording. |
+| [`docs/03_results/A4_RESULTS.md`](03_results/A4_RESULTS.md) | Round 4 tables: A1 in ns-3 and on traces, A2 delivery by number of receivers, formal results. |
+| [`docs/03_results/ASSUMPTIONS.md`](03_results/ASSUMPTIONS.md) | Every simulator and model constant with its source and the results that depend on it (generated). |
+| [`docs/03_results/CLAIM_EVIDENCE.md`](03_results/CLAIM_EVIDENCE.md) | Each novelty point against the project papers, with the allowed wording. |
+| [`docs/03_results/CODE_VERIFICATION.md`](03_results/CODE_VERIFICATION.md) | Code-logic verification of the redesign modules: unit, property, invariant, differential, mutation, review and known-answer results. |
+| [`docs/03_results/COMBINED_VERDICTS.md`](03_results/COMBINED_VERDICTS.md) | Decision table of the combined run: verdict, effect size, nearest prior work, allowed wording and placement for each hypothesis (generated). |
+| [`docs/03_results/DELTA_AUDIT_METHOD.md`](03_results/DELTA_AUDIT_METHOD.md) | The duplicate audit as a reusable procedure, what the headline recall of 0.901 is, and the recall of the frozen forest under four test-set versions (descriptive). |
+| [`docs/03_results/DELTA_DUTY_LOCKOUT.md`](03_results/DELTA_DUTY_LOCKOUT.md) | Duty models the code enforces, the lockout after the provisional flash under a per-transmission off-time (ANALYTICAL condition), the check against stored ns-3 runs and the merged gating rule. |
+| [`docs/03_results/DIAGNOSIS_GSCA.md`](03_results/DIAGNOSIS_GSCA.md) | Share of GS-CA burst failures from collisions, link loss and duty-cycle blocking (generated). |
+| [`docs/03_results/DIAGNOSIS_OSDR.md`](03_results/DIAGNOSIS_OSDR.md) | Which OS-DR losing cells involve suppression of an undelivered alert, and what triggers it (generated). |
+| [`docs/03_results/DIAGNOSIS_R2.md`](03_results/DIAGNOSIS_R2.md) | Power of the 16-cell sign test for the R2 frame-size effect (generated). |
+| [`docs/03_results/DIAGNOSIS_SYNTH.md`](03_results/DIAGNOSIS_SYNTH.md) | Status of the synthetic-generator diagnosis (generated). |
+| [`docs/03_results/DIAGNOSIS_UASCT.md`](03_results/DIAGNOSIS_UASCT.md) | Where UA-SCT loses to the severity table and why (generated, DIAGNOSIS data role). |
+| [`docs/03_results/FINALIZE_INDIA_RULES.md`](03_results/FINALIZE_INDIA_RULES.md) | The Indian 433 MHz rules read from G.S.R. 347(E) of 2022 against the evaluation: duty conditions under two readings, transmit power and e.r.p., type approval. |
+| [`docs/03_results/FINISH_RESULTS.md`](03_results/FINISH_RESULTS.md) | Results of the finishing round (generated). |
+| [`docs/03_results/H_C3_PROVENANCE.md`](03_results/H_C3_PROVENANCE.md) | Records read by the original H-C3 stress-test generator (all 913 pooled NHTSA records), and the refit on the development fold only with original and refit side by side. |
+| [`docs/03_results/JOURNAL_RESULTS.md`](03_results/JOURNAL_RESULTS.md) | Results of the journal push (generated). |
+| [`docs/03_results/NEGATIVES_REGISTER.md`](03_results/NEGATIVES_REGISTER.md) | One row per negative result; no original verdict is removed. |
+| [`docs/03_results/PAPER_P1_R3_NS3.md`](03_results/PAPER_P1_R3_NS3.md) | The two-stage alert R3 in ns-3 (P1): cells, tests, verdict and the cross-simulator verdict table (generated). |
+| [`docs/03_results/PH_INTEGRITY_REPORT.md`](03_results/PH_INTEGRITY_REPORT.md) | Physics generator: realism gate, physical checks, negative controls, coverage, settings and the sentences for the paper. |
+| [`docs/03_results/POSITIVE_PUSH_RESULTS.md`](03_results/POSITIVE_PUSH_RESULTS.md) | Results of the positive-results push (generated). |
+| [`docs/03_results/R5_CODE_VERIFICATION.md`](03_results/R5_CODE_VERIFICATION.md) | Round 5 code verification: tests, known-answer reproductions, mutation testing and the ns-3 byte-identity check for L1 to L5. |
+| [`docs/03_results/REDESIGN_A_RESULTS.md`](03_results/REDESIGN_A_RESULTS.md) | FRESH-A results for D1 and D2 next to the original failures, with the DEV record and the caveats (generated). |
+| [`docs/03_results/REDESIGN_B_RESULTS.md`](03_results/REDESIGN_B_RESULTS.md) | Session 2: D3 and D4 on FRESH-B, firmware decision path, cross-simulator summary, final Holm table (generated). |
+| [`docs/03_results/REDESIGN_DECISION_TABLE.md`](03_results/REDESIGN_DECISION_TABLE.md) | One row per redesign hypothesis: original result, diagnosis, fresh result, verdict, prior work, allowed wording, placement (generated). |
+| [`docs/03_results/RELEASE_RESULTS.md`](03_results/RELEASE_RESULTS.md) | Release results: generator gates, the Q4 table of reruns, protocol candidates on the held-out grid, sensitivity and the retry-schedule check (generated). |
+| [`docs/03_results/RESULTS_SO_FAR.md`](03_results/RESULTS_SO_FAR.md) | Hardware progress notes supplied by the author (external numbers; not read or used by software results). |
+| [`docs/03_results/ROUND3_DECISION_TABLE.md`](03_results/ROUND3_DECISION_TABLE.md) | Round 3 decision table: result, label, interval, nearest prior work, allowed wording and placement for every hypothesis. |
+| [`docs/03_results/ROUND3_RESULTS.md`](03_results/ROUND3_RESULTS.md) | Round 3 results: trace-driven replay, Tamarin and timed checks, two-stage alert on real crash data, energy budget. |
+| [`docs/03_results/ROUND5_DECISION_TABLE.md`](03_results/ROUND5_DECISION_TABLE.md) | One row per round-5 hypothesis tested so far: result, label, Holm-adjusted p, nearest prior work, allowed wording and destination. |
+| [`docs/03_results/ROUND5_RESULTS.md`](03_results/ROUND5_RESULTS.md) | Round 5 session 1: results of L1 to L5 with development, held-out results, limits and contribution status. |
+| [`docs/03_results/ROUND6_BOUNDS.md`](03_results/ROUND6_BOUNDS.md) | Round 6 operating-regime bounds (exact airtime and attempts), the micro-confirm analysis, the spreading-factor rule, the greedy-retry proposition with proof, and the quarantine indexing. |
+| [`docs/03_results/ROUND6_CODE_VERIFICATION.md`](03_results/ROUND6_CODE_VERIFICATION.md) | Round 6 code verification: tests, mutation testing, known-answer checks and fresh-context reviews per algorithm. |
+| [`docs/03_results/ROUND6_FOOTPRINT.md`](03_results/ROUND6_FOOTPRINT.md) | Round 6 ESP32 build footprint of the decision path (flash, static RAM, stack per function) with the Espressif toolchain; emulator counts and energy NOT_RUN. |
+| [`docs/03_results/ROUND6_R1_MICRO.md`](03_results/ROUND6_R1_MICRO.md) | Round 6 micro-confirm: ns-3 policy r6m against R3 and single-stage, trace groups, formal status, development log, code checks and limits. |
+| [`docs/03_results/ROUND6_R2_SEQUENTIAL.md`](03_results/ROUND6_R2_SEQUENTIAL.md) | Round 6 sequential early-exit rule against the fixed rule: development log, frozen parameters, held-out result, code checks and limits. |
+| [`docs/03_results/ROUND6_RESULTS.md`](03_results/ROUND6_RESULTS.md) | Round 6 decision table (Holm over seven) and what each part shows: micro-confirm, formal extensions, sequential exit, footprint, bounds. |
+| [`docs/03_results/ROUND7B_DEVIATIONS.md`](03_results/ROUND7B_DEVIATIONS.md) | Every deviation of round 7 and round 7b from the registered plans, with its effect. |
+| [`docs/03_results/ROUND7B_RESULTS.md`](03_results/ROUND7B_RESULTS.md) | Round 7b verdicts of V19 (H-R7b-1, H-R7b-2), the bounded formal check of the reserve for k follow-up events and the descriptive trade-off against k. |
+| [`docs/03_results/ROUND7_A.md`](03_results/ROUND7_A.md) | Round 7 A: the ACK-suppression attack, bounds, simulation, bounded formal check, benign cost on traces and the gating rule with the reserve. |
+| [`docs/03_results/ROUND7_B.md`](03_results/ROUND7_B.md) | Round 7 B: pseudonymous vehicle ids, frame fields before and after, ProVerif and Tamarin results with controls, resolution cost, collisions, footprint. |
+| [`docs/03_results/ROUND7_RESULTS.md`](03_results/ROUND7_RESULTS.md) | Round 7 decision table (Holm over five hypotheses). |
+| [`docs/03_results/SIMHW_RESULTS.md`](03_results/SIMHW_RESULTS.md) | Results of Part S on simulated hardware-format logs: failure map, policies on link logs, latency, SW-420, security (generated). |
+| [`docs/03_results/SIMHW_S4_CASES.md`](03_results/SIMHW_S4_CASES.md) | The one list of security cases: 58 repository cases and the nine simulated scenarios (generated). |
+| [`docs/03_results/SIMHW_VARIANTS.md`](03_results/SIMHW_VARIANTS.md) | The 19 variants of the simulated hardware-format logs with seeds and SHA-256 hashes (generated). |
+| [`docs/03_results/STATS_AUDIT.md`](03_results/STATS_AUDIT.md) | Statistics audit: tests, intervals and multiplicity correction per family. |
+| [`docs/03_results/STATUS_REVERIFY.md`](03_results/STATUS_REVERIFY.md) | Headline numbers of the status table recomputed from results.json, with mismatches and hypothesis counts by family (generated). |
+| [`docs/03_results/V2_RESULTS.md`](03_results/V2_RESULTS.md) | Results of the five v2 algorithm studies (generated). |
+| [`docs/03_results/VF_NS3_RERUN.md`](03_results/VF_NS3_RERUN.md) | Rerun of R3 cells at SF7 and SF9 and one D1 cell in the patched ns-3 build, compared run by run with the stored outputs. |
+| [`docs/03_results/XSIM_BUILD.md`](03_results/XSIM_BUILD.md) | Build record of the ns-3 lorawan cross-check simulator: versions, commit hashes and status. |
+| [`docs/03_results/XSIM_CALIBRATION.md`](03_results/XSIM_CALIBRATION.md) | Packet delivery ratio of baseline scenarios in the custom simulator and in ns-3 lorawan, the pre-stated agreement criterion and its verdict (generated). |
+| [`docs/03_results/XSIM_VERDICTS.md`](03_results/XSIM_VERDICTS.md) | D1 and baselines in ns-3 and in the custom simulator on the same scenario, with the verdict of each criterion in both (generated). |
+
+## 04 Audits: independent checks of data, claims and preregistration timing
+
+| Document | Scope |
+|---|---|
+| [`docs/04_audits/A4_CLAIM_AUDIT.md`](04_audits/A4_CLAIM_AUDIT.md) | Integrity checks of the round-4 results against the preregistration V15: frozen hashes, labels, Holm, verdicts, invariants, unchanged keys. |
+| [`docs/04_audits/ALGORITHMS_COMPLIANCE.md`](04_audits/ALGORITHMS_COMPLIANCE.md) | Item-by-item check of the algorithm work against its preregistered design. |
+| [`docs/04_audits/BLOCKERS.md`](04_audits/BLOCKERS.md) | Checks that could not be completed without risking a change of a stored result, with affected keys and dependent paper sentences. |
+| [`docs/04_audits/CLAIM_AUDIT.md`](04_audits/CLAIM_AUDIT.md) | Independent claim audit of round 3. |
+| [`docs/04_audits/CLEAN_RUN_DIFFERENCES.md`](04_audits/CLEAN_RUN_DIFFERENCES.md) | What the fresh-clone run rebuilt, the result keys that differ and why, the tracked files that differ, and the failed steps with their causes. |
+| [`docs/04_audits/COMBINED_CLAIM_AUDIT.md`](04_audits/COMBINED_CLAIM_AUDIT.md) | Mechanical audit of the combined-run documents against results.json and the evidence labels (generated). |
+| [`docs/04_audits/DELTA_CLAIM_AUDIT.md`](04_audits/DELTA_CLAIM_AUDIT.md) | Claim audit of the sentences changed in the delta verification run: strong words mapped to evidence labels, keys and ledger rows. |
+| [`docs/04_audits/DELTA_CONSISTENCY.md`](04_audits/DELTA_CONSISTENCY.md) | Consistency sweep of the delta verification run: ledger totals, micro-confirm wording, 0.901, layout, duty, title and part numbers across the paper documents. |
+| [`docs/04_audits/DELTA_D0_DIFF.md`](04_audits/DELTA_D0_DIFF.md) | Files and result keys that changed between submit-v1 and round6-v1 (check D0.1 of the delta verification run). |
+| [`docs/04_audits/DELTA_FINAL_REPORT.md`](04_audits/DELTA_FINAL_REPORT.md) | Final report of the delta verification run: counts by result, the frame-layout resolution, remaining blockers and the author's hand-done list. |
+| [`docs/04_audits/DELTA_FORMAL_RERUN.md`](04_audits/DELTA_FORMAL_RERUN.md) | Rerun of the round-6 formal models (ProVerif, Tamarin) from a fresh clone: stored against rerun verdicts, times and memory. |
+| [`docs/04_audits/DELTA_LATEX_LINT.md`](04_audits/DELTA_LATEX_LINT.md) | Compile check of the manuscript and the supplements with Tectonic, page counts and the likely Overleaf errors (delta verification D6.1). |
+| [`docs/04_audits/DELTA_VERIFICATION.md`](04_audits/DELTA_VERIFICATION.md) | One row per check of the delta verification run (branch verify2, from round6-v1): ID, check, method, result, evidence. |
+| [`docs/04_audits/ERRATA.md`](04_audits/ERRATA.md) | Stored values that are known to be wrong, with the reason and what reads them; no stored value is changed. |
+| [`docs/04_audits/FINALIZE.md`](04_audits/FINALIZE.md) | One row per check of the finalize run (branch final2, from submit-v2): ID, check, method, result, evidence. |
+| [`docs/04_audits/FINALIZE_CONSISTENCY.md`](04_audits/FINALIZE_CONSISTENCY.md) | Consistency sweep of the finalize run: ledger, micro frame size, Indian rules, title and part numbers across the paper documents. |
+| [`docs/04_audits/FINALIZE_LATEX_LINT.md`](04_audits/FINALIZE_LATEX_LINT.md) | Compile check of the manuscript and the supplements of the finalize run with Tectonic, page counts, the ledger table width and the likely Overleaf errors. |
+| [`docs/04_audits/FINALIZE_REPORT.md`](04_audits/FINALIZE_REPORT.md) | Report of the finalize run: what changed, counts, release archive and the author's remaining hand steps. |
+| [`docs/04_audits/FINAL_REPORT.md`](04_audits/FINAL_REPORT.md) | Summary of the final verification run: counts per block, failures, blockers, recompute mismatches, formal outcomes, ledger totals, page and figure counts, references, release hash, author to-do list. |
+| [`docs/04_audits/FINAL_VERIFICATION.md`](04_audits/FINAL_VERIFICATION.md) | One row per check of the final verification run: ID, check, method, result, evidence, minutes. |
+| [`docs/04_audits/FINISH_AUDIT.md`](04_audits/FINISH_AUDIT.md) | Claim audit of the finishing branch. |
+| [`docs/04_audits/FORMAL_FIELD_CHECK.md`](04_audits/FORMAL_FIELD_CHECK.md) | Message fields of every formal model compared with the frame layout, the firmware path and the paper; every mismatch listed. |
+| [`docs/04_audits/FORMAL_RERUN.md`](04_audits/FORMAL_RERUN.md) | Outcome, wall time and peak memory of every Tamarin and ProVerif run repeated in the verification run. |
+| [`docs/04_audits/HYPOTHESIS_LEDGER.md`](04_audits/HYPOTHESIS_LEDGER.md) | One row per preregistered hypothesis of every version: family, data role, result, adjusted p, label, paper location, and totals. |
+| [`docs/04_audits/INVENTORY.md`](04_audits/INVENTORY.md) | Branches, tags, preregistrations, result-key prefixes, release files and documents at the start of the verification run. |
+| [`docs/04_audits/LATEX_LINT.md`](04_audits/LATEX_LINT.md) | Compile check with a user-level TeX engine, likely Overleaf errors in order, and the journal format check with source and date. |
+| [`docs/04_audits/NEGATIVES_BY_LAYER.md`](04_audits/NEGATIVES_BY_LAYER.md) | Every not-supported or partly supported hypothesis grouped by layer, with its number and likely mechanism. |
+| [`docs/04_audits/PP_CLAIM_AUDIT.md`](04_audits/PP_CLAIM_AUDIT.md) | Claim audit of the positive-results push. |
+| [`docs/04_audits/PP_PAPER_CLAIM_AUDIT.md`](04_audits/PP_PAPER_CLAIM_AUDIT.md) | Every sentence of the combined paper with an improvement or strength word and its disposition (generated). |
+| [`docs/04_audits/PP_REFERENCE_CHECK.md`](04_audits/PP_REFERENCE_CHECK.md) | Cited keys of the combined paper with the opened status of each source (generated). |
+| [`docs/04_audits/PREREG_V4_AUDIT.md`](04_audits/PREREG_V4_AUDIT.md) | Timing audit of the V4 preregistration addendum. |
+| [`docs/04_audits/PUSH_SIZE.md`](04_audits/PUSH_SIZE.md) | Size of the repository and of tracked files before pushing, and the options if a file in history exceeds the host limit. |
+| [`docs/04_audits/R5_CLAIM_AUDIT.md`](04_audits/R5_CLAIM_AUDIT.md) | Round 5 audit: frozen hashes, held-out keys, labels and unchanged earlier keys. |
+| [`docs/04_audits/RECOMPUTE.md`](04_audits/RECOMPUTE.md) | Facts the paper states, recomputed from the fresh clone: stated value, recomputed value, source key, script, match. |
+| [`docs/04_audits/RECOMPUTE_R6.md`](04_audits/RECOMPUTE_R6.md) | Round-6 numbers recomputed from a fresh clone of round6-v1: stored value, recomputed value, source key, match. |
+| [`docs/04_audits/REDESIGN_CLAIM_AUDIT.md`](04_audits/REDESIGN_CLAIM_AUDIT.md) | Mechanical audit of the redesign documents against results.json and the evidence labels (generated). |
+| [`docs/04_audits/REFERENCE_CHECK_VF.md`](04_audits/REFERENCE_CHECK_VF.md) | Every DOI of the paper's bibliography looked up in Crossref and compared with the entry. |
+| [`docs/04_audits/RELEASE_CLAIM_AUDIT.md`](04_audits/RELEASE_CLAIM_AUDIT.md) | Mechanical claim audit of the top-level documents and the paper against results.json for the release. |
+| [`docs/04_audits/ROUND3_CLAIM_AUDIT.md`](04_audits/ROUND3_CLAIM_AUDIT.md) | Audit of the final run, Parts A and B: tagged results unchanged, labels, preregistration order, wording, decision-table verdicts. |
+| [`docs/04_audits/ROUND6_FINAL_REPORT.md`](04_audits/ROUND6_FINAL_REPORT.md) | Round 6 final report: what ran, what did not, what contradicted the documents, integrity checks, push commands. |
+| [`docs/04_audits/ROUND7.md`](04_audits/ROUND7.md) | Log of every step of round 7: ID, check, method, result, evidence. |
+| [`docs/04_audits/ROUND7B.md`](04_audits/ROUND7B.md) | Log of every step of round 7b: ID, check, method, result, evidence. |
+| [`docs/04_audits/ROUND7B_REPORT.md`](04_audits/ROUND7B_REPORT.md) | Report of round 7b: close-out items, the re-test of the four-event reserve (V19), prior art, quarantine lemma status, deviations, design notes and the package. |
+| [`docs/04_audits/ROUND7C.md`](04_audits/ROUND7C.md) | Log of every step of round 7c: ID, check, method, result, evidence. |
+| [`docs/04_audits/ROUND7C_REPORT.md`](04_audits/ROUND7C_REPORT.md) | Report of round 7c: code checks K1 to K5, every changed sentence (old and new), references added or fixed, and the author's remaining hand steps. |
+| [`docs/04_audits/ROUND7D_REPORT.md`](04_audits/ROUND7D_REPORT.md) | Report of round 7d: the re-acknowledgement interval and downlink budget as deployment requirement R-REACK, values, reference configuration and changed sentences. |
+| [`docs/04_audits/ROUND7E_REPORT.md`](04_audits/ROUND7E_REPORT.md) | Report of round 7e: one-time scripts that refuse to run, the probe that found them, and the submit-v6.2 archive. |
+| [`docs/04_audits/ROUND7_REPORT.md`](04_audits/ROUND7_REPORT.md) | Round 7 report: literature gate, A and B results, formal outcomes, paper changes, hand steps, push commands. |
+| [`docs/04_audits/V2_CLAIM_AUDIT.md`](04_audits/V2_CLAIM_AUDIT.md) | Independent claim audit of the v2 studies. |
+| [`docs/04_audits/VF_CLAIM_AUDIT.md`](04_audits/VF_CLAIM_AUDIT.md) | Claim words, bare numbers, contribution sentences and cross-document consistency of the final manuscript. |
+| [`docs/04_audits/VZCRASH_AUDIT.md`](04_audits/VZCRASH_AUDIT.md) | Independent re-derivation of the duplicate recordings across VZCrash splits. |
+| [`docs/04_audits/vzcrash_email_draft.md`](04_audits/vzcrash_email_draft.md) | Draft email to the VZCrash authors (record only; the author sent the audit package on 2026-11-12). |
+
+## 05 Architecture: layered architecture, candidates and where each result goes
+
+| Document | Scope |
+|---|---|
+| [`docs/05_architecture/ARCHITECTURE.md`](05_architecture/ARCHITECTURE.md) | Layered architecture with the status of every element, what each candidate changes, and where each result goes (generated). |
+| [`docs/05_architecture/FRAME_LAYOUT.md`](05_architecture/FRAME_LAYOUT.md) | Normative byte layout of every frame (alert, ACK, flash, cancel, micro-confirm), working flow with the flash retry queue, and the reconciliation of layout, formal models and ns-3 frames. |
+
+## 05 Data and code: data, features, assumptions, reproduction, release
+
+| Document | Scope |
+|---|---|
+| [`docs/05_data_code/DATASET.md`](05_data_code/DATASET.md) | Datasets used, links, licences and what must be verified. |
+| [`docs/05_data_code/DATASET_FACTS.md`](05_data_code/DATASET_FACTS.md) | Counts and quality facts of VZCrash computed from the downloaded files. |
+| [`docs/05_data_code/DATASET_FACTS_QUALITY.md`](05_data_code/DATASET_FACTS_QUALITY.md) | VZCrash data-quality table (generated by make data). |
+| [`docs/05_data_code/DATA_AND_CODE_STATEMENT.md`](05_data_code/DATA_AND_CODE_STATEMENT.md) | Licence split, data sources, what was and was not read, and how to obtain the data. |
+| [`docs/05_data_code/DATA_SOURCES.md`](05_data_code/DATA_SOURCES.md) | Data sources, licences, access dates and SHA-256 values of the raw files, checked against the preregistrations, and the split rules. |
+| [`docs/05_data_code/FEATURES.md`](05_data_code/FEATURES.md) | The 14 window features: definitions and firmware details. |
+| [`docs/05_data_code/FIGURES_TABLES.md`](05_data_code/FIGURES_TABLES.md) | Index of every figure and table with its result keys and origin. |
+| [`docs/05_data_code/FIRMWARE_SYNC.md`](05_data_code/FIRMWARE_SYNC.md) | Items the firmware author must set or check (generated). |
+| [`docs/05_data_code/HARDWARE_READINESS.md`](05_data_code/HARDWARE_READINESS.md) | What the hardware experiments would add and how the merge works (dry run on dummy files). |
+| [`docs/05_data_code/HARDWARE_SCHEMA.md`](05_data_code/HARDWARE_SCHEMA.md) | Schema of the hardware data files (author-supplied, read-only). |
+| [`docs/05_data_code/RELEASE_MANIFEST.md`](05_data_code/RELEASE_MANIFEST.md) | Manifest of the release archive: file count and hashes (generated). |
+| [`docs/05_data_code/REPRODUCE.md`](05_data_code/REPRODUCE.md) | Exact commands, environment and reproduction check for the main pipeline. |
+| [`docs/05_data_code/REPRODUCE_FINISH.md`](05_data_code/REPRODUCE_FINISH.md) | Commands for the journal-push and finishing-round tables and figures. |
+| [`docs/05_data_code/SEALED_SPLIT.md`](05_data_code/SEALED_SPLIT.md) | The sealed split of pooled NHTSA records and its access rules. |
+| [`docs/05_data_code/SENSOR_DATASHEETS.md`](05_data_code/SENSOR_DATASHEETS.md) | Accelerometer data sheets opened for the sensor-selection study. |
+| [`docs/05_data_code/SEVERITY.md`](05_data_code/SEVERITY.md) | Physics-based severity (delta-V, acceleration severity index, class) and its sources. |
+| [`docs/05_data_code/SYNTHETIC_ASSUMPTIONS.md`](05_data_code/SYNTHETIC_ASSUMPTIONS.md) | Numbered assumptions behind every synthetic pulse, surrogate window and simulated scenario. |
+| [`docs/05_data_code/SYNTHETIC_PROVENANCE.md`](05_data_code/SYNTHETIC_PROVENANCE.md) | Record-set hashes each synthetic generator was fitted to, parameter-file hashes, the freeze and the change table. |
+
+## 06 References: reference lists, literature status, novelty scope
+
+| Document | Scope |
+|---|---|
+| [`docs/06_references/CHANGES.md`](06_references/CHANGES.md) | Differences between the release literature status and the combined-run literature status. |
+| [`docs/06_references/CLOSEST_PRIOR_WORK.md`](06_references/CLOSEST_PRIOR_WORK.md) | What the closest papers optimise and assume, whether each was opened, and how D1 and D2 differ from each. |
+| [`docs/06_references/CrashGuard_Literature_Status.md`](06_references/CrashGuard_Literature_Status.md) | Literature status of 2026-11-13 to 2026-11-14 as supplied: opened items, searches, prior-art checks. |
+| [`docs/06_references/CrashGuard_Literature_Survey_2021plus.md`](06_references/CrashGuard_Literature_Survey_2021plus.md) | Survey of open-access journal work from 2021 onwards per contribution, as supplied on 2026-11-15, with the changes it asks for in the paper. |
+| [`docs/06_references/LITERATURE_STATUS.md`](06_references/LITERATURE_STATUS.md) | Literature status supplied with the combined run, what that run opened (URL and date), the narrowing of claims and the resolved reference defects. |
+| [`docs/06_references/LITERATURE_STATUS_RELEASE_V1.md`](06_references/LITERATURE_STATUS_RELEASE_V1.md) | The release session's literature status, kept as written (superseded by LITERATURE_STATUS.md). |
+| [`docs/06_references/LIT_QUERIES_2021PLUS.md`](06_references/LIT_QUERIES_2021PLUS.md) | Part A query log: 13 topics, OpenAlex queries for journal articles from 2021, counts, top titles and the items opened. |
+| [`docs/06_references/LIT_QUERIES_ROUND4.md`](06_references/LIT_QUERIES_ROUND4.md) | Round 4 query log: three topics, OpenAlex queries for journal articles from 2021 and a context search without filters; counts, top titles and the items opened. |
+| [`docs/06_references/LIT_QUERIES_ROUND5.md`](06_references/LIT_QUERIES_ROUND5.md) | Round 5 query log for L1 to L5: OpenAlex queries for journal articles from 2021 and a context search without filters; counts, top titles and the items opened. |
+| [`docs/06_references/MANUAL_SEARCH_CHECKLIST.md`](06_references/MANUAL_SEARCH_CHECKLIST.md) | Search strings for the author to run in IEEE Xplore and Scopus, with result columns. |
+| [`docs/06_references/NOVELTY.md`](06_references/NOVELTY.md) | What can and cannot be claimed as new. |
+| [`docs/06_references/NOVELTY_MATRIX_2021PLUS.md`](06_references/NOVELTY_MATRIX_2021PLUS.md) | One row per claim: closest 2021+ journal articles opened, overlap level, allowed wording and action. |
+| [`docs/06_references/NOVELTY_SCAN.md`](06_references/NOVELTY_SCAN.md) | Candidate contributions, closest prior work and what was opened. |
+| [`docs/06_references/PRIOR_WORK.md`](06_references/PRIOR_WORK.md) | Prior-work searches and the papers read. |
+| [`docs/06_references/REFERENCES.md`](06_references/REFERENCES.md) | Checked reference list; a field is filled only if read in an opened document. |
+| [`docs/06_references/REFERENCES_UNVERIFIED.md`](06_references/REFERENCES_UNVERIFIED.md) | Rows of the reference list with unverified fields (generated). |
+| [`docs/06_references/SCOPUS_STRINGS.md`](06_references/SCOPUS_STRINGS.md) | Search strings for the author to run in Scopus, with an empty results table (Scopus was not run by Claude). |
+
+## 07 Log: decisions, NOT_RUN items, cleanup and progress logs
+
+| Document | Scope |
+|---|---|
+| [`docs/07_log/CLEANUP_LOG.md`](07_log/CLEANUP_LOG.md) | Inventory before the reorganisation, every move, deletion and rewrite, and the checks after it. |
+| [`docs/07_log/DECISIONS.md`](07_log/DECISIONS.md) | Dated decisions, reasons and effect on results, including mistakes and fixes. |
+| [`docs/07_log/NOT_RUN.md`](07_log/NOT_RUN.md) | NOT_RUN results and sources that could not be opened, with the reason (generated). |
+| [`docs/07_log/PATH_MAP.md`](07_log/PATH_MAP.md) | Old path to new path for every moved document (results.json notes and old links use the old paths). |
+| [`docs/07_log/PROGRESS.md`](07_log/PROGRESS.md) | Session log of the long run that started on 2026-11-11 (phase entries). |
+| [`docs/07_log/TIME_LOG.md`](07_log/TIME_LOG.md) | Time log of the round-3 closing block. |
+
+## Archive: superseded documents
+
+| Document | Scope |
+|---|---|
+| [`docs/archive/ALL_DOCS_COMBINED.md`](archive/ALL_DOCS_COMBINED.md) | Concatenation of every document (generated copy). |
+| [`docs/archive/CLAIMS_FOR_COVER_LETTER_V1.md`](archive/CLAIMS_FOR_COVER_LETTER_V1.md) | Older generated claim list (journal push). |
+| [`docs/archive/CLAUDE_CODE_PROMPT.md`](archive/CLAUDE_CODE_PROMPT.md) | The initial build prompt for the software pipeline. |
+| [`docs/archive/FIRST_PROMPT.md`](archive/FIRST_PROMPT.md) | Opening message of the initial session. |
+| [`docs/archive/logs/README.md`](archive/logs/README.md) | Run logs and comparison outputs from earlier sessions. |
+
+## Other documents next to the code
+
+| Document | Scope |
+|---|---|
+| [`crashclip/README.md`](../crashclip/README.md) | CrashClip package: sensor-model simulator, sealed split and baselines for clipped-accelerometer severity. |
+| [`docs/01_literature/LITERATURE_FINAL_CHECK.md`](01_literature/LITERATURE_FINAL_CHECK.md) | Round 7c literature corrections: the facts used, how each was checked, what could not be checked, and the absence rule. |
+| [`docs/01_literature/R7_PRIOR_ART.md`](01_literature/R7_PRIOR_ART.md) | Round 7 literature gate: queries, hit counts, papers opened with read depth, stop-rule decision and the narrowed claims. |
+| [`docs/08_hardware/R3_BENCH_PROTOCOL.md`](08_hardware/R3_BENCH_PROTOCOL.md) | Bench protocol, logging hooks, parser and pre-written outcome sentences for the two-stage alert; hardware row NOT_RUN. |
+| [`docs/09_review/REVIEWER_RESPONSES.md`](09_review/REVIEWER_RESPONSES.md) | The ten questions a reviewer is most likely to ask about the redesign round, each with the evidence for the answer. |
+| [`docs/VZCRASH_AUDIT.md`](VZCRASH_AUDIT.md) | Redirect note: the audit moved to docs/04_audits/; the old path stays because the dataset authors were given it. |
+| [`paper/ABSTRACT_FACTS.md`](../paper/ABSTRACT_FACTS.md) | Numbers an abstract may use, each with its key and label (generated). |
+| [`paper/PLACEHOLDERS.md`](../paper/PLACEHOLDERS.md) | Every placeholder in the paper and every decision, reading or check that only the author can supply. |
+| [`paper/REPRODUCE.md`](../paper/REPRODUCE.md) | One-page guide to rebuilding the paper from the repository (generated). |
+| [`paper/cover_letter.md`](../paper/cover_letter.md) | Draft cover letter for IEEE Access (generated). |
+| [`paper/highlights.md`](../paper/highlights.md) | Five highlights of the paper, each under 85 characters (generated). |
+| [`report/novelty_summary.md`](../report/novelty_summary.md) | Evidence-only novelty ranking (generated). |
+| [`report/software_results.md`](../report/software_results.md) | Paper-style draft of the software results (generated). |
+| [`scripts/fetch_sisfall.md`](../scripts/fetch_sisfall.md) | Where to obtain SisFall (not redistributed), where to put it, and what the code expects: archive hash, file list and counts. |
+| [`tests/dummy/README.md`](../tests/dummy/README.md) | Note on the synthetic DUMMY files that only test the merge path. |
+
+## Study identifiers
+
+| Identifier | Meaning | Defined in |
+|---|---|---|
+| N1 to N34 | Candidate contributions (novelty points), numbered in order of appearance | `docs/06_references/NOVELTY.md`, `docs/06_references/NOVELTY_SCAN.md`, `report/novelty_summary.md` |
+| H-a to H-c, H-B2 | Hypotheses of the UA-SCT and layers studies | `docs/02_preregistration/PREREGISTRATION.md` |
+| S1 to S13, T1 to T17 | Software studies and closing tasks of round 3 | `docs/02_preregistration/EXPERIMENTS.md`, `docs/07_log/TIME_LOG.md` |
+| X1 to X8 | Journal-push algorithm studies | `docs/02_preregistration/PREREGISTRATION_V3.md` |
+| P1 to P4 | Positive-results push studies | `docs/02_preregistration/PREREGISTRATION_V4.md` |
+| B, C, F, G | Finishing-round blocks | `docs/02_preregistration/PREREGISTRATION_V5.md` |
+| R, P, Q, A, L, E | Release blocks (cleanup, physics generator, reruns, protocol algorithms, literature, audit) | `docs/02_preregistration/PREREGISTRATION_V7.md` |
+| H1 to H6 | Car (hardware) experiments; not run here | `docs/02_preregistration/EXPERIMENTS.md` |
+| `r.`, `ph.`, `q.`, `pa.` | Result-key prefixes of the release (repository, physics generator, reruns, protocol algorithms) | `results/results.json` |

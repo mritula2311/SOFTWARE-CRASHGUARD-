@@ -1,0 +1,1256 @@
+Archive member included to satisfy reference by file (symbol)
+
+/home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libm.a(lib_a-s_ceil.o)
+                              build/r6fp/cg_rd.o (ceil)
+/home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libm.a(lib_a-s_floor.o)
+                              build/r6fp/cg_rd.o (floor)
+/home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_lshrdi3.o)
+                              build/r6fp/cg_rd.o (__lshrdi3)
+/home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_divsf3.o)
+                              build/r6fp/cg_r6.o (__divsf3)
+/home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_addsubdf3.o)
+                              build/r6fp/cg_rd.o (__adddf3)
+/home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_muldf3.o)
+                              build/r6fp/cg_rd.o (__muldf3)
+/home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_divdf3.o)
+                              build/r6fp/cg_rd.o (__divdf3)
+/home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_cmpdf2.o)
+                              build/r6fp/cg_rd.o (__gtdf2)
+/home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_fixdfsi.o)
+                              build/r6fp/cg_rd.o (__fixdfsi)
+/home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_fixdfdi.o)
+                              build/r6fp/cg_rd.o (__fixdfdi)
+/home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_floatsidf.o)
+                              build/r6fp/cg_rd.o (__floatunsidf)
+/home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_floatdidf.o)
+                              build/r6fp/cg_rd.o (__floatdidf)
+/home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-abort.o)
+                              build/r6fp/cg_stubs.o (abort)
+/home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memcmp.o)
+                              build/r6fp/cg_rd.o (memcmp)
+/home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memcpy.o)
+                              build/r6fp/cg_r6.o (memcpy)
+/home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memmove.o)
+                              build/r6fp/cg_rd.o (memmove)
+/home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memset.o)
+                              build/r6fp/cg_rd.o (memset)
+/home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-raise.o)
+                              /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-abort.o) (raise)
+/home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(getpid.o)
+                              /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-raise.o) (_getpid_r)
+/home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(kill.o)
+                              /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-raise.o) (_kill_r)
+/home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(_exit.o)
+                              /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-abort.o) (_exit)
+/home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(getreent.o)
+                              /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-raise.o) (__getreent)
+/home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(errno.o)
+                              /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(getpid.o) (errno)
+
+Discarded input sections
+
+ .gnu.warning._getpid_r
+                0x0000000000000000        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(getpid.o)
+ .gnu.warning._kill_r
+                0x0000000000000000        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(kill.o)
+ .gnu.warning.__getreent
+                0x0000000000000000        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(getreent.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+iram             0x0000000040080000 0x0000000000020000
+dram             0x000000003ffb0000 0x0000000000020000
+irom             0x00000000400d0000 0x0000000000300000
+drom             0x000000003f400000 0x0000000000400000
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD build/r6fp/cg_r6.o
+LOAD build/r6fp/cg_rd.o
+LOAD build/r6fp/cg_r6_anchor.o
+LOAD build/r6fp/tweetnacl.o
+LOAD build/r6fp/cg_stubs.o
+START GROUP
+LOAD /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libm.a
+LOAD /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a
+LOAD /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a
+END GROUP
+LOAD /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a
+LOAD /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a
+LOAD /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a
+LOAD /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a
+LOAD /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a
+
+.text           0x00000000400d0000     0x3b77
+ *(.literal .text .literal.* .text.*)
+ .literal.cg_micro_tag
+                0x00000000400d0000        0x0 build/r6fp/cg_r6.o
+                                          0xc (size before relaxing)
+ .literal.cg_micro_pack
+                0x00000000400d0000        0x0 build/r6fp/cg_r6.o
+                                          0x4 (size before relaxing)
+ .literal.cg_micro_verify
+                0x00000000400d0000        0x0 build/r6fp/cg_r6.o
+                                          0x4 (size before relaxing)
+ .literal.cg_forest
+                0x00000000400d0000       0x1c build/r6fp/cg_r6.o
+                                         0x20 (size before relaxing)
+ .literal.sha_block
+                0x00000000400d001c        0x4 build/r6fp/cg_rd.o
+ .literal.cg_airtime_ms
+                0x00000000400d0020       0x10 build/r6fp/cg_rd.o
+                                         0x54 (size before relaxing)
+ .literal.cg_air_s
+                0x00000000400d0030        0x0 build/r6fp/cg_rd.o
+                                         0x10 (size before relaxing)
+ .literal.cg_round_s
+                0x00000000400d0030        0x8 build/r6fp/cg_rd.o
+                                         0x1c (size before relaxing)
+ .literal.cg_sha256
+                0x00000000400d0038        0x4 build/r6fp/cg_rd.o
+                                         0x20 (size before relaxing)
+ .literal.cg_hmac_sha256
+                0x00000000400d003c        0x0 build/r6fp/cg_rd.o
+                                         0x20 (size before relaxing)
+ .literal.cg_encode_alert
+                0x00000000400d003c        0x0 build/r6fp/cg_rd.o
+                                         0x24 (size before relaxing)
+ .literal.cg_tag_ok
+                0x00000000400d003c        0x0 build/r6fp/cg_rd.o
+                                          0x4 (size before relaxing)
+ .literal.cg_ring_init
+                0x00000000400d003c        0x0 build/r6fp/cg_rd.o
+                                          0x4 (size before relaxing)
+ .literal.cg_fresh_accept
+                0x00000000400d003c        0x0 build/r6fp/cg_rd.o
+                                          0x8 (size before relaxing)
+ .literal.cg_beta_init
+                0x00000000400d003c        0x4 build/r6fp/cg_rd.o
+                                         0x14 (size before relaxing)
+ .literal.cg_beta_update
+                0x00000000400d0040        0x0 build/r6fp/cg_rd.o
+                                         0x34 (size before relaxing)
+ .literal.cg_beta_mean
+                0x00000000400d0040        0x0 build/r6fp/cg_rd.o
+                                          0x8 (size before relaxing)
+ .literal.cg_loss_bin
+                0x00000000400d0040        0x4 build/r6fp/cg_rd.o
+                                          0x8 (size before relaxing)
+ .literal.cg_budget_units
+                0x00000000400d0044        0xc build/r6fp/cg_rd.o
+                                         0x30 (size before relaxing)
+ .literal.cg_d1_init
+                0x00000000400d0050        0x4 build/r6fp/cg_rd.o
+                                          0xc (size before relaxing)
+ .literal.cg_d1_lookup
+                0x00000000400d0054        0xc build/r6fp/cg_rd.o
+                                         0x48 (size before relaxing)
+ .literal.cg_retry_allowed
+                0x00000000400d0060        0x8 build/r6fp/cg_rd.o
+                                         0x18 (size before relaxing)
+ .literal.cg_defer_until
+                0x00000000400d0068        0x8 build/r6fp/cg_rd.o
+                                         0x30 (size before relaxing)
+ .literal.cg_verifier_init
+                0x00000000400d0070        0x0 build/r6fp/cg_rd.o
+                                          0x8 (size before relaxing)
+ .literal.cg_cluster_check
+                0x00000000400d0070        0x8 build/r6fp/cg_rd.o
+                                         0x3c (size before relaxing)
+ .literal.cg_d3_n_slots
+                0x00000000400d0078        0x4 build/r6fp/cg_rd.o
+                                         0x34 (size before relaxing)
+ .literal.cg_d3_slot_index
+                0x00000000400d007c        0x0 build/r6fp/cg_rd.o
+                                          0x8 (size before relaxing)
+ .literal.cg_d3_slot_time
+                0x00000000400d007c        0x8 build/r6fp/cg_rd.o
+                                         0x64 (size before relaxing)
+ .literal.cg_anchor
+                0x00000000400d0084        0x8 build/r6fp/cg_r6_anchor.o
+                                         0x24 (size before relaxing)
+ .literal.pack25519
+                0x00000000400d008c        0xc build/r6fp/tweetnacl.o
+                                         0x20 (size before relaxing)
+ .literal.M     0x00000000400d0098        0x0 build/r6fp/tweetnacl.o
+                                         0x10 (size before relaxing)
+ .literal.S     0x00000000400d0098        0x0 build/r6fp/tweetnacl.o
+                                          0x4 (size before relaxing)
+ .literal.inv25519
+                0x00000000400d0098        0x0 build/r6fp/tweetnacl.o
+                                         0x10 (size before relaxing)
+ .literal.add   0x00000000400d0098        0x4 build/r6fp/tweetnacl.o
+                                         0x4c (size before relaxing)
+ .literal.modL  0x00000000400d009c        0x4 build/r6fp/tweetnacl.o
+ .literal.reduce
+                0x00000000400d00a0        0x0 build/r6fp/tweetnacl.o
+                                          0x8 (size before relaxing)
+ .literal.pack  0x00000000400d00a0        0x0 build/r6fp/tweetnacl.o
+                                         0x14 (size before relaxing)
+ .literal.scalarmult
+                0x00000000400d00a0        0x8 build/r6fp/tweetnacl.o
+                                         0x28 (size before relaxing)
+ .literal.scalarbase
+                0x00000000400d00a8        0x8 build/r6fp/tweetnacl.o
+                                         0x20 (size before relaxing)
+ .literal.core  0x00000000400d00b0        0x0 build/r6fp/tweetnacl.o
+                                         0x20 (size before relaxing)
+ .literal.crypto_core_salsa20_tweet
+                0x00000000400d00b0        0x0 build/r6fp/tweetnacl.o
+                                          0x4 (size before relaxing)
+ .literal.crypto_core_hsalsa20_tweet
+                0x00000000400d00b0        0x0 build/r6fp/tweetnacl.o
+                                          0x4 (size before relaxing)
+ .literal.crypto_stream_salsa20_tweet_xor
+                0x00000000400d00b0        0x4 build/r6fp/tweetnacl.o
+                                         0x10 (size before relaxing)
+ .literal.crypto_stream_salsa20_tweet
+                0x00000000400d00b4        0x0 build/r6fp/tweetnacl.o
+                                          0x4 (size before relaxing)
+ .literal.crypto_stream_xsalsa20_tweet
+                0x00000000400d00b4        0x0 build/r6fp/tweetnacl.o
+                                          0xc (size before relaxing)
+ .literal.crypto_stream_xsalsa20_tweet_xor
+                0x00000000400d00b4        0x0 build/r6fp/tweetnacl.o
+                                          0xc (size before relaxing)
+ .literal.crypto_onetimeauth_poly1305_tweet
+                0x00000000400d00b4        0x4 build/r6fp/tweetnacl.o
+                                         0x24 (size before relaxing)
+ .literal.crypto_onetimeauth_poly1305_tweet_verify
+                0x00000000400d00b8        0x0 build/r6fp/tweetnacl.o
+                                          0x8 (size before relaxing)
+ .literal.crypto_secretbox_xsalsa20poly1305_tweet
+                0x00000000400d00b8        0x0 build/r6fp/tweetnacl.o
+                                          0xc (size before relaxing)
+ .literal.crypto_secretbox_xsalsa20poly1305_tweet_open
+                0x00000000400d00b8        0x0 build/r6fp/tweetnacl.o
+                                         0x10 (size before relaxing)
+ .literal.crypto_scalarmult_curve25519_tweet
+                0x00000000400d00b8        0x4 build/r6fp/tweetnacl.o
+                                         0x90 (size before relaxing)
+ .literal.crypto_scalarmult_curve25519_tweet_base
+                0x00000000400d00bc        0x4 build/r6fp/tweetnacl.o
+                                          0x8 (size before relaxing)
+ .literal.crypto_box_curve25519xsalsa20poly1305_tweet_keypair
+                0x00000000400d00c0        0x0 build/r6fp/tweetnacl.o
+                                          0x8 (size before relaxing)
+ .literal.crypto_box_curve25519xsalsa20poly1305_tweet_beforenm
+                0x00000000400d00c0        0x4 build/r6fp/tweetnacl.o
+                                         0x10 (size before relaxing)
+ .literal.crypto_box_curve25519xsalsa20poly1305_tweet_afternm
+                0x00000000400d00c4        0x0 build/r6fp/tweetnacl.o
+                                          0x4 (size before relaxing)
+ .literal.crypto_box_curve25519xsalsa20poly1305_tweet_open_afternm
+                0x00000000400d00c4        0x0 build/r6fp/tweetnacl.o
+                                          0x4 (size before relaxing)
+ .literal.crypto_box_curve25519xsalsa20poly1305_tweet
+                0x00000000400d00c4        0x0 build/r6fp/tweetnacl.o
+                                          0x8 (size before relaxing)
+ .literal.crypto_box_curve25519xsalsa20poly1305_tweet_open
+                0x00000000400d00c4        0x0 build/r6fp/tweetnacl.o
+                                          0x8 (size before relaxing)
+ .literal.crypto_hashblocks_sha512_tweet
+                0x00000000400d00c4        0x4 build/r6fp/tweetnacl.o
+                                          0x8 (size before relaxing)
+ .literal.crypto_hash_sha512_tweet
+                0x00000000400d00c8        0x4 build/r6fp/tweetnacl.o
+                                         0x1c (size before relaxing)
+ .literal.crypto_sign_ed25519_tweet_keypair
+                0x00000000400d00cc        0x0 build/r6fp/tweetnacl.o
+                                         0x10 (size before relaxing)
+ .literal.crypto_sign_ed25519_tweet
+                0x00000000400d00cc        0x0 build/r6fp/tweetnacl.o
+                                         0x28 (size before relaxing)
+ .literal.crypto_sign_ed25519_tweet_open
+                0x00000000400d00cc        0x8 build/r6fp/tweetnacl.o
+                                         0xb8 (size before relaxing)
+ .literal.unlikely.randombytes
+                0x00000000400d00d4        0x0 build/r6fp/cg_stubs.o
+                                          0x4 (size before relaxing)
+ .literal       0x00000000400d00d4        0xc /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libm.a(lib_a-s_ceil.o)
+                                         0x30 (size before relaxing)
+ .literal       0x00000000400d00e0        0x4 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libm.a(lib_a-s_floor.o)
+                                         0x34 (size before relaxing)
+ .literal       0x00000000400d00e4        0x8 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_addsubdf3.o)
+                                         0x10 (size before relaxing)
+ .literal       0x00000000400d00ec        0x4 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_muldf3.o)
+                                          0xc (size before relaxing)
+ .literal       0x00000000400d00f0        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_divdf3.o)
+                                         0x10 (size before relaxing)
+ .literal       0x00000000400d00f0        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_cmpdf2.o)
+                                         0x18 (size before relaxing)
+ .literal       0x00000000400d00f0        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_fixdfsi.o)
+                                          0x4 (size before relaxing)
+ .literal       0x00000000400d00f0        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_fixdfdi.o)
+                                          0x4 (size before relaxing)
+ .literal       0x00000000400d00f0        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-abort.o)
+                                          0x8 (size before relaxing)
+ .literal       0x00000000400d00f0        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-raise.o)
+                                          0xc (size before relaxing)
+ .literal       0x00000000400d00f0        0x4 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(getpid.o)
+ .literal       0x00000000400d00f4        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(kill.o)
+                                          0x4 (size before relaxing)
+ .text.cg_micro_tag
+                0x00000000400d00f4       0x4f build/r6fp/cg_r6.o
+                                         0x57 (size before relaxing)
+                0x00000000400d00f4                cg_micro_tag
+ *fill*         0x00000000400d0143        0x1 
+ .text.cg_micro_pack
+                0x00000000400d0144       0x22 build/r6fp/cg_r6.o
+                                         0x26 (size before relaxing)
+                0x00000000400d0144                cg_micro_pack
+ *fill*         0x00000000400d0166        0x2 
+ .text.cg_micro_verify
+                0x00000000400d0168       0x43 build/r6fp/cg_r6.o
+                0x00000000400d0168                cg_micro_verify
+ *fill*         0x00000000400d01ab        0x1 
+ .text.cg_forest
+                0x00000000400d01ac       0x66 build/r6fp/cg_r6.o
+                0x00000000400d01ac                cg_forest
+ *fill*         0x00000000400d0212        0x2 
+ .text.sha_block
+                0x00000000400d0214      0x15f build/r6fp/cg_rd.o
+ *fill*         0x00000000400d0373        0x1 
+ .text.cg_airtime_ms
+                0x00000000400d0374       0x9c build/r6fp/cg_rd.o
+                                         0xc4 (size before relaxing)
+                0x00000000400d0374                cg_airtime_ms
+ .text.cg_air_s
+                0x00000000400d0410       0x1b build/r6fp/cg_rd.o
+                                         0x1f (size before relaxing)
+                0x00000000400d0410                cg_air_s
+ *fill*         0x00000000400d042b        0x1 
+ .text.cg_round_s
+                0x00000000400d042c       0x3a build/r6fp/cg_rd.o
+                                         0x4a (size before relaxing)
+                0x00000000400d042c                cg_round_s
+ *fill*         0x00000000400d0466        0x2 
+ .text.cg_sha256
+                0x00000000400d0468       0xc7 build/r6fp/cg_rd.o
+                                         0xdb (size before relaxing)
+                0x00000000400d0468                cg_sha256
+ *fill*         0x00000000400d052f        0x1 
+ .text.cg_hmac_sha256
+                0x00000000400d0530       0xb2 build/r6fp/cg_rd.o
+                                         0xc6 (size before relaxing)
+                0x00000000400d0530                cg_hmac_sha256
+ *fill*         0x00000000400d05e2        0x2 
+ .text.cg_encode_alert
+                0x00000000400d05e4       0xc2 build/r6fp/cg_rd.o
+                                         0xde (size before relaxing)
+                0x00000000400d05e4                cg_encode_alert
+ *fill*         0x00000000400d06a6        0x2 
+ .text.cg_tag_ok
+                0x00000000400d06a8       0x48 build/r6fp/cg_rd.o
+                                         0x4c (size before relaxing)
+                0x00000000400d06a8                cg_tag_ok
+ .text.cg_ring_init
+                0x00000000400d06f0       0x12 build/r6fp/cg_rd.o
+                                         0x16 (size before relaxing)
+                0x00000000400d06f0                cg_ring_init
+ *fill*         0x00000000400d0702        0x2 
+ .text.cg_fresh_accept
+                0x00000000400d0704       0xd6 build/r6fp/cg_rd.o
+                                         0xda (size before relaxing)
+                0x00000000400d0704                cg_fresh_accept
+ *fill*         0x00000000400d07da        0x2 
+ .text.cg_beta_init
+                0x00000000400d07dc       0x44 build/r6fp/cg_rd.o
+                                         0x4c (size before relaxing)
+                0x00000000400d07dc                cg_beta_init
+ .text.cg_beta_update
+                0x00000000400d0820       0xa9 build/r6fp/cg_rd.o
+                                         0xc5 (size before relaxing)
+                0x00000000400d0820                cg_beta_update
+ *fill*         0x00000000400d08c9        0x3 
+ .text.cg_beta_mean
+                0x00000000400d08cc       0x26 build/r6fp/cg_rd.o
+                                         0x2a (size before relaxing)
+                0x00000000400d08cc                cg_beta_mean
+ *fill*         0x00000000400d08f2        0x2 
+ .text.cg_loss_bin
+                0x00000000400d08f4       0x2a build/r6fp/cg_rd.o
+                0x00000000400d08f4                cg_loss_bin
+ *fill*         0x00000000400d091e        0x2 
+ .text.cg_budget_units
+                0x00000000400d0920       0x58 build/r6fp/cg_rd.o
+                                         0x68 (size before relaxing)
+                0x00000000400d0920                cg_budget_units
+ .text.cg_d1_init
+                0x00000000400d0978       0x86 build/r6fp/cg_rd.o
+                                         0x8e (size before relaxing)
+                0x00000000400d0978                cg_d1_init
+ *fill*         0x00000000400d09fe        0x2 
+ .text.cg_d1_lookup
+                0x00000000400d0a00       0xdc build/r6fp/cg_rd.o
+                                         0xf4 (size before relaxing)
+                0x00000000400d0a00                cg_d1_lookup
+ .text.cg_retry_allowed
+                0x00000000400d0adc       0x3b build/r6fp/cg_rd.o
+                                         0x47 (size before relaxing)
+                0x00000000400d0adc                cg_retry_allowed
+ *fill*         0x00000000400d0b17        0x1 
+ .text.cg_defer_until
+                0x00000000400d0b18       0x6a build/r6fp/cg_rd.o
+                                         0x7e (size before relaxing)
+                0x00000000400d0b18                cg_defer_until
+ *fill*         0x00000000400d0b82        0x2 
+ .text.cg_verifier_init
+                0x00000000400d0b84       0x1a build/r6fp/cg_rd.o
+                                         0x1e (size before relaxing)
+                0x00000000400d0b84                cg_verifier_init
+ *fill*         0x00000000400d0b9e        0x2 
+ .text.cg_cluster_check
+                0x00000000400d0ba0      0x272 build/r6fp/cg_rd.o
+                                        0x292 (size before relaxing)
+                0x00000000400d0ba0                cg_cluster_check
+ *fill*         0x00000000400d0e12        0x2 
+ .text.cg_d3_n_slots
+                0x00000000400d0e14       0x56 build/r6fp/cg_rd.o
+                                         0x72 (size before relaxing)
+                0x00000000400d0e14                cg_d3_n_slots
+ *fill*         0x00000000400d0e6a        0x2 
+ .text.cg_d3_slot_index
+                0x00000000400d0e6c       0x40 build/r6fp/cg_rd.o
+                                         0x44 (size before relaxing)
+                0x00000000400d0e6c                cg_d3_slot_index
+ .text.cg_d3_slot_time
+                0x00000000400d0eac      0x10d build/r6fp/cg_rd.o
+                                        0x151 (size before relaxing)
+                0x00000000400d0eac                cg_d3_slot_time
+ *fill*         0x00000000400d0fb9        0x3 
+ .text.cg_anchor
+                0x00000000400d0fbc       0x92 build/r6fp/cg_r6_anchor.o
+                                         0xaa (size before relaxing)
+                0x00000000400d0fbc                cg_anchor
+ *fill*         0x00000000400d104e        0x2 
+ .text.pack25519
+                0x00000000400d1050       0xf8 build/r6fp/tweetnacl.o
+                                        0x108 (size before relaxing)
+ .text.M        0x00000000400d1148       0xe4 build/r6fp/tweetnacl.o
+                                         0xec (size before relaxing)
+ .text.S        0x00000000400d122c        0xe build/r6fp/tweetnacl.o
+                                         0x12 (size before relaxing)
+ *fill*         0x00000000400d123a        0x2 
+ .text.inv25519
+                0x00000000400d123c       0x42 build/r6fp/tweetnacl.o
+                                         0x4a (size before relaxing)
+ *fill*         0x00000000400d127e        0x2 
+ .text.add      0x00000000400d1280       0xea build/r6fp/tweetnacl.o
+                                        0x126 (size before relaxing)
+ *fill*         0x00000000400d136a        0x2 
+ .text.modL     0x00000000400d136c      0x1f7 build/r6fp/tweetnacl.o
+ *fill*         0x00000000400d1563        0x1 
+ .text.reduce   0x00000000400d1564       0x30 build/r6fp/tweetnacl.o
+                                         0x34 (size before relaxing)
+ .text.pack     0x00000000400d1594       0x50 build/r6fp/tweetnacl.o
+                                         0x60 (size before relaxing)
+ .text.scalarmult
+                0x00000000400d15e4       0x8c build/r6fp/tweetnacl.o
+                                         0xa4 (size before relaxing)
+ .text.scalarbase
+                0x00000000400d1670       0x3b build/r6fp/tweetnacl.o
+                                         0x47 (size before relaxing)
+ *fill*         0x00000000400d16ab        0x1 
+ .text.core     0x00000000400d16ac      0x1a4 build/r6fp/tweetnacl.o
+                                        0x1b4 (size before relaxing)
+ .text.crypto_core_salsa20_tweet
+                0x00000000400d1850       0x14 build/r6fp/tweetnacl.o
+                                         0x18 (size before relaxing)
+                0x00000000400d1850                crypto_core_salsa20_tweet
+ .text.crypto_core_hsalsa20_tweet
+                0x00000000400d1864       0x14 build/r6fp/tweetnacl.o
+                                         0x18 (size before relaxing)
+                0x00000000400d1864                crypto_core_hsalsa20_tweet
+ .text.crypto_stream_salsa20_tweet_xor
+                0x00000000400d1878      0x110 build/r6fp/tweetnacl.o
+                                        0x114 (size before relaxing)
+                0x00000000400d1878                crypto_stream_salsa20_tweet_xor
+ .text.crypto_stream_salsa20_tweet
+                0x00000000400d1988       0x19 build/r6fp/tweetnacl.o
+                0x00000000400d1988                crypto_stream_salsa20_tweet
+ *fill*         0x00000000400d19a1        0x3 
+ .text.crypto_stream_xsalsa20_tweet
+                0x00000000400d19a4       0x24 build/r6fp/tweetnacl.o
+                                         0x28 (size before relaxing)
+                0x00000000400d19a4                crypto_stream_xsalsa20_tweet
+ .text.crypto_stream_xsalsa20_tweet_xor
+                0x00000000400d19c8       0x25 build/r6fp/tweetnacl.o
+                                         0x29 (size before relaxing)
+                0x00000000400d19c8                crypto_stream_xsalsa20_tweet_xor
+ *fill*         0x00000000400d19ed        0x3 
+ .text.crypto_onetimeauth_poly1305_tweet
+                0x00000000400d19f0      0x21f build/r6fp/tweetnacl.o
+                                        0x237 (size before relaxing)
+                0x00000000400d19f0                crypto_onetimeauth_poly1305_tweet
+ *fill*         0x00000000400d1c0f        0x1 
+ .text.crypto_onetimeauth_poly1305_tweet_verify
+                0x00000000400d1c10       0x1e build/r6fp/tweetnacl.o
+                                         0x22 (size before relaxing)
+                0x00000000400d1c10                crypto_onetimeauth_poly1305_tweet_verify
+ *fill*         0x00000000400d1c2e        0x2 
+ .text.crypto_secretbox_xsalsa20poly1305_tweet
+                0x00000000400d1c30       0x49 build/r6fp/tweetnacl.o
+                                         0x4d (size before relaxing)
+                0x00000000400d1c30                crypto_secretbox_xsalsa20poly1305_tweet
+ *fill*         0x00000000400d1c79        0x3 
+ .text.crypto_secretbox_xsalsa20poly1305_tweet_open
+                0x00000000400d1c7c       0x5e build/r6fp/tweetnacl.o
+                                         0x6a (size before relaxing)
+                0x00000000400d1c7c                crypto_secretbox_xsalsa20poly1305_tweet_open
+ *fill*         0x00000000400d1cda        0x2 
+ .text.crypto_scalarmult_curve25519_tweet
+                0x00000000400d1cdc      0x218 build/r6fp/tweetnacl.o
+                                        0x29c (size before relaxing)
+                0x00000000400d1cdc                crypto_scalarmult_curve25519_tweet
+ .text.crypto_scalarmult_curve25519_tweet_base
+                0x00000000400d1ef4       0x14 build/r6fp/tweetnacl.o
+                0x00000000400d1ef4                crypto_scalarmult_curve25519_tweet_base
+ .text.crypto_box_curve25519xsalsa20poly1305_tweet_keypair
+                0x00000000400d1f08       0x1a build/r6fp/tweetnacl.o
+                                         0x1e (size before relaxing)
+                0x00000000400d1f08                crypto_box_curve25519xsalsa20poly1305_tweet_keypair
+ *fill*         0x00000000400d1f22        0x2 
+ .text.crypto_box_curve25519xsalsa20poly1305_tweet_beforenm
+                0x00000000400d1f24       0x22 build/r6fp/tweetnacl.o
+                                         0x26 (size before relaxing)
+                0x00000000400d1f24                crypto_box_curve25519xsalsa20poly1305_tweet_beforenm
+ *fill*         0x00000000400d1f46        0x2 
+ .text.crypto_box_curve25519xsalsa20poly1305_tweet_afternm
+                0x00000000400d1f48       0x19 build/r6fp/tweetnacl.o
+                0x00000000400d1f48                crypto_box_curve25519xsalsa20poly1305_tweet_afternm
+ *fill*         0x00000000400d1f61        0x3 
+ .text.crypto_box_curve25519xsalsa20poly1305_tweet_open_afternm
+                0x00000000400d1f64       0x19 build/r6fp/tweetnacl.o
+                0x00000000400d1f64                crypto_box_curve25519xsalsa20poly1305_tweet_open_afternm
+ *fill*         0x00000000400d1f7d        0x3 
+ .text.crypto_box_curve25519xsalsa20poly1305_tweet
+                0x00000000400d1f80       0x22 build/r6fp/tweetnacl.o
+                                         0x26 (size before relaxing)
+                0x00000000400d1f80                crypto_box_curve25519xsalsa20poly1305_tweet
+ *fill*         0x00000000400d1fa2        0x2 
+ .text.crypto_box_curve25519xsalsa20poly1305_tweet_open
+                0x00000000400d1fa4       0x22 build/r6fp/tweetnacl.o
+                                         0x26 (size before relaxing)
+                0x00000000400d1fa4                crypto_box_curve25519xsalsa20poly1305_tweet_open
+ *fill*         0x00000000400d1fc6        0x2 
+ .text.crypto_hashblocks_sha512_tweet
+                0x00000000400d1fc8      0x3f5 build/r6fp/tweetnacl.o
+                                        0x3f9 (size before relaxing)
+                0x00000000400d1fc8                crypto_hashblocks_sha512_tweet
+ *fill*         0x00000000400d23bd        0x3 
+ .text.crypto_hash_sha512_tweet
+                0x00000000400d23c0       0x9c build/r6fp/tweetnacl.o
+                                         0xac (size before relaxing)
+                0x00000000400d23c0                crypto_hash_sha512_tweet
+ .text.crypto_sign_ed25519_tweet_keypair
+                0x00000000400d245c       0x59 build/r6fp/tweetnacl.o
+                                         0x65 (size before relaxing)
+                0x00000000400d245c                crypto_sign_ed25519_tweet_keypair
+ *fill*         0x00000000400d24b5        0x3 
+ .text.crypto_sign_ed25519_tweet
+                0x00000000400d24b8      0x187 build/r6fp/tweetnacl.o
+                                        0x1a6 (size before relaxing)
+                0x00000000400d24b8                crypto_sign_ed25519_tweet
+ *fill*         0x00000000400d263f        0x1 
+ .text.crypto_sign_ed25519_tweet_open
+                0x00000000400d2640      0x2ad build/r6fp/tweetnacl.o
+                                        0x335 (size before relaxing)
+                0x00000000400d2640                crypto_sign_ed25519_tweet_open
+ *fill*         0x00000000400d28ed        0x3 
+ .text.unlikely.randombytes
+                0x00000000400d28f0        0x6 build/r6fp/cg_stubs.o
+                                          0x9 (size before relaxing)
+                0x00000000400d28f0                randombytes
+ *fill*         0x00000000400d28f6        0x2 
+ .text          0x00000000400d28f8      0x120 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libm.a(lib_a-s_ceil.o)
+                0x00000000400d28f8                ceil
+ .text          0x00000000400d2a18      0x126 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libm.a(lib_a-s_floor.o)
+                0x00000000400d2a18                floor
+ *fill*         0x00000000400d2b3e        0x2 
+ .text          0x00000000400d2b40      0x312 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_addsubdf3.o)
+                0x00000000400d2b70                __adddf3
+                0x00000000400d2ccc                __subdf3
+ *fill*         0x00000000400d2e52        0x2 
+ .text          0x00000000400d2e54      0x1ff /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_muldf3.o)
+                0x00000000400d2f38                __muldf3
+ *fill*         0x00000000400d3053        0x1 
+ .text          0x00000000400d3054      0x213 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_divdf3.o)
+                0x00000000400d3144                __divdf3
+ *fill*         0x00000000400d3267        0x1 
+ .text          0x00000000400d3268      0x176 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_cmpdf2.o)
+                0x00000000400d3268                __eqdf2
+                0x00000000400d3268                __nedf2
+                0x00000000400d329c                __gtdf2
+                0x00000000400d32c4                __ledf2
+                0x00000000400d3328                __gedf2
+                0x00000000400d3350                __ltdf2
+                0x00000000400d33b4                __unorddf2
+ *fill*         0x00000000400d33de        0x2 
+ .text          0x00000000400d33e0       0x4c /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_fixdfsi.o)
+                0x00000000400d33e0                __fixdfsi
+ .text          0x00000000400d342c       0x6c /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_fixdfdi.o)
+                0x00000000400d342c                __fixdfdi
+ .text          0x00000000400d3498        0xd /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-abort.o)
+                                         0x14 (size before relaxing)
+                0x00000000400d3498                abort
+ *fill*         0x00000000400d34a5        0x3 
+ .text          0x00000000400d34a8       0x2e /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-raise.o)
+                0x00000000400d34a8                _raise_r
+                0x00000000400d34c4                raise
+ *fill*         0x00000000400d34d6        0x2 
+ .text          0x00000000400d34d8        0xe /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(getpid.o)
+                0x00000000400d34d8                _getpid_r
+ *fill*         0x00000000400d34e6        0x2 
+ .text          0x00000000400d34e8        0xe /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(kill.o)
+                0x00000000400d34e8                _kill_r
+ .text          0x00000000400d34f6        0x0 build/r6fp/cg_r6.o
+ *fill*         0x00000000400d34f6        0x0 
+ *fill*         0x00000000400d34f6        0x0 
+ *fill*         0x00000000400d34f6        0x0 
+ *fill*         0x00000000400d34f6        0x0 
+ .text          0x00000000400d34f6        0x0 build/r6fp/cg_rd.o
+ *fill*         0x00000000400d34f6        0x2 
+ .text.put32    0x00000000400d34f8       0x1a build/r6fp/cg_rd.o
+ *fill*         0x00000000400d3512        0x0 
+ *fill*         0x00000000400d3512        0x0 
+ *fill*         0x00000000400d3512        0x0 
+ *fill*         0x00000000400d3512        0x0 
+ *fill*         0x00000000400d3512        0x0 
+ *fill*         0x00000000400d3512        0x0 
+ *fill*         0x00000000400d3512        0x0 
+ *fill*         0x00000000400d3512        0x0 
+ *fill*         0x00000000400d3512        0x0 
+ *fill*         0x00000000400d3512        0x0 
+ *fill*         0x00000000400d3512        0x2 
+ .text.cg_load_bin
+                0x00000000400d3514       0x1a build/r6fp/cg_rd.o
+                0x00000000400d3514                cg_load_bin
+ *fill*         0x00000000400d352e        0x0 
+ *fill*         0x00000000400d352e        0x0 
+ *fill*         0x00000000400d352e        0x0 
+ *fill*         0x00000000400d352e        0x0 
+ *fill*         0x00000000400d352e        0x0 
+ *fill*         0x00000000400d352e        0x2 
+ .text.cg_d2_decide
+                0x00000000400d3530       0x20 build/r6fp/cg_rd.o
+                0x00000000400d3530                cg_d2_decide
+ *fill*         0x00000000400d3550        0x0 
+ .text.cg_d3_active
+                0x00000000400d3550       0x18 build/r6fp/cg_rd.o
+                0x00000000400d3550                cg_d3_active
+ .text.cg_d3_alt_sf
+                0x00000000400d3568       0x14 build/r6fp/cg_rd.o
+                0x00000000400d3568                cg_d3_alt_sf
+ *fill*         0x00000000400d357c        0x0 
+ .text          0x00000000400d357c        0x0 build/r6fp/cg_r6_anchor.o
+ *fill*         0x00000000400d357c        0x0 
+ .text.startup.main
+                0x00000000400d357c        0x7 build/r6fp/cg_r6_anchor.o
+                0x00000000400d357c                main
+ *fill*         0x00000000400d3583        0x1 
+ .literal.add1305
+                0x00000000400d3584        0x0 build/r6fp/tweetnacl.o
+ .literal.set25519
+                0x00000000400d3584        0x0 build/r6fp/tweetnacl.o
+ .literal.sel25519
+                0x00000000400d3584        0x0 build/r6fp/tweetnacl.o
+ .literal.unpack25519
+                0x00000000400d3584        0x0 build/r6fp/tweetnacl.o
+ .literal.A     0x00000000400d3584        0x0 build/r6fp/tweetnacl.o
+ .literal.Z     0x00000000400d3584        0x0 build/r6fp/tweetnacl.o
+ .literal.crypto_verify_16_tweet
+                0x00000000400d3584        0x0 build/r6fp/tweetnacl.o
+ .literal.crypto_verify_32_tweet
+                0x00000000400d3584        0x0 build/r6fp/tweetnacl.o
+ .text          0x00000000400d3584        0x0 build/r6fp/tweetnacl.o
+ .text.ld32     0x00000000400d3584       0x23 build/r6fp/tweetnacl.o
+ *fill*         0x00000000400d35a7        0x1 
+ .text.add1305  0x00000000400d35a8       0x24 build/r6fp/tweetnacl.o
+ .text.set25519
+                0x00000000400d35cc       0x1a build/r6fp/tweetnacl.o
+ *fill*         0x00000000400d35e6        0x2 
+ .text.car25519
+                0x00000000400d35e8       0xc7 build/r6fp/tweetnacl.o
+ *fill*         0x00000000400d36af        0x1 
+ .text.sel25519
+                0x00000000400d36b0       0x40 build/r6fp/tweetnacl.o
+ .text.unpack25519
+                0x00000000400d36f0       0x3a build/r6fp/tweetnacl.o
+ *fill*         0x00000000400d372a        0x2 
+ .text.A        0x00000000400d372c       0x31 build/r6fp/tweetnacl.o
+ *fill*         0x00000000400d375d        0x3 
+ .text.Z        0x00000000400d3760       0x36 build/r6fp/tweetnacl.o
+ *fill*         0x00000000400d3796        0x0 
+ *fill*         0x00000000400d3796        0x0 
+ *fill*         0x00000000400d3796        0x0 
+ *fill*         0x00000000400d3796        0x0 
+ *fill*         0x00000000400d3796        0x0 
+ *fill*         0x00000000400d3796        0x2 
+ .text.crypto_verify_16_tweet
+                0x00000000400d3798       0x2a build/r6fp/tweetnacl.o
+                0x00000000400d3798                crypto_verify_16_tweet
+ *fill*         0x00000000400d37c2        0x2 
+ .text.crypto_verify_32_tweet
+                0x00000000400d37c4       0x2a build/r6fp/tweetnacl.o
+                0x00000000400d37c4                crypto_verify_32_tweet
+ *fill*         0x00000000400d37ee        0x0 
+ *fill*         0x00000000400d37ee        0x0 
+ *fill*         0x00000000400d37ee        0x0 
+ *fill*         0x00000000400d37ee        0x0 
+ *fill*         0x00000000400d37ee        0x0 
+ *fill*         0x00000000400d37ee        0x0 
+ *fill*         0x00000000400d37ee        0x0 
+ *fill*         0x00000000400d37ee        0x0 
+ *fill*         0x00000000400d37ee        0x0 
+ *fill*         0x00000000400d37ee        0x0 
+ *fill*         0x00000000400d37ee        0x0 
+ *fill*         0x00000000400d37ee        0x0 
+ *fill*         0x00000000400d37ee        0x0 
+ *fill*         0x00000000400d37ee        0x0 
+ *fill*         0x00000000400d37ee        0x0 
+ *fill*         0x00000000400d37ee        0x0 
+ *fill*         0x00000000400d37ee        0x0 
+ .text          0x00000000400d37ee        0x0 build/r6fp/cg_stubs.o
+ *fill*         0x00000000400d37ee        0x0 
+ *fill*         0x00000000400d37ee        0x2 
+ .text          0x00000000400d37f0       0x18 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_lshrdi3.o)
+                0x00000000400d37f0                __lshrdi3
+ .text          0x00000000400d3808       0x59 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_divsf3.o)
+                0x00000000400d3808                __divsf3
+ *fill*         0x00000000400d3861        0x0 
+ *fill*         0x00000000400d3861        0x0 
+ *fill*         0x00000000400d3861        0x0 
+ *fill*         0x00000000400d3861        0x0 
+ *fill*         0x00000000400d3861        0x3 
+ .text          0x00000000400d3864       0x3d /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_floatsidf.o)
+                0x00000000400d3864                __floatunsidf
+                0x00000000400d3870                __floatsidf
+ *fill*         0x00000000400d38a1        0x3 
+ .text          0x00000000400d38a4       0x81 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_floatdidf.o)
+                0x00000000400d38a4                __floatundidf
+                0x00000000400d38b4                __floatdidf
+ *fill*         0x00000000400d3925        0x3 
+ .literal       0x00000000400d3928        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memcmp.o)
+ .text          0x00000000400d3928       0x4f /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memcmp.o)
+                0x00000000400d3928                memcmp
+ *fill*         0x00000000400d3977        0x1 
+ .literal       0x00000000400d3978        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memcpy.o)
+ .text          0x00000000400d3978      0x135 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memcpy.o)
+                0x00000000400d39b8                memcpy
+ *fill*         0x00000000400d3aad        0x3 
+ .text          0x00000000400d3ab0       0x41 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memmove.o)
+                0x00000000400d3ab0                memmove
+ *fill*         0x00000000400d3af1        0x3 
+ .literal       0x00000000400d3af4        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memset.o)
+ .text          0x00000000400d3af4       0x74 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memset.o)
+                0x00000000400d3b1c                memset
+ *fill*         0x00000000400d3b68        0x0 
+ *fill*         0x00000000400d3b68        0x0 
+ *fill*         0x00000000400d3b68        0x0 
+ .text          0x00000000400d3b68        0x6 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(_exit.o)
+                0x00000000400d3b68                _exit
+ *fill*         0x00000000400d3b6e        0x2 
+ .text          0x00000000400d3b70        0x7 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(getreent.o)
+                0x00000000400d3b70                __getreent
+ .text          0x00000000400d3b77        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(errno.o)
+
+.rodata         0x000000003f400000     0x47a0
+ *(.rodata .rodata.* .rodata1)
+ .rodata.cg_root
+                0x000000003f400000       0x1e build/r6fp/cg_r6.o
+ .rodata.cg_right
+                0x000000003f40001e      0xdaa build/r6fp/cg_r6.o
+ .rodata.cg_left
+                0x000000003f400dc8      0xdaa build/r6fp/cg_r6.o
+ *fill*         0x000000003f401b72        0x2 
+ .rodata.cg_thr
+                0x000000003f401b74     0x1b54 build/r6fp/cg_r6.o
+ .rodata.cg_feat
+                0x000000003f4036c8      0x6d5 build/r6fp/cg_r6.o
+ *fill*         0x000000003f403d9d        0x3 
+ .rodata        0x000000003f403da0       0x20 build/r6fp/cg_rd.o
+ .rodata.cg_d1_init.str1.1
+                0x000000003f403dc0        0x5 build/r6fp/cg_rd.o
+ .rodata.L$0    0x000000003f403dc5       0x20 build/r6fp/cg_rd.o
+ *fill*         0x000000003f403de5        0x3 
+ .rodata.GAPS$1
+                0x000000003f403de8       0x30 build/r6fp/cg_rd.o
+ .rodata.E$3    0x000000003f403e18       0x38 build/r6fp/cg_rd.o
+ .rodata.K256   0x000000003f403e50      0x100 build/r6fp/cg_rd.o
+ .rodata.crypto_hash_sha512_tweet.str1.1
+                0x000000003f403f50       0x41 build/r6fp/tweetnacl.o
+ *fill*         0x000000003f403f91        0x7 
+ .rodata.L      0x000000003f403f98      0x100 build/r6fp/tweetnacl.o
+ .rodata.K      0x000000003f404098      0x280 build/r6fp/tweetnacl.o
+ .rodata.minusp
+                0x000000003f404318       0x44 build/r6fp/tweetnacl.o
+ .rodata.sigma  0x000000003f40435c       0x10 build/r6fp/tweetnacl.o
+ *fill*         0x000000003f40436c        0x4 
+ .rodata.I      0x000000003f404370       0x80 build/r6fp/tweetnacl.o
+ .rodata.Y      0x000000003f4043f0       0x80 build/r6fp/tweetnacl.o
+ .rodata.X      0x000000003f404470       0x80 build/r6fp/tweetnacl.o
+ .rodata.D2     0x000000003f4044f0       0x80 build/r6fp/tweetnacl.o
+ .rodata.D      0x000000003f404570       0x80 build/r6fp/tweetnacl.o
+ .rodata._121665
+                0x000000003f4045f0       0x80 build/r6fp/tweetnacl.o
+ .rodata.gf1    0x000000003f404670       0x80 build/r6fp/tweetnacl.o
+ .rodata.gf0    0x000000003f4046f0       0x80 build/r6fp/tweetnacl.o
+ .rodata._9     0x000000003f404770       0x20 build/r6fp/tweetnacl.o
+ .rodata._0     0x000000003f404790       0x10 build/r6fp/tweetnacl.o
+
+.data           0x000000003ffb0000        0x0
+ *(.data .data.*)
+ .data          0x000000003ffb0000        0x0 build/r6fp/cg_r6.o
+ .data          0x000000003ffb0000        0x0 build/r6fp/cg_rd.o
+ .data          0x000000003ffb0000        0x0 build/r6fp/cg_r6_anchor.o
+ .data          0x000000003ffb0000        0x0 build/r6fp/tweetnacl.o
+ .data          0x000000003ffb0000        0x0 build/r6fp/cg_stubs.o
+ .data          0x000000003ffb0000        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libm.a(lib_a-s_ceil.o)
+ .data          0x000000003ffb0000        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libm.a(lib_a-s_floor.o)
+ .data          0x000000003ffb0000        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_lshrdi3.o)
+ .data          0x000000003ffb0000        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_divsf3.o)
+ .data          0x000000003ffb0000        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_addsubdf3.o)
+ .data          0x000000003ffb0000        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_muldf3.o)
+ .data          0x000000003ffb0000        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_divdf3.o)
+ .data          0x000000003ffb0000        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_cmpdf2.o)
+ .data          0x000000003ffb0000        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_fixdfsi.o)
+ .data          0x000000003ffb0000        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_fixdfdi.o)
+ .data          0x000000003ffb0000        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_floatsidf.o)
+ .data          0x000000003ffb0000        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_floatdidf.o)
+ .data          0x000000003ffb0000        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-abort.o)
+ .data          0x000000003ffb0000        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memcmp.o)
+ .data          0x000000003ffb0000        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memcpy.o)
+ .data          0x000000003ffb0000        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memmove.o)
+ .data          0x000000003ffb0000        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memset.o)
+ .data          0x000000003ffb0000        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-raise.o)
+ .data          0x000000003ffb0000        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(getpid.o)
+ .data          0x000000003ffb0000        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(kill.o)
+ .data          0x000000003ffb0000        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(_exit.o)
+ .data          0x000000003ffb0000        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(getreent.o)
+ .data          0x000000003ffb0000        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(errno.o)
+
+.bss            0x000000003ffb0000        0xc
+ *(.bss .bss.* COMMON)
+ .bss           0x000000003ffb0000        0x0 build/r6fp/cg_r6.o
+ .bss           0x000000003ffb0000        0x0 build/r6fp/cg_rd.o
+ .bss           0x000000003ffb0000        0x0 build/r6fp/cg_r6_anchor.o
+ .bss.cg_sink_i
+                0x000000003ffb0000        0x4 build/r6fp/cg_r6_anchor.o
+                0x000000003ffb0000                cg_sink_i
+ .bss.cg_sink_f
+                0x000000003ffb0004        0x4 build/r6fp/cg_r6_anchor.o
+                0x000000003ffb0004                cg_sink_f
+ .bss           0x000000003ffb0008        0x0 build/r6fp/tweetnacl.o
+ .bss           0x000000003ffb0008        0x0 build/r6fp/cg_stubs.o
+ .bss           0x000000003ffb0008        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libm.a(lib_a-s_ceil.o)
+ .bss           0x000000003ffb0008        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libm.a(lib_a-s_floor.o)
+ .bss           0x000000003ffb0008        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_lshrdi3.o)
+ .bss           0x000000003ffb0008        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_divsf3.o)
+ .bss           0x000000003ffb0008        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_addsubdf3.o)
+ .bss           0x000000003ffb0008        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_muldf3.o)
+ .bss           0x000000003ffb0008        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_divdf3.o)
+ .bss           0x000000003ffb0008        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_cmpdf2.o)
+ .bss           0x000000003ffb0008        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_fixdfsi.o)
+ .bss           0x000000003ffb0008        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_fixdfdi.o)
+ .bss           0x000000003ffb0008        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_floatsidf.o)
+ .bss           0x000000003ffb0008        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_floatdidf.o)
+ .bss           0x000000003ffb0008        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-abort.o)
+ .bss           0x000000003ffb0008        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memcmp.o)
+ .bss           0x000000003ffb0008        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memcpy.o)
+ .bss           0x000000003ffb0008        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memmove.o)
+ .bss           0x000000003ffb0008        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memset.o)
+ .bss           0x000000003ffb0008        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-raise.o)
+ .bss           0x000000003ffb0008        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(getpid.o)
+ .bss           0x000000003ffb0008        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(kill.o)
+ .bss           0x000000003ffb0008        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(_exit.o)
+ .bss           0x000000003ffb0008        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(getreent.o)
+ .bss           0x000000003ffb0008        0x4 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(errno.o)
+                0x000000003ffb0008                errno
+OUTPUT(build/r6fp/image.elf elf32-xtensa-le)
+
+.comment        0x0000000000000000       0x2f
+ .comment       0x0000000000000000       0x2f build/r6fp/cg_r6.o
+                                         0x30 (size before relaxing)
+ .comment       0x000000000000002f       0x30 build/r6fp/cg_rd.o
+ .comment       0x000000000000002f       0x30 build/r6fp/cg_r6_anchor.o
+ .comment       0x000000000000002f       0x30 build/r6fp/tweetnacl.o
+ .comment       0x000000000000002f       0x30 build/r6fp/cg_stubs.o
+ .comment       0x000000000000002f       0x30 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libm.a(lib_a-s_ceil.o)
+ .comment       0x000000000000002f       0x30 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libm.a(lib_a-s_floor.o)
+ .comment       0x000000000000002f       0x30 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-abort.o)
+ .comment       0x000000000000002f       0x30 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memcmp.o)
+ .comment       0x000000000000002f       0x30 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memmove.o)
+ .comment       0x000000000000002f       0x30 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-raise.o)
+ .comment       0x000000000000002f       0x30 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(getpid.o)
+ .comment       0x000000000000002f       0x30 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(kill.o)
+ .comment       0x000000000000002f       0x30 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(_exit.o)
+ .comment       0x000000000000002f       0x30 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(getreent.o)
+ .comment       0x000000000000002f       0x30 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(errno.o)
+
+.xtensa.info    0x0000000000000000       0x38
+ .xtensa.info   0x0000000000000000       0x38 build/r6fp/cg_r6.o
+ .xtensa.info   0x0000000000000038        0x0 build/r6fp/cg_rd.o
+ .xtensa.info   0x0000000000000038        0x0 build/r6fp/cg_r6_anchor.o
+ .xtensa.info   0x0000000000000038        0x0 build/r6fp/tweetnacl.o
+ .xtensa.info   0x0000000000000038        0x0 build/r6fp/cg_stubs.o
+ .xtensa.info   0x0000000000000038        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libm.a(lib_a-s_ceil.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libm.a(lib_a-s_floor.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_lshrdi3.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_divsf3.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_addsubdf3.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_muldf3.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_divdf3.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_cmpdf2.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_fixdfsi.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_fixdfdi.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_floatsidf.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_floatdidf.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-abort.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memcmp.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memcpy.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memmove.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memset.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-raise.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(getpid.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(kill.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(_exit.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(getreent.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(errno.o)
+
+.xt.lit         0x0000000000000000      0x110
+ .xt.lit        0x0000000000000000        0x8 build/r6fp/cg_r6.o
+                                         0x20 (size before relaxing)
+ .xt.lit        0x0000000000000008       0x70 build/r6fp/cg_rd.o
+                                         0xc0 (size before relaxing)
+ .xt.lit        0x0000000000000078        0x8 build/r6fp/cg_r6_anchor.o
+ .xt.lit        0x0000000000000080       0x68 build/r6fp/tweetnacl.o
+                                        0x110 (size before relaxing)
+ .xt.lit        0x00000000000000e8        0x0 build/r6fp/cg_stubs.o
+                                          0x8 (size before relaxing)
+ .xt.lit        0x00000000000000e8        0x8 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libm.a(lib_a-s_ceil.o)
+ .xt.lit        0x00000000000000f0        0x8 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libm.a(lib_a-s_floor.o)
+ .xt.lit        0x00000000000000f8        0x8 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_addsubdf3.o)
+ .xt.lit        0x0000000000000100        0x8 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_muldf3.o)
+ .xt.lit        0x0000000000000108        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_divdf3.o)
+                                          0x8 (size before relaxing)
+ .xt.lit        0x0000000000000108        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_cmpdf2.o)
+                                          0x8 (size before relaxing)
+ .xt.lit        0x0000000000000108        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_fixdfsi.o)
+                                          0x8 (size before relaxing)
+ .xt.lit        0x0000000000000108        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_fixdfdi.o)
+                                          0x8 (size before relaxing)
+ .xt.lit        0x0000000000000108        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-abort.o)
+                                          0x8 (size before relaxing)
+ .xt.lit        0x0000000000000108        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-raise.o)
+                                          0x8 (size before relaxing)
+ .xt.lit        0x0000000000000108        0x8 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(getpid.o)
+ .xt.lit        0x0000000000000110        0x0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(kill.o)
+                                          0x8 (size before relaxing)
+
+.xt.prop        0x0000000000000000     0x2cac
+ .xt.prop       0x0000000000000000      0x114 build/r6fp/cg_r6.o
+                                        0x138 (size before relaxing)
+ .xt.prop       0x0000000000000114      0x8ac build/r6fp/cg_rd.o
+                                        0x924 (size before relaxing)
+ .xt.prop       0x00000000000009c0       0x6c build/r6fp/cg_r6_anchor.o
+ .xt.prop       0x0000000000000a2c      0xf60 build/r6fp/tweetnacl.o
+                                       0x10bc (size before relaxing)
+ .xt.prop       0x000000000000198c       0x18 build/r6fp/cg_stubs.o
+                                         0x24 (size before relaxing)
+ .xt.prop       0x00000000000019a4       0xe4 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libm.a(lib_a-s_ceil.o)
+ .xt.prop       0x0000000000001a88       0xb4 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libm.a(lib_a-s_floor.o)
+ .xt.prop       0x0000000000001b3c       0x3c /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_lshrdi3.o)
+ .xt.prop       0x0000000000001b78       0x24 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_divsf3.o)
+ .xt.prop       0x0000000000001b9c      0x420 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_addsubdf3.o)
+ .xt.prop       0x0000000000001fbc      0x228 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_muldf3.o)
+ .xt.prop       0x00000000000021e4      0x258 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_divdf3.o)
+                                        0x264 (size before relaxing)
+ .xt.prop       0x000000000000243c      0x27c /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_cmpdf2.o)
+                                        0x288 (size before relaxing)
+ .xt.prop       0x00000000000026b8       0x60 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_fixdfsi.o)
+                                         0x6c (size before relaxing)
+ .xt.prop       0x0000000000002718       0x9c /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_fixdfdi.o)
+                                         0xa8 (size before relaxing)
+ .xt.prop       0x00000000000027b4       0x54 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_floatsidf.o)
+ .xt.prop       0x0000000000002808       0x9c /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_floatdidf.o)
+ .xt.prop       0x00000000000028a4       0x18 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-abort.o)
+                                         0x24 (size before relaxing)
+ .xt.prop       0x00000000000028bc       0x84 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memcmp.o)
+                                         0x90 (size before relaxing)
+ .xt.prop       0x0000000000002940      0x150 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memcpy.o)
+                                        0x15c (size before relaxing)
+ .xt.prop       0x0000000000002a90       0x78 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memmove.o)
+ .xt.prop       0x0000000000002b08       0xcc /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memset.o)
+                                         0xd8 (size before relaxing)
+ .xt.prop       0x0000000000002bd4       0x3c /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-raise.o)
+                                         0x48 (size before relaxing)
+ .xt.prop       0x0000000000002c10       0x30 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(getpid.o)
+ .xt.prop       0x0000000000002c40       0x24 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(kill.o)
+                                         0x30 (size before relaxing)
+ .xt.prop       0x0000000000002c64       0x24 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(_exit.o)
+ .xt.prop       0x0000000000002c88       0x24 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(getreent.o)
+
+.debug_frame    0x0000000000000000      0x1a8
+ .debug_frame   0x0000000000000000       0x28 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libm.a(lib_a-s_ceil.o)
+ .debug_frame   0x0000000000000028       0x28 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libm.a(lib_a-s_floor.o)
+ .debug_frame   0x0000000000000050       0x28 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-abort.o)
+ .debug_frame   0x0000000000000078       0x28 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memcmp.o)
+ .debug_frame   0x00000000000000a0       0x28 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memmove.o)
+ .debug_frame   0x00000000000000c8       0x40 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-raise.o)
+ .debug_frame   0x0000000000000108       0x28 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(getpid.o)
+ .debug_frame   0x0000000000000130       0x28 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(kill.o)
+ .debug_frame   0x0000000000000158       0x28 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(_exit.o)
+ .debug_frame   0x0000000000000180       0x28 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(getreent.o)
+
+.debug_info     0x0000000000000000     0x2bee
+ .debug_info    0x0000000000000000      0x21a /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libm.a(lib_a-s_ceil.o)
+ .debug_info    0x000000000000021a      0x21a /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libm.a(lib_a-s_floor.o)
+ .debug_info    0x0000000000000434       0x2f /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_lshrdi3.o)
+ .debug_info    0x0000000000000463       0x24 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_divsf3.o)
+ .debug_info    0x0000000000000487       0x25 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_addsubdf3.o)
+ .debug_info    0x00000000000004ac       0x25 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_muldf3.o)
+ .debug_info    0x00000000000004d1       0x25 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_divdf3.o)
+ .debug_info    0x00000000000004f6       0x25 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_cmpdf2.o)
+ .debug_info    0x000000000000051b       0x24 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_fixdfsi.o)
+ .debug_info    0x000000000000053f       0x24 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_fixdfdi.o)
+ .debug_info    0x0000000000000563       0x24 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_floatsidf.o)
+ .debug_info    0x0000000000000587       0x25 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_floatdidf.o)
+ .debug_info    0x00000000000005ac       0xd8 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-abort.o)
+ .debug_info    0x0000000000000684      0x12b /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memcmp.o)
+ .debug_info    0x00000000000007af       0x31 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memcpy.o)
+ .debug_info    0x00000000000007e0      0x10f /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memmove.o)
+ .debug_info    0x00000000000008ef       0x2f /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memset.o)
+ .debug_info    0x000000000000091e      0x8e8 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-raise.o)
+ .debug_info    0x0000000000001206      0x85c /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(getpid.o)
+ .debug_info    0x0000000000001a62      0x874 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(kill.o)
+ .debug_info    0x00000000000022d6       0xa4 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(_exit.o)
+ .debug_info    0x000000000000237a      0x83c /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(getreent.o)
+ .debug_info    0x0000000000002bb6       0x38 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(errno.o)
+
+.debug_abbrev   0x0000000000000000      0xd03
+ .debug_abbrev  0x0000000000000000      0x135 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libm.a(lib_a-s_ceil.o)
+ .debug_abbrev  0x0000000000000135      0x135 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libm.a(lib_a-s_floor.o)
+ .debug_abbrev  0x000000000000026a       0x21 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_lshrdi3.o)
+ .debug_abbrev  0x000000000000028b       0x14 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_divsf3.o)
+ .debug_abbrev  0x000000000000029f       0x14 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_addsubdf3.o)
+ .debug_abbrev  0x00000000000002b3       0x14 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_muldf3.o)
+ .debug_abbrev  0x00000000000002c7       0x14 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_divdf3.o)
+ .debug_abbrev  0x00000000000002db       0x14 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_cmpdf2.o)
+ .debug_abbrev  0x00000000000002ef       0x14 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_fixdfsi.o)
+ .debug_abbrev  0x0000000000000303       0x14 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_fixdfdi.o)
+ .debug_abbrev  0x0000000000000317       0x14 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_floatsidf.o)
+ .debug_abbrev  0x000000000000032b       0x14 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_floatdidf.o)
+ .debug_abbrev  0x000000000000033f       0x99 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-abort.o)
+ .debug_abbrev  0x00000000000003d8       0x90 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memcmp.o)
+ .debug_abbrev  0x0000000000000468       0x21 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memcpy.o)
+ .debug_abbrev  0x0000000000000489       0xac /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memmove.o)
+ .debug_abbrev  0x0000000000000535       0x21 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memset.o)
+ .debug_abbrev  0x0000000000000556      0x220 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-raise.o)
+ .debug_abbrev  0x0000000000000776      0x1ae /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(getpid.o)
+ .debug_abbrev  0x0000000000000924      0x1c1 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(kill.o)
+ .debug_abbrev  0x0000000000000ae5       0x69 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(_exit.o)
+ .debug_abbrev  0x0000000000000b4e      0x187 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(getreent.o)
+ .debug_abbrev  0x0000000000000cd5       0x2e /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(errno.o)
+
+.debug_loclists
+                0x0000000000000000      0x4cc
+ .debug_loclists
+                0x0000000000000000      0x108 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libm.a(lib_a-s_ceil.o)
+ .debug_loclists
+                0x0000000000000108      0x138 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libm.a(lib_a-s_floor.o)
+ .debug_loclists
+                0x0000000000000240      0x120 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memcmp.o)
+ .debug_loclists
+                0x0000000000000360       0xec /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memmove.o)
+ .debug_loclists
+                0x000000000000044c       0x30 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-raise.o)
+ .debug_loclists
+                0x000000000000047c       0x1e /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(getpid.o)
+ .debug_loclists
+                0x000000000000049a       0x1e /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(kill.o)
+ .debug_loclists
+                0x00000000000004b8       0x14 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(_exit.o)
+
+.debug_aranges  0x0000000000000000      0x2d8
+ .debug_aranges
+                0x0000000000000000       0x20 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libm.a(lib_a-s_ceil.o)
+ .debug_aranges
+                0x0000000000000020       0x20 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libm.a(lib_a-s_floor.o)
+ .debug_aranges
+                0x0000000000000040       0x20 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_lshrdi3.o)
+ .debug_aranges
+                0x0000000000000060       0x20 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_divsf3.o)
+ .debug_aranges
+                0x0000000000000080       0x20 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_addsubdf3.o)
+ .debug_aranges
+                0x00000000000000a0       0x20 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_muldf3.o)
+ .debug_aranges
+                0x00000000000000c0       0x20 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_divdf3.o)
+ .debug_aranges
+                0x00000000000000e0       0x20 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_cmpdf2.o)
+ .debug_aranges
+                0x0000000000000100       0x20 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_fixdfsi.o)
+ .debug_aranges
+                0x0000000000000120       0x20 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_fixdfdi.o)
+ .debug_aranges
+                0x0000000000000140       0x20 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_floatsidf.o)
+ .debug_aranges
+                0x0000000000000160       0x20 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_floatdidf.o)
+ .debug_aranges
+                0x0000000000000180       0x20 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-abort.o)
+ .debug_aranges
+                0x00000000000001a0       0x20 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memcmp.o)
+ .debug_aranges
+                0x00000000000001c0       0x20 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memcpy.o)
+ .debug_aranges
+                0x00000000000001e0       0x20 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memmove.o)
+ .debug_aranges
+                0x0000000000000200       0x20 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memset.o)
+ .debug_aranges
+                0x0000000000000220       0x20 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-raise.o)
+ .debug_aranges
+                0x0000000000000240       0x20 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(getpid.o)
+ .debug_aranges
+                0x0000000000000260       0x20 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(kill.o)
+ .debug_aranges
+                0x0000000000000280       0x20 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(_exit.o)
+ .debug_aranges
+                0x00000000000002a0       0x20 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(getreent.o)
+ .debug_aranges
+                0x00000000000002c0       0x18 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(errno.o)
+
+.debug_rnglists
+                0x0000000000000000       0x2f
+ .debug_rnglists
+                0x0000000000000000       0x19 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libm.a(lib_a-s_ceil.o)
+ .debug_rnglists
+                0x0000000000000019       0x16 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libm.a(lib_a-s_floor.o)
+
+.debug_line     0x0000000000000000     0x2ab5
+ .debug_line    0x0000000000000000      0x3b0 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libm.a(lib_a-s_ceil.o)
+ .debug_line    0x00000000000003b0      0x393 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libm.a(lib_a-s_floor.o)
+ .debug_line    0x0000000000000743       0x7b /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_lshrdi3.o)
+ .debug_line    0x00000000000007be       0xf9 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_divsf3.o)
+ .debug_line    0x00000000000008b7      0x6b1 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_addsubdf3.o)
+ .debug_line    0x0000000000000f68      0x478 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_muldf3.o)
+ .debug_line    0x00000000000013e0      0x4a1 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_divdf3.o)
+ .debug_line    0x0000000000001881      0x36f /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_cmpdf2.o)
+ .debug_line    0x0000000000001bf0       0xe7 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_fixdfsi.o)
+ .debug_line    0x0000000000001cd7      0x135 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_fixdfdi.o)
+ .debug_line    0x0000000000001e0c       0xc9 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_floatsidf.o)
+ .debug_line    0x0000000000001ed5      0x159 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_floatdidf.o)
+ .debug_line    0x000000000000202e       0x79 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-abort.o)
+ .debug_line    0x00000000000020a7      0x177 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memcmp.o)
+ .debug_line    0x000000000000221e      0x30f /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memcpy.o)
+ .debug_line    0x000000000000252d      0x127 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memmove.o)
+ .debug_line    0x0000000000002654      0x146 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memset.o)
+ .debug_line    0x000000000000279a       0xcc /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-raise.o)
+ .debug_line    0x0000000000002866       0x99 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(getpid.o)
+ .debug_line    0x00000000000028ff       0x99 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(kill.o)
+ .debug_line    0x0000000000002998       0x6a /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(_exit.o)
+ .debug_line    0x0000000000002a02       0x79 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(getreent.o)
+ .debug_line    0x0000000000002a7b       0x3a /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(errno.o)
+
+.debug_str      0x0000000000000000      0x82d
+ .debug_str     0x0000000000000000       0xec /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libm.a(lib_a-s_ceil.o)
+                                        0x132 (size before relaxing)
+ .debug_str     0x00000000000000ec        0x6 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libm.a(lib_a-s_floor.o)
+                                        0x133 (size before relaxing)
+ .debug_str     0x00000000000000f2       0xd4 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_lshrdi3.o)
+ .debug_str     0x00000000000001c6       0x5b /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_divsf3.o)
+                                         0xcb (size before relaxing)
+ .debug_str     0x0000000000000221       0x5b /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_addsubdf3.o)
+                                         0xcb (size before relaxing)
+ .debug_str     0x000000000000027c       0xcb /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_muldf3.o)
+ .debug_str     0x000000000000027c       0xcb /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_divdf3.o)
+ .debug_str     0x000000000000027c       0xcb /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_cmpdf2.o)
+ .debug_str     0x000000000000027c       0xcb /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_fixdfsi.o)
+ .debug_str     0x000000000000027c       0xcb /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_fixdfdi.o)
+ .debug_str     0x000000000000027c       0xcb /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_floatsidf.o)
+ .debug_str     0x000000000000027c       0xcb /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_floatdidf.o)
+ .debug_str     0x000000000000027c       0x12 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-abort.o)
+                                         0xda (size before relaxing)
+ .debug_str     0x000000000000028e        0xe /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memcmp.o)
+                                         0xd6 (size before relaxing)
+ .debug_str     0x000000000000029c       0xd5 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memcpy.o)
+                                         0xe3 (size before relaxing)
+ .debug_str     0x0000000000000371       0x21 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memmove.o)
+                                         0xf0 (size before relaxing)
+ .debug_str     0x0000000000000392       0x67 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memset.o)
+                                         0xe3 (size before relaxing)
+ .debug_str     0x00000000000003f9      0x3ab /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-raise.o)
+                                        0x4af (size before relaxing)
+ .debug_str     0x00000000000007a4       0x4c /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(getpid.o)
+                                        0x4a6 (size before relaxing)
+ .debug_str     0x00000000000007f0       0x1d /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(kill.o)
+                                        0x4a2 (size before relaxing)
+ .debug_str     0x000000000000080d       0xc3 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(_exit.o)
+ .debug_str     0x000000000000080d       0x20 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(getreent.o)
+                                        0x4a2 (size before relaxing)
+ .debug_str     0x000000000000082d       0x33 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(errno.o)
+
+.debug_line_str
+                0x0000000000000000      0xb01
+ .debug_line_str
+                0x0000000000000000      0x227 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libm.a(lib_a-s_ceil.o)
+                                        0x29d (size before relaxing)
+ .debug_line_str
+                0x0000000000000227       0x57 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libm.a(lib_a-s_floor.o)
+                                        0x2a0 (size before relaxing)
+ .debug_line_str
+                0x000000000000027e       0xbc /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_lshrdi3.o)
+ .debug_line_str
+                0x000000000000033a        0xd /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_divsf3.o)
+                                         0xbd (size before relaxing)
+ .debug_line_str
+                0x0000000000000347        0xd /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_addsubdf3.o)
+                                         0xbd (size before relaxing)
+ .debug_line_str
+                0x0000000000000354       0xbd /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_muldf3.o)
+ .debug_line_str
+                0x0000000000000354       0xbd /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_divdf3.o)
+ .debug_line_str
+                0x0000000000000354       0xbd /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_cmpdf2.o)
+ .debug_line_str
+                0x0000000000000354       0xbd /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_fixdfsi.o)
+ .debug_line_str
+                0x0000000000000354       0xbd /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_fixdfdi.o)
+ .debug_line_str
+                0x0000000000000354       0xbd /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_floatsidf.o)
+ .debug_line_str
+                0x0000000000000354       0xbd /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/libgcc.a(_floatdidf.o)
+ .debug_line_str
+                0x0000000000000354      0x17b /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-abort.o)
+                                        0x241 (size before relaxing)
+ .debug_line_str
+                0x00000000000004cf      0x183 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memcmp.o)
+                                        0x24b (size before relaxing)
+ .debug_line_str
+                0x0000000000000652       0xce /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memcpy.o)
+ .debug_line_str
+                0x0000000000000720       0x59 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memmove.o)
+                                        0x24e (size before relaxing)
+ .debug_line_str
+                0x0000000000000779        0x9 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-memset.o)
+                                         0xce (size before relaxing)
+ .debug_line_str
+                0x0000000000000782      0x11b /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libc.a(lib_a-raise.o)
+                                        0x2bc (size before relaxing)
+ .debug_line_str
+                0x000000000000089d      0x10a /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(getpid.o)
+                                        0x25a (size before relaxing)
+ .debug_line_str
+                0x00000000000009a7       0x55 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(kill.o)
+                                        0x254 (size before relaxing)
+ .debug_line_str
+                0x00000000000009fc       0x56 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(_exit.o)
+                                        0x17e (size before relaxing)
+ .debug_line_str
+                0x0000000000000a52       0x59 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(getreent.o)
+                                        0x260 (size before relaxing)
+ .debug_line_str
+                0x0000000000000aab       0x56 /home/mritula_shankar/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/12.2.0/../../../../xtensa-esp32-elf/lib/libnosys.a(errno.o)
+                                        0x17e (size before relaxing)

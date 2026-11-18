@@ -1,0 +1,4 @@
+protocol,transport,port,latency_ms_min,latency_ms_max,throughput_bps_min,throughput_bps_max,packet_bytes_min,packet_bytes_max,loss_pct,origin
+HTTP,TCP,80,2,3,405,792,152,198,0,HARDWARE
+MQTT,TCP,1883,1,1,1184,1272,148,159,0,HARDWARE
+CoAP,UDP,5683,1,1,560,632,70,79,0,HARDWARE

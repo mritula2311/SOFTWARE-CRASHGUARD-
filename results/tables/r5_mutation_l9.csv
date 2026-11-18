@@ -1,0 +1,21 @@
+id,file,description,status
+L901,src/crashguard/r5_l9.py,retraction complement dropped,KILLED
+L902,src/crashguard/r5_l9.py,division by r dropped,KILLED
+L903,src/crashguard/r5_l9.py,pre vs act denominator,KILLED
+L904,src/crashguard/r5_l9.py,pre vs wait denominator,KILLED
+L905,src/crashguard/r5_l9.py,assumptions swapped,KILLED
+L906,src/crashguard/r5_l9.py,pre-alert time loss,SURVIVED
+L907,src/crashguard/r5_l9.py,worst option chosen,KILLED
+L908,src/crashguard/r5_l9.py,standard deviation from the interval,KILLED
+L909,src/crashguard/r5_l9.py,time unit,KILLED
+L910,src/crashguard/r5_l9.py,retraction share not resampled,KILLED
+L911,src/crashguard/r5_l9.py,interval lower limit,KILLED
+L912,src/crashguard/r5_l9.py,seed,KILLED
+L913,src/crashguard/r5_l9.py,pre vs act uses phi instead of 1 - phi,KILLED
+L914,src/crashguard/r5_l9.py,act vs wait scaled,KILLED
+L915,src/crashguard/r5_l9.py,default phi,KILLED
+L916,src/crashguard/r5_l9.py,default phi in the option choice,KILLED
+L917,src/crashguard/r5_l9.py,wait cost,KILLED
+L918,src/crashguard/r5_l9.py,act cost,KILLED
+L919,src/crashguard/r5_l9.py,pre-alert dispatch cost without r,KILLED
+L920,src/crashguard/r5_l9.py,negative gain allowed,SURVIVED

@@ -1,0 +1,54 @@
+id,file,description,status
+D01,src/crashguard/rd_d3.py,slot count rounded down,KILLED
+D02,src/crashguard/rd_d3.py,one slot allowed,KILLED
+D03,src/crashguard/rd_d3.py,epoch cap rounded up,KILLED
+D04,src/crashguard/rd_d3.py,cap floor of two slots removed,KILLED
+D05,src/crashguard/rd_d3.py,hash inputs swapped,KILLED
+D06,src/crashguard/rd_d3.py,hash byte order,KILLED
+D07,src/crashguard/rd_d3.py,active for Severe too,KILLED
+D08,src/crashguard/rd_d3.py,threshold off by one,KILLED
+D09,src/crashguard/rd_d3.py,alternation on odd retries,KILLED
+D10,src/crashguard/rd_d3.py,spreading factor cap removed,KILLED
+D11,src/crashguard/rd_d3.py,guard removed,KILLED
+D12,src/crashguard/rd_d3.py,epoch is one slot,KILLED
+D13,src/crashguard/rd_d3.py,first epoch rounded up,KILLED
+D14,src/crashguard/rd_d3.py,only one epoch examined,KILLED
+D15,src/crashguard/rd_d3.py,slot before t_min accepted,KILLED
+D16,src/crashguard/rd_d3.py,deadline check removed,KILLED
+D17,src/crashguard/rd_d3.py,clock offset dropped,KILLED
+D18,src/crashguard/rd_d3.py,offset ignored in epoch index,SURVIVED
+D19,src/crashguard/rd_d3.py,guard constant zero,KILLED
+D20,src/crashguard/rd_d3.py,epoch cap 50 s,KILLED
+D21,src/crashguard/rd_d3.py,slot index times epoch,KILLED
+D22,src/crashguard/rd_d3.py,boundary slot excluded,KILLED
+W01,src/crashguard/world_sim.py,burst estimate without the vehicle itself,KILLED
+W02,src/crashguard/world_sim.py,slot time not applied,KILLED
+W03,src/crashguard/world_sim.py,D3 always active,KILLED
+W04,src/crashguard/world_sim.py,a vehicle hears itself,SURVIVED
+W05,src/crashguard/world_sim.py,alternation never applied,KILLED
+C01,firmware_rd/cg_rd.c,low data rate optimisation threshold,KILLED
+C02,firmware_rd/cg_rd.c,coding rate,KILLED
+C03,firmware_rd/cg_rd.c,round margin dropped,KILLED
+C04,firmware_rd/cg_rd.c,last tag byte not compared,KILLED
+C05,firmware_rd/cg_rd.c,freshness boundary,KILLED
+C06,firmware_rd/cg_rd.c,ring compares the field only,KILLED
+C07,firmware_rd/cg_rd.c,forgetting skipped,KILLED
+C08,firmware_rd/cg_rd.c,failure and success swapped,KILLED
+C09,firmware_rd/cg_rd.c,loss bin edge,KILLED
+C10,firmware_rd/cg_rd.c,load bin edge,KILLED
+C11,firmware_rd/cg_rd.c,budget rounded up,KILLED
+C12,firmware_rd/cg_rd.c,no-time-left check removed,SURVIVED
+C13,firmware_rd/cg_rd.c,time step rounded up,KILLED
+C14,firmware_rd/cg_rd.c,airtime ignored,KILLED
+C15,firmware_rd/cg_rd.c,defer interval,KILLED
+C16,firmware_rd/cg_rd.c,non-canonical signature accepted,KILLED
+C17,firmware_rd/cg_rd.c,event id not checked,KILLED
+C18,firmware_rd/cg_rd.c,freshness not checked,KILLED
+C19,firmware_rd/cg_rd.c,replay ring not consulted,KILLED
+C20,firmware_rd/cg_rd.c,listing test inverted,KILLED
+C21,firmware_rd/cg_rd.c,length consistency not checked,KILLED
+C22,firmware_rd/cg_rd.c,defer bound removed,KILLED
+C23,firmware_rd/cg_rd.c,D3 epoch cap,KILLED
+C24,firmware_rd/cg_rd.c,D3 alternation parity,KILLED
+C25,firmware_rd/cg_rd.c,D3 deadline check removed,KILLED
+C26,firmware_rd/cg_rd.c,equivalent mutant (no change of behaviour),SURVIVED

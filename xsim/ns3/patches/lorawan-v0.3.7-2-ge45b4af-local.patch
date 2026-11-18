@@ -1,0 +1,183 @@
+diff --git a/model/class-a-end-device-lorawan-mac.cc b/model/class-a-end-device-lorawan-mac.cc
+index a17684e..d37397f 100644
+--- a/model/class-a-end-device-lorawan-mac.cc
++++ b/model/class-a-end-device-lorawan-mac.cc
+@@ -22,6 +22,9 @@ namespace ns3
+ namespace lorawan
+ {
+ 
++extern double g_xsimRx1; // local change for the CrashGuard cross-check (xsim)
++extern double g_xsimRx2;
++
+ NS_LOG_COMPONENT_DEFINE("ClassAEndDeviceLorawanMac");
+ 
+ NS_OBJECT_ENSURE_REGISTERED(ClassAEndDeviceLorawanMac);
+@@ -38,9 +41,9 @@ ClassAEndDeviceLorawanMac::GetTypeId()
+ 
+ ClassAEndDeviceLorawanMac::ClassAEndDeviceLorawanMac()
+     : // LoraWAN defaults
+-      m_receiveDelay1(Seconds(1)),
++      m_receiveDelay1(Seconds(g_xsimRx1)),
+       m_rx1DrOffset(0),
+-      m_receiveDelay2(Seconds(2)),
++      m_receiveDelay2(Seconds(g_xsimRx2)),
+       m_busy(false)
+ {
+     NS_LOG_FUNCTION(this);
+diff --git a/model/end-device-lora-phy.cc b/model/end-device-lora-phy.cc
+index 0fc2080..551dd4a 100644
+--- a/model/end-device-lora-phy.cc
++++ b/model/end-device-lora-phy.cc
+@@ -81,7 +81,7 @@ EndDeviceLoraPhy::~EndDeviceLoraPhy()
+ // Sensitivity (from SX1272 datasheet)
+ // {SF7, SF8, SF9, SF10, SF11, SF12}
+ // These sensitivities are for a bandwidth of 125000 Hz
+-const double EndDeviceLoraPhy::SENSITIVITY[6] = {-124, -127, -130, -133, -135, -137};
++const double EndDeviceLoraPhy::SENSITIVITY[6] = {-123, -126, -129, -132, -134.5, -137};
+ 
+ bool
+ EndDeviceLoraPhy::IsTransmitting() const
+diff --git a/model/gateway-lora-phy.cc b/model/gateway-lora-phy.cc
+index aaf9e68..a1d466c 100644
+--- a/model/gateway-lora-phy.cc
++++ b/model/gateway-lora-phy.cc
+@@ -122,7 +122,9 @@ GatewayLoraPhy::~GatewayLoraPhy()
+ // Sensitivity (from SX1301 datasheet)
+ // {SF7, SF8, SF9, SF10, SF11, SF12}
+ // These sensitivities are for a bandwidth of 125000 Hz
+-const double GatewayLoraPhy::SENSITIVITY[6] = {-130.0, -132.5, -135.0, -137.5, -140.0, -142.5};
++// local change for the CrashGuard cross-check (xsim): dB offsets added to the compiled sensitivity tables at run time (zeros = the values compiled in)
++double g_xsimSensDelta[6] = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
++const double GatewayLoraPhy::SENSITIVITY[6] = {-123.0, -126.0, -129.0, -132.0, -134.5, -137.0};
+ 
+ bool
+ GatewayLoraPhy::IsTransmitting() const
+diff --git a/model/logical-lora-channel-helper.cc b/model/logical-lora-channel-helper.cc
+index f0572e8..937d0bc 100644
+--- a/model/logical-lora-channel-helper.cc
++++ b/model/logical-lora-channel-helper.cc
+@@ -80,7 +80,10 @@ LogicalLoraChannelHelper::GetWaitTime(uint32_t frequencyHz) const
+ {
+     NS_LOG_FUNCTION(this << frequencyHz);
+     auto subBand = GetSubBandFromFrequency(frequencyHz);
+-    NS_ASSERT_MSG(subBand, "Input frequency is out-of-band");
++    if (!subBand)
++    { // local change (session 2, XSIM_BUILD.md item 4): a frequency outside the known sub-bands (the RX2 frequency 869.525 MHz in the ALOHA region) has no duty-cycle wait; the shipped code dereferenced a null pointer here
++        return Time(0);
++    }
+     Time waitTime = subBand->GetNextTransmissionTime() - Now();
+     waitTime = Max(waitTime, Time(0)); // Handle negative values
+     NS_LOG_DEBUG("waitTime=" << waitTime.As(Time::S));
+@@ -100,7 +103,10 @@ LogicalLoraChannelHelper::AddEvent(Time duration, uint32_t frequencyHz)
+     NS_LOG_FUNCTION(this << duration << frequencyHz);
+     NS_LOG_DEBUG("frequency=" << frequencyHz << " Hz, timeOnAir=" << duration.As(Time::S));
+     auto subBand = GetSubBandFromFrequency(frequencyHz);
+-    NS_ASSERT_MSG(subBand, "Input frequency is out-of-band");
++    if (!subBand)
++    { // local change (see GetWaitTime): no duty-cycle bookkeeping outside the known sub-bands
++        return;
++    }
+     Time nextTxTime = Now() + duration / subBand->GetDutyCycle();
+     subBand->SetNextTransmissionTime(nextTxTime);
+     NS_LOG_DEBUG("now=" << Now().As(Time::S) << ", nextTxTime=" << nextTxTime.As(Time::S));
+@@ -118,7 +124,10 @@ LogicalLoraChannelHelper::GetTxPowerForChannel(uint32_t frequencyHz) const
+ {
+     NS_LOG_FUNCTION(this << frequencyHz);
+     auto subBand = GetSubBandFromFrequency(frequencyHz);
+-    NS_ASSERT_MSG(subBand, "Input frequency is out-of-band");
++    if (!subBand)
++    { // local change (see GetWaitTime): 14 dBm, the maximum of the only sub-band of the ALOHA region
++        return 14.0;
++    }
+     return subBand->GetMaxTxPowerDbm();
+ }
+ 
+diff --git a/model/logical-lora-channel.cc b/model/logical-lora-channel.cc
+index 24b9b1b..8e3adb8 100644
+--- a/model/logical-lora-channel.cc
++++ b/model/logical-lora-channel.cc
+@@ -7,6 +7,7 @@
+  */
+ 
+ #include "logical-lora-channel.h"
++#include "ns3/log.h"
+ 
+ namespace ns3
+ {
+diff --git a/model/network-scheduler.cc b/model/network-scheduler.cc
+index 8be9def..39bdb93 100644
+--- a/model/network-scheduler.cc
++++ b/model/network-scheduler.cc
+@@ -18,6 +18,10 @@ namespace ns3
+ namespace lorawan
+ {
+ 
++// local change for the CrashGuard cross-check (xsim): receive-window delays settable at run time; the defaults are the LoRaWAN values
++double g_xsimRx1 = 1.0;
++double g_xsimRx2 = 2.0;
++
+ NS_LOG_COMPONENT_DEFINE("NetworkScheduler");
+ 
+ NS_OBJECT_ENSURE_REGISTERED(NetworkScheduler);
+@@ -72,7 +76,7 @@ NetworkScheduler::OnReceivedPacket(Ptr<const Packet> packet)
+ 
+         // Schedule OnReceiveWindowOpportunity event
+         m_status->GetEndDeviceStatus(packet)->SetReceiveWindowOpportunity(
+-            Simulator::Schedule(Seconds(1),
++            Simulator::Schedule(Seconds(g_xsimRx1),
+                                 &NetworkScheduler::OnReceiveWindowOpportunity,
+                                 this,
+                                 deviceAddress,
+@@ -100,7 +104,7 @@ NetworkScheduler::OnReceiveWindowOpportunity(LoraDeviceAddress deviceAddress, in
+         // Schedule another OnReceiveWindowOpportunity event
+         m_status->GetEndDeviceStatus(deviceAddress)
+             ->SetReceiveWindowOpportunity(
+-                Simulator::Schedule(Seconds(1),
++                Simulator::Schedule(Seconds(g_xsimRx2 - g_xsimRx1),
+                                     &NetworkScheduler::OnReceiveWindowOpportunity,
+                                     this,
+                                     deviceAddress,
+diff --git a/model/simple-end-device-lora-phy.cc b/model/simple-end-device-lora-phy.cc
+index a27f6a0..3a627b2 100644
+--- a/model/simple-end-device-lora-phy.cc
++++ b/model/simple-end-device-lora-phy.cc
+@@ -19,6 +19,8 @@ namespace ns3
+ namespace lorawan
+ {
+ 
++extern double g_xsimSensDelta[6]; // local change (xsim)
++
+ NS_LOG_COMPONENT_DEFINE("SimpleEndDeviceLoraPhy");
+ 
+ NS_OBJECT_ENSURE_REGISTERED(SimpleEndDeviceLoraPhy);
+@@ -165,7 +167,7 @@ SimpleEndDeviceLoraPhy::StartReceive(Ptr<Packet> packet,
+         return;
+     }
+     // Check Sensitivity
+-    else if (double sens = EndDeviceLoraPhy::SENSITIVITY[spreadingFactor - 7]; rxPowerDbm < sens)
++    else if (double sens = EndDeviceLoraPhy::SENSITIVITY[spreadingFactor - 7] + g_xsimSensDelta[spreadingFactor - 7]; rxPowerDbm < sens)
+     {
+         NS_LOG_INFO("Dropping packet reception of packet with SF"
+                     << unsigned(spreadingFactor) << " because under the sensitivity of " << sens
+diff --git a/model/simple-gateway-lora-phy.cc b/model/simple-gateway-lora-phy.cc
+index 52d8139..5f93c77 100644
+--- a/model/simple-gateway-lora-phy.cc
++++ b/model/simple-gateway-lora-phy.cc
+@@ -19,6 +19,8 @@ namespace ns3
+ namespace lorawan
+ {
+ 
++extern double g_xsimSensDelta[6]; // local change (xsim)
++
+ NS_LOG_COMPONENT_DEFINE("SimpleGatewayLoraPhy");
+ 
+ NS_OBJECT_ENSURE_REGISTERED(SimpleGatewayLoraPhy);
+@@ -127,7 +129,7 @@ SimpleGatewayLoraPhy::StartReceive(Ptr<Packet> packet,
+         return;
+     }
+     // See whether the reception power is above or below the sensitivity for that spreading factor
+-    else if (double sens = SimpleGatewayLoraPhy::SENSITIVITY[spreadingFactor - 7];
++    else if (double sens = SimpleGatewayLoraPhy::SENSITIVITY[spreadingFactor - 7] + g_xsimSensDelta[spreadingFactor - 7];
+              rxPowerDbm < sens)
+     {
+         // Packet arrived below sensitivity

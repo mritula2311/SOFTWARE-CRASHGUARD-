@@ -1,0 +1,12 @@
+{
+ "chosen": 1,
+ "params": {
+  "w_min": 5.0,
+  "v_min": 5.0,
+  "a_long": 0.3,
+  "theta": 0.0,
+  "s0": 1.0
+ },
+ "median_abs_agreement": 0.4340363784505129,
+ "rule": "V16 15.7: highest min criterion sensitivity minus 10 times the false-detection rate; ties go to the lowest iteration index (the order of the list, with the default first)"
+}

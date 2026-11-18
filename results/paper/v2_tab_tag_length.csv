@@ -1,0 +1,6 @@
+Tag bytes,log2 expected forgery attempts,log2 attempts for 1e-6 (SF7),Frames per hour at 1% duty (SF9),"Expected years to one forgery (SF9, duty-capped)","Critical reach within 10 s (P2, 10 burst cells)",Origin,results.json key
+4,31,12.068,70,3500.0,0.61602,ANALYTICAL (forgery) and SIMULATED (reach),v2.e.forgery.t4.*; v2.e.cells.P2.t4.reach10_critical
+6,47,28.068,67,239600000.0,0.61371,ANALYTICAL (forgery) and SIMULATED (reach),v2.e.forgery.t6.*; v2.e.cells.P2.t6.reach10_critical
+8,63,44.068,67,15700000000000.0,0.60696,ANALYTICAL (forgery) and SIMULATED (reach),v2.e.forgery.t8.*; v2.e.cells.P2.t8.reach10_critical
+12,95,76.068,64,7.061e+22,0.59619,ANALYTICAL (forgery) and SIMULATED (reach),v2.e.forgery.t12.*; v2.e.cells.P2.t12.reach10_critical
+16,127,108.068,62,3.131e+32,0.58858,ANALYTICAL (forgery) and SIMULATED (reach),v2.e.forgery.t16.*; v2.e.cells.P2.t16.reach10_critical

@@ -1,0 +1,109 @@
+/*
+ * Car-side identifier model (paper session, V13 section 4). Only the car's rules of crash_alert_fresh.spthy are kept: the car numbers its alerts, may reboot and is up again in a later epoch.
+ * The base and the adversary do not appear: whether an alert id is reused after a car reboot depends on the car alone.
+ *   -D=BOOT : design variant, the id is <boot, epoch, seq> and the boot value is fresh per boot (assumption: one non-volatile write per boot succeeds and the counter never wraps).
+ *   without : the frozen design, the id is <epoch, seq>.
+ */
+theory CrashAlertCarId
+begin
+
+rule Init:
+  [ Fr(~e0) ]
+  --[ Init() ]->
+  [ Clock(~e0), !Epoch(~e0), !Succ('s1', 's2'), !Succ('s2', 's3') ]
+
+rule Tick:
+  [ Clock(e), Fr(~en) ]
+  --[ Tick(e, ~en) ]->
+  [ Clock(~en), !Epoch(~en), !Next(e, ~en) ]
+
+#ifdef BOOT
+rule CarStart:
+  [ !Epoch(e), Fr(~b) ]
+  --[ CarStart($v), Now(e) ]->
+  [ CarSeq($v, ~b, e, 's1', 'ts') ]
+
+rule CarSendNew:
+  [ !Epoch(e), CarSeq($v, b, e, n, 'ts') ]
+  --[ CarSend($v, <b, e, n>), Now(e) ]->
+  [ CarSeq($v, b, e, n, 'sent') ]
+
+rule CarSendNext:
+  [ !Epoch(e), CarSeq($v, b, e, n, 'sent'), !Succ(n, m) ]
+  --[ CarSend($v, <b, e, m>), Now(e) ]->
+  [ CarSeq($v, b, e, m, 'sent') ]
+
+rule CarNewEpoch:
+  [ CarSeq($v, b, e0, n, st), !Next(e0, e) ]
+  --[ CarNewEpoch($v), Now(e) ]->
+  [ CarSeq($v, b, e, 's1', 'ts') ]
+
+rule CarReboot:
+  [ !Epoch(e), CarSeq($v, b0, e0, n, st) ]
+  --[ CarReboot($v), Now(e) ]->
+  [ CarDown($v, e) ]
+
+rule CarDownWait:
+  [ CarDown($v, e0), !Next(e0, e) ]
+  --[ Now(e) ]->
+  [ CarDown($v, e) ]
+
+rule CarBoot:
+  [ CarDown($v, e0), !Next(e0, e), Fr(~b) ]
+  --[ CarBootTS($v), Now(e) ]->
+  [ CarSeq($v, ~b, e, 's1', 'ts') ]
+#else
+rule CarStart:
+  [ !Epoch(e) ]
+  --[ CarStart($v), Now(e) ]->
+  [ CarSeq($v, e, 's1', 'ts') ]
+
+rule CarSendNew:
+  [ !Epoch(e), CarSeq($v, e, n, 'ts') ]
+  --[ CarSend($v, <e, n>), Now(e) ]->
+  [ CarSeq($v, e, n, 'sent') ]
+
+rule CarSendNext:
+  [ !Epoch(e), CarSeq($v, e, n, 'sent'), !Succ(n, m) ]
+  --[ CarSend($v, <e, m>), Now(e) ]->
+  [ CarSeq($v, e, m, 'sent') ]
+
+rule CarNewEpoch:
+  [ CarSeq($v, e0, n, st), !Next(e0, e) ]
+  --[ CarNewEpoch($v), Now(e) ]->
+  [ CarSeq($v, e, 's1', 'ts') ]
+
+rule CarReboot:
+  [ !Epoch(e), CarSeq($v, e0, n, st) ]
+  --[ CarReboot($v), Now(e) ]->
+  [ CarDown($v, e) ]
+
+rule CarDownWait:
+  [ CarDown($v, e0), !Next(e0, e) ]
+  --[ Now(e) ]->
+  [ CarDown($v, e) ]
+
+rule CarBoot:
+  [ CarDown($v, e0), !Next(e0, e) ]
+  --[ CarBootTS($v), Now(e) ]->
+  [ CarSeq($v, e, 's1', 'ts') ]
+#endif
+
+restriction CurrentEpoch:
+  "All e #i. Now(e)@i ==> not (Ex en #t. Tick(e, en)@t & #t < #i)"
+
+restriction OneInit:
+  "All #i #j. Init()@i & Init()@j ==> #i = #j"
+
+restriction OneCarPerId:
+  "All v #i #j. CarStart(v)@i & CarStart(v)@j ==> #i = #j"
+
+lemma executable_after_reboot:
+  exists-trace
+  "Ex v f #r #i. CarReboot(v)@r & CarSend(v, f)@i & #r < #i"
+
+/* L5 an alert id sent before a car reboot is never sent again after it */
+lemma L5_car_alert_ids_unique:
+  "All v f #i #r #j. CarSend(v, f)@i & CarReboot(v)@r & CarSend(v, f)@j & #i < #r & #r < #j ==> F"
+
+end

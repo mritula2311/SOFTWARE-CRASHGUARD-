@@ -1,0 +1,11 @@
+id,case,category,expected,observed,match,note
+X01,Flash with the 16-bit counter wrapped to 0 after counter 65535,counter rollover,accept_flash,accept_flash,True,"reconstructed as 65536, above the last accepted flash"
+X02,"Replay of an old flash (true counter 5) after the counter passed 65,536",counter rollover,reject_counter,reject_counter,True,reconstructed value is not above the last accepted flash
+X03,"Random 8-byte tags on a valid alert body (200,000 tries, bounded budget)",tag forgery,0 accepted,0 accepted,True,success probability per try 2^-64 (ANALYTICAL); expected successes about 1.1e-14
+X04a,"Valid ACK arrives late, after the car retried, while it still waits for that alert",delayed delivery,accept,accept,True,
+X04b,Valid ACK of alert 1 arrives after the car moved on to alert 2,delayed delivery,reject,reject,True,
+X05,The same CANCEL delivered twice,CANCEL,"cancelled,cancelled","cancelled,cancelled",True,idempotent: the second copy changes nothing
+X06,CANCEL arrives before the alert it cancels,CANCEL,reject_unknown_event; event not cancelled,reject_unknown_event; event not cancelled,True,KNOWN WEAKNESS documented by the model check: the early CANCEL is refused and the late alert stays active
+X07,Flash of a second node whose short id equals the first node's (counter 10 against 50),identity,reject_counter,reject_counter,True,KNOWN LIMIT: the 16-bit short id must be unique in the fleet; a collision refuses the second node
+X08,A 14-byte flash given to the alert handler and a 97-byte alert given to the flash handler,type confusion,"reject_length,reject_length","reject_length,reject_length",True,
+X09,A valid ACK of the flash (event id 0xFFFFFFFF) presented to a node waiting for the alert of event 1,ACK,reject,reject,True,

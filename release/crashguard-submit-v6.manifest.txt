@@ -1,0 +1,14 @@
+commit 30af607706c7b537f394f21d3d92e021346cd655
+ref round7c
+sha256 2239031ee458ec1c8d3bb6c46cb31a367068c21ccfb538e5e2f1a39f51efc947
+files 1891
+files in supplementary_full 48
+size 38531177
+files of the submit-v5 release absent now: 0
+files added since the submit-v5 release: 16
+required content missing: []
+excluded content present: []
+compiled supplement PDF: no (NOT_RUN: no TeX distribution)
+note: release/*.zip files of earlier rounds are tracked in git at their tags; this archive is not tracked
+
+absent now (submit-v5 release minus this release):

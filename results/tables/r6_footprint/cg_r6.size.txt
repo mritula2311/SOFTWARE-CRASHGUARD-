@@ -1,0 +1,25 @@
+build/r6fp/cg_r6.o  :
+section                     size   addr
+.literal.cg_micro_tag         12      0
+.literal.cg_micro_pack         4      0
+.literal.cg_micro_verify       4      0
+.literal.cg_forest            32      0
+.text                          0      0
+.data                          0      0
+.bss                           0      0
+.text.cg_micro_tag            87      0
+.text.cg_micro_pack           38      0
+.text.cg_micro_verify         67      0
+.text.cg_forest              102      0
+.rodata.cg_root               30      0
+.rodata.cg_right            3498      0
+.rodata.cg_left             3498      0
+.rodata.cg_thr              6996      0
+.rodata.cg_feat             1749      0
+.comment                      48      0
+.xtensa.info                  56      0
+.xt.lit                       32      0
+.xt.prop                     312      0
+Total                      16565
+
+

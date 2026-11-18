@@ -1,0 +1,271 @@
+lemma: executable_prov_repeat
+command: tamarin-prover  --prove=executable_prov_repeat formal/crash_alert_prov.spthy
+maude tool: 'maude'
+ checking version: 3.5.1. OK.
+ checking installation: OK.
+[Theory CrashAlertProv] Theory loaded
+[Theory CrashAlertProv] Theory translated
+[Theory CrashAlertProv] Derivation checks started
+[Theory CrashAlertProv] Derivation checks ended
+[Theory CrashAlertProv] Theory closed
+[Saturating Sources] Step 1 (Max 5)
+[Saturating Sources] Done
+theory CrashAlertProv
+
+begin
+
+// Function signature and definition of the equational theory E
+
+functions: fst/1, h/1, kdf/2, mac/2, pair/2, snd/1
+equations: fst(<x.1, x.2>) = x.1, snd(<x.1, x.2>) = x.2
+
+rule (modulo E) BaseInit:
+   [ Fr( ~km ) ] --[ BaseInit( ) ]-> [ !BaseMaster( ~km ) ]
+
+  /* has exactly the trivial AC variant */
+
+rule (modulo E) RevealNode:
+   [ !BaseMaster( km ) ] --[ RevealNode( $w ) ]-> [ Out( kdf(km, $w) ) ]
+
+  /* has exactly the trivial AC variant */
+
+rule (modulo E) CarSendProv:
+   [ Fr( ~f ), !BaseMaster( km ), In( $pos ) ]
+  --[ CarSendProv( $v, ~f, $pos ) ]->
+   [
+   CarWaitP( $v, ~f ),
+   Out( <'PROV', $v, ~f, $pos, mac(kdf(km, $v), <'P', $v, ~f, $pos>)> )
+   ]
+
+  /* has exactly the trivial AC variant */
+
+rule (modulo E) CarSendAlert:
+   [ Fr( ~f ), !BaseMaster( km ), In( $cls ) ]
+  --[ CarSendAlert( $v, ~f, $cls ) ]->
+   [
+   CarWaitA( $v, ~f ),
+   Out( <'ALERT', $v, ~f, $cls, mac(kdf(km, $v), <'A', $v, ~f, $cls>)> )
+   ]
+
+  /* has exactly the trivial AC variant */
+
+rule (modulo E) CarStopProv:
+   [
+   CarWaitP( $v, f ), !BaseMaster( km ),
+   In( <'ACK', $v, f, mac(kdf(km, $v), <'ACK', $v, f>)> )
+   ]
+  --[ CarStopProv( $v, f ) ]->
+   [ ]
+
+  /* has exactly the trivial AC variant */
+
+rule (modulo E) CarStopAlert:
+   [
+   CarWaitA( $v, f ), !BaseMaster( km ),
+   In( <'ACK', $v, f, mac(kdf(km, $v), <'ACK', $v, f>)> )
+   ]
+  --[ CarStopAlert( $v, f ) ]->
+   [ ]
+
+  /* has exactly the trivial AC variant */
+
+rule (modulo E) BaseAcceptProv:
+   [
+   !BaseMaster( km ),
+   In( <'PROV', $v, f, $pos, mac(kdf(km, $v), <'P', $v, f, $pos>)> )
+   ]
+  --[ BaseAcceptProv( $v, f, $pos ) ]->
+   [ Out( <'ACK', $v, f, mac(kdf(km, $v), <'ACK', $v, f>)> ) ]
+
+  /* has exactly the trivial AC variant */
+
+rule (modulo E) BaseAcceptAlert:
+   [
+   !BaseMaster( km ),
+   In( <'ALERT', $v, f, $cls, mac(kdf(km, $v), <'A', $v, f, $cls>)> )
+   ]
+  --[ BaseAcceptAlert( $v, f, $cls ) ]->
+   [ Out( <'ACK', $v, f, mac(kdf(km, $v), <'ACK', $v, f>)> ) ]
+
+  /* has exactly the trivial AC variant */
+
+restriction OneBase:
+  "∀ #i #j. ((BaseInit( ) @ #i) ∧ (BaseInit( ) @ #j)) ⇒ (#i = #j)"
+  // safety formula
+
+  /*
+  expanded formula:
+  "∀ #i #j. ((BaseInit( ) @ #i) ∧ (BaseInit( ) @ #j)) ⇒ (#i = #j)"
+  */
+
+lemma executable_prov:
+  exists-trace
+  "∃ v f pos #i #j #k.
+    ((((CarSendProv( v, f, pos ) @ #i) ∧
+       (BaseAcceptProv( v, f, pos ) @ #j)) ∧
+      (CarStopProv( v, f ) @ #k)) ∧
+     (#i < #j)) ∧
+    (#j < #k)"
+/*
+guarded formula characterizing all satisfying traces:
+"∃ v f pos #i #j #k.
+  (CarSendProv( v, f, pos ) @ #i) ∧
+  (BaseAcceptProv( v, f, pos ) @ #j) ∧
+  (CarStopProv( v, f ) @ #k)
+ ∧
+  (#i < #j) ∧ (#j < #k)"
+*/
+by sorry
+
+lemma executable_prov_repeat:
+  exists-trace
+  "∃ v f pos #i #j #k.
+    ((((CarSendProv( v, f, pos ) @ #i) ∧
+       (BaseAcceptProv( v, f, pos ) @ #j)) ∧
+      (BaseAcceptProv( v, f, pos ) @ #k)) ∧
+     (#i < #j)) ∧
+    (#j < #k)"
+/*
+guarded formula characterizing all satisfying traces:
+"∃ v f pos #i #j #k.
+  (CarSendProv( v, f, pos ) @ #i) ∧
+  (BaseAcceptProv( v, f, pos ) @ #j) ∧
+  (BaseAcceptProv( v, f, pos ) @ #k)
+ ∧
+  (#i < #j) ∧ (#j < #k)"
+*/
+simplify
+solve( !BaseMaster( km ) ▶₁ #i )
+  case BaseInit
+  solve( !BaseMaster( km.1 ) ▶₀ #j )
+    case BaseInit
+    solve( !BaseMaster( km.1 ) ▶₀ #k )
+      case BaseInit
+      solve( !KU( ~f ) @ #vk.7 )
+        case CarSendProv
+        solve( !KU( mac(kdf(~km, $v), <'P', $v, ~f, $pos>) ) @ #vk.8 )
+          case CarSendProv
+          SOLVED // trace found
+        qed
+      qed
+    qed
+  qed
+qed
+
+lemma executable_alert:
+  exists-trace
+  "∃ v f cls #i #j #k.
+    ((((CarSendAlert( v, f, cls ) @ #i) ∧
+       (BaseAcceptAlert( v, f, cls ) @ #j)) ∧
+      (CarStopAlert( v, f ) @ #k)) ∧
+     (#i < #j)) ∧
+    (#j < #k)"
+/*
+guarded formula characterizing all satisfying traces:
+"∃ v f cls #i #j #k.
+  (CarSendAlert( v, f, cls ) @ #i) ∧
+  (BaseAcceptAlert( v, f, cls ) @ #j) ∧
+  (CarStopAlert( v, f ) @ #k)
+ ∧
+  (#i < #j) ∧ (#j < #k)"
+*/
+by sorry
+
+lemma P1_prov_authenticity:
+  all-traces
+  "∀ v f pos #i.
+    (BaseAcceptProv( v, f, pos ) @ #i) ⇒
+    ((∃ #j. (CarSendProv( v, f, pos ) @ #j) ∧ (#j < #i)) ∨
+     (∃ #r. RevealNode( v ) @ #r))"
+/*
+guarded formula characterizing all counter-examples:
+"∃ v f pos #i.
+  (BaseAcceptProv( v, f, pos ) @ #i)
+ ∧
+  (∀ #j. (CarSendProv( v, f, pos ) @ #j) ⇒ ¬(#j < #i)) ∧
+  (∀ #r. (RevealNode( v ) @ #r) ⇒ ⊥)"
+*/
+by sorry
+
+lemma P2_ack_authenticity:
+  all-traces
+  "∀ v f #i.
+    (CarStopProv( v, f ) @ #i) ⇒
+    (((∃ pos #j. (BaseAcceptProv( v, f, pos ) @ #j) ∧ (#j < #i)) ∨
+      (∃ cls #j. (BaseAcceptAlert( v, f, cls ) @ #j) ∧ (#j < #i))) ∨
+     (∃ #r. RevealNode( v ) @ #r))"
+/*
+guarded formula characterizing all counter-examples:
+"∃ v f #i.
+  (CarStopProv( v, f ) @ #i)
+ ∧
+  (∀ pos #j. (BaseAcceptProv( v, f, pos ) @ #j) ⇒ ¬(#j < #i)) ∧
+  (∀ cls #j. (BaseAcceptAlert( v, f, cls ) @ #j) ⇒ ¬(#j < #i)) ∧
+  (∀ #r. (RevealNode( v ) @ #r) ⇒ ⊥)"
+*/
+by sorry
+
+lemma P3_no_cross_vehicle_suppression:
+  all-traces
+  "∀ v w f #i #r.
+    ((((CarStopProv( v, f ) @ #i) ∧ (RevealNode( w ) @ #r)) ∧ (¬(v = w))) ∧
+     (¬(∃ #r2. RevealNode( v ) @ #r2))) ⇒
+    ((∃ pos #j. (BaseAcceptProv( v, f, pos ) @ #j) ∧ (#j < #i)) ∨
+     (∃ cls #j. (BaseAcceptAlert( v, f, cls ) @ #j) ∧ (#j < #i)))"
+/*
+guarded formula characterizing all counter-examples:
+"∃ v w f #i #r.
+  (CarStopProv( v, f ) @ #i) ∧ (RevealNode( w ) @ #r)
+ ∧
+  (¬(v = w)) ∧
+  (∀ #r2. (RevealNode( v ) @ #r2) ⇒ ⊥) ∧
+  (∀ pos #j. (BaseAcceptProv( v, f, pos ) @ #j) ⇒ ¬(#j < #i)) ∧
+  (∀ cls #j. (BaseAcceptAlert( v, f, cls ) @ #j) ⇒ ¬(#j < #i))"
+*/
+by sorry
+
+lemma P4_no_type_confusion_alert:
+  all-traces
+  "∀ v f cls #i.
+    (BaseAcceptAlert( v, f, cls ) @ #i) ⇒
+    ((∃ #j. (CarSendAlert( v, f, cls ) @ #j) ∧ (#j < #i)) ∨
+     (∃ #r. RevealNode( v ) @ #r))"
+/*
+guarded formula characterizing all counter-examples:
+"∃ v f cls #i.
+  (BaseAcceptAlert( v, f, cls ) @ #i)
+ ∧
+  (∀ #j. (CarSendAlert( v, f, cls ) @ #j) ⇒ ¬(#j < #i)) ∧
+  (∀ #r. (RevealNode( v ) @ #r) ⇒ ⊥)"
+*/
+by sorry
+
+/* All wellformedness checks were successful. */
+
+/*
+Generated from:
+Tamarin version 1.12.0
+Maude version 3.5.1
+Git revision: 82780bbaf3328a45f624ddb41e51bf75425f851c (with uncommited changes), branch: master
+Compiled at: 2026-03-07 14:22:39.174278293 UTC
+*/
+
+end
+
+==============================================================================
+summary of summaries:
+
+analyzed: formal/crash_alert_prov.spthy
+
+  processing time: 0.35s
+  
+  executable_prov (exists-trace): analysis incomplete (1 steps)
+  executable_prov_repeat (exists-trace): verified (7 steps)
+  executable_alert (exists-trace): analysis incomplete (1 steps)
+  P1_prov_authenticity (all-traces): analysis incomplete (1 steps)
+  P2_ack_authenticity (all-traces): analysis incomplete (1 steps)
+  P3_no_cross_vehicle_suppression (all-traces): analysis incomplete (1 steps)
+  P4_no_type_confusion_alert (all-traces): analysis incomplete (1 steps)
+
+==============================================================================
+exit code: 0 ; wall time 0 s

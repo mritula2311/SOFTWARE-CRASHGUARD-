@@ -1,0 +1,13 @@
+lemma: L5_car_alert_ids_unique
+command: tamarin-prover  --prove=L5_car_alert_ids_unique formal/crash_alert_fresh_bootctr.spthy +RTS -N1 -M5g -RTS ; time limit 950 s
+maude tool: 'maude'
+ checking version: 3.5.1. OK.
+ checking installation: OK.
+[Theory CrashAlertFreshBootCtr] Theory loaded
+[Theory CrashAlertFreshBootCtr] Theory translated
+[Theory CrashAlertFreshBootCtr] Derivation checks started
+[Theory CrashAlertFreshBootCtr] Derivation checks ended
+[Theory CrashAlertFreshBootCtr] Theory closed
+[Saturating Sources] Step 1 (Max 5)
+[Saturating Sources] Done
+exit code: 124 ; wall time 951 s ; peak memory 5578 MB

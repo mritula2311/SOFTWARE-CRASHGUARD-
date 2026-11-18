@@ -1,0 +1,5 @@
+sev,window_fill_s,compute_s,cancel_s,alert_airtime_s,base_processing_s,ack_airtime_s
+low,1.8,0.05,10.0,0.169216,0.1,0.061696
+moderate,1.8,0.05,8.0,0.169216,0.1,0.061696
+severe,1.8,0.05,6.0,0.169216,0.1,0.061696
+critical,1.8,0.05,5.0,0.169216,0.1,0.061696

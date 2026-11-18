@@ -1,0 +1,4 @@
+Thresholds and leaves,AP,Recall at 1% false alarms,"Flash, existing layout (KB)","Flash, implicit left child (KB, exploratory)",Origin,results.json key
+float32,"0.9392 [0.9329, 0.9454]","0.6550 [0.6416, 0.6671]",56.4,43.9,MEASURED_SOFTWARE; flash ANALYTICAL,x.x1.dedup.float.*; x.x1.flash.*
+16-bit,"0.9392 [0.9329, 0.9454]","0.6552 [0.6417, 0.6671]",43.9,31.3,MEASURED_SOFTWARE; flash ANALYTICAL,x.x1.dedup.q16.*; x.x1.flash.*
+8-bit,"0.9386 [0.9324, 0.9448]","0.6520 [0.6387, 0.6636]",37.6,25.1,MEASURED_SOFTWARE; flash ANALYTICAL,x.x1.dedup.q8.*; x.x1.flash.*

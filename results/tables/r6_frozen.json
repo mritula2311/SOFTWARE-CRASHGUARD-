@@ -1,0 +1,45 @@
+{
+ "r1": {
+  "files": {
+   "data/processed/r3_ns3_events.txt": "cc905ce654275fb8267312a721d58bf8ad715cff37f5b7fb3f1f472d7bccce04",
+   "results/tables/r6_micro_dev_log.json": "4c1f7add60ae12345227bf1be43f8d00eb84aa4a385879d89dbadca2c1f7c69c",
+   "src/crashguard/pp_r3_ns3.py": "9e37a4807055d5ecaac1f41bbfd22aa44b1e9de1a86aa8a9bf2c607f67e189f7",
+   "src/crashguard/r3_t1.py": "25449b85651949cbe30fa9a033fc9d6418f1455976b6ef810d8cfb7fef48e1c6",
+   "src/crashguard/r6_common.py": "c41a9af5af14c3b5020fedc9dd9dfeba756911c877d13e1cbc915c5fa736219f",
+   "src/crashguard/r6_micro.py": "903b694ee9db757562d8a05f6b8016af8d7a096592e2257e02440db549b828ab",
+   "xsim/ns3/xsim_alert.cc": "720e428d6aea99c5dc64b2933c158891c1c5be25d2b766ea7cb6e736e7f79cf2"
+  },
+  "params": {
+   "iteration": 4,
+   "ns3_frame_bytes": 13,
+   "pend_s": 30.0
+  },
+  "params_sha256": "7d028cd3b342f916cecd48907f718a7f2676323d6ff3c4af43d3ef51f72553f5"
+ },
+ "r2": {
+  "files": {
+   "data/processed/r5_det_seed42.pkl": "728eeea9b5394e7dc14de8aced93a4a68f9e4f8508d252eb4b7763a108b033de",
+   "src/crashguard/config.py": "b7a72fc7a5d50ea7e186d15aaa4ef5826b70cad5d1c2b9dcfedd86269fa24af9",
+   "src/crashguard/detector_extra.py": "d955612aa8b27d9338eaec125fca17bc8717b9f1fe5412b7d887322a2200fa2e",
+   "src/crashguard/early.py": "5febd62fc1d24e478cb515e3ce4b8e7d0dbd573fb77ba62e6f85a3cb6bb0abbb",
+   "src/crashguard/r5_det.py": "640fc626a1484b06d37081b9646eaf89a242f15021645ab1bb13c2647db15987",
+   "src/crashguard/r6_common.py": "c41a9af5af14c3b5020fedc9dd9dfeba756911c877d13e1cbc915c5fa736219f",
+   "src/crashguard/r6_seq.py": "c8461967a6127673ffe36431f533ad0e84b792da1ac6ab078387363945ee5a69",
+   "src/crashguard/windows_cache.py": "8191c34e287c27718fc21e56e8b6fbb951c610fd9e55c17d3eeb56a5b8ffb528"
+  },
+  "params": {
+   "A": 1.0999999999999999,
+   "B": 0.25,
+   "a_max": 12.0,
+   "a_step": 0.1,
+   "b_min": -8.0,
+   "b_step": 0.25,
+   "fa_tol": 0.001,
+   "iteration": 4,
+   "nbins": 40,
+   "paired": true,
+   "smooth": 0.5
+  },
+  "params_sha256": "91ef969958c0cb260a6c16f90e11efb4671f6e477f04aa891715e8f3abadcbcc"
+ }
+}

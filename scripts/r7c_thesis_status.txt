@@ -1,0 +1,1 @@
+read (Chapter VII sections VII.2 and VII.3.1 of the open-access PDF, `LITERATURE_FINAL_CHECK.md` section 3): the attack drains the gateway's downlink duty through ACKs to rogue nodes and the countermeasure is LoRaLOFT detection with an ACK denylist; the rest of the thesis was not read

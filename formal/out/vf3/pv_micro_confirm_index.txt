@@ -1,0 +1,260 @@
+command: /opt/pv/proverif2.05/proverif formal/proverif/vf3_micro_confirm_index.pv
+Process 0 (that is, the initial process):
+{1}new master: bitstring;
+(
+    {2}!
+    {3}let master_1: bitstring = master in
+    {4}in(c, v: bitstring);
+    {5}event Revealed(v);
+    {6}out(c, kdf(master_1,v))
+) | (
+    {7}!
+    {8}let master_2: bitstring = master in
+    {9}in(c, (v_1: bitstring,x: bitstring));
+    {10}new id: bitstring;
+    {11}let t: bitstring = mac(kdf(master_2,v_1),(tagF,v_1,id)) in
+    {12}event CarSentFlash(v_1,t);
+    {13}out(c, (mFlash,v_1,id,t));
+    {14}in(c, ix: bitstring);
+    (
+        {15}event CarSentMicro(v_1,t,x);
+        {16}out(c, (mMicro,ix,x,mac(kdf(master_2,v_1),(tagM,t,x))))
+    ) | (
+        {17}event CarSentCancel(v_1,t);
+        {18}out(c, (mCancel,ix,mac(kdf(master_2,v_1),(tagX,t))))
+    )
+) | (
+    {19}!
+    {20}let master_3: bitstring = master in
+    {21}in(c, (=mFlash,v_2: bitstring,id_1: bitstring,t_1: bitstring));
+    {22}if (t_1 = mac(kdf(master_3,v_2),(tagF,v_2,id_1))) then
+    {23}event BaseAcceptFlash(v_2,t_1);
+    {24}new ix_1: bitstring;
+    {25}insert pending(ix_1,v_2,t_1);
+    {26}out(c, ix_1)
+) | (
+    {27}!
+    {28}let master_4: bitstring = master in
+    {29}in(c, (=mMicro,ix_2: bitstring,x_1: bitstring,m: bitstring));
+    {32}get pending(=ix_2,v_3: bitstring,t_2: bitstring) in
+    {30}if (m = mac(kdf(master_4,v_3),(tagM,t_2,x_1))) then
+    {31}event BaseAcceptMicro(v_3,t_2,x_1)
+) | (
+    {33}!
+    {34}let master_5: bitstring = master in
+    {35}in(c, (=mCancel,ix_3: bitstring,m_1: bitstring));
+    {38}get pending(=ix_3,v_4: bitstring,t_3: bitstring) in
+    {36}if (m_1 = mac(kdf(master_5,v_4),(tagX,t_3))) then
+    {37}event BaseAcceptCancel(v_4,t_3)
+)
+
+--  Process 1 (that is, process 0, with let moved downwards):
+{1}new master: bitstring;
+(
+    {2}!
+    {4}in(c, v: bitstring);
+    {5}event Revealed(v);
+    {3}let master_1: bitstring = master in
+    {6}out(c, kdf(master_1,v))
+) | (
+    {7}!
+    {9}in(c, (v_1: bitstring,x: bitstring));
+    {10}new id: bitstring;
+    {8}let master_2: bitstring = master in
+    {11}let t: bitstring = mac(kdf(master_2,v_1),(tagF,v_1,id)) in
+    {12}event CarSentFlash(v_1,t);
+    {13}out(c, (mFlash,v_1,id,t));
+    {14}in(c, ix: bitstring);
+    (
+        {15}event CarSentMicro(v_1,t,x);
+        {16}out(c, (mMicro,ix,x,mac(kdf(master_2,v_1),(tagM,t,x))))
+    ) | (
+        {17}event CarSentCancel(v_1,t);
+        {18}out(c, (mCancel,ix,mac(kdf(master_2,v_1),(tagX,t))))
+    )
+) | (
+    {19}!
+    {21}in(c, (=mFlash,v_2: bitstring,id_1: bitstring,t_1: bitstring));
+    {20}let master_3: bitstring = master in
+    {22}if (t_1 = mac(kdf(master_3,v_2),(tagF,v_2,id_1))) then
+    {23}event BaseAcceptFlash(v_2,t_1);
+    {24}new ix_1: bitstring;
+    {25}insert pending(ix_1,v_2,t_1);
+    {26}out(c, ix_1)
+) | (
+    {27}!
+    {29}in(c, (=mMicro,ix_2: bitstring,x_1: bitstring,m: bitstring));
+    {32}get pending(=ix_2,v_3: bitstring,t_2: bitstring) in
+    {28}let master_4: bitstring = master in
+    {30}if (m = mac(kdf(master_4,v_3),(tagM,t_2,x_1))) then
+    {31}event BaseAcceptMicro(v_3,t_2,x_1)
+) | (
+    {33}!
+    {35}in(c, (=mCancel,ix_3: bitstring,m_1: bitstring));
+    {38}get pending(=ix_3,v_4: bitstring,t_3: bitstring) in
+    {34}let master_5: bitstring = master in
+    {36}if (m_1 = mac(kdf(master_5,v_4),(tagX,t_3))) then
+    {37}event BaseAcceptCancel(v_4,t_3)
+)
+
+-- Query event(BaseAcceptMicro(v_5,t_4,x_2)) ==> event(CarSentMicro(v_5,t_4,x_2)) || event(Revealed(v_5)) in process 1.
+Translating the process into Horn clauses...
+Completing...
+Starting query event(BaseAcceptMicro(v_5,t_4,x_2)) ==> event(CarSentMicro(v_5,t_4,x_2)) || event(Revealed(v_5))
+goal reachable: b-event(Revealed(v_5)) && attacker(v_5) && attacker(id_2) && attacker(x_2) -> event(BaseAcceptMicro(v_5,mac(kdf(master[],v_5),(tagF,v_5,id_2)),x_2))
+goal reachable: b-event(CarSentMicro(v_5,mac(kdf(master[],v_5),(tagF,v_5,id_2)),x_2)) && attacker(v_5) && attacker(x_2) -> event(BaseAcceptMicro(v_5,mac(kdf(master[],v_5),(tagF,v_5,id_2)),x_2))
+Abbreviations:
+id_2 = id[x = x_2,v_1 = v_5,!1 = @sid]
+RESULT event(BaseAcceptMicro(v_5,t_4,x_2)) ==> event(CarSentMicro(v_5,t_4,x_2)) || event(Revealed(v_5)) is true.
+-- Query event(BaseAcceptMicro(v_5,t_4,x_2)) ==> event(CarSentFlash(v_5,t_4)) || event(Revealed(v_5)) in process 1.
+Translating the process into Horn clauses...
+Completing...
+Starting query event(BaseAcceptMicro(v_5,t_4,x_2)) ==> event(CarSentFlash(v_5,t_4)) || event(Revealed(v_5))
+goal reachable: b-event(Revealed(v_5)) && attacker(v_5) && attacker(id_2) && attacker(x_2) -> event(BaseAcceptMicro(v_5,mac(kdf(master[],v_5),(tagF,v_5,id_2)),x_2))
+goal reachable: b-event(CarSentFlash(v_5,mac(kdf(master[],v_5),(tagF,v_5,id_2)))) && attacker(v_5) && attacker(x_2) -> event(BaseAcceptMicro(v_5,mac(kdf(master[],v_5),(tagF,v_5,id_2)),x_2))
+Abbreviations:
+id_2 = id[x = x_2,v_1 = v_5,!1 = @sid]
+RESULT event(BaseAcceptMicro(v_5,t_4,x_2)) ==> event(CarSentFlash(v_5,t_4)) || event(Revealed(v_5)) is true.
+-- Query event(BaseAcceptCancel(v_5,t_4)) ==> event(CarSentCancel(v_5,t_4)) || event(Revealed(v_5)) in process 1.
+Translating the process into Horn clauses...
+Completing...
+Starting query event(BaseAcceptCancel(v_5,t_4)) ==> event(CarSentCancel(v_5,t_4)) || event(Revealed(v_5))
+goal reachable: b-event(Revealed(v_5)) && attacker(v_5) && attacker(id_2) -> event(BaseAcceptCancel(v_5,mac(kdf(master[],v_5),(tagF,v_5,id_2))))
+goal reachable: b-event(CarSentCancel(v_5,mac(kdf(master[],v_5),(tagF,v_5,id_2)))) && attacker(v_5) && attacker(x_2) -> event(BaseAcceptCancel(v_5,mac(kdf(master[],v_5),(tagF,v_5,id_2))))
+Abbreviations:
+id_2 = id[x = x_2,v_1 = v_5,!1 = @sid]
+RESULT event(BaseAcceptCancel(v_5,t_4)) ==> event(CarSentCancel(v_5,t_4)) || event(Revealed(v_5)) is true.
+-- Query not event(BaseAcceptMicro(v_5,t_4,x_2)) in process 1.
+Translating the process into Horn clauses...
+Completing...
+Starting query not event(BaseAcceptMicro(v_5,t_4,x_2))
+goal reachable: attacker(v_5) && attacker(id_2) && attacker(x_2) -> event(BaseAcceptMicro(v_5,mac(kdf(master[],v_5),(tagF,v_5,id_2)),x_2))
+
+Derivation:
+Abbreviations:
+ix_4 = ix_1[t_1 = mac(kdf(master[],v_5),(tagF,v_5,id_2)),id_1 = id_2,v_2 = v_5,!1 = @sid]
+
+1. We assume as hypothesis that
+attacker(x_2).
+
+2. We assume as hypothesis that
+attacker(id_2).
+
+3. We assume as hypothesis that
+attacker(v_5).
+
+4. Using the function tagF the attacker may obtain tagF.
+attacker(tagF).
+
+5. By 4, the attacker may know tagF.
+By 3, the attacker may know v_5.
+By 2, the attacker may know id_2.
+Using the function 3-tuple the attacker may obtain (tagF,v_5,id_2).
+attacker((tagF,v_5,id_2)).
+
+6. The message v_5 that the attacker may have by 3 may be received at input {4}.
+So the message kdf(master[],v_5) may be sent to the attacker at output {6}.
+attacker(kdf(master[],v_5)).
+
+7. By 6, the attacker may know kdf(master[],v_5).
+By 5, the attacker may know (tagF,v_5,id_2).
+Using the function mac the attacker may obtain mac(kdf(master[],v_5),(tagF,v_5,id_2)).
+attacker(mac(kdf(master[],v_5),(tagF,v_5,id_2))).
+
+8. Using the function tagM the attacker may obtain tagM.
+attacker(tagM).
+
+9. By 8, the attacker may know tagM.
+By 7, the attacker may know mac(kdf(master[],v_5),(tagF,v_5,id_2)).
+By 1, the attacker may know x_2.
+Using the function 3-tuple the attacker may obtain (tagM,mac(kdf(master[],v_5),(tagF,v_5,id_2)),x_2).
+attacker((tagM,mac(kdf(master[],v_5),(tagF,v_5,id_2)),x_2)).
+
+10. By 6, the attacker may know kdf(master[],v_5).
+By 9, the attacker may know (tagM,mac(kdf(master[],v_5),(tagF,v_5,id_2)),x_2).
+Using the function mac the attacker may obtain mac(kdf(master[],v_5),(tagM,mac(kdf(master[],v_5),(tagF,v_5,id_2)),x_2)).
+attacker(mac(kdf(master[],v_5),(tagM,mac(kdf(master[],v_5),(tagF,v_5,id_2)),x_2))).
+
+11. Using the function mFlash the attacker may obtain mFlash.
+attacker(mFlash).
+
+12. By 11, the attacker may know mFlash.
+By 3, the attacker may know v_5.
+By 2, the attacker may know id_2.
+By 7, the attacker may know mac(kdf(master[],v_5),(tagF,v_5,id_2)).
+Using the function 4-tuple the attacker may obtain (mFlash,v_5,id_2,mac(kdf(master[],v_5),(tagF,v_5,id_2))).
+attacker((mFlash,v_5,id_2,mac(kdf(master[],v_5),(tagF,v_5,id_2)))).
+
+13. The message (mFlash,v_5,id_2,mac(kdf(master[],v_5),(tagF,v_5,id_2))) that the attacker may have by 12 may be received at input {21}.
+So the message ix_4 may be sent to the attacker at output {26}.
+attacker(ix_4).
+
+14. Using the function mMicro the attacker may obtain mMicro.
+attacker(mMicro).
+
+15. By 14, the attacker may know mMicro.
+By 13, the attacker may know ix_4.
+By 1, the attacker may know x_2.
+By 10, the attacker may know mac(kdf(master[],v_5),(tagM,mac(kdf(master[],v_5),(tagF,v_5,id_2)),x_2)).
+Using the function 4-tuple the attacker may obtain (mMicro,ix_4,x_2,mac(kdf(master[],v_5),(tagM,mac(kdf(master[],v_5),(tagF,v_5,id_2)),x_2))).
+attacker((mMicro,ix_4,x_2,mac(kdf(master[],v_5),(tagM,mac(kdf(master[],v_5),(tagF,v_5,id_2)),x_2)))).
+
+16. The message (mFlash,v_5,id_2,mac(kdf(master[],v_5),(tagF,v_5,id_2))) that the attacker may have by 12 may be received at input {21}.
+So the entry pending(ix_4,v_5,mac(kdf(master[],v_5),(tagF,v_5,id_2))) may be inserted in a table at insert {25}.
+table(pending(ix_4,v_5,mac(kdf(master[],v_5),(tagF,v_5,id_2)))).
+
+17. The message (mMicro,ix_4,x_2,mac(kdf(master[],v_5),(tagM,mac(kdf(master[],v_5),(tagF,v_5,id_2)),x_2))) that the attacker may have by 15 may be received at input {29}.
+The entry pending(ix_4,v_5,mac(kdf(master[],v_5),(tagF,v_5,id_2))) that may be in a table by 16 may be read at get {32}.
+So event BaseAcceptMicro(v_5,mac(kdf(master[],v_5),(tagF,v_5,id_2)),x_2) may be executed at {31}.
+event(BaseAcceptMicro(v_5,mac(kdf(master[],v_5),(tagF,v_5,id_2)),x_2)).
+
+18. By 17, event(BaseAcceptMicro(v_5,mac(kdf(master[],v_5),(tagF,v_5,id_2)),x_2)).
+The goal is reached, represented in the following fact:
+event(BaseAcceptMicro(v_5,mac(kdf(master[],v_5),(tagF,v_5,id_2)),x_2)).
+
+
+A more detailed output of the traces is available with
+  set traceDisplay = long.
+
+new master: bitstring creating master_6 at {1}
+
+in(c, a) at {4} in copy a_1
+
+event Revealed(a) at {5} in copy a_1
+
+out(c, ~M) with ~M = kdf(master_6,a) at {6} in copy a_1
+
+in(c, (mFlash,a,a_2,mac(~M,(tagF,a,a_2)))) with mac(~M,(tagF,a,a_2)) = mac(kdf(master_6,a),(tagF,a,a_2)) at {21} in copy a_3
+
+event BaseAcceptFlash(a,mac(kdf(master_6,a),(tagF,a,a_2))) at {23} in copy a_3
+
+new ix_1: bitstring creating ix_5 at {24} in copy a_3
+
+insert pending(ix_5,a,mac(kdf(master_6,a),(tagF,a,a_2))) at {25} in copy a_3
+
+out(c, ~M_1) with ~M_1 = ix_5 at {26} in copy a_3
+
+in(c, (mMicro,~M_1,a_4,mac(~M,(tagM,mac(~M,(tagF,a,a_2)),a_4)))) with ~M_1 = ix_5, mac(~M,(tagM,mac(~M,(tagF,a,a_2)),a_4)) = mac(kdf(master_6,a),(tagM,mac(kdf(master_6,a),(tagF,a,a_2)),a_4)) at {29} in copy a_5
+
+get pending(ix_5,a,mac(kdf(master_6,a),(tagF,a,a_2))) at {32} in copy a_5
+
+event BaseAcceptMicro(a,mac(kdf(master_6,a),(tagF,a,a_2)),a_4) at {31} in copy a_5 (goal)
+
+The event BaseAcceptMicro(a,mac(kdf(master_6,a),(tagF,a,a_2)),a_4) is executed at {31} in copy a_5.
+A trace has been found.
+RESULT not event(BaseAcceptMicro(v_5,t_4,x_2)) is false.
+
+--------------------------------------------------------------
+Verification summary:
+
+Query event(BaseAcceptMicro(v_5,t_4,x_2)) ==> event(CarSentMicro(v_5,t_4,x_2)) || event(Revealed(v_5)) is true.
+
+Query event(BaseAcceptMicro(v_5,t_4,x_2)) ==> event(CarSentFlash(v_5,t_4)) || event(Revealed(v_5)) is true.
+
+Query event(BaseAcceptCancel(v_5,t_4)) ==> event(CarSentCancel(v_5,t_4)) || event(Revealed(v_5)) is true.
+
+Query not event(BaseAcceptMicro(v_5,t_4,x_2)) is false.
+
+--------------------------------------------------------------
+
+exit code: 0 ; wall time 0 s ; peak memory 10 MB

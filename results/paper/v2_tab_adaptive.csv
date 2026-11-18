@@ -1,0 +1,76 @@
+Cell,Variant,"Critical reach within 10 s, variant minus matched baseline",Lower 95%,Upper 95%,Origin,results.json key
+burst_base,controller,0.0,0.0,0.0,SIMULATED,v2.b.gain.burst_base.V1.reach10_critical; v2.b.gain.burst_base.V1.reach10_critical_lo; v2.b.gain.burst_base.V1.reach10_critical_hi
+burst_base,token bucket,0.0,0.0,0.0,SIMULATED,v2.b.gain.burst_base.V2.reach10_critical; v2.b.gain.burst_base.V2.reach10_critical_lo; v2.b.gain.burst_base.V2.reach10_critical_hi
+burst_base,beacon-assisted,-0.0121,-0.0284,0.0037,SIMULATED,v2.b.gain.burst_base.V3.reach10_critical; v2.b.gain.burst_base.V3.reach10_critical_lo; v2.b.gain.burst_base.V3.reach10_critical_hi
+burst_base,severity-scaled backoff,0.0028,-0.0163,0.0205,SIMULATED,v2.b.gain.burst_base.V4.reach10_critical; v2.b.gain.burst_base.V4.reach10_critical_lo; v2.b.gain.burst_base.V4.reach10_critical_hi
+burst_base,graceful demotion,-0.0015,-0.0126,0.009,SIMULATED,v2.b.gain.burst_base.V5.reach10_critical; v2.b.gain.burst_base.V5.reach10_critical_lo; v2.b.gain.burst_base.V5.reach10_critical_hi
+burst_burst10,controller,0.0,0.0,0.0,SIMULATED,v2.b.gain.burst_burst10.V1.reach10_critical; v2.b.gain.burst_burst10.V1.reach10_critical_lo; v2.b.gain.burst_burst10.V1.reach10_critical_hi
+burst_burst10,token bucket,0.0,0.0,0.0,SIMULATED,v2.b.gain.burst_burst10.V2.reach10_critical; v2.b.gain.burst_burst10.V2.reach10_critical_lo; v2.b.gain.burst_burst10.V2.reach10_critical_hi
+burst_burst10,beacon-assisted,-0.0015,-0.0127,0.0098,SIMULATED,v2.b.gain.burst_burst10.V3.reach10_critical; v2.b.gain.burst_burst10.V3.reach10_critical_lo; v2.b.gain.burst_burst10.V3.reach10_critical_hi
+burst_burst10,severity-scaled backoff,-0.0015,-0.0241,0.0192,SIMULATED,v2.b.gain.burst_burst10.V4.reach10_critical; v2.b.gain.burst_burst10.V4.reach10_critical_lo; v2.b.gain.burst_burst10.V4.reach10_critical_hi
+burst_burst10,graceful demotion,0.0016,0.0,0.0047,SIMULATED,v2.b.gain.burst_burst10.V5.reach10_critical; v2.b.gain.burst_burst10.V5.reach10_critical_lo; v2.b.gain.burst_burst10.V5.reach10_critical_hi
+burst_burst60,controller,-0.0004,-0.0027,0.0019,SIMULATED,v2.b.gain.burst_burst60.V1.reach10_critical; v2.b.gain.burst_burst60.V1.reach10_critical_lo; v2.b.gain.burst_burst60.V1.reach10_critical_hi
+burst_burst60,token bucket,0.0,0.0,0.0,SIMULATED,v2.b.gain.burst_burst60.V2.reach10_critical; v2.b.gain.burst_burst60.V2.reach10_critical_lo; v2.b.gain.burst_burst60.V2.reach10_critical_hi
+burst_burst60,beacon-assisted,0.005,-0.0076,0.0177,SIMULATED,v2.b.gain.burst_burst60.V3.reach10_critical; v2.b.gain.burst_burst60.V3.reach10_critical_lo; v2.b.gain.burst_burst60.V3.reach10_critical_hi
+burst_burst60,severity-scaled backoff,0.0073,-0.0106,0.0246,SIMULATED,v2.b.gain.burst_burst60.V4.reach10_critical; v2.b.gain.burst_burst60.V4.reach10_critical_lo; v2.b.gain.burst_burst60.V4.reach10_critical_hi
+burst_burst60,graceful demotion,0.007,0.0012,0.0138,SIMULATED,v2.b.gain.burst_burst60.V5.reach10_critical; v2.b.gain.burst_burst60.V5.reach10_critical_lo; v2.b.gain.burst_burst60.V5.reach10_critical_hi
+burst_cars50,controller,0.0,0.0,0.0,SIMULATED,v2.b.gain.burst_cars50.V1.reach10_critical; v2.b.gain.burst_cars50.V1.reach10_critical_lo; v2.b.gain.burst_cars50.V1.reach10_critical_hi
+burst_cars50,token bucket,0.0,0.0,0.0,SIMULATED,v2.b.gain.burst_cars50.V2.reach10_critical; v2.b.gain.burst_cars50.V2.reach10_critical_lo; v2.b.gain.burst_cars50.V2.reach10_critical_hi
+burst_cars50,beacon-assisted,-0.0006,-0.02,0.02,SIMULATED,v2.b.gain.burst_cars50.V3.reach10_critical; v2.b.gain.burst_cars50.V3.reach10_critical_lo; v2.b.gain.burst_cars50.V3.reach10_critical_hi
+burst_cars50,severity-scaled backoff,0.0196,-0.0075,0.0477,SIMULATED,v2.b.gain.burst_cars50.V4.reach10_critical; v2.b.gain.burst_cars50.V4.reach10_critical_lo; v2.b.gain.burst_cars50.V4.reach10_critical_hi
+burst_cars50,graceful demotion,0.0054,-0.0044,0.0168,SIMULATED,v2.b.gain.burst_cars50.V5.reach10_critical; v2.b.gain.burst_cars50.V5.reach10_critical_lo; v2.b.gain.burst_cars50.V5.reach10_critical_hi
+burst_cars200,controller,0.0,0.0,0.0,SIMULATED,v2.b.gain.burst_cars200.V1.reach10_critical; v2.b.gain.burst_cars200.V1.reach10_critical_lo; v2.b.gain.burst_cars200.V1.reach10_critical_hi
+burst_cars200,token bucket,0.0,0.0,0.0,SIMULATED,v2.b.gain.burst_cars200.V2.reach10_critical; v2.b.gain.burst_cars200.V2.reach10_critical_lo; v2.b.gain.burst_cars200.V2.reach10_critical_hi
+burst_cars200,beacon-assisted,-0.007,-0.022,0.0066,SIMULATED,v2.b.gain.burst_cars200.V3.reach10_critical; v2.b.gain.burst_cars200.V3.reach10_critical_lo; v2.b.gain.burst_cars200.V3.reach10_critical_hi
+burst_cars200,severity-scaled backoff,0.0164,-0.0044,0.0369,SIMULATED,v2.b.gain.burst_cars200.V4.reach10_critical; v2.b.gain.burst_cars200.V4.reach10_critical_lo; v2.b.gain.burst_cars200.V4.reach10_critical_hi
+burst_cars200,graceful demotion,0.0039,-0.005,0.0163,SIMULATED,v2.b.gain.burst_cars200.V5.reach10_critical; v2.b.gain.burst_cars200.V5.reach10_critical_lo; v2.b.gain.burst_cars200.V5.reach10_critical_hi
+burst_sf9,controller,0.0,0.0,0.0,SIMULATED,v2.b.gain.burst_sf9.V1.reach10_critical; v2.b.gain.burst_sf9.V1.reach10_critical_lo; v2.b.gain.burst_sf9.V1.reach10_critical_hi
+burst_sf9,token bucket,0.0004,-0.0036,0.0047,SIMULATED,v2.b.gain.burst_sf9.V2.reach10_critical; v2.b.gain.burst_sf9.V2.reach10_critical_lo; v2.b.gain.burst_sf9.V2.reach10_critical_hi
+burst_sf9,beacon-assisted,-0.022,-0.0377,-0.0067,SIMULATED,v2.b.gain.burst_sf9.V3.reach10_critical; v2.b.gain.burst_sf9.V3.reach10_critical_lo; v2.b.gain.burst_sf9.V3.reach10_critical_hi
+burst_sf9,severity-scaled backoff,0.0111,-0.0064,0.0276,SIMULATED,v2.b.gain.burst_sf9.V4.reach10_critical; v2.b.gain.burst_sf9.V4.reach10_critical_lo; v2.b.gain.burst_sf9.V4.reach10_critical_hi
+burst_sf9,graceful demotion,0.0144,0.0048,0.0258,SIMULATED,v2.b.gain.burst_sf9.V5.reach10_critical; v2.b.gain.burst_sf9.V5.reach10_critical_lo; v2.b.gain.burst_sf9.V5.reach10_critical_hi
+burst_capnone,controller,0.0,0.0,0.0,SIMULATED,v2.b.gain.burst_capnone.V1.reach10_critical; v2.b.gain.burst_capnone.V1.reach10_critical_lo; v2.b.gain.burst_capnone.V1.reach10_critical_hi
+burst_capnone,token bucket,0.0,0.0,0.0,SIMULATED,v2.b.gain.burst_capnone.V2.reach10_critical; v2.b.gain.burst_capnone.V2.reach10_critical_lo; v2.b.gain.burst_capnone.V2.reach10_critical_hi
+burst_capnone,beacon-assisted,-0.0123,-0.0274,0.0001,SIMULATED,v2.b.gain.burst_capnone.V3.reach10_critical; v2.b.gain.burst_capnone.V3.reach10_critical_lo; v2.b.gain.burst_capnone.V3.reach10_critical_hi
+burst_capnone,severity-scaled backoff,0.0129,-0.0109,0.0388,SIMULATED,v2.b.gain.burst_capnone.V4.reach10_critical; v2.b.gain.burst_capnone.V4.reach10_critical_lo; v2.b.gain.burst_capnone.V4.reach10_critical_hi
+burst_capnone,graceful demotion,0.0022,-0.0074,0.0106,SIMULATED,v2.b.gain.burst_capnone.V5.reach10_critical; v2.b.gain.burst_capnone.V5.reach10_critical_lo; v2.b.gain.burst_capnone.V5.reach10_critical_hi
+loadedburst_base,controller,0.0,0.0,0.0,SIMULATED,v2.b.gain.loadedburst_base.V1.reach10_critical; v2.b.gain.loadedburst_base.V1.reach10_critical_lo; v2.b.gain.loadedburst_base.V1.reach10_critical_hi
+loadedburst_base,token bucket,0.0038,-0.0066,0.0135,SIMULATED,v2.b.gain.loadedburst_base.V2.reach10_critical; v2.b.gain.loadedburst_base.V2.reach10_critical_lo; v2.b.gain.loadedburst_base.V2.reach10_critical_hi
+loadedburst_base,beacon-assisted,-0.0094,-0.0251,0.0064,SIMULATED,v2.b.gain.loadedburst_base.V3.reach10_critical; v2.b.gain.loadedburst_base.V3.reach10_critical_lo; v2.b.gain.loadedburst_base.V3.reach10_critical_hi
+loadedburst_base,severity-scaled backoff,-0.0024,-0.0238,0.019,SIMULATED,v2.b.gain.loadedburst_base.V4.reach10_critical; v2.b.gain.loadedburst_base.V4.reach10_critical_lo; v2.b.gain.loadedburst_base.V4.reach10_critical_hi
+loadedburst_base,graceful demotion,-0.01,-0.022,0.0012,SIMULATED,v2.b.gain.loadedburst_base.V5.reach10_critical; v2.b.gain.loadedburst_base.V5.reach10_critical_lo; v2.b.gain.loadedburst_base.V5.reach10_critical_hi
+loadedburst_cars200,controller,0.0004,0.0,0.0011,SIMULATED,v2.b.gain.loadedburst_cars200.V1.reach10_critical; v2.b.gain.loadedburst_cars200.V1.reach10_critical_lo; v2.b.gain.loadedburst_cars200.V1.reach10_critical_hi
+loadedburst_cars200,token bucket,0.0108,-0.0011,0.0225,SIMULATED,v2.b.gain.loadedburst_cars200.V2.reach10_critical; v2.b.gain.loadedburst_cars200.V2.reach10_critical_lo; v2.b.gain.loadedburst_cars200.V2.reach10_critical_hi
+loadedburst_cars200,beacon-assisted,0.0081,-0.0037,0.0198,SIMULATED,v2.b.gain.loadedburst_cars200.V3.reach10_critical; v2.b.gain.loadedburst_cars200.V3.reach10_critical_lo; v2.b.gain.loadedburst_cars200.V3.reach10_critical_hi
+loadedburst_cars200,severity-scaled backoff,0.0172,0.0016,0.0339,SIMULATED,v2.b.gain.loadedburst_cars200.V4.reach10_critical; v2.b.gain.loadedburst_cars200.V4.reach10_critical_lo; v2.b.gain.loadedburst_cars200.V4.reach10_critical_hi
+loadedburst_cars200,graceful demotion,-0.0126,-0.0241,-0.0015,SIMULATED,v2.b.gain.loadedburst_cars200.V5.reach10_critical; v2.b.gain.loadedburst_cars200.V5.reach10_critical_lo; v2.b.gain.loadedburst_cars200.V5.reach10_critical_hi
+loadedburst_sf9,controller,0.0011,-0.001,0.0034,SIMULATED,v2.b.gain.loadedburst_sf9.V1.reach10_critical; v2.b.gain.loadedburst_sf9.V1.reach10_critical_lo; v2.b.gain.loadedburst_sf9.V1.reach10_critical_hi
+loadedburst_sf9,token bucket,-0.0122,-0.0265,0.0026,SIMULATED,v2.b.gain.loadedburst_sf9.V2.reach10_critical; v2.b.gain.loadedburst_sf9.V2.reach10_critical_lo; v2.b.gain.loadedburst_sf9.V2.reach10_critical_hi
+loadedburst_sf9,beacon-assisted,-0.0772,-0.0961,-0.0585,SIMULATED,v2.b.gain.loadedburst_sf9.V3.reach10_critical; v2.b.gain.loadedburst_sf9.V3.reach10_critical_lo; v2.b.gain.loadedburst_sf9.V3.reach10_critical_hi
+loadedburst_sf9,severity-scaled backoff,-0.003,-0.0175,0.0122,SIMULATED,v2.b.gain.loadedburst_sf9.V4.reach10_critical; v2.b.gain.loadedburst_sf9.V4.reach10_critical_lo; v2.b.gain.loadedburst_sf9.V4.reach10_critical_hi
+loadedburst_sf9,graceful demotion,0.0122,0.0,0.0251,SIMULATED,v2.b.gain.loadedburst_sf9.V5.reach10_critical; v2.b.gain.loadedburst_sf9.V5.reach10_critical_lo; v2.b.gain.loadedburst_sf9.V5.reach10_critical_hi
+steady_base,controller,0.0,0.0,0.0,SIMULATED,v2.b.gain.steady_base.V1.reach10_critical; v2.b.gain.steady_base.V1.reach10_critical_lo; v2.b.gain.steady_base.V1.reach10_critical_hi
+steady_base,token bucket,0.0,0.0,0.0,SIMULATED,v2.b.gain.steady_base.V2.reach10_critical; v2.b.gain.steady_base.V2.reach10_critical_lo; v2.b.gain.steady_base.V2.reach10_critical_hi
+steady_base,beacon-assisted,0.0,0.0,0.0,SIMULATED,v2.b.gain.steady_base.V3.reach10_critical; v2.b.gain.steady_base.V3.reach10_critical_lo; v2.b.gain.steady_base.V3.reach10_critical_hi
+steady_base,severity-scaled backoff,0.0,0.0,0.0,SIMULATED,v2.b.gain.steady_base.V4.reach10_critical; v2.b.gain.steady_base.V4.reach10_critical_lo; v2.b.gain.steady_base.V4.reach10_critical_hi
+steady_base,graceful demotion,0.0,0.0,0.0,SIMULATED,v2.b.gain.steady_base.V5.reach10_critical; v2.b.gain.steady_base.V5.reach10_critical_lo; v2.b.gain.steady_base.V5.reach10_critical_hi
+steady_cars200,controller,0.0,0.0,0.0,SIMULATED,v2.b.gain.steady_cars200.V1.reach10_critical; v2.b.gain.steady_cars200.V1.reach10_critical_lo; v2.b.gain.steady_cars200.V1.reach10_critical_hi
+steady_cars200,token bucket,0.0,0.0,0.0,SIMULATED,v2.b.gain.steady_cars200.V2.reach10_critical; v2.b.gain.steady_cars200.V2.reach10_critical_lo; v2.b.gain.steady_cars200.V2.reach10_critical_hi
+steady_cars200,beacon-assisted,0.0003,-0.005,0.0058,SIMULATED,v2.b.gain.steady_cars200.V3.reach10_critical; v2.b.gain.steady_cars200.V3.reach10_critical_lo; v2.b.gain.steady_cars200.V3.reach10_critical_hi
+steady_cars200,severity-scaled backoff,0.0019,-0.007,0.0126,SIMULATED,v2.b.gain.steady_cars200.V4.reach10_critical; v2.b.gain.steady_cars200.V4.reach10_critical_lo; v2.b.gain.steady_cars200.V4.reach10_critical_hi
+steady_cars200,graceful demotion,0.0,0.0,0.0,SIMULATED,v2.b.gain.steady_cars200.V5.reach10_critical; v2.b.gain.steady_cars200.V5.reach10_critical_lo; v2.b.gain.steady_cars200.V5.reach10_critical_hi
+steady_loss30,controller,0.0,0.0,0.0,SIMULATED,v2.b.gain.steady_loss30.V1.reach10_critical; v2.b.gain.steady_loss30.V1.reach10_critical_lo; v2.b.gain.steady_loss30.V1.reach10_critical_hi
+steady_loss30,token bucket,0.0,0.0,0.0,SIMULATED,v2.b.gain.steady_loss30.V2.reach10_critical; v2.b.gain.steady_loss30.V2.reach10_critical_lo; v2.b.gain.steady_loss30.V2.reach10_critical_hi
+steady_loss30,beacon-assisted,-0.0259,-0.0603,0.0019,SIMULATED,v2.b.gain.steady_loss30.V3.reach10_critical; v2.b.gain.steady_loss30.V3.reach10_critical_lo; v2.b.gain.steady_loss30.V3.reach10_critical_hi
+steady_loss30,severity-scaled backoff,-0.0097,-0.0299,0.0076,SIMULATED,v2.b.gain.steady_loss30.V4.reach10_critical; v2.b.gain.steady_loss30.V4.reach10_critical_lo; v2.b.gain.steady_loss30.V4.reach10_critical_hi
+steady_loss30,graceful demotion,0.0118,-0.0056,0.0347,SIMULATED,v2.b.gain.steady_loss30.V5.reach10_critical; v2.b.gain.steady_loss30.V5.reach10_critical_lo; v2.b.gain.steady_loss30.V5.reach10_critical_hi
+single_loss60,controller,0.002,-0.023,0.0266,SIMULATED,v2.b.gain.single_loss60.V1.reach10_critical; v2.b.gain.single_loss60.V1.reach10_critical_lo; v2.b.gain.single_loss60.V1.reach10_critical_hi
+single_loss60,token bucket,0.0023,-0.0357,0.0398,SIMULATED,v2.b.gain.single_loss60.V2.reach10_critical; v2.b.gain.single_loss60.V2.reach10_critical_lo; v2.b.gain.single_loss60.V2.reach10_critical_hi
+single_loss60,beacon-assisted,0.0109,-0.0362,0.0592,SIMULATED,v2.b.gain.single_loss60.V3.reach10_critical; v2.b.gain.single_loss60.V3.reach10_critical_lo; v2.b.gain.single_loss60.V3.reach10_critical_hi
+single_loss60,severity-scaled backoff,0.0083,0.0,0.0229,SIMULATED,v2.b.gain.single_loss60.V4.reach10_critical; v2.b.gain.single_loss60.V4.reach10_critical_lo; v2.b.gain.single_loss60.V4.reach10_critical_hi
+single_loss60,graceful demotion,-0.0359,-0.0853,0.0132,SIMULATED,v2.b.gain.single_loss60.V5.reach10_critical; v2.b.gain.single_loss60.V5.reach10_critical_lo; v2.b.gain.single_loss60.V5.reach10_critical_hi
+mixed_cars200,controller,0.0,0.0,0.0,SIMULATED,v2.b.gain.mixed_cars200.V1.reach10_critical; v2.b.gain.mixed_cars200.V1.reach10_critical_lo; v2.b.gain.mixed_cars200.V1.reach10_critical_hi
+mixed_cars200,token bucket,0.0008,-0.0073,0.0079,SIMULATED,v2.b.gain.mixed_cars200.V2.reach10_critical; v2.b.gain.mixed_cars200.V2.reach10_critical_lo; v2.b.gain.mixed_cars200.V2.reach10_critical_hi
+mixed_cars200,beacon-assisted,0.0041,-0.0003,0.009,SIMULATED,v2.b.gain.mixed_cars200.V3.reach10_critical; v2.b.gain.mixed_cars200.V3.reach10_critical_lo; v2.b.gain.mixed_cars200.V3.reach10_critical_hi
+mixed_cars200,severity-scaled backoff,0.0053,0.0,0.0119,SIMULATED,v2.b.gain.mixed_cars200.V4.reach10_critical; v2.b.gain.mixed_cars200.V4.reach10_critical_lo; v2.b.gain.mixed_cars200.V4.reach10_critical_hi
+mixed_cars200,graceful demotion,0.0042,0.0,0.009,SIMULATED,v2.b.gain.mixed_cars200.V5.reach10_critical; v2.b.gain.mixed_cars200.V5.reach10_critical_lo; v2.b.gain.mixed_cars200.V5.reach10_critical_hi

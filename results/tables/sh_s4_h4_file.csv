@@ -1,0 +1,10 @@
+case_id,scenario,base_result
+S01,valid_alert_control,accepted x10
+S02,forged_tag_wrong_key,rejected_bad_tag x10
+S03,tampered_field_one_byte,rejected_bad_tag x10
+S04,replayed_old_alert,rejected_replay x10
+S05,spoofed_ack_to_car,n/a (car-side verify) x10
+S06,base_rebooted_mid_retry,accepted x10
+S07,ack_lost_then_retry,rejected_replay_reacked x10
+S08,car_rebooted_counter_state,rejected_replay x10
+S09,replay_flood_20_in_10s,20 of 20 rejected x10

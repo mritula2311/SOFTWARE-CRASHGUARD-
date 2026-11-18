@@ -1,0 +1,1044 @@
+[
+ {
+  "topic": 14,
+  "scope": "journal_2021plus",
+  "date_run": "2026-11-15",
+  "database": "OpenAlex API",
+  "query": "LoRaWAN AND (\"macro-diversity\" OR macrodiversity OR \"gateway diversity\" OR \"receiver diversity\")",
+  "filters": "from_publication_date:2021-01-01,primary_location.source.type:journal",
+  "operators": 4,
+  "status": "OK",
+  "count": 4,
+  "top15": [
+   {
+    "id": "https://openalex.org/W4285137514",
+    "title": "Interference Mitigation and Decoding Through Gateway Diversity in LoRaWAN",
+    "year": 2022,
+    "doi": "https://doi.org/10.1109/twc.2022.3172629",
+    "type": "article",
+    "journal": "IEEE Transactions on Wireless Communications",
+    "oa": null
+   },
+   {
+    "id": "https://openalex.org/W7169554515",
+    "title": "Gateway-Diversity-Preserving Multi-Hop Relay With Time-Aware ACK Gateway Selection for LoRaWAN-Oriented Mobile IoT Networks",
+    "year": 2026,
+    "doi": "https://doi.org/10.1109/access.2026.3714528",
+    "type": "article",
+    "journal": "IEEE Access",
+    "oa": "https://doi.org/10.1109/access.2026.3714528"
+   },
+   {
+    "id": "https://openalex.org/W4378421950",
+    "title": "Performance of Unslotted ALOHA With Capture and Multiple Collisions in LoRaWAN",
+    "year": 2023,
+    "doi": "https://doi.org/10.1109/jiot.2023.3280393",
+    "type": "article",
+    "journal": "IEEE Internet of Things Journal",
+    "oa": "https://hal.science/hal-04119710/document"
+   },
+   {
+    "id": "https://openalex.org/W3149043465",
+    "title": "LoRa Channel Characterization for Flexible and High Reliability Adaptive Data Rate in Multiple Gateways Networks",
+    "year": 2021,
+    "doi": "https://doi.org/10.3390/computers10040044",
+    "type": "article",
+    "journal": "Computers",
+    "oa": "https://www.mdpi.com/2073-431X/10/4/44/pdf?version=1617939892"
+   }
+  ]
+ },
+ {
+  "topic": 14,
+  "scope": "context_any",
+  "date_run": "2026-11-15",
+  "database": "OpenAlex API",
+  "query": "LoRaWAN AND (\"macro-diversity\" OR macrodiversity OR \"gateway diversity\" OR \"receiver diversity\")",
+  "filters": "none",
+  "operators": 4,
+  "status": "OK",
+  "count": 10,
+  "top15": [
+   {
+    "id": "https://openalex.org/W4285137514",
+    "title": "Interference Mitigation and Decoding Through Gateway Diversity in LoRaWAN",
+    "year": 2022,
+    "doi": "https://doi.org/10.1109/twc.2022.3172629",
+    "type": "article",
+    "journal": "IEEE Transactions on Wireless Communications",
+    "oa": null
+   },
+   {
+    "id": "https://openalex.org/W7138977251",
+    "title": "Fragment-Level Macro-Diversity Reception in LoRaWAN Networks with LR-FHSS",
+    "year": 2025,
+    "doi": "https://doi.org/10.1109/globecom59602.2025.11432594",
+    "type": "conference-paper",
+    "journal": "Globecom",
+    "oa": "https://arxiv.org/pdf/2505.01689"
+   },
+   {
+    "id": "https://openalex.org/W7169554515",
+    "title": "Gateway-Diversity-Preserving Multi-Hop Relay With Time-Aware ACK Gateway Selection for LoRaWAN-Oriented Mobile IoT Networks",
+    "year": 2026,
+    "doi": "https://doi.org/10.1109/access.2026.3714528",
+    "type": "article",
+    "journal": "IEEE Access",
+    "oa": "https://doi.org/10.1109/access.2026.3714528"
+   },
+   {
+    "id": "https://openalex.org/W7213312628",
+    "title": "Experimental Multi-Gateway LoRaWAN",
+    "year": 2026,
+    "doi": "https://doi.org/10.17632/5drwdxt6tr",
+    "type": "dataset",
+    "journal": "Mendeley Data",
+    "oa": "https://doi.org/10.17632/5drwdxt6tr"
+   },
+   {
+    "id": "https://openalex.org/W4378421950",
+    "title": "Performance of Unslotted ALOHA With Capture and Multiple Collisions in LoRaWAN",
+    "year": 2023,
+    "doi": "https://doi.org/10.1109/jiot.2023.3280393",
+    "type": "article",
+    "journal": "IEEE Internet of Things Journal",
+    "oa": "https://hal.science/hal-04119710/document"
+   },
+   {
+    "id": "https://openalex.org/W7106716899",
+    "title": "CAST-SF LoRaWAN Performance Dataset",
+    "year": 2025,
+    "doi": "https://doi.org/10.5281/zenodo.17714475",
+    "type": "dataset",
+    "journal": "Zenodo (CERN European Organization for Nuclear Research)",
+    "oa": "https://doi.org/10.5281/zenodo.17714475"
+   },
+   {
+    "id": "https://openalex.org/W7133213433",
+    "title": "FAST-LoRa: An Efficient Simulation Framework for LoRaWAN Networks",
+    "year": 2026,
+    "doi": "https://doi.org/10.24433/co.6287911.v1",
+    "type": "software",
+    "journal": "Code Ocean",
+    "oa": "https://doi.org/10.24433/co.6287911.v1"
+   },
+   {
+    "id": "https://openalex.org/W7170240831",
+    "title": "LoRaWAN Network Capacity Optimization for Utility Applications",
+    "year": 2026,
+    "doi": null,
+    "type": "report",
+    "journal": "HAL",
+    "oa": "https://hal.science/hal-05688670v1"
+   },
+   {
+    "id": "https://openalex.org/W3149043465",
+    "title": "LoRa Channel Characterization for Flexible and High Reliability Adaptive Data Rate in Multiple Gateways Networks",
+    "year": 2021,
+    "doi": "https://doi.org/10.3390/computers10040044",
+    "type": "article",
+    "journal": "Computers",
+    "oa": "https://www.mdpi.com/2073-431X/10/4/44/pdf?version=1617939892"
+   },
+   {
+    "id": "https://openalex.org/W7203735625",
+    "title": "Enabling Reliable and Scalable LoRa with Collision Resolution and Centralized Radio Access",
+    "year": 2026,
+    "doi": "https://doi.org/10.5075/epfl-thesis-11222",
+    "type": "dissertation",
+    "journal": "Infoscience (Ecole Polytechnique Fédérale de Lausanne)",
+    "oa": "https://infoscience.epfl.ch/handle/20.500.14299/266702"
+   }
+  ]
+ },
+ {
+  "topic": 14,
+  "scope": "journal_2021plus",
+  "date_run": "2026-11-15",
+  "database": "OpenAlex API",
+  "query": "LoRaWAN AND (\"multiple gateways\" OR \"multi-gateway\") AND (reliability OR \"packet delivery\")",
+  "filters": "from_publication_date:2021-01-01,primary_location.source.type:journal",
+  "operators": 4,
+  "status": "OK",
+  "count": 10,
+  "top15": [
+   {
+    "id": "https://openalex.org/W4379472729",
+    "title": "Improving Energy Efficiency in LoRaWAN Networks with Multiple Gateways",
+    "year": 2023,
+    "doi": "https://doi.org/10.3390/s23115315",
+    "type": "article",
+    "journal": "Sensors",
+    "oa": "https://www.mdpi.com/1424-8220/23/11/5315/pdf?version=1685779882"
+   },
+   {
+    "id": "https://openalex.org/W4376620175",
+    "title": "ReLoRaWAN: Reliable data delivery in LoRaWAN networks with multiple gateways",
+    "year": 2023,
+    "doi": "https://doi.org/10.1016/j.adhoc.2023.103203",
+    "type": "article",
+    "journal": "Ad Hoc Networks",
+    "oa": null
+   },
+   {
+    "id": "https://openalex.org/W4307944476",
+    "title": "A Multi-Gateway Behaviour Study for Traffic-Oriented LoRaWAN Deployment",
+    "year": 2022,
+    "doi": "https://doi.org/10.3390/fi14110312",
+    "type": "article",
+    "journal": "Future Internet",
+    "oa": "https://www.mdpi.com/1999-5903/14/11/312/pdf?version=1668388814"
+   },
+   {
+    "id": "https://openalex.org/W4385971444",
+    "title": "Joint throughput-energy optimization in multi-gateway LoRaWAN networks",
+    "year": 2023,
+    "doi": "https://doi.org/10.1007/s11235-023-01048-8",
+    "type": "article",
+    "journal": "Telecommunication Systems",
+    "oa": null
+   },
+   {
+    "id": "https://openalex.org/W4413959002",
+    "title": "ZBMG-LoRa: A Novel Zone-Based Multi-Gateway Approach Towards Scalable LoRaWANs for Internet of Things",
+    "year": 2025,
+    "doi": "https://doi.org/10.3390/s25175457",
+    "type": "article",
+    "journal": "Sensors",
+    "oa": "https://www.mdpi.com/1424-8220/25/17/5457/pdf?version=1756893317"
+   },
+   {
+    "id": "https://openalex.org/W3149043465",
+    "title": "LoRa Channel Characterization for Flexible and High Reliability Adaptive Data Rate in Multiple Gateways Networks",
+    "year": 2021,
+    "doi": "https://doi.org/10.3390/computers10040044",
+    "type": "article",
+    "journal": "Computers",
+    "oa": "https://www.mdpi.com/2073-431X/10/4/44/pdf?version=1617939892"
+   },
+   {
+    "id": "https://openalex.org/W7131244158",
+    "title": "Unified Spatial Analytical Framework for Confirmed Uplinks in Multi-Gateway LoRaWAN Under Duty-Cycle Constraints",
+    "year": 2026,
+    "doi": "https://doi.org/10.1109/ojcoms.2026.3667708",
+    "type": "article",
+    "journal": "IEEE Open Journal of the Communications Society",
+    "oa": "https://doi.org/10.1109/ojcoms.2026.3667708"
+   },
+   {
+    "id": "https://openalex.org/W4414920275",
+    "title": "FAST-LoRa: An Efficient Simulation Framework for Evaluating LoRaWAN Networks and Transmission Parameter Strategies",
+    "year": 2026,
+    "doi": "https://doi.org/10.1109/access.2026.3669347",
+    "type": "article",
+    "journal": "IEEE Access",
+    "oa": "https://doi.org/10.1109/access.2026.3669347"
+   },
+   {
+    "id": "https://openalex.org/W7169554515",
+    "title": "Gateway-Diversity-Preserving Multi-Hop Relay With Time-Aware ACK Gateway Selection for LoRaWAN-Oriented Mobile IoT Networks",
+    "year": 2026,
+    "doi": "https://doi.org/10.1109/access.2026.3714528",
+    "type": "article",
+    "journal": "IEEE Access",
+    "oa": "https://doi.org/10.1109/access.2026.3714528"
+   },
+   {
+    "id": "https://openalex.org/W4410310363",
+    "title": "QoS-Aware Task Scheduling using Reinforcement Learning in Long Rage Wide Area Network IoT Application",
+    "year": 2025,
+    "doi": "https://doi.org/10.37871/jbres2089",
+    "type": "article",
+    "journal": "Journal of Biomedical Research & Environmental Sciences",
+    "oa": null
+   }
+  ]
+ },
+ {
+  "topic": 14,
+  "scope": "context_any",
+  "date_run": "2026-11-15",
+  "database": "OpenAlex API",
+  "query": "LoRaWAN AND (\"multiple gateways\" OR \"multi-gateway\") AND (reliability OR \"packet delivery\")",
+  "filters": "none",
+  "operators": 4,
+  "status": "OK",
+  "count": 29,
+  "top15": [
+   {
+    "id": "https://openalex.org/W4379472729",
+    "title": "Improving Energy Efficiency in LoRaWAN Networks with Multiple Gateways",
+    "year": 2023,
+    "doi": "https://doi.org/10.3390/s23115315",
+    "type": "article",
+    "journal": "Sensors",
+    "oa": "https://www.mdpi.com/1424-8220/23/11/5315/pdf?version=1685779882"
+   },
+   {
+    "id": "https://openalex.org/W3081406825",
+    "title": "Adaptive algorithm for spreading factor selection in LoRaWAN networks with multiple gateways",
+    "year": 2020,
+    "doi": "https://doi.org/10.1016/j.comnet.2020.107491",
+    "type": "article",
+    "journal": "Computer Networks",
+    "oa": null
+   },
+   {
+    "id": "https://openalex.org/W4376620175",
+    "title": "ReLoRaWAN: Reliable data delivery in LoRaWAN networks with multiple gateways",
+    "year": 2023,
+    "doi": "https://doi.org/10.1016/j.adhoc.2023.103203",
+    "type": "article",
+    "journal": "Ad Hoc Networks",
+    "oa": null
+   },
+   {
+    "id": "https://openalex.org/W3106348064",
+    "title": "Adaptive Data Rate for Multiple Gateways LoRaWAN Networks",
+    "year": 2020,
+    "doi": "https://doi.org/10.1109/wimob50308.2020.9253425",
+    "type": "conference-paper",
+    "journal": "IEEE International Conference on Wireless and Mobile Computing, Networking and Communications (WiMob)",
+    "oa": "https://hal.science/hal-03011494"
+   },
+   {
+    "id": "https://openalex.org/W4307944476",
+    "title": "A Multi-Gateway Behaviour Study for Traffic-Oriented LoRaWAN Deployment",
+    "year": 2022,
+    "doi": "https://doi.org/10.3390/fi14110312",
+    "type": "article",
+    "journal": "Future Internet",
+    "oa": "https://www.mdpi.com/1999-5903/14/11/312/pdf?version=1668388814"
+   },
+   {
+    "id": "https://openalex.org/W4385971444",
+    "title": "Joint throughput-energy optimization in multi-gateway LoRaWAN networks",
+    "year": 2023,
+    "doi": "https://doi.org/10.1007/s11235-023-01048-8",
+    "type": "article",
+    "journal": "Telecommunication Systems",
+    "oa": null
+   },
+   {
+    "id": "https://openalex.org/W4387872917",
+    "title": "Energy Efficiency Enhancement for LoRaWAN Networks with Multiple Gateways",
+    "year": 2023,
+    "doi": "https://doi.org/10.1109/icc45041.2023.10279401",
+    "type": "conference-paper",
+    "journal": "International Conference on Communications",
+    "oa": null
+   },
+   {
+    "id": "https://openalex.org/W4321459794",
+    "title": "Uplink throughput optimization for multiple gateway systems in LoRaWAN Class A",
+    "year": 2023,
+    "doi": "https://doi.org/10.1201/9781003377399-4",
+    "type": "book-chapter",
+    "journal": "CRC Press eBooks",
+    "oa": null
+   },
+   {
+    "id": "https://openalex.org/W4401609305",
+    "title": "Studying Slot Assignment for Multi-Gateway Time Scheduled Channel Access in LoRaWan",
+    "year": 2024,
+    "doi": "https://doi.org/10.23919/ifipnetworking62109.2024.10619867",
+    "type": "conference-paper",
+    "journal": "IFIP Networking Conference (IFIP Networking)",
+    "oa": null
+   },
+   {
+    "id": "https://openalex.org/W4413959002",
+    "title": "ZBMG-LoRa: A Novel Zone-Based Multi-Gateway Approach Towards Scalable LoRaWANs for Internet of Things",
+    "year": 2025,
+    "doi": "https://doi.org/10.3390/s25175457",
+    "type": "article",
+    "journal": "Sensors",
+    "oa": "https://www.mdpi.com/1424-8220/25/17/5457/pdf?version=1756893317"
+   },
+   {
+    "id": "https://openalex.org/W3149043465",
+    "title": "LoRa Channel Characterization for Flexible and High Reliability Adaptive Data Rate in Multiple Gateways Networks",
+    "year": 2021,
+    "doi": "https://doi.org/10.3390/computers10040044",
+    "type": "article",
+    "journal": "Computers",
+    "oa": "https://www.mdpi.com/2073-431X/10/4/44/pdf?version=1617939892"
+   },
+   {
+    "id": "https://openalex.org/W7131244158",
+    "title": "Unified Spatial Analytical Framework for Confirmed Uplinks in Multi-Gateway LoRaWAN Under Duty-Cycle Constraints",
+    "year": 2026,
+    "doi": "https://doi.org/10.1109/ojcoms.2026.3667708",
+    "type": "article",
+    "journal": "IEEE Open Journal of the Communications Society",
+    "oa": "https://doi.org/10.1109/ojcoms.2026.3667708"
+   },
+   {
+    "id": "https://openalex.org/W4322577731",
+    "title": "LoRaWAN Downlink Policies for Improved Fairness",
+    "year": 2022,
+    "doi": "https://doi.org/10.1109/cscn57023.2022.10050924",
+    "type": "conference-paper",
+    "journal": "IEEE Conference on Standards for Communications and Networking",
+    "oa": null
+   },
+   {
+    "id": "https://openalex.org/W4388107340",
+    "title": "Developing Energy Autonomous and Cable-less Multi-gateway LoRa Networks",
+    "year": 2023,
+    "doi": "https://doi.org/10.1109/ccci58712.2023.10290141",
+    "type": "conference-paper",
+    "journal": "International Conference on Communications, Computing, Cybersecurity, and Informatics (CCCI)",
+    "oa": null
+   },
+   {
+    "id": "https://openalex.org/W3125061616",
+    "title": "Spreading Factor Allocation for LoRa Nodes Progressively Joining a Multi-Gateway Adaptive Network",
+    "year": 2020,
+    "doi": "https://doi.org/10.1109/globecom42002.2020.9322637",
+    "type": "conference-paper",
+    "journal": "Globecom",
+    "oa": null
+   }
+  ]
+ },
+ {
+  "topic": 14,
+  "scope": "journal_2021plus",
+  "date_run": "2026-11-15",
+  "database": "OpenAlex API",
+  "query": "LoRa AND \"spatial diversity\" AND gateway",
+  "filters": "from_publication_date:2021-01-01,primary_location.source.type:journal",
+  "operators": 2,
+  "status": "OK",
+  "count": 1,
+  "top15": [
+   {
+    "id": "https://openalex.org/W4309118541",
+    "title": "Performance of Narrow Band Wide Area Networks with Gateway Diversity",
+    "year": 2022,
+    "doi": "https://doi.org/10.3390/s22228831",
+    "type": "article",
+    "journal": "Sensors",
+    "oa": "https://www.mdpi.com/1424-8220/22/22/8831/pdf?version=1668505050"
+   }
+  ]
+ },
+ {
+  "topic": 14,
+  "scope": "context_any",
+  "date_run": "2026-11-15",
+  "database": "OpenAlex API",
+  "query": "LoRa AND \"spatial diversity\" AND gateway",
+  "filters": "none",
+  "operators": 2,
+  "status": "OK",
+  "count": 6,
+  "top15": [
+   {
+    "id": "https://openalex.org/W2805400283",
+    "title": "Analysis and Performance Optimization of LoRa Networks With Time and Antenna Diversity",
+    "year": 2018,
+    "doi": "https://doi.org/10.1109/access.2018.2839064",
+    "type": "article",
+    "journal": "IEEE Access",
+    "oa": "https://doi.org/10.1109/access.2018.2839064"
+   },
+   {
+    "id": "https://openalex.org/W3045976951",
+    "title": "Coverage Scalability Analysis of Multi-Cell LoRa Networks",
+    "year": 2020,
+    "doi": "https://doi.org/10.1109/icc40277.2020.9149081",
+    "type": "conference-paper",
+    "journal": "International Conference on Communications",
+    "oa": "https://zenodo.org/record/3820444"
+   },
+   {
+    "id": "https://openalex.org/W7154287355",
+    "title": "A Large-Scale LoRa Measurement Campaign in Urban and Suburban Environments",
+    "year": 2026,
+    "doi": "https://doi.org/10.17632/79vh7wnwhg",
+    "type": "dataset",
+    "journal": "Mendeley Data",
+    "oa": "https://doi.org/10.17632/79vh7wnwhg"
+   },
+   {
+    "id": "https://openalex.org/W4309118541",
+    "title": "Performance of Narrow Band Wide Area Networks with Gateway Diversity",
+    "year": 2022,
+    "doi": "https://doi.org/10.3390/s22228831",
+    "type": "article",
+    "journal": "Sensors",
+    "oa": "https://www.mdpi.com/1424-8220/22/22/8831/pdf?version=1668505050"
+   },
+   {
+    "id": "https://openalex.org/W7203735625",
+    "title": "Enabling Reliable and Scalable LoRa with Collision Resolution and Centralized Radio Access",
+    "year": 2026,
+    "doi": "https://doi.org/10.5075/epfl-thesis-11222",
+    "type": "dissertation",
+    "journal": "Infoscience (Ecole Polytechnique Fédérale de Lausanne)",
+    "oa": "https://infoscience.epfl.ch/handle/20.500.14299/266702"
+   },
+   {
+    "id": "https://openalex.org/W7120589506",
+    "title": "Detecção de incêndios florestais em áreas remotas através de redes LoRa",
+    "year": 2024,
+    "doi": null,
+    "type": "dissertation",
+    "journal": "LA Referencia (Red Federada de Repositorios Institucionales de Publicaciones Científicas)",
+    "oa": "http://repositorio.ufc.br/handle/riufc/77707"
+   }
+  ]
+ },
+ {
+  "topic": 15,
+  "scope": "journal_2021plus",
+  "date_run": "2026-11-15",
+  "database": "OpenAlex API",
+  "query": "LoRa AND (\"short frame\" OR \"payload size\" OR \"payload reduction\") AND latency",
+  "filters": "from_publication_date:2021-01-01,primary_location.source.type:journal",
+  "operators": 4,
+  "status": "OK",
+  "count": 9,
+  "top15": [
+   {
+    "id": "https://openalex.org/W7211898111",
+    "title": "OptFiD-LoRa: Optimized Federated Learning with Differential Privacy for Anomaly Detection in LoRa-IoTs: A Case Study on EDs",
+    "year": 2026,
+    "doi": "https://doi.org/10.1109/jiot.2026.3731208",
+    "type": "article",
+    "journal": "IEEE Internet of Things Journal",
+    "oa": "https://doi.org/10.1109/jiot.2026.3731208"
+   },
+   {
+    "id": "https://openalex.org/W4379232732",
+    "title": "MCST Scheme for UAV Systems over LoRa Networks",
+    "year": 2023,
+    "doi": "https://doi.org/10.3390/drones7060371",
+    "type": "article",
+    "journal": "Drones",
+    "oa": "https://www.mdpi.com/2504-446X/7/6/371/pdf?version=1685708876"
+   },
+   {
+    "id": "https://openalex.org/W7167712304",
+    "title": "ALFA: A Software Architecture for Bounded Incremental Firmware Updates in Energy‐Constrained LoRa‐Based IoT Systems",
+    "year": 2026,
+    "doi": "https://doi.org/10.1049/smc2.70029",
+    "type": "article",
+    "journal": "IET Smart Cities",
+    "oa": "https://doi.org/10.1049/smc2.70029"
+   },
+   {
+    "id": "https://openalex.org/W7171629061",
+    "title": "NTN-Aware Federated Learning Framework With Hierarchical Satellite Aggregation and LoRA-Based Parameter Efficiency",
+    "year": 2026,
+    "doi": "https://doi.org/10.1109/ojcoms.2026.3717994",
+    "type": "article",
+    "journal": "IEEE Open Journal of the Communications Society",
+    "oa": "https://doi.org/10.1109/ojcoms.2026.3717994"
+   },
+   {
+    "id": "https://openalex.org/W4225743377",
+    "title": "Evaluation of Communication Delays in LoRaWAN Networks for Indoor Emergency Scenarios",
+    "year": 2021,
+    "doi": "https://doi.org/10.1134/s1064226921140114",
+    "type": "article",
+    "journal": "Journal of Communications Technology and Electronics",
+    "oa": null
+   },
+   {
+    "id": "https://openalex.org/W7202261282",
+    "title": "A Hardware-Accelerated Analytical Framework for Dynamic Physical Layer Selection in Hybrid Low-Power Wide-Area Network Systems",
+    "year": 2026,
+    "doi": "https://doi.org/10.48084/etasr.18926",
+    "type": "article",
+    "journal": "Engineering Technology & Applied Science Research",
+    "oa": "https://etasr.com/index.php/ETASR/article/download/18926/6918"
+   },
+   {
+    "id": "https://openalex.org/W7134909494",
+    "title": "Enhanced Security of Bidirectional Communication in IoT-Driven Utility Networks Using Sertainty UXP and LoRaWAN",
+    "year": 2026,
+    "doi": "https://doi.org/10.3390/s26061752",
+    "type": "article",
+    "journal": "Sensors",
+    "oa": "https://www.mdpi.com/1424-8220/26/6/1752/pdf?version=1773137652"
+   },
+   {
+    "id": "https://openalex.org/W7214735863",
+    "title": "LoRaWAN-based federated learning for the internet of vehicles: a comprehensive survey of architectures, algorithms, and open challenges",
+    "year": 2026,
+    "doi": "https://doi.org/10.1016/j.comnet.2026.112833",
+    "type": "article",
+    "journal": "Computer Networks",
+    "oa": null
+   },
+   {
+    "id": "https://openalex.org/W7143279398",
+    "title": "Correction: LSML-SF: a lightweight stacked ML approach for spreading factor allocation in mobile IoT LoRaWAN networks",
+    "year": 2026,
+    "doi": "https://doi.org/10.3389/frai.2026.1819135",
+    "type": "erratum",
+    "journal": "Frontiers in Artificial Intelligence",
+    "oa": "https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2026.1819135/pdf"
+   }
+  ]
+ },
+ {
+  "topic": 15,
+  "scope": "context_any",
+  "date_run": "2026-11-15",
+  "database": "OpenAlex API",
+  "query": "LoRa AND (\"short frame\" OR \"payload size\" OR \"payload reduction\") AND latency",
+  "filters": "none",
+  "operators": 4,
+  "status": "OK",
+  "count": 14,
+  "top15": [
+   {
+    "id": "https://openalex.org/W7211898111",
+    "title": "OptFiD-LoRa: Optimized Federated Learning with Differential Privacy for Anomaly Detection in LoRa-IoTs: A Case Study on EDs",
+    "year": 2026,
+    "doi": "https://doi.org/10.1109/jiot.2026.3731208",
+    "type": "article",
+    "journal": "IEEE Internet of Things Journal",
+    "oa": "https://doi.org/10.1109/jiot.2026.3731208"
+   },
+   {
+    "id": "https://openalex.org/W4379232732",
+    "title": "MCST Scheme for UAV Systems over LoRa Networks",
+    "year": 2023,
+    "doi": "https://doi.org/10.3390/drones7060371",
+    "type": "article",
+    "journal": "Drones",
+    "oa": "https://www.mdpi.com/2504-446X/7/6/371/pdf?version=1685708876"
+   },
+   {
+    "id": "https://openalex.org/W4404062842",
+    "title": "Experimental Insights into the Performance of LoRa/LoRaWAN Radio Interface in Smart City Deployments",
+    "year": 2024,
+    "doi": "https://doi.org/10.20944/preprints202411.0254.v1",
+    "type": "preprint",
+    "journal": "Preprints.org",
+    "oa": "https://www.preprints.org/frontend/manuscript/01bd38aec745dbed5aa0a4a2617d7220/download_pub"
+   },
+   {
+    "id": "https://openalex.org/W7167712304",
+    "title": "ALFA: A Software Architecture for Bounded Incremental Firmware Updates in Energy‐Constrained LoRa‐Based IoT Systems",
+    "year": 2026,
+    "doi": "https://doi.org/10.1049/smc2.70029",
+    "type": "article",
+    "journal": "IET Smart Cities",
+    "oa": "https://doi.org/10.1049/smc2.70029"
+   },
+   {
+    "id": "https://openalex.org/W7171629061",
+    "title": "NTN-Aware Federated Learning Framework With Hierarchical Satellite Aggregation and LoRA-Based Parameter Efficiency",
+    "year": 2026,
+    "doi": "https://doi.org/10.1109/ojcoms.2026.3717994",
+    "type": "article",
+    "journal": "IEEE Open Journal of the Communications Society",
+    "oa": "https://doi.org/10.1109/ojcoms.2026.3717994"
+   },
+   {
+    "id": "https://openalex.org/W7219294371",
+    "title": "SISTEM DETEKSI LIGHTWEIGHT ATTACK BERBASIS ANALISIS LALU LINTAS PAKET PADA JARINGAN LoRa GATEWAY",
+    "year": 2026,
+    "doi": null,
+    "type": "dissertation",
+    "journal": "UMM Institutional Repository (University of Maine at Machias)",
+    "oa": "https://eprints.umm.ac.id/id/eprint/34171/3/BAB%20II.pdf"
+   },
+   {
+    "id": "https://openalex.org/W2776126075",
+    "title": "Comparison of LoRaWAN classes and their power consumption",
+    "year": 2017,
+    "doi": "https://doi.org/10.1109/scvt.2017.8240313",
+    "type": "conference-paper",
+    "journal": "IEEE Symposium on Communications and Vehicular Technology in the Benelux (SCVT)",
+    "oa": null
+   },
+   {
+    "id": "https://openalex.org/W4225743377",
+    "title": "Evaluation of Communication Delays in LoRaWAN Networks for Indoor Emergency Scenarios",
+    "year": 2021,
+    "doi": "https://doi.org/10.1134/s1064226921140114",
+    "type": "article",
+    "journal": "Journal of Communications Technology and Electronics",
+    "oa": null
+   },
+   {
+    "id": "https://openalex.org/W7202261282",
+    "title": "A Hardware-Accelerated Analytical Framework for Dynamic Physical Layer Selection in Hybrid Low-Power Wide-Area Network Systems",
+    "year": 2026,
+    "doi": "https://doi.org/10.48084/etasr.18926",
+    "type": "article",
+    "journal": "Engineering Technology & Applied Science Research",
+    "oa": "https://etasr.com/index.php/ETASR/article/download/18926/6918"
+   },
+   {
+    "id": "https://openalex.org/W4401781868",
+    "title": "Experimental Investigation of Spreading Factor, Payload Length and Collision Effects in LoRaWAN Radio Interface",
+    "year": 2024,
+    "doi": "https://doi.org/10.20944/preprints202408.1408.v1",
+    "type": "preprint",
+    "journal": "Preprints.org",
+    "oa": "https://doi.org/10.20944/preprints202408.1408.v1"
+   },
+   {
+    "id": "https://openalex.org/W7134909494",
+    "title": "Enhanced Security of Bidirectional Communication in IoT-Driven Utility Networks Using Sertainty UXP and LoRaWAN",
+    "year": 2026,
+    "doi": "https://doi.org/10.3390/s26061752",
+    "type": "article",
+    "journal": "Sensors",
+    "oa": "https://www.mdpi.com/1424-8220/26/6/1752/pdf?version=1773137652"
+   },
+   {
+    "id": "https://openalex.org/W7214735863",
+    "title": "LoRaWAN-based federated learning for the internet of vehicles: a comprehensive survey of architectures, algorithms, and open challenges",
+    "year": 2026,
+    "doi": "https://doi.org/10.1016/j.comnet.2026.112833",
+    "type": "article",
+    "journal": "Computer Networks",
+    "oa": null
+   },
+   {
+    "id": "https://openalex.org/W4414714465",
+    "title": "Contributions to energy-efficient multi-radio architectures for novel IoT scenarios",
+    "year": 2025,
+    "doi": "https://doi.org/10.5821/dissertation-2117-442724",
+    "type": "dissertation",
+    "journal": "UPCommons institutional repository (Universitat Politècnica de Catalunya)",
+    "oa": "https://upcommons.upc.edu/bitstreams/5bd0cace-cd54-464b-acf7-645b2c4bfd65/download"
+   },
+   {
+    "id": "https://openalex.org/W7143279398",
+    "title": "Correction: LSML-SF: a lightweight stacked ML approach for spreading factor allocation in mobile IoT LoRaWAN networks",
+    "year": 2026,
+    "doi": "https://doi.org/10.3389/frai.2026.1819135",
+    "type": "erratum",
+    "journal": "Frontiers in Artificial Intelligence",
+    "oa": "https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2026.1819135/pdf"
+   }
+  ]
+ },
+ {
+  "topic": 15,
+  "scope": "journal_2021plus",
+  "date_run": "2026-11-15",
+  "database": "OpenAlex API",
+  "query": "LoRa AND airtime AND (\"short packet\" OR \"short payload\") AND (emergency OR alert)",
+  "filters": "from_publication_date:2021-01-01,primary_location.source.type:journal",
+  "operators": 5,
+  "status": "OK",
+  "count": 0,
+  "top15": []
+ },
+ {
+  "topic": 15,
+  "scope": "context_any",
+  "date_run": "2026-11-15",
+  "database": "OpenAlex API",
+  "query": "LoRa AND airtime AND (\"short packet\" OR \"short payload\") AND (emergency OR alert)",
+  "filters": "none",
+  "operators": 5,
+  "status": "OK",
+  "count": 0,
+  "top15": []
+ },
+ {
+  "topic": 15,
+  "scope": "journal_2021plus",
+  "date_run": "2026-11-15",
+  "database": "OpenAlex API",
+  "query": "LoRaWAN AND (\"preamble\" OR \"header\") AND (overhead OR \"short messages\")",
+  "filters": "from_publication_date:2021-01-01,primary_location.source.type:journal",
+  "operators": 4,
+  "status": "OK",
+  "count": 2,
+  "top15": [
+   {
+    "id": "https://openalex.org/W7213975775",
+    "title": "Static Frequency-Based Canonical Coding as a Zero-Overhead Compression and Data Obfuscation Method for LoRaWAN IoT Sensors",
+    "year": 2026,
+    "doi": "https://doi.org/10.31861/sisiot2026.1.01019",
+    "type": "article",
+    "journal": "Security of Infocommunication Systems and Internet of Things",
+    "oa": "https://journals.chnu.edu.ua/sisiot/article/download/1228/1236"
+   },
+   {
+    "id": "https://openalex.org/W4321497739",
+    "title": "Assessing a Methodology for Evaluating the Latency of IPv6 with SCHC Compression in LoRaWAN Deployments",
+    "year": 2023,
+    "doi": "https://doi.org/10.3390/s23052407",
+    "type": "article",
+    "journal": "Sensors",
+    "oa": "https://www.mdpi.com/1424-8220/23/5/2407/pdf?version=1677038127"
+   }
+  ]
+ },
+ {
+  "topic": 15,
+  "scope": "context_any",
+  "date_run": "2026-11-15",
+  "database": "OpenAlex API",
+  "query": "LoRaWAN AND (\"preamble\" OR \"header\") AND (overhead OR \"short messages\")",
+  "filters": "none",
+  "operators": 4,
+  "status": "OK",
+  "count": 12,
+  "top15": [
+   {
+    "id": "https://openalex.org/W7213975775",
+    "title": "Static Frequency-Based Canonical Coding as a Zero-Overhead Compression and Data Obfuscation Method for LoRaWAN IoT Sensors",
+    "year": 2026,
+    "doi": "https://doi.org/10.31861/sisiot2026.1.01019",
+    "type": "article",
+    "journal": "Security of Infocommunication Systems and Internet of Things",
+    "oa": "https://journals.chnu.edu.ua/sisiot/article/download/1228/1236"
+   },
+   {
+    "id": "https://openalex.org/W2889556458",
+    "title": "Authenticated Preambles for Denial of Service Mitigation in LPWANs",
+    "year": 2018,
+    "doi": "https://doi.org/10.1007/978-3-030-00247-3_19",
+    "type": "conference-paper",
+    "journal": "Lecture notes in computer science",
+    "oa": null
+   },
+   {
+    "id": "https://openalex.org/W2951139839",
+    "title": "Authenticated Preambles for Denial of Service Mitigation in LPWANs",
+    "year": 2019,
+    "doi": "https://doi.org/10.48550/arxiv.1904.08179",
+    "type": "preprint",
+    "journal": "arXiv (Cornell University)",
+    "oa": "https://arxiv.org/pdf/1904.08179"
+   },
+   {
+    "id": "https://openalex.org/W2997341806",
+    "title": "Impact of SCHC Compression and Fragmentation in LPWAN: A Case Study with LoRaWAN",
+    "year": 2020,
+    "doi": "https://doi.org/10.3390/s20010280",
+    "type": "article",
+    "journal": "Sensors",
+    "oa": "https://www.mdpi.com/1424-8220/20/1/280/pdf?version=1578387308"
+   },
+   {
+    "id": "https://openalex.org/W3036283649",
+    "title": "Secure bootstrapping and header compression for IoT constrained networks",
+    "year": 2020,
+    "doi": "https://doi.org/10.1109/giots49054.2020.9119644",
+    "type": "conference-paper",
+    "journal": "Global Internet of Things Summit (GIoTS)",
+    "oa": null
+   },
+   {
+    "id": "https://openalex.org/W4321497739",
+    "title": "Assessing a Methodology for Evaluating the Latency of IPv6 with SCHC Compression in LoRaWAN Deployments",
+    "year": 2023,
+    "doi": "https://doi.org/10.3390/s23052407",
+    "type": "article",
+    "journal": "Sensors",
+    "oa": "https://www.mdpi.com/1424-8220/23/5/2407/pdf?version=1677038127"
+   },
+   {
+    "id": "https://openalex.org/W4384158872",
+    "title": "Performance analysis of SCHC compression for IPv6 in a real-world LoRaWAN deployment",
+    "year": 2023,
+    "doi": "https://doi.org/10.1109/i2mtc53148.2023.10175879",
+    "type": "conference-paper",
+    "journal": "IEEE International Instrumentation and Measurement Technology Conference",
+    "oa": null
+   },
+   {
+    "id": "https://openalex.org/W7225844084",
+    "title": "Optimizing LoRaWAN-to-satellite backhaul using SCHC for IoT-based wildfire detection",
+    "year": 2025,
+    "doi": null,
+    "type": "dissertation",
+    "journal": "Portuguese National Funding Agency for Science, Research and Technology (RCAAP Project by FCT)",
+    "oa": "http://hdl.handle.net/10773/48042"
+   },
+   {
+    "id": "https://openalex.org/W7160912325",
+    "title": "DTLS Handshake Optimization with SCHC in LPWAN: Testbed Implementation and Performance Analysis",
+    "year": 2026,
+    "doi": "https://doi.org/10.1109/wfcs67029.2026.11511619",
+    "type": "conference-paper",
+    "journal": "IEEE International Workshop on Factory Communication Systems (WFCS)",
+    "oa": null
+   },
+   {
+    "id": "https://openalex.org/W4412830283",
+    "title": "Realistic Modelling and Optimization of DTLS Handshakes in Constrained LPWAN Environments",
+    "year": 2025,
+    "doi": "https://doi.org/10.1109/cits65975.2025.11099413",
+    "type": "conference-paper",
+    "journal": "International Conference on Computer, Information and Telecommunication Systems",
+    "oa": null
+   },
+   {
+    "id": "https://openalex.org/W7203735625",
+    "title": "Enabling Reliable and Scalable LoRa with Collision Resolution and Centralized Radio Access",
+    "year": 2026,
+    "doi": "https://doi.org/10.5075/epfl-thesis-11222",
+    "type": "dissertation",
+    "journal": "Infoscience (Ecole Polytechnique Fédérale de Lausanne)",
+    "oa": "https://infoscience.epfl.ch/handle/20.500.14299/266702"
+   },
+   {
+    "id": "https://openalex.org/W3021913975",
+    "title": "Energy aware optimization for low power radio technologies",
+    "year": 2020,
+    "doi": "https://doi.org/10.5821/dissertation-2117-183230",
+    "type": "dissertation",
+    "journal": "UPCommons institutional repository (Universitat Politècnica de Catalunya)",
+    "oa": "https://upcommons.upc.edu/bitstream/2117/183230/1/TIS1de1.pdf"
+   }
+  ]
+ },
+ {
+  "topic": 16,
+  "scope": "journal_2021plus",
+  "date_run": "2026-11-15",
+  "database": "OpenAlex API",
+  "query": "ProVerif AND (LoRa OR LoRaWAN OR \"low-power wide-area\")",
+  "filters": "from_publication_date:2021-01-01,primary_location.source.type:journal",
+  "operators": 3,
+  "status": "OK",
+  "count": 4,
+  "top15": [
+   {
+    "id": "https://openalex.org/W4416313224",
+    "title": "Security analysis and improvement of key exchange protocol in LoRaWAN network",
+    "year": 2025,
+    "doi": "https://doi.org/10.1504/ijsnet.2025.149892",
+    "type": "article",
+    "journal": "International Journal of Sensor Networks",
+    "oa": null
+   },
+   {
+    "id": "https://openalex.org/W3157897910",
+    "title": "A Secure and LoRaWAN Compatible User Authentication Protocol for Critical Applications in the IoT Environment",
+    "year": 2021,
+    "doi": "https://doi.org/10.1109/tii.2021.3075440",
+    "type": "article",
+    "journal": "IEEE Transactions on Industrial Informatics",
+    "oa": null
+   },
+   {
+    "id": "https://openalex.org/W4382699871",
+    "title": "MAKA: Multi-Factor Authentication and Key Agreement Scheme for LoRa-Based Smart Grid Communication Services",
+    "year": 2023,
+    "doi": "https://doi.org/10.1080/03772063.2023.2225465",
+    "type": "article",
+    "journal": "IETE Journal of Research",
+    "oa": null
+   },
+   {
+    "id": "https://openalex.org/W4387421909",
+    "title": "Secure Registration Protocol for the Internet of Drones Using Blockchain and Physical Unclonable Function Technology",
+    "year": 2023,
+    "doi": "https://doi.org/10.3390/sym15101886",
+    "type": "article",
+    "journal": "Symmetry",
+    "oa": "https://www.mdpi.com/2073-8994/15/10/1886/pdf?version=1696684973"
+   }
+  ]
+ },
+ {
+  "topic": 16,
+  "scope": "context_any",
+  "date_run": "2026-11-15",
+  "database": "OpenAlex API",
+  "query": "ProVerif AND (LoRa OR LoRaWAN OR \"low-power wide-area\")",
+  "filters": "none",
+  "operators": 3,
+  "status": "OK",
+  "count": 4,
+  "top15": [
+   {
+    "id": "https://openalex.org/W4416313224",
+    "title": "Security analysis and improvement of key exchange protocol in LoRaWAN network",
+    "year": 2025,
+    "doi": "https://doi.org/10.1504/ijsnet.2025.149892",
+    "type": "article",
+    "journal": "International Journal of Sensor Networks",
+    "oa": null
+   },
+   {
+    "id": "https://openalex.org/W3157897910",
+    "title": "A Secure and LoRaWAN Compatible User Authentication Protocol for Critical Applications in the IoT Environment",
+    "year": 2021,
+    "doi": "https://doi.org/10.1109/tii.2021.3075440",
+    "type": "article",
+    "journal": "IEEE Transactions on Industrial Informatics",
+    "oa": null
+   },
+   {
+    "id": "https://openalex.org/W4382699871",
+    "title": "MAKA: Multi-Factor Authentication and Key Agreement Scheme for LoRa-Based Smart Grid Communication Services",
+    "year": 2023,
+    "doi": "https://doi.org/10.1080/03772063.2023.2225465",
+    "type": "article",
+    "journal": "IETE Journal of Research",
+    "oa": null
+   },
+   {
+    "id": "https://openalex.org/W4387421909",
+    "title": "Secure Registration Protocol for the Internet of Drones Using Blockchain and Physical Unclonable Function Technology",
+    "year": 2023,
+    "doi": "https://doi.org/10.3390/sym15101886",
+    "type": "article",
+    "journal": "Symmetry",
+    "oa": "https://www.mdpi.com/2073-8994/15/10/1886/pdf?version=1696684973"
+   }
+  ]
+ },
+ {
+  "topic": 16,
+  "scope": "journal_2021plus",
+  "date_run": "2026-11-15",
+  "database": "OpenAlex API",
+  "query": "LoRaWAN AND (\"join procedure\" OR \"key derivation\") AND (ProVerif OR Tamarin)",
+  "filters": "from_publication_date:2021-01-01,primary_location.source.type:journal",
+  "operators": 4,
+  "status": "OK",
+  "count": 0,
+  "top15": []
+ },
+ {
+  "topic": 16,
+  "scope": "context_any",
+  "date_run": "2026-11-15",
+  "database": "OpenAlex API",
+  "query": "LoRaWAN AND (\"join procedure\" OR \"key derivation\") AND (ProVerif OR Tamarin)",
+  "filters": "none",
+  "operators": 4,
+  "status": "OK",
+  "count": 2,
+  "top15": [
+   {
+    "id": "https://openalex.org/W3097527948",
+    "title": "Extensive Security Verification of the LoRaWAN Key-Establishment: Insecurities & Patches",
+    "year": 2020,
+    "doi": "https://doi.org/10.1109/eurosp48549.2020.00034",
+    "type": "conference-paper",
+    "journal": "IEEE European Symposium on Security and Privacy",
+    "oa": null
+   },
+   {
+    "id": "https://openalex.org/W4237810618",
+    "title": "2020 IEEE European Symposium on Security and Privacy (EuroS&P)",
+    "year": 2020,
+    "doi": "https://doi.org/10.1109/eurosp48549.2020",
+    "type": "paratext",
+    "journal": null,
+    "oa": null
+   }
+  ]
+ }
+]

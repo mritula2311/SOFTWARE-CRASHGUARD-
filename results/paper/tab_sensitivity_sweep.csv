@@ -1,0 +1,7 @@
+Baseline,Metric,beats,tie,loses,cells,Cells where P3 does not beat the baseline,Origin,results.json key
+P1,reach10_critical,16,6,2,24,"steady:base,steady:capture_none,steady:cars200,steady:duty0p1,steady:loss0,steady:loss20,steady:loss40,steady:loss60",SIMULATED,t8.count.P3_vs_P1.reach10_critical.n_*
+P1,reach30_critical,15,9,0,24,"steady:base,steady:capture_none,steady:cars200,steady:cars50,steady:duty0p1,steady:hbpayload26,steady:loss0,steady:loss20,steady:sf9",SIMULATED,t8.count.P3_vs_P1.reach30_critical.n_*
+P1,mis_triage,24,0,0,24,none,SIMULATED,t8.count.P3_vs_P1.mis_triage.n_*
+P2,reach10_critical,11,13,0,24,"burst:base,burst:burst10,burst:burst60,burst:capture_none,burst:cars200,burst:cars50,steady:duty0p1,burst:loss0,steady:loss0,burst:loss20,steady:loss20,burst:loss40,steady:loss60",SIMULATED,t8.count.P3_vs_P2.reach10_critical.n_*
+P2,reach30_critical,1,17,6,24,"burst:base,steady:base,burst:burst10,burst:burst60,burst:capture_none,steady:capture_none,burst:cars200,steady:cars200,burst:cars50,steady:cars50,burst:duty0p1,steady:duty0p1,burst:hbpayload26,steady:hbpayload26,burst:loss0,steady:loss0,burst:loss20,steady:loss20,burst:loss40,burst:loss60,steady:loss60,burst:sf9,steady:sf9",SIMULATED,t8.count.P3_vs_P2.reach30_critical.n_*
+P2,mis_triage,24,0,0,24,none,SIMULATED,t8.count.P3_vs_P2.mis_triage.n_*

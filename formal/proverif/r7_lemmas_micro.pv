@@ -1,0 +1,73 @@
+(* Round 7 B2.2: micro-confirm binding with the pending index, rerun with pseudonyms. As vf3_micro_confirm_index.pv, but the provisional frame carries the pseudonym p = prf(k_v, <tagP, id>) instead of the vehicle id:
+   <FLASH, p, ct, t> with t = mac(K_v, <tagF, p, ct>); the base resolves p through its window table, accepts the frame and stores (index, v, T1 = t) in its pending table. The micro frames carry the index only.
+   The attacker may reveal any vehicle key. Queries as vf3: (i) acceptance of a micro-confirm implies the vehicle sent it; (ii) it is bound to a flash of the same vehicle with that T1; (iii) a micro-cancel is accepted only
+   if sent; (iv) executability. ProVerif 2.05. *)
+free c: channel.
+const tagF: bitstring.
+const tagM: bitstring.
+const tagX: bitstring.
+const tagP: bitstring.
+const tagE: bitstring.
+const mFlash: bitstring.
+const mMicro: bitstring.
+const mCancel: bitstring.
+fun kdf(bitstring, bitstring): bitstring.
+fun mac(bitstring, bitstring): bitstring.
+fun prf(bitstring, bitstring): bitstring.
+fun senc(bitstring, bitstring, bitstring): bitstring.
+table pending(bitstring, bitstring, bitstring).
+table window(bitstring, bitstring, bitstring).
+
+event CarSentFlash(bitstring, bitstring).
+event BaseAcceptFlash(bitstring, bitstring).
+event CarSentMicro(bitstring, bitstring, bitstring).
+event BaseAcceptMicro(bitstring, bitstring, bitstring).
+event CarSentCancel(bitstring, bitstring).
+event BaseAcceptCancel(bitstring, bitstring).
+event Revealed(bitstring).
+
+query v: bitstring, t: bitstring, x: bitstring; event(BaseAcceptMicro(v, t, x)) ==> event(CarSentMicro(v, t, x)) || event(Revealed(v)).
+query v: bitstring, t: bitstring, x: bitstring; event(BaseAcceptMicro(v, t, x)) ==> event(CarSentFlash(v, t)) || event(Revealed(v)).
+query v: bitstring, t: bitstring; event(BaseAcceptCancel(v, t)) ==> event(CarSentCancel(v, t)) || event(Revealed(v)).
+query v: bitstring, t: bitstring, x: bitstring; event(BaseAcceptMicro(v, t, x)).
+
+let Reveal(master: bitstring) = in(c, v: bitstring); event Revealed(v); out(c, kdf(master, v)).
+
+let Car(master: bitstring) =
+  in(c, (v: bitstring, x: bitstring));
+  new id: bitstring; new payload: bitstring;
+  let kv = kdf(master, v) in
+  let p = prf(kv, (tagP, id)) in
+  let ct = senc(kdf(kv, tagE), id, payload) in
+  let t = mac(kv, (tagF, p, ct, id)) in
+  event CarSentFlash(v, t);
+  insert window(p, v, id);
+  out(c, (mFlash, p, ct, t));
+  in(c, ix: bitstring);
+  ( ( event CarSentMicro(v, t, x); out(c, (mMicro, ix, x, mac(kv, (tagM, t, x)))) )
+  | ( event CarSentCancel(v, t); out(c, (mCancel, ix, mac(kv, (tagX, t)))) ) ).
+
+let BaseFlash(master: bitstring) =
+  in(c, (=mFlash, p: bitstring, ct: bitstring, t: bitstring));
+  get window(=p, v, id) in
+  if t = mac(kdf(master, v), (tagF, p, ct, id)) then
+  event BaseAcceptFlash(v, t);
+  new ix: bitstring;
+  insert pending(ix, v, t);
+  out(c, ix).
+
+let BaseMicro(master: bitstring) =
+  in(c, (=mMicro, ix: bitstring, x: bitstring, m: bitstring));
+  get pending(=ix, v, t) in
+  if m = mac(kdf(master, v), (tagM, t, x)) then
+  event BaseAcceptMicro(v, t, x).
+
+let BaseCancel(master: bitstring) =
+  in(c, (=mCancel, ix: bitstring, m: bitstring));
+  get pending(=ix, v, t) in
+  if m = mac(kdf(master, v), (tagX, t)) then
+  event BaseAcceptCancel(v, t).
+
+process
+  new master: bitstring;
+  ( !Reveal(master) | !Car(master) | !BaseFlash(master) | !BaseMicro(master) | !BaseCancel(master) )

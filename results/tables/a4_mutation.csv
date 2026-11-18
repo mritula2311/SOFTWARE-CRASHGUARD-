@@ -1,0 +1,41 @@
+id,file,description,status
+A101,src/crashguard/a4_a1.py,tag domain prefix removed,KILLED
+A102,src/crashguard/a4_a1.py,provisional type check removed,KILLED
+A103,src/crashguard/a4_a1.py,tag covers 15 bytes only,KILLED
+A104,src/crashguard/a4_a1.py,freshness field narrowed to 3 bytes,KILLED
+A105,src/crashguard/a4_a1.py,coarse position scale,KILLED
+A106,src/crashguard/a4_a1.py,ACK names epoch and seq swapped,KILLED
+A107,src/crashguard/a4_a1.py,ACK check: and becomes or,KILLED
+A108,src/crashguard/a4_a1.py,ACK tag not verified,KILLED
+A109,src/crashguard/a4_a1.py,ACK type check removed,KILLED
+A110,src/crashguard/a4_a1.py,deadline boundary,KILLED
+A111,src/crashguard/a4_a1.py,confirm reserve ignored,KILLED
+A112,src/crashguard/a4_a1.py,deadline reason mislabelled,KILLED
+A113,src/crashguard/a4_a1.py,retraction does not withdraw the provisional alert,KILLED
+A114,src/crashguard/a4_a1.py,cap off by one,KILLED
+A115,src/crashguard/a4_a1.py,after-confirm rule never fires,KILLED
+A116,src/crashguard/a4_a1.py,provisional stops without the ACK reaching the car,KILLED
+A117,src/crashguard/a4_a1.py,listen window skipped after a provisional frame,KILLED
+A118,src/crashguard/a4_a1.py,duty guard of the radio loop loosened,KILLED
+A119,src/crashguard/a4_a1.py,one CANCEL too many,KILLED
+A120,src/crashguard/a4_a1.py,delivery ignores a received CANCEL,KILLED
+A121,src/crashguard/a4_a1.py,confirm sent before its ready time,KILLED
+A122,src/crashguard/a4_a1.py,compute time dropped from the ready time,KILLED
+A123,src/crashguard/a4_a1.py,provisional airtime from a wrong length,KILLED
+A124,src/crashguard/a4_a1.py,ACK stop reason mislabelled,KILLED
+A125,src/crashguard/a4_a1.py,confirm ACK does not stop the provisional repetition (loop branch),SURVIVED
+A126,src/crashguard/a4_a1.py,session accepts an id it never sent,KILLED
+B201,src/crashguard/a4_a2.py,ranking period length,KILLED
+B202,src/crashguard/a4_a2.py,ranking order reversed,KILLED
+B203,src/crashguard/a4_a2.py,gateways that never heard the device are ranked,KILLED
+B204,src/crashguard/a4_a2.py,start boundary off by one,KILLED
+B205,src/crashguard/a4_a2.py,frames-ahead rule removed,KILLED
+B206,src/crashguard/a4_a2.py,loss rate inverted,KILLED
+B207,src/crashguard/a4_a2.py,receiver set keeps only the last gateway,KILLED
+B208,src/crashguard/a4_a2.py,set reception requires all gateways,KILLED
+B209,src/crashguard/a4_a2.py,device value not normalised,KILLED
+B210,src/crashguard/a4_a2.py,delivery always true,KILLED
+B211,src/crashguard/a4_a2.py,band edge,KILLED
+C301,src/crashguard/a4_common.py,one lost frame too many per gap,KILLED
+C302,src/crashguard/a4_common.py,"copies of a frame are added, not OR-ed",KILLED
+C303,src/crashguard/a4_common.py,gap limit loosened,KILLED

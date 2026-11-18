@@ -1,0 +1,30 @@
+id,file,description,status
+L502,src/crashguard/r5_l5.py,one try too many in the custom model,KILLED
+L503,src/crashguard/r5_l5.py,airtime not added to the delay,KILLED
+L504,src/crashguard/r5_l5.py,receive window not added between tries,KILLED
+L505,src/crashguard/r5_l5.py,retry rule,KILLED
+L506,src/crashguard/r5_l5.py,trace end boundary,KILLED
+L509,src/crashguard/r5_l5.py,flash deadline doubled,KILLED
+L510,src/crashguard/r5_l5.py,alert deadline boundary,KILLED
+L511,src/crashguard/r5_l5.py,compute time left out,KILLED
+L512,src/crashguard/r5_l5.py,final window without compute,KILLED
+L513,src/crashguard/r5_l5.py,cancelled provisional alerts counted as aware,KILLED
+L514,src/crashguard/r5_l5.py,flash ignored when both stages alarm,KILLED
+L515,src/crashguard/r5_l5.py,cap value,KILLED
+L516,src/crashguard/r5_l5.py,percentile,KILLED
+L517,src/crashguard/r5_l5.py,conditional includes the capped events,KILLED
+L518,src/crashguard/r5_l5.py,flash and alert draws tied together,KILLED
+L519,src/crashguard/r5_l5.py,reduction sign,KILLED
+L520,src/crashguard/r5_l5.py,lower limit,KILLED
+L521,src/crashguard/r5_l5.py,p direction,KILLED
+L523,src/crashguard/r5_l5.py,grid subset ignored for a_hi,KILLED
+L524,src/crashguard/r5_l5.py,grid subset ignored for b_lo,KILLED
+L525,src/crashguard/r5_l5.py,budget loosened,SURVIVED
+L526,src/crashguard/r5_l5.py,budget check loosened,KILLED
+L527,src/crashguard/r5_l5.py,maximises instead of minimises,KILLED
+L528,src/crashguard/r5_l5.py,two-of-three rule uses the smallest p,KILLED
+L529,src/crashguard/r5_l5.py,lower limit not required,KILLED
+L534,src/crashguard/r5_l5.py,margin of 10 per cent reduced,KILLED
+L530,src/crashguard/r5_l5.py,tie needs only one arm at the cap,KILLED
+L531,src/crashguard/r5_l5.py,ns-3 flash delay without compute time,KILLED
+L532,src/crashguard/r5_l5.py,ns-3 alert delay measured from the crash,KILLED

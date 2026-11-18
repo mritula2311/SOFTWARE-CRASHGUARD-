@@ -1,0 +1,68 @@
+(* Finalize run F1: the micro frame carries a one-byte pending index (here: a name chosen by the base and sent in clear; the attacker may replace it by any name) instead of the vehicle and T1; the base looks up (v, T1) in its pending table by the index. Otherwise the model of r6_micro_confirm.pv. Round 6, R6-1 (docs/02_preregistration/PREREGISTRATION_V17.md section 3): chained micro-confirm and micro-cancel. ProVerif 2.05, symbolic model with perfect cryptography.
+   Provisional frame: <'FLASH', v, id, t> with the tag t = mac(K_v, <tagF, v, id>) (T1 in the text). The base stores (v, t) in a pending table when it accepts the frame.
+   Micro-confirm: <'MICRO', v, t, x, m> with m = mac(K_v, <tagM, t, x>); micro-cancel: <'CANCEL', v, t, m> with m = mac(K_v, <tagX, t>). The frame carries the vehicle id here (the short id of the layout is an abstraction of it).
+   x stands for the severity class, the event type and the position offset (chosen by the attacker, which is the worst case). K_v = kdf(master, v); the attacker may compromise any vehicle by asking for its key (Revealed).
+   The control file r6_micro_confirm_control.pv is the same model with T1 removed from the tag input; the binding query must then fail. *)
+free c: channel.
+const tagF: bitstring.
+const tagM: bitstring.
+const tagX: bitstring.
+const mFlash: bitstring.
+const mMicro: bitstring.
+const mCancel: bitstring.
+fun kdf(bitstring, bitstring): bitstring.
+fun mac(bitstring, bitstring): bitstring.
+table pending(bitstring, bitstring, bitstring).  (* index, vehicle, T1 *)
+
+event CarSentFlash(bitstring, bitstring).
+event BaseAcceptFlash(bitstring, bitstring).
+event CarSentMicro(bitstring, bitstring, bitstring).
+event BaseAcceptMicro(bitstring, bitstring, bitstring).
+event CarSentCancel(bitstring, bitstring).
+event BaseAcceptCancel(bitstring, bitstring).
+event Revealed(bitstring).
+
+(* (i) acceptance implies that the vehicle sent this micro-confirm for this T1 and content, unless the vehicle's own key was revealed *)
+query v: bitstring, t: bitstring, x: bitstring; event(BaseAcceptMicro(v, t, x)) ==> event(CarSentMicro(v, t, x)) || event(Revealed(v)).
+(* (ii) acceptance implies that the same vehicle sent the flash whose tag is T1 (binding to a flash of the same vehicle) *)
+query v: bitstring, t: bitstring, x: bitstring; event(BaseAcceptMicro(v, t, x)) ==> event(CarSentFlash(v, t)) || event(Revealed(v)).
+(* (iii) a micro-cancel is accepted only if the vehicle sent it: the holder of another vehicle's key cannot forge it *)
+query v: bitstring, t: bitstring; event(BaseAcceptCancel(v, t)) ==> event(CarSentCancel(v, t)) || event(Revealed(v)).
+(* executability: a micro-confirm can be accepted *)
+query v: bitstring, t: bitstring, x: bitstring; event(BaseAcceptMicro(v, t, x)).
+
+let Reveal(master: bitstring) = in(c, v: bitstring); event Revealed(v); out(c, kdf(master, v)).
+
+let Car(master: bitstring) =
+  in(c, (v: bitstring, x: bitstring));
+  new id: bitstring;
+  let t = mac(kdf(master, v), (tagF, v, id)) in
+  event CarSentFlash(v, t);
+  out(c, (mFlash, v, id, t));
+  in(c, ix: bitstring); (* the index of the ACK; an attacker may supply any name, the worst case *)
+  ( ( event CarSentMicro(v, t, x); out(c, (mMicro, ix, x, mac(kdf(master, v), (tagM, t, x)))) )
+  | ( event CarSentCancel(v, t); out(c, (mCancel, ix, mac(kdf(master, v), (tagX, t)))) ) ).
+
+let BaseFlash(master: bitstring) =
+  in(c, (=mFlash, v: bitstring, id: bitstring, t: bitstring));
+  if t = mac(kdf(master, v), (tagF, v, id)) then
+  event BaseAcceptFlash(v, t);
+  new ix: bitstring;
+  insert pending(ix, v, t);
+  out(c, ix).
+
+let BaseMicro(master: bitstring) =
+  in(c, (=mMicro, ix: bitstring, x: bitstring, m: bitstring));
+  get pending(=ix, v, t) in
+  if m = mac(kdf(master, v), (tagM, t, x)) then
+  event BaseAcceptMicro(v, t, x).
+
+let BaseCancel(master: bitstring) =
+  in(c, (=mCancel, ix: bitstring, m: bitstring));
+  get pending(=ix, v, t) in
+  if m = mac(kdf(master, v), (tagX, t)) then
+  event BaseAcceptCancel(v, t).
+
+process
+  new master: bitstring;
+  ( !Reveal(master) | !Car(master) | !BaseFlash(master) | !BaseMicro(master) | !BaseCancel(master) )

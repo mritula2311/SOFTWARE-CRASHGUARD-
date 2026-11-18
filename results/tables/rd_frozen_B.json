@@ -1,0 +1,75 @@
+{
+ "code": {
+  "data/processed/pa_design.json": "6580b67ce02d7120c028433502f4249570b395238967e465a153c5ff51df4fa0",
+  "data/processed/pa_held.pkl": "74d945ad7da45d9185c59de275d1bcfa174603f905538084cd7e762666db2fd2",
+  "firmware_rd/build.sh": "431255e8277fda203d43ef23ac77ef949273fe847996859b2ac47d4cf4fb69d6",
+  "firmware_rd/cg_rd.c": "d361833ee931f357f3a05cb7ffe31e4db6f5932c6fa693ecfbb384cb6829f8f6",
+  "firmware_rd/cg_rd.h": "0339165426486d8a0aa94c1f752344603790dd37660764f4c8facc9aeaed1adf",
+  "firmware_rd/cg_rd_cli.c": "ebfbc6813ecdce84db8e679b38adc6c39d8a09ae3c8fb19bbb18600faa52b112",
+  "firmware_rd/cg_stubs.c": "5423a28cea020d1ead9b4884173c1e530de98bbe05e2a04614482c750d4550a6",
+  "firmware_rd/size.sh": "3f79593c1d3200194f3df1d278b54ee555ef841feab18de85749ea4d0653d2c2",
+  "firmware_rd/tweetnacl.c": "02e65bc3013ff2168983365e55906bc783c4c7e0a60d8100f17bb303a17175c4",
+  "firmware_rd/tweetnacl.h": "43f29ad721d9927b747b0100ab4160c119e7bb180c7c98a66e4bf79d31244287",
+  "results/tables/s6_events_seed42_a1.csv": "4f41bb7b8bdd9f301ee31d7141a03a3c440b3344053d6559170348ea32b71bd7",
+  "src/crashguard/ar_r1.py": "1e21487396a312a2cbe2331a42351d08017c3efe64db893b350e13ee5f892fb4",
+  "src/crashguard/ar_r3.py": "d7743d093c03f5ec17aef4cd0bca087d286c0170c20c4aa5c835e7bcb42d5f8b",
+  "src/crashguard/capacity.py": "454c2e9b4e45f4a77946a67ea760a7f965ad837bfdcf4a069d4c3922fc0ebacb",
+  "src/crashguard/fin_g.py": "9381e93874d018a9f23526bcd163ed31fe7bb5f256e0d49b29fb2a9e7e188b4a",
+  "src/crashguard/fin_sim.py": "3d106d5d6ff86a762b5166381671460f1cc1f29709345571bf52ae963931838b",
+  "src/crashguard/lora.py": "ac1e7ff21bc68c025344da0c7d3a4050a3e0eff91832cf10b61417637ca5ef01",
+  "src/crashguard/pa_sim.py": "5f79c0df071ad50c96f4bb09313484e55672ea8a38add17aeb0cfe8e0d2c3636",
+  "src/crashguard/packet.py": "6b6684c18691238a93171828aafd73312d25890850bc593df08eb32146c30edc",
+  "src/crashguard/rd_common.py": "b2c4e99ee46fdcf7a8b96d8271602e4a3001907426077a8d85ed811f21e8107e",
+  "src/crashguard/rd_d2_model.py": "022827fe6bc3ebcb3b0f864b35c7c7ddfdd89616c9e75c0c2298acb413c3407d",
+  "src/crashguard/rd_d3.py": "05e327554cbabe38f3f9a5650539d326a7126cbf23bdda33e2b326093fb53de4",
+  "src/crashguard/rd_d4.py": "4c17640f0715b6f612ec81449e0f90bd9d09adea2b3577f28ec4e00229a23f4e",
+  "src/crashguard/rd_dev.py": "9820d01e8bcd80acc9624149a48d303e01561743c6f354b0a1601048e51962ff",
+  "src/crashguard/rd_dev_b.py": "4e31c1edb313e01a1bea56839d56a902d13aec7d86f3c728262b892347b89f9f",
+  "src/crashguard/rd_eval.py": "2d310526ad3d80bb2ad32f111c16c6f7373a86332c6acc5d1410fb84ed8645fc",
+  "src/crashguard/rd_firmware.py": "504448bad77bb5d39e942beead8b877e2d0682da279e04551a51404c7aa3ce4b",
+  "src/crashguard/rd_fresh_a.py": "8aed778d3165abceddfc77bc7cf7cff957031d245fb719a6c7a3ae9a1a1e3fbf",
+  "src/crashguard/rd_fresh_b.py": "80e63ff0c2dc7ab1aabd4132224ea1a12b396cc18d2f19bb62b7101c63ecf69f",
+  "src/crashguard/rd_policy.py": "290af15223591baea233a04305a8d9482b7de6345fb7c4202e5ebe5b71c9eeef",
+  "src/crashguard/replay.py": "b8d3ecd963804787c45a055809a646ed7f34dfe45b2ea7533b4c6add0ca2fa01",
+  "src/crashguard/results.py": "8c90805c5cdc791ae295ff536f0bbb6b221d85e8e5b305df17e4e8ad71214099",
+  "src/crashguard/s11_sct.py": "6a800a5acbb06571feb7699fe16425a1dfc77b43eddac5f0262cd23f5c2811c0",
+  "src/crashguard/sct_sim.py": "1af3f7f3b0c4883f32e3b44b9a393a9f4461354db9d97a7ecefd0e2f03e4dedb",
+  "src/crashguard/world_sim.py": "eafcfa50f7475ac20f52445d9bef7d0ebc0679f7663991b64ff2e491772a1ded"
+ },
+ "dev_floor_met": true,
+ "dev_log_sha256": "4cd5e79c3196a2f30b241b11115a56f95c4165ca879a5df1a0b2a699b3b8719f",
+ "frozen_A_sha256": "497590576373d6ac2671eccfc98b7ae789811a73e68f80b06b01429a164dfaad",
+ "params": {
+  "d1": {
+   "forget": 0.97,
+   "g0": 1.5,
+   "l0": 0.3,
+   "n0": 6.0,
+   "rho": [
+    0.0,
+    0.2,
+    0.5,
+    0.8
+   ],
+   "share": [
+    0.0,
+    0.0,
+    0.3,
+    0.5
+   ]
+  },
+  "d2": {
+   "defer_scale": 1.0,
+   "max_defers": 3,
+   "max_ids": 24,
+   "sig_len": 64,
+   "tc": 3.0,
+   "thr": 2
+  },
+  "d3": {
+   "alt": true,
+   "m": 1.0,
+   "thr3": 2
+  }
+ }
+}

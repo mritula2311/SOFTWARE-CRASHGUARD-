@@ -1,0 +1,12 @@
+lemma: executable
+command: tamarin-prover  --prove=executable formal/ratchet.spthy
+maude tool: 'maude'
+ checking version: 3.5.1. OK.
+ checking installation: OK.
+[Theory Ratchet] Theory loaded
+[Theory Ratchet] Theory translated
+[Theory Ratchet] Derivation checks started
+[Theory Ratchet] Derivation checks ended
+[Theory Ratchet] Theory closed
+[Saturating Sources] Step 1 (Max 5)
+[Saturating Sources] Done

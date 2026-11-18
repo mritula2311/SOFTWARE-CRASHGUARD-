@@ -1,0 +1,29 @@
+
+
+
+Tool: ProVerif 2.05 built from the project's source archive (SHA-256 \texttt{4871f53c32ab4a04669a060c4886ba5d9080496963fb980a9a62d2c429ceabc4}) in WSL. Models in \texttt{formal/proverif/}, outputs in \texttt{formal/out/proverif/}, runner \texttt{scripts/wsl\_proverif.sh}. Keys \texttt{a4.a3.proverif.*}. Preregistration: \texttt{PREREGISTRATION\_V15.md} section 4. The time box of 3 hours was not used up: the four models ran in under a second each; one further formulation did not finish in 300 s.
+
+The property is a correspondence over distinct alert instances: \texttt{event(CarSend(v, id, i1)) \&\& event(CarSend(v, id, i2)) ==> i1 = i2} (two different alert instances never carry the same id). The models with a base also check authenticity of acceptance (\texttt{event(BaseAccept(v, id)) ==> event(CarSendId(v, id)) || event(Revealed(v))}). The base's seen-set is not modelled (ProVerif has no deletion), so injective agreement is not asked.
+
+{\scriptsize\raggedright
+\begin{longtable}{p{0.237\linewidth}p{0.237\linewidth}p{0.237\linewidth}p{0.237\linewidth}}
+\toprule
+Model & What it models & Query & Result \\
+\midrule
+\endhead
+\texttt{carid\_frozen\_same\_epoch.pv} & Frozen design (id = epoch and sequence). The environment chooses the epoch at every boot; any number of boots (replication); a reboot may complete inside the second of an earlier alert & id reuse & \textbf{attack found} (false) \\
+ &  & authenticity of acceptance & proved \\
+\texttt{carid\_frozen\_next\_epoch.pv} & Frozen design with the timing assumption of the Tamarin model (a reboot completes in a later epoch), time as ProVerif phases & id reuse & proved, \textbf{bounded}: three epochs, two reboots \\
+\texttt{carid\_bootctr\_same\_epoch.pv} & Boot-counter variant (id = boot counter, epoch, sequence; one non-volatile write per boot, a fresh name per boot); the same environment as model 1 & id reuse & \textbf{proved}, any number of boots, no timing assumption \\
+ &  & authenticity of acceptance & proved \\
+\texttt{carid\_bootctr\_nowrite.pv} & Negative control: the variant when the write does not persist (one counter value for every boot) & id reuse & attack found (false) \\
+\texttt{carid\_frozen\_chain.pv} & Frozen design, unbounded boots, "later epoch" order built from a successor constructor and a private hand-over channel & id reuse & \textbf{undecided}: no result in 300 s (timeout) \\
+\bottomrule
+\end{longtable}}
+
+\textbf{Attack found on the frozen design (model 1).} ProVerif's trace: the attacker supplies the same epoch value to two copies of the boot process (two boots of one car); both send an alert with the id (epoch, s1), carrying different alert instances. This is the case in which the car reboots inside the GPS second of an earlier alert and the sequence counter, which is lost at a reboot, starts again at s1. The frozen design excludes it only through a timing assumption (the boot lasts at least one GPS second), which the Tamarin model builds in and which neither tool can check against hardware.
+
+\textbf{Reading.} (1) The lemma does not hold for the frozen design without the timing assumption; with the assumption it holds, but the proof in model 2 is bounded and follows from distinct epochs, which is the assumption itself, so it adds little. (2) The boot-counter variant removes the dependence on the boot duration: with a counter that persists and never wraps, ids of different boots differ whatever the clock does (model 3); the control (model 4) shows that the result rests on that write assumption. (3) The unbounded ordered-time formulation of the frozen design was tried once (model 5, a successor constructor and a hand-over channel) and did not terminate in 300 s; the reason was not determined, and no other formulation was tried. Tamarin 1.12.0 likewise left its unbounded formulations undecided (\texttt{pp.c4.variant.*}, round 3). The question is therefore decided in two ways only: attack found without the timing assumption, proved with a persistent boot counter.
+
+\textbf{Consequence for the design.} The frozen design needs either the explicit assumption that a reboot takes at least one GPS second before the next time-stamped alert, or the boot counter. The boot-counter variant is a design recommendation, not part of the frozen design: it costs one non-volatile write per boot and one byte in every frame (the 24-byte provisional frame of A1 would become 25 bytes). Symbolic proofs assume perfect cryptography and a persistent counter; nothing here says an implementation is secure.
+

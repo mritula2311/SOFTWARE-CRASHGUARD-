@@ -1,0 +1,151 @@
+
+
+
+Date: 2026-11-15. Branch \texttt{algo4} from tag \texttt{paper-v1}. Key prefix \texttt{a4.}. Committed before any development run. No tagged result and no existing key is changed. Hardware data (\texttt{data/hardware}) is not used. Results of this round are reported as a separate round 4; they never change an earlier verdict.
+
+\subsection*{0. What was looked at before this file, and what this file corrects}
+
+Looked at: the code and results of round 3 and of the paper session (\texttt{r3\_t1.py}, \texttt{ar\_r3.py}, \texttt{pp\_r3\_ns3.py}, \texttt{xsim/ns3/xsim\_alert.cc}, the Tamarin models in \texttt{formal/}, \texttt{docs/03\_results/PAPER\_P1\_R3\_NS3.md}); the column layout and row counts of the files of a second trace dataset (section 1.2); that ProVerif 2.05 builds in WSL. \textbf{No loss rate, no replay result and no ns-3 result of any new algorithm had been computed.}
+
+\textbf{Correction to the task text (found while reading the code, before any run).} The task text says the long provisional frame is what breaks the SF9 airtime bound. In the frozen R3 the provisional frame is already short: a 14-byte flash (\texttt{ar\_r3.py}, \texttt{r3\_t1.py}, \texttt{xsim\_alert.cc}); the full alert is 97 bytes. The extra airtime at SF9 (+0.538 to +0.543, limit 0.40) comes from the flash costing 0.31 of the alert's time on air at SF9 (a fixed preamble and header), sent once per alarmed event, plus the three CANCEL frames of each retraction. The A1 frame of 24 bytes costs 0.386 of the alert's time on air at SF9 (\texttt{lora.airtime\_ms}: 205.8 ms against 533.5 ms), which is longer than the flash, and A1 sends it more than once when it is not acknowledged. So the preregistered expectation is that \textbf{H-A1a fails} (extra airtime rises above the +0.54 of R3). The test is run as specified and its result of record is the ns-3 measurement; this paragraph is written so that the expectation is on record before the run. The mechanism A1 can still help is delivery before the deadline (H-A1b).
+
+\subsection*{1. Data roles}
+
+\subsubsection*{1.1 LoED (CC BY 4.0, Zenodo 4121430, SHA-256 \texttt{8960cc3a...}, as in V14)}
+
+{\scriptsize\raggedright
+\begin{longtable}{p{0.317\linewidth}p{0.317\linewidth}p{0.317\linewidth}}
+\toprule
+Role & Devices & Use in round 4 \\
+\midrule
+\endhead
+DEVELOPMENT (round-3 HELD-OUT half, \texttt{half = 1} of V14 section 1.2 rule 6) & about half of the included devices & development runs of A1 and A2 only (at most 5 logged iterations per algorithm); never in a confirmatory test \\
+RESERVE (round-3 DEVELOPMENT half, \texttt{half = 0}) & the other half & used in round 3 only for descriptive statistics and run checks, never as a test set and never tuned on. It is the test set of A2 (section 3) and a descriptive check of A1 \\
+\bottomrule
+\end{longtable}}
+
+\subsubsection*{1.2 Fresh held-out data for A1 (trace-driven)}
+
+The dataset named in the task (Measurements of LoRaWAN Technology in Urban Scenarios, Data 2021, 6(6), 62; Zenodo 6228358) was already examined in V14: it holds one device (1,527 messages), so no test over devices is possible and no gateway sets are given. Another public per-packet dataset with frame counters was obtained:
+
+{\scriptsize\raggedright
+\begin{longtable}{p{0.475\linewidth}p{0.475\linewidth}}
+\toprule
+Item & Value \\
+\midrule
+\endhead
+Dataset & "LoRaWAN Traffic Analysis Dataset", A. Povalac and J. Kral, Brno University of Technology \\
+Source & Zenodo record 7919213, version v1 (10 May 2023), file \texttt{csv.zip} (265,164,055 bytes), DOI 10.5281/zenodo.7919213 \\
+Licence & CC BY 4.0 \\
+Downloaded & 2026-11-15; SHA-256 of \texttt{csv.zip}: \texttt{25a092ff893eaf607971f07cc1cbba8655fdf71eda3a1bee70a997be5ad64cea} \\
+Content & frames captured by one LoRaWAN sniffer in Brno (2022 and 2023), Liege, Graz and Vienna, with the data frames of all networks heard (\texttt{*\_data.csv}, no header row) \\
+Role & FRESH HELD-OUT for the trace tests H-A1b and H-A1c. Not used in any earlier round. Never used for development \\
+Limits (stated) & one receiver, so receiver diversity (A2) cannot be tested on it; losses are frames the sniffer missed, which mix radio loss at the sniffer with the device's range; the devices are mostly static sensors; DevAddr values can be shared by two devices (then the counter breaks into segments by the V14 rules) \\
+\bottomrule
+\end{longtable}}
+
+Column layout of \texttt{*\_data.csv} (read from the files, not from documentation; checked on the development sites only before the held-out run): index 1 time (UNIX s), 3 message type code (2 unconfirmed uplink, 4 confirmed uplink, 3 unconfirmed downlink, 5 confirmed downlink), 5 RSSI, 6 SNR, 8 SF, 11 DevAddr (decimal), 13 FCnt. Only uplink rows (type 2 or 4) with FCnt >= 0 and DevAddr != 0 are used. Sites used: \texttt{01\_Brno}, \texttt{02\_Liege}, \texttt{04\_Graz}, \texttt{05\_Wien}, \texttt{07\_Brno}. Sites \texttt{00\_Test} and \texttt{03\_Brno\_join} are not used (test and join recordings).
+
+\textbf{Link construction (the V14 rules, unchanged):} link = (site, DevAddr); copies of one frame (same counter within 2 s) are merged; gaps of the 16-bit counter of 1 to 100 are lost frames; larger gaps and counter resets start a new segment; at least 300 frames; groups L, M, H by loss rate p as in V14 (p < 0.10, 0.10 to 0.40, >= 0.40). All included sniffer links are HELD-OUT (nothing is developed on them). The loss distribution of this dataset is looked at for the initial time in the held-out run of section 2.5; the loss distribution of LoED is already known from round 3.
+
+\textbf{Fallback.} If fewer than 100 sniffer links pass inclusion, or a group has fewer than 20 links, the trace tests of A1 are reported as EXPLORATORY (not confirmatory) for that group and the verdict of H-A1b and H-A1c uses the cells that remain (a missing trace cell is NOT\_RUN and the hypothesis is then "not supported", never "supported").
+
+For A2 no fresh multi-gateway dataset could be obtained. The A2 hypotheses are therefore tested on the RESERVE half of LoED and are labelled \textbf{EXPLORATORY} (same dataset and network as development; no confirmatory claim).
+
+\subsection*{2. A1: attempt-maximising short provisional alert (R3-S)}
+
+\subsubsection*{2.1 Design (frozen in this file; development may change only the items in 2.4)}
+
+The two-stage alert of R3 is kept (early-exit decision, confirm frame of 97 bytes, CANCEL of 14 bytes sent three times on a retraction, single-stage alert when only the full window alarms). Changes:
+
+\begin{itemize}
+\item The provisional frame is a fixed \textbf{24-byte} frame (PHY payload, like the other frame lengths of this repository).
+\end{itemize}
+
+{\scriptsize\raggedright
+\begin{longtable}{p{0.317\linewidth}p{0.317\linewidth}p{0.317\linewidth}}
+\toprule
+Off & Size & Field \\
+\midrule
+\endhead
+0 & 1 & version (u8) \\
+1 & 1 & msg\_type (4 = provisional alert) \\
+2 & 4 & node\_id (u32; the vehicle id; the per-vehicle key is HMAC-derived from the master key and this id) \\
+6 & 1 & flags (bit 0 = crash detected; bits 1 to 2 = severity code, 0 = pending; bit 3 = repeat) \\
+7 & 2 & latitude, coarse (i16, units of 1/64 degree, about 1.7 km) \\
+9 & 2 & longitude, coarse (i16, units of 1/64 degree) \\
+11 & 4 & freshness: GPS second of the decision (u32) \\
+15 & 1 & seq: provisional frame number within the second (u8) \\
+16 & 8 & tag = HMAC-SHA256(per-vehicle key, "P" or bytes 0 to 15)[:8] \\
+\bottomrule
+\end{longtable}}
+
+The tag covers bytes 0 to 15 with the domain prefix "P" (so a provisional frame is never valid as a full alert, and the reverse). The ACK of a provisional frame is the existing 26-byte ACK naming \texttt{node\_id}, with the acknowledged id (freshness, seq) in the event-id and counter fields and the per-vehicle tag. The fields freshness and seq are those of the Tamarin model \texttt{crash\_alert\_fresh.spthy} (epoch, sequence in second).
+
+\begin{itemize}
+\item \textbf{Repetition rule.} The provisional frame is sent from the early-exit decision time plus 8 ms compute. After a send the node listens for PROC + ACK airtime + margin (the replay constants). If no verified ACK naming the vehicle arrives, the node sends the provisional frame again at once (gap 0) at the current SF, until: (a) a verified ACK of the provisional frame, or a verified ACK of the confirm frame, arrives; (b) the next frame would end after the 10 s deadline; (c) the sliding-hour airtime plus this frame plus a reserve for the confirm frame (4 times the 97-byte airtime at the current SF) would exceed the duty limit of 1\%. A confirm or CANCEL frame that is ready takes the radio before the next provisional repeat (one radio). The confirm frame keeps its layout and its retry rule (4 tries).
+\item Nothing else changes: SF, listen window, severity table, detector decisions.
+\end{itemize}
+
+\subsubsection*{2.2 Comparison}
+
+R3 as frozen in \texttt{paper-v1} (14-byte flash, 4 tries), single-stage alert (r3s), the zero-spacing control (Z0 of V14 notes) and quick retries as already reported in round 3.
+
+\subsubsection*{2.3 Hypotheses (Holm family, section 5)}
+
+\begin{itemize}
+\item \textbf{H-A1a (ns-3, SIMULATED).} At SF9, in both calibration settings (calib and shipped) and at the four extra losses 0, 0.1, 0.3, 0.6 (eight cells), the extra transmit airtime of the A1 two-stage scheme over the single-stage scheme is at most 40\%. Statistic: per cell, cluster bootstrap over runs (60 seeds, 2,000 resamples, seed 42) of (airtime of A1 over airtime of single-stage) minus 1; the cell passes if the upper 95\% limit is below 0.40; one-sided p of the cell = share of resamples at or above 0.40; the hypothesis passes if all eight cells pass; its p-value is the largest cell p-value (intersection test). The ns-3 settings are those of \texttt{PREREGISTRATION\_V13.md} (60 vehicles in a disc of 1,500 m, 10 events per vehicle-hour, ADR and application backoff off, seeds 1 to 60, the same event table).
+\item \textbf{H-A1b (traces, TRACE\_DRIVEN).} On the fresh HELD-OUT sniffer links, provisional delivery within the 10 s deadline of A1 exceeds that of R3 by at least 3 points. Statistic: for each link, over 300 start points (V14 rule: seeds from the link id and 42; attempt k of a message sees frame s + k, consecutive frames of the link; ACK loss by the V14 rule with p\_dl = the link's own loss rate p), the share of events with an early alarm (stored \texttt{s6} event table, 1\% target, seed 42, drawn with replacement) whose provisional frame reaches the base before 10 s; link value = that share; paired bootstrap over links (2,000 resamples, seed 42, same resampled links for both schemes) of mean(A1) - mean(R3) over all included links. Criterion: point difference at least 0.03 and lower 95\% limit above 0 (the V14 form of H-T1b); one-sided p = share of resamples with a difference at most 0. SF7 timing as in the frozen R3 trace model (SF9 timing is a descriptive table).
+\item \textbf{H-A1c (no loss in final delivery, ns-3 and traces).} In no cell is the event delivery of the A1 two-stage scheme (a crash event reaches the base by the provisional or the confirm frame) lower than that of R3 by more than 1 point. Cells: the 16 ns-3 cells (SF7 and SF9, both settings, four losses; paired with the stored r3t runs of the same seeds) and the three sniffer groups L, M, H. Statistic: per cell, the difference A1 minus R3 in event delivery; cluster bootstrap over runs (ns-3) or over links (traces); the cell passes if the lower 95\% limit is at least -0.01; p of the cell = share of resamples with a difference below -0.01; the hypothesis passes if every cell passes; p-value = largest cell p-value. A trace group with fewer than 20 links is NOT\_RUN and the hypothesis is then not supported.
+\end{itemize}
+
+\textbf{Kill: H-A1a or H-A1b fails.} If A1 is killed it is reported as a negative result with the tables.
+
+\subsubsection*{2.4 Development (at most 5 logged iterations, then freeze by hash)}
+
+Data for development: LoED DEVELOPMENT devices (traces) and ns-3 development seeds 101 to 120 at SF9 (both settings, losses 0 and 0.3). Items development may change, each iteration logged in \texttt{docs/07\_log/DECISIONS.md}: the gap between two provisional attempts (0, 0.05 or 0.1 s); the confirm reserve factor (4, 2 or 0 times the alert airtime); whether a provisional repeat may continue after the confirm frame has used its 4 tries. Selection rule (written now): among the logged iterations, take the one with the highest development provisional delivery whose development extra airtime at SF9 is lowest, ties broken by the lower gap; if no iteration raises development provisional delivery by 3 points over R3, keep the frozen default of 2.1. After the last iteration the sources and the parameter file are hashed (\texttt{results/tables/a4\_frozen.json}) and the held-out tests run once.
+
+\subsubsection*{2.5 Order of runs}
+
+(1) code verification (section 6); (2) development iterations; (3) freeze by hash; (4) the sniffer links are built and the held-out run is made once; (5) the ns-3 run on seeds 1 to 60 once; (6) the Tamarin rerun (2.6).
+
+\subsubsection*{2.6 Security check (FORMAL)}
+
+Rerun the Tamarin model with the 24-byte provisional frame as an additional message type (\texttt{formal/crash\_alert\_prov.spthy}), with a separate tag domain, the per-vehicle ACK of the provisional frame and the car's repetition. Lemmas: executability of the provisional path; authenticity of a base acceptance of a provisional frame (the vehicle sent it, or its key was revealed); ACK authenticity per vehicle and no cross-vehicle ACK acceptance (L2 and L3 of V14); no type confusion between provisional and full frames; replay outside the window (L4). \textbf{If authenticity or the per-vehicle ACK binding does not prove, A1 fails regardless of delivery.} Lemmas that do not terminate within the time limit are reported as undecided, and an undecided authenticity lemma also fails A1.
+
+\subsection*{3. A2: receiver diversity for crash alerts (EXPLORATORY)}
+
+Data: LoED RESERVE devices (section 1.1). Per frame the set of gateways that decoded it with a valid CRC is kept (nine gateways); frames in counter gaps are lost for all gateways. Same inclusion (300 frames), same segment rules as V14.
+
+\textbf{Ranking period and test period.} For each device, the earlier half of its frames in time (over all its segments) is the ranking period; the start points of the replay are drawn from the second half only. In the ranking period each gateway gets the share of the device's frames it decoded; gateways are ranked by this share (ties by mean RSSI); "nearest" is read as "best heard" (the device positions are unknown). Receiver sets: R1 = the best gateway; R2 = the two best; R3 = the three best that decoded at least one frame in the ranking period (a device heard by fewer gateways uses all that heard it); the curve continues to nine receivers. \textbf{Loss band} (weak, medium, strong) of a device: the loss rate of its best gateway in the ranking period (lost or not decoded by that gateway, over all frames of the period): H = at least 0.40 (weak), M = 0.10 to 0.40, L below 0.10.
+
+\textbf{Replay.} The retry policy is Z0, the zero-spacing control of V14 (alert ready at 1.85 s, retry at once after the listen window, no hold, base SF 9, up to 12 tries, 97-byte alert, 1\% duty); an alert is delivered if the transmission that ends before the 10 s deadline is decoded by at least one gateway of the receiver set. Attempt k sees the state of frame s + k. The ACK is sent by the receiving gateway; its loss is modelled from the uplink trace: the ACK of an attempt decoded by the set is received with probability 1 minus the ranking-period loss rate of the best receiving gateway of the set that decoded the frame (a network server answers through its best path); it affects stopping and airtime only. 300 start points per device, seeds from the device id and 42; the same start points and the same draws are used for every receiver set. Device value = mean over start points of delivery.
+
+\begin{itemize}
+\item \textbf{H-A2a.} On the weak links (loss at least 40\%), going from one receiver to two raises delivery within 10 s by at least 10 points: paired bootstrap over devices (2,000 resamples, seed 42); criterion: point difference at least 0.10 and lower 95\% limit above 0; one-sided p = share of resamples with a difference at most 0.
+\item \textbf{H-A2b.} The share of devices (all included devices of the RESERVE half) whose device value is at least 0.99 rises from one to three receivers: criterion: the difference of the shares is at least 0.02 and its lower 95\% limit is above 0 (paired bootstrap over devices); one-sided p = share of resamples with a difference at most 0. The curve of the share against the number of receivers (1 to 9) is reported with 95\% intervals.
+\item Descriptive (no hypothesis): the smallest number of receivers that gives a device value of at least 0.95 and 0.99, by loss band (median, interquartile range, share of devices that never reach it), and the same tables for the DEVELOPMENT half.
+\end{itemize}
+
+\textbf{Kill: H-A2a fails.} Caveats stated with the result: gateway reception is not vehicle mobility; the receivers are fixed city gateways; the ACK loss is modelled by the rule above; devices that only one gateway hears gain nothing (reported: the share of such devices).
+
+\subsection*{4. A3: second prover for the car-reboot lemma (FORMAL)}
+
+Tool: ProVerif 2.05 (Blanchet, Cheval, Sylvestre; built from the source archive of the project, SHA-256 \texttt{4871f53c32ab4a04669a060c4886ba5d9080496963fb980a9a62d2c429ceabc4}, in WSL; the requested "record version" is read as the current release 2.05; the version is recorded with the run). Two models, the frozen design (\texttt{crash\_alert\_fresh.spthy} semantics: id = epoch and sequence in the second) and the boot-epoch variant (id = boot counter, epoch, sequence). Property: alert ids are not reused after a car reboot, as (i) a correspondence \texttt{event(CarSend(v, id, inst1)) \&\& event(CarSend(v, id, inst2)) ==> inst1 = inst2} for distinct alert instances after a reboot, and (ii) injective agreement of the base's acceptance with the car's send. Time is modelled in the way that gives the unbounded or the bounded claim honestly; the claim made states which. Time box: 3 hours. Outcome: proved, attack found (with the trace), or undecided in both tools. If ProVerif proves it for the boot-counter variant only, the report says that the frozen design needs the counter and that the variant is a design recommendation. No hypothesis; no Holm entry.
+
+\subsection*{5. Multiple testing and decision rule}
+
+One new Holm family of five tests: H-A1a, H-A1b, H-A1c, H-A2a, H-A2b (at most 8 allowed). A hypothesis is called supported if its criterion holds at the point level and the Holm-adjusted p is below 0.05. A2 results are called EXPLORATORY in every sentence (same dataset as development); they are never called confirmatory. The A1 trace tests are confirmatory only when the fallback of section 1.2 is not triggered. A1 additionally needs the Tamarin rerun to prove (section 2.6) and H-A1a and H-A1b to hold.
+
+\subsection*{6. Code verification (before freezing; report \texttt{docs/03\_results/A4\_CODE\_VERIFICATION.md})}
+
+For each new module: unit tests; property tests (no transmission after the deadline; transmitted airtime never above the duty limit; no stop of the provisional repetition without a verified ACK naming the vehicle, and an ACK for another vehicle or with a wrong tag never stops it); a known-answer reproduction of a round-3 number (the A1 engine in its round-3 compatibility mode reproduces the per-group values \texttt{r3.t1.T1c.*} of \texttt{paper-v1} on the same inputs, and the replay of Z0 on one-gateway sets reproduces \texttt{r3.t1.explore.*.deliv.Z0}); at least 20 mutants of the new modules with at least 80\% killed. The C++ ns-3 application is checked by (a) the unchanged outputs of the policies r3s and r3t on three stored seeds (byte-identical), (b) the per-run invariants printed by the application (no transmission ending after the deadline; the hourly airtime never above the limit).
+
+\subsection*{7. A4 and A5}
+
+A4: OpenAlex queries with the filters of Part A (journals, 2021 onwards) plus older and conference context for gateway or receiver diversity in LoRaWAN, macro-diversity, short-frame or payload reduction for LoRa latency, and ProVerif with LoRa; the closest open-access items are opened; rows go to \texttt{NOVELTY\_MATRIX\_2021PLUS.md}; an absence is written only as "no journal article from 2021 onwards found in the sources checked". A5: one decision-table row per hypothesis (result, label, interval, nearest prior work, allowed wording); only supported results enter the paper, as a marked addition; failed items go to the negatives register; numbers, audits, tag \texttt{algo4-v1}, release archive with SHA-256 and push commands for the author.
+
+\subsection*{8. Seeds, code and files}
+
+Seed 42 for every draw; ns-3 seeds 1 to 60 (test) and 101 to 120 (development); trace start points from the link id and 42. Code: \texttt{a4\_common.py}, \texttt{a4\_a1.py}, \texttt{a4\_a1\_ns3.py}, \texttt{a4\_a2.py}, \texttt{a4\_decide.py}, the ns-3 policy \texttt{r3a} in \texttt{xsim/ns3/xsim\_alert.cc}, the Tamarin file \texttt{formal/crash\_alert\_prov.spthy}, the ProVerif files in \texttt{formal/proverif/}. Results under \texttt{a4.} in \texttt{results/results.json} and \texttt{results/tables/a4\_*}.
+

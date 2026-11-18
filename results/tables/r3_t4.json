@@ -1,0 +1,793 @@
+{
+ "policies": {
+  "13": {
+   "D1": {
+    "all_lost": {
+     "energy_j": 3.907866398117647,
+     "n_tx": 8,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 4.719616
+    },
+    "k0": {
+     "energy_j": 0.8281153863529412,
+     "n_tx": 1,
+     "delivered": true,
+     "t_rx": 2.3835040000000003,
+     "airtime_s": 0.533504
+    },
+    "k2": {
+     "energy_j": 1.5898548988235295,
+     "n_tx": 3,
+     "delivered": true,
+     "t_rx": 4.26216,
+     "airtime_s": 1.600512
+    },
+    "k4": {
+     "energy_j": 2.3515944112941174,
+     "n_tx": 5,
+     "delivered": true,
+     "t_rx": 6.140815999999999,
+     "airtime_s": 2.6675199999999997
+    },
+    "k6": {
+     "energy_j": 3.1133339237647055,
+     "n_tx": 7,
+     "delivered": true,
+     "t_rx": 8.019471999999999,
+     "airtime_s": 3.734528
+    }
+   },
+   "quick": {
+    "all_lost": {
+     "energy_j": 3.793375996235294,
+     "n_tx": 5,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 4.022272
+    },
+    "k0": {
+     "energy_j": 0.8281153863529412,
+     "n_tx": 1,
+     "delivered": true,
+     "t_rx": 2.3835040000000003,
+     "airtime_s": 0.533504
+    },
+    "k2": {
+     "energy_j": 1.9795554239999997,
+     "n_tx": 3,
+     "delivered": true,
+     "t_rx": 5.313744,
+     "airtime_s": 2.0520959999999997
+    },
+    "k4": {
+     "energy_j": 3.4783811971764704,
+     "n_tx": 5,
+     "delivered": true,
+     "t_rx": 9.107216,
+     "airtime_s": 4.022272
+    },
+    "k6": {
+     "energy_j": 3.793375996235294,
+     "n_tx": 5,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 4.022272
+    }
+   },
+   "P1": {
+    "all_lost": {
+     "energy_j": 3.600019973647059,
+     "n_tx": 4,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 2.134016
+    },
+    "k0": {
+     "energy_j": 2.4392918569411757,
+     "n_tx": 1,
+     "delivered": true,
+     "t_rx": 7.383503999999999,
+     "airtime_s": 0.533504
+    },
+    "k2": {
+     "energy_j": 3.2010313694117647,
+     "n_tx": 3,
+     "delivered": true,
+     "t_rx": 9.262160000000002,
+     "airtime_s": 1.600512
+    },
+    "k4": {
+     "energy_j": 3.600019973647059,
+     "n_tx": 4,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 2.134016
+    },
+    "k6": {
+     "energy_j": 3.600019973647059,
+     "n_tx": 4,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 2.134016
+    }
+   },
+   "P4": {
+    "all_lost": {
+     "energy_j": 3.378723184941176,
+     "n_tx": 2,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 1.067008
+    },
+    "k0": {
+     "energy_j": 0.8281153863529412,
+     "n_tx": 1,
+     "delivered": true,
+     "t_rx": 2.3835040000000003,
+     "airtime_s": 0.533504
+    },
+    "k2": {
+     "energy_j": 3.378723184941176,
+     "n_tx": 2,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 1.067008
+    },
+    "k4": {
+     "energy_j": 3.378723184941176,
+     "n_tx": 2,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 1.067008
+    },
+    "k6": {
+     "energy_j": 3.378723184941176,
+     "n_tx": 2,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 1.067008
+    }
+   },
+   "P0": {
+    "all_lost": {
+     "energy_j": 3.600019973647059,
+     "n_tx": 4,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 2.134016
+    },
+    "k0": {
+     "energy_j": 2.4392918569411757,
+     "n_tx": 1,
+     "delivered": true,
+     "t_rx": 7.383503999999999,
+     "airtime_s": 0.533504
+    },
+    "k2": {
+     "energy_j": 3.2010313694117647,
+     "n_tx": 3,
+     "delivered": true,
+     "t_rx": 9.262160000000002,
+     "airtime_s": 1.600512
+    },
+    "k4": {
+     "energy_j": 3.600019973647059,
+     "n_tx": 4,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 2.134016
+    },
+    "k6": {
+     "energy_j": 3.600019973647059,
+     "n_tx": 4,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 2.134016
+    }
+   },
+   "khan": {
+    "all_lost": {
+     "energy_j": 3.541385511529412,
+     "n_tx": 3,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 1.600512
+    },
+    "k0": {
+     "energy_j": 0.8281153863529412,
+     "n_tx": 1,
+     "delivered": true,
+     "t_rx": 2.3835040000000003,
+     "airtime_s": 0.533504
+    },
+    "k2": {
+     "energy_j": 3.541385511529412,
+     "n_tx": 3,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 1.600512
+    },
+    "k4": {
+     "energy_j": 3.541385511529412,
+     "n_tx": 3,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 1.600512
+    },
+    "k6": {
+     "energy_j": 3.541385511529412,
+     "n_tx": 3,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 1.600512
+    }
+   },
+   "nessa": {
+    "all_lost": {
+     "energy_j": 3.745804997647058,
+     "n_tx": 5,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 3.5706879999999996
+    },
+    "k0": {
+     "energy_j": 0.8281153863529412,
+     "n_tx": 1,
+     "delivered": true,
+     "t_rx": 2.3835040000000003,
+     "airtime_s": 0.533504
+    },
+    "k2": {
+     "energy_j": 1.9532331952941175,
+     "n_tx": 3,
+     "delivered": true,
+     "t_rx": 5.3898399999999995,
+     "airtime_s": 1.600512
+    },
+    "k4": {
+     "energy_j": 3.745804997647058,
+     "n_tx": 5,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 3.5706879999999996
+    },
+    "k6": {
+     "energy_j": 3.745804997647058,
+     "n_tx": 5,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 3.5706879999999996
+    }
+   }
+  },
+  "17": {
+   "D1": {
+    "all_lost": {
+     "energy_j": 4.970612871529411,
+     "n_tx": 8,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 4.719616
+    },
+    "k0": {
+     "energy_j": 0.9482479341176472,
+     "n_tx": 1,
+     "delivered": true,
+     "t_rx": 2.3835040000000003,
+     "airtime_s": 0.533504
+    },
+    "k2": {
+     "energy_j": 1.950252542117647,
+     "n_tx": 3,
+     "delivered": true,
+     "t_rx": 4.26216,
+     "airtime_s": 1.600512
+    },
+    "k4": {
+     "energy_j": 2.9522571501176467,
+     "n_tx": 5,
+     "delivered": true,
+     "t_rx": 6.140815999999999,
+     "airtime_s": 2.6675199999999997
+    },
+    "k6": {
+     "energy_j": 3.9542617581176467,
+     "n_tx": 7,
+     "delivered": true,
+     "t_rx": 8.019471999999999,
+     "airtime_s": 3.734528
+    }
+   },
+   "quick": {
+    "all_lost": {
+     "energy_j": 4.699097008941177,
+     "n_tx": 5,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 4.022272
+    },
+    "k0": {
+     "energy_j": 0.9482479341176472,
+     "n_tx": 1,
+     "delivered": true,
+     "t_rx": 2.3835040000000003,
+     "airtime_s": 0.533504
+    },
+    "k2": {
+     "energy_j": 2.441639158588235,
+     "n_tx": 3,
+     "delivered": true,
+     "t_rx": 5.313744,
+     "airtime_s": 2.0520959999999997
+    },
+    "k4": {
+     "energy_j": 4.384102209882352,
+     "n_tx": 5,
+     "delivered": true,
+     "t_rx": 9.107216,
+     "airtime_s": 4.022272
+    },
+    "k6": {
+     "energy_j": 4.699097008941177,
+     "n_tx": 5,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 4.022272
+    }
+   },
+   "P1": {
+    "all_lost": {
+     "energy_j": 4.080550164705882,
+     "n_tx": 4,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 2.134016
+    },
+    "k0": {
+     "energy_j": 2.5594244047058816,
+     "n_tx": 1,
+     "delivered": true,
+     "t_rx": 7.383503999999999,
+     "airtime_s": 0.533504
+    },
+    "k2": {
+     "energy_j": 3.5614290127058825,
+     "n_tx": 3,
+     "delivered": true,
+     "t_rx": 9.262160000000002,
+     "airtime_s": 1.600512
+    },
+    "k4": {
+     "energy_j": 4.080550164705882,
+     "n_tx": 4,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 2.134016
+    },
+    "k6": {
+     "energy_j": 4.080550164705882,
+     "n_tx": 4,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 2.134016
+    }
+   },
+   "P4": {
+    "all_lost": {
+     "energy_j": 3.618988280470588,
+     "n_tx": 2,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 1.067008
+    },
+    "k0": {
+     "energy_j": 0.9482479341176472,
+     "n_tx": 1,
+     "delivered": true,
+     "t_rx": 2.3835040000000003,
+     "airtime_s": 0.533504
+    },
+    "k2": {
+     "energy_j": 3.618988280470588,
+     "n_tx": 2,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 1.067008
+    },
+    "k4": {
+     "energy_j": 3.618988280470588,
+     "n_tx": 2,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 1.067008
+    },
+    "k6": {
+     "energy_j": 3.618988280470588,
+     "n_tx": 2,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 1.067008
+    }
+   },
+   "P0": {
+    "all_lost": {
+     "energy_j": 4.080550164705882,
+     "n_tx": 4,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 2.134016
+    },
+    "k0": {
+     "energy_j": 2.5594244047058816,
+     "n_tx": 1,
+     "delivered": true,
+     "t_rx": 7.383503999999999,
+     "airtime_s": 0.533504
+    },
+    "k2": {
+     "energy_j": 3.5614290127058825,
+     "n_tx": 3,
+     "delivered": true,
+     "t_rx": 9.262160000000002,
+     "airtime_s": 1.600512
+    },
+    "k4": {
+     "energy_j": 4.080550164705882,
+     "n_tx": 4,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 2.134016
+    },
+    "k6": {
+     "energy_j": 4.080550164705882,
+     "n_tx": 4,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 2.134016
+    }
+   },
+   "khan": {
+    "all_lost": {
+     "energy_j": 3.90178315482353,
+     "n_tx": 3,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 1.600512
+    },
+    "k0": {
+     "energy_j": 0.9482479341176472,
+     "n_tx": 1,
+     "delivered": true,
+     "t_rx": 2.3835040000000003,
+     "airtime_s": 0.533504
+    },
+    "k2": {
+     "energy_j": 3.90178315482353,
+     "n_tx": 3,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 1.600512
+    },
+    "k4": {
+     "energy_j": 3.90178315482353,
+     "n_tx": 3,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 1.600512
+    },
+    "k6": {
+     "energy_j": 3.90178315482353,
+     "n_tx": 3,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 1.600512
+    }
+   },
+   "nessa": {
+    "all_lost": {
+     "energy_j": 4.549839919058822,
+     "n_tx": 5,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 3.5706879999999996
+    },
+    "k0": {
+     "energy_j": 0.9482479341176472,
+     "n_tx": 1,
+     "delivered": true,
+     "t_rx": 2.3835040000000003,
+     "airtime_s": 0.533504
+    },
+    "k2": {
+     "energy_j": 2.313630838588235,
+     "n_tx": 3,
+     "delivered": true,
+     "t_rx": 5.3898399999999995,
+     "airtime_s": 1.600512
+    },
+    "k4": {
+     "energy_j": 4.549839919058822,
+     "n_tx": 5,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 3.5706879999999996
+    },
+    "k6": {
+     "energy_j": 4.549839919058822,
+     "n_tx": 5,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 3.5706879999999996
+    }
+   }
+  },
+  "20": {
+   "D1": {
+    "all_lost": {
+     "energy_j": 5.575278968470589,
+     "n_tx": 8,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 4.719616
+    },
+    "k0": {
+     "energy_j": 1.0165992112941178,
+     "n_tx": 1,
+     "delivered": true,
+     "t_rx": 2.3835040000000003,
+     "airtime_s": 0.533504
+    },
+    "k2": {
+     "energy_j": 2.1553063736470586,
+     "n_tx": 3,
+     "delivered": true,
+     "t_rx": 4.26216,
+     "airtime_s": 1.600512
+    },
+    "k4": {
+     "energy_j": 3.2940135359999996,
+     "n_tx": 5,
+     "delivered": true,
+     "t_rx": 6.140815999999999,
+     "airtime_s": 2.6675199999999997
+    },
+    "k6": {
+     "energy_j": 4.432720698352941,
+     "n_tx": 7,
+     "delivered": true,
+     "t_rx": 8.019471999999999,
+     "airtime_s": 3.734528
+    }
+   },
+   "quick": {
+    "all_lost": {
+     "energy_j": 5.214421033411765,
+     "n_tx": 5,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 4.022272
+    },
+    "k0": {
+     "energy_j": 1.0165992112941178,
+     "n_tx": 1,
+     "delivered": true,
+     "t_rx": 2.3835040000000003,
+     "airtime_s": 0.533504
+    },
+    "k2": {
+     "energy_j": 2.7045488696470583,
+     "n_tx": 3,
+     "delivered": true,
+     "t_rx": 5.313744,
+     "airtime_s": 2.0520959999999997
+    },
+    "k4": {
+     "energy_j": 4.899426234352942,
+     "n_tx": 5,
+     "delivered": true,
+     "t_rx": 9.107216,
+     "airtime_s": 4.022272
+    },
+    "k6": {
+     "energy_j": 5.214421033411765,
+     "n_tx": 5,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 4.022272
+    }
+   },
+   "P1": {
+    "all_lost": {
+     "energy_j": 4.353955273411765,
+     "n_tx": 4,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 2.134016
+    },
+    "k0": {
+     "energy_j": 2.627775681882352,
+     "n_tx": 1,
+     "delivered": true,
+     "t_rx": 7.383503999999999,
+     "airtime_s": 0.533504
+    },
+    "k2": {
+     "energy_j": 3.7664828442352944,
+     "n_tx": 3,
+     "delivered": true,
+     "t_rx": 9.262160000000002,
+     "airtime_s": 1.600512
+    },
+    "k4": {
+     "energy_j": 4.353955273411765,
+     "n_tx": 4,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 2.134016
+    },
+    "k6": {
+     "energy_j": 4.353955273411765,
+     "n_tx": 4,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 2.134016
+    }
+   },
+   "P4": {
+    "all_lost": {
+     "energy_j": 3.7556908348235294,
+     "n_tx": 2,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 1.067008
+    },
+    "k0": {
+     "energy_j": 1.0165992112941178,
+     "n_tx": 1,
+     "delivered": true,
+     "t_rx": 2.3835040000000003,
+     "airtime_s": 0.533504
+    },
+    "k2": {
+     "energy_j": 3.7556908348235294,
+     "n_tx": 2,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 1.067008
+    },
+    "k4": {
+     "energy_j": 3.7556908348235294,
+     "n_tx": 2,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 1.067008
+    },
+    "k6": {
+     "energy_j": 3.7556908348235294,
+     "n_tx": 2,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 1.067008
+    }
+   },
+   "P0": {
+    "all_lost": {
+     "energy_j": 4.353955273411765,
+     "n_tx": 4,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 2.134016
+    },
+    "k0": {
+     "energy_j": 2.627775681882352,
+     "n_tx": 1,
+     "delivered": true,
+     "t_rx": 7.383503999999999,
+     "airtime_s": 0.533504
+    },
+    "k2": {
+     "energy_j": 3.7664828442352944,
+     "n_tx": 3,
+     "delivered": true,
+     "t_rx": 9.262160000000002,
+     "airtime_s": 1.600512
+    },
+    "k4": {
+     "energy_j": 4.353955273411765,
+     "n_tx": 4,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 2.134016
+    },
+    "k6": {
+     "energy_j": 4.353955273411765,
+     "n_tx": 4,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 2.134016
+    }
+   },
+   "khan": {
+    "all_lost": {
+     "energy_j": 4.106836986352942,
+     "n_tx": 3,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 1.600512
+    },
+    "k0": {
+     "energy_j": 1.0165992112941178,
+     "n_tx": 1,
+     "delivered": true,
+     "t_rx": 2.3835040000000003,
+     "airtime_s": 0.533504
+    },
+    "k2": {
+     "energy_j": 4.106836986352942,
+     "n_tx": 3,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 1.600512
+    },
+    "k4": {
+     "energy_j": 4.106836986352942,
+     "n_tx": 3,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 1.600512
+    },
+    "k6": {
+     "energy_j": 4.106836986352942,
+     "n_tx": 3,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 1.600512
+    }
+   },
+   "nessa": {
+    "all_lost": {
+     "energy_j": 5.007308063999999,
+     "n_tx": 5,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 3.5706879999999996
+    },
+    "k0": {
+     "energy_j": 1.0165992112941178,
+     "n_tx": 1,
+     "delivered": true,
+     "t_rx": 2.3835040000000003,
+     "airtime_s": 0.533504
+    },
+    "k2": {
+     "energy_j": 2.5186846701176466,
+     "n_tx": 3,
+     "delivered": true,
+     "t_rx": 5.3898399999999995,
+     "airtime_s": 1.600512
+    },
+    "k4": {
+     "energy_j": 5.007308063999999,
+     "n_tx": 5,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 3.5706879999999996
+    },
+    "k6": {
+     "energy_j": 5.007308063999999,
+     "n_tx": 5,
+     "delivered": false,
+     "t_rx": null,
+     "airtime_s": 3.5706879999999996
+    }
+   }
+  }
+ },
+ "caps": {
+  "0.22": 1.76,
+  "0.47": 3.76,
+  "1.0": 8.0,
+  "2.2": 17.6
+ }
+}

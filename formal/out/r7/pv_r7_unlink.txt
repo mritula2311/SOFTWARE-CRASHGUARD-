@@ -1,0 +1,103 @@
+tool: Proverif 2.05. Cryptographic protocol verifier, by Bruno Blanchet, Vincent Cheval, and Marc Sylvestre
+command: proverif /mnt/d/crashguard-software/crashguard-software/formal/proverif/r7_unlink.pv
+Biprocess 0 (that is, the initial process):
+{1}new master: bitstring;
+{2}new idA: bitstring;
+{3}new idB: bitstring;
+(
+    {4}!
+    {5}let master_1: bitstring = master in
+    {6}in(c, (=mAlert,p: bitstring,ct: bitstring,t: bitstring));
+    {12}get window(=p,v: bitstring,b: bitstring,k: bitstring) in
+    {7}let kv: bitstring = kdf(master_1,v) in
+    {8}if (t = mac(kv,(tagA,p,ct,b,k))) then
+    {11}get seen(=v,=b,=k) in
+        0
+    else
+        {9}insert seen(v,b,k);
+        {10}out(c, (mAck,p,mac(kv,(tagACK,p))))
+) | (
+    {13}let master_2: bitstring = master in
+    {14}let v_1: bitstring = idA in
+    {15}new ctr: bitstring;
+    {16}new payload: bitstring;
+    {17}let kv_1: bitstring = kdf(master_2,v_1) in
+    {18}let boot: bitstring = prf(kv_1,tagB) in
+    {19}let p_1: bitstring = prf(kv_1,(tagP,boot,ctr)) in
+    {20}insert window(p_1,v_1,boot,ctr);
+    {21}let ct_1: bitstring = senc(kdf(kv_1,tagE),(boot,ctr),payload) in
+    {22}out(c, (mAlert,p_1,ct_1,mac(kv_1,(tagA,p_1,ct_1,boot,ctr))))
+) | (
+    {23}let master_3: bitstring = master in
+    {24}let v_2: bitstring = choice[idA,idB] in
+    {25}new ctr_1: bitstring;
+    {26}new payload_1: bitstring;
+    {27}let kv_2: bitstring = kdf(master_3,v_2) in
+    {28}let boot_1: bitstring = prf(kv_2,tagB) in
+    {29}let p_2: bitstring = prf(kv_2,(tagP,boot_1,ctr_1)) in
+    {30}insert window(p_2,v_2,boot_1,ctr_1);
+    {31}let ct_2: bitstring = senc(kdf(kv_2,tagE),(boot_1,ctr_1),payload_1) in
+    {32}out(c, (mAlert,p_2,ct_2,mac(kv_2,(tagA,p_2,ct_2,boot_1,ctr_1))))
+)
+
+-- Observational equivalence in biprocess 1 (that is, biprocess 0, with let moved downwards):
+{1}new master: bitstring;
+{2}new idA: bitstring;
+{3}new idB: bitstring;
+(
+    {4}!
+    {6}in(c, (=mAlert,p: bitstring,ct: bitstring,t: bitstring));
+    {12}get window(=p,v: bitstring,b: bitstring,k: bitstring) in
+    {5}let master_1: bitstring = master in
+    {7}let kv: bitstring = kdf(master_1,v) in
+    {8}if (t = mac(kv,(tagA,p,ct,b,k))) then
+    {11}get seen(=v,=b,=k) in
+        0
+    else
+        {9}insert seen(v,b,k);
+        {10}out(c, (mAck,p,mac(kv,(tagACK,p))))
+) | (
+    {15}new ctr: bitstring;
+    {16}new payload: bitstring;
+    {14}let v_1: bitstring = idA in
+    {13}let master_2: bitstring = master in
+    {17}let kv_1: bitstring = kdf(master_2,v_1) in
+    {18}let boot: bitstring = prf(kv_1,tagB) in
+    {19}let p_1: bitstring = prf(kv_1,(tagP,boot,ctr)) in
+    {20}insert window(p_1,v_1,boot,ctr);
+    {21}let ct_1: bitstring = senc(kdf(kv_1,tagE),(boot,ctr),payload) in
+    {22}out(c, (mAlert,p_1,ct_1,mac(kv_1,(tagA,p_1,ct_1,boot,ctr))))
+) | (
+    {25}new ctr_1: bitstring;
+    {26}new payload_1: bitstring;
+    {24}let v_2: bitstring = choice[idA,idB] in
+    {23}let master_3: bitstring = master in
+    {27}let kv_2: bitstring = kdf(master_3,v_2) in
+    {28}let boot_1: bitstring = prf(kv_2,tagB) in
+    {29}let p_2: bitstring = prf(kv_2,(tagP,boot_1,ctr_1)) in
+    {30}insert window(p_2,v_2,boot_1,ctr_1);
+    {31}let ct_2: bitstring = senc(kdf(kv_2,tagE),(boot_1,ctr_1),payload_1) in
+    {32}out(c, (mAlert,p_2,ct_2,mac(kv_2,(tagA,p_2,ct_2,boot_1,ctr_1))))
+)
+
+Translating the process into Horn clauses...
+Termination warning: v_3 ≠ v_4 && attacker2(v_5,v_3) && attacker2(v_5,v_4) -> bad
+Selecting 0
+Termination warning: v_3 ≠ v_4 && attacker2(v_3,v_5) && attacker2(v_4,v_5) -> bad
+Selecting 0
+Completing...
+Termination warning: v_3 ≠ v_4 && attacker2(v_5,v_3) && attacker2(v_5,v_4) -> bad
+Selecting 0
+Termination warning: v_3 ≠ v_4 && attacker2(v_3,v_5) && attacker2(v_4,v_5) -> bad
+Selecting 0
+200 rules inserted. Base: 174 rules (38 with conclusion selected). Queue: 11 rules.
+RESULT Observational equivalence is true.
+
+--------------------------------------------------------------
+Verification summary:
+
+Observational equivalence is true.
+
+--------------------------------------------------------------
+
+exit code: 0 ; wall time 0 s

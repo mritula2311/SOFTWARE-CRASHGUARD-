@@ -1,0 +1,32 @@
+id,file,description,status
+S01,src/crashguard/r6_seq.py,bin edges include the minimum,KILLED
+S02,src/crashguard/r6_seq.py,bin side for crash scores,KILLED
+S03,src/crashguard/r6_seq.py,smoothing differs between classes,KILLED
+S04,src/crashguard/r6_seq.py,ratio becomes a product,KILLED
+S05,src/crashguard/r6_seq.py,counts not normalised,KILLED
+S06,src/crashguard/r6_seq.py,no accumulation over checkpoints,KILLED
+S07,src/crashguard/r6_seq.py,bin side in the running sum,KILLED
+S08,src/crashguard/r6_seq.py,last checkpoint skipped,KILLED
+S09,src/crashguard/r6_seq.py,upper threshold exclusive,KILLED
+S10,src/crashguard/r6_seq.py,lower threshold exclusive,KILLED
+S11,src/crashguard/r6_seq.py,stop time is always 50 ms,KILLED
+S12,src/crashguard/r6_seq.py,decision time off by one checkpoint,KILLED
+S13,src/crashguard/r6_seq.py,a stopped event stays undecided,KILLED
+S14,src/crashguard/r6_seq.py,every event alarms by default,KILLED
+S15,src/crashguard/r6_seq.py,"the 1,800 ms alarms counted as provisional",KILLED
+S16,src/crashguard/r6_seq.py,false-alarm denominator,KILLED
+S17,src/crashguard/r6_seq.py,B equal to A allowed,KILLED
+S18,src/crashguard/r6_seq.py,one-sided false-alarm match,KILLED
+S19,src/crashguard/r6_seq.py,slowest pair preferred,KILLED
+S20,src/crashguard/r6_seq.py,decision time taken over non-crash events,KILLED
+S21,src/crashguard/r6_seq.py,retraction share inverted,KILLED
+S22,src/crashguard/r6_seq.py,null margin 100 ms,KILLED
+S23,src/crashguard/r6_seq.py,lower limit is the median,KILLED
+S24,src/crashguard/r6_seq.py,direction of the retraction test,KILLED
+S25,src/crashguard/r6_seq.py,events that alarm under only one rule included,KILLED
+S26,src/crashguard/r6_seq.py,sign of the time difference,KILLED
+S27,src/crashguard/r6_common.py,round-5 prefix in the half rule,KILLED
+S29,src/crashguard/r6_seq.py,paired selection includes events without a fixed-rule alarm,KILLED
+S30,src/crashguard/r6_seq.py,paired objective sign,KILLED
+S31,src/crashguard/r6_seq.py,paired selection switched off,KILLED
+S28,src/crashguard/r6_seq.py,bootstrap seed,KILLED

@@ -1,0 +1,13 @@
+kind,criterion,severity_class,n,share_exceeding
+frontal,clip3m,0,0,
+frontal,clip3m,1,0,
+frontal,clip3m,2,16,0.0625
+frontal,clip3m,3,34,0.029411764705882353
+frontal,femur,0,0,
+frontal,femur,1,0,
+frontal,femur,2,16,0.0
+frontal,femur,3,34,0.0
+side,hic,0,7,0.0
+side,hic,1,44,0.022727272727272728
+side,hic,2,11,0.0
+side,hic,3,1,0.0

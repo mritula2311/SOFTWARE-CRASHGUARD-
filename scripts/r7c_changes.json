@@ -1,0 +1,50 @@
+[
+ [
+  "Of these, one was read in full and one in abstract; they describe prototypes and demonstrations; the full text does not study an authenticated acknowledgement or a duty budget, and the abstract mentions no delivery statistics, security analysis or formal check. The other two were read at record level only. LoRa security work, in turn, is mostly not about crash alerts.",
+  "Of these, one was read in full and three in abstract (the publisher page of one was blocked to scripts); they describe prototypes, simulations and field tests. Carneiro et al. evaluate packet delivery ratio, coverage and latency in ns-3, so delivery statistics exist for LoRa crash alerting. In the text read, none states an authenticated acknowledgement, a security analysis or a formal check, and none studies a duty budget; we found no such work in the sources checked (see Section~\\ref{sec:related}). LoRa security work, in turn, is mostly not about crash alerts."
+ ],
+ [
+  "Where a paragraph says that nothing was found, it means: no open-access journal article from 2021 onwards was found in the sources checked (DOAJ, OpenAlex, Crossref and the publisher pages opened; Google Scholar and Scopus not searched).",
+  "Where a paragraph says that nothing was found, it means: no work found in the sources checked (IEEE Xplore, OpenAlex, Crossref, DOAJ, publisher pages; Google Scholar blocked automated queries and was not searched)."
+ ],
+ [
+  "No journal article from 2021 onwards was found in the sources checked that audits duplicates in a crash-pulse benchmark.",
+  "We found no work in the sources checked that audits duplicates in a crash-pulse benchmark."
+ ],
+ [
+  "In the sources checked no journal article gives the range and rate that crash delta-V needs,",
+  "We found no work in the sources checked that gives the range and rate that crash delta-V needs,"
+ ],
+ [
+  "No journal article was found on provisional-then-confirmed crash alerts.",
+  "We found no work in the sources checked on provisional-then-confirmed crash alerts."
+ ],
+ [
+  "no replay of retry policies on public traces was found.",
+  "we found no work in the sources checked that replays retry policies on public traces."
+ ],
+ [
+  "We found no work in the sources checked on provisional-then-confirmed crash alerts.",
+  "An automatic crash-alert unit for vehicle classes outside the Indian AIS-140 mandate reports drop-test and road-course sensitivity over a GSM link \\cite{Thangamani2026_icces}, and a LoRa vehicle-to-vehicle system broadcasts explicit event-termination packets to end channel occupancy after an event report \\cite{AlShammaa2025_jcomss}. We found no work in the sources checked on provisional-then-confirmed crash alerts."
+ ],
+ [
+  "Formal analyses cover LoRaWAN key establishment \\cite{wesemeyer2020}, the protocol in a process-algebra tool \\cite{dong2024}, user authentication for critical applications \\cite{Jabbari2022_tii} and hash-chain key management \\cite{Hakeem2021_s2117583}.",
+  "LoRa and LoRaWAN protocols have been formally analysed: key establishment in Tamarin \\cite{wesemeyer2020}, the protocol in a process-algebra tool \\cite{dong2024}, a user authentication protocol with a real-or-random proof and ProVerif and AVISPA checks \\cite{Jabbari2022_tii}, and hash-chain key management \\cite{Hakeem2021_s2117583}. Those analyses cover key establishment and authentication. The formal claims of this paper cover crash-alert frames only: the acknowledgement binding, freshness, reboot, quarantine, the two-stage confirm and unlinkability with accountability."
+ ],
+ [
+  "\\cite{R7BlindSpot2025} studies selective jamming, and \\cite{R7MacDos2023} propose two denial-of-service attacks on the confirmed transmission of LoRaWAN that rely on its Aloha access and its duty-cycle limit (we read the abstract only: the mechanism, whether it drains the duty budget through suppressed acknowledgements, and whether it has a defence are not known to us; the full text is closed access). We treat acknowledgement suppression against a duty budget as a known class and claim none of it. None of the papers opened gives a reserve for the follow-up frame of a two-stage alert.",
+  "\\cite{R7BlindSpot2025} studies selective jamming, and Chen et al.~\\cite{R7MacDos2023} propose two denial-of-service attacks on the confirmed transmission of LoRaWAN that exploit its Aloha access and its duty-cycle limit (we read the abstract of Chen et al. only: it gives no mechanism and the paper is closed access; the abstract of \\cite{Kumar2026_siml} treats the same class as rogue nodes that use up the gateway's downlink airtime with confirmed uplinks, which we did not verify in the Chen text). \\cite{R7EdaLora2026} forces retransmissions by jamming and replay to deplete the energy of the end device. On the defence side, \\cite{Kumar2026_siml} detects rogue nodes and limits acknowledgements at the gateway. The thesis of Chen \\cite{ChenThesis2024} (we read its Chapter VII) describes the same attack family: confirmed uplinks sent at a high rate to use up the gateway's downlink duty, a MAC-command variant that forces the acknowledgements to SF12, and a variant with a malicious application server; it counters them with a threshold and outlier detector and a graded denylist that finally blocks the acknowledgement to the detected nodes. These attacks aim at the gateway's downlink; the attack here aims at the node's uplink budget through suppressed acknowledgements, and the reserve is a node-side defence. These attacks and defences are known, and we claim none of them. This paper contributes the node-side reserved budget for the follow-up frame of a two-stage alert, a bounded model check with a control, and preregistered results under India's rules. We found no work in the sources checked that reserves node airtime for the follow-up frame of an alert."
+ ],
+ [
+  "and we do not claim the attack. What this paper adds is",
+  "and we do not claim the attack. Nodes without keys cannot use up the base's downlink duty budget with confirmed frames, as in that attack class: in the reference base a frame whose tag fails gets no acknowledgement and is rejected before any state changes (cell-level rate limiting is the design for such frames), whereas a keyless replay of a captured valid frame can still be re-acknowledged unless the re-acknowledgement interval and a downlink budget are set (both are off by default), and the ns-3 gateway model does not check tags. What this paper adds is"
+ ],
+ [
+  "the SisFall file is a Zenodo copy whose licence is the one stated on its record.",
+  "SisFall is available from its authors \\cite{Sucerquia2017_sisfall}; it is not redistributed with this artefact because no data licence is stated (a Zenodo copy states CC BY 4.0 but names no creators, so we did not rely on it; see \\texttt{scripts/fetch\\_sisfall.md})."
+ ],
+ [
+  "\\textbf{Regulation.} ",
+  "\\textbf{Base behaviour.} Acknowledgement only after the tag verifies, and an atomic seen-set check and insert, are properties of the reference base code and design requirements for a base server; no base server exists, the ns-3 gateway acknowledges every received frame, and a keyless replay of a valid frame is re-acknowledged unless the base limits it. \\textbf{Regulation.} "
+ ]
+]

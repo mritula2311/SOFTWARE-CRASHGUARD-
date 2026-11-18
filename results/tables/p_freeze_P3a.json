@@ -1,0 +1,51 @@
+{
+  "frozen_at": "2026-11-12 08:43",
+  "hypothesis": "P3a",
+  "model_files": {
+    "data\\processed\\pp_models\\p1_16_100.joblib": "4d7d54e3347f3f142ed666563cc3ae3a81204193477f274c136e36183fa2f3de",
+    "data\\processed\\pp_models\\p1_32_100.joblib": "74c8296e4fb48691aa7c412970f21a49a8bee7bf3424a777e55317dc8054d498",
+    "data\\processed\\pp_models\\p3_16.joblib": "f22e552a87857fc0aaa77b465e79b60ef1126434bbcf103fa18ef0bcd3ef5762",
+    "data\\processed\\pp_models\\p3_32.joblib": "a4a5811cc6fe2797449a7a1b6dfe462166314ceb5b439ad70141ecb4f50090b5"
+  },
+  "note": "reliability score, threshold at the 70th percentile of validation scores; sealed fold not used",
+  "per_range": {
+    "16": {
+      "choice": "s1",
+      "f": 0.875,
+      "threshold": 0.2995469430241056,
+      "val": {
+        "s1": {
+          "n": 129,
+          "p90_retained": 18.954024272888617,
+          "thr": 0.2995469430241056
+        },
+        "s2": {
+          "n": 129,
+          "p90_retained": 18.954024272888617,
+          "thr": 0.3017440684597713
+        }
+      },
+      "val_escalation_A": 0.6116504854368932,
+      "val_escalation_lowered": 0.6116504854368932
+    },
+    "32": {
+      "choice": "s1",
+      "f": 0.885,
+      "threshold": 0.10152833560670145,
+      "val": {
+        "s1": {
+          "n": 129,
+          "p90_retained": 9.503934277034043,
+          "thr": 0.10152833560670145
+        },
+        "s2": {
+          "n": 129,
+          "p90_retained": 9.503934277034043,
+          "thr": 0.10328234830287455
+        }
+      },
+      "val_escalation_A": 0.6407766990291263,
+      "val_escalation_lowered": 0.6407766990291263
+    }
+  }
+}

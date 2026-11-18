@@ -1,0 +1,27 @@
+id,file,description,status
+L601,src/crashguard/r5_l6.py,path-loss exponent 2 instead of 3,KILLED
+L602,src/crashguard/r5_l6.py,z coordinate,KILLED
+L603,src/crashguard/r5_l6.py,chord distance,KILLED
+L605,src/crashguard/r5_l6.py,severity weight dropped,KILLED
+L606,src/crashguard/r5_l6.py,country filter dropped,KILLED
+L607,src/crashguard/r5_l6.py,cell index,KILLED
+L608,src/crashguard/r5_l6.py,cell centre,KILLED
+L609,src/crashguard/r5_l6.py,places not candidates,KILLED
+L610,src/crashguard/r5_l6.py,coverage radius doubled,KILLED
+L611,src/crashguard/r5_l6.py,initial gain ignores weights,KILLED
+L612,src/crashguard/r5_l6.py,gain ignores already covered targets,KILLED
+L613,src/crashguard/r5_l6.py,lazy update never re-queues,KILLED
+L614,src/crashguard/r5_l6.py,zero gain accepted,KILLED
+L615,src/crashguard/r5_l6.py,one site too many,KILLED
+L616,src/crashguard/r5_l6.py,coverage test radius,KILLED
+L617,src/crashguard/r5_l6.py,no gateway covers everything,KILLED
+L618,src/crashguard/r5_l6.py,lattice points without a nearby candidate kept,SURVIVED
+L619,src/crashguard/r5_l6.py,bisection direction,SURVIVED
+L620,src/crashguard/r5_l6.py,grid not cut to k,KILLED
+L621,src/crashguard/r5_l6.py,difference sign,KILLED
+L622,src/crashguard/r5_l6.py,lower limit,KILLED
+L623,src/crashguard/r5_l6.py,p direction,KILLED
+L624,src/crashguard/r5_l6.py,every k becomes some k,KILLED
+L625,src/crashguard/r5_l6.py,lower limit not required,KILLED
+L626,src/crashguard/r5_l6.py,intersection p uses the smallest,KILLED
+L627,src/crashguard/r5_l6.py,population placement replaced by crash placement,KILLED

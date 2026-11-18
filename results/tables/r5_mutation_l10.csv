@@ -1,0 +1,24 @@
+id,file,description,status
+L1001,src/crashguard/r5_l10.py,identity through float16,KILLED
+L1002,src/crashguard/r5_l10.py,last value left out of the hash,KILLED
+L1003,src/crashguard/r5_l10.py,repeated test windows counted once,KILLED
+L1004,src/crashguard/r5_l10.py,empty test set gives 0 instead of nan,KILLED
+L1005,src/crashguard/r5_l10.py,constant test over all axes together,KILLED
+L1006,src/crashguard/r5_l10.py,every second row,KILLED
+L1007,src/crashguard/r5_l10.py,axes in reverse order,KILLED
+L1008,src/crashguard/r5_l10.py,split ignored,KILLED
+L1010,src/crashguard/r5_l10.py,wrong sensor columns,KILLED
+L1011,src/crashguard/r5_l10.py,last window dropped,KILLED
+L1012,src/crashguard/r5_l10.py,step off by one,KILLED
+L1013,src/crashguard/r5_l10.py,subject from the file name,KILLED
+L1014,src/crashguard/r5_l10.py,test group of the subject split,KILLED
+L1015,src/crashguard/r5_l10.py,test and train swapped,KILLED
+L1016,src/crashguard/r5_l10.py,train set taken from the test windows,KILLED
+L1017,src/crashguard/r5_l10.py,roles of the sets swapped,KILLED
+L1018,src/crashguard/r5_l10.py,constant windows kept in the train set,KILLED
+L1019,src/crashguard/r5_l10.py,constant windows kept in the test set,KILLED
+L1020,src/crashguard/r5_l10.py,readme and other text files read as trials,KILLED
+L1021,src/crashguard/r5_l10.py,file identity from the initial 100 bytes,SURVIVED
+L1022,src/crashguard/r5_l10.py,any benchmark becomes every benchmark,KILLED
+L1023,src/crashguard/r5_l10.py,threshold of 1%,KILLED
+L1024,src/crashguard/r5_l10.py,window length,KILLED

@@ -1,0 +1,1934 @@
+[
+ {
+  "topic": 1,
+  "date_run": "2026-11-14",
+  "database": "OpenAlex API",
+  "query": "LoRa AND (crash OR accident) AND (alert OR notification)",
+  "filters": "from_publication_date:2021-01-01,primary_location.source.type:journal",
+  "operators": 4,
+  "status": "OK",
+  "count": 32,
+  "top15": [
+   {
+    "id": "https://openalex.org/W7162212010",
+    "title": "Lora Network for V2V Communication with Autonomous Accident Detection and Predictive Location-Based Hazard Alerts",
+    "year": 2026,
+    "doi": "https://doi.org/10.55248/gengpi.07.0526.a1231",
+    "journal": "International Journal of Research Publication and Reviews"
+   },
+   {
+    "id": "https://openalex.org/W4409590986",
+    "title": "U-Bend Accident Prevention Through Lora Communication",
+    "year": 2025,
+    "doi": "https://doi.org/10.46632/jeae/4/2/1",
+    "journal": "Journal on Electronic and Automation Engineering"
+   },
+   {
+    "id": "https://openalex.org/W7140217948",
+    "title": "Embedded Smart Accident Prevention With LoRa Based Accident Detection and Emergency Response System",
+    "year": 2026,
+    "doi": "https://doi.org/10.56975/jetir.v13i3.577692",
+    "journal": "Journal of Emerging Technologies and Innovative Research"
+   },
+   {
+    "id": "https://openalex.org/W7220025382",
+    "title": "Advanced Coal Mine Safety Monitoring and Auto Alert system using LoRa Technology",
+    "year": 2022,
+    "doi": null,
+    "journal": "CVR Journal of Science & Technology"
+   },
+   {
+    "id": "https://openalex.org/W7163370722",
+    "title": "A Survey on LoRa-Based Multi-Hop Communication Systems for Vehicular Accident Detection and Emergency Response",
+    "year": 2026,
+    "doi": "https://doi.org/10.55041/ijsrem64473",
+    "journal": "INTERANTIONAL JOURNAL OF SCIENTIFIC RESEARCH IN ENGINEERING AND MANAGEMENT"
+   },
+   {
+    "id": "https://openalex.org/W7223109647",
+    "title": "LoRa-Based Live Tracking and SOS Alert System for Emergency Location Monitoring in Remote Areas",
+    "year": 2026,
+    "doi": "https://doi.org/10.64823/ijter.2610001",
+    "journal": "International Journal of Technology & Emerging Research"
+   },
+   {
+    "id": "https://openalex.org/W4412036200",
+    "title": "Real Time Accident Detection and Emergency Response Using Drones, Machine Learning and LoRa Communication",
+    "year": 2025,
+    "doi": "https://doi.org/10.14569/ijacsa.2025.0160671",
+    "journal": "International Journal of Advanced Computer Science and Applications"
+   },
+   {
+    "id": "https://openalex.org/W4389870150",
+    "title": "Real‐time Internet of LoRa Things (IoLT)‐based accident detection and prevention system in vehicular networks towards smart city",
+    "year": 2023,
+    "doi": "https://doi.org/10.1002/dac.5692",
+    "journal": "International Journal of Communication Systems"
+   },
+   {
+    "id": "https://openalex.org/W7133513825",
+    "title": "A Smart Vehicle Safety System using LoRa and CAN Integration",
+    "year": 2026,
+    "doi": "https://doi.org/10.48175/ijarsct-31448",
+    "journal": "International Journal of Advanced Research in Science Communication and Technology"
+   },
+   {
+    "id": "https://openalex.org/W4399583373",
+    "title": "Intelligent safety life jacket using LoRa technology",
+    "year": 2024,
+    "doi": "https://doi.org/10.26634/jfet.19.3.20595",
+    "journal": "i-manager’s Journal on Future Engineering and Technology"
+   },
+   {
+    "id": "https://openalex.org/W7131679455",
+    "title": "A LoRa-Based V2I System for Collision Warning At Blind-Turn",
+    "year": 2026,
+    "doi": "https://doi.org/10.1109/lsens.2026.3667266",
+    "journal": "IEEE Sensors Letters"
+   },
+   {
+    "id": "https://openalex.org/W4409318607",
+    "title": "Smart Wearable Suit for Coal Miners using LORA Module",
+    "year": 2025,
+    "doi": "https://doi.org/10.48175/ijarsct-25123",
+    "journal": "International Journal of Advanced Research in Science Communication and Technology"
+   },
+   {
+    "id": "https://openalex.org/W7151534204",
+    "title": "Remote Monitoring of Hazardous Materials in Mining Sites using Lora Network",
+    "year": 2026,
+    "doi": "https://doi.org/10.55041/isjem06165",
+    "journal": "International Scientific Journal of Engineering and Management"
+   },
+   {
+    "id": "https://openalex.org/W7156191034",
+    "title": "Vehicle to vehicle communication system using lora for intelligent road safety",
+    "year": 2026,
+    "doi": "https://doi.org/10.55041/ijsrem61417",
+    "journal": "INTERANTIONAL JOURNAL OF SCIENTIFIC RESEARCH IN ENGINEERING AND MANAGEMENT"
+   },
+   {
+    "id": "https://openalex.org/W4413056091",
+    "title": "Developing real-time IoT-based public safety alert and emergency response systems",
+    "year": 2025,
+    "doi": "https://doi.org/10.1038/s41598-025-13465-7",
+    "journal": "Scientific Reports"
+   }
+  ]
+ },
+ {
+  "topic": 1,
+  "date_run": "2026-11-14",
+  "database": "OpenAlex API",
+  "query": "LPWAN AND (accident OR crash) AND detection",
+  "filters": "from_publication_date:2021-01-01,primary_location.source.type:journal",
+  "operators": 3,
+  "status": "OK",
+  "count": 3,
+  "top15": [
+   {
+    "id": "https://openalex.org/W4389870150",
+    "title": "Real‐time Internet of LoRa Things (IoLT)‐based accident detection and prevention system in vehicular networks towards smart city",
+    "year": 2023,
+    "doi": "https://doi.org/10.1002/dac.5692",
+    "journal": "International Journal of Communication Systems"
+   },
+   {
+    "id": "https://openalex.org/W3121092639",
+    "title": "LoRa-Based Traffic Flow Detection for Smart-Road",
+    "year": 2021,
+    "doi": "https://doi.org/10.3390/s21020338",
+    "journal": "Sensors"
+   },
+   {
+    "id": "https://openalex.org/W4402514316",
+    "title": "Wearable Fall Detectors Based on Low Power Transmission Systems: A Systematic Review",
+    "year": 2024,
+    "doi": "https://doi.org/10.3390/technologies12090166",
+    "journal": "Technologies"
+   }
+  ]
+ },
+ {
+  "topic": 2,
+  "date_run": "2026-11-14",
+  "database": "OpenAlex API",
+  "query": "LoRa AND retransmission AND (emergency OR critical)",
+  "filters": "from_publication_date:2021-01-01,primary_location.source.type:journal",
+  "operators": 3,
+  "status": "OK",
+  "count": 10,
+  "top15": [
+   {
+    "id": "https://openalex.org/W3199272654",
+    "title": "Reliability and Energy Consumption of LoRa With Bidirectional Traffic",
+    "year": 2021,
+    "doi": "https://doi.org/10.1109/lcomm.2021.3113134",
+    "journal": "IEEE Communications Letters"
+   },
+   {
+    "id": "https://openalex.org/W4394689617",
+    "title": "A novel single-channel edge computing LoRa gateway for real-time confirmed messaging",
+    "year": 2024,
+    "doi": "https://doi.org/10.1038/s41598-024-59058-8",
+    "journal": "Scientific Reports"
+   },
+   {
+    "id": "https://openalex.org/W4417466552",
+    "title": "Secure LoRa-Based Transmission System: An IoT Solution for Smart Homes and Industries",
+    "year": 2025,
+    "doi": "https://doi.org/10.3390/electronics14244977",
+    "journal": "Electronics"
+   },
+   {
+    "id": "https://openalex.org/W4408673265",
+    "title": "Adaptive Jamming Mitigation for Clustered Energy-Efficient LoRa-BLE Hybrid Wireless Sensor Networks",
+    "year": 2025,
+    "doi": "https://doi.org/10.3390/s25061931",
+    "journal": "Sensors"
+   },
+   {
+    "id": "https://openalex.org/W7163364237",
+    "title": "Hybrid BLE–LoRa architectures for energy-efficient and resilient wireless sensor networks: Experimental validation and adaptive clustering strategies",
+    "year": 2026,
+    "doi": "https://doi.org/10.1007/s12083-026-02251-5",
+    "journal": "Peer-to-Peer Networking and Applications"
+   },
+   {
+    "id": "https://openalex.org/W4313591022",
+    "title": "Delay Optimization in LoRaWAN by Employing Adaptive Scheduling Algorithm With Unsupervised Learning",
+    "year": 2023,
+    "doi": "https://doi.org/10.1109/access.2023.3234188",
+    "journal": "IEEE Access"
+   },
+   {
+    "id": "https://openalex.org/W3201093072",
+    "title": "Zigbee and Long-Range Architecture Based Monitoring System for Oil Pipeline Monitoring with the Internet of Things",
+    "year": 2021,
+    "doi": "https://doi.org/10.3390/su131810226",
+    "journal": "Sustainability"
+   },
+   {
+    "id": "https://openalex.org/W7117682981",
+    "title": "Development of an intelligent control and energy management system for stratospheric telecommunication airships",
+    "year": 2025,
+    "doi": "https://doi.org/10.15587/1729-4061.2025.346938",
+    "journal": "Eastern-European Journal of Enterprise Technologies"
+   },
+   {
+    "id": "https://openalex.org/W4390277924",
+    "title": "Downlink Spreading Factor selection in LoRaWAN",
+    "year": 2023,
+    "doi": "https://doi.org/10.1016/j.comcom.2023.12.013",
+    "journal": "Computer Communications"
+   },
+   {
+    "id": "https://openalex.org/W7143279398",
+    "title": "Correction: LSML-SF: a lightweight stacked ML approach for spreading factor allocation in mobile IoT LoRaWAN networks",
+    "year": 2026,
+    "doi": "https://doi.org/10.3389/frai.2026.1819135",
+    "journal": "Frontiers in Artificial Intelligence"
+   }
+  ]
+ },
+ {
+  "topic": 2,
+  "date_run": "2026-11-14",
+  "database": "OpenAlex API",
+  "query": "LoRaWAN AND (deadline OR latency) AND (confirmed OR acknowledgment)",
+  "filters": "from_publication_date:2021-01-01,primary_location.source.type:journal",
+  "operators": 4,
+  "status": "OK",
+  "count": 12,
+  "top15": [
+   {
+    "id": "https://openalex.org/W7221055386",
+    "title": "TinyML-enabled LoRaWAN acoustic monitoring for illegal logging detection",
+    "year": 2026,
+    "doi": "https://doi.org/10.1016/j.jer.2026.09.065",
+    "journal": "Journal of Engineering Research"
+   },
+   {
+    "id": "https://openalex.org/W4412688131",
+    "title": "Seamless remote roaming activation in LoRaWAN via an API-driven gateway bridge service",
+    "year": 2025,
+    "doi": "https://doi.org/10.1016/j.jnca.2025.104268",
+    "journal": "Journal of Network and Computer Applications"
+   },
+   {
+    "id": "https://openalex.org/W7201980849",
+    "title": "Minimalistic LoRaWAN Communication: Solar Cell Configuration with Lithium Battery Characterization at Low Solar Irradiance",
+    "year": 2026,
+    "doi": "https://doi.org/10.62718/vmca.tech-robo.1.1.sc-0126-002",
+    "journal": "TechMecha RoboSphere A Global Journal on Intelligent Automation Mechatronics Robotics Engineering Management and Sustainable Innovation"
+   },
+   {
+    "id": "https://openalex.org/W7143279398",
+    "title": "Correction: LSML-SF: a lightweight stacked ML approach for spreading factor allocation in mobile IoT LoRaWAN networks",
+    "year": 2026,
+    "doi": "https://doi.org/10.3389/frai.2026.1819135",
+    "journal": "Frontiers in Artificial Intelligence"
+   },
+   {
+    "id": "https://openalex.org/W7154359359",
+    "title": "AI-assisted predictive modeling for latency reduction in next-generation IoT communication systems",
+    "year": 2026,
+    "doi": "https://doi.org/10.33545/27076636.2026.v7.i2a.163",
+    "journal": "International Journal of Computing Programming and Database Management"
+   },
+   {
+    "id": "https://openalex.org/W4417441987",
+    "title": "Edge-AI integrated secure wireless IoT architecture for real time healthcare monitoring and federated anomaly detection",
+    "year": 2025,
+    "doi": "https://doi.org/10.1038/s41598-025-30150-x",
+    "journal": "Scientific Reports"
+   },
+   {
+    "id": "https://openalex.org/W4414450507",
+    "title": "Modular middleware for IoT: scalability, interoperability and energy efficiency in smart campus",
+    "year": 2025,
+    "doi": "https://doi.org/10.3389/frcmn.2025.1672617",
+    "journal": "Frontiers in Communications and Networks"
+   },
+   {
+    "id": "https://openalex.org/W7162649449",
+    "title": "Method of power supply optimization for iot climate monitoring system based on adaptive algorithms",
+    "year": 2025,
+    "doi": "https://doi.org/10.26565/2304-6201-2025-68-07",
+    "journal": "Bulletin of V N Karazin Kharkiv National University series «Mathematical modeling Information technology Automated control systems»"
+   },
+   {
+    "id": "https://openalex.org/W3208674520",
+    "title": "Smart Rural E-Bus System Using Global Radio (GloRa)",
+    "year": 2021,
+    "doi": "https://doi.org/10.18494/sam.2021.3288",
+    "journal": "Sensors and Materials"
+   },
+   {
+    "id": "https://openalex.org/W4415170148",
+    "title": "ПРИСТРІЙ ВИЗНАЧЕННЯ ЗАЙНЯТОСТІ ПАРКОМІСЦЬ В СИСТЕМІ СМАРТ-ПАРКІНГУ",
+    "year": 2025,
+    "doi": "https://doi.org/10.31891/2307-5732-2025-355-58",
+    "journal": "Herald of Khmelnytskyi National University Technical sciences"
+   },
+   {
+    "id": "https://openalex.org/W4414883957",
+    "title": "Design and implementation of ultra-low power Internet of Things (IoT) sensor nodes for smart cities",
+    "year": 2025,
+    "doi": "https://doi.org/10.22271/27084477.2025.v6.i2a.85",
+    "journal": "International Journal of Electronic Devices and Networking"
+   },
+   {
+    "id": "https://openalex.org/W4408854325",
+    "title": "SMART METER DATA COMPRESSION: A SOLUTION FOR REDUCING AND OPTIMISING ENERGY METER RESOURCES IN NBIOT NETWORKS",
+    "year": 2025,
+    "doi": "https://doi.org/10.56238/arev7n3-270",
+    "journal": "Aracê."
+   }
+  ]
+ },
+ {
+  "topic": 2,
+  "date_run": "2026-11-14",
+  "database": "OpenAlex API",
+  "query": "LoRaWAN AND \"adaptive data rate\" AND latency",
+  "filters": "from_publication_date:2021-01-01,primary_location.source.type:journal",
+  "operators": 2,
+  "status": "OK",
+  "count": 17,
+  "top15": [
+   {
+    "id": "https://openalex.org/W7127109003",
+    "title": "Adaptive Data Rate Optimization in Mobile and Dense LoRaWAN IoT Environments",
+    "year": 2026,
+    "doi": "https://doi.org/10.1109/jiot.2026.3659938",
+    "journal": "IEEE Internet of Things Journal"
+   },
+   {
+    "id": "https://openalex.org/W7206214111",
+    "title": "Reinforcement Learning-Based Adaptive Data Rate Control in Mobile LoRaWAN with Imperfect CSI",
+    "year": 2026,
+    "doi": "https://doi.org/10.33003/fjs-2026-1016-5713",
+    "journal": "FUDMA Journal of Sciences"
+   },
+   {
+    "id": "https://openalex.org/W4388849412",
+    "title": "Multi-objective Stochastic Gradient Based ADR Mechanism for Throughput and Latency Optimization in LoRaWAN",
+    "year": 2023,
+    "doi": "https://doi.org/10.2174/0122103279272388231026062241",
+    "journal": "International Journal of Sensors Wireless Communications and Control"
+   },
+   {
+    "id": "https://openalex.org/W3157671997",
+    "title": "LoRaWAN Link Layer",
+    "year": 2021,
+    "doi": "https://doi.org/10.13052/jicts2245-800x.911",
+    "journal": "Journal of ICT Standardization"
+   },
+   {
+    "id": "https://openalex.org/W4206425359",
+    "title": "A Survey on LoRaWAN Technology: Recent Trends, Opportunities, Simulation Tools and Future Directions",
+    "year": 2022,
+    "doi": "https://doi.org/10.3390/electronics11010164",
+    "journal": "Electronics"
+   },
+   {
+    "id": "https://openalex.org/W4403835654",
+    "title": "An Adaptive Data Rate Algorithm for Power-Constrained End Devices in Long Range Networks",
+    "year": 2024,
+    "doi": "https://doi.org/10.3390/math12213371",
+    "journal": "Mathematics"
+   },
+   {
+    "id": "https://openalex.org/W4417280340",
+    "title": "Quality of services LoRaWAN satellite communication",
+    "year": 2025,
+    "doi": "https://doi.org/10.11591/ijeecs.v40.i3.pp1401-1416",
+    "journal": "Indonesian Journal of Electrical Engineering and Computer Science"
+   },
+   {
+    "id": "https://openalex.org/W4294559560",
+    "title": "Heterogeneous LoRaWan deployment for application dependent IOT networks",
+    "year": 2022,
+    "doi": "https://doi.org/10.5935/jetia.v8i34.798",
+    "journal": "ITEGAM- Journal of Engineering and Technology for Industrial Applications (ITEGAM-JETIA)"
+   },
+   {
+    "id": "https://openalex.org/W7138942280",
+    "title": "A method to determine the criticality of gateways in a LoRaWAN network",
+    "year": 2025,
+    "doi": "https://doi.org/10.18372/2073-4751.84.20893",
+    "journal": "Problems of Informatization and Management"
+   },
+   {
+    "id": "https://openalex.org/W7130603890",
+    "title": "Comparative Study and Implementation of Efficient Bandwidth Utilization Technique for LoRaWAN",
+    "year": 2026,
+    "doi": "https://doi.org/10.55041/ijsrem56732",
+    "journal": "INTERANTIONAL JOURNAL OF SCIENTIFIC RESEARCH IN ENGINEERING AND MANAGEMENT"
+   },
+   {
+    "id": "https://openalex.org/W4322630133",
+    "title": "Priority-Based Resource Allocation Optimization for Multi-Service LoRaWAN Harmonization in Compliance with IEEE 2668",
+    "year": 2023,
+    "doi": "https://doi.org/10.3390/s23052660",
+    "journal": "Sensors"
+   },
+   {
+    "id": "https://openalex.org/W7154071152",
+    "title": "Priority-Driven Mobility-Aware Dynamic LoRaWAN Model for Enhanced IoT Connectivity and Energy Efficiency",
+    "year": 2026,
+    "doi": "https://doi.org/10.1007/s11277-026-12024-1",
+    "journal": "Wireless Personal Communications"
+   },
+   {
+    "id": "https://openalex.org/W7150841969",
+    "title": "Joint Optimization of Gateway Placement, Resource Configuration, and Uplink Scheduling for LoRaWAN Bridge Health Monitoring",
+    "year": 2026,
+    "doi": "https://doi.org/10.1109/access.2026.3681393",
+    "journal": "IEEE Access"
+   },
+   {
+    "id": "https://openalex.org/W7160827940",
+    "title": "A Review on Long Range Wide Area Network (LoRaWAN) for Internet of Things (IoT)-Based Smart Home Applications",
+    "year": 2026,
+    "doi": "https://doi.org/10.5455/jjee.204-1758157202",
+    "journal": "Jordan Journal of Electrical Engineering"
+   },
+   {
+    "id": "https://openalex.org/W7163745311",
+    "title": "A Hybrid Quantum-Inspired Deep Reinforcement Learning Framework for Adaptive Scheduling and Energy-Efficient LoRaWAN in Smart IoT Networks",
+    "year": 2026,
+    "doi": "https://doi.org/10.48084/etasr.14958",
+    "journal": "Engineering Technology & Applied Science Research"
+   }
+  ]
+ },
+ {
+  "topic": 3,
+  "date_run": "2026-11-14",
+  "database": "OpenAlex API",
+  "query": "(eCall OR \"automatic crash notification\") AND severity",
+  "filters": "from_publication_date:2021-01-01,primary_location.source.type:journal",
+  "operators": 2,
+  "status": "OK",
+  "count": 7,
+  "top15": [
+   {
+    "id": "https://openalex.org/W4221066772",
+    "title": "Advanced Automatic Crash Notification Algorithm for Children",
+    "year": 2022,
+    "doi": "https://doi.org/10.1016/j.acap.2022.02.016",
+    "journal": "Academic Pediatrics"
+   },
+   {
+    "id": "https://openalex.org/W4243199167",
+    "title": "Prediction of Occupant Injuries for Improved eCall Efficiency",
+    "year": 2021,
+    "doi": "https://doi.org/10.4273/ijvss.13.3.10",
+    "journal": "International Journal of Vehicle Structures and Systems"
+   },
+   {
+    "id": "https://openalex.org/W4220716409",
+    "title": "Expected Effect of Adopting the eCall System on Reducing Traffic-Related Deaths and Social Costs",
+    "year": 2022,
+    "doi": "https://doi.org/10.1109/mits.2022.3155178",
+    "journal": "IEEE Intelligent Transportation Systems Magazine"
+   },
+   {
+    "id": "https://openalex.org/W7204271549",
+    "title": "A Cost–Benefit Analysis of NG-eCall Deployment for Cyclist Safety in the EU-27",
+    "year": 2026,
+    "doi": "https://doi.org/10.47535/1991auoes35(1)023",
+    "journal": "Annals of Faculty of Economics"
+   },
+   {
+    "id": "https://openalex.org/W7165046622",
+    "title": "Predicting specific injury patterns from crash data: a GIDAS-based and manufacturer-independent logistic regression approach for next generation eCall",
+    "year": 2026,
+    "doi": "https://doi.org/10.1016/j.trip.2026.102109",
+    "journal": "Transportation Research Interdisciplinary Perspectives"
+   },
+   {
+    "id": "https://openalex.org/W4301595718",
+    "title": "Motorcycle Crash Severity Estimation for Effective Emergency Response",
+    "year": 2022,
+    "doi": "https://doi.org/10.4271/2022-28-0399",
+    "journal": "SAE technical papers on CD-ROM/SAE technical paper series"
+   },
+   {
+    "id": "https://openalex.org/W4229025184",
+    "title": "Feasibility study for the estimation of a motorcycle helmet Centre of Gravity accelerations with 6 Degrees of Freedom (6DOF) system",
+    "year": 2022,
+    "doi": "https://doi.org/10.1016/j.trip.2022.100603",
+    "journal": "Transportation Research Interdisciplinary Perspectives"
+   }
+  ]
+ },
+ {
+  "topic": 3,
+  "date_run": "2026-11-14",
+  "database": "OpenAlex API",
+  "query": "\"next generation eCall\" OR \"minimum set of data\"",
+  "filters": "from_publication_date:2021-01-01,primary_location.source.type:journal",
+  "operators": 1,
+  "status": "OK",
+  "count": 39,
+  "top15": [
+   {
+    "id": "https://openalex.org/W7165046622",
+    "title": "Predicting specific injury patterns from crash data: a GIDAS-based and manufacturer-independent logistic regression approach for next generation eCall",
+    "year": 2026,
+    "doi": "https://doi.org/10.1016/j.trip.2026.102109",
+    "journal": "Transportation Research Interdisciplinary Perspectives"
+   },
+   {
+    "id": "https://openalex.org/W7125938419",
+    "title": "Concept of eCall for Transportation of Dangerous Goods",
+    "year": 2026,
+    "doi": "https://doi.org/10.1016/j.trpro.2025.12.032",
+    "journal": "Transportation research procedia"
+   },
+   {
+    "id": "https://openalex.org/W4386190225",
+    "title": "A decade of urban fires: Portuguese events between 2013 and 2022",
+    "year": 2023,
+    "doi": "https://doi.org/10.1038/s41597-023-02476-6",
+    "journal": "Scientific Data"
+   },
+   {
+    "id": "https://openalex.org/W4405695090",
+    "title": "Online stability assessment for isolated microgrid via LASSO based neural network algorithm",
+    "year": 2024,
+    "doi": "https://doi.org/10.1016/j.ecmx.2024.100849",
+    "journal": "Energy Conversion and Management X"
+   },
+   {
+    "id": "https://openalex.org/W4384036787",
+    "title": "Soil Quality Assessment in Response to Water Erosion and Mining Activity",
+    "year": 2023,
+    "doi": "https://doi.org/10.3390/agriculture13071380",
+    "journal": "Agriculture"
+   },
+   {
+    "id": "https://openalex.org/W4224950136",
+    "title": "Development and implementation of a national online application system for cross-jurisdictional linked data",
+    "year": 2022,
+    "doi": "https://doi.org/10.23889/ijpds.v7i1.1732",
+    "journal": "International Journal for Population Data Science"
+   },
+   {
+    "id": "https://openalex.org/W4366813798",
+    "title": "A review of paediatric injectable drug delivery to inform the study of product acceptability – An introduction",
+    "year": 2023,
+    "doi": "https://doi.org/10.1016/j.ejpb.2023.04.010",
+    "journal": "European Journal of Pharmaceutics and Biopharmaceutics"
+   },
+   {
+    "id": "https://openalex.org/W7128476096",
+    "title": "Board Design Factors for Vibration Durability Testing of Solder Interconnects",
+    "year": 2025,
+    "doi": "https://doi.org/10.37665/smisqxf42396",
+    "journal": "SMTA International"
+   },
+   {
+    "id": "https://openalex.org/W4380681459",
+    "title": "Identifying and validating the educational needs to develop a Celiac Self-Care System",
+    "year": 2023,
+    "doi": "https://doi.org/10.1186/s12875-023-02076-8",
+    "journal": "BMC Family Practice"
+   },
+   {
+    "id": "https://openalex.org/W3197230980",
+    "title": "Determining chronic pain data elements as a first step towards improving quality of care and research in chronic pain.",
+    "year": 2021,
+    "doi": "https://doi.org/10.23750/abm.v92i4.9651",
+    "journal": "Acta bio-medica dell'Ateneo parmense/Acta biomedica"
+   },
+   {
+    "id": "https://openalex.org/W4393279322",
+    "title": "Corn Cropping Systems in Agricultural Soils from the Bajio Region of Guanajuato: Soil Quality Indexes (SQIs)",
+    "year": 2024,
+    "doi": "https://doi.org/10.3390/app14072858",
+    "journal": "Applied Sciences"
+   },
+   {
+    "id": "https://openalex.org/W4382058065",
+    "title": "Development of a Minimum Data Set for Dental Implants Registry",
+    "year": 2023,
+    "doi": "https://doi.org/10.18502/fid.v20i22.13049",
+    "journal": "Frontiers in Dentistry"
+   },
+   {
+    "id": "https://openalex.org/W4406037627",
+    "title": "Investigation of Dosimetric Properties for MAGAT Polymer Gel Dosimeter Embedded with Methylene Blue Dye and Zinc Oxide Nanoparticles Using 6 MV Photon Beam",
+    "year": 2025,
+    "doi": "https://doi.org/10.1007/s12668-024-01785-3",
+    "journal": "BioNanoScience"
+   },
+   {
+    "id": "https://openalex.org/W4390887006",
+    "title": "Consensus on criteria and minimum data set for the referral of candidate patients for home enteral nutrition teleconsultation: TELENUT project",
+    "year": 2024,
+    "doi": "https://doi.org/10.20960/nh.04702",
+    "journal": "Nutrición Hospitalaria"
+   },
+   {
+    "id": "https://openalex.org/W7215739975",
+    "title": "THE EFFECT OF LAND USAGE AND DEPTH ON SOIL QUALITY IN NORTHERN NIGERIA'S SEMI-ARID REGION",
+    "year": 2025,
+    "doi": "https://doi.org/10.33003/jaat.2025.1103.04",
+    "journal": "FUDMA Journal of Agriculture and Agricultural Technology"
+   }
+  ]
+ },
+ {
+  "topic": 3,
+  "date_run": "2026-11-14",
+  "database": "OpenAlex API",
+  "query": "crash AND notification AND (provisional OR \"two-stage\" OR early)",
+  "filters": "from_publication_date:2021-01-01,primary_location.source.type:journal",
+  "operators": 4,
+  "status": "OK",
+  "count": 14,
+  "top15": [
+   {
+    "id": "https://openalex.org/W4388291815",
+    "title": "Enhancing bicyclist survival time in fatal crashes: Investigating the impact of faster crash notification time through explainable machine learning",
+    "year": 2023,
+    "doi": "https://doi.org/10.1080/19439962.2023.2276195",
+    "journal": "Journal of Transportation Safety & Security"
+   },
+   {
+    "id": "https://openalex.org/W4386946841",
+    "title": "Associations of maternal motor vehicle crashes during pregnancy with offspring’s neonatal birth outcomes",
+    "year": 2023,
+    "doi": "https://doi.org/10.1093/ije/dyad125",
+    "journal": "International Journal of Epidemiology"
+   },
+   {
+    "id": "https://openalex.org/W4403712547",
+    "title": "A vehicle occupant injury prediction algorithm based on road crash and emergency medical data",
+    "year": 2024,
+    "doi": "https://doi.org/10.1016/j.jsr.2024.09.015",
+    "journal": "Journal of Safety Research"
+   },
+   {
+    "id": "https://openalex.org/W7155394207",
+    "title": "Emergency medical services response times to motor vehicle crashes increased in the USA over the period 1987–2020",
+    "year": 2026,
+    "doi": "https://doi.org/10.1016/j.injury.2026.113300",
+    "journal": "Injury"
+   },
+   {
+    "id": "https://openalex.org/W7220184965",
+    "title": "การสอบสวนการบาดเจ็บและเสียชีวิต กรณีรถโดยสารประจำทางลื่นเสียหลักชนต้นไม้ อำเภอโนนสูง จังหวัดนครราชสีมา วันที่ 29 มีนาคม 2562",
+    "year": 2024,
+    "doi": null,
+    "journal": "รายงานการเฝ้าระวังทางระบาดวิทยาประจำสัปดาห์"
+   },
+   {
+    "id": "https://openalex.org/W4404469355",
+    "title": "Multi-Factor Roadside Unit Deployment Optimization Considering Traffic Safety Risks",
+    "year": 2024,
+    "doi": "https://doi.org/10.1109/tits.2024.3491994",
+    "journal": "IEEE Transactions on Intelligent Transportation Systems"
+   },
+   {
+    "id": "https://openalex.org/W4409653590",
+    "title": "Survey on: Cab Management System",
+    "year": 2025,
+    "doi": "https://doi.org/10.55041/ijsrem45210",
+    "journal": "INTERANTIONAL JOURNAL OF SCIENTIFIC RESEARCH IN ENGINEERING AND MANAGEMENT"
+   },
+   {
+    "id": "https://openalex.org/W7160401271",
+    "title": "IoT-Based Road Blackspot Detection via GPS and Web Integration: Design, EAN-Based Risk Classification, and Field Evaluation",
+    "year": 2026,
+    "doi": "https://doi.org/10.59562/intec.v5i2.267",
+    "journal": "Information Technology Education Journal"
+   },
+   {
+    "id": "https://openalex.org/W7161002266",
+    "title": "Drowsiness Detection System in Real Time Based on Behavioral Characteristics of Driver Using Machine Learning Approach",
+    "year": 2026,
+    "doi": "https://doi.org/10.55041/ijcope.v2i5.234",
+    "journal": "International Journal of Creative and Open Research in Engineering and Management"
+   },
+   {
+    "id": "https://openalex.org/W4390701981",
+    "title": "Education, incentive, and engineering-based interventions to promote the use of seat belts",
+    "year": 2024,
+    "doi": "https://doi.org/10.1002/14651858.cd011218.pub2",
+    "journal": "Cochrane Database of Systematic Reviews"
+   },
+   {
+    "id": "https://openalex.org/W4379744229",
+    "title": "Fifty-five years in sleep research: contributions, experiences, and progress",
+    "year": 2023,
+    "doi": "https://doi.org/10.1093/sleepadvances/zpad021",
+    "journal": "SLEEP Advances"
+   },
+   {
+    "id": "https://openalex.org/W4412537724",
+    "title": "On-site Trauma Care in India: Challenges, Progress, and the Road Ahead",
+    "year": 2025,
+    "doi": "https://doi.org/10.4103/jmms.jmms_98_25",
+    "journal": "Journal of Marine Medical Society"
+   },
+   {
+    "id": "https://openalex.org/W4416918684",
+    "title": "How AI Could Transform the Intersection of EM and EMS",
+    "year": 2025,
+    "doi": "https://doi.org/10.1097/01.eem.0000000000000152",
+    "journal": "Emergency Medicine News"
+   },
+   {
+    "id": "https://openalex.org/W4385200836",
+    "title": "Muppets take Windows 95: The queer failure of Muppets Inside: CD‐ROM",
+    "year": 2023,
+    "doi": "https://doi.org/10.1111/jacc.13482",
+    "journal": "The Journal of American Culture"
+   }
+  ]
+ },
+ {
+  "topic": 4,
+  "date_run": "2026-11-14",
+  "database": "OpenAlex API",
+  "query": "LoRaWAN AND (replay OR counter) AND (authentication OR acknowledgment)",
+  "filters": "from_publication_date:2021-01-01,primary_location.source.type:journal",
+  "operators": 4,
+  "status": "OK",
+  "count": 20,
+  "top15": [
+   {
+    "id": "https://openalex.org/W4412747859",
+    "title": "Privacy-Preserving Lightweight LoRaWAN Authentication Protocol for IoT Applications",
+    "year": 2025,
+    "doi": "https://doi.org/10.1109/jiot.2025.3593886",
+    "journal": "IEEE Internet of Things Journal"
+   },
+   {
+    "id": "https://openalex.org/W4400975150",
+    "title": "A Lightweight Authentication Scheme for LoRaWAN Nodes Represented as On-Chain Nonfungible Tokens",
+    "year": 2024,
+    "doi": "https://doi.org/10.1109/jsen.2024.3431432",
+    "journal": "IEEE Sensors Journal"
+   },
+   {
+    "id": "https://openalex.org/W4211186650",
+    "title": "LoRaWAN Security",
+    "year": 2021,
+    "doi": "https://doi.org/10.13052/jicts2245-800x.915",
+    "journal": "Journal of ICT Standardization"
+   },
+   {
+    "id": "https://openalex.org/W7127434262",
+    "title": "Hybrid Machine Learning Anomaly Detection and Lightweight Zero Trust Authentication for LoRaWAN Networks",
+    "year": 2026,
+    "doi": "https://doi.org/10.1109/access.2026.3660731",
+    "journal": "IEEE Access"
+   },
+   {
+    "id": "https://openalex.org/W7214292145",
+    "title": "Deep reinforcement learning-optimized adaptive authenticated encryption and dynamic transmission control for secure LoRaWAN IoT communication",
+    "year": 2026,
+    "doi": "https://doi.org/10.1007/s43926-026-00515-3",
+    "journal": "Discover Internet of Things"
+   },
+   {
+    "id": "https://openalex.org/W4399053562",
+    "title": "The Design of Security Framework for LoRaWAN FUOTA",
+    "year": 2024,
+    "doi": "https://doi.org/10.18196/jet.v7i2.22360",
+    "journal": "Journal of Electrical Technology UMY"
+   },
+   {
+    "id": "https://openalex.org/W4292348028",
+    "title": "A Novel Session Key Update Scheme for LoRaWAN",
+    "year": 2022,
+    "doi": "https://doi.org/10.1109/access.2022.3200397",
+    "journal": "IEEE Access"
+   },
+   {
+    "id": "https://openalex.org/W3197586672",
+    "title": "A Key Management Protocol Based on the Hash Chain Key Generation for Securing LoRaWAN Networks",
+    "year": 2021,
+    "doi": "https://doi.org/10.3390/s21175838",
+    "journal": "Sensors"
+   },
+   {
+    "id": "https://openalex.org/W4393234337",
+    "title": "A Survey on Secure Data Transfer in the Development of Internet of Things (IoT) Applications Using LoRaWAN Technology",
+    "year": 2024,
+    "doi": "https://doi.org/10.1007/s42979-024-02707-6",
+    "journal": "SN Computer Science"
+   },
+   {
+    "id": "https://openalex.org/W4285272932",
+    "title": "Two-Stage High-Efficiency Encryption Key Update Scheme for LoRaWAN Based IoT Environment",
+    "year": 2022,
+    "doi": "https://doi.org/10.32604/cmc.2022.026557",
+    "journal": "Computers, materials & continua/Computers, materials & continua (Print)"
+   },
+   {
+    "id": "https://openalex.org/W7219862766",
+    "title": "Lightweight Authentication Protocols for Secure Embedded Communication in LPWAN",
+    "year": 2026,
+    "doi": "https://doi.org/10.31838/esa/03.01.07",
+    "journal": "SCCTS Journal of Embedded Systems Design and Applications"
+   },
+   {
+    "id": "https://openalex.org/W7220376804",
+    "title": "Securing AI-Driven Systems for Environmental Sustainability in IoT Applications: A Lightweight Message-Authentication Scheme Against Telemetry Poisoning",
+    "year": 2026,
+    "doi": "https://doi.org/10.3390/s26196276",
+    "journal": "Sensors"
+   },
+   {
+    "id": "https://openalex.org/W7168244012",
+    "title": "Energy Depletion Attack for LoRa-Based Wireless Sensor Network",
+    "year": 2026,
+    "doi": "https://doi.org/10.1109/jiot.2026.3713221",
+    "journal": "IEEE Internet of Things Journal"
+   },
+   {
+    "id": "https://openalex.org/W4284886739",
+    "title": "LPWAN Key Exchange: A Centralised Lightweight Approach",
+    "year": 2022,
+    "doi": "https://doi.org/10.3390/s22135065",
+    "journal": "Sensors"
+   },
+   {
+    "id": "https://openalex.org/W7128619741",
+    "title": "A Protocol-Agnostic Backscatter-Based Security Layer for Ultralow-Power SWIPT IoT Networks",
+    "year": 2026,
+    "doi": "https://doi.org/10.1109/jiot.2026.3663551",
+    "journal": "IEEE Internet of Things Journal"
+   }
+  ]
+ },
+ {
+  "topic": 4,
+  "date_run": "2026-11-14",
+  "database": "OpenAlex API",
+  "query": "LoRa AND \"key derivation\" AND device",
+  "filters": "from_publication_date:2021-01-01,primary_location.source.type:journal",
+  "operators": 2,
+  "status": "OK",
+  "count": 1,
+  "top15": [
+   {
+    "id": "https://openalex.org/W7161279784",
+    "title": "Beyond the Gateway: A Secure P2MP Lora-Based Architecture for Rural Health via Iterative Key Derivation",
+    "year": 2026,
+    "doi": "https://doi.org/10.34248/bsengineering.1894126",
+    "journal": "Black Sea Journal of Engineering and Science"
+   }
+  ]
+ },
+ {
+  "topic": 5,
+  "date_run": "2026-11-14",
+  "database": "OpenAlex API",
+  "query": "(LoRa OR LoRaWAN) AND (Tamarin OR ProVerif OR UPPAAL)",
+  "filters": "from_publication_date:2021-01-01,primary_location.source.type:journal",
+  "operators": 4,
+  "status": "OK",
+  "count": 5,
+  "top15": [
+   {
+    "id": "https://openalex.org/W3157897910",
+    "title": "A Secure and LoRaWAN Compatible User Authentication Protocol for Critical Applications in the IoT Environment",
+    "year": 2021,
+    "doi": "https://doi.org/10.1109/tii.2021.3075440",
+    "journal": "IEEE Transactions on Industrial Informatics"
+   },
+   {
+    "id": "https://openalex.org/W4416313224",
+    "title": "Security analysis and improvement of key exchange protocol in LoRaWAN network",
+    "year": 2025,
+    "doi": "https://doi.org/10.1504/ijsnet.2025.149892",
+    "journal": "International Journal of Sensor Networks"
+   },
+   {
+    "id": "https://openalex.org/W4382699871",
+    "title": "MAKA: Multi-Factor Authentication and Key Agreement Scheme for LoRa-Based Smart Grid Communication Services",
+    "year": 2023,
+    "doi": "https://doi.org/10.1080/03772063.2023.2225465",
+    "journal": "IETE Journal of Research"
+   },
+   {
+    "id": "https://openalex.org/W4387421909",
+    "title": "Secure Registration Protocol for the Internet of Drones Using Blockchain and Physical Unclonable Function Technology",
+    "year": 2023,
+    "doi": "https://doi.org/10.3390/sym15101886",
+    "journal": "Symmetry"
+   },
+   {
+    "id": "https://openalex.org/W7166729028",
+    "title": "Формалізація моделі загроз для гібридних архітектур безпеки пристроїв Інтернету речей з подвійним транспортним каналом",
+    "year": 2026,
+    "doi": "https://doi.org/10.30748/soi.2026.185.18",
+    "journal": "Системи обробки інформації"
+   }
+  ]
+ },
+ {
+  "topic": 5,
+  "date_run": "2026-11-14",
+  "database": "OpenAlex API",
+  "query": "LoRaWAN AND (\"formal verification\" OR \"model checking\")",
+  "filters": "from_publication_date:2021-01-01,primary_location.source.type:journal",
+  "operators": 2,
+  "status": "OK",
+  "count": 1,
+  "top15": [
+   {
+    "id": "https://openalex.org/W4412747859",
+    "title": "Privacy-Preserving Lightweight LoRaWAN Authentication Protocol for IoT Applications",
+    "year": 2025,
+    "doi": "https://doi.org/10.1109/jiot.2025.3593886",
+    "journal": "IEEE Internet of Things Journal"
+   }
+  ]
+ },
+ {
+  "topic": 5,
+  "date_run": "2026-11-14",
+  "database": "OpenAlex API",
+  "query": "LoRaWAN AND (AVISPA OR \"timed automata\")",
+  "filters": "from_publication_date:2021-01-01,primary_location.source.type:journal",
+  "operators": 2,
+  "status": "OK",
+  "count": 2,
+  "top15": [
+   {
+    "id": "https://openalex.org/W4412747859",
+    "title": "Privacy-Preserving Lightweight LoRaWAN Authentication Protocol for IoT Applications",
+    "year": 2025,
+    "doi": "https://doi.org/10.1109/jiot.2025.3593886",
+    "journal": "IEEE Internet of Things Journal"
+   },
+   {
+    "id": "https://openalex.org/W4396842943",
+    "title": "Probabilistic performance evaluation of the class-A device in LoRaWAN protocol on the MAC layer",
+    "year": 2024,
+    "doi": "https://doi.org/10.1016/j.peva.2024.102446",
+    "journal": "Performance Evaluation"
+   }
+  ]
+ },
+ {
+  "topic": 6,
+  "date_run": "2026-11-14",
+  "database": "OpenAlex API",
+  "query": "LoRa AND (overhearing OR cooperative) AND acknowledgment",
+  "filters": "from_publication_date:2021-01-01,primary_location.source.type:journal",
+  "operators": 3,
+  "status": "OK",
+  "count": 0,
+  "top15": []
+ },
+ {
+  "topic": 6,
+  "date_run": "2026-11-14",
+  "database": "OpenAlex API",
+  "query": "LoRaWAN AND (\"aggregated acknowledgment\" OR \"group acknowledgment\")",
+  "filters": "from_publication_date:2021-01-01,primary_location.source.type:journal",
+  "operators": 2,
+  "status": "OK",
+  "count": 2,
+  "top15": [
+   {
+    "id": "https://openalex.org/W3131690400",
+    "title": "DG-LoRa: Deterministic Group Acknowledgment Transmissions in LoRa Networks for Industrial IoT Applications",
+    "year": 2021,
+    "doi": "https://doi.org/10.3390/s21041444",
+    "journal": "Sensors"
+   },
+   {
+    "id": "https://openalex.org/W4401611171",
+    "title": "Integrating Fairness in Current Consumption of End Devices in Time-Slotted LoRa-based Wireless Sensor Network",
+    "year": 2024,
+    "doi": "https://doi.org/10.4314/fuoyejet.v9i2.9",
+    "journal": "FUOYE Journal of Engineering and Technology"
+   }
+  ]
+ },
+ {
+  "topic": 7,
+  "date_run": "2026-11-14",
+  "database": "OpenAlex API",
+  "query": "LoRaWAN AND (trace-driven OR \"real-world traces\" OR \"measurement dataset\")",
+  "filters": "from_publication_date:2021-01-01,primary_location.source.type:journal",
+  "operators": 3,
+  "status": "OK",
+  "count": 5,
+  "top15": [
+   {
+    "id": "https://openalex.org/W4413175589",
+    "title": "Blockchain-Enabled Medical Waste Management System for Enhanced Traceability, Safety and Environmental Protection",
+    "year": 2025,
+    "doi": "https://doi.org/10.15849/ijasca.250730.13",
+    "journal": "International Journal of Advances in Soft Computing and its Applications"
+   },
+   {
+    "id": "https://openalex.org/W7152458825",
+    "title": "Data-driven single gateway location estimation using improved channel model and LSTM",
+    "year": 2026,
+    "doi": "https://doi.org/10.1007/s11235-026-01429-9",
+    "journal": "Telecommunication Systems"
+   },
+   {
+    "id": "https://openalex.org/W7163635419",
+    "title": "Precision agriculture in Ecuador: foundations based on a systematic review, trends based on a bibliometric analysis, and a proposed functional framework",
+    "year": 2026,
+    "doi": "https://doi.org/10.64422/rci.v4n2.2026.196",
+    "journal": "Revista Ciencia Innovadora"
+   },
+   {
+    "id": "https://openalex.org/W7155511016",
+    "title": "Инженерные решения для сквозной трассируемости качества в цепях поставок на основе распределенных реестров и интеллектуальных датчиков",
+    "year": 2025,
+    "doi": "https://doi.org/10.25726/f4396-3494-2129-r",
+    "journal": "Environmental management issues"
+   },
+   {
+    "id": "https://openalex.org/W7213966655",
+    "title": "Research Progress and Prospects of Network Engineering Technologies Empowering Low-Carbon Management in High-Speed Railway Construction",
+    "year": 2026,
+    "doi": "https://doi.org/10.12677/aep.2026.169151",
+    "journal": "Advances in Environmental Protection"
+   }
+  ]
+ },
+ {
+  "topic": 7,
+  "date_run": "2026-11-14",
+  "database": "OpenAlex API",
+  "query": "\"LoRaWAN at the Edge\" OR LoED",
+  "filters": "from_publication_date:2021-01-01,primary_location.source.type:journal",
+  "operators": 1,
+  "status": "OK",
+  "count": 11,
+  "top15": [
+   {
+    "id": "https://openalex.org/W4281756149",
+    "title": "LoED: LoRa and Edge Computing based System Architecture for Sustainable Forest Monitoring",
+    "year": 2022,
+    "doi": "https://doi.org/10.14445/22315381/ijett-v70i5p211",
+    "journal": "International Journal of Engineering Trends and Technology"
+   },
+   {
+    "id": "https://openalex.org/W7224295386",
+    "title": "Gateway-level Early Warning of LoRaWAN Link Degradation Using LoED Measurements",
+    "year": 2026,
+    "doi": "https://doi.org/10.26636/jtit.2026.4.2789",
+    "journal": "Journal of Telecommunications and Information Technology"
+   },
+   {
+    "id": "https://openalex.org/W4390106042",
+    "title": "Exploring the Transmembrane Behaviors of Dietary Flavonoids under Intestinal Digestive Products of Different Lipids: Insights into the Structure–Activity Relationship In Vitro",
+    "year": 2023,
+    "doi": "https://doi.org/10.1021/acs.jafc.3c07239",
+    "journal": "Journal of Agricultural and Food Chemistry"
+   },
+   {
+    "id": "https://openalex.org/W7219963890",
+    "title": "การศึกษาสำนวนกลอนระนาดเอกเพลงสาธุการ : กรณีศึกษาทางของครูสุเชาว์ หริมพานิช และทางของอาจารย์มิตต ทรัพย์ผุด",
+    "year": 2024,
+    "doi": null,
+    "journal": "Journal of Music and Performing Arts Khon Kaen University"
+   },
+   {
+    "id": "https://openalex.org/W7163910879",
+    "title": "Blowing in the Wind: Can a Field Drift Bioassay Be Replicated in a Wind Tunnel Using Atrazine as a Case Study?",
+    "year": 2026,
+    "doi": "https://doi.org/10.1021/acsagscitech.5c01175",
+    "journal": "ACS Agricultural Science & Technology"
+   },
+   {
+    "id": "https://openalex.org/W4281985629",
+    "title": "A comparison of the lowest effective concentration in culture media for detection of chromosomal damage in vitro and in blood or plasma for detection of micronuclei in vivo",
+    "year": 2022,
+    "doi": "https://doi.org/10.1016/j.mrgentox.2022.503503",
+    "journal": "Mutation Research/Genetic Toxicology and Environmental Mutagenesis"
+   },
+   {
+    "id": "https://openalex.org/W4200467544",
+    "title": "Reliability Test Plan Based on Logistic-Exponential Distribution and Its Application",
+    "year": 2021,
+    "doi": "https://doi.org/10.13052/jrss0974-8024.14215",
+    "journal": "Journal of Reliability and Statistical Studies"
+   },
+   {
+    "id": "https://openalex.org/W7171991157",
+    "title": "FROM HEALING TO FLEXING: A SEMANTIC STUDY ON POPULAR GENERATION Z TERMS ON SOCIAL MEDIA",
+    "year": 2026,
+    "doi": "https://doi.org/10.36815/matapena.v9i1.4776",
+    "journal": "Matapena."
+   },
+   {
+    "id": "https://openalex.org/W4221099481",
+    "title": "Discovery privacy threats via device de-anonymization in LoRaWAN",
+    "year": 2022,
+    "doi": "https://doi.org/10.1016/j.comcom.2022.02.017",
+    "journal": "Computer Communications"
+   },
+   {
+    "id": "https://openalex.org/W7214669900",
+    "title": "Stability-constrained prequential link forecasting with evidence-gated residual proposals",
+    "year": 2026,
+    "doi": "https://doi.org/10.1016/j.adhoc.2026.104428",
+    "journal": "Ad Hoc Networks"
+   },
+   {
+    "id": "https://openalex.org/W4387369275",
+    "title": "Soil pH influences the toxicity of Basamid® eluates to non-target species of primary consumers",
+    "year": 2023,
+    "doi": "https://doi.org/10.1016/j.aquatox.2023.106726",
+    "journal": "Aquatic Toxicology"
+   }
+  ]
+ },
+ {
+  "topic": 7,
+  "date_run": "2026-11-14",
+  "database": "OpenAlex API",
+  "query": "LoRaWAN AND dataset AND (\"frame counter\" OR \"packet loss\")",
+  "filters": "from_publication_date:2021-01-01,primary_location.source.type:journal",
+  "operators": 3,
+  "status": "OK",
+  "count": 6,
+  "top15": [
+   {
+    "id": "https://openalex.org/W7223685629",
+    "title": "A Signal-Aware Framework for Data Quality Assessment and Missing Data Mitigation in LoRaWAN Environmental IoT Networks",
+    "year": 2026,
+    "doi": "https://doi.org/10.1109/access.2026.3746655",
+    "journal": "IEEE Access"
+   },
+   {
+    "id": "https://openalex.org/W7148473804",
+    "title": "HEAL: health-enhanced adaptive LoRaWAN for AI-based real-time soldier monitoring and status prediction",
+    "year": 2026,
+    "doi": "https://doi.org/10.1038/s41598-026-44274-1",
+    "journal": "Scientific Reports"
+   },
+   {
+    "id": "https://openalex.org/W7143279398",
+    "title": "Correction: LSML-SF: a lightweight stacked ML approach for spreading factor allocation in mobile IoT LoRaWAN networks",
+    "year": 2026,
+    "doi": "https://doi.org/10.3389/frai.2026.1819135",
+    "journal": "Frontiers in Artificial Intelligence"
+   },
+   {
+    "id": "https://openalex.org/W4321608389",
+    "title": "AI-ERA: Artificial Intelligence-Empowered Resource Allocation for LoRa-Enabled IoT Applications",
+    "year": 2023,
+    "doi": "https://doi.org/10.1109/tii.2023.3248074",
+    "journal": "IEEE Transactions on Industrial Informatics"
+   },
+   {
+    "id": "https://openalex.org/W7150898898",
+    "title": "An Examination of LPWAN Security in Maritime Applications",
+    "year": 2026,
+    "doi": "https://doi.org/10.3390/jcp6020065",
+    "journal": "Journal of Cybersecurity and Privacy"
+   },
+   {
+    "id": "https://openalex.org/W4409534987",
+    "title": "Fog-IoPM: Fog computing for Internet of Plants data management",
+    "year": 2025,
+    "doi": "https://doi.org/10.1016/j.sciaf.2025.e02682",
+    "journal": "Scientific African"
+   }
+  ]
+ },
+ {
+  "topic": 8,
+  "date_run": "2026-11-14",
+  "database": "OpenAlex API",
+  "query": "(ns-3 OR FLoRa OR LoRaSim) AND LoRa AND (validation OR measurements)",
+  "filters": "from_publication_date:2021-01-01,primary_location.source.type:journal",
+  "operators": 5,
+  "status": "OK",
+  "count": 17,
+  "top15": [
+   {
+    "id": "https://openalex.org/W4410091983",
+    "title": "Computer modelling of LoRa network parameters using the FLoRa simulator",
+    "year": 2025,
+    "doi": "https://doi.org/10.30857/2786-5371.2025.1.7",
+    "journal": "Technologies and Engineering"
+   },
+   {
+    "id": "https://openalex.org/W4408215394",
+    "title": "Performance Evaluation of a Mesh-Topology LoRa Network",
+    "year": 2025,
+    "doi": "https://doi.org/10.3390/s25051602",
+    "journal": "Sensors"
+   },
+   {
+    "id": "https://openalex.org/W7201851434",
+    "title": "Leveraging Machine Learning for Spreading Factor Optimization in Lora WAN Networks",
+    "year": 2025,
+    "doi": "https://doi.org/10.33411/ijist/1635",
+    "journal": "International Journal of Innovations in Science and Technology"
+   },
+   {
+    "id": "https://openalex.org/W7166164617",
+    "title": "A terrain-aware Fresnel zone simulator for LoRa link feasibility in non-Urban areas",
+    "year": 2026,
+    "doi": "https://doi.org/10.1016/j.iot.2026.102012",
+    "journal": "Internet of Things"
+   },
+   {
+    "id": "https://openalex.org/W7204247106",
+    "title": "A Mechanism for Analyzing the Energy Consumption and Environmental Impact of LoRa Sensors Over Time",
+    "year": 2026,
+    "doi": "https://doi.org/10.1002/dac.70602",
+    "journal": "International Journal of Communication Systems"
+   },
+   {
+    "id": "https://openalex.org/W4394006055",
+    "title": "An efficient and low cost realization of LoRa based real-time forest protection system",
+    "year": 2024,
+    "doi": "https://doi.org/10.11591/ijeecs.v34.i3.pp1452-1462",
+    "journal": "Indonesian Journal of Electrical Engineering and Computer Science"
+   },
+   {
+    "id": "https://openalex.org/W4415254987",
+    "title": "GLo-MAPPO: Multi-Agent Deep Reinforcement Learning for Energy-Efficient UAV-Assisted LoRa Networks",
+    "year": 2026,
+    "doi": "https://doi.org/10.1109/tvt.2026.3747288",
+    "journal": "IEEE Transactions on Vehicular Technology"
+   },
+   {
+    "id": "https://openalex.org/W7138962111",
+    "title": "Defense Against False Data Injection and Fault Tolerance Optimization for Resource Scheduling in Software-Defined Satellite-Terrestrial Networks Using SFT-LoRA",
+    "year": 2026,
+    "doi": "https://doi.org/10.31449/inf.v50i10.11719",
+    "journal": "Informatica"
+   },
+   {
+    "id": "https://openalex.org/W4408689535",
+    "title": "Nanosecond Time Synchronization over a 2.4 GHz Long-Range Wireless Link",
+    "year": 2025,
+    "doi": "https://doi.org/10.3390/s25071961",
+    "journal": "Sensors"
+   },
+   {
+    "id": "https://openalex.org/W4414155287",
+    "title": "Enhanced Adaptive Data Rate and Power Control for Resilient and Energy-Efficient LoRaWAN",
+    "year": 2025,
+    "doi": "https://doi.org/10.1109/jiot.2025.3609239",
+    "journal": "IEEE Internet of Things Journal"
+   },
+   {
+    "id": "https://openalex.org/W4281807356",
+    "title": "Performance Evaluation of Communication Systems Used for Internet of Things in Agriculture",
+    "year": 2022,
+    "doi": "https://doi.org/10.3390/agriculture12060786",
+    "journal": "Agriculture"
+   },
+   {
+    "id": "https://openalex.org/W7211990348",
+    "title": "Design and fabrication of a compact hairpin-line microstrip bandpass filter with source-load coupling for harmonic suppression in sub-GHz LPWAN receiver front-end circuits",
+    "year": 2026,
+    "doi": "https://doi.org/10.22271/27084477.2026.v7.i2a.108",
+    "journal": "International Journal of Electronic Devices and Networking"
+   },
+   {
+    "id": "https://openalex.org/W7127085161",
+    "title": "Coumarin-3-carboxamide derivatives as promising anti-tubercular agents: An In-silico and In-vitro approach",
+    "year": 2025,
+    "doi": "https://doi.org/10.1016/j.lddd.2026.100301",
+    "journal": "Letters in Drug Design & Discovery"
+   },
+   {
+    "id": "https://openalex.org/W4416286411",
+    "title": "Vehicle Profiling-Aware Personalized Federated Low-Rank Adaptation in IoVs",
+    "year": 2025,
+    "doi": "https://doi.org/10.1109/lcomm.2025.3633387",
+    "journal": "IEEE Communications Letters"
+   },
+   {
+    "id": "https://openalex.org/W7169586149",
+    "title": "Comparative Gateway Placement Optimization for LoRaWAN-Based Structural Health Monitoring on Bridges",
+    "year": 2026,
+    "doi": "https://doi.org/10.58286/33825",
+    "journal": "e-Journal of Nondestructive Testing"
+   }
+  ]
+ },
+ {
+  "topic": 8,
+  "date_run": "2026-11-14",
+  "database": "OpenAlex API",
+  "query": "LoRaWAN AND simulator AND \"real deployment\"",
+  "filters": "from_publication_date:2021-01-01,primary_location.source.type:journal",
+  "operators": 2,
+  "status": "OK",
+  "count": 1,
+  "top15": [
+   {
+    "id": "https://openalex.org/W7166164617",
+    "title": "A terrain-aware Fresnel zone simulator for LoRa link feasibility in non-Urban areas",
+    "year": 2026,
+    "doi": "https://doi.org/10.1016/j.iot.2026.102012",
+    "journal": "Internet of Things"
+   }
+  ]
+ },
+ {
+  "topic": 9,
+  "date_run": "2026-11-14",
+  "database": "OpenAlex API",
+  "query": "accelerometer AND (saturation OR clipping) AND (impact OR crash)",
+  "filters": "from_publication_date:2021-01-01,primary_location.source.type:journal",
+  "operators": 4,
+  "status": "OK",
+  "count": 22,
+  "top15": [
+   {
+    "id": "https://openalex.org/W7204150407",
+    "title": "Peak-Aware Saturation Compensation for Low-Range Accelerometer Channels in Transient Impact Sensing",
+    "year": 2026,
+    "doi": "https://doi.org/10.1109/jsen.2026.3724900",
+    "journal": "IEEE Sensors Journal"
+   },
+   {
+    "id": "https://openalex.org/W4206190172",
+    "title": "Novel Crash Sled with a Translating Support Mass",
+    "year": 2022,
+    "doi": "https://doi.org/10.1007/s11340-021-00812-8",
+    "journal": "Experimental Mechanics"
+   },
+   {
+    "id": "https://openalex.org/W7203866687",
+    "title": "Accelerometer-derived “weekend warrior” physical activity pattern and all-cause mortality in individuals with kidney stones: a prospective cohort study",
+    "year": 2026,
+    "doi": "https://doi.org/10.3389/fnut.2026.1892920",
+    "journal": "Frontiers in Nutrition"
+   },
+   {
+    "id": "https://openalex.org/W4320727145",
+    "title": "Impact of test, vaccinate and remove protocol on home ranges and nightly movements of badgers in a medium density population",
+    "year": 2023,
+    "doi": "https://doi.org/10.1038/s41598-023-28620-1",
+    "journal": "Scientific Reports"
+   },
+   {
+    "id": "https://openalex.org/W4280489493",
+    "title": "Impact of critical illness and withholding of early parenteral nutrition in the pediatric intensive care unit on long-term physical performance of children: a 4-year follow-up of the PEPaNIC randomized controlled trial",
+    "year": 2022,
+    "doi": "https://doi.org/10.1186/s13054-022-04010-3",
+    "journal": "Critical Care"
+   },
+   {
+    "id": "https://openalex.org/W4416176857",
+    "title": "A Wearable Solution for Continuous Health Monitoring and Fall Detection in Elderly Care",
+    "year": 2025,
+    "doi": "https://doi.org/10.31963/intek.v12i1.5742",
+    "journal": "INTEK Jurnal Penelitian"
+   },
+   {
+    "id": "https://openalex.org/W4384521909",
+    "title": "A novel wearable device for automated real-time detection of epileptic seizures",
+    "year": 2023,
+    "doi": "https://doi.org/10.1186/s42490-023-00073-7",
+    "journal": "BMC Biomedical Engineering"
+   },
+   {
+    "id": "https://openalex.org/W7164433849",
+    "title": "Enhancing UAV survivability through real-time stall detection and parachute assisted recovery",
+    "year": 2026,
+    "doi": "https://doi.org/10.1038/s41598-026-47045-0",
+    "journal": "Scientific Reports"
+   },
+   {
+    "id": "https://openalex.org/W4410464529",
+    "title": "Optimization of Data Storage and Transmission in Wearable Devices for ADLs and Falls Using Bluetooth Low Energy: An Approach to Minimize Packet Loss",
+    "year": 2025,
+    "doi": "https://doi.org/10.1007/978-3-031-91481-2_14",
+    "journal": "Information systems engineering and management"
+   },
+   {
+    "id": "https://openalex.org/W4416033001",
+    "title": "Optimized variable reluctance energy harvester with dual magnet arrays for self-powered multimodal monitoring of rotating machinery",
+    "year": 2025,
+    "doi": "https://doi.org/10.1016/j.ymssp.2025.113603",
+    "journal": "Mechanical Systems and Signal Processing"
+   },
+   {
+    "id": "https://openalex.org/W4390201757",
+    "title": "Ketogenic Dietary Effects on Sleep, Cognition and Behavior in MCI: Baseline Sleep Results",
+    "year": 2023,
+    "doi": "https://doi.org/10.1002/alz.083248",
+    "journal": "Alzheimer s & Dementia"
+   },
+   {
+    "id": "https://openalex.org/W4386119625",
+    "title": "A Machine Learning-Based Correlation Analysis between Driver Behaviour and Vital Signs: Approach and Case Study",
+    "year": 2023,
+    "doi": "https://doi.org/10.3390/s23177387",
+    "journal": "Sensors"
+   },
+   {
+    "id": "https://openalex.org/W4391610275",
+    "title": "Assessing the accuracy of photoplethysmography for wearable heart rate monitoring based on body location and body motion in uncontrolled outdoor environments",
+    "year": 2024,
+    "doi": "https://doi.org/10.36950/2024.2ciss059",
+    "journal": "Current Issues in Sport Science (CISS)"
+   },
+   {
+    "id": "https://openalex.org/W4391467933",
+    "title": "Cohort Profile Update: The Young-HUNT Study, Norway",
+    "year": 2024,
+    "doi": "https://doi.org/10.1093/ije/dyae013",
+    "journal": "International Journal of Epidemiology"
+   },
+   {
+    "id": "https://openalex.org/W7167053585",
+    "title": "Principles of collecting physiological biometric data from wearable devices for authentication systems",
+    "year": 2026,
+    "doi": "https://doi.org/10.31673/2409-7292.2026.026910",
+    "journal": "Modern information security"
+   }
+  ]
+ },
+ {
+  "topic": 9,
+  "date_run": "2026-11-14",
+  "database": "OpenAlex API",
+  "query": "\"delta-V\" AND accelerometer AND (estimation OR crash)",
+  "filters": "from_publication_date:2021-01-01,primary_location.source.type:journal",
+  "operators": 3,
+  "status": "OK",
+  "count": 5,
+  "top15": [
+   {
+    "id": "https://openalex.org/W3207999649",
+    "title": "Delta-v slope as an indicator of injury",
+    "year": 2021,
+    "doi": "https://doi.org/10.1080/15389588.2021.1982615",
+    "journal": "Traffic Injury Prevention"
+   },
+   {
+    "id": "https://openalex.org/W3125792140",
+    "title": "Reconstructing Vehicle and Occupant Motion from EDR Data in High Yaw Velocity Crashes",
+    "year": 2021,
+    "doi": "https://doi.org/10.4271/2021-01-0892",
+    "journal": "SAE technical papers on CD-ROM/SAE technical paper series"
+   },
+   {
+    "id": "https://openalex.org/W7167712123",
+    "title": "Direction-Aware Telematics Crash Detection and Injury Plausibility Scoring for False Injury Claim Mitigation",
+    "year": 2026,
+    "doi": "https://doi.org/10.51583/ijltemas.2026.150600052",
+    "journal": "International Journal of Latest Technology in Engineering Management & Applied Science"
+   },
+   {
+    "id": "https://openalex.org/W4408095395",
+    "title": "Italian Spring Accelerometer measurements of unexpected Non Gravitational Perturbation during BepiColombo second Venus swing-by",
+    "year": 2025,
+    "doi": "https://doi.org/10.1016/j.actaastro.2025.02.037",
+    "journal": "Acta Astronautica"
+   },
+   {
+    "id": "https://openalex.org/W7150906172",
+    "title": "The Characterization of Longitudinal Lumbar Acceleration in Low-Speed Rear-End Impacts Across Different Surrogate Occupant Types",
+    "year": 2026,
+    "doi": "https://doi.org/10.4271/2026-01-0552",
+    "journal": "SAE technical papers on CD-ROM/SAE technical paper series"
+   }
+  ]
+ },
+ {
+  "topic": 9,
+  "date_run": "2026-11-14",
+  "database": "OpenAlex API",
+  "query": "crash AND accelerometer AND (\"sampling rate\" OR \"measurement range\")",
+  "filters": "from_publication_date:2021-01-01,primary_location.source.type:journal",
+  "operators": 3,
+  "status": "OK",
+  "count": 1,
+  "top15": [
+   {
+    "id": "https://openalex.org/W4413758015",
+    "title": "Self-assembled triboelectric nanogenerators with optimized surfaces for high-g accelerometers in extreme environments",
+    "year": 2025,
+    "doi": "https://doi.org/10.1016/j.cej.2025.167545",
+    "journal": "Chemical Engineering Journal"
+   }
+  ]
+ },
+ {
+  "topic": 10,
+  "date_run": "2026-11-14",
+  "database": "OpenAlex API",
+  "query": "(leakage OR duplicate) AND (crash OR \"fall detection\" OR \"activity recognition\") AND dataset",
+  "filters": "from_publication_date:2021-01-01,primary_location.source.type:journal",
+  "operators": 5,
+  "status": "OK",
+  "count": 54,
+  "top15": [
+   {
+    "id": "https://openalex.org/W7214642774",
+    "title": "Auditing Multimodal Fusion Benchmarks: Leakage, Attribution, and Calibration in Elderly Fall Detection",
+    "year": 2026,
+    "doi": "https://doi.org/10.3390/make8100298",
+    "journal": "Machine Learning and Knowledge Extraction"
+   },
+   {
+    "id": "https://openalex.org/W7171613824",
+    "title": "Trial-Efficient Crash and Fall Detection for Two-Wheeler Delivery Riders Using Smartphone Inertial Sensors",
+    "year": 2026,
+    "doi": "https://doi.org/10.22214/ijraset.2026.84411",
+    "journal": "International Journal for Research in Applied Science and Engineering Technology"
+   },
+   {
+    "id": "https://openalex.org/W7221480893",
+    "title": "Evaluating pre-impact fall detection: A user-independent assessment of deep learning models on the KFall dataset",
+    "year": 2026,
+    "doi": "https://doi.org/10.1016/j.measurement.2026.123369",
+    "journal": "Measurement"
+   },
+   {
+    "id": "https://openalex.org/W4405222664",
+    "title": "A pipeline to enhance animal vehicle collision analysis in crash report dataset",
+    "year": 2024,
+    "doi": "https://doi.org/10.1016/j.jsr.2024.12.002",
+    "journal": "Journal of Safety Research"
+   },
+   {
+    "id": "https://openalex.org/W4405074442",
+    "title": "VBCNet: A Hybird Network for Human Activity Recognition",
+    "year": 2024,
+    "doi": "https://doi.org/10.3390/s24237793",
+    "journal": "Sensors"
+   },
+   {
+    "id": "https://openalex.org/W7219830528",
+    "title": "High-optimized crash severity prediction: a calibrated, leakage-aware ensemble stacking framework for deployment-ready decision making",
+    "year": 2026,
+    "doi": "https://doi.org/10.1038/s41598-026-73854-4",
+    "journal": "Scientific Reports"
+   },
+   {
+    "id": "https://openalex.org/W7128401008",
+    "title": "Artificial Intelligence for Elderly Fall Detection: State-of-the-art Methods, Applications and Challenges",
+    "year": 2026,
+    "doi": "https://doi.org/10.1007/s12559-026-10550-5",
+    "journal": "Cognitive Computation"
+   },
+   {
+    "id": "https://openalex.org/W7165784756",
+    "title": "Research and Implementation of YOLOv8+Transformer in Human Fall Detection Image Recognition",
+    "year": 2026,
+    "doi": "https://doi.org/10.54691/w0v9vp33",
+    "journal": "Scientific Journal of Intelligent Systems Research"
+   },
+   {
+    "id": "https://openalex.org/W4415900861",
+    "title": "Interpretable machine learning for driver fault attribution in road traffic crashes: Evidence from a nationwide police dataset",
+    "year": 2025,
+    "doi": "https://doi.org/10.1016/j.trip.2025.101713",
+    "journal": "Transportation Research Interdisciplinary Perspectives"
+   },
+   {
+    "id": "https://openalex.org/W7165621149",
+    "title": "Letter to the Editor. Re: “AI-driven Internet of Things (IoT) dataset for remote health monitoring and fall detection in elderly people,” Data in Brief 66 (2026) 112641",
+    "year": 2026,
+    "doi": "https://doi.org/10.1016/j.dib.2026.113001",
+    "journal": "Data in Brief"
+   },
+   {
+    "id": "https://openalex.org/W4206794708",
+    "title": "Balancing Activity Recognition and Privacy Preservation with a Multi-objective Evolutionary Algorithm",
+    "year": 2021,
+    "doi": "https://doi.org/10.1007/978-3-030-91421-9_1",
+    "journal": "Lecture notes of the Institute for Computer Sciences, Social Informatics and Telecommunications Engineering"
+   },
+   {
+    "id": "https://openalex.org/W7160059097",
+    "title": "Real-time, mobile-compatible, and low-cost fall detection system with deep learning",
+    "year": 2026,
+    "doi": "https://doi.org/10.1007/s11760-026-05239-z",
+    "journal": "Signal Image and Video Processing"
+   },
+   {
+    "id": "https://openalex.org/W4405078322",
+    "title": "Human Activity Recognition: A Comparative Study of Validation Methods and Impact of Feature Extraction in Wearable Sensors",
+    "year": 2024,
+    "doi": "https://doi.org/10.3390/a17120556",
+    "journal": "Algorithms"
+   },
+   {
+    "id": "https://openalex.org/W4388692092",
+    "title": "Body RFID Skeleton-Based Human Activity Recognition Using Graph Convolution Neural Network",
+    "year": 2023,
+    "doi": "https://doi.org/10.1109/tmc.2023.3333043",
+    "journal": "IEEE Transactions on Mobile Computing"
+   },
+   {
+    "id": "https://openalex.org/W4389474320",
+    "title": "High-Accuracy and Fine-Granularity Human Activity Recognition Method Based on Body RFID Skeleton",
+    "year": 2023,
+    "doi": "https://doi.org/10.1109/tce.2023.3340752",
+    "journal": "IEEE Transactions on Consumer Electronics"
+   }
+  ]
+ },
+ {
+  "topic": 10,
+  "date_run": "2026-11-14",
+  "database": "OpenAlex API",
+  "query": "(\"data leakage\" OR \"subject-wise\") AND (\"activity recognition\" OR \"fall detection\") AND validation",
+  "filters": "from_publication_date:2021-01-01,primary_location.source.type:journal",
+  "operators": 4,
+  "status": "OK",
+  "count": 15,
+  "top15": [
+   {
+    "id": "https://openalex.org/W4405078322",
+    "title": "Human Activity Recognition: A Comparative Study of Validation Methods and Impact of Feature Extraction in Wearable Sensors",
+    "year": 2024,
+    "doi": "https://doi.org/10.3390/a17120556",
+    "journal": "Algorithms"
+   },
+   {
+    "id": "https://openalex.org/W7214151581",
+    "title": "Activity recognition via Riemannian optimization and multimodal Transformers",
+    "year": 2026,
+    "doi": "https://doi.org/10.1016/j.mlwa.2026.101021",
+    "journal": "Machine Learning with Applications"
+   },
+   {
+    "id": "https://openalex.org/W7214642774",
+    "title": "Auditing Multimodal Fusion Benchmarks: Leakage, Attribution, and Calibration in Elderly Fall Detection",
+    "year": 2026,
+    "doi": "https://doi.org/10.3390/make8100298",
+    "journal": "Machine Learning and Knowledge Extraction"
+   },
+   {
+    "id": "https://openalex.org/W4382134824",
+    "title": "Reducing the Impact of Sensor Orientation Variability in Human Activity Recognition Using a Consistent Reference System",
+    "year": 2023,
+    "doi": "https://doi.org/10.3390/s23135845",
+    "journal": "Sensors"
+   },
+   {
+    "id": "https://openalex.org/W7171365989",
+    "title": "Enhanced Multi-Modal Human Activity Recognition Using STAR Transformer with Linformer Attention",
+    "year": 2026,
+    "doi": "https://doi.org/10.1109/access.2026.3717226",
+    "journal": "IEEE Access"
+   },
+   {
+    "id": "https://openalex.org/W7221480893",
+    "title": "Evaluating pre-impact fall detection: A user-independent assessment of deep learning models on the KFall dataset",
+    "year": 2026,
+    "doi": "https://doi.org/10.1016/j.measurement.2026.123369",
+    "journal": "Measurement"
+   },
+   {
+    "id": "https://openalex.org/W7130505524",
+    "title": "An Interpretable Deep Learning Framework for Human Activity Recognition in Smart Sport Using Wearable Devices",
+    "year": 2026,
+    "doi": "https://doi.org/10.1007/s44196-026-01196-0",
+    "journal": "International Journal of Computational Intelligence Systems"
+   },
+   {
+    "id": "https://openalex.org/W7221528166",
+    "title": "Compact and Explainable Human Activity Recognition with Boruta-RFE Feature Selection and SHAP Interpretation",
+    "year": 2026,
+    "doi": "https://doi.org/10.3390/app162010046",
+    "journal": "Applied Sciences"
+   },
+   {
+    "id": "https://openalex.org/W7225627035",
+    "title": "Lightweight 1D-CNN for Real-Time Human Activity Recognition on Raspberry Pi Using a Low-Cost IMU Sensor",
+    "year": 2026,
+    "doi": "https://doi.org/10.1109/access.2026.3751679",
+    "journal": "IEEE Access"
+   },
+   {
+    "id": "https://openalex.org/W7223857953",
+    "title": "HF-GestureNET: A Hybrid Spatio-Spectral Graph Learning Framework for Gesture Recognition and Efficiency Assessment",
+    "year": 2026,
+    "doi": "https://doi.org/10.1109/access.2026.3747756",
+    "journal": "IEEE Access"
+   },
+   {
+    "id": "https://openalex.org/W4416462152",
+    "title": "Enhancing psychological resilience and decision-making in basketball players through emerging technologies",
+    "year": 2025,
+    "doi": "https://doi.org/10.1038/s41598-025-25226-7",
+    "journal": "Scientific Reports"
+   },
+   {
+    "id": "https://openalex.org/W3209127462",
+    "title": "Scoring Performance on the Y-Balance Test Using a Deep Learning Approach",
+    "year": 2021,
+    "doi": "https://doi.org/10.3390/s21217110",
+    "journal": "Sensors"
+   },
+   {
+    "id": "https://openalex.org/W7216559585",
+    "title": "xAutoGA: an automated deep learning software to educate users",
+    "year": 2026,
+    "doi": "https://doi.org/10.1007/s11042-026-21942-y",
+    "journal": "Multimedia Tools and Applications"
+   },
+   {
+    "id": "https://openalex.org/W4410502960",
+    "title": "0444 Self-Supervised Pretraining for Wrist-Worn Accelerometer Data Improves Activity and Sleep-Wake Discrimination",
+    "year": 2025,
+    "doi": "https://doi.org/10.1093/sleep/zsaf090.0444",
+    "journal": "SLEEP"
+   },
+   {
+    "id": "https://openalex.org/W7204235229",
+    "title": "Uncertainty-aware federated temporal learning with explainable LLM-based coaching for privacy-preserving wearable health systems",
+    "year": 2026,
+    "doi": "https://doi.org/10.3389/frai.2026.1809361",
+    "journal": "Frontiers in Artificial Intelligence"
+   }
+  ]
+ },
+ {
+  "topic": 11,
+  "date_run": "2026-11-14",
+  "database": "OpenAlex API",
+  "query": "(crash OR accident) AND detection AND (TinyML OR \"decision tree\") AND embedded",
+  "filters": "from_publication_date:2021-01-01,primary_location.source.type:journal",
+  "operators": 5,
+  "status": "OK",
+  "count": 10,
+  "top15": [
+   {
+    "id": "https://openalex.org/W4200514941",
+    "title": "TinyML-Based Fall Detection for Connected Personal Mobility Vehicles",
+    "year": 2021,
+    "doi": "https://doi.org/10.32604/cmc.2022.022610",
+    "journal": "Computers, materials & continua/Computers, materials & continua (Print)"
+   },
+   {
+    "id": "https://openalex.org/W7167674817",
+    "title": "Uncertainty-Aware Continual TinyML Driver Fatigue Detection with Kolmogorov–Arnold Networks at the IoT Edge",
+    "year": 2026,
+    "doi": "https://doi.org/10.3390/asi9070147",
+    "journal": "Applied System Innovation"
+   },
+   {
+    "id": "https://openalex.org/W4415934913",
+    "title": "FastKAN-DDD: A novel fast Kolmogorov-Arnold network-based approach for driver drowsiness detection optimized for TinyML deployment",
+    "year": 2025,
+    "doi": "https://doi.org/10.1371/journal.pone.0332577",
+    "journal": "PLoS ONE"
+   },
+   {
+    "id": "https://openalex.org/W4386320525",
+    "title": "Behind-the-Ear EEG-Based Wearable Driver Drowsiness Detection System Using Embedded Tiny Neural Networks",
+    "year": 2023,
+    "doi": "https://doi.org/10.1109/jsen.2023.3307766",
+    "journal": "IEEE Sensors Journal"
+   },
+   {
+    "id": "https://openalex.org/W4382199147",
+    "title": "Real-Time Driver Drowsiness Detection and Classification on Embedded Systems Using Machine Learning Algorithms",
+    "year": 2023,
+    "doi": "https://doi.org/10.18280/ts.400302",
+    "journal": "Traitement du signal"
+   },
+   {
+    "id": "https://openalex.org/W7160417041",
+    "title": "Smart Vehicle Safety System Using IoT and Machine Learning for Accident Detection and Adaptive Cruise Control",
+    "year": 2026,
+    "doi": "https://doi.org/10.55041/ijcope.v2i5.043",
+    "journal": "International Journal of Creative and Open Research in Engineering and Management"
+   },
+   {
+    "id": "https://openalex.org/W4391483642",
+    "title": "Advancements in Machine Learning and Data Mining Techniques for Collision Prediction and Hazard Detection in Internet of Vehicles",
+    "year": 2024,
+    "doi": "https://doi.org/10.24271/psr.2023.403821.1342",
+    "journal": "passer"
+   },
+   {
+    "id": "https://openalex.org/W4404343592",
+    "title": "Driver Drowsiness Detection Using ECG Signals and Machine Learning Models",
+    "year": 2022,
+    "doi": "https://doi.org/10.21275/sr22610152506",
+    "journal": "International Journal of Science and Research (IJSR)"
+   },
+   {
+    "id": "https://openalex.org/W4311092738",
+    "title": "Hybrid Ensemble Based Machine Learning for Smart Building Fire Detection Using Multi Modal Sensor Data",
+    "year": 2022,
+    "doi": "https://doi.org/10.1007/s10694-022-01347-7",
+    "journal": "Fire Technology"
+   },
+   {
+    "id": "https://openalex.org/W7162141588",
+    "title": "Advanced Smart Helmet",
+    "year": 2026,
+    "doi": "https://doi.org/10.22214/ijraset.2026.82728",
+    "journal": "International Journal for Research in Applied Science and Engineering Technology"
+   }
+  ]
+ },
+ {
+  "topic": 12,
+  "date_run": "2026-11-14",
+  "database": "OpenAlex API",
+  "query": "\"crash pulse\" AND (synthetic OR generation)",
+  "filters": "from_publication_date:2021-01-01,primary_location.source.type:journal",
+  "operators": 2,
+  "status": "OK",
+  "count": 5,
+  "top15": [
+   {
+    "id": "https://openalex.org/W3159454463",
+    "title": "A data-driven, kinematic feature-based, near real-time algorithm for injury severity prediction of vehicle occupants",
+    "year": 2021,
+    "doi": "https://doi.org/10.1016/j.aap.2021.106149",
+    "journal": "Accident Analysis & Prevention"
+   },
+   {
+    "id": "https://openalex.org/W4385230230",
+    "title": "A Lightweight Pre-Crash Occupant Injury Prediction Model Distills Knowledge From Its Post-Crash Counterpart",
+    "year": 2023,
+    "doi": "https://doi.org/10.1115/1.4063033",
+    "journal": "Journal of Biomechanical Engineering"
+   },
+   {
+    "id": "https://openalex.org/W7143494086",
+    "title": "High-fidelity numerical framework for crashworthiness evaluation of passenger car body structures under full-frontal impact",
+    "year": 2026,
+    "doi": "https://doi.org/10.1038/s41598-026-43474-z",
+    "journal": "Scientific Reports"
+   },
+   {
+    "id": "https://openalex.org/W4413412731",
+    "title": "Optimal design of pre-inflation airbag of school bus in mixed conditions using NSGA-III-SAA",
+    "year": 2025,
+    "doi": "https://doi.org/10.1177/09544070251354871",
+    "journal": "Proceedings of the Institution of Mechanical Engineers Part D Journal of Automobile Engineering"
+   },
+   {
+    "id": "https://openalex.org/W4391513608",
+    "title": "Special Issue: Current Trends in Impact and Injury Biomechanics",
+    "year": 2024,
+    "doi": "https://doi.org/10.1115/1.4064641",
+    "journal": "Journal of Biomechanical Engineering"
+   }
+  ]
+ },
+ {
+  "topic": 12,
+  "date_run": "2026-11-14",
+  "database": "OpenAlex API",
+  "query": "vehicle AND crash AND (\"lumped parameter\" OR \"spring-mass\") AND pulse",
+  "filters": "from_publication_date:2021-01-01,primary_location.source.type:journal",
+  "operators": 4,
+  "status": "OK",
+  "count": 0,
+  "top15": []
+ },
+ {
+  "topic": 13,
+  "date_run": "2026-11-14",
+  "database": "OpenAlex API",
+  "query": "IoT AND (supercapacitor OR \"backup power\") AND (emergency OR alert) AND transmission",
+  "filters": "from_publication_date:2021-01-01,primary_location.source.type:journal",
+  "operators": 5,
+  "status": "OK",
+  "count": 4,
+  "top15": [
+   {
+    "id": "https://openalex.org/W7161695129",
+    "title": "Development of an Integrated Disaster Detector and Alert System",
+    "year": 2026,
+    "doi": "https://doi.org/10.69651/pijhss05021060",
+    "journal": "Pantao (International Journal of the Humanities and Social Sciences)"
+   },
+   {
+    "id": "https://openalex.org/W4390991337",
+    "title": "Towards Sustainable Smart Living: Cloud-Based IoT Solutions for Home Automation",
+    "year": 2023,
+    "doi": "https://doi.org/10.51519/journalisi.v5i4.621",
+    "journal": "Journal of Information Systems and Informatics"
+   },
+   {
+    "id": "https://openalex.org/W7136105825",
+    "title": "IOT-Based Smart Microgrid Monitoring System for Real-Time Energy Management",
+    "year": 2026,
+    "doi": "https://doi.org/10.55041/ijsrem57771",
+    "journal": "INTERANTIONAL JOURNAL OF SCIENTIFIC RESEARCH IN ENGINEERING AND MANAGEMENT"
+   },
+   {
+    "id": "https://openalex.org/W7160126011",
+    "title": "DESIGN AND IMPLEMENTATION OF AUTOMATIC GSM BASE FIRE ALARM SYSTEM",
+    "year": 2026,
+    "doi": "https://doi.org/10.70382/sjelmr.v12i5.020",
+    "journal": "Journal of Engineering Logic and Modelling Research"
+   }
+  ]
+ },
+ {
+  "topic": 13,
+  "date_run": "2026-11-14",
+  "database": "OpenAlex API",
+  "query": "\"last gasp\" AND (IoT OR LoRa OR LPWAN)",
+  "filters": "from_publication_date:2021-01-01,primary_location.source.type:journal",
+  "operators": 3,
+  "status": "OK",
+  "count": 0,
+  "top15": []
+ }
+]

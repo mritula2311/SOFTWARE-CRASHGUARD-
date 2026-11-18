@@ -1,0 +1,38 @@
+{
+ "hA1a": {
+  "met": false,
+  "p": 1.0,
+  "cells": {
+   "sf9.calib.p0": false,
+   "sf9.calib.p0.1": false,
+   "sf9.calib.p0.3": false,
+   "sf9.calib.p0.6": true,
+   "sf9.shipped.p0": false,
+   "sf9.shipped.p0.1": false,
+   "sf9.shipped.p0.3": false,
+   "sf9.shipped.p0.6": true
+  }
+ },
+ "hA1c": {
+  "met": false,
+  "p": 1.0,
+  "cells": {
+   "sf7.calib.p0": true,
+   "sf7.calib.p0.1": true,
+   "sf7.calib.p0.3": true,
+   "sf7.calib.p0.6": false,
+   "sf7.shipped.p0": true,
+   "sf7.shipped.p0.1": true,
+   "sf7.shipped.p0.3": true,
+   "sf7.shipped.p0.6": false,
+   "sf9.calib.p0": true,
+   "sf9.calib.p0.1": true,
+   "sf9.calib.p0.3": false,
+   "sf9.calib.p0.6": false,
+   "sf9.shipped.p0": true,
+   "sf9.shipped.p0.1": true,
+   "sf9.shipped.p0.3": true,
+   "sf9.shipped.p0.6": false
+  }
+ }
+}

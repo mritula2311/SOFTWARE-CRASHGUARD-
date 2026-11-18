@@ -1,0 +1,130 @@
+[
+ {
+  "iteration": 0,
+  "params": {
+   "grid": "full",
+   "objective": "cap",
+   "alpha": 0.01
+  },
+  "models": {
+   "custom": {
+    "val_p90_base": 60.0,
+    "val_p90_new": 60.0,
+    "val_reduction": 0.0,
+    "a_hi": 0.005,
+    "b_lo": 0.01
+   },
+   "ns3": {
+    "val_p90_base": 60.0,
+    "val_p90_new": 60.0,
+    "val_reduction": 0.0,
+    "a_hi": 0.005,
+    "b_lo": 0.01
+   },
+   "loed": {
+    "val_p90_base": 60.0,
+    "val_p90_new": 60.0,
+    "val_reduction": 0.0,
+    "a_hi": 0.005,
+    "b_lo": 0.01
+   }
+  },
+  "mean_reduction": 0.0
+ },
+ {
+  "iteration": 1,
+  "params": {
+   "grid": "a_hi",
+   "objective": "cap",
+   "alpha": 0.01
+  },
+  "models": {
+   "custom": {
+    "val_p90_base": 60.0,
+    "val_p90_new": 60.0,
+    "val_reduction": 0.0,
+    "a_hi": 0.005,
+    "b_lo": 0.01
+   },
+   "ns3": {
+    "val_p90_base": 60.0,
+    "val_p90_new": 60.0,
+    "val_reduction": 0.0,
+    "a_hi": 0.005,
+    "b_lo": 0.01
+   },
+   "loed": {
+    "val_p90_base": 60.0,
+    "val_p90_new": 60.0,
+    "val_reduction": 0.0,
+    "a_hi": 0.005,
+    "b_lo": 0.01
+   }
+  },
+  "mean_reduction": 0.0
+ },
+ {
+  "iteration": 2,
+  "params": {
+   "grid": "b_lo",
+   "objective": "cap",
+   "alpha": 0.01
+  },
+  "models": {
+   "custom": {
+    "val_p90_base": 60.0,
+    "val_p90_new": 60.0,
+    "val_reduction": 0.0,
+    "a_hi": 0.005,
+    "b_lo": 0.01
+   },
+   "ns3": {
+    "val_p90_base": 60.0,
+    "val_p90_new": 60.0,
+    "val_reduction": 0.0,
+    "a_hi": 0.005,
+    "b_lo": 0.01
+   },
+   "loed": {
+    "val_p90_base": 60.0,
+    "val_p90_new": 60.0,
+    "val_reduction": 0.0,
+    "a_hi": 0.005,
+    "b_lo": 0.01
+   }
+  },
+  "mean_reduction": 0.0
+ },
+ {
+  "iteration": 3,
+  "params": {
+   "grid": "full",
+   "objective": "conditional",
+   "alpha": 0.01
+  },
+  "models": {
+   "custom": {
+    "val_p90_base": 2.341504,
+    "val_p90_new": 2.341504,
+    "val_reduction": 0.0,
+    "a_hi": 0.005,
+    "b_lo": 0.01
+   },
+   "ns3": {
+    "val_p90_base": 2.321027,
+    "val_p90_new": 2.321027,
+    "val_reduction": 0.0,
+    "a_hi": 0.005,
+    "b_lo": 0.01
+   },
+   "loed": {
+    "val_p90_base": 4.22016,
+    "val_p90_new": 4.22016,
+    "val_reduction": 0.0,
+    "a_hi": 0.005,
+    "b_lo": 0.01
+   }
+  },
+  "mean_reduction": 0.0
+ }
+]

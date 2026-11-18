@@ -1,0 +1,52 @@
+{
+ "0": {
+  "params": {
+   "k": 2,
+   "m0": 3.0,
+   "err": 2.0
+  },
+  "mean_edge_gain": 0.08828817696657762,
+  "worst_edge_cell": 0.0,
+  "n_edge_cells": 10
+ },
+ "1": {
+  "params": {
+   "k": 1,
+   "m0": 3.0,
+   "err": 2.0
+  },
+  "mean_edge_gain": 0.07119402245820412,
+  "worst_edge_cell": 0.0,
+  "n_edge_cells": 10
+ },
+ "2": {
+  "params": {
+   "k": 3,
+   "m0": 3.0,
+   "err": 2.0
+  },
+  "mean_edge_gain": 0.09257821560062049,
+  "worst_edge_cell": 0.0,
+  "n_edge_cells": 10
+ },
+ "3": {
+  "params": {
+   "k": 2,
+   "m0": 0.0,
+   "err": 2.0
+  },
+  "mean_edge_gain": 0.10092664808723717,
+  "worst_edge_cell": 0.0,
+  "n_edge_cells": 10
+ },
+ "4": {
+  "params": {
+   "k": 2,
+   "m0": 6.0,
+   "err": 2.0
+  },
+  "mean_edge_gain": 0.06663262326444948,
+  "worst_edge_cell": 0.0,
+  "n_edge_cells": 10
+ }
+}

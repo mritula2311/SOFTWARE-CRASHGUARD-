@@ -1,0 +1,84 @@
+{
+ "pend_s": 30.0,
+ "seeds_per_cell": 15,
+ "cells": {
+  "sf7 calib p0.3 r3s": [
+   15,
+   15,
+   0,
+   0
+  ],
+  "sf7 calib p0.3 r3t": [
+   15,
+   15,
+   0,
+   0
+  ],
+  "sf7 calib p0.3 r6m": [
+   15,
+   15,
+   0,
+   0
+  ],
+  "sf7 shipped p0.3 r3s": [
+   15,
+   15,
+   0,
+   0
+  ],
+  "sf7 shipped p0.3 r3t": [
+   15,
+   15,
+   0,
+   0
+  ],
+  "sf7 shipped p0.3 r6m": [
+   15,
+   15,
+   0,
+   0
+  ],
+  "sf9 calib p0.3 r3s": [
+   15,
+   15,
+   0,
+   0
+  ],
+  "sf9 calib p0.3 r3t": [
+   15,
+   15,
+   0,
+   0
+  ],
+  "sf9 calib p0.3 r6m": [
+   15,
+   15,
+   0,
+   0
+  ],
+  "sf9 shipped p0.3 r3s": [
+   15,
+   15,
+   0,
+   0
+  ],
+  "sf9 shipped p0.3 r3t": [
+   15,
+   15,
+   0,
+   0
+  ],
+  "sf9 shipped p0.3 r6m": [
+   15,
+   15,
+   0,
+   0
+  ]
+ },
+ "total": {
+  "runs": 180,
+  "identical": 180,
+  "stored_empty": 0,
+  "rerun_empty": 0
+ }
+}

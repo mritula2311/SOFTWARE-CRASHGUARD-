@@ -1,0 +1,58 @@
+
+
+
+Rerun on 2026-11-15 with \texttt{scripts/vf\_formal\_rerun.sh} (one process per lemma, one thread, 5 GB heap limit, Tamarin 1.12.0, Maude 3.5.1, ProVerif 2.05, WSL2 Ubuntu 24.04). Raw outputs: \texttt{formal/rerun\_vf/}. Stored outcomes of the paper: \texttt{results.json} keys \texttt{r3.t2.sec.*} and \texttt{a4.a3.proverif.*}.
+
+{\scriptsize\raggedright
+\begin{longtable}{p{0.158\linewidth}p{0.158\linewidth}p{0.158\linewidth}p{0.158\linewidth}p{0.158\linewidth}p{0.158\linewidth}}
+\toprule
+Group & Lemma or model & Outcome & Wall time (s) & Peak memory (MB) & Command \\
+\midrule
+\endhead
+auth & executable & trace found (exists-trace lemma verified) & 0 & 32 & \texttt{tamarin-prover  --prove=executable formal/crash\_alert\_auth.spthy +RTS -N1 -M5g -RTS ; time} \\
+auth & executable\_M0 & trace found (exists-trace lemma verified) & 1 & 32 & \texttt{tamarin-prover -D=M0 --prove=executable formal/crash\_alert\_auth.spthy +RTS -N1 -M5g -RTS ;} \\
+auth & L1\_alert\_authenticity & proved & 0 & 30 & \texttt{tamarin-prover  --prove=L1\_alert\_authenticity formal/crash\_alert\_auth.spthy +RTS -N1 -M5g } \\
+auth & L1\_alert\_authenticity\_M0 & attack or trace found & 1 & 31 & \texttt{tamarin-prover -D=M0 --prove=L1\_alert\_authenticity formal/crash\_alert\_auth.spthy +RTS -N1 } \\
+auth & L2\_ack\_authenticity & proved & 0 & 30 & \texttt{tamarin-prover  --prove=L2\_ack\_authenticity formal/crash\_alert\_auth.spthy +RTS -N1 -M5g -R} \\
+auth & L2\_ack\_authenticity\_M0 & attack or trace found & 0 & 31 & \texttt{tamarin-prover -D=M0 --prove=L2\_ack\_authenticity formal/crash\_alert\_auth.spthy +RTS -N1 -M} \\
+auth & L3\_no\_cross\_vehicle\_suppression & proved & 1 & 30 & \texttt{tamarin-prover  --prove=L3\_no\_cross\_vehicle\_suppression formal/crash\_alert\_auth.spthy +RTS} \\
+auth & L3\_no\_cross\_vehicle\_suppression\_M0 & attack or trace found & 0 & 32 & \texttt{tamarin-prover -D=M0 --prove=L3\_no\_cross\_vehicle\_suppression formal/crash\_alert\_auth.spthy} \\
+bootctr & executable\_after\_car\_reboot & trace found (exists-trace lemma verified) & 65 & 3195 & \texttt{tamarin-prover  --prove=executable\_after\_car\_reboot formal/crash\_alert\_fresh\_bootctr.spthy} \\
+bootctr & executable\_ts & trace found (exists-trace lemma verified) & 6 & 221 & \texttt{tamarin-prover  --prove=executable\_ts formal/crash\_alert\_fresh\_bootctr.spthy +RTS -N1 -M5g} \\
+bootctr & L5\_car\_alert\_ids\_unique & undecided (time limit or memory) & 951 & 5578 & \texttt{tamarin-prover  --prove=L5\_car\_alert\_ids\_unique formal/crash\_alert\_fresh\_bootctr.spthy +RT} \\
+carid & L5\_car\_alert\_ids\_unique & undecided (time limit or memory) & 300 & 5301 & \texttt{tamarin-prover  --prove=L5\_car\_alert\_ids\_unique formal/crash\_alert\_carid.spthy +RTS -N1 -M} \\
+carid & L5\_car\_alert\_ids\_unique\_BOOT & undecided (time limit or memory) & 300 & 5301 & \texttt{tamarin-prover -D=BOOT --prove=L5\_car\_alert\_ids\_unique formal/crash\_alert\_carid.spthy +RTS} \\
+fresh & executable\_after\_car\_reboot & trace found (exists-trace lemma verified) & 49 & 2452 & \texttt{tamarin-prover  --prove=executable\_after\_car\_reboot formal/crash\_alert\_fresh.spthy +RTS -N} \\
+fresh & executable\_ts & trace found (exists-trace lemma verified) & 2 & 65 & \texttt{tamarin-prover  --prove=executable\_ts formal/crash\_alert\_fresh.spthy +RTS -N1 -M5g -RTS ; } \\
+fresh & L4\_replay\_outside\_window & proved & 263 & 4895 & \texttt{tamarin-prover  --prove=L4\_replay\_outside\_window formal/crash\_alert\_fresh.spthy +RTS -N1 -} \\
+fresh & L4b\_at\_most\_once & proved & 2 & 69 & \texttt{tamarin-prover  --prove=L4b\_at\_most\_once formal/crash\_alert\_fresh.spthy +RTS -N1 -M5g -RTS} \\
+fresh & L5\_car\_alert\_ids\_unique & undecided (time limit or memory) & 300 & 5380 & \texttt{tamarin-prover  --prove=L5\_car\_alert\_ids\_unique formal/crash\_alert\_fresh.spthy +RTS -N1 -M} \\
+fresh & L5\_no\_double\_accept\_with\_car\_reboot & proved & 3 & 79 & \texttt{tamarin-prover  --prove=L5\_no\_double\_accept\_with\_car\_reboot formal/crash\_alert\_fresh.spthy} \\
+fresh & L6\_base\_reboot\_replay & attack or trace found & 4 & 97 & \texttt{tamarin-prover  --prove=L6\_base\_reboot\_replay formal/crash\_alert\_fresh.spthy +RTS -N1 -M5g} \\
+fresh & L7\_no\_time\_alert\_can\_be\_stale & trace found (exists-trace lemma verified) & 15 & 667 & \texttt{tamarin-prover  --prove=L7\_no\_time\_alert\_can\_be\_stale formal/crash\_alert\_fresh.spthy +RTS } \\
+prov & executable\_alert & trace found (exists-trace lemma verified) & 0 & 33 & \texttt{tamarin-prover  --prove=executable\_alert formal/crash\_alert\_prov.spthy +RTS -N1 -M5g -RTS } \\
+prov & executable\_prov & trace found (exists-trace lemma verified) & 0 & 33 & \texttt{tamarin-prover  --prove=executable\_prov formal/crash\_alert\_prov.spthy +RTS -N1 -M5g -RTS ;} \\
+prov & executable\_prov\_repeat & trace found (exists-trace lemma verified) & 1 & 32 & \texttt{tamarin-prover  --prove=executable\_prov\_repeat formal/crash\_alert\_prov.spthy +RTS -N1 -M5g} \\
+prov & P1\_prov\_authenticity & proved & 1 & 32 & \texttt{tamarin-prover  --prove=P1\_prov\_authenticity formal/crash\_alert\_prov.spthy +RTS -N1 -M5g -} \\
+prov & P2\_ack\_authenticity & proved & 0 & 33 & \texttt{tamarin-prover  --prove=P2\_ack\_authenticity formal/crash\_alert\_prov.spthy +RTS -N1 -M5g -R} \\
+prov & P3\_no\_cross\_vehicle\_suppression & proved & 1 & 32 & \texttt{tamarin-prover  --prove=P3\_no\_cross\_vehicle\_suppression formal/crash\_alert\_prov.spthy +RTS} \\
+prov & P4\_no\_type\_confusion\_alert & proved & 0 & 33 & \texttt{tamarin-prover  --prove=P4\_no\_type\_confusion\_alert formal/crash\_alert\_prov.spthy +RTS -N1 } \\
+prov\_fresh & executable\_ts & trace found (exists-trace lemma verified) & 2 & 64 & \texttt{tamarin-prover  --prove=executable\_ts formal/crash\_alert\_prov\_fresh.spthy +RTS -N1 -M5g -R} \\
+prov\_fresh & L4\_replay\_outside\_window & proved & 259 & 4764 & \texttt{tamarin-prover  --prove=L4\_replay\_outside\_window formal/crash\_alert\_prov\_fresh.spthy +RTS } \\
+prov\_fresh & L4b\_at\_most\_once & proved & 2 & 69 & \texttt{tamarin-prover  --prove=L4b\_at\_most\_once formal/crash\_alert\_prov\_fresh.spthy +RTS -N1 -M5g} \\
+prov\_fresh & L5\_no\_double\_accept\_with\_car\_reboot & proved & 2 & 79 & \texttt{tamarin-prover  --prove=L5\_no\_double\_accept\_with\_car\_reboot formal/crash\_alert\_prov\_fresh.} \\
+prov\_fresh & L6\_base\_reboot\_replay & attack or trace found & 3 & 98 & \texttt{tamarin-prover  --prove=L6\_base\_reboot\_replay formal/crash\_alert\_prov\_fresh.spthy +RTS -N1} \\
+prov\_nodomain & P4\_no\_type\_confusion\_alert & attack or trace found & 1 & 32 & \texttt{tamarin-prover  --prove=P4\_no\_type\_confusion\_alert formal/crash\_alert\_prov\_nodomain.spthy } \\
+proverif & carid\_bootctr\_nowrite & attack found (false) & 0 & 8 & \texttt{proverif formal/proverif/carid\_bootctr\_nowrite.pv ; time limit 320 s} \\
+proverif & carid\_bootctr\_same\_epoch & proved; proved & 0 & 9 & \texttt{proverif formal/proverif/carid\_bootctr\_same\_epoch.pv ; time limit 320 s} \\
+proverif & carid\_frozen\_chain & undecided (time limit) & 320 & 1303 & \texttt{proverif formal/proverif/carid\_frozen\_chain.pv ; time limit 320 s} \\
+proverif & carid\_frozen\_next\_epoch & proved & 0 & 9 & \texttt{proverif formal/proverif/carid\_frozen\_next\_epoch.pv ; time limit 320 s} \\
+proverif & carid\_frozen\_same\_epoch & attack found (false); proved & 0 & 9 & \texttt{proverif formal/proverif/carid\_frozen\_same\_epoch.pv ; time limit 320 s} \\
+ratchet & forward\_secrecy & undecided (time limit or memory) & 280 & 5777 & \texttt{tamarin-prover  --prove=forward\_secrecy formal/ratchet.spthy +RTS -N1 -M5g -RTS ; time lim} \\
+ratchet3 & ack\_binding & undecided (time limit or memory) & 281 & 5424 & \texttt{tamarin-prover  --prove=ack\_binding formal/ratchet3.spthy +RTS -N1 -M5g -RTS ; time limit } \\
+ratchet3 & authenticity & undecided (time limit or memory) & 280 & 5432 & \texttt{tamarin-prover  --prove=authenticity formal/ratchet3.spthy +RTS -N1 -M5g -RTS ; time limit} \\
+ratchet3 & executable & undecided (time limit or memory) & 280 & 5301 & \texttt{tamarin-prover  --prove=executable formal/ratchet3.spthy +RTS -N1 -M5g -RTS ; time limit 2} \\
+ratchet3 & forward\_secrecy & undecided (time limit or memory) & 280 & 5538 & \texttt{tamarin-prover  --prove=forward\_secrecy formal/ratchet3.spthy +RTS -N1 -M5g -RTS ; time li} \\
+\bottomrule
+\end{longtable}}
+

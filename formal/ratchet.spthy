@@ -1,0 +1,73 @@
+/*
+ * Tamarin model for L7 (round 5, docs/02_preregistration/PREREGISTRATION_V16.md section 15.3): forward-secure per-vehicle alert keys by a hash-chain ratchet.
+ *
+ * Enrolment gives vehicle v the key K_0 = kdf(km, v); the base holds the same key. An alert with index i carries tag mac(K_i, <'A', v, i, m>). The car sends the alert with its current key; it advances to
+ * K_{i+1} = h(<K_i, 'ratchet'>) only on an ACK that names its vehicle and index and carries a valid tag under K_i, and then erases K_i (the state fact CarKey is consumed, not kept). The base advances
+ * on an accepted alert, after which K_i is gone from its state. The adversary controls the network (Dolev-Yao) and may compromise a vehicle at any time: it then learns the vehicle's current key and
+ * index. Compromise of the master key is not modelled (the per-vehicle key is the unit of compromise). The look-ahead window and the loss of ACKs are covered by the exhaustive enumeration of
+ * H-L7b, not by this model. Symbolic model, perfect cryptography. Index arithmetic with the built-in natural numbers.
+ *
+ * Scope (review finding, recorded before the run): this model is the variant with a window of 0 and no boot step (exact index, the base moves to the next key on an accepted alert and discards the old one). The look-ahead window and the boot ratchet are covered by the enumeration of H-L7b only; the lemmas are not proved for them.
+ *
+ * Lemmas: executable (executability); forward_secrecy (an alert with index i that the car never sent can only be accepted if the vehicle was compromised at an index j <= i); authenticity (without any
+ * compromise of the vehicle an accepted alert was sent by the vehicle); ack_binding (a car advances only on an ACK produced by the base for this vehicle and index, unless the vehicle was compromised).
+ */
+theory Ratchet
+begin
+
+builtins: hashing, natural-numbers
+functions: kdf/2, mac/2
+
+rule BaseInit:
+  [ Fr(~km) ]
+  --[ BaseInit() ]->
+  [ !BaseMaster(~km) ]
+
+restriction OneBase:
+  "All #i #j. BaseInit()@i & BaseInit()@j ==> #i = #j"
+
+rule Enroll:
+  [ !BaseMaster(km) ]
+  --[ Enroll($v) ]->
+  [ CarKey($v, %1, kdf(km, $v)), BaseKey($v, %1, kdf(km, $v)) ]
+
+restriction OneEnroll:
+  "All v #i #j. Enroll(v)@i & Enroll(v)@j ==> #i = #j"
+
+rule Compromise:
+  [ CarKey(v, %i, K) ]
+  --[ Compromise(v, %i) ]->
+  [ CarKey(v, %i, K), Out(<K, %i>) ]
+
+rule CarSend:
+  [ CarKey(v, %i, K), In(m) ]
+  --[ Sent(v, %i, m) ]->
+  [ CarKey(v, %i, K), Out(<'ALERT', v, %i, m, mac(K, <'A', v, %i, m>)>) ]
+
+rule BaseAccept:
+  [ BaseKey(v, %i, K), In(<'ALERT', v, %i, m, mac(K, <'A', v, %i, m>)>) ]
+  --[ Accept(v, %i, m) ]->
+  [ BaseKey(v, %i %+ %1, h(<K, 'ratchet'>)), Out(<'ACK', v, %i, mac(K, <'ACK', v, %i>)>) ]
+
+rule CarAdvance:
+  [ CarKey(v, %i, K), In(<'ACK', v, %i, mac(K, <'ACK', v, %i>)>) ]
+  --[ Advance(v, %i) ]->
+  [ CarKey(v, %i %+ %1, h(<K, 'ratchet'>)) ]
+
+lemma executable:
+  exists-trace
+  "Ex v %i m #a. Accept(v, %i, m)@a & (Ex #s. Sent(v, %i, m)@s) & (Ex #d. Advance(v, %i)@d)"
+
+lemma forward_secrecy:
+  "All v %i m #a. Accept(v, %i, m)@a & not (Ex #s. Sent(v, %i, m)@s)
+     ==> (Ex %j #c. Compromise(v, %j)@c & (%i = %j | (Ex %z. %i = %j %+ %z)))"
+
+lemma authenticity:
+  "All v %i m #a. Accept(v, %i, m)@a & not (Ex %j #c. Compromise(v, %j)@c)
+     ==> (Ex #s. Sent(v, %i, m)@s)"
+
+lemma ack_binding:
+  "All v %i #d. Advance(v, %i)@d & not (Ex %j #c. Compromise(v, %j)@c)
+     ==> (Ex m #a. Accept(v, %i, m)@a & #a < #d)"
+
+end

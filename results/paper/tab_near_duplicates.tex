@@ -1,0 +1,59 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Standard test set against the set without window-level near-duplicates (T5; the standard set stays primary).}
+\label{tab:tab_near_duplicates}
+\begin{tabular}{lllllll}
+\toprule
+Metric & Test set & Value & Lower 95\% & Upper 95\% & Origin & results.json key \\
+\midrule
+system recall, validation F1 threshold & standard test set (primary) & 0.9004 & 0.8919 & 0.9089 & MEASURED\_SOFTWARE & t5.std.recall\_f1; t5.std.recall\_f1\_lo; t5.std.recall\_f1\_hi \\
+system recall, validation F1 threshold & without window-level near-duplicates (sensitivity analysis) & 0.8729 & 0.8612 & 0.8839 & MEASURED\_SOFTWARE & t5.strict.recall\_f1; t5.strict.recall\_f1\_lo; t5.strict.recall\_f1\_hi \\
+system recall, validation F1 threshold & standard minus strict & 0.0275 & 0.0233 & 0.0317 & MEASURED\_SOFTWARE & t5.diff\_std\_minus\_strict.recall\_f1; t5.diff\_std\_minus\_strict.recall\_f1\_lo; t5.diff\_std\_minus\_strict.recall\_f1\_hi \\
+recall at 1\% false-alarm target & standard test set (primary) & 0.6265 & 0.6118 & 0.6392 & MEASURED\_SOFTWARE & t5.std.recall\_t1; t5.std.recall\_t1\_lo; t5.std.recall\_t1\_hi \\
+recall at 1\% false-alarm target & without window-level near-duplicates (sensitivity analysis) & 0.5584 & 0.5408 & 0.574 & MEASURED\_SOFTWARE & t5.strict.recall\_t1; t5.strict.recall\_t1\_lo; t5.strict.recall\_t1\_hi \\
+recall at 1\% false-alarm target & standard minus strict & 0.0682 & 0.0597 & 0.0763 & MEASURED\_SOFTWARE & t5.diff\_std\_minus\_strict.recall\_t1; t5.diff\_std\_minus\_strict.recall\_t1\_lo; t5.diff\_std\_minus\_strict.recall\_t1\_hi \\
+recall at 5\% false-alarm target & standard test set (primary) & 0.9345 & 0.9273 & 0.9414 & MEASURED\_SOFTWARE & t5.std.recall\_t5; t5.std.recall\_t5\_lo; t5.std.recall\_t5\_hi \\
+recall at 5\% false-alarm target & without window-level near-duplicates (sensitivity analysis) & 0.914 & 0.904 & 0.9237 & MEASURED\_SOFTWARE & t5.strict.recall\_t5; t5.strict.recall\_t5\_lo; t5.strict.recall\_t5\_hi \\
+recall at 5\% false-alarm target & standard minus strict & 0.0205 & 0.0172 & 0.0239 & MEASURED\_SOFTWARE & t5.diff\_std\_minus\_strict.recall\_t5; t5.diff\_std\_minus\_strict.recall\_t5\_lo; t5.diff\_std\_minus\_strict.recall\_t5\_hi \\
+AP, triggered events & standard test set (primary) & 0.9315 & 0.9242 & 0.9382 & MEASURED\_SOFTWARE & t5.std.ap\_model; t5.std.ap\_model\_lo; t5.std.ap\_model\_hi \\
+AP, triggered events & without window-level near-duplicates (sensitivity analysis) & 0.8922 & 0.8799 & 0.9033 & MEASURED\_SOFTWARE & t5.strict.ap\_model; t5.strict.ap\_model\_lo; t5.strict.ap\_model\_hi \\
+AP, triggered events & standard minus strict & 0.0392 & 0.0338 & 0.0449 & MEASURED\_SOFTWARE & t5.diff\_std\_minus\_strict.ap\_model; t5.diff\_std\_minus\_strict.ap\_model\_lo; t5.diff\_std\_minus\_strict.ap\_model\_hi \\
+system AP & standard test set (primary) & 0.9039 & 0.8952 & 0.9121 & MEASURED\_SOFTWARE & t5.std.ap\_system; t5.std.ap\_system\_lo; t5.std.ap\_system\_hi \\
+system AP & without window-level near-duplicates (sensitivity analysis) & 0.854 & 0.841 & 0.8669 & MEASURED\_SOFTWARE & t5.strict.ap\_system; t5.strict.ap\_system\_lo; t5.strict.ap\_system\_hi \\
+system AP & standard minus strict & 0.0499 & 0.044 & 0.056 & MEASURED\_SOFTWARE & t5.diff\_std\_minus\_strict.ap\_system; t5.diff\_std\_minus\_strict.ap\_system\_lo; t5.diff\_std\_minus\_strict.ap\_system\_hi \\
+N19 recall gain of the six-forest rule over the single forest (1\% target) & std & 0.0155 & 0.0099 & 0.0213 & MEASURED\_SOFTWARE & t5.n19.std.a1.recall\_gain\_ensemble; t5.n19.std.a1.recall\_gain\_ensemble\_lo; t5.n19.std.a1.recall\_gain\_ensemble\_hi \\
+N19 decision time difference (ms, 1\% target) & std & -1019.0 & -1042.0 & -995.0 & MEASURED\_SOFTWARE & t5.n19.std.a1.time\_diff\_ms; t5.n19.std.a1.time\_diff\_ms\_lo; t5.n19.std.a1.time\_diff\_ms\_hi \\
+N19 recall gain of the six-forest rule over the single forest (5\% target) & std & 0.0015 & 0.0009 & 0.002 & MEASURED\_SOFTWARE & t5.n19.std.a5.recall\_gain\_ensemble; t5.n19.std.a5.recall\_gain\_ensemble\_lo; t5.n19.std.a5.recall\_gain\_ensemble\_hi \\
+N19 decision time difference (ms, 5\% target) & std & -1172.0 & -1193.0 & -1149.0 & MEASURED\_SOFTWARE & t5.n19.std.a5.time\_diff\_ms; t5.n19.std.a5.time\_diff\_ms\_lo; t5.n19.std.a5.time\_diff\_ms\_hi \\
+N19 recall gain of the six-forest rule over the single forest (1\% target) & strict & 0.0231 & 0.0165 & 0.0301 & MEASURED\_SOFTWARE & t5.n19.strict.a1.recall\_gain\_ensemble; t5.n19.strict.a1.recall\_gain\_ensemble\_lo; t5.n19.strict.a1.recall\_gain\_ensemble\_hi \\
+N19 decision time difference (ms, 1\% target) & strict & -959.0 & -988.0 & -929.0 & MEASURED\_SOFTWARE & t5.n19.strict.a1.time\_diff\_ms; t5.n19.strict.a1.time\_diff\_ms\_lo; t5.n19.strict.a1.time\_diff\_ms\_hi \\
+N19 recall gain of the six-forest rule over the single forest (5\% target) & strict & 0.0018 & 0.0011 & 0.0026 & MEASURED\_SOFTWARE & t5.n19.strict.a5.recall\_gain\_ensemble; t5.n19.strict.a5.recall\_gain\_ensemble\_lo; t5.n19.strict.a5.recall\_gain\_ensemble\_hi \\
+N19 decision time difference (ms, 5\% target) & strict & -1117.0 & -1145.0 & -1088.0 & MEASURED\_SOFTWARE & t5.n19.strict.a5.time\_diff\_ms; t5.n19.strict.a5.time\_diff\_ms\_lo; t5.n19.strict.a5.time\_diff\_ms\_hi \\
+N9 crash\_trigger\_rate (trig\_1.5) & std & 0.9968 &  &  & MEASURED\_SOFTWARE & t5.n9.trig\_1.5.std.crash\_trigger\_rate \\
+N9 model\_level\_recall (trig\_1.5) & std & 0.8078 &  &  & MEASURED\_SOFTWARE & t5.n9.trig\_1.5.std.model\_level\_recall \\
+N9 system\_recall (trig\_1.5) & std & 0.8053 &  &  & MEASURED\_SOFTWARE & t5.n9.trig\_1.5.std.system\_recall \\
+N9 crash\_trigger\_rate (trig\_1.5) & strict & 0.9956 &  &  & MEASURED\_SOFTWARE & t5.n9.trig\_1.5.strict.crash\_trigger\_rate \\
+N9 model\_level\_recall (trig\_1.5) & strict & 0.8035 &  &  & MEASURED\_SOFTWARE & t5.n9.trig\_1.5.strict.model\_level\_recall \\
+N9 system\_recall (trig\_1.5) & strict & 0.8 &  &  & MEASURED\_SOFTWARE & t5.n9.trig\_1.5.strict.system\_recall \\
+N9 crash\_trigger\_rate (trig\_2) & std & 0.9637 &  &  & MEASURED\_SOFTWARE & t5.n9.trig\_2.std.crash\_trigger\_rate \\
+N9 model\_level\_recall (trig\_2) & std & 0.9343 &  &  & MEASURED\_SOFTWARE & t5.n9.trig\_2.std.model\_level\_recall \\
+N9 system\_recall (trig\_2) & std & 0.9004 &  &  & MEASURED\_SOFTWARE & t5.n9.trig\_2.std.system\_recall \\
+N9 crash\_trigger\_rate (trig\_2) & strict & 0.9498 &  &  & MEASURED\_SOFTWARE & t5.n9.trig\_2.strict.crash\_trigger\_rate \\
+N9 model\_level\_recall (trig\_2) & strict & 0.919 &  &  & MEASURED\_SOFTWARE & t5.n9.trig\_2.strict.model\_level\_recall \\
+N9 system\_recall (trig\_2) & strict & 0.8729 &  &  & MEASURED\_SOFTWARE & t5.n9.trig\_2.strict.system\_recall \\
+N9 crash\_trigger\_rate (trig\_2.5) & std & 0.8904 &  &  & MEASURED\_SOFTWARE & t5.n9.trig\_2.5.std.crash\_trigger\_rate \\
+N9 model\_level\_recall (trig\_2.5) & std & 0.9571 &  &  & MEASURED\_SOFTWARE & t5.n9.trig\_2.5.std.model\_level\_recall \\
+N9 system\_recall (trig\_2.5) & std & 0.8523 &  &  & MEASURED\_SOFTWARE & t5.n9.trig\_2.5.std.system\_recall \\
+N9 crash\_trigger\_rate (trig\_2.5) & strict & 0.8579 &  &  & MEASURED\_SOFTWARE & t5.n9.trig\_2.5.strict.crash\_trigger\_rate \\
+N9 model\_level\_recall (trig\_2.5) & strict & 0.9427 &  &  & MEASURED\_SOFTWARE & t5.n9.trig\_2.5.strict.model\_level\_recall \\
+N9 system\_recall (trig\_2.5) & strict & 0.8087 &  &  & MEASURED\_SOFTWARE & t5.n9.trig\_2.5.strict.system\_recall \\
+N9 crash\_trigger\_rate (trig\_3) & std & 0.785 &  &  & MEASURED\_SOFTWARE & t5.n9.trig\_3.std.crash\_trigger\_rate \\
+N9 model\_level\_recall (trig\_3) & std & 0.9667 &  &  & MEASURED\_SOFTWARE & t5.n9.trig\_3.std.model\_level\_recall \\
+N9 system\_recall (trig\_3) & std & 0.7589 &  &  & MEASURED\_SOFTWARE & t5.n9.trig\_3.std.system\_recall \\
+N9 crash\_trigger\_rate (trig\_3) & strict & 0.7332 &  &  & MEASURED\_SOFTWARE & t5.n9.trig\_3.strict.crash\_trigger\_rate \\
+N9 model\_level\_recall (trig\_3) & strict & 0.954 &  &  & MEASURED\_SOFTWARE & t5.n9.trig\_3.strict.model\_level\_recall \\
+N9 system\_recall (trig\_3) & strict & 0.6995 &  &  & MEASURED\_SOFTWARE & t5.n9.trig\_3.strict.system\_recall \\
+\bottomrule
+\end{tabular}
+\end{table}

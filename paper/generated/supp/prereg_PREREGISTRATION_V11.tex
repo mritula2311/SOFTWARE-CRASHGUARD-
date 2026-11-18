@@ -1,0 +1,125 @@
+
+
+
+Written and committed on 2026-11-14 BEFORE the simulated-hardware tests of Part S (S2 to S5) and the candidate studies R1 to R4 are run. Part V (re-verification) and Part L (literature) were done before this file; they do not use any Part S or Part R result. Branch \texttt{combined}, from tag \texttt{release-v1} (the tag \texttt{release-v1.1} does not exist).
+
+\subsection*{1. Rules that apply to every study here}
+
+\begin{itemize}
+\item No tagged result and no existing key is changed. New keys use the prefixes \texttt{sh.} (Part S) and \texttt{ar.} (Part R).
+\item Evidence labels: MEASURED\_SOFTWARE, SIMULATED, SIMULATED\_HW\_FORMAT, ANALYTICAL, NOT\_RUN. Code run on the simulated hardware-format logs is SIMULATED\_HW\_FORMAT. No label says hardware. \texttt{data/hardware/} is not read.
+\item Synthetic crash pulses are not used anywhere (the generators failed the realism gate). The only simulated pulses are the bench events of \texttt{hwsim.py} and \texttt{hwsim\_v2.py}, which are short bench-style impacts and are never read as vehicle crash pulses.
+\item Simulated data checks code and robustness. A study on these files never supports a statement about real hardware.
+\item Seeds: the generator seeds are in section 3. Simulation seeds are in each study. Design choices use the DESIGN grid or the validation split; the HELD-OUT grid or the test split is run once with the choices fixed.
+\item Two Holm families, each at 0.05: \textbf{family S} (6 hypotheses, S2 to S5) and \textbf{family R} (7 hypotheses, R1 to R4). A hypothesis is SUPPORTED only if its criterion is met on the held-out data and its Holm-adjusted p-value is below 0.05. A kill criterion that fires makes the candidate a negative result and moves it to \texttt{docs/03\_results/NEGATIVES\_REGISTER.md}.
+\item Wording: plain language; "built, not yet measured" for built but unmeasured items; no claim that absence of prior work is established.
+\item No hypothesis, threshold, variant or grid is added, removed or changed after the S2 or R runs start. Anything else that changes is logged in \texttt{docs/07\_log/DECISIONS.md} with the date and the reason, as a deviation.
+\end{itemize}
+
+\subsection*{2. Part S: simulated hardware-format validation}
+
+\subsubsection*{2.1 Data}
+\begin{itemize}
+\item The supplied set (\texttt{data/simulated\_hardware/}, \texttt{hwsim.py}, seed 20261114): 50 crash events (10 per side: front, rear, left, right, vertical), 50 non-crash events (10 per kind: hand tap, hard braking, lift and place, ramp bump, rough driving), eight link runs, the security scenarios, the edge timing and the end-to-end latency. It is used as supplied (the "supplied" arm) and is reported next to the variants.
+\item The variants (section 3) are made by \texttt{src/crashguard/hwsim\_v2.py}: 20 events per cell, so 100 crash events (20 per side) and 100 non-crash events (20 per kind) per sensor variant.
+\end{itemize}
+
+\subsubsection*{2.2 Repository rules that are run}
+\begin{itemize}
+\item Trigger rule: the earliest sample with the acceleration magnitude above \texttt{config.TRIGGER\_G} = 2.0 g (the sweep 1.5, 2.0, 2.5, 3.0 g is reported). The window is 1.0 s before and 1.8 s after the trigger (\texttt{features.process\_event} conventions).
+\item Impact-side rule (\texttt{direction.py}): remove the pre-trigger mean, sum the horizontal acceleration over the initial 60 ms after the trigger, apply the stored calibration signs (\texttt{x1.axis.flip\_x} = 1, \texttt{x1.axis.flip\_y} = -1; they were set on the NHTSA test axes), theta = atan2(-Jy, -Jx), sector by 90-degree sectors (\texttt{direction.sector}). The rule has four horizontal classes. Vertical events are scored as "not a horizontal class" and are reported separately.
+\item Link and policy simulator: \texttt{world\_sim} through \texttt{s11\_sct.make\_cfg} with one car and a loss in both directions (the method of \texttt{t4\_clarify.part\_b}).
+\item Security: the repository's \texttt{attacks.run\_cases}, \texttt{attacks\_extra.run\_cases} and \texttt{verifier.BaseVerifier}, plus the nine simulated scenarios of \texttt{security\_H4.json}.
+\end{itemize}
+
+\subsubsection*{2.3 Hypotheses (family S)}
+
+\textbf{H-S1 (S2, impact side).} The side accuracy A\_v of the impact-side rule over the 80 horizontal crash events of a variant v is at least 0.90 in every sensor variant v of section 3 (and in the supplied set). Criterion: A\_v >= 0.90 for all v. p-value: the largest over v of the exact one-sided binomial P(X >= x\_v; n = 80, 0.90) (intersection-union). The failure map reports, per fault family, the smallest fault at which A\_v < 0.90 and, per side, the confusion.
+
+\textbf{H-S2 (S2, crash against non-crash at the firmware trigger).} At the firmware trigger of 2.0 g, the crash recall is at least 0.90 and the non-crash false-alarm rate is at most 0.10 in every sensor variant. Criterion: both in all variants (point estimates; intervals from a bootstrap of events, 2,000 resamples, seed 42, reported). p-value: the largest over v of the larger of the exact one-sided binomial p-values (recall: P(X >= x; 100, 0.90); false alarm: P(X <= x; 100, 0.10)). The trigger sweep and the transfer test are secondary: the 15-tree forest \texttt{data/processed/rf15\_seed42.joblib} (trained on VZCrash windows, threshold chosen on validation by the earlier study) is applied to the bench windows (resampled to 100 Hz, units g, 14 features of \texttt{features.compute\_features}); this tests plumbing and scale handling only, because bench pulses last 12 to 45 ms against 80 to 150 ms for vehicle crashes. It is not in the family.
+
+\textbf{H-S3 (S3, link and policy).} Link logs of the four edge runs (30, 34, 38, 42 dB; 100 packets each) calibrate a per-direction loss (symmetric, q = (1-p)\textasciicircum{}2 from the delivery per round, estimated as successes over attempts). The policies are P1 (severity table), P4 (UA-SCT with the fast-path cap, the tuned phi of \texttt{s11.tuned}), P0 (fixed 3 retries), a Tamang-style slotted single transmission and a Khan-style retry rule (up to 8 retries, delay U(1, 3) s after the ACK window; an ASSUMPTION re-implemented from the description, not from their code). One car, SF7, 40 paired seeds (3000 to 3039), duty 10\% (token bucket) and 1\% as a sensitivity. Criterion: in each of the four edge runs, the critical reach within 10 s of UA-SCT is at least that of fixed-3 minus 0.02, and no policy's node airtime share exceeds the duty limit. p-value: the largest over the edge runs of the bootstrap one-sided p-value of H0: (UA-SCT minus fixed-3) <= -0.02 (paired seeds, 2,000 resamples, seed 42). Reported: final and first-try delivery, latency percentiles, airtime per policy and edge run, the maximum airtime share against the 10\% token bucket.
+
+\textbf{H-S4 (S3, end-to-end latency).} In \texttt{e2e\_latency\_H7.json} the median trigger-to-ACK latency of first-try deliveries is at least 500 ms (so that a "sub-500 ms" statement fails for the 250 ms post-trigger window, the 97-byte alert and the 26-byte ACK at SF7). Criterion: median >= 500 ms. p-value: exact one-sided sign test of H0: P(latency < 500 ms) >= 0.5. The latency is decomposed into window, compute, airtime, base turnaround and retries; the decomposition is reported with the formula (ANALYTICAL) next to the file. The file's timings are simulator values: the result is a statement about the model, not about the radio.
+
+\textbf{H-S5 (S4, security).} On the repository's attack suite and the simulated H4 scenarios, no forged tag, tampered field, replay of an old alert, spoofed ACK or replay flood is accepted (zero accepted attacks), and the repository's verifier stores its counters in a file (the base side is persisted), so the scenario S06 of the simulated model (a base that does not persist its counter) does not occur in the repository's code. Criterion: zero accepted attacks over all attack attempts and the persisted-counter test passes. p-value: exact binomial P(0 accepted; N, 0.05) with N the number of attack attempts (H0: an attack succeeds with probability 0.05 or more). The suite size is reconciled into one number with the list of cases (48 in \texttt{results.json}, 30 in \texttt{CLAIM\_EVIDENCE.md}, 38 in earlier notes).
+
+\textbf{H-S6 (S5, SW-420 confirmation).} Requiring at least 2 of the 6 SW-420 switches to fire within -100 ms to +300 ms of the trigger, in addition to the IMU trigger, lowers the non-crash false-alarm rate by at least 0.02 (absolute) and loses at most 0.02 of the crash recall, pooled over the sensor variants (paired events). p-value: exact one-sided McNemar test on the non-crash events (pooled over variants, events counted per variant) for the false-alarm reduction; the effect size is the difference with a bootstrap interval. Rerun, not in the family: the per-unit threshold ranges 0.8 to 2.0 g and 3.0 to 6.0 g (base 1.5 to 4.0 g) to show how much any gain depends on the simulator.
+
+\subsubsection*{2.4 Wording}
+"Evaluated on simulated hardware-format logs generated from stated sensor and link models; no real hardware measurements are reported." H5 edge timing stays NOT\_RUN (the simulated timings are placeholders). N2, N5, N6, N7 stay NOT\_YET for hardware. \texttt{HYPOTHESES.md} may say "software-checked on simulated hardware-format data" where S2 to S5 support it, never "supported" for hardware.
+
+\subsection*{3. S1: the variants (fixed now)}
+
+Seed of variant i: 20261114 + 1000 i. Each fault is its own set; one fault at a time; everything else as in the base. The base variant V00 follows the repository's axis convention and is correct by construction. A hash of every variant is listed in \texttt{docs/03\_results/SIMHW\_VARIANTS.md} after generation.
+
+{\scriptsize\raggedright
+\begin{longtable}{p{0.317\linewidth}p{0.317\linewidth}p{0.317\linewidth}}
+\toprule
+i & Variant & Change from the base \\
+\midrule
+\endhead
+0 & V00\_base & 100 Hz, no tilt, noise x1, bias sd 0.03 g, crash peak median 5 g, link as \texttt{hwsim.py} \\
+1 & T\_x15 & mounting tilt 15 degrees about the x axis \\
+2 & T\_x30 & 30 degrees about x \\
+3 & T\_y15 & 15 degrees about y \\
+4 & T\_y30 & 30 degrees about y \\
+5 & F\_x & sign of the x axis flipped \\
+6 & F\_y & sign of the y axis flipped \\
+7 & S\_10Hz & 10 Hz sampling \\
+8 & S\_jit1 & 100 Hz with timestamp jitter, sd 1 ms \\
+9 & S\_drop05 & 100 Hz with 0.5\% of the samples dropped \\
+10 & N\_x2 & noise x2 \\
+11 & N\_x4 & noise x4 \\
+12 & B\_08 & bias sd 0.08 g \\
+13 & P\_3 & crash peak median 3 g \\
+14 & P\_8 & crash peak median 8 g \\
+15 & L\_0 & radio per-direction loss 0\% added to the physical link \\
+16 & L\_10 & 10\% added per-direction loss \\
+17 & L\_30 & 30\% added per-direction loss \\
+18 & I\_block & an interferer blocking 5 s in 10\% of the minutes (every packet whose airtime overlaps is lost) \\
+\bottomrule
+\end{longtable}}
+
+Variants 0 to 14 are sensor variants (H-S1, H-S2, H-S6). Variants 0 and 15 to 18 are radio variants (H-S3, H-S4): link runs 10, 50, 100 m, 100 m behind a wall, and 30, 34, 38, 42 dB edge runs, 100 packets each, and 100 end-to-end events with the per-direction loss of the variant. The supplied files are the "supplied" arm.
+
+\subsection*{4. Part R: architecture and protocol candidates (family R)}
+
+Common rules. A hypothesis counts only if met on the held-out grid. Simulator assumptions (capture rule, burst size, loss) are those of the repository simulator (\texttt{world\_sim}, grids of \texttt{pa\_sim}) and are not changed. Baselines in every comparison: severity table (P1), UA-SCT (P4), Tamang-style slots and Khan-style retries where the study is on delivery. Effect sizes come with 95\% intervals. The simulated-hardware link logs of S3 are an extra scenario set (SIMULATED\_HW\_FORMAT).
+
+\subsubsection*{R1 Reboot-resilient freshness (GTF)}
+Design. Each alert carries a 32-bit freshness field equal to GPS UTC seconds. Fallback when the car has no time source: a field made of a boot-epoch marker (in a flag bit and 15 bits of epoch, persisted once per boot) and a counter. The base accepts a time-stamped alert if the field is inside the window W of its clock and the triple (sender, field, sequence in second) is not in a ring buffer of R entries (RAM, cleared at reboot). A no-time alert is accepted if its triple is not in the ring and, when the base holds a last counter for the same (sender, epoch), the counter is above it; its replay is bounded only by the ring and by the base's RAM (the exception is reported, not hidden).
+Grids. DESIGN: W in \{5, 10, 30, 60\} s, R in \{64, 128, 256, 512\}; base clock drift bound D in \{1, 3\} s, car holdover error bound E in \{1, 3\} s (a car without a recent fix, 40 ppm), GPS-loss probability in \{0.1, 0.3\}, burst of 100 and 200 alerts in W. The smallest W, R meeting the criteria on the design grid are chosen. HELD-OUT: D in \{2, 5\} s, E in \{2, 4\} s, GPS-loss in \{0.2, 0.4\}, burst of 150 and 300 alerts in W, 2,000 Monte Carlo runs per cell, seed 22000 (design) and 24000 (held-out).
+\begin{itemize}
+\item \textbf{H-R1a.} After a car reboot GTF accepts at least 99\% of valid alerts in every held-out cell (time-stamped and no-time alerts together). p-value: largest over cells of the exact one-sided binomial P(X >= x; n, 0.99).
+\item \textbf{H-R1b.} Replay acceptance of time-stamped alerts is zero outside W (by rule, checked by the model and the Monte Carlo) and, inside W, at most 1\% of replay attempts in every held-out cell (accepted only if the triple was evicted from the ring or the base rebooted). p-value: largest over cells of the exact one-sided binomial P(X <= x; n, 0.01) (H0: the rate is at least 0.01). The replay of no-time alerts is reported separately and is excluded from this hypothesis.
+\item \textbf{H-R1c.} Flash writes per year at the fleet fall by at least 10 times against persisting every alert counter (car and base). ANALYTICAL: writes\_counter = 2 A N (the car and the base each persist per alert); writes\_GTF = N B (one boot-epoch write per boot and car); ratio = 2A/B with A = 100 alerts per car and year including false alarms and B = 12 boots per car and year (a sensitivity table over A in \{10, 100, 876\}, B in \{12, 365\} is reported). No p-value (a formula); it enters the Holm family with p = 0 if met and 1 if not.
+\item Method: the bounded explicit-state model checker of the repository style (two vehicles, one base, attacker replays, car and base reboots, clock offsets), comparing the counter scheme with GTF, and a Monte Carlo over reboots, GPS loss and base clock drift of 0 to 5 s.
+\item Kill: a base drift of 2 s or less costs more than 5\% availability, or the replay window cannot be bounded for time-stamped alerts. Cite and do not claim over: ZigBee timestamp replay protection, LoRaWAN frame counters, the LoRaWAN replay-attack paper.
+\end{itemize}
+
+\subsubsection*{R2 Security-airtime co-design}
+Frames of 24, 32, 40, 56, 97 bytes (total on-air bytes including the tag) and tags of 4, 6, 7, 8, 12 bytes; a combination is feasible only if frame minus tag is at least 16 bytes (the fixed fields). Time on air: \texttt{lora.airtime\_ms} (ANALYTICAL). Forgery effort: log2 of attempts for success probability 1e-6 (8 t - 19.93) and expected attempts (8 t - 1) (ANALYTICAL, as E2). Delivery: the burst simulator (SIMULATED), metric \texttt{reach10\_critical}, policy P4+lbt (the best earlier policy of \texttt{pa\_design.json}), \texttt{alert\_len} set to the frame length.
+Grids. DESIGN: the 16 burst cells of \texttt{pa\_sim.DESIGN\_A} (b = 20), 20 simulated hours per cell, seed 16000 + h; HELD-OUT: the 16 burst cells of \texttt{pa\_sim.HELD\_A} (b = 30), 30 hours, seed 18000 + h. The candidate frame among \{24/8, 32/7, 32/8, 40/7, 40/8\} is chosen on the design grid (largest mean gain over 97/8).
+\begin{itemize}
+\item \textbf{H-R2a.} The chosen frame of at most 40 bytes with a 7 or 8 byte tag raises \texttt{reach10\_critical} by at least 5 points over the 97-byte frame with an 8-byte tag (same policy) in at least 8 of the 16 held-out burst cells (a cell counts if the paired 95\% interval of the difference excludes zero and the point gain is at least 0.05). p-value: the exact one-sided binomial P(X >= x; 16, 0.5) for the number of such cells.
+\item \textbf{H-R2b.} In the held-out grid, among frames with a tag of at least 7 bytes (forgery effort above 2\textasciicircum{}32 on both measures), the 97/8 frame is dominated by at least one other frame in the three measures (forgery effort, time on air, delivery), so that the Pareto set contains a frame that 97/8 does not dominate. (The statement without the 7-byte floor is true for any shorter frame with a shorter tag and is not used.) p-value: 0 if met, 1 if not (a Pareto statement; the delivery difference of the dominating frame must also have a paired interval that does not include a loss of more than 0.01).
+\item Kill: gain below 5 points in more than half of the cells, or no frame not dominated. Cite FC-HMAC (record not read) and the 4-byte LoRaWAN MIC; say that single-packet alerts under bursts were not found in the sources checked.
+\end{itemize}
+
+\subsubsection*{R3 Two-stage alert}
+The early-exit detector (the E rule of \texttt{early.py}, thresholds chosen on validation) sends a 14-byte FLASH as the provisional alert; the full-window decision (1,800 ms after the trigger) sends the full 97-byte alert as the confirmation, or an authenticated CANCEL (14 bytes, three transmissions) when the forest of the full window does not alarm. An event with no early alarm and a full-window alarm is sent as a single-stage alert at 1,800 ms. Data: the per-event decisions of seed 42 on the de-duplicated VZCrash test split (\texttt{results/tables/s6\_events\_seed42\_a1.csv} and \texttt{a5.csv}), thresholds from validation; these are the held-out events. Link: per-direction iid loss in \{0, 0.1, 0.3, 0.6\}, 200 Monte Carlo draws per event, retry spacing 0.6 s, at most 3 retries, SF7 time on air (\texttt{lora.airtime\_ms}), compute 8 ms. A DESIGN check on the validation events is not needed: there is no free parameter. Operating points: the 1\% and 5\% false-alarm targets (two points; more points need new fits).
+\begin{itemize}
+\item \textbf{H-R3 (the three parts together).} (a) The provisional alert reaches the base at least 0.8 s earlier (median of the paired difference over held-out crash events that alarm in both stages) than the single-stage alert, at loss 0 and at loss 0.3; (b) retractions are under 20\% of the provisional alerts at the 1\% target (retractions = provisional alerts whose full-window decision does not alarm); (c) the extra transmit airtime of the two-stage scheme is under 40\% (total airtime over all triggered test events, flash, confirm and CANCEL counted) and its event delivery (a crash event reaches the base by flash or alert) is not worse than the single stage by more than 2 points at every loss in the set. p-value: bootstrap of events (2,000 resamples, seed 42), the largest of the one-sided p-values of the three clauses. Kill: any clause fails. Report the operating curve (two points). No crash-alert version of this design was found in the sources checked; absence is not claimed.
+\end{itemize}
+
+\subsubsection*{R4 Per-vehicle ACK key separation}
+Problem: in the bounded check of H-A3 a forged event-level ACK from a holder of the shared key stops every vehicle (\texttt{pa.model.hA3.counterexample}). Design: per-vehicle keys K\_i = HMAC(master, vehicle id) derived at the base (one KDF per new id, cached); the ACK carries no event-level stop: it names (vehicle id, freshness field) and is signed with K\_i; the car checks the tag with its own K\_i. Method: the model of \texttt{pa\_model.py} extended with the attacker holding the key of one compromised vehicle (and, as a limit case, the master key, which is outside the claim). DESIGN: 2 vehicles; HELD-OUT: 3 vehicles, attacker actions at most 3, losses at most 2.
+\begin{itemize}
+\item \textbf{H-R4.} (a) In the model, a forged ACK from a compromised node suppresses only that node: the suppressed fraction of vehicles is at most 1/V (against 1.0 for the shared key with an event-level ACK); (b) the extra cost at the base is at most one KDF per new vehicle id (at most 1 KDF per alert without the cache) and 0 extra bytes (the ACK length stays 26 bytes). The KDF cost is one HMAC; the time comes from the timing model of the simulated H5 file (SIMULATED\_HW\_FORMAT) and is a placeholder, not a measurement. p-value: 0 if (a) and (b) both hold, 1 otherwise (a model check and a count). Kill: the model finds another path that stops all vehicles from a single compromised node (for example a replay of a genuine ACK of an older event, a neighbour frame, or an ACK-airtime exhaustion that blocks all retries); the key-holder-of-master limit is documented, not a kill.
+\item Per-device keys are standard in LoRaWAN. R4 is a design correction found by the check, not a new key scheme.
+\end{itemize}
+
+\subsection*{5. Cut order if time runs short}
+R3 operating curve beyond three points, R2 Pareto plot, R1 Monte Carlo beyond the bounded model, S2 transfer test, S3 baselines beyond the table and UA-SCT, S5 sensitivity reruns, L2 items beyond the leading five. Never cut V, L1, L3, L4, S0, S1, this file, the S2 failure map, S4, R4, the decision table or the claim audit. Anything cut is marked NOT\_RUN with the reason in \texttt{results.json}.
+

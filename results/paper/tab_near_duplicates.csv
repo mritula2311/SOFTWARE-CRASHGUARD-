@@ -1,0 +1,48 @@
+Metric,Test set,Value,Lower 95%,Upper 95%,Origin,results.json key
+"system recall, validation F1 threshold",standard test set (primary),0.9004,0.8919,0.9089,MEASURED_SOFTWARE,t5.std.recall_f1; t5.std.recall_f1_lo; t5.std.recall_f1_hi
+"system recall, validation F1 threshold",without window-level near-duplicates (sensitivity analysis),0.8729,0.8612,0.8839,MEASURED_SOFTWARE,t5.strict.recall_f1; t5.strict.recall_f1_lo; t5.strict.recall_f1_hi
+"system recall, validation F1 threshold",standard minus strict,0.0275,0.0233,0.0317,MEASURED_SOFTWARE,t5.diff_std_minus_strict.recall_f1; t5.diff_std_minus_strict.recall_f1_lo; t5.diff_std_minus_strict.recall_f1_hi
+recall at 1% false-alarm target,standard test set (primary),0.6265,0.6118,0.6392,MEASURED_SOFTWARE,t5.std.recall_t1; t5.std.recall_t1_lo; t5.std.recall_t1_hi
+recall at 1% false-alarm target,without window-level near-duplicates (sensitivity analysis),0.5584,0.5408,0.574,MEASURED_SOFTWARE,t5.strict.recall_t1; t5.strict.recall_t1_lo; t5.strict.recall_t1_hi
+recall at 1% false-alarm target,standard minus strict,0.0682,0.0597,0.0763,MEASURED_SOFTWARE,t5.diff_std_minus_strict.recall_t1; t5.diff_std_minus_strict.recall_t1_lo; t5.diff_std_minus_strict.recall_t1_hi
+recall at 5% false-alarm target,standard test set (primary),0.9345,0.9273,0.9414,MEASURED_SOFTWARE,t5.std.recall_t5; t5.std.recall_t5_lo; t5.std.recall_t5_hi
+recall at 5% false-alarm target,without window-level near-duplicates (sensitivity analysis),0.914,0.904,0.9237,MEASURED_SOFTWARE,t5.strict.recall_t5; t5.strict.recall_t5_lo; t5.strict.recall_t5_hi
+recall at 5% false-alarm target,standard minus strict,0.0205,0.0172,0.0239,MEASURED_SOFTWARE,t5.diff_std_minus_strict.recall_t5; t5.diff_std_minus_strict.recall_t5_lo; t5.diff_std_minus_strict.recall_t5_hi
+"AP, triggered events",standard test set (primary),0.9315,0.9242,0.9382,MEASURED_SOFTWARE,t5.std.ap_model; t5.std.ap_model_lo; t5.std.ap_model_hi
+"AP, triggered events",without window-level near-duplicates (sensitivity analysis),0.8922,0.8799,0.9033,MEASURED_SOFTWARE,t5.strict.ap_model; t5.strict.ap_model_lo; t5.strict.ap_model_hi
+"AP, triggered events",standard minus strict,0.0392,0.0338,0.0449,MEASURED_SOFTWARE,t5.diff_std_minus_strict.ap_model; t5.diff_std_minus_strict.ap_model_lo; t5.diff_std_minus_strict.ap_model_hi
+system AP,standard test set (primary),0.9039,0.8952,0.9121,MEASURED_SOFTWARE,t5.std.ap_system; t5.std.ap_system_lo; t5.std.ap_system_hi
+system AP,without window-level near-duplicates (sensitivity analysis),0.854,0.841,0.8669,MEASURED_SOFTWARE,t5.strict.ap_system; t5.strict.ap_system_lo; t5.strict.ap_system_hi
+system AP,standard minus strict,0.0499,0.044,0.056,MEASURED_SOFTWARE,t5.diff_std_minus_strict.ap_system; t5.diff_std_minus_strict.ap_system_lo; t5.diff_std_minus_strict.ap_system_hi
+N19 recall gain of the six-forest rule over the single forest (1% target),std,0.0155,0.0099,0.0213,MEASURED_SOFTWARE,t5.n19.std.a1.recall_gain_ensemble; t5.n19.std.a1.recall_gain_ensemble_lo; t5.n19.std.a1.recall_gain_ensemble_hi
+"N19 decision time difference (ms, 1% target)",std,-1019.0,-1042.0,-995.0,MEASURED_SOFTWARE,t5.n19.std.a1.time_diff_ms; t5.n19.std.a1.time_diff_ms_lo; t5.n19.std.a1.time_diff_ms_hi
+N19 recall gain of the six-forest rule over the single forest (5% target),std,0.0015,0.0009,0.002,MEASURED_SOFTWARE,t5.n19.std.a5.recall_gain_ensemble; t5.n19.std.a5.recall_gain_ensemble_lo; t5.n19.std.a5.recall_gain_ensemble_hi
+"N19 decision time difference (ms, 5% target)",std,-1172.0,-1193.0,-1149.0,MEASURED_SOFTWARE,t5.n19.std.a5.time_diff_ms; t5.n19.std.a5.time_diff_ms_lo; t5.n19.std.a5.time_diff_ms_hi
+N19 recall gain of the six-forest rule over the single forest (1% target),strict,0.0231,0.0165,0.0301,MEASURED_SOFTWARE,t5.n19.strict.a1.recall_gain_ensemble; t5.n19.strict.a1.recall_gain_ensemble_lo; t5.n19.strict.a1.recall_gain_ensemble_hi
+"N19 decision time difference (ms, 1% target)",strict,-959.0,-988.0,-929.0,MEASURED_SOFTWARE,t5.n19.strict.a1.time_diff_ms; t5.n19.strict.a1.time_diff_ms_lo; t5.n19.strict.a1.time_diff_ms_hi
+N19 recall gain of the six-forest rule over the single forest (5% target),strict,0.0018,0.0011,0.0026,MEASURED_SOFTWARE,t5.n19.strict.a5.recall_gain_ensemble; t5.n19.strict.a5.recall_gain_ensemble_lo; t5.n19.strict.a5.recall_gain_ensemble_hi
+"N19 decision time difference (ms, 5% target)",strict,-1117.0,-1145.0,-1088.0,MEASURED_SOFTWARE,t5.n19.strict.a5.time_diff_ms; t5.n19.strict.a5.time_diff_ms_lo; t5.n19.strict.a5.time_diff_ms_hi
+N9 crash_trigger_rate (trig_1.5),std,0.9968,,,MEASURED_SOFTWARE,t5.n9.trig_1.5.std.crash_trigger_rate
+N9 model_level_recall (trig_1.5),std,0.8078,,,MEASURED_SOFTWARE,t5.n9.trig_1.5.std.model_level_recall
+N9 system_recall (trig_1.5),std,0.8053,,,MEASURED_SOFTWARE,t5.n9.trig_1.5.std.system_recall
+N9 crash_trigger_rate (trig_1.5),strict,0.9956,,,MEASURED_SOFTWARE,t5.n9.trig_1.5.strict.crash_trigger_rate
+N9 model_level_recall (trig_1.5),strict,0.8035,,,MEASURED_SOFTWARE,t5.n9.trig_1.5.strict.model_level_recall
+N9 system_recall (trig_1.5),strict,0.8,,,MEASURED_SOFTWARE,t5.n9.trig_1.5.strict.system_recall
+N9 crash_trigger_rate (trig_2),std,0.9637,,,MEASURED_SOFTWARE,t5.n9.trig_2.std.crash_trigger_rate
+N9 model_level_recall (trig_2),std,0.9343,,,MEASURED_SOFTWARE,t5.n9.trig_2.std.model_level_recall
+N9 system_recall (trig_2),std,0.9004,,,MEASURED_SOFTWARE,t5.n9.trig_2.std.system_recall
+N9 crash_trigger_rate (trig_2),strict,0.9498,,,MEASURED_SOFTWARE,t5.n9.trig_2.strict.crash_trigger_rate
+N9 model_level_recall (trig_2),strict,0.919,,,MEASURED_SOFTWARE,t5.n9.trig_2.strict.model_level_recall
+N9 system_recall (trig_2),strict,0.8729,,,MEASURED_SOFTWARE,t5.n9.trig_2.strict.system_recall
+N9 crash_trigger_rate (trig_2.5),std,0.8904,,,MEASURED_SOFTWARE,t5.n9.trig_2.5.std.crash_trigger_rate
+N9 model_level_recall (trig_2.5),std,0.9571,,,MEASURED_SOFTWARE,t5.n9.trig_2.5.std.model_level_recall
+N9 system_recall (trig_2.5),std,0.8523,,,MEASURED_SOFTWARE,t5.n9.trig_2.5.std.system_recall
+N9 crash_trigger_rate (trig_2.5),strict,0.8579,,,MEASURED_SOFTWARE,t5.n9.trig_2.5.strict.crash_trigger_rate
+N9 model_level_recall (trig_2.5),strict,0.9427,,,MEASURED_SOFTWARE,t5.n9.trig_2.5.strict.model_level_recall
+N9 system_recall (trig_2.5),strict,0.8087,,,MEASURED_SOFTWARE,t5.n9.trig_2.5.strict.system_recall
+N9 crash_trigger_rate (trig_3),std,0.785,,,MEASURED_SOFTWARE,t5.n9.trig_3.std.crash_trigger_rate
+N9 model_level_recall (trig_3),std,0.9667,,,MEASURED_SOFTWARE,t5.n9.trig_3.std.model_level_recall
+N9 system_recall (trig_3),std,0.7589,,,MEASURED_SOFTWARE,t5.n9.trig_3.std.system_recall
+N9 crash_trigger_rate (trig_3),strict,0.7332,,,MEASURED_SOFTWARE,t5.n9.trig_3.strict.crash_trigger_rate
+N9 model_level_recall (trig_3),strict,0.954,,,MEASURED_SOFTWARE,t5.n9.trig_3.strict.model_level_recall
+N9 system_recall (trig_3),strict,0.6995,,,MEASURED_SOFTWARE,t5.n9.trig_3.strict.system_recall

@@ -1,0 +1,37 @@
+Range (g),Method,Metric,Value,Lower 95%,Upper 95%,Origin,results.json key
++-16,plain,median error (%),25.677,24.354,27.948,MEASURED_SOFTWARE,n14x.R.r16.B.median; n14x.R.r16.B.median_lo; n14x.R.r16.B.median_hi
++-16,plain,within 10%,0.068,0.033,0.106,MEASURED_SOFTWARE,n14x.R.r16.B.w10; n14x.R.r16.B.w10_lo; n14x.R.r16.B.w10_hi
++-16,plain,90th percentile error (%),51.01,44.405,62.976,MEASURED_SOFTWARE,n14x.R.r16.B.p90; n14x.R.r16.B.p90_lo; n14x.R.r16.B.p90_hi
++-16,spline,median error (%),23.539,21.221,25.714,MEASURED_SOFTWARE,n14x.R.r16.SP.median; n14x.R.r16.SP.median_lo; n14x.R.r16.SP.median_hi
++-16,spline,within 10%,0.157,0.112,0.202,MEASURED_SOFTWARE,n14x.R.r16.SP.w10; n14x.R.r16.SP.w10_lo; n14x.R.r16.SP.w10_hi
++-16,spline,90th percentile error (%),51.795,44.049,62.636,MEASURED_SOFTWARE,n14x.R.r16.SP.p90; n14x.R.r16.SP.p90_lo; n14x.R.r16.SP.p90_hi
++-16,fill,median error (%),16.494,14.469,19.139,MEASURED_SOFTWARE,n14x.R.r16.M.median; n14x.R.r16.M.median_lo; n14x.R.r16.M.median_hi
++-16,fill,within 10%,0.29,0.231,0.351,MEASURED_SOFTWARE,n14x.R.r16.M.w10; n14x.R.r16.M.w10_lo; n14x.R.r16.M.w10_hi
++-16,fill,90th percentile error (%),52.752,40.199,65.059,MEASURED_SOFTWARE,n14x.R.r16.M.p90; n14x.R.r16.M.p90_lo; n14x.R.r16.M.p90_hi
++-16,fill + ridge (named primary after earlier results were seen),median error (%),11.899,10.077,14.569,MEASURED_SOFTWARE,n14x.R.r16.M+.median; n14x.R.r16.M+.median_lo; n14x.R.r16.M+.median_hi
++-16,fill + ridge (named primary after earlier results were seen),within 10%,0.435,0.373,0.497,MEASURED_SOFTWARE,n14x.R.r16.M+.w10; n14x.R.r16.M+.w10_lo; n14x.R.r16.M+.w10_hi
++-16,fill + ridge (named primary after earlier results were seen),90th percentile error (%),58.536,46.832,65.638,MEASURED_SOFTWARE,n14x.R.r16.M+.p90; n14x.R.r16.M+.p90_lo; n14x.R.r16.M+.p90_hi
++-32,plain,median error (%),6.79,4.878,7.569,MEASURED_SOFTWARE,n14x.R.r32.B.median; n14x.R.r32.B.median_lo; n14x.R.r32.B.median_hi
++-32,plain,within 10%,0.659,0.582,0.731,MEASURED_SOFTWARE,n14x.R.r32.B.w10; n14x.R.r32.B.w10_lo; n14x.R.r32.B.w10_hi
++-32,plain,90th percentile error (%),26.432,20.56,37.858,MEASURED_SOFTWARE,n14x.R.r32.B.p90; n14x.R.r32.B.p90_lo; n14x.R.r32.B.p90_hi
++-32,spline,median error (%),6.626,4.893,7.521,MEASURED_SOFTWARE,n14x.R.r32.SP.median; n14x.R.r32.SP.median_lo; n14x.R.r32.SP.median_hi
++-32,spline,within 10%,0.654,0.586,0.721,MEASURED_SOFTWARE,n14x.R.r32.SP.w10; n14x.R.r32.SP.w10_lo; n14x.R.r32.SP.w10_hi
++-32,spline,90th percentile error (%),27.316,22.384,38.032,MEASURED_SOFTWARE,n14x.R.r32.SP.p90; n14x.R.r32.SP.p90_lo; n14x.R.r32.SP.p90_hi
++-32,fill,median error (%),5.83,4.455,7.296,MEASURED_SOFTWARE,n14x.R.r32.M.median; n14x.R.r32.M.median_lo; n14x.R.r32.M.median_hi
++-32,fill,within 10%,0.69,0.621,0.756,MEASURED_SOFTWARE,n14x.R.r32.M.w10; n14x.R.r32.M.w10_lo; n14x.R.r32.M.w10_hi
++-32,fill,90th percentile error (%),26.03,21.111,37.935,MEASURED_SOFTWARE,n14x.R.r32.M.p90; n14x.R.r32.M.p90_lo; n14x.R.r32.M.p90_hi
++-32,fill + ridge (named primary after earlier results were seen),median error (%),5.445,4.38,6.521,MEASURED_SOFTWARE,n14x.R.r32.M+.median; n14x.R.r32.M+.median_lo; n14x.R.r32.M+.median_hi
++-32,fill + ridge (named primary after earlier results were seen),within 10%,0.722,0.66,0.781,MEASURED_SOFTWARE,n14x.R.r32.M+.w10; n14x.R.r32.M+.w10_lo; n14x.R.r32.M+.w10_hi
++-32,fill + ridge (named primary after earlier results were seen),90th percentile error (%),24.488,18.98,36.294,MEASURED_SOFTWARE,n14x.R.r32.M+.p90; n14x.R.r32.M+.p90_lo; n14x.R.r32.M+.p90_hi
++-64,plain,median error (%),3.857,3.186,4.892,MEASURED_SOFTWARE,n14x.R.r64.B.median; n14x.R.r64.B.median_lo; n14x.R.r64.B.median_hi
++-64,plain,within 10%,0.784,0.722,0.844,MEASURED_SOFTWARE,n14x.R.r64.B.w10; n14x.R.r64.B.w10_lo; n14x.R.r64.B.w10_hi
++-64,plain,90th percentile error (%),17.31,13.422,24.056,MEASURED_SOFTWARE,n14x.R.r64.B.p90; n14x.R.r64.B.p90_lo; n14x.R.r64.B.p90_hi
++-64,spline,median error (%),3.906,3.24,4.962,MEASURED_SOFTWARE,n14x.R.r64.SP.median; n14x.R.r64.SP.median_lo; n14x.R.r64.SP.median_hi
++-64,spline,within 10%,0.785,0.725,0.844,MEASURED_SOFTWARE,n14x.R.r64.SP.w10; n14x.R.r64.SP.w10_lo; n14x.R.r64.SP.w10_hi
++-64,spline,90th percentile error (%),17.011,13.478,23.673,MEASURED_SOFTWARE,n14x.R.r64.SP.p90; n14x.R.r64.SP.p90_lo; n14x.R.r64.SP.p90_hi
++-64,fill,median error (%),3.857,3.186,4.892,MEASURED_SOFTWARE,n14x.R.r64.M.median; n14x.R.r64.M.median_lo; n14x.R.r64.M.median_hi
++-64,fill,within 10%,0.779,0.717,0.839,MEASURED_SOFTWARE,n14x.R.r64.M.w10; n14x.R.r64.M.w10_lo; n14x.R.r64.M.w10_hi
++-64,fill,90th percentile error (%),19.113,13.69,25.459,MEASURED_SOFTWARE,n14x.R.r64.M.p90; n14x.R.r64.M.p90_lo; n14x.R.r64.M.p90_hi
++-64,fill + ridge (named primary after earlier results were seen),median error (%),3.842,3.18,4.834,MEASURED_SOFTWARE,n14x.R.r64.M+.median; n14x.R.r64.M+.median_lo; n14x.R.r64.M+.median_hi
++-64,fill + ridge (named primary after earlier results were seen),within 10%,0.781,0.719,0.842,MEASURED_SOFTWARE,n14x.R.r64.M+.w10; n14x.R.r64.M+.w10_lo; n14x.R.r64.M+.w10_hi
++-64,fill + ridge (named primary after earlier results were seen),90th percentile error (%),19.113,13.585,25.459,MEASURED_SOFTWARE,n14x.R.r64.M+.p90; n14x.R.r64.M+.p90_lo; n14x.R.r64.M+.p90_hi

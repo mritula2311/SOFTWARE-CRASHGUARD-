@@ -1,0 +1,70 @@
+/* Round 7b G3: quarantine on resolved ids with pseudonyms, injective no-framing form in Tamarin.
+ *
+ * Why this model exists. The ProVerif model formal/proverif/r7_lemmas_quarantine.pv proves the non-injective no-framing form and reports the injective form as false. The trace that ProVerif gives has two copies of the base
+ * thread that both read the seen-set (the 'else' branch of `get seen`) before either inserts: the check and the insert are two separate steps, so the attack is a race of two base threads on one frame, not a replay across
+ * time. The question is whether the property holds when the base makes the check and the insert one step (a single-threaded base, or a lock). Tamarin's linear facts express that: the token Unseen(v, a) is consumed by the strike.
+ *
+ * Model: per-vehicle key kv (the attacker may reveal it), pseudonym p = pseud(kv, a) for a fresh event value a (boot and counter), frame <p, 'bad', mac(kv, <'A', p, 'bad', a>)>; the window entry !Window(p, v, a) stands for the
+ * pseudonym resolution of the base (it exists only for a pseudonym the vehicle derived). A strike against v needs the resolved window entry, a tag that verifies under v's key, and the Unseen(v, a) token.
+ * Variants (preprocessor): -D=ATOMIC = atomic seen-set (the design); -D=NOSEEN = no seen-set (the strike has no token: the model of two base threads racing, and of a base without a seen-set); -D=NOTAG = strike before the tag check (rule A of the
+ * quarantine analysis, the control for the non-injective form).
+ */
+theory QuarantinePseudo
+begin
+
+functions: kdf/2, mac/2, pseud/2
+
+rule NewVehicle:
+  [ Fr(~v), Fr(~kv) ]
+  --[ NewVehicle(~v) ]->
+  [ !Key(~v, ~kv), Out(~v) ]
+
+rule Reveal:
+  [ !Key(v, kv) ]
+  --[ Revealed(v) ]->
+  [ Out(kv) ]
+
+rule CarSendBad:
+  [ !Key(v, kv), Fr(~a) ]
+  --[ CarSentBad(v, ~a) ]->
+  [ Out(<pseud(kv, ~a), 'bad', mac(kv, <'A', pseud(kv, ~a), 'bad', ~a>)>), !Window(pseud(kv, ~a), v, ~a), Unseen(v, ~a) ]
+
+rule CarSendGood:
+  [ !Key(v, kv), Fr(~a) ]
+  --[ CarSentGood(v, ~a) ]->
+  [ Out(<pseud(kv, ~a), 'good', mac(kv, <'A', pseud(kv, ~a), 'good', ~a>)>), !Window(pseud(kv, ~a), v, ~a), Unseen(v, ~a) ]
+
+#ifdef ATOMIC
+rule BaseStrike:
+  [ In(<p, 'bad', mac(kv, <'A', p, 'bad', a>)>), !Window(p, v, a), !Key(v, kv), Unseen(v, a) ]
+  --[ Strike(v, a) ]->
+  [ ]
+#endif
+
+#ifdef NOSEEN
+rule BaseStrike:
+  [ In(<p, 'bad', mac(kv, <'A', p, 'bad', a>)>), !Window(p, v, a), !Key(v, kv) ]
+  --[ Strike(v, a) ]->
+  [ ]
+#endif
+
+#ifdef NOTAG
+rule BaseStrike:
+  [ In(<p, 'bad', t>), !Window(p, v, a), Unseen(v, a) ]
+  --[ Strike(v, a) ]->
+  [ ]
+#endif
+
+lemma executable_strike:
+  exists-trace
+  "Ex v a #i. Strike(v, a) @ i"
+
+lemma no_framing_noninjective:
+  all-traces
+  "All v a #i. Strike(v, a) @ i ==> (Ex #j. CarSentBad(v, a) @ j & j < i) | (Ex #r. Revealed(v) @ r)"
+
+lemma no_framing_injective:
+  all-traces
+  "All v a #i. Strike(v, a) @ i ==> ((Ex #j. CarSentBad(v, a) @ j & j < i & (All #k. Strike(v, a) @ k ==> #k = #i)) | (Ex #r. Revealed(v) @ r))"
+
+end

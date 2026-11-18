@@ -1,0 +1,266 @@
+command: /opt/tamarin/tamarin-prover -D=CONTROL formal/r6_micro_confirm.spthy --prove +RTS -N1 -M5g -RTS
+maude tool: 'maude'
+ checking version: 3.5.1. OK.
+ checking installation: OK.
+[Theory R6MicroConfirm] Theory loaded
+[Theory R6MicroConfirm] Theory translated
+[Theory R6MicroConfirm] Derivation checks started
+[Theory R6MicroConfirm] Derivation checks ended
+[Theory R6MicroConfirm] Theory closed
+[Saturating Sources] Step 1 (Max 5)
+[Saturating Sources] Done
+theory R6MicroConfirm
+
+begin
+
+// Function signature and definition of the equational theory E
+
+functions: fst/1, kdf/2, mac/2, pair/2, snd/1
+equations: fst(<x.1, x.2>) = x.1, snd(<x.1, x.2>) = x.2
+
+rule (modulo E) BaseInit:
+   [ Fr( ~km ) ] --[ BaseInit( ) ]-> [ !BaseMaster( ~km ) ]
+
+  /* has exactly the trivial AC variant */
+
+rule (modulo E) RevealNode:
+   [ !BaseMaster( km ) ] --[ RevealNode( $w ) ]-> [ Out( kdf(km, $w) ) ]
+
+  /* has exactly the trivial AC variant */
+
+rule (modulo E) CarFlash:
+   [ Fr( ~id ), !BaseMaster( km ), In( $v ) ]
+  --[ CarSentFlash( $v, mac(kdf(km, $v), <'F', $v, ~id>) ) ]->
+   [
+   Out( <'FLASH', $v, ~id, mac(kdf(km, $v), <'F', $v, ~id>)> ),
+   CarOpen( $v, mac(kdf(km, $v), <'F', $v, ~id>) )
+   ]
+
+  /* has exactly the trivial AC variant */
+
+rule (modulo E) CarMicro:
+   [ CarOpen( $v, t ), !BaseMaster( km ), In( x ) ]
+  --[ CarSentMicro( $v, t, x ) ]->
+   [ Out( <'MICRO', $v, t, x, mac(kdf(km, $v), <'M', x>)> ) ]
+
+  /* has exactly the trivial AC variant */
+
+rule (modulo E) CarCancel:
+   [ CarOpen( $v, t ), !BaseMaster( km ) ]
+  --[ CarSentCancel( $v, t ) ]->
+   [ Out( <'CANCEL', $v, t, mac(kdf(km, $v), 'X')> ) ]
+
+  /* has exactly the trivial AC variant */
+
+rule (modulo E) BaseMicro:
+   [
+   !BaseMaster( km ), !Pending( $v, t ),
+   In( <'MICRO', $v, t, x, mac(kdf(km, $v), <'M', x>)> )
+   ]
+  --[ BaseAcceptMicro( $v, t, x ) ]->
+   [ ]
+
+  /* has exactly the trivial AC variant */
+
+rule (modulo E) BaseCancel:
+   [
+   !BaseMaster( km ), !Pending( $v, t ),
+   In( <'CANCEL', $v, t, mac(kdf(km, $v), 'X')> )
+   ]
+  --[ BaseAcceptCancel( $v, t ) ]->
+   [ ]
+
+  /* has exactly the trivial AC variant */
+
+rule (modulo E) BaseFlash:
+   [
+   !BaseMaster( km ),
+   In( <'FLASH', $v, id, mac(kdf(km, $v), <'F', $v, id>)> )
+   ]
+  --[ BaseAcceptFlash( $v, mac(kdf(km, $v), <'F', $v, id>) ) ]->
+   [ !Pending( $v, mac(kdf(km, $v), <'F', $v, id>) ) ]
+
+  /* has exactly the trivial AC variant */
+
+lemma executable_micro:
+  exists-trace
+  "∃ v t x #i.
+    (BaseAcceptMicro( v, t, x ) @ #i) ∧ (¬(∃ w #j. RevealNode( w ) @ #j))"
+/*
+guarded formula characterizing all satisfying traces:
+"∃ v t x #i.
+  (BaseAcceptMicro( v, t, x ) @ #i) ∧ ∀ w #j. (RevealNode( w ) @ #j) ⇒ ⊥"
+*/
+simplify
+solve( !BaseMaster( km ) ▶₀ #i )
+  case BaseInit
+  solve( !Pending( $v, t ) ▶₁ #i )
+    case BaseFlash
+    solve( !KU( mac(kdf(~km, $v), <'M', x>) ) @ #vk.10 )
+      case CarMicro
+      solve( !KU( mac(kdf(~km.1, $v), <'F', $v, id>) ) @ #vk.8 )
+        case CarCancel
+        solve( !KU( ~id ) @ #vk.13 )
+          case CarFlash
+          SOLVED // trace found
+        qed
+      qed
+    qed
+  qed
+qed
+
+lemma micro_auth:
+  all-traces
+  "∀ v t x #i.
+    (BaseAcceptMicro( v, t, x ) @ #i) ⇒
+    ((∃ #j. (CarSentMicro( v, t, x ) @ #j) ∧ (#j < #i)) ∨
+     (∃ #r. RevealNode( v ) @ #r))"
+/*
+guarded formula characterizing all counter-examples:
+"∃ v t x #i.
+  (BaseAcceptMicro( v, t, x ) @ #i)
+ ∧
+  (∀ #j. (CarSentMicro( v, t, x ) @ #j) ⇒ ¬(#j < #i)) ∧
+  (∀ #r. (RevealNode( v ) @ #r) ⇒ ⊥)"
+*/
+simplify
+solve( !BaseMaster( km ) ▶₀ #i )
+  case BaseInit
+  solve( !Pending( $v, t ) ▶₁ #i )
+    case BaseFlash
+    solve( !KU( mac(kdf(~km, $v), <'M', x>) ) @ #vk.10 )
+      case CarMicro
+      solve( !KU( mac(kdf(~km.1, $v), <'F', $v, id>) ) @ #vk.8 )
+        case CarCancel
+        solve( !KU( ~id ) @ #vk.13 )
+          case CarFlash
+          SOLVED // trace found
+        qed
+      qed
+    qed
+  qed
+qed
+
+lemma micro_binding:
+  all-traces
+  "∀ v t x #i.
+    (BaseAcceptMicro( v, t, x ) @ #i) ⇒
+    ((∃ #j. (CarSentFlash( v, t ) @ #j) ∧ (#j < #i)) ∨
+     (∃ #r. RevealNode( v ) @ #r))"
+/*
+guarded formula characterizing all counter-examples:
+"∃ v t x #i.
+  (BaseAcceptMicro( v, t, x ) @ #i)
+ ∧
+  (∀ #j. (CarSentFlash( v, t ) @ #j) ⇒ ¬(#j < #i)) ∧
+  (∀ #r. (RevealNode( v ) @ #r) ⇒ ⊥)"
+*/
+simplify
+solve( !BaseMaster( km ) ▶₀ #i )
+  case BaseInit
+  solve( !Pending( $v, t ) ▶₁ #i )
+    case BaseFlash
+    solve( !KU( mac(kdf(~km, $v), <'M', x>) ) @ #vk.10 )
+      case CarMicro
+      solve( !KU( mac(kdf(~km.1, $v), <'F', $v, id>) ) @ #vk.8 )
+        case CarCancel
+        by contradiction /* from formulas */
+      next
+        case CarFlash
+        by contradiction /* from formulas */
+      next
+        case CarMicro
+        by contradiction /* from formulas */
+      next
+        case c_mac
+        solve( !KU( kdf(~km.1, $v) ) @ #vk.15 )
+          case RevealNode
+          by contradiction /* from formulas */
+        next
+          case c_kdf
+          by solve( !KU( ~km.1 ) @ #vk.18 )
+        qed
+      qed
+    next
+      case c_mac
+      solve( !KU( mac(kdf(~km.1, $v), <'F', $v, id>) ) @ #vk.8 )
+        case CarCancel
+        by contradiction /* from formulas */
+      next
+        case CarFlash
+        by contradiction /* from formulas */
+      next
+        case CarMicro
+        by contradiction /* from formulas */
+      next
+        case c_mac
+        solve( !KU( kdf(~km, $v) ) @ #vk.16 )
+          case RevealNode
+          by contradiction /* from formulas */
+        next
+          case c_kdf
+          by solve( !KU( ~km ) @ #vk.21 )
+        qed
+      qed
+    qed
+  qed
+qed
+
+lemma cancel_auth:
+  all-traces
+  "∀ v t #i.
+    (BaseAcceptCancel( v, t ) @ #i) ⇒
+    ((∃ #j. (CarSentCancel( v, t ) @ #j) ∧ (#j < #i)) ∨
+     (∃ #r. RevealNode( v ) @ #r))"
+/*
+guarded formula characterizing all counter-examples:
+"∃ v t #i.
+  (BaseAcceptCancel( v, t ) @ #i)
+ ∧
+  (∀ #j. (CarSentCancel( v, t ) @ #j) ⇒ ¬(#j < #i)) ∧
+  (∀ #r. (RevealNode( v ) @ #r) ⇒ ⊥)"
+*/
+simplify
+solve( !BaseMaster( km ) ▶₀ #i )
+  case BaseInit
+  solve( !Pending( $v, t ) ▶₁ #i )
+    case BaseFlash
+    solve( !KU( mac(kdf(~km, $v), 'X') ) @ #vk.8 )
+      case CarCancel
+      solve( !KU( mac(kdf(~km.1, $v), <'F', $v, id>) ) @ #vk.8 )
+        case CarFlash
+        solve( !KU( ~id ) @ #vk.11 )
+          case CarFlash
+          SOLVED // trace found
+        qed
+      qed
+    qed
+  qed
+qed
+
+/* All wellformedness checks were successful. */
+
+/*
+Generated from:
+Tamarin version 1.12.0
+Maude version 3.5.1
+Git revision: 82780bbaf3328a45f624ddb41e51bf75425f851c (with uncommited changes), branch: master
+Compiled at: 2026-03-07 14:22:39.174278293 UTC
+*/
+
+end
+
+==============================================================================
+summary of summaries:
+
+analyzed: formal/r6_micro_confirm.spthy
+
+  processing time: 0.58s
+  
+  executable_micro (exists-trace): verified (7 steps)
+  micro_auth (all-traces): falsified - found trace (7 steps)
+  micro_binding (all-traces): verified (18 steps)
+  cancel_auth (all-traces): falsified - found trace (7 steps)
+
+==============================================================================
+exit code: 0 ; wall time 1 s ; peak memory 40 MB

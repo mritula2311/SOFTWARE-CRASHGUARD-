@@ -1,0 +1,36 @@
+id,file,description,status
+M01,src/crashguard/r6_micro.py,a confirm arrival at time 0 not counted,KILLED
+M02,src/crashguard/r6_micro.py,cancelled flash counts as delivered,KILLED
+M03,src/crashguard/r6_micro.py,flash arrival threshold,KILLED
+M04,src/crashguard/r6_micro.py,events dropped only in the micro run kept,KILLED
+M05,src/crashguard/r6_micro.py,non-crash events used as crash events,KILLED
+M06,src/crashguard/r6_micro.py,micro airtime taken from the R3 run,KILLED
+M07,src/crashguard/r6_micro.py,delivery swapped,KILLED
+M08,src/crashguard/r6_micro.py,drop count misses the micro run,KILLED
+M09,src/crashguard/r6_micro.py,extra airtime against the wrong reference,KILLED
+M10,src/crashguard/r6_micro.py,ratio to R3 uses the single-stage total,KILLED
+M11,src/crashguard/r6_micro.py,sign of the delivery difference,KILLED
+M12,src/crashguard/r6_micro.py,point delivery difference is a sum,KILLED
+M13,src/crashguard/r6_micro.py,last run never resampled,KILLED
+M14,src/crashguard/r6_micro.py,upper limit exactly 0.40 fails,KILLED
+M15,src/crashguard/r6_micro.py,upper limit is the 95th percentile,KILLED
+M16,src/crashguard/r6_micro.py,p-value excludes resamples at 0.40,KILLED
+M17,src/crashguard/r6_micro.py,lower limit exactly -0.01 fails,KILLED
+M18,src/crashguard/r6_micro.py,lower limit is the 5th percentile,KILLED
+M19,src/crashguard/r6_micro.py,p-value includes resamples at the margin,KILLED
+M20,src/crashguard/r6_micro.py,reception test inverted,KILLED
+M21,src/crashguard/r6_micro.py,tries off by one,KILLED
+M22,src/crashguard/r6_micro.py,unacknowledged stage reported as acknowledged,KILLED
+M23,src/crashguard/r6_micro.py,micro-confirm without an acknowledged flash,KILLED
+M24,src/crashguard/r6_micro.py,micro-cancel never used,KILLED
+M25,src/crashguard/r6_micro.py,confirm tries not counted,KILLED
+M26,src/crashguard/r6_micro.py,cancel repeats not counted,KILLED
+M27,src/crashguard/r6_micro.py,single-stage draws not consumed,KILLED
+M28,src/crashguard/r6_micro.py,confirm replay starts at the flash frame,KILLED
+M29,src/crashguard/r6_micro.py,59 held-out seeds,KILLED
+M30,src/crashguard/r6_micro.py,development seeds overlap nothing but change,KILLED
+M31,src/crashguard/r6_micro.py,pending lifetime not passed,KILLED
+M33,src/crashguard/r6_micro.py,confirm deadline widened,KILLED
+M34,src/crashguard/r6_micro.py,flash deadline widened,KILLED
+M35,src/crashguard/r6_micro.py,per-delivered airtime uses the R3 delivery count,KILLED
+M32,src/crashguard/r6_micro.py,file name without the lifetime,KILLED

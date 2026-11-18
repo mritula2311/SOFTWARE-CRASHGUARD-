@@ -1,0 +1,3144 @@
+[
+ {
+  "topic": "A",
+  "query": "LoRaWAN ACK spoofing",
+  "database": "OpenAlex",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 129,
+  "top": [
+   {
+    "title": "A Survey of LoRaWAN for IoT: From Technology to Application",
+    "year": 2018,
+    "doi": "https://doi.org/10.3390/s18113995",
+    "oa": "https://www.mdpi.com/1424-8220/18/11/3995/pdf?version=1542362844"
+   },
+   {
+    "title": "A Security Verification Framework for the LoRaWAN Protocol with Application in the Manufacturing Industry",
+    "year": 2024,
+    "doi": "https://doi.org/10.1109/issre62328.2024.00057",
+    "oa": null
+   },
+   {
+    "title": "A Survey on Scalable LoRaWAN for Massive IoT: Recent Advances, Potentials, and Challenges",
+    "year": 2023,
+    "doi": "https://doi.org/10.1109/comst.2023.3274934",
+    "oa": "https://arxiv.org/pdf/2202.11082"
+   },
+   {
+    "title": "Analysis of Lorawan Protocol and Attacks Against Lorawan-Based IoT Devices",
+    "year": 2024,
+    "doi": "https://doi.org/10.58190/ijamec.2024.95",
+    "oa": "https://ijamec.org/index.php/ijamec/article/download/396/364"
+   },
+   {
+    "title": "Cybersecurity in LoRaWAN Networks",
+    "year": 2025,
+    "doi": null,
+    "oa": "http://repositorio.utfpr.edu.br:8080/jspui/bitstream/1/39926/1/cibersegurancaredeslorawan.pdf"
+   },
+   {
+    "title": "Security Assessment of LoRaWAN Based IoT Asset Tracking System",
+    "year": 2020,
+    "doi": null,
+    "oa": null
+   },
+   {
+    "title": "Honeypot pro protokol LoRaWAN",
+    "year": 2020,
+    "doi": null,
+    "oa": null
+   },
+   {
+    "title": "Investigation on Security Risk of LoRaWAN: Compatibility Scenarios",
+    "year": 2022,
+    "doi": "https://doi.org/10.1109/access.2022.3208171",
+    "oa": "https://ieeexplore.ieee.org/ielx7/6287639/6514899/09895413.pdf"
+   },
+   {
+    "title": "Analysis of LoRaWAN 1.0 and 1.1 Protocols Security Mechanisms",
+    "year": 2022,
+    "doi": "https://doi.org/10.3390/s22103717",
+    "oa": "https://www.mdpi.com/1424-8220/22/10/3717/pdf?version=1652776549"
+   },
+   {
+    "title": "Security of LoRaWAN v1.1 in Backward Compatibility Scenarios",
+    "year": 2018,
+    "doi": "https://doi.org/10.1016/j.procs.2018.07.143",
+    "oa": "https://www.sciencedirect.com/science/article/pii/S1877050918311062/pdf"
+   }
+  ]
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN ACK spoofing",
+  "database": "Crossref",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 7810,
+  "top": [
+   {
+    "title": "Transmission Timing Control Using ACK Signal in LoRaWAN",
+    "year": 2021,
+    "doi": "10.1109/wcnc49053.2021.9417294"
+   },
+   {
+    "title": "A Multi-User ACK-Aggregation Method for Large-Scale Reliable LoRaWAN Service",
+    "year": 2019,
+    "doi": "10.1109/icc.2019.8761253"
+   },
+   {
+    "title": "An adaptive scheduling approach to enhance confirmed communication in LoRaWAN",
+    "year": 2025,
+    "doi": "10.6109/jkiice.2025.29.2.239"
+   },
+   {
+    "title": "Autonomous Decentralized Frequency Resource Allocation using ACK Signal in LoRaWAN",
+    "year": 2020,
+    "doi": "10.1109/wpmc50192.2020.9309507"
+   },
+   {
+    "title": "Gateway-Diversity-Preserving Multi-Hop Relay With Time-Aware ACK Gateway Selection for LoRaWAN-Oriented Mobile IoT Networks",
+    "year": 2026,
+    "doi": "10.1109/access.2026.3714528"
+   },
+   {
+    "title": "ACK spoofing on MAC-layer rate control: Attacks and defenses",
+    "year": 2020,
+    "doi": "10.1016/j.comnet.2020.107133"
+   },
+   {
+    "title": "Ack Spoofing Attack in IEEE 802.11 Infrastructure WLANs: Strategies, Detection and Mitigation",
+    "year": 2025,
+    "doi": "10.1049/ntw2.70020"
+   },
+   {
+    "title": "Effects of Beacon Spoofing Attacks on Various LoRaWAN Network Devices",
+    "year": 2025,
+    "doi": "10.1109/smartiot66867.2025.00063"
+   },
+   {
+    "title": "Machine Learning and Deep Learning-Based Multi-Attribute Physical-Layer Authentication for Spoofing Detection in LoRaWAN",
+    "year": 2025,
+    "doi": "10.3390/fi17020068"
+   },
+   {
+    "title": "ack-ack, adj. &amp; n.",
+    "year": 2023,
+    "doi": "10.1093/oed/3276714727"
+   }
+  ]
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN ACK spoofing",
+  "database": "DOAJ",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 0,
+  "top": []
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN ACK spoofing",
+  "database": "arXiv",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 0,
+  "top": []
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN ACK spoofing",
+  "database": "IEEE Xplore open page",
+  "date": "2026-11-16",
+  "status": "OK-page-only",
+  "reason": "page shell (results load by script)",
+  "count": null,
+  "top": []
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN acknowledgement jamming",
+  "database": "OpenAlex",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 163,
+  "top": [
+   {
+    "title": "A Survey of LoRaWAN for IoT: From Technology to Application",
+    "year": 2018,
+    "doi": "https://doi.org/10.3390/s18113995",
+    "oa": "https://www.mdpi.com/1424-8220/18/11/3995/pdf?version=1542362844"
+   },
+   {
+    "title": "A Comparative Analysis of LoRa and LoRaWAN in the Presence of Jammers and Transient Interference",
+    "year": 2022,
+    "doi": "https://doi.org/10.1109/emceurope51680.2022.9901081",
+    "oa": "https://cnrs.hal.science/hal-04127533/document"
+   },
+   {
+    "title": "LoRaWAN for Smart City IoT Deployments: A Long Term Evaluation",
+    "year": 2020,
+    "doi": "https://doi.org/10.3390/s20030648",
+    "oa": "http://dx.doi.org/10.3390/s20030648"
+   },
+   {
+    "title": "Multi-Attribute Physical-Layer Authentication Against Jamming and Battery-Depletion Attacks in LoRaWAN",
+    "year": 2026,
+    "doi": "https://doi.org/10.3390/fi18010038",
+    "oa": "https://www.mdpi.com/1999-5903/18/1/38/pdf"
+   },
+   {
+    "title": "A Survey on LoRaWAN Technology: Recent Trends, Opportunities, Simulation Tools and Future Directions",
+    "year": 2022,
+    "doi": "https://doi.org/10.3390/electronics11010164",
+    "oa": "https://www.mdpi.com/2079-9292/11/1/164/pdf?version=1644570694"
+   },
+   {
+    "title": "LoRaWAN Performance evaluation",
+    "year": 2019,
+    "doi": null,
+    "oa": "http://hdl.handle.net/10362/83097"
+   },
+   {
+    "title": "LoRaWAN Physical Layer-Based Attacks and Countermeasures, A Review",
+    "year": 2022,
+    "doi": "https://doi.org/10.3390/s22093127",
+    "oa": "https://www.mdpi.com/1424-8220/22/9/3127/pdf?version=1650443216"
+   },
+   {
+    "title": "Analysis of Security Aspects in LoRaWAN",
+    "year": 2022,
+    "doi": "https://doi.org/10.32604/jcs.2022.030498",
+    "oa": "https://file.techscience.com/ueditor/files/jcs/TSP_JCS-4-2/TSP_JCS_30498/TSP_JCS_30498.pdf"
+   },
+   {
+    "title": "Investigation on Security Risk of LoRaWAN: Compatibility Scenarios",
+    "year": 2022,
+    "doi": "https://doi.org/10.1109/access.2022.3208171",
+    "oa": "https://ieeexplore.ieee.org/ielx7/6287639/6514899/09895413.pdf"
+   },
+   {
+    "title": "Exploiting LoRaWAN for efficient and resilient IoT networks",
+    "year": 2020,
+    "doi": "https://doi.org/10.32657/10356/143912",
+    "oa": "https://dr.ntu.edu.sg/bitstream/10356/143912/2/chaojie_thesis.pdf"
+   }
+  ]
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN acknowledgement jamming",
+  "database": "Crossref",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 16081,
+  "top": [
+   {
+    "title": "Practical Realization of Reactive Jamming Attack on LoRaWAN Network",
+    "year": 2025,
+    "doi": "10.20944/preprints202503.0355.v1"
+   },
+   {
+    "title": "LoRaWAN Performance Evaluation and Resilience under Jamming Attacks",
+    "year": 2022,
+    "doi": "10.1109/sspd54131.2022.9896225"
+   },
+   {
+    "title": "On the performance evaluation of LoRaWAN under Jamming",
+    "year": 2019,
+    "doi": "10.23919/wmnc.2019.8881830"
+   },
+   {
+    "title": "Jamming Attack Analysis of Wireless Power Transfer on LoRaWAN Join Procedure",
+    "year": 2018,
+    "doi": "10.1109/glocomw.2018.8644280"
+   },
+   {
+    "title": "Time-Slotted ALOHA-based LoRaWAN Scheduling with Aggregated Acknowledgement Approach",
+    "year": 2019,
+    "doi": "10.23919/fruct48121.2019.8981533"
+   },
+   {
+    "title": "Securing IoT LoRaWAN Networks Against Duty Cycle Compliant Jamming Attacks",
+    "year": 2025,
+    "doi": "10.1109/wcnc61545.2025.10978509"
+   },
+   {
+    "title": "Reactive Jamming Detection for LoRaWAN Based on Meta-Data Differencing",
+    "year": 2022,
+    "doi": "10.1145/3538969.3543805"
+   },
+   {
+    "title": "Reliability-Aware Detection of Reactive Jamming in LoRaWAN",
+    "year": 2026,
+    "doi": "10.1109/icc59461.2026.11587972"
+   },
+   {
+    "title": "Detection and Mitigation of Jamming Attacks in LoRaWan Using Machine Learning",
+    "year": 2025,
+    "doi": "10.1109/wcnc61545.2025.10978351"
+   },
+   {
+    "title": "On the Performance Evaluation of LoRaWAN with Re-transmissions under Jamming",
+    "year": 2020,
+    "doi": "10.1109/iscc50000.2020.9219644"
+   }
+  ]
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN acknowledgement jamming",
+  "database": "DOAJ",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 0,
+  "top": []
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN acknowledgement jamming",
+  "database": "arXiv",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 0,
+  "top": []
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN acknowledgement jamming",
+  "database": "IEEE Xplore open page",
+  "date": "2026-11-16",
+  "status": "OK-page-only",
+  "reason": "page shell (results load by script)",
+  "count": null,
+  "top": []
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN selective jamming",
+  "database": "OpenAlex",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 454,
+  "top": [
+   {
+    "title": "Selective Jamming of LoRaWAN using Commodity Hardware",
+    "year": 2018,
+    "doi": "https://doi.org/10.4108/eai.7-11-2017.2273515",
+    "oa": null
+   },
+   {
+    "title": "BlindSpot: Efficient Single-Node Selective Jamming for LoRaWAN",
+    "year": 2025,
+    "doi": "https://doi.org/10.1145/3734477.3734724",
+    "oa": null
+   },
+   {
+    "title": "DEMO: Illuminating the BlindSpot: Efficient Single-Node Selective Jamming for LoRaWAN",
+    "year": 2025,
+    "doi": "https://doi.org/10.1145/3734477.3736153",
+    "oa": null
+   },
+   {
+    "title": "Proof-of-Work Assisted Jammer Evasion in LoRaWAN",
+    "year": 2025,
+    "doi": "https://doi.org/10.1109/gcwkshps68340.2025.11590882",
+    "oa": "https://doi.org/10.1109/gcwkshps68340.2025.11590882"
+   },
+   {
+    "title": "Detection and Mitigation of Jamming Attacks in LoRaWan Using Machine Learning",
+    "year": 2025,
+    "doi": "https://doi.org/10.1109/wcnc61545.2025.10978351",
+    "oa": null
+   },
+   {
+    "title": "Low-Cost Implementation of Reactive Jammer on LoRaWAN Network",
+    "year": 2021,
+    "doi": "https://doi.org/10.3390/electronics10070864",
+    "oa": "https://www.mdpi.com/2079-9292/10/7/864/pdf"
+   },
+   {
+    "title": "IoT security vulnerabilities and predictive signal jamming attack analysis in LoRaWAN",
+    "year": 2020,
+    "doi": "https://doi.org/10.1049/iet-ifs.2019.0447",
+    "oa": "https://ietresearch.onlinelibrary.wiley.com/doi/pdfdirect/10.1049/iet-ifs.2019.0447"
+   },
+   {
+    "title": "Securing IoT LoRaWAN Networks Against Duty Cycle Compliant Jamming Attacks",
+    "year": 2025,
+    "doi": "https://doi.org/10.1109/wcnc61545.2025.10978509",
+    "oa": null
+   },
+   {
+    "title": "A Survey of LoRaWAN for IoT: From Technology to Application",
+    "year": 2018,
+    "doi": "https://doi.org/10.3390/s18113995",
+    "oa": "https://www.mdpi.com/1424-8220/18/11/3995/pdf?version=1542362844"
+   },
+   {
+    "title": "Impact of Reactive Jamming Attacks on LoRaWAN: a Theoretical and Experimental Study",
+    "year": 2025,
+    "doi": "https://doi.org/10.1109/pimrc62392.2025.11275285",
+    "oa": "https://arxiv.org/pdf/2501.18339"
+   }
+  ]
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN selective jamming",
+  "database": "Crossref",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 181204,
+  "top": [
+   {
+    "title": "Selective Jamming of LoRaWAN using Commodity Hardware",
+    "year": 2018,
+    "doi": "10.4108/eai.7-11-2017.2273515"
+   },
+   {
+    "title": "Practical Realization of Reactive Jamming Attack on LoRaWAN Network",
+    "year": 2025,
+    "doi": "10.20944/preprints202503.0355.v1"
+   },
+   {
+    "title": "LoRaWAN Performance Evaluation and Resilience under Jamming Attacks",
+    "year": 2022,
+    "doi": "10.1109/sspd54131.2022.9896225"
+   },
+   {
+    "title": "On the performance evaluation of LoRaWAN under Jamming",
+    "year": 2019,
+    "doi": "10.23919/wmnc.2019.8881830"
+   },
+   {
+    "title": "Jamming Attack Analysis of Wireless Power Transfer on LoRaWAN Join Procedure",
+    "year": 2018,
+    "doi": "10.1109/glocomw.2018.8644280"
+   },
+   {
+    "title": "Securing IoT LoRaWAN Networks Against Duty Cycle Compliant Jamming Attacks",
+    "year": 2025,
+    "doi": "10.1109/wcnc61545.2025.10978509"
+   },
+   {
+    "title": "Reactive Jamming Detection for LoRaWAN Based on Meta-Data Differencing",
+    "year": 2022,
+    "doi": "10.1145/3538969.3543805"
+   },
+   {
+    "title": "Reliability-Aware Detection of Reactive Jamming in LoRaWAN",
+    "year": 2026,
+    "doi": "10.1109/icc59461.2026.11587972"
+   },
+   {
+    "title": "Detection and Mitigation of Jamming Attacks in LoRaWan Using Machine Learning",
+    "year": 2025,
+    "doi": "10.1109/wcnc61545.2025.10978351"
+   },
+   {
+    "title": "On the Performance Evaluation of LoRaWAN with Re-transmissions under Jamming",
+    "year": 2020,
+    "doi": "10.1109/iscc50000.2020.9219644"
+   }
+  ]
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN selective jamming",
+  "database": "DOAJ",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 0,
+  "top": []
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN selective jamming",
+  "database": "arXiv",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 0,
+  "top": []
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN selective jamming",
+  "database": "IEEE Xplore open page",
+  "date": "2026-11-16",
+  "status": "OK-page-only",
+  "reason": "page shell (results load by script)",
+  "count": null,
+  "top": []
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN energy depletion",
+  "database": "OpenAlex",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 1433,
+  "top": [
+   {
+    "title": "Classification and Characterization of LoRaWAN Energy Depletion Attacks: A Review",
+    "year": 2024,
+    "doi": "https://doi.org/10.1109/jsen.2024.3504259",
+    "oa": "https://doi.org/10.1109/jsen.2024.3504259"
+   },
+   {
+    "title": "Lightweight Architecture for Intrusion Detection of Energy Depletion Attacks in LoRaWAN End devices",
+    "year": 2025,
+    "doi": "https://doi.org/10.1007/s42979-025-04211-x",
+    "oa": null
+   },
+   {
+    "title": "An Intrusion Detection Architecture Based on the Energy Consumption of Sensors Against Energy Depletion Attacks in LoRaWAN",
+    "year": 2024,
+    "doi": "https://doi.org/10.5220/0012703400003705",
+    "oa": "https://doi.org/10.5220/0012703400003705"
+   },
+   {
+    "title": "Energy Attack in LoRaWAN: Experimental Validation",
+    "year": 2019,
+    "doi": "https://doi.org/10.1145/3339252.3340525",
+    "oa": null
+   },
+   {
+    "title": "Semi-Synthetic LoRaWAN Dataset for Jamming and Battery-Depletion Attack Detection",
+    "year": 2025,
+    "doi": "https://doi.org/10.5281/zenodo.22044141",
+    "oa": "https://github.com/Azita369/Brno-Dataset"
+   },
+   {
+    "title": "LoRaWAN communication protocol: The new era of IoT",
+    "year": 2018,
+    "doi": "https://doi.org/10.1109/daas.2018.8396074",
+    "oa": null
+   },
+   {
+    "title": "Batteryless LoRaWAN Communications Using Energy Harvesting: Modeling and Characterization",
+    "year": 2020,
+    "doi": "https://doi.org/10.1109/jiot.2020.3019140",
+    "oa": "https://arxiv.org/pdf/2402.07528"
+   },
+   {
+    "title": "LoRaWAN-Based Energy-Efficient Surveillance by Drones for Intelligent Transportation Systems",
+    "year": 2018,
+    "doi": "https://doi.org/10.3390/en11030573",
+    "oa": "https://www.mdpi.com/1996-1073/11/3/573/pdf?version=1520355154"
+   },
+   {
+    "title": "Energy-Aware Sensing on Battery-Less LoRaWAN Devices with Energy Harvesting",
+    "year": 2020,
+    "doi": "https://doi.org/10.3390/electronics9060904",
+    "oa": "https://www.mdpi.com/2079-9292/9/6/904/pdf?version=1590742761"
+   },
+   {
+    "title": "Multi-Attribute Physical-Layer Authentication Against Jamming and Battery-Depletion Attacks in LoRaWAN",
+    "year": 2026,
+    "doi": "https://doi.org/10.3390/fi18010038",
+    "oa": "https://www.mdpi.com/1999-5903/18/1/38/pdf"
+   }
+  ]
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN energy depletion",
+  "database": "Crossref",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 1667688,
+  "top": [
+   {
+    "title": "An Intrusion Detection Architecture Based on the Energy Consumption of Sensors Against Energy Depletion Attacks in LoRaWAN",
+    "year": 2024,
+    "doi": "10.5220/0012703400003705"
+   },
+   {
+    "title": "Lightweight Architecture for Intrusion Detection of Energy Depletion Attacks in LoRaWAN End devices",
+    "year": 2025,
+    "doi": "10.1007/s42979-025-04211-x"
+   },
+   {
+    "title": "Multi-Attribute Physical-Layer Authentication Against Jamming and Battery-Depletion Attacks in LoRaWAN",
+    "year": 2026,
+    "doi": "10.3390/fi18010038"
+   },
+   {
+    "title": "Optimization of Energy Consumption in LoRaWAN Sensor Nodes",
+    "year": 2026,
+    "doi": "10.31649/1997-9266-2026-185-2-15-20"
+   },
+   {
+    "title": "Application of LoRaWAN-based System for Electric Energy Monitoring and Data Acquisition in a Smart Building",
+    "year": 2022,
+    "doi": "10.14416/j.kmutnb.2022.05.005"
+   },
+   {
+    "title": "The relation of LoRaWAN efficiency with energy consumption of sensor node",
+    "year": 2019,
+    "doi": "10.1109/icpei47862.2019.8945016"
+   },
+   {
+    "title": "Energy Usage Monitoring of Household Energy Meter Using LoRaWAN Technology",
+    "year": 2019,
+    "doi": "10.2139/ssrn.3368191"
+   },
+   {
+    "title": "Energy-Efficient Self-Organized Coverage Control in LoRaWAN Inspired by Satellite Behavior of Japanese Tree Frogs",
+    "year": 2026,
+    "doi": "10.21203/rs.3.rs-9741843/v1"
+   },
+   {
+    "title": "Energy Allocation for LoRaWAN Nodes with Multi-Source Energy Harvesting",
+    "year": 2021,
+    "doi": "10.3390/s21082874"
+   },
+   {
+    "title": "Verification of depletion capability of OpenMC using VERA depletion benchmark",
+    "year": 2022,
+    "doi": "10.1016/j.anucene.2022.108973"
+   }
+  ]
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN energy depletion",
+  "database": "DOAJ",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 3,
+  "top": [
+   {
+    "title": "Multi-Attribute Physical-Layer Authentication Against Jamming and Battery-Depletion Attacks in LoRaWAN",
+    "year": "2026",
+    "doi": "10.3390/fi18010038"
+   },
+   {
+    "title": "LPWAN Key Exchange: A Centralised Lightweight Approach",
+    "year": "2022",
+    "doi": "10.3390/s22135065"
+   },
+   {
+    "title": "Development of a low-cost IoT system based on LoRaWAN for monitoring variables related to electrical energy consumption in low voltage networks",
+    "year": "2022",
+    "doi": "10.1016/j.ohx.2022.e00330"
+   }
+  ]
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN energy depletion",
+  "database": "arXiv",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 0,
+  "top": []
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN energy depletion",
+  "database": "IEEE Xplore open page",
+  "date": "2026-11-16",
+  "status": "OK-page-only",
+  "reason": "page shell (results load by script)",
+  "count": null,
+  "top": []
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN battery exhaustion",
+  "database": "OpenAlex",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 229,
+  "top": [
+   {
+    "title": "Security Vulnerabilities in LoRaWAN",
+    "year": 2018,
+    "doi": "https://doi.org/10.1109/iotdi.2018.00022",
+    "oa": "http://resolver.tudelft.nl/uuid:b1bcff30-612c-4364-8d87-99edf23f7904"
+   },
+   {
+    "title": "Multi-Attribute Physical-Layer Authentication Against Jamming and Battery-Depletion Attacks in LoRaWAN",
+    "year": 2026,
+    "doi": "https://doi.org/10.3390/fi18010038",
+    "oa": "https://www.mdpi.com/1999-5903/18/1/38/pdf"
+   },
+   {
+    "title": "Secure Session Key Generation Method for LoRaWAN Servers",
+    "year": 2020,
+    "doi": "https://doi.org/10.1109/access.2020.2978100",
+    "oa": "https://ieeexplore.ieee.org/ielx7/6287639/8948470/09022921.pdf"
+   },
+   {
+    "title": "LoRaWAN Energy Optimization with Security Consideration",
+    "year": 2021,
+    "doi": "https://doi.org/10.34028/iajit/18/3a/11",
+    "oa": "https://doi.org/10.34028/iajit/18/3a/11"
+   },
+   {
+    "title": "LoRaWAN Communication Protocols: A Comprehensive Survey under an Energy Efficiency Perspective",
+    "year": 2022,
+    "doi": "https://doi.org/10.3390/telecom3020018",
+    "oa": "https://www.mdpi.com/2673-4001/3/2/18/pdf?version=1653640725"
+   },
+   {
+    "title": "ZBMG-LoRa: A Novel Zone-Based Multi-Gateway Approach Towards Scalable LoRaWANs for Internet of Things",
+    "year": 2025,
+    "doi": "https://doi.org/10.3390/s25175457",
+    "oa": "https://www.mdpi.com/1424-8220/25/17/5457/pdf?version=1756893317"
+   },
+   {
+    "title": "LoRaWAN & The Helium Blockchain: A Study on Military IoT Deployment",
+    "year": 2023,
+    "doi": "https://doi.org/10.34190/iccws.18.1.944",
+    "oa": "https://papers.academic-conferences.org/index.php/iccws/article/download/944/970"
+   },
+   {
+    "title": "A Security-Conscious Primer on LoRa and LoRaWAN Technologies",
+    "year": 2025,
+    "doi": "https://doi.org/10.34190/eccws.24.1.3575",
+    "oa": "https://papers.academic-conferences.org/index.php/eccws/article/download/3575/3328"
+   },
+   {
+    "title": "Enhancing LoRaWAN Security: An Advanced AES-Based Cryptographic Approach",
+    "year": 2023,
+    "doi": "https://doi.org/10.1109/access.2023.3348416",
+    "oa": "https://ieeexplore.ieee.org/ielx7/6287639/6514899/10376065.pdf"
+   },
+   {
+    "title": "A Lightweight Blockchain Based Two Factor Authentication Mechanism for LoRaWAN Join Procedure",
+    "year": 2019,
+    "doi": "https://doi.org/10.1109/iccw.2019.8756673",
+    "oa": "https://repository.uwl.ac.uk/id/eprint/7505/1/Securing%20Lorawan%20join%20procedure.pdf"
+   }
+  ]
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN battery exhaustion",
+  "database": "Crossref",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 120710,
+  "top": [
+   {
+    "title": "Dynamic Transmission Adaptation Algorithms for Battery-Free Lorawan Devices",
+    "year": 2025,
+    "doi": "10.2139/ssrn.5182655"
+   },
+   {
+    "title": "Power Profile Simulation and Optimization of Battery-Less LoRaWAN Sensor Node",
+    "year": 2021,
+    "doi": "10.1109/electronica52725.2021.9513680"
+   },
+   {
+    "title": "A Comparative Study on Energy Harvesting Battery-Free LoRaWAN Sensor Networks",
+    "year": 2023,
+    "doi": "10.5152/electrica.2022.21101"
+   },
+   {
+    "title": "On the Feasibility of Battery-Less LoRaWAN Communications Using Energy Harvesting",
+    "year": 2019,
+    "doi": "10.1109/globecom38437.2019.9013638"
+   },
+   {
+    "title": "Battery Free Wireless LoRaWAN End Sensor Node for IoT Applications",
+    "year": 2020,
+    "doi": "10.1109/telecom50385.2020.9299539"
+   },
+   {
+    "title": "Impact of LoRaWAN Transceiver on End Device Battery Lifetime",
+    "year": 2023,
+    "doi": "10.1109/iwssip58668.2023.10180293"
+   },
+   {
+    "title": "A battery lifetime comparison between LoraWAN and Wireless MBus smart meters",
+    "year": 2019,
+    "doi": "10.1109/blackseacom.2019.8812814"
+   },
+   {
+    "title": "Wirelessly Powered and Battery-Free LoRaWAN Wireless Sensing Nodes Designed for Communicating Reinforced Concrete",
+    "year": 2019,
+    "doi": "10.12783/shm2019/32230"
+   },
+   {
+    "title": "Adapting LoRaWAN Relay Specification for Battery-Sustainable Subterranean LoRa Mesh Networks",
+    "year": 2026,
+    "doi": "10.1109/icccn69946.2026.11662683"
+   },
+   {
+    "title": "Optimizing Battery Life for LoRaWAN Range Extenders: Techniques and Strategies",
+    "year": 2024,
+    "doi": "10.1145/3677525.3678673"
+   }
+  ]
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN battery exhaustion",
+  "database": "DOAJ",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 1,
+  "top": [
+   {
+    "title": "ZBMG-LoRa: A Novel Zone-Based Multi-Gateway Approach Towards Scalable LoRaWANs for Internet of Things",
+    "year": "2025",
+    "doi": "10.3390/s25175457"
+   }
+  ]
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN battery exhaustion",
+  "database": "arXiv",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 0,
+  "top": []
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN battery exhaustion",
+  "database": "IEEE Xplore open page",
+  "date": "2026-11-16",
+  "status": "OK-page-only",
+  "reason": "page shell (results load by script)",
+  "count": null,
+  "top": []
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN duty cycle denial of service",
+  "database": "OpenAlex",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 268,
+  "top": [
+   {
+    "title": "Novel Denial-of-Service Attacks Against LoRaWAN on MAC Layer",
+    "year": 2023,
+    "doi": "https://doi.org/10.1109/lcomm.2023.3322119",
+    "oa": null
+   },
+   {
+    "title": "A Survey of LoRaWAN for IoT: From Technology to Application",
+    "year": 2018,
+    "doi": "https://doi.org/10.3390/s18113995",
+    "oa": "https://www.mdpi.com/1424-8220/18/11/3995/pdf?version=1542362844"
+   },
+   {
+    "title": "A Survey on LoRaWAN Architecture, Protocol and Technologies",
+    "year": 2019,
+    "doi": "https://doi.org/10.3390/fi11100216",
+    "oa": "https://www.mdpi.com/1999-5903/11/10/216/pdf?version=1571365818"
+   },
+   {
+    "title": "LoRaWAN Mesh Networks: A Review and Classification of Multihop Communication",
+    "year": 2020,
+    "doi": "https://doi.org/10.3390/s20154273",
+    "oa": "https://doi.org/10.3390/s20154273"
+   },
+   {
+    "title": "Review of LoRaWAN Applications",
+    "year": 2020,
+    "doi": "https://doi.org/10.48550/arxiv.2004.05871",
+    "oa": "https://arxiv.org/pdf/2004.05871"
+   },
+   {
+    "title": "Authenticated Preambles for Denial of Service Mitigation in LPWANs",
+    "year": 2019,
+    "doi": "https://doi.org/10.48550/arxiv.1904.08179",
+    "oa": "https://arxiv.org/pdf/1904.08179"
+   },
+   {
+    "title": "Enhancing Key Management in LoRaWAN with Permissioned Blockchain",
+    "year": 2020,
+    "doi": "https://doi.org/10.3390/s20113068",
+    "oa": "https://www.mdpi.com/1424-8220/20/11/3068/pdf?version=1590734640"
+   },
+   {
+    "title": "Insights into the Issue of Deploying a Private LoRaWAN",
+    "year": 2022,
+    "doi": "https://doi.org/10.3390/s22052042",
+    "oa": "https://www.mdpi.com/1424-8220/22/5/2042/pdf?version=1646744583"
+   },
+   {
+    "title": "LoRaWAN Physical Layer-Based Attacks and Countermeasures, A Review",
+    "year": 2022,
+    "doi": "https://doi.org/10.3390/s22093127",
+    "oa": "https://www.mdpi.com/1424-8220/22/9/3127/pdf?version=1650443216"
+   },
+   {
+    "title": "Privacy-Preserving Pseudonyms for LoRaWAN",
+    "year": 2024,
+    "doi": "https://doi.org/10.1145/3643833.3656120",
+    "oa": "https://inria.hal.science/hal-04525080v3/file/WiSec2024_round2_LoRaWAN_pseudonyms-30.pdf"
+   }
+  ]
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN duty cycle denial of service",
+  "database": "Crossref",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 596091,
+  "top": [
+   {
+    "title": "Security analysis in Enhanced LoRaWAN duty cycle",
+    "year": 2018,
+    "doi": "10.1109/comnet.2018.8622296"
+   },
+   {
+    "title": "A Duty-Cycle-Efficient Synchronization Protocol for Slotted-Aloha in LoRaWAN",
+    "year": 2024,
+    "doi": "10.1109/globecom52923.2024.10901529"
+   },
+   {
+    "title": "Beyond Idealized Fragmentation: Duty-Cycle-Limited Completion Time of Post-Quantum Handshakes over LoRaWAN",
+    "year": 2026,
+    "doi": "10.1109/lnet.2026.3745920"
+   },
+   {
+    "title": "A Duty Cycle-Based Gateway Selection Algorithm for LoRaWAN Downlink Communication",
+    "year": 2023,
+    "doi": "10.32604/csse.2023.032965"
+   },
+   {
+    "title": "Denial-of-Service Attacks on LoRaWAN",
+    "year": 2018,
+    "doi": "10.1145/3230833.3232804"
+   },
+   {
+    "title": "Securing IoT LoRaWAN Networks Against Duty Cycle Compliant Jamming Attacks",
+    "year": 2025,
+    "doi": "10.1109/wcnc61545.2025.10978509"
+   },
+   {
+    "title": "A LoRaWAN-MAC Protocol Based on WSN Residual Energy to Adjust Duty Cycle",
+    "year": 2020,
+    "doi": "10.1109/icdcs47774.2020.00187"
+   },
+   {
+    "title": "Bypassing Duty-Cycle Limitations for RL-Enhanced LoRaWAN Communications",
+    "year": 2025,
+    "doi": "10.1109/icc52391.2025.11161020"
+   },
+   {
+    "title": "Security Analysis and Evaluation of Denial of Service Attack in LoRaWan-Driven Automation",
+    "year": 2024,
+    "doi": "10.1109/indin58382.2024.10774342"
+   },
+   {
+    "title": "On the Uplink Traffic Distribution in Time for Duty-cycle Constrained LoRaWAN Networks",
+    "year": 2021,
+    "doi": "10.1109/icumt54235.2021.9631708"
+   }
+  ]
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN duty cycle denial of service",
+  "database": "DOAJ",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 0,
+  "top": []
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN duty cycle denial of service",
+  "database": "arXiv",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 0,
+  "top": []
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN duty cycle denial of service",
+  "database": "IEEE Xplore open page",
+  "date": "2026-11-16",
+  "status": "OK-page-only",
+  "reason": "page shell (results load by script)",
+  "count": null,
+  "top": []
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN retransmission attack",
+  "database": "OpenAlex",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 466,
+  "top": [
+   {
+    "title": "Impact of Energy Consumption Attacks on LoRaWAN-Enabled Devices in Industrial Context",
+    "year": 2020,
+    "doi": "https://doi.org/10.1145/3372297.3420022",
+    "oa": "https://doi.org/10.1145/3372297.3420022"
+   },
+   {
+    "title": "LoRaWAN Security Analysis : An Experimental Evaluation of Attacks",
+    "year": 2021,
+    "doi": "https://doi.org/10.26083/tuprints-00017550",
+    "oa": "https://tuprints.ulb.tu-darmstadt.de/17550"
+   },
+   {
+    "title": "A Survey of LoRaWAN for IoT: From Technology to Application",
+    "year": 2018,
+    "doi": "https://doi.org/10.3390/s18113995",
+    "oa": "https://www.mdpi.com/1424-8220/18/11/3995/pdf?version=1542362844"
+   },
+   {
+    "title": "A Survey on LoRaWAN Architecture, Protocol and Technologies",
+    "year": 2019,
+    "doi": "https://doi.org/10.3390/fi11100216",
+    "oa": "https://www.mdpi.com/1999-5903/11/10/216/pdf?version=1571365818"
+   },
+   {
+    "title": "A Survey on Scalable LoRaWAN for Massive IoT: Recent Advances, Potentials, and Challenges",
+    "year": 2023,
+    "doi": "https://doi.org/10.1109/comst.2023.3274934",
+    "oa": "https://arxiv.org/pdf/2202.11082"
+   },
+   {
+    "title": "TS-LoRa: Time-slotted LoRaWAN for the Industrial Internet of Things",
+    "year": 2020,
+    "doi": "https://doi.org/10.1016/j.comcom.2020.01.056",
+    "oa": "https://www.sciencedirect.com/science/article/pii/S0140366419314677/pdf"
+   },
+   {
+    "title": "LoRaWAN for Smart City IoT Deployments: A Long Term Evaluation",
+    "year": 2020,
+    "doi": "https://doi.org/10.3390/s20030648",
+    "oa": "http://dx.doi.org/10.3390/s20030648"
+   },
+   {
+    "title": "LoRaWAN Link Layer",
+    "year": 2021,
+    "doi": "https://doi.org/10.13052/jicts2245-800x.911",
+    "oa": "https://journals.riverpublishers.com/index.php/JICTS/article/download/7013/5591"
+   },
+   {
+    "title": "Proceedings of the 2020 ACM SIGSAC Conference on Computer and Communications Security",
+    "year": 2020,
+    "doi": "https://doi.org/10.1145/3372297",
+    "oa": null
+   },
+   {
+    "title": "Secure Session Key Generation Method for LoRaWAN Servers",
+    "year": 2020,
+    "doi": "https://doi.org/10.1109/access.2020.2978100",
+    "oa": "https://ieeexplore.ieee.org/ielx7/6287639/8948470/09022921.pdf"
+   }
+  ]
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN retransmission attack",
+  "database": "Crossref",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 52934,
+  "top": [
+   {
+    "title": "A LoRaWAN Adaptive Retransmission Mechanism",
+    "year": 2023,
+    "doi": "10.1109/cscn60443.2023.10453118"
+   },
+   {
+    "title": "ALR-LoRaWAN: An Application-Level Retransmission Management Algorithm for LoRaWAN Networks",
+    "year": 2023,
+    "doi": "10.1145/3615366.3615418"
+   },
+   {
+    "title": "Implicit Retransmission Control in Multi-Hop LoRaWAN",
+    "year": 2025,
+    "doi": "10.1109/icufn65838.2025.11169910"
+   },
+   {
+    "title": "Practical Realization of Reactive Jamming Attack on LoRaWAN Network",
+    "year": 2025,
+    "doi": "10.20944/preprints202503.0355.v1"
+   },
+   {
+    "title": "Jamming Attack Analysis of Wireless Power Transfer on LoRaWAN Join Procedure",
+    "year": 2018,
+    "doi": "10.1109/glocomw.2018.8644280"
+   },
+   {
+    "title": "Man in the Middle Attack Mitigation in LoRaWAN",
+    "year": 2020,
+    "doi": "10.1109/icict48043.2020.9112391"
+   },
+   {
+    "title": "Implement Detecting Network Attack through Machine Learning in LoRaWAN Environment",
+    "year": 2019,
+    "doi": "10.7840/kics.2019.44.8.1547"
+   },
+   {
+    "title": "The Effect of the Initial Retransmission Timeout upon the Dictionary Attack Delay",
+    "year": 2018,
+    "doi": "10.1109/iccceee.2018.8515765"
+   },
+   {
+    "title": "Abusing TCP Retransmission for DoS Attack Inside Virtual Network",
+    "year": 2018,
+    "doi": "10.1007/978-3-319-93563-8_17"
+   },
+   {
+    "title": "Mitigating Retransmission Attack in MQTTv5 Shared Subscription via Trust-Based Message Scheduling",
+    "year": 2026,
+    "doi": "10.1109/ccnc65079.2026.11366594"
+   }
+  ]
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN retransmission attack",
+  "database": "DOAJ",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 0,
+  "top": []
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN retransmission attack",
+  "database": "arXiv",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 0,
+  "top": []
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN retransmission attack",
+  "database": "IEEE Xplore open page",
+  "date": "2026-11-16",
+  "status": "OK-page-only",
+  "reason": "page shell (results load by script)",
+  "count": null,
+  "top": []
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN airtime exhaustion",
+  "database": "OpenAlex",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 15,
+  "top": [
+   {
+    "title": "On the cybersecurity of LoRaWAN-based system: a Smart-Lighting case study",
+    "year": 2025,
+    "doi": "https://doi.org/10.1145/3770501.3770524",
+    "oa": "https://doi.org/10.1145/3770501.3770524"
+   },
+   {
+    "title": "Systematic Literature Review of Security and Privacy Management in LoRaWAN Networks",
+    "year": 2026,
+    "doi": "https://doi.org/10.21203/rs.3.rs-10831325/v1",
+    "oa": "https://www.researchsquare.com/article/rs-10831325/latest.pdf"
+   },
+   {
+    "title": "Airtime-budgeted quantum-resistant rekeying for duty-cycle-limited low-power wide-area uplinks",
+    "year": 2026,
+    "doi": "https://doi.org/10.33545/2707661x.2026.v7.i3a.217",
+    "oa": "https://www.computersciencejournals.com/ijcit/archives/2026/vol7issue3/PartA/7-3-10-802.pdf"
+   },
+   {
+    "title": "HEAL: health-enhanced adaptive LoRaWAN for AI-based real-time soldier monitoring and status prediction",
+    "year": 2026,
+    "doi": "https://doi.org/10.1038/s41598-026-44274-1",
+    "oa": "https://www.nature.com/articles/s41598-026-44274-1_reference.pdf"
+   },
+   {
+    "title": "ZBMG-LoRa: A Novel Zone-Based Multi-Gateway Approach Towards Scalable LoRaWANs for Internet of Things",
+    "year": 2025,
+    "doi": "https://doi.org/10.3390/s25175457",
+    "oa": "https://www.mdpi.com/1424-8220/25/17/5457/pdf?version=1756893317"
+   },
+   {
+    "title": "A Communication Infrastructure for the Health and Social Care Internet of Things: Proof-of-Concept Study",
+    "year": 2020,
+    "doi": "https://doi.org/10.2196/14583",
+    "oa": "https://medinform.jmir.org/2020/2/e14583/PDF"
+   },
+   {
+    "title": "Athlete Tracking at a Marathon Event with LoRa: A Performance Evaluation with Mobile Gateways",
+    "year": 2024,
+    "doi": "https://doi.org/10.3390/ecsa-11-20523",
+    "oa": "https://www.mdpi.com/2673-4591/82/1/97/pdf"
+   },
+   {
+    "title": "Securing AI-Driven Systems for Environmental Sustainability in IoT Applications: A Lightweight Message-Authentication Scheme Against Telemetry Poisoning",
+    "year": 2026,
+    "doi": "https://doi.org/10.3390/s26196276",
+    "oa": "https://doi.org/10.3390/s26196276"
+   },
+   {
+    "title": "Evaluating the Performance of LoRa Networks: A Study on Disaster Monitoring Scenarios",
+    "year": 2025,
+    "doi": "https://doi.org/10.3390/iot6010014",
+    "oa": "https://www.mdpi.com/2624-831X/6/1/14/pdf?version=1739371496"
+   },
+   {
+    "title": "Multi-Criteria Optimization Mechanisms for LoRa Network Topologies",
+    "year": 2026,
+    "doi": "https://doi.org/10.3390/electronics15091872",
+    "oa": "https://www.mdpi.com/2079-9292/15/9/1872/pdf?version=1777382238"
+   }
+  ]
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN airtime exhaustion",
+  "database": "Crossref",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 11196,
+  "top": [
+   {
+    "title": "LoRaWAN Node-to-Node Implementation for Airtime Optimization and Fallback Communication",
+    "year": 2025,
+    "doi": "10.1109/icufn65838.2025.11169941"
+   },
+   {
+    "title": "Spreading-Factor Usage and Airtime in Urban LoRaWAN Traffic: Passive Gateway Monitoring with Machine Learning",
+    "year": 2026,
+    "doi": "10.3390/s26216855"
+   },
+   {
+    "title": "Feasibility Analysis of Ultra-Low-Power Image Transmission Over LoRaWAN for Analog Water Meter Reading: An Energy and Airtime Modeling Study",
+    "year": 2026,
+    "doi": "10.1109/iccsc71566.2026.11650466"
+   },
+   {
+    "title": "airtime, n.",
+    "year": 2023,
+    "doi": "10.1093/oed/9698925860"
+   },
+   {
+    "title": "Airtime Analytics: Using Machine Learning To Forecast Flight Delays",
+    "year": 2024,
+    "doi": "10.36227/techrxiv.171709815.52252660/v1"
+   },
+   {
+    "title": "Maximizing the Stable Throughput of Heterogeneous Nodes Under Airtime Fairness in a Csma Environment",
+    "year": 2023,
+    "doi": "10.2139/ssrn.4356712"
+   },
+   {
+    "title": "2 Airtime Money",
+    "year": 2021,
+    "doi": "10.1515/9781503614420-004"
+   },
+   {
+    "title": "Getting the Picture: Airtime and Lineup Bias on Canadian Networks during the 2006 Federal Election",
+    "year": 2023,
+    "doi": "10.32920/22732415.v1"
+   },
+   {
+    "title": "LTM-LoRaWAN: A Multi-Hop Communication System for LoRaWAN",
+    "year": 2023,
+    "doi": "10.3390/electronics12204225"
+   },
+   {
+    "title": "Killing for Airtime",
+    "year": 2018,
+    "doi": "10.1215/07402775-7085640"
+   }
+  ]
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN airtime exhaustion",
+  "database": "DOAJ",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 0,
+  "top": []
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN airtime exhaustion",
+  "database": "arXiv",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 0,
+  "top": []
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN airtime exhaustion",
+  "database": "IEEE Xplore open page",
+  "date": "2026-11-16",
+  "status": "OK-page-only",
+  "reason": "page shell (results load by script)",
+  "count": null,
+  "top": []
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN regulatory duty cycle attack",
+  "database": "OpenAlex",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 271,
+  "top": [
+   {
+    "title": "LoRaWAN Security Analysis : An Experimental Evaluation of Attacks",
+    "year": 2021,
+    "doi": "https://doi.org/10.26083/tuprints-00017550",
+    "oa": "https://tuprints.ulb.tu-darmstadt.de/17550"
+   },
+   {
+    "title": "LoRaWAN for Smart City IoT Deployments: A Long Term Evaluation",
+    "year": 2020,
+    "doi": "https://doi.org/10.3390/s20030648",
+    "oa": "http://dx.doi.org/10.3390/s20030648"
+   },
+   {
+    "title": "LoRaWAN: State of the Art, Challenges, Protocols and Research Issues",
+    "year": 2020,
+    "doi": "https://doi.org/10.1109/inmic50486.2020.9318170",
+    "oa": "https://ieeexplore.ieee.org/ielx7/9318042/9318043/09318170.pdf"
+   },
+   {
+    "title": "Survey of IoT for Developing Countries: Performance Analysis of LoRaWAN and Cellular NB-IoT Networks",
+    "year": 2021,
+    "doi": "https://doi.org/10.3390/electronics10182224",
+    "oa": "https://www.mdpi.com/2079-9292/10/18/2224/pdf?version=1631284602"
+   },
+   {
+    "title": "Physical Layer Security based Key Management for LoRaWAN",
+    "year": 2021,
+    "doi": "https://doi.org/10.48550/arxiv.2101.02975",
+    "oa": "https://arxiv.org/pdf/2101.02975"
+   },
+   {
+    "title": "EvaluationOf LoRaWAN In A Highly Dense Environment With Design Of Common Automated Metering Platform (CAMP) Based On LoRaWAN Protocol",
+    "year": 2022,
+    "doi": "https://doi.org/10.3837/tiis.2022.05.007",
+    "oa": "http://itiis.org/digital-library/manuscript/file/25669/TIIS Vol 16, No 5-7.pdf"
+   },
+   {
+    "title": "Prospects of LoRaWAN Technology for IoT Solution in Bangladesh",
+    "year": 2026,
+    "doi": "https://doi.org/10.1155/js/8835153",
+    "oa": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1155/js/8835153"
+   },
+   {
+    "title": "Systematic Literature Review of Security and Privacy Management in LoRaWAN Networks",
+    "year": 2026,
+    "doi": "https://doi.org/10.21203/rs.3.rs-10831325/v1",
+    "oa": "https://www.researchsquare.com/article/rs-10831325/latest.pdf"
+   },
+   {
+    "title": "LoRaWAN Protocols in IoT: Challenges, Innovations, and Future Directions",
+    "year": 2025,
+    "doi": "https://doi.org/10.18178/jacn.2025.13.1.294",
+    "oa": "https://www.jacn.net/vol13/JACN-V13N1-294.pdf"
+   },
+   {
+    "title": "LoRaWAN network security and efficiency: practical tips and recommendations",
+    "year": 2025,
+    "doi": "https://doi.org/10.20535/tacs.2664-29132025.1.323317",
+    "oa": "https://doi.org/10.20535/tacs.2664-29132025.1.323317"
+   }
+  ]
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN regulatory duty cycle attack",
+  "database": "Crossref",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 362878,
+  "top": [
+   {
+    "title": "Security analysis in Enhanced LoRaWAN duty cycle",
+    "year": 2018,
+    "doi": "10.1109/comnet.2018.8622296"
+   },
+   {
+    "title": "A Duty-Cycle-Efficient Synchronization Protocol for Slotted-Aloha in LoRaWAN",
+    "year": 2024,
+    "doi": "10.1109/globecom52923.2024.10901529"
+   },
+   {
+    "title": "Beyond Idealized Fragmentation: Duty-Cycle-Limited Completion Time of Post-Quantum Handshakes over LoRaWAN",
+    "year": 2026,
+    "doi": "10.1109/lnet.2026.3745920"
+   },
+   {
+    "title": "A Duty Cycle-Based Gateway Selection Algorithm for LoRaWAN Downlink Communication",
+    "year": 2023,
+    "doi": "10.32604/csse.2023.032965"
+   },
+   {
+    "title": "Securing IoT LoRaWAN Networks Against Duty Cycle Compliant Jamming Attacks",
+    "year": 2025,
+    "doi": "10.1109/wcnc61545.2025.10978509"
+   },
+   {
+    "title": "A LoRaWAN-MAC Protocol Based on WSN Residual Energy to Adjust Duty Cycle",
+    "year": 2020,
+    "doi": "10.1109/icdcs47774.2020.00187"
+   },
+   {
+    "title": "Bypassing Duty-Cycle Limitations for RL-Enhanced LoRaWAN Communications",
+    "year": 2025,
+    "doi": "10.1109/icc52391.2025.11161020"
+   },
+   {
+    "title": "On the Uplink Traffic Distribution in Time for Duty-cycle Constrained LoRaWAN Networks",
+    "year": 2021,
+    "doi": "10.1109/icumt54235.2021.9631708"
+   },
+   {
+    "title": "The Effects of Duty Cycle Limit to Small Single Gateway LoRaWAN Protocol Network",
+    "year": 2019,
+    "doi": "10.1109/ecti-con47248.2019.8955370"
+   },
+   {
+    "title": "Enabling LoRaWAN Communication with Out-of-coverage End Nodes in DTN Scenarios Through an Optimised Duty-cycle",
+    "year": 2021,
+    "doi": "10.1109/cmi53512.2021.9663774"
+   }
+  ]
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN regulatory duty cycle attack",
+  "database": "DOAJ",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 0,
+  "top": []
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN regulatory duty cycle attack",
+  "database": "arXiv",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 0,
+  "top": []
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN regulatory duty cycle attack",
+  "database": "IEEE Xplore open page",
+  "date": "2026-11-16",
+  "status": "OK-page-only",
+  "reason": "page shell (results load by script)",
+  "count": null,
+  "top": []
+ },
+ {
+  "topic": "A",
+  "query": "LoRa ACK spoofing",
+  "database": "OpenAlex",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 147,
+  "top": [
+   {
+    "title": "Multi-Hop and Mesh for LoRa Networks: Recent Advancements, Issues, and Recommended Applications",
+    "year": 2023,
+    "doi": "https://doi.org/10.1145/3638241",
+    "oa": "https://dl.acm.org/doi/pdf/10.1145/3638241"
+   },
+   {
+    "title": "LoPT : LoRa Penetration Testing Tool",
+    "year": 2019,
+    "doi": "https://doi.org/10.35940/ijitee.i1081.0789s219",
+    "oa": "https://doi.org/10.35940/ijitee.i1081.0789s219"
+   },
+   {
+    "title": "A Security-Conscious Primer on LoRa and LoRaWAN Technologies",
+    "year": 2025,
+    "doi": "https://doi.org/10.34190/eccws.24.1.3575",
+    "oa": "https://papers.academic-conferences.org/index.php/eccws/article/download/3575/3328"
+   },
+   {
+    "title": "Secure LoRa Firmware Update with Adaptive Data Rate Techniques",
+    "year": 2021,
+    "doi": "https://doi.org/10.3390/s21072384",
+    "oa": "https://www.mdpi.com/1424-8220/21/7/2384/pdf?version=1617938090"
+   },
+   {
+    "title": "Security Issues of Low Power Wide Area Networks in the Context of LoRa Networks",
+    "year": 2020,
+    "doi": "https://doi.org/10.48550/arxiv.2006.16554",
+    "oa": "https://arxiv.org/pdf/2006.16554"
+   },
+   {
+    "title": "Cybersecurity monitoring in LoRa gateways",
+    "year": 2023,
+    "doi": null,
+    "oa": "http://repositorio.utfpr.edu.br:8080/jspui/bitstream/1/33996/1/monitoramentocibersegurancagatewayslora.pdf"
+   },
+   {
+    "title": "LoRa-Based Precision Wireless Structural Health Monitoring System for Bolted Joints in a Smart City Environment",
+    "year": 2019,
+    "doi": "https://doi.org/10.1109/access.2019.2958835",
+    "oa": "https://ieeexplore.ieee.org/ielx7/6287639/8600701/08930517.pdf"
+   },
+   {
+    "title": "TLoRa: Implementing TLS Over LoRa for Secure HTTP Communication in IoT",
+    "year": 2025,
+    "doi": "https://doi.org/10.48550/arxiv.2510.02519",
+    "oa": "https://arxiv.org/pdf/2510.02519"
+   },
+   {
+    "title": "Lightweight Physical Layer Security Solutions for Authentication and Confidentiality in LoRa-based Low Power Wide Area Networks",
+    "year": 2025,
+    "doi": "https://doi.org/10.5204/thesis.eprints.259953",
+    "oa": "https://eprints.qut.edu.au/259953/13/Lu%20Yang%20Thesis.pdf"
+   },
+   {
+    "title": "A Survey on Scalable LoRaWAN for Massive IoT: Recent Advances, Potentials, and Challenges",
+    "year": 2023,
+    "doi": "https://doi.org/10.1109/comst.2023.3274934",
+    "oa": "https://arxiv.org/pdf/2202.11082"
+   }
+  ]
+ },
+ {
+  "topic": "A",
+  "query": "LoRa ACK spoofing",
+  "database": "Crossref",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 20923,
+  "top": [
+   {
+    "title": "ACK spoofing on MAC-layer rate control: Attacks and defenses",
+    "year": 2020,
+    "doi": "10.1016/j.comnet.2020.107133"
+   },
+   {
+    "title": "Ack Spoofing Attack in IEEE 802.11 Infrastructure WLANs: Strategies, Detection and Mitigation",
+    "year": 2025,
+    "doi": "10.1049/ntw2.70020"
+   },
+   {
+    "title": "ack-ack, adj. &amp; n.",
+    "year": 2023,
+    "doi": "10.1093/oed/3276714727"
+   },
+   {
+    "title": "Spatially-Aware Multi-Channel Speaker Anti-Spoofing with LoRA-Adapted Self-Supervised Models",
+    "year": 2025,
+    "doi": "10.1109/icvisp68610.2025.11451734"
+   },
+   {
+    "title": "”Vi dör ut. Ack, så tragiskt. Ack, så roligt.”",
+    "year": 2020,
+    "doi": "10.23985/evk.91774"
+   },
+   {
+    "title": "ack, n.",
+    "year": 2023,
+    "doi": "10.1093/oed/1016718362"
+   },
+   {
+    "title": "ack emma, n. &amp; adv.",
+    "year": 2023,
+    "doi": "10.1093/oed/1037227393"
+   },
+   {
+    "title": "Acknowledgments",
+    "year": 2025,
+    "doi": "10.1002/9781394310449.ack"
+   },
+   {
+    "title": "Generative RF Fingerprint Spoofing Attacks Against LoRa Device Authentication",
+    "year": 2026,
+    "doi": "10.1007/978-981-92-3994-8_18"
+   },
+   {
+    "title": "ARP Spoofing",
+    "year": 2020,
+    "doi": "10.31274/cc-20240624-240"
+   }
+  ]
+ },
+ {
+  "topic": "A",
+  "query": "LoRa ACK spoofing",
+  "database": "DOAJ",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 0,
+  "top": []
+ },
+ {
+  "topic": "A",
+  "query": "LoRa ACK spoofing",
+  "database": "arXiv",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 0,
+  "top": []
+ },
+ {
+  "topic": "A",
+  "query": "LoRa ACK spoofing",
+  "database": "IEEE Xplore open page",
+  "date": "2026-11-16",
+  "status": "OK-page-only",
+  "reason": "page shell (results load by script)",
+  "count": null,
+  "top": []
+ },
+ {
+  "topic": "A",
+  "query": "LoRa acknowledgement jamming",
+  "database": "OpenAlex",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 545,
+  "top": [
+   {
+    "title": "A Comparative Analysis of LoRa and LoRaWAN in the Presence of Jammers and Transient Interference",
+    "year": 2022,
+    "doi": "https://doi.org/10.1109/emceurope51680.2022.9901081",
+    "oa": "https://cnrs.hal.science/hal-04127533/document"
+   },
+   {
+    "title": "Jamming Attacks and Anti-Jamming Strategies in Wireless Networks: A Comprehensive Survey",
+    "year": 2022,
+    "doi": "https://doi.org/10.1109/comst.2022.3159185",
+    "oa": "https://arxiv.org/pdf/2101.00292"
+   },
+   {
+    "title": "Smart City Pilot Projects Using LoRa and IEEE802.15.4 Technologies",
+    "year": 2018,
+    "doi": "https://doi.org/10.3390/s18041118",
+    "oa": "https://www.mdpi.com/1424-8220/18/4/1118/pdf?version=1525347379"
+   },
+   {
+    "title": "Systematic literature survey: applications of LoRa communication",
+    "year": 2020,
+    "doi": "https://doi.org/10.11591/ijece.v10i3.pp3176-3183",
+    "oa": "http://ijece.iaescore.com/index.php/IJECE/article/download/20934/13946"
+   },
+   {
+    "title": "XCopy: Boosting Weak Links for Reliable LoRa Communication",
+    "year": 2023,
+    "doi": "https://doi.org/10.1145/3570361.3592516",
+    "oa": "https://dl.acm.org/doi/pdf/10.1145/3570361.3592516"
+   },
+   {
+    "title": "Smart Monitoring and Controlling of Appliances Using LoRa Based IoT System",
+    "year": 2021,
+    "doi": "https://doi.org/10.3390/designs5010017",
+    "oa": "https://www.mdpi.com/2411-9660/5/1/17/pdf?version=1615338898"
+   },
+   {
+    "title": "LoPT : LoRa Penetration Testing Tool",
+    "year": 2019,
+    "doi": "https://doi.org/10.35940/ijitee.i1081.0789s219",
+    "oa": "https://doi.org/10.35940/ijitee.i1081.0789s219"
+   },
+   {
+    "title": "Design of a Robust MAC Protocol for LoRa",
+    "year": 2022,
+    "doi": "https://doi.org/10.1145/3557048",
+    "oa": "https://lirias.kuleuven.be/retrieve/a459be9e-fbb9-441e-855a-89506d9518da"
+   },
+   {
+    "title": "Delay-tolerant ICN and its application to LoRa",
+    "year": 2022,
+    "doi": "https://doi.org/10.1145/3517212.3558081",
+    "oa": "https://arxiv.org/pdf/2209.00863"
+   },
+   {
+    "title": "LoRa IoT-Based Architecture for Advanced Metering Infrastructure in Residential Smart Grid",
+    "year": 2021,
+    "doi": "https://doi.org/10.1109/access.2021.3110873",
+    "oa": "https://ieeexplore.ieee.org/ielx7/6287639/6514899/09530509.pdf"
+   }
+  ]
+ },
+ {
+  "topic": "A",
+  "query": "LoRa acknowledgement jamming",
+  "database": "Crossref",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 29193,
+  "top": [
+   {
+    "title": "Jamming of LoRa PHY and Countermeasure",
+    "year": 2021,
+    "doi": "10.1109/infocom42981.2021.9488774"
+   },
+   {
+    "title": "Potential Counteractions to Duty Cycle-Compliant Jamming in LoRa Networks",
+    "year": 2024,
+    "doi": "10.1109/telfor63250.2024.10819113"
+   },
+   {
+    "title": "Eliminating Artificial Jamming: Energy-Efficient Long-Range Covert Communication with LoRa and MIOTY",
+    "year": 2026,
+    "doi": "10.46620/26-0079"
+   },
+   {
+    "title": "Handling Jamming Attacks in a LoRa Network",
+    "year": 2024,
+    "doi": "10.1109/iotdi61053.2024.00017"
+   },
+   {
+    "title": "Friendly Jamming in LoRa Physical Layer Using Imperfect Orthogonality of Spreading Factor",
+    "year": 2022,
+    "doi": "10.1109/icoin53446.2022.9687108"
+   },
+   {
+    "title": "A Synchronization Front-End for LoRa Self-Jamming Operation on SDR Platforms",
+    "year": 2024,
+    "doi": "10.1109/comm62355.2024.10741438"
+   },
+   {
+    "title": "Preamble Injection-Based Jamming Method for UAV LoRa Communication Links",
+    "year": 2026,
+    "doi": "10.3390/s26020614"
+   },
+   {
+    "title": "Potential Response Mechanism for LoRa Networks Under Jamming Attacks",
+    "year": 2025,
+    "doi": "10.1109/cscn67557.2025.11230739"
+   },
+   {
+    "title": "Potential Solution Against Duty Cycle Compliant Selective Jamming Attacks in LoRa Networks",
+    "year": 2025,
+    "doi": "10.1109/ccnc54725.2025.10976096"
+   },
+   {
+    "title": "Modeling Symbol-Level Vulnerability in LoRa Networks Under Jamming Attacks",
+    "year": 2026,
+    "doi": "10.1109/rtcsa71153.2026.00028"
+   }
+  ]
+ },
+ {
+  "topic": "A",
+  "query": "LoRa acknowledgement jamming",
+  "database": "DOAJ",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 0,
+  "top": []
+ },
+ {
+  "topic": "A",
+  "query": "LoRa acknowledgement jamming",
+  "database": "arXiv",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 0,
+  "top": []
+ },
+ {
+  "topic": "A",
+  "query": "LoRa acknowledgement jamming",
+  "database": "IEEE Xplore open page",
+  "date": "2026-11-16",
+  "status": "OK-page-only",
+  "reason": "page shell (results load by script)",
+  "count": null,
+  "top": []
+ },
+ {
+  "topic": "A",
+  "query": "LoRa selective jamming",
+  "database": "OpenAlex",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 1448,
+  "top": [
+   {
+    "title": "Potential Solution Against Duty Cycle Compliant Selective Jamming Attacks in LoRa Networks",
+    "year": 2025,
+    "doi": "https://doi.org/10.1109/ccnc54725.2025.10976096",
+    "oa": null
+   },
+   {
+    "title": "Jamming of LoRa PHY and Countermeasure",
+    "year": 2023,
+    "doi": "https://doi.org/10.1145/3583137",
+    "oa": "https://dl.acm.org/doi/pdf/10.1145/3583137"
+   },
+   {
+    "title": "Potential Counteractions to Duty Cycle-Compliant Jamming in LoRa Networks",
+    "year": 2024,
+    "doi": "https://doi.org/10.1109/telfor63250.2024.10819113",
+    "oa": null
+   },
+   {
+    "title": "Preamble Injection-Based Jamming Method for UAV LoRa Communication Links",
+    "year": 2026,
+    "doi": "https://doi.org/10.3390/s26020614",
+    "oa": "https://doi.org/10.3390/s26020614"
+   },
+   {
+    "title": "Band & Tone Jamming Analysis and Detection on LoRa signals",
+    "year": 2021,
+    "doi": "https://doi.org/10.48550/arxiv.2107.07782",
+    "oa": "https://arxiv.org/pdf/2107.07782"
+   },
+   {
+    "title": "Mitigating Jamming Attacks in LoRa Networks: A Defense Strategy against LoRa-Based Jammers",
+    "year": 2025,
+    "doi": "https://doi.org/10.1145/3704413.3764442",
+    "oa": "https://dl.acm.org/doi/pdf/10.1145/3704413.3764442"
+   },
+   {
+    "title": "Jamming Attacks and Anti-Jamming Strategies in Wireless Networks: A Comprehensive Survey",
+    "year": 2022,
+    "doi": "https://doi.org/10.1109/comst.2022.3159185",
+    "oa": "https://arxiv.org/pdf/2101.00292"
+   },
+   {
+    "title": "Design of a Robust MAC Protocol for LoRa",
+    "year": 2022,
+    "doi": "https://doi.org/10.1145/3557048",
+    "oa": "https://lirias.kuleuven.be/retrieve/a459be9e-fbb9-441e-855a-89506d9518da"
+   },
+   {
+    "title": "Adaptive Jamming Mitigation for Clustered Energy-Efficient LoRa-BLE Hybrid Wireless Sensor Networks",
+    "year": 2025,
+    "doi": "https://doi.org/10.3390/s25061931",
+    "oa": "https://doi.org/10.3390/s25061931"
+   },
+   {
+    "title": "A Survey on LoRa Networking: Research Problems, Current Solutions, and Open Issues",
+    "year": 2019,
+    "doi": "https://doi.org/10.1109/comst.2019.2949598",
+    "oa": "https://arxiv.org/pdf/1908.10195"
+   }
+  ]
+ },
+ {
+  "topic": "A",
+  "query": "LoRa selective jamming",
+  "database": "Crossref",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 194296,
+  "top": [
+   {
+    "title": "Potential Solution Against Duty Cycle Compliant Selective Jamming Attacks in LoRa Networks",
+    "year": 2025,
+    "doi": "10.1109/ccnc54725.2025.10976096"
+   },
+   {
+    "title": "Mute the Immutable - Making WiFi-to-LoRa CTC Robust Against WiFi Selective Jamming",
+    "year": 2025,
+    "doi": "10.1109/infocomwkshps65812.2025.11152892"
+   },
+   {
+    "title": "Jamming of LoRa PHY and Countermeasure",
+    "year": 2021,
+    "doi": "10.1109/infocom42981.2021.9488774"
+   },
+   {
+    "title": "Potential Counteractions to Duty Cycle-Compliant Jamming in LoRa Networks",
+    "year": 2024,
+    "doi": "10.1109/telfor63250.2024.10819113"
+   },
+   {
+    "title": "Eliminating Artificial Jamming: Energy-Efficient Long-Range Covert Communication with LoRa and MIOTY",
+    "year": 2026,
+    "doi": "10.46620/26-0079"
+   },
+   {
+    "title": "Handling Jamming Attacks in a LoRa Network",
+    "year": 2024,
+    "doi": "10.1109/iotdi61053.2024.00017"
+   },
+   {
+    "title": "Friendly Jamming in LoRa Physical Layer Using Imperfect Orthogonality of Spreading Factor",
+    "year": 2022,
+    "doi": "10.1109/icoin53446.2022.9687108"
+   },
+   {
+    "title": "A Synchronization Front-End for LoRa Self-Jamming Operation on SDR Platforms",
+    "year": 2024,
+    "doi": "10.1109/comm62355.2024.10741438"
+   },
+   {
+    "title": "Preamble Injection-Based Jamming Method for UAV LoRa Communication Links",
+    "year": 2026,
+    "doi": "10.3390/s26020614"
+   },
+   {
+    "title": "Potential Response Mechanism for LoRa Networks Under Jamming Attacks",
+    "year": 2025,
+    "doi": "10.1109/cscn67557.2025.11230739"
+   }
+  ]
+ },
+ {
+  "topic": "A",
+  "query": "LoRa selective jamming",
+  "database": "DOAJ",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 0,
+  "top": []
+ },
+ {
+  "topic": "A",
+  "query": "LoRa selective jamming",
+  "database": "arXiv",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 0,
+  "top": []
+ },
+ {
+  "topic": "A",
+  "query": "LoRa selective jamming",
+  "database": "IEEE Xplore open page",
+  "date": "2026-11-16",
+  "status": "OK-page-only",
+  "reason": "page shell (results load by script)",
+  "count": null,
+  "top": []
+ },
+ {
+  "topic": "A",
+  "query": "LoRa energy depletion",
+  "database": "OpenAlex",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 4794,
+  "top": [
+   {
+    "title": "Energy Depletion Attack for LoRa-Based Wireless Sensor Network",
+    "year": 2026,
+    "doi": "https://doi.org/10.1109/jiot.2026.3713221",
+    "oa": "https://doi.org/10.1109/jiot.2026.3713221"
+   },
+   {
+    "title": "Long-Lived LoRa: Prolonging the Lifetime of a LoRa Network",
+    "year": 2020,
+    "doi": "https://doi.org/10.1109/icnp49622.2020.9259375",
+    "oa": "https://arxiv.org/pdf/2008.09019"
+   },
+   {
+    "title": "Gateway Energy-Oriented TDMA for LoRa Networks",
+    "year": 2025,
+    "doi": "https://doi.org/10.3390/electronics14224496",
+    "oa": "https://doi.org/10.3390/electronics14224496"
+   },
+   {
+    "title": "A Position- and Energy-Aware Routing Strategy for Subterranean LoRa Mesh Networks",
+    "year": 2025,
+    "doi": "https://doi.org/10.1109/lcn65610.2025.11146387",
+    "oa": "https://arxiv.org/pdf/2510.03714"
+   },
+   {
+    "title": "Rural Healthcare IoT Architecture Based on Low-Energy LoRa",
+    "year": 2021,
+    "doi": "https://doi.org/10.3390/ijerph18147660",
+    "oa": "https://www.mdpi.com/1660-4601/18/14/7660/pdf?version=1626848732"
+   },
+   {
+    "title": "Handling Jamming Attacks in a LoRa Network",
+    "year": 2024,
+    "doi": "https://doi.org/10.1109/iotdi61053.2024.00017",
+    "oa": null
+   },
+   {
+    "title": "Payload Optimization at the Application Layer for Energy-Efficient LoRa-Based Vital Sign Monitoring",
+    "year": 2026,
+    "doi": "https://doi.org/10.1109/icssa70263.2026.11765210",
+    "oa": "https://doi.org/10.1109/icssa70263.2026.11765210"
+   },
+   {
+    "title": "Energy-Aware Relaying in Dense LoRa Networks With Heterogeneous Batteries",
+    "year": 2023,
+    "doi": "https://doi.org/10.1109/lnet.2023.3329030",
+    "oa": null
+   },
+   {
+    "title": "Implementation of Heed Routing Protocol in Lora-Based Wireless Sensor Network",
+    "year": 2025,
+    "doi": "https://doi.org/10.33795/jartel.v15i1.5295",
+    "oa": "https://jurnal.polinema.ac.id/index.php/jartel/article/download/5295/5182"
+   },
+   {
+    "title": "Multi-Layered Energy Efficiency in LoRa-WAN Networks: A Tutorial",
+    "year": 2022,
+    "doi": "https://doi.org/10.1109/access.2021.3140107",
+    "oa": "https://ieeexplore.ieee.org/ielx7/6287639/9668973/09667513.pdf"
+   }
+  ]
+ },
+ {
+  "topic": "A",
+  "query": "LoRa energy depletion",
+  "database": "Crossref",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 1680483,
+  "top": [
+   {
+    "title": "G-LoRa: Towards energy efficient transmission parameter allocation in large-scale LoRa networks",
+    "year": 2025,
+    "doi": "10.36227/techrxiv.174612981.15652938/v1"
+   },
+   {
+    "title": "Verification of depletion capability of OpenMC using VERA depletion benchmark",
+    "year": 2022,
+    "doi": "10.1016/j.anucene.2022.108973"
+   },
+   {
+    "title": "Overcoming the shock of energy depletion for energy policy? Tracing the missing link between energy depletion, renewable energy development and decarbonization in the USA",
+    "year": 2023,
+    "doi": "10.1016/j.enpol.2023.113469"
+   },
+   {
+    "title": "LoRa-STAR: Optimizing Energy Consumption in LoRa Nodes for Precision Farming",
+    "year": 2021,
+    "doi": "10.1109/wf-iot51360.2021.9595389"
+   },
+   {
+    "title": "Energy Depletion Attack for LoRa-Based Wireless Sensor Network",
+    "year": 2026,
+    "doi": "10.1109/jiot.2026.3713221"
+   },
+   {
+    "title": "Black Hole Horizons from Vacuum Energy Depletion",
+    "year": 2026,
+    "doi": "10.2139/ssrn.6911600"
+   },
+   {
+    "title": "Implementation of a LoRa-Based Electric Vehicle Energy Monitoring System in Internet-Limited Competition Areas",
+    "year": 2026,
+    "doi": "10.21070/ups.10287"
+   },
+   {
+    "title": "The Energy Depletion Model of Light and Cosmology",
+    "year": 2025,
+    "doi": "10.20944/preprints202502.0878.v1"
+   },
+   {
+    "title": "Energy depletion",
+    "year": 2024,
+    "doi": "10.4324/9781003326137-4"
+   },
+   {
+    "title": "Atmospheric rivers and energy transport in a hierarchy of idealized models",
+    "year": 2026,
+    "doi": "10.5194/egusphere-egu26-11748"
+   }
+  ]
+ },
+ {
+  "topic": "A",
+  "query": "LoRa energy depletion",
+  "database": "DOAJ",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 5,
+  "top": [
+   {
+    "title": "A review on Harnessing the Power of IoT in Renewable Energy",
+    "year": "2025",
+    "doi": "10.24840/2183-6493_0011-002_002589"
+   },
+   {
+    "title": "Comprehensive methodology for the integrating of the organic rankine Cycle-ORC with diesel generators in off-grid areas: Application to a Colombian case study",
+    "year": "2024",
+    "doi": "10.1016/j.clet.2024.100828"
+   },
+   {
+    "title": "Life Cycle Assessment of Methanol Production from Municipal Solid Waste: Environmental Comparison with Landfilling and Incineration",
+    "year": "2025",
+    "doi": "10.3390/resources14010012"
+   },
+   {
+    "title": "A Nature-Inspired Approach to Energy-Efficient Relay Selection in Low-Power Wide-Area Networks (LPWAN)",
+    "year": "2024",
+    "doi": "10.3390/s24113348"
+   },
+   {
+    "title": "Development of a low-cost IoT system based on LoRaWAN for monitoring variables related to electrical energy consumption in low voltage networks",
+    "year": "2022",
+    "doi": "10.1016/j.ohx.2022.e00330"
+   }
+  ]
+ },
+ {
+  "topic": "A",
+  "query": "LoRa energy depletion",
+  "database": "arXiv",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 0,
+  "top": []
+ },
+ {
+  "topic": "A",
+  "query": "LoRa energy depletion",
+  "database": "IEEE Xplore open page",
+  "date": "2026-11-16",
+  "status": "OK-page-only",
+  "reason": "page shell (results load by script)",
+  "count": null,
+  "top": []
+ },
+ {
+  "topic": "B",
+  "query": "LoRaWAN pseudonym",
+  "database": "OpenAlex",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 197,
+  "top": [
+   {
+    "title": "Privacy-Preserving Pseudonyms for LoRaWAN",
+    "year": 2024,
+    "doi": "https://doi.org/10.1145/3643833.3656120",
+    "oa": "https://inria.hal.science/hal-04525080v3/file/WiSec2024_round2_LoRaWAN_pseudonyms-30.pdf"
+   },
+   {
+    "title": "Device Re-identification in LoRaWAN through Messages Linkage",
+    "year": 2022,
+    "doi": "https://doi.org/10.1145/3507657.3528556",
+    "oa": "https://inria.hal.science/hal-03624160v2/document"
+   },
+   {
+    "title": "Systematic Literature Review of Security and Privacy Management in LoRaWAN Networks",
+    "year": 2026,
+    "doi": "https://doi.org/10.21203/rs.3.rs-10831325/v1",
+    "oa": "https://www.researchsquare.com/article/rs-10831325/latest.pdf"
+   },
+   {
+    "title": "vlaniku/lorawan-sf-endogeneity: v1.0 - submission release",
+    "year": 2026,
+    "doi": "https://doi.org/10.5281/zenodo.21431850",
+    "oa": "https://doi.org/10.5281/zenodo.21431850"
+   },
+   {
+    "title": "Efficiently linking LoRaWAN identifiers through multi-domain fingerprinting",
+    "year": 2025,
+    "doi": "https://doi.org/10.1016/j.pmcj.2025.102082",
+    "oa": "https://doi.org/10.1016/j.pmcj.2025.102082"
+   },
+   {
+    "title": "Uma proposta de análise do ciclo de vida de credenciais em redes LoraWan privadas para IIoT",
+    "year": 2021,
+    "doi": "https://doi.org/10.5753/errc.2021.18537",
+    "oa": "https://sol.sbc.org.br/index.php/errc/article/download/18537/18370"
+   },
+   {
+    "title": "Privacy-preserving communications for the IoT",
+    "year": 2024,
+    "doi": "https://doi.org/10.70675/e514498dze9bbz45eczae36z2de278be1198",
+    "oa": "http://www.theses.fr/2024ISAL0075/document"
+   },
+   {
+    "title": "Long range technology for internet of things: review, challenges, and future directions",
+    "year": 2023,
+    "doi": "https://doi.org/10.11591/eei.v12i6.5214",
+    "oa": "https://beei.org/index.php/EEI/article/download/5214/3490"
+   },
+   {
+    "title": "Blockchain-Enabled Medical Waste Management System for Enhanced Traceability, Safety and Environmental Protection",
+    "year": 2025,
+    "doi": "https://doi.org/10.15849/ijasca.250730.13",
+    "oa": "https://doi.org/10.15849/ijasca.250730.13"
+   },
+   {
+    "title": "Development of a urinometer for automatic measurement of urine flow in catheterized patients",
+    "year": 2023,
+    "doi": "https://doi.org/10.1371/journal.pone.0290319",
+    "oa": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0290319&type=printable"
+   }
+  ]
+ },
+ {
+  "topic": "B",
+  "query": "LoRaWAN pseudonym",
+  "database": "Crossref",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 3297,
+  "top": [
+   {
+    "title": "pseudonym test",
+    "year": 2026,
+    "doi": "10.22501/rc.4476164"
+   },
+   {
+    "title": "pseudonym, n.",
+    "year": 2023,
+    "doi": "10.1093/oed/6328129760"
+   },
+   {
+    "title": "Towns (a pseudonym) v Towns (a pseudonym)",
+    "year": 2025,
+    "doi": "10.25291/vr/77-vr-594"
+   },
+   {
+    "title": "Pseudonym",
+    "year": 2020,
+    "doi": "10.32388/oi9cnu"
+   },
+   {
+    "title": "M. — Demad [Voltaire] [demad00000026965]",
+    "year": 2025,
+    "doi": "10.13051/ee:bio/demad00000026965"
+   },
+   {
+    "title": "Ross, William Stewart, known by the pseudonym of ‘Saladin’ (1844–1906)",
+    "year": 2018,
+    "doi": "10.1093/odnb/9780192683120.013.35840"
+   },
+   {
+    "title": "Deniz (Pseudonym)",
+    "year": 2023,
+    "doi": "10.3366/edinburgh/9781399519656.003.0005"
+   },
+   {
+    "title": "Humphry [née Graham], Charlotte Eliza [pseudonym ‘Madge’] (1842/3–1925), journalist",
+    "year": 2018,
+    "doi": "10.1093/odnb/9780198614128.013.109630"
+   },
+   {
+    "title": "Smith, Sarah, writing under the pseudonym of ‘Hesba Stretton’ (1832–1911)",
+    "year": 2018,
+    "doi": "10.1093/odnb/9780192683120.013.36158"
+   },
+   {
+    "title": "LTM-LoRaWAN: A Multi-Hop Communication System for LoRaWAN",
+    "year": 2023,
+    "doi": "10.3390/electronics12204225"
+   }
+  ]
+ },
+ {
+  "topic": "B",
+  "query": "LoRaWAN pseudonym",
+  "database": "DOAJ",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 0,
+  "top": []
+ },
+ {
+  "topic": "B",
+  "query": "LoRaWAN pseudonym",
+  "database": "arXiv",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 0,
+  "top": []
+ },
+ {
+  "topic": "B",
+  "query": "LoRaWAN pseudonym",
+  "database": "IEEE Xplore open page",
+  "date": "2026-11-16",
+  "status": "OK-page-only",
+  "reason": "page shell (results load by script)",
+  "count": null,
+  "top": []
+ },
+ {
+  "topic": "B",
+  "query": "LoRaWAN DevAddr privacy",
+  "database": "OpenAlex",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 95,
+  "top": [
+   {
+    "title": "Privacy-Preserving Pseudonyms for LoRaWAN",
+    "year": 2024,
+    "doi": "https://doi.org/10.1145/3643833.3656120",
+    "oa": "https://inria.hal.science/hal-04525080v3/file/WiSec2024_round2_LoRaWAN_pseudonyms-30.pdf"
+   },
+   {
+    "title": "Discovery privacy threats via device de-anonymization in LoRaWAN",
+    "year": 2022,
+    "doi": "https://doi.org/10.1016/j.comcom.2022.02.017",
+    "oa": "https://www.sciencedirect.com/science/article/pii/S0140366422000603"
+   },
+   {
+    "title": "Passive LoRaWAN Measurement Campaign Dataset (Ankara, 2026): A 43.9-Day, Privacy-Preserving Gateway-Only Observation",
+    "year": 2026,
+    "doi": "https://doi.org/10.5281/zenodo.22915705",
+    "oa": "https://doi.org/10.5281/zenodo.22915705"
+   },
+   {
+    "title": "An Overview of LoRaWAN",
+    "year": 2021,
+    "doi": "https://doi.org/10.37394/23204.2020.19.27",
+    "oa": "https://doi.org/10.37394/23204.2020.19.27"
+   },
+   {
+    "title": "Systematic Literature Review of Security and Privacy Management in LoRaWAN Networks",
+    "year": 2026,
+    "doi": "https://doi.org/10.21203/rs.3.rs-10831325/v1",
+    "oa": "https://www.researchsquare.com/article/rs-10831325/latest.pdf"
+   },
+   {
+    "title": "An Enhanced LoRaWAN Security Protocol for Privacy Preservation in IoT with a Case Study on a Smart Factory-Enabled Parking System",
+    "year": 2018,
+    "doi": "https://doi.org/10.3390/s18061888",
+    "oa": "http://dx.doi.org/10.3390/s18061888"
+   },
+   {
+    "title": "An Enhanced Key Management Scheme for LoRaWAN",
+    "year": 2018,
+    "doi": "https://doi.org/10.3390/cryptography2040034",
+    "oa": "https://www.mdpi.com/2410-387X/2/4/34/pdf?version=1541158592"
+   },
+   {
+    "title": "Analysis of Lorawan Protocol and Attacks Against Lorawan-Based IoT Devices",
+    "year": 2024,
+    "doi": "https://doi.org/10.58190/ijamec.2024.95",
+    "oa": "https://ijamec.org/index.php/ijamec/article/download/396/364"
+   },
+   {
+    "title": "Efficiently linking LoRaWAN identifiers through multi-domain fingerprinting",
+    "year": 2025,
+    "doi": "https://doi.org/10.1016/j.pmcj.2025.102082",
+    "oa": "https://doi.org/10.1016/j.pmcj.2025.102082"
+   },
+   {
+    "title": "Low-Power AES Data Encryption Architecture for a LoRaWAN",
+    "year": 2019,
+    "doi": "https://doi.org/10.1109/access.2019.2941972",
+    "oa": "https://ieeexplore.ieee.org/ielx7/6287639/8600701/08840874.pdf"
+   }
+  ]
+ },
+ {
+  "topic": "B",
+  "query": "LoRaWAN DevAddr privacy",
+  "database": "Crossref",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 107372,
+  "top": [
+   {
+    "title": "Privacy Leakage of Lorawan Smart Parking Occupancy Sensors",
+    "year": 2022,
+    "doi": "10.2139/ssrn.4049517"
+   },
+   {
+    "title": "Epistemic Analysis of a Key-Management Vulnerability in LoRaWAN",
+    "year": 2021,
+    "doi": "10.1109/pst52912.2021.9647741"
+   },
+   {
+    "title": "Strengthening LoRaWAN Security Protocol Against Replay Attack Combined with RF Jamming Technique Using Time Differential Privacy",
+    "year": 2025,
+    "doi": "10.1109/csp66295.2025.00036"
+   },
+   {
+    "title": "Discovery privacy threats via device de-anonymization in LoRaWAN",
+    "year": 2022,
+    "doi": "10.1016/j.comcom.2022.02.017"
+   },
+   {
+    "title": "Discovery privacy threats via device de-anonymization in LoRaWAN",
+    "year": 2021,
+    "doi": "10.1109/medcomnet52149.2021.9501247"
+   },
+   {
+    "title": "Extensive Security Verification of the LoRaWAN Key-Establishment: Insecurities &amp; Patches",
+    "year": 2020,
+    "doi": "10.1109/eurosp48549.2020.00034"
+   },
+   {
+    "title": "Systematic Literature Review of Security and Privacy Management in LoRaWAN Networks",
+    "year": 2026,
+    "doi": "10.21203/rs.3.rs-10831325/v1"
+   },
+   {
+    "title": "Privacy monitoring of LoRaWAN devices through traffic stream analysis",
+    "year": 2022,
+    "doi": "10.1109/wowmom54355.2022.00062"
+   },
+   {
+    "title": "LTM-LoRaWAN: A Multi-Hop Communication System for LoRaWAN",
+    "year": 2023,
+    "doi": "10.3390/electronics12204225"
+   },
+   {
+    "title": "Security and Privacy Challenges in IoT Applications",
+    "year": 2024,
+    "doi": "10.4018/979-8-3693-0839-4.ch008"
+   }
+  ]
+ },
+ {
+  "topic": "B",
+  "query": "LoRaWAN DevAddr privacy",
+  "database": "DOAJ",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 0,
+  "top": []
+ },
+ {
+  "topic": "B",
+  "query": "LoRaWAN DevAddr privacy",
+  "database": "arXiv",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 0,
+  "top": []
+ },
+ {
+  "topic": "B",
+  "query": "LoRaWAN DevAddr privacy",
+  "database": "IEEE Xplore open page",
+  "date": "2026-11-16",
+  "status": "OK-page-only",
+  "reason": "page shell (results load by script)",
+  "count": null,
+  "top": []
+ },
+ {
+  "topic": "B",
+  "query": "device de-anonymization LoRaWAN",
+  "database": "OpenAlex",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 404,
+  "top": [
+   {
+    "title": "Discovery privacy threats via device de-anonymization in LoRaWAN",
+    "year": 2022,
+    "doi": "https://doi.org/10.1016/j.comcom.2022.02.017",
+    "oa": "https://www.sciencedirect.com/science/article/pii/S0140366422000603"
+   },
+   {
+    "title": "Discovery privacy threats via device de-anonymization in LoRaWAN",
+    "year": 2021,
+    "doi": "https://doi.org/10.1109/medcomnet52149.2021.9501247",
+    "oa": null
+   },
+   {
+    "title": "Probabilistic performance evaluation of the class-A device in LoRaWAN protocol on the MAC layer",
+    "year": 2024,
+    "doi": "https://doi.org/10.1016/j.peva.2024.102446",
+    "oa": "https://hal.u-pec.fr/hal-04563577v1/file/PE2023_Major_Revision_.pdf"
+   },
+   {
+    "title": "Privacy-Preserving Pseudonyms for LoRaWAN",
+    "year": 2024,
+    "doi": "https://doi.org/10.1145/3643833.3656120",
+    "oa": "https://inria.hal.science/hal-04525080v3/file/WiSec2024_round2_LoRaWAN_pseudonyms-30.pdf"
+   },
+   {
+    "title": "LoRaWAN Behaviour Analysis through Dataset Traffic Investigation",
+    "year": 2022,
+    "doi": "https://doi.org/10.3390/s22072470",
+    "oa": "https://www.mdpi.com/1424-8220/22/7/2470/pdf?version=1648033868"
+   },
+   {
+    "title": "A Systematic Review of Security in the LoRaWAN Network Protocol",
+    "year": 2021,
+    "doi": "https://doi.org/10.48550/arxiv.2105.00384",
+    "oa": "https://arxiv.org/pdf/2105.00384"
+   },
+   {
+    "title": "Exploring LoRaWAN Traffic: In-Depth Analysis of IoT Network Communications",
+    "year": 2023,
+    "doi": "https://doi.org/10.3390/s23177333",
+    "oa": "https://www.mdpi.com/1424-8220/23/17/7333/pdf?version=1692780870"
+   },
+   {
+    "title": "Efficiently linking LoRaWAN identifiers through multi-domain fingerprinting",
+    "year": 2025,
+    "doi": "https://doi.org/10.1016/j.pmcj.2025.102082",
+    "oa": "https://doi.org/10.1016/j.pmcj.2025.102082"
+   },
+   {
+    "title": "Systematic Literature Review of Security and Privacy Management in LoRaWAN Networks",
+    "year": 2026,
+    "doi": "https://doi.org/10.21203/rs.3.rs-10831325/v1",
+    "oa": "https://www.researchsquare.com/article/rs-10831325/latest.pdf"
+   },
+   {
+    "title": "Green Bear - A LoRaWAN-based Human-in-the-Loop case-study for sustainable cities",
+    "year": 2022,
+    "doi": "https://doi.org/10.1016/j.pmcj.2022.101701",
+    "oa": "https://www.sciencedirect.com/science/article/pii/S1574119222001146/pdf"
+   }
+  ]
+ },
+ {
+  "topic": "B",
+  "query": "device de-anonymization LoRaWAN",
+  "database": "Crossref",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 6068887,
+  "top": [
+   {
+    "title": "Discovery privacy threats via device de-anonymization in LoRaWAN",
+    "year": 2021,
+    "doi": "10.1109/medcomnet52149.2021.9501247"
+   },
+   {
+    "title": "Discovery privacy threats via device de-anonymization in LoRaWAN",
+    "year": 2022,
+    "doi": "10.1016/j.comcom.2022.02.017"
+   },
+   {
+    "title": "Pet tracking device with LoRaWAN technology",
+    "year": 2025,
+    "doi": "10.70929/caui3.v1i2.0013"
+   },
+   {
+    "title": "Estudio de la cobertura de una red de LoRaWAN",
+    "year": 2026,
+    "doi": "10.37537/rev.elektron.10.1.233.2026"
+   },
+   {
+    "title": "de-anonymization, n.",
+    "year": 2023,
+    "doi": "10.1093/oed/9444315899"
+   },
+   {
+    "title": "Introducing Multi-Domain Fingerprints for Lorawan Device Linkage",
+    "year": 2024,
+    "doi": "10.2139/ssrn.4949061"
+   },
+   {
+    "title": "Introducing Multi-Domain Fingerprints for Lorawan Device Linkage",
+    "year": 2024,
+    "doi": "10.2139/ssrn.4728641"
+   },
+   {
+    "title": "A Device Anonymization Protection Method Based on Address Hopping",
+    "year": 2025,
+    "doi": "10.20944/preprints202503.0526.v1"
+   },
+   {
+    "title": "Exploiting LoRaWAN Downlinks for Covert Device-to-Device Communication",
+    "year": 2025,
+    "doi": "10.1109/medcomnet65822.2025.11103548"
+   },
+   {
+    "title": "Comparative Analysis of End Device and Field Test Device Measurements for RSSI, SNR and SF Performance Parameters in an Indoor LoRaWAN Network",
+    "year": 2023,
+    "doi": "10.21203/rs.3.rs-3228753/v1"
+   }
+  ]
+ },
+ {
+  "topic": "B",
+  "query": "device de-anonymization LoRaWAN",
+  "database": "DOAJ",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 0,
+  "top": []
+ },
+ {
+  "topic": "B",
+  "query": "device de-anonymization LoRaWAN",
+  "database": "arXiv",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 0,
+  "top": []
+ },
+ {
+  "topic": "B",
+  "query": "device de-anonymization LoRaWAN",
+  "database": "IEEE Xplore open page",
+  "date": "2026-11-16",
+  "status": "OK-page-only",
+  "reason": "page shell (results load by script)",
+  "count": null,
+  "top": []
+ },
+ {
+  "topic": "B",
+  "query": "unlinkability ProVerif IoT",
+  "database": "OpenAlex",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 185,
+  "top": [
+   {
+    "title": "Elliptic curve cryptography and biometrics for iot authentication",
+    "year": 2025,
+    "doi": "https://doi.org/10.2298/sjee2502223d",
+    "oa": "http://www.doiserbia.nb.rs/ft.aspx?id=1451-48692502223D"
+   },
+   {
+    "title": "Bridging Theory and Practice: An Executable Taxonomy of Security Properties for ProVerif and Tamarin",
+    "year": 2026,
+    "doi": "https://doi.org/10.48550/arxiv.2605.29465",
+    "oa": "https://arxiv.org/pdf/2605.29465"
+   },
+   {
+    "title": "A two-factor security authentication scheme for wireless sensor networks in IoT environments",
+    "year": 2022,
+    "doi": "https://doi.org/10.1016/j.neucom.2022.05.099",
+    "oa": null
+   },
+   {
+    "title": "A Lightweight Forward-Unlinkable Authenticated Key Agreement Protocol for Secure UAV Communication in Internet of Drones Environments",
+    "year": 2026,
+    "doi": "https://doi.org/10.70917/ijcisim-2026-4673",
+    "oa": "https://cspub-ijcisim.org/index.php/ijcisim/article/download/4673/3809"
+   },
+   {
+    "title": "AMAKA: A Blockchain-Fortified Framework for Anonymous Mutual Authentication and Key Agreement in IoT",
+    "year": 2025,
+    "doi": "https://doi.org/10.1109/cloudcom67567.2025.11331391",
+    "oa": null
+   },
+   {
+    "title": "A lightweight hash-based quantum-resistant bidirectional authentication protocol for IoT devices integrating physical unclonable functions",
+    "year": 2026,
+    "doi": "https://doi.org/10.1038/s41598-026-56676-2",
+    "oa": "https://www.nature.com/articles/s41598-026-56676-2_reference.pdf"
+   },
+   {
+    "title": "An improved dynamic anonymous authentication and key agreement scheme for resource constrained IoT devices",
+    "year": 2026,
+    "doi": "https://doi.org/10.1016/j.comnet.2026.112093",
+    "oa": null
+   },
+   {
+    "title": "PARFAIT: Privacy-preserving, secure, and low-delay service access in fog-enabled IoT ecosystems",
+    "year": 2022,
+    "doi": "https://doi.org/10.1016/j.comnet.2022.108799",
+    "oa": "https://www.sciencedirect.com/science/article/pii/S1389128622000275/pdf"
+   },
+   {
+    "title": "Formal Verification of EDHOC-PSK: A Symbolic Approach with SAPIC+",
+    "year": 2026,
+    "doi": "https://doi.org/10.1145/3779208.3805979",
+    "oa": "https://doi.org/10.1145/3779208.3805979"
+   },
+   {
+    "title": "Secure and Lightweight User Authentication Protocol for IoT with Dynamic Authentication Credentials and Semi-Trusted Servers",
+    "year": 2026,
+    "doi": "https://doi.org/10.1109/jiot.2026.3741600",
+    "oa": "https://doi.org/10.1109/jiot.2026.3741600"
+   }
+  ]
+ },
+ {
+  "topic": "B",
+  "query": "unlinkability ProVerif IoT",
+  "database": "Crossref",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 181207,
+  "top": [
+   {
+    "title": "Proving Unlinkability Using ProVerif Through Desynchronised Bi-Processes",
+    "year": 2023,
+    "doi": "10.1109/csf57540.2023.00022"
+   },
+   {
+    "title": "A blockchain based access control framework for the security and privacy of IoT with strong anonymity unlinkability and intractability guarantees",
+    "year": 2019,
+    "doi": "10.1016/bs.adcom.2018.11.001"
+   },
+   {
+    "title": "Improving Unlinkability in C-ITS: A Methodology For Optimal Obfuscation",
+    "year": 2023,
+    "doi": "10.5220/0011786900003405"
+   },
+   {
+    "title": "A Secure and Efficient Scheme Based on Unlinkability and Anonymous Traceable Protocol for Cloud-Assisted IoT Environment",
+    "year": 2023,
+    "doi": "10.1142/s0218126623503164"
+   },
+   {
+    "title": "Optimization of ProVerif programs for AKE-protocols",
+    "year": 2021,
+    "doi": "10.15514/ispras-2021-33(5)-6"
+   },
+   {
+    "title": "Withdrawn: Enhancing Regulatory Compliance in Digital Payments: Unlinkability and Privacy in EMV 2nd Gen Transactions",
+    "year": 2026,
+    "doi": "10.20944/preprints202601.0335.v1"
+   },
+   {
+    "title": "Coin Transfer Unlinkability Under the Counterparty Adversary Model",
+    "year": 2022,
+    "doi": "10.5195/ledger.2022.260"
+   },
+   {
+    "title": "Unlinkability",
+    "year": 2025,
+    "doi": "10.1007/978-3-030-71522-9_1758"
+   },
+   {
+    "title": "Formal Verification of a V2X Privacy Preserving Scheme Using Proverif",
+    "year": 2023,
+    "doi": "10.1109/csr57506.2023.10224908"
+   },
+   {
+    "title": "Time-Based Re-randomization for Zero-Knowledge Proofs: Enhancing Privacy Through Temporal Unlinkability",
+    "year": 2025,
+    "doi": "10.2139/ssrn.5600330"
+   }
+  ]
+ },
+ {
+  "topic": "B",
+  "query": "unlinkability ProVerif IoT",
+  "database": "DOAJ",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 3,
+  "top": [
+   {
+    "title": "On Secure and Energy-Efficient Message Communication Protocols for Internet of Vehicles: Cryptanalysis and Improvements",
+    "year": "2024",
+    "doi": "10.1109/ACCESS.2024.3488570"
+   },
+   {
+    "title": "Elliptic curve cryptography and biometrics for iot authentication",
+    "year": "2025",
+    "doi": "10.2298/SJEE2502223D"
+   },
+   {
+    "title": "A lightweight hash-based quantum-resistant bidirectional authentication protocol for IoT devices integrating physical unclonable functions",
+    "year": "2026",
+    "doi": "10.1038/s41598-026-56676-2"
+   }
+  ]
+ },
+ {
+  "topic": "B",
+  "query": "unlinkability ProVerif IoT",
+  "database": "arXiv",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 0,
+  "top": []
+ },
+ {
+  "topic": "B",
+  "query": "unlinkability ProVerif IoT",
+  "database": "IEEE Xplore open page",
+  "date": "2026-11-16",
+  "status": "OK-page-only",
+  "reason": "page shell (results load by script)",
+  "count": null,
+  "top": []
+ },
+ {
+  "topic": "B",
+  "query": "vehicle alert unlinkability",
+  "database": "OpenAlex",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 300,
+  "top": [
+   {
+    "title": "Optimal obfuscation of awareness messages: Improving users’ unlinkability in Intelligent Transport Systems",
+    "year": 2024,
+    "doi": "https://doi.org/10.1016/j.comnet.2024.110972",
+    "oa": "https://ir.lib.vntu.edu.ua/bitstream/123456789/43753/3/Unlinkability_in_C_ITS__Journal_version_%20%287%29.pdf"
+   },
+   {
+    "title": "Alert generation and Vehicle Authenticationin fog environment",
+    "year": 2024,
+    "doi": "https://doi.org/10.21203/rs.3.rs-3878651/v1",
+    "oa": "https://www.researchsquare.com/article/rs-3878651/latest.pdf"
+   },
+   {
+    "title": "Using Range-Revocable Pseudonyms to Provide Backward Unlinkability in the Edge",
+    "year": 2023,
+    "doi": "https://doi.org/10.1145/3576915.3623111",
+    "oa": "https://dl.acm.org/doi/pdf/10.1145/3576915.3623111"
+   },
+   {
+    "title": "Key Agreement Between User and Drone With Forward Unlinkability in Internet of Drones",
+    "year": 2022,
+    "doi": "https://doi.org/10.1109/access.2022.3150035",
+    "oa": "https://ieeexplore.ieee.org/ielx7/6287639/9668973/09707768.pdf"
+   },
+   {
+    "title": "An Efficient and Secure Alert System for VANETs to Improve Crosswalks’ Security in Smart Cities",
+    "year": 2020,
+    "doi": "https://doi.org/10.3390/s20092473",
+    "oa": "http://dx.doi.org/10.3390/s20092473"
+   },
+   {
+    "title": "Leveraging reputation for enhanced decision accuracy in vehicle-to-vehicle communications under limited infrastructure",
+    "year": 2025,
+    "doi": "https://doi.org/10.1016/j.vehcom.2025.100927",
+    "oa": "https://doi.org/10.1016/j.vehcom.2025.100927"
+   },
+   {
+    "title": "Blockchain-Assisted Lightweight Authenticated Key Agreement Security Framework for Smart Vehicles-Enabled Intelligent Transportation System",
+    "year": 2024,
+    "doi": "https://doi.org/10.1109/tase.2024.3381068",
+    "oa": "https://eprints.lancs.ac.uk/id/eprint/223295/1/T_ASE_Final_File.pdf"
+   },
+   {
+    "title": "A Scheme for Distributed Vehicle Authentication and Revocation in Decentralized VANETs",
+    "year": 2024,
+    "doi": "https://doi.org/10.1109/access.2024.3400530",
+    "oa": "https://doi.org/10.1109/access.2024.3400530"
+   },
+   {
+    "title": "Security Mechanism for Vehicle Identification and Transaction Authentication in the Internet of Vehicle (IoV) Scenario: A Blockchain Based Model",
+    "year": 2019,
+    "doi": "https://doi.org/10.3844/jcssp.2019.249.257",
+    "oa": "https://thescipub.com/pdf/jcssp.2019.249.257.pdf"
+   },
+   {
+    "title": "Exemption Without Exposure: Formally Verified Conditional Privacy-Preserving Authentication with Secure-Ranging Binding for Authorised Armed Carriers in AI Weapon Surveillance",
+    "year": 2026,
+    "doi": "https://doi.org/10.21203/rs.3.rs-11376107/v1",
+    "oa": "https://www.researchsquare.com/article/rs-11376107/latest.pdf"
+   }
+  ]
+ },
+ {
+  "topic": "B",
+  "query": "vehicle alert unlinkability",
+  "database": "Crossref",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 188135,
+  "top": [
+   {
+    "title": "Alert generation and Vehicle Authenticationin fog environment",
+    "year": 2024,
+    "doi": "10.21203/rs.3.rs-3878651/v1"
+   },
+   {
+    "title": "Vehicle Collision Detection and Alert System using Data Science",
+    "year": 2023,
+    "doi": "10.70729/se23424125746"
+   },
+   {
+    "title": "Smart Vehicle Connectivity for Safety Applications - Drowsiness Detection and System Alert",
+    "year": 2021,
+    "doi": "10.21275/sr21606144632"
+   },
+   {
+    "title": "Impacts of In-vehicle Alert Systems on Situational Awareness and Driving Performance in SAE Level 3 Vehicle Automation",
+    "year": 2022,
+    "doi": "10.5703/1288284317573"
+   },
+   {
+    "title": "Vehicle Based Elephant Detection and Alert System",
+    "year": 2026,
+    "doi": "10.64388/irev9i10-1717029"
+   },
+   {
+    "title": "Vehicle Overloading Challan and Alert System",
+    "year": 2026,
+    "doi": "10.64643/ijirtv12i1-181054-459"
+   },
+   {
+    "title": "A Vehicle-Pedestrian Two-Way Collision Alert System under Coordinated Vehicle Infrastructure Environment",
+    "year": 2022,
+    "doi": "10.1061/9780784484265.011"
+   },
+   {
+    "title": "EMERGENCY ALERT SYSTEM FOR VEHICLE USING IOT",
+    "year": 2023,
+    "doi": "10.56726/irjmets34712"
+   },
+   {
+    "title": "Improving Unlinkability in C-ITS: A Methodology For Optimal Obfuscation",
+    "year": 2023,
+    "doi": "10.5220/0011786900003405"
+   },
+   {
+    "title": "Vehicle Accident Alert System",
+    "year": 2019,
+    "doi": "10.2139/ssrn.3368089"
+   }
+  ]
+ },
+ {
+  "topic": "B",
+  "query": "vehicle alert unlinkability",
+  "database": "DOAJ",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 0,
+  "top": []
+ },
+ {
+  "topic": "B",
+  "query": "vehicle alert unlinkability",
+  "database": "arXiv",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 0,
+  "top": []
+ },
+ {
+  "topic": "B",
+  "query": "vehicle alert unlinkability",
+  "database": "IEEE Xplore open page",
+  "date": "2026-11-16",
+  "status": "OK-page-only",
+  "reason": "page shell (results load by script)",
+  "count": null,
+  "top": []
+ },
+ {
+  "topic": "B",
+  "query": "pseudonym accountability revocation LPWAN",
+  "database": "OpenAlex",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 16,
+  "top": [
+   {
+    "title": "Smart IoT Solutions: Revolutionizing Agriculture, Urban Infrastructure, and Cybersecurity",
+    "year": 2024,
+    "doi": "https://doi.org/10.62311/nesx/rb978-81-982460-5-9",
+    "oa": "https://www.nationaleducationservices.org/file-download/1511732/Download Full-Text Research Book  PDF Pp 1-30.pdf"
+   },
+   {
+    "title": "A Blockchain-Based Federated Identity Framework for Secure Multi-Domain IoT Interoperability",
+    "year": 2026,
+    "doi": "https://doi.org/10.18196/jrc.v7i1.27962",
+    "oa": "https://journal.umy.ac.id/index.php/jrc/article/download/27962/12261"
+   },
+   {
+    "title": "A review on security enhancements in vehicular sensor networks",
+    "year": 2024,
+    "doi": "https://doi.org/10.30574/gscarr.2024.21.3.0457",
+    "oa": "https://gsconlinepress.com/journals/gscarr/sites/default/files/GSCARR-2024-0457.pdf"
+   },
+   {
+    "title": "A Comprehensive Survey on VANET–IoT Integration Toward the Internet of Vehicles: Architectures, Communications, and System Challenges",
+    "year": 2026,
+    "doi": "https://doi.org/10.3390/futuretransp6010032",
+    "oa": "https://www.mdpi.com/2673-7590/6/1/32/pdf?version=1771898222"
+   },
+   {
+    "title": "Security in product lifecycle of IoT devices: A survey",
+    "year": 2020,
+    "doi": "https://doi.org/10.1016/j.jnca.2020.102779",
+    "oa": "https://www.sciencedirect.com/science/article/pii/S1084804520302538/pdf"
+   },
+   {
+    "title": "Towards an Architecture to Guarantee Both Data Privacy and Utility in the First Phases of Digital Clinical Trials",
+    "year": 2018,
+    "doi": "https://doi.org/10.3390/s18124175",
+    "oa": "https://www.mdpi.com/1424-8220/18/12/4175/pdf?version=1543406830"
+   },
+   {
+    "title": "Smart Grid Nontechnical Loss Detection Based on Power Gateway Consortium Blockchain",
+    "year": 2021,
+    "doi": "https://doi.org/10.1155/2021/9501572",
+    "oa": "https://downloads.hindawi.com/journals/scn/2021/9501572.pdf"
+   },
+   {
+    "title": "Post-Quantum Secure Blockchain-Based Federated Learning Framework for Enhancing Smart Grid Security",
+    "year": 2025,
+    "doi": "https://doi.org/10.25195/ijci.v51i2.637",
+    "oa": "https://ijci.uoitc.edu.iq/index.php/ijci/article/download/637/286"
+   },
+   {
+    "title": "Sensors for Context-Aware Smart Healthcare: A Security Perspective",
+    "year": 2021,
+    "doi": "https://doi.org/10.3390/s21206886",
+    "oa": "https://www.mdpi.com/1424-8220/21/20/6886/pdf?version=1634640883"
+   },
+   {
+    "title": "A Survey on Privacy-Preserving Blockchain Systems (PPBS) and a Novel PPBS-Based Framework for Smart Agriculture",
+    "year": 2021,
+    "doi": "https://doi.org/10.1109/ojcs.2021.3053032",
+    "oa": "https://ieeexplore.ieee.org/ielx7/8782664/9349230/09329051.pdf"
+   }
+  ]
+ },
+ {
+  "topic": "B",
+  "query": "pseudonym accountability revocation LPWAN",
+  "database": "Crossref",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 34159,
+  "top": [
+   {
+    "title": "Pseudonym Revocation System for Iot-Based Medical Applications",
+    "year": 2024,
+    "doi": "10.2139/ssrn.4865840"
+   },
+   {
+    "title": "Pseudonym revocation system for IoT-based medical applications",
+    "year": 2025,
+    "doi": "10.1016/j.comnet.2024.110983"
+   },
+   {
+    "title": "Efficient and Privacy-Preserving Certificate Activation for V2X Pseudonym Certificate Revocation",
+    "year": 2022,
+    "doi": "10.3390/jsan11030051"
+   },
+   {
+    "title": "Network-efficient authenticated pseudonym-based V2X communications with constant revocation costs",
+    "year": 2025,
+    "doi": "10.1109/nca67271.2025.00022"
+   },
+   {
+    "title": "MABERA: A MA-ABE with Revocation and Accountability for Trustworthy Real-time IoT Data Marketplaces",
+    "year": 2023,
+    "doi": "10.36227/techrxiv.170290927.78532291/v1"
+   },
+   {
+    "title": "Improving Efficiency of Pseudonym Revocation in VANET Using Cuckoo Filter",
+    "year": 2020,
+    "doi": "10.1109/icct50939.2020.9295788"
+   },
+   {
+    "title": "A Privacy-Preserving Authentication and Pseudonym Revocation Scheme for VANETs",
+    "year": 2020,
+    "doi": "10.1109/access.2020.3027718"
+   },
+   {
+    "title": "ACPC: Efficient revocation of pseudonym certificates using activation codes",
+    "year": 2019,
+    "doi": "10.1016/j.adhoc.2018.07.007"
+   },
+   {
+    "title": "ESCORT: Efficient Status Check and Revocation Transparency for Linkage-Based Pseudonym Certificates in VANETs",
+    "year": 2023,
+    "doi": "10.1109/iscc58397.2023.10218118"
+   },
+   {
+    "title": "pseudonym test",
+    "year": 2026,
+    "doi": "10.22501/rc.4476164"
+   }
+  ]
+ },
+ {
+  "topic": "B",
+  "query": "pseudonym accountability revocation LPWAN",
+  "database": "DOAJ",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 0,
+  "top": []
+ },
+ {
+  "topic": "B",
+  "query": "pseudonym accountability revocation LPWAN",
+  "database": "arXiv",
+  "date": "2026-11-16",
+  "filter": "2018 onward",
+  "status": "OK",
+  "count": 0,
+  "top": []
+ },
+ {
+  "topic": "B",
+  "query": "pseudonym accountability revocation LPWAN",
+  "database": "IEEE Xplore open page",
+  "date": "2026-11-16",
+  "status": "OK-page-only",
+  "reason": "page shell (results load by script)",
+  "count": null,
+  "top": []
+ }
+]

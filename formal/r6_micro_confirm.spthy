@@ -1,0 +1,77 @@
+/*
+ * Tamarin model for R6-1 (docs/02_preregistration/PREREGISTRATION_V17.md section 3): chained micro-confirm and micro-cancel next to the 14-byte provisional frame.
+ *   provisional  <'FLASH', v, id, t>        t = mac(kdf(km, v), <'F', v, id>)            (T1)
+ *   micro        <'MICRO', v, t, x, m>      m = mac(kdf(km, v), <'M', t, x>)             (control, -D=CONTROL: <'M', x>)
+ *   micro-cancel <'CANCEL', v, t, m>        m = mac(kdf(km, v), <'X', t>)                (control: <'X'>)
+ * The base keeps a persistent pending fact for every accepted provisional frame. Symbolic model, perfect cryptography, Dolev-Yao network, compromise of any vehicle by key reveal.
+ */
+theory R6MicroConfirm
+begin
+
+functions: kdf/2, mac/2
+
+rule BaseInit:
+  [ Fr(~km) ] --[ BaseInit() ]-> [ !BaseMaster(~km) ]
+
+rule RevealNode:
+  [ !BaseMaster(km) ] --[ RevealNode($w) ]-> [ Out(kdf(km, $w)) ]
+
+rule CarFlash:
+  [ Fr(~id), !BaseMaster(km), In($v) ]
+  --[ CarSentFlash($v, mac(kdf(km, $v), <'F', $v, ~id>)) ]->
+  [ Out(<'FLASH', $v, ~id, mac(kdf(km, $v), <'F', $v, ~id>)>), CarOpen($v, mac(kdf(km, $v), <'F', $v, ~id>)) ]
+
+#ifdef CONTROL
+rule CarMicro:
+  [ CarOpen($v, t), !BaseMaster(km), In(x) ]
+  --[ CarSentMicro($v, t, x) ]->
+  [ Out(<'MICRO', $v, t, x, mac(kdf(km, $v), <'M', x>)>) ]
+rule CarCancel:
+  [ CarOpen($v, t), !BaseMaster(km) ]
+  --[ CarSentCancel($v, t) ]->
+  [ Out(<'CANCEL', $v, t, mac(kdf(km, $v), 'X')>) ]
+rule BaseMicro:
+  [ !BaseMaster(km), !Pending($v, t), In(<'MICRO', $v, t, x, mac(kdf(km, $v), <'M', x>)>) ]
+  --[ BaseAcceptMicro($v, t, x) ]-> [ ]
+rule BaseCancel:
+  [ !BaseMaster(km), !Pending($v, t), In(<'CANCEL', $v, t, mac(kdf(km, $v), 'X')>) ]
+  --[ BaseAcceptCancel($v, t) ]-> [ ]
+#else
+rule CarMicro:
+  [ CarOpen($v, t), !BaseMaster(km), In(x) ]
+  --[ CarSentMicro($v, t, x) ]->
+  [ Out(<'MICRO', $v, t, x, mac(kdf(km, $v), <'M', t, x>)>) ]
+rule CarCancel:
+  [ CarOpen($v, t), !BaseMaster(km) ]
+  --[ CarSentCancel($v, t) ]->
+  [ Out(<'CANCEL', $v, t, mac(kdf(km, $v), <'X', t>)>) ]
+rule BaseMicro:
+  [ !BaseMaster(km), !Pending($v, t), In(<'MICRO', $v, t, x, mac(kdf(km, $v), <'M', t, x>)>) ]
+  --[ BaseAcceptMicro($v, t, x) ]-> [ ]
+rule BaseCancel:
+  [ !BaseMaster(km), !Pending($v, t), In(<'CANCEL', $v, t, mac(kdf(km, $v), <'X', t>)>) ]
+  --[ BaseAcceptCancel($v, t) ]-> [ ]
+#endif
+
+rule BaseFlash:
+  [ !BaseMaster(km), In(<'FLASH', $v, id, mac(kdf(km, $v), <'F', $v, id>)>) ]
+  --[ BaseAcceptFlash($v, mac(kdf(km, $v), <'F', $v, id>)) ]->
+  [ !Pending($v, mac(kdf(km, $v), <'F', $v, id>)) ]
+
+lemma executable_micro:
+  exists-trace
+  "Ex v t x #i. BaseAcceptMicro(v, t, x) @ i & not (Ex w #j. RevealNode(w) @ j)"
+
+lemma micro_auth:
+  "All v t x #i. BaseAcceptMicro(v, t, x) @ i
+     ==> (Ex #j. CarSentMicro(v, t, x) @ j & j < i) | (Ex #r. RevealNode(v) @ r)"
+
+lemma micro_binding:
+  "All v t x #i. BaseAcceptMicro(v, t, x) @ i
+     ==> (Ex #j. CarSentFlash(v, t) @ j & j < i) | (Ex #r. RevealNode(v) @ r)"
+
+lemma cancel_auth:
+  "All v t #i. BaseAcceptCancel(v, t) @ i
+     ==> (Ex #j. CarSentCancel(v, t) @ j & j < i) | (Ex #r. RevealNode(v) @ r)"
+
+end

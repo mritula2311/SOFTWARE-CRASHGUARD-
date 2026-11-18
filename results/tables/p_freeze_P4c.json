@@ -1,0 +1,27 @@
+{
+  "alphas": [
+    0.01,
+    0.05
+  ],
+  "frozen_at": "2026-11-12 08:39",
+  "groups": "vehicle-size categories",
+  "hypothesis": "P4c",
+  "model_files": {},
+  "note": "settings fixed by the preregistration; the test split is not used",
+  "primary": "leave-one-category-out, pooled",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "variants": [
+    "V0",
+    "V1",
+    "V2",
+    "V3",
+    "V4",
+    "V5"
+  ]
+}

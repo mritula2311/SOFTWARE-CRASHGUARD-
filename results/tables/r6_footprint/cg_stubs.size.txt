@@ -1,0 +1,14 @@
+build/r6fp/cg_stubs.o  :
+section                         size   addr
+.literal.unlikely.randombytes      4      0
+.text                              0      0
+.data                              0      0
+.bss                               0      0
+.text.unlikely.randombytes         9      0
+.comment                          48      0
+.xtensa.info                      56      0
+.xt.lit                            8      0
+.xt.prop                          36      0
+Total                            161
+
+

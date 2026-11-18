@@ -1,0 +1,16 @@
+p,C_delay / C_false per second,Optimal hold class 0 (s),Optimal hold class 1 (s),Optimal hold class 2 (s),Optimal hold class 3 (s),Origin,results.json key
+ppv,1,4.0,4.0,4.0,4.0,ANALYTICAL,v2.f.opt.ppv.ratio1.class*
+ppv,10,4.0,4.0,4.0,4.0,ANALYTICAL,v2.f.opt.ppv.ratio10.class*
+ppv,100,4.0,4.0,4.0,0.0,ANALYTICAL,v2.f.opt.ppv.ratio100.class*
+ppv,1000,4.0,0.0,0.0,0.0,ANALYTICAL,v2.f.opt.ppv.ratio1000.class*
+ppv,10000,0.0,0.0,0.0,0.0,ANALYTICAL,v2.f.opt.ppv.ratio10000.class*
+simmix,1,4.0,4.0,4.0,0.0,ANALYTICAL,v2.f.opt.simmix.ratio1.class*
+simmix,10,4.0,0.0,0.0,0.0,ANALYTICAL,v2.f.opt.simmix.ratio10.class*
+simmix,100,0.0,0.0,0.0,0.0,ANALYTICAL,v2.f.opt.simmix.ratio100.class*
+simmix,1000,0.0,0.0,0.0,0.0,ANALYTICAL,v2.f.opt.simmix.ratio1000.class*
+simmix,10000,0.0,0.0,0.0,0.0,ANALYTICAL,v2.f.opt.simmix.ratio10000.class*
+simmix_fa1,1,4.0,4.0,0.0,0.0,ANALYTICAL,v2.f.opt.simmix_fa1.ratio1.class*
+simmix_fa1,10,4.0,0.0,0.0,0.0,ANALYTICAL,v2.f.opt.simmix_fa1.ratio10.class*
+simmix_fa1,100,0.0,0.0,0.0,0.0,ANALYTICAL,v2.f.opt.simmix_fa1.ratio100.class*
+simmix_fa1,1000,0.0,0.0,0.0,0.0,ANALYTICAL,v2.f.opt.simmix_fa1.ratio1000.class*
+simmix_fa1,10000,0.0,0.0,0.0,0.0,ANALYTICAL,v2.f.opt.simmix_fa1.ratio10000.class*

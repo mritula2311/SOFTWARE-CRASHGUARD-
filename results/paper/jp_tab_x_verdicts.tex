@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Preregistered hypotheses of Blocks 4 and 4b with Holm correction over the seven (H-X1, H-X2, H-X3, H-X5 to H-X8).}
+\label{tab:jp_tab_x_verdicts}
+\begin{tabular}{lllllll}
+\toprule
+Hypothesis & Statement & Verdict & Raw p & Holm p & Origin & results.json key \\
+\midrule
+H-X1 & Fixed-point forest (16-bit): AP loss at most 0.005 and flash cut at least 30\% & NOT SUPPORTED & 0.001 & 0.007 & MEASURED\_SOFTWARE; flash ANALYTICAL & x.x1.*; x.holm.H-X1.* \\
+H-X2 & Cheap-trigger cascade raises crash pass share by 2 points at equal non-crash rate & NOT SUPPORTED & 1.0 & 1.0 & MEASURED\_SOFTWARE & x.x2.*; x.holm.H-X2.* \\
+H-X3 & Group-aware training raises recall at 1\% false alarms by 1 point (strict set) & NOT SUPPORTED & 0.275 & 1.0 & MEASURED\_SOFTWARE & x.x3.*; x.holm.H-X3.* \\
+H-X5 & Fill + ridge keeps the rank of delta-V (Spearman at least 0.90, lower end 0.85) at +-16 g & NOT SUPPORTED & 1.0 & 1.0 & MEASURED\_SOFTWARE & x.x5.*; x.holm.H-X5.* \\
+H-X6 & Lower-bound-anchored estimator lowers the 90th-percentile error by 5 points against fill + ridge & SUPPORTED & 0.001 & 0.007 & MEASURED\_SOFTWARE & x.x6.*; x.holm.H-X6.* \\
+H-X7 & Some real two-part pair reaches 0.80 where neither part alone does & NOT SUPPORTED & 1.0 & 1.0 & MEASURED\_SOFTWARE & x.x7.*; x.holm.H-X7.* \\
+H-X8 & Sequential rule decides 100 ms earlier at equal recall & NOT SUPPORTED & 1.0 & 1.0 & MEASURED\_SOFTWARE & x.x8.*; x.holm.H-X8.* \\
+\bottomrule
+\end{tabular}
+\end{table}

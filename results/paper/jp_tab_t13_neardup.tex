@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Near-duplicate NHTSA pulses (T5 rule on original-rate records): counts. Two of the 176 records are the same test channel counted twice.}
+\label{tab:jp_tab_t13_neardup}
+\begin{tabular}{llll}
+\toprule
+Quantity & Value & Origin & results.json key \\
+\midrule
+Pairs of near-identical pulses within the 176 & 2.0 & MEASURED\_SOFTWARE & t13.neardup.pairs.within\_176.all \\
+of which across make-and-model groups & 2.0 & MEASURED\_SOFTWARE & t13.neardup.pairs.within\_176.cross\_make\_model \\
+Held-out records with a near-identical pulse among the 176 & 0.0 & MEASURED\_SOFTWARE & t13.neardup.tests.heldout\_with\_duplicate\_in\_176 \\
+Pairs inside the held-out records & 1.0 & MEASURED\_SOFTWARE & t13.neardup.pairs.within\_heldout \\
+Test-side pulses with a training-side duplicate, split A & 0.0 & MEASURED\_SOFTWARE & t13.neardup.split.A.heldout\_with\_train\_duplicate \\
+Same, split G & 1.0 & MEASURED\_SOFTWARE & t13.neardup.split.G.heldout\_with\_train\_duplicate \\
+Same, repeated grouped cross-validation (mean per repeat) & 3.0 & MEASURED\_SOFTWARE & t13.neardup.split.R.tests\_with\_cross\_fold\_duplicate\_per\_repeat\_mean \\
+\bottomrule
+\end{tabular}
+\end{table}

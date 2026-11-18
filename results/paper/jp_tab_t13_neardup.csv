@@ -1,0 +1,8 @@
+Quantity,Value,Origin,results.json key
+Pairs of near-identical pulses within the 176,2.0,MEASURED_SOFTWARE,t13.neardup.pairs.within_176.all
+of which across make-and-model groups,2.0,MEASURED_SOFTWARE,t13.neardup.pairs.within_176.cross_make_model
+Held-out records with a near-identical pulse among the 176,0.0,MEASURED_SOFTWARE,t13.neardup.tests.heldout_with_duplicate_in_176
+Pairs inside the held-out records,1.0,MEASURED_SOFTWARE,t13.neardup.pairs.within_heldout
+"Test-side pulses with a training-side duplicate, split A",0.0,MEASURED_SOFTWARE,t13.neardup.split.A.heldout_with_train_duplicate
+"Same, split G",1.0,MEASURED_SOFTWARE,t13.neardup.split.G.heldout_with_train_duplicate
+"Same, repeated grouped cross-validation (mean per repeat)",3.0,MEASURED_SOFTWARE,t13.neardup.split.R.tests_with_cross_fold_duplicate_per_repeat_mean

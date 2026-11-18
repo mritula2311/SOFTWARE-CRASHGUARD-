@@ -1,0 +1,162 @@
+[
+ {
+  "key": "M1.executable",
+  "label": "auth",
+  "model": "M1",
+  "lemma": "executable",
+  "result": "verified",
+  "detail": "verified (10 steps)",
+  "expected": "verified",
+  "as_expected": true
+ },
+ {
+  "key": "M1.L1",
+  "label": "L1 alert authenticity",
+  "model": "M1",
+  "lemma": "L1_alert_authenticity",
+  "result": "verified",
+  "detail": "verified (7 steps)",
+  "expected": "verified",
+  "as_expected": true
+ },
+ {
+  "key": "M1.L2",
+  "label": "L2 ACK authenticity per vehicle",
+  "model": "M1",
+  "lemma": "L2_ack_authenticity",
+  "result": "verified",
+  "detail": "verified (8 steps)",
+  "expected": "verified",
+  "as_expected": true
+ },
+ {
+  "key": "M1.L3",
+  "label": "L3 no cross-vehicle suppression",
+  "model": "M1",
+  "lemma": "L3_no_cross_vehicle_suppression",
+  "result": "verified",
+  "detail": "verified (9 steps)",
+  "expected": "verified",
+  "as_expected": true
+ },
+ {
+  "key": "M0.L1",
+  "label": "L1 on the shared-key design",
+  "model": "M0",
+  "lemma": "L1_alert_authenticity",
+  "result": "falsified",
+  "detail": "falsified - found trace (5 steps)",
+  "expected": "falsified",
+  "as_expected": true
+ },
+ {
+  "key": "M0.L2",
+  "label": "L2 on the shared-key design",
+  "model": "M0",
+  "lemma": "L2_ack_authenticity",
+  "result": "falsified",
+  "detail": "falsified - found trace (8 steps)",
+  "expected": "falsified",
+  "as_expected": true
+ },
+ {
+  "key": "M0.L3",
+  "label": "L3' cell-wide ACK suppression found on the shared-key design",
+  "model": "M0",
+  "lemma": "L3_no_cross_vehicle_suppression",
+  "result": "falsified",
+  "detail": "falsified - found trace (8 steps)",
+  "expected": "falsified",
+  "as_expected": true
+ },
+ {
+  "key": "fresh.executable_ts",
+  "label": "executable (time-stamped alert accepted)",
+  "model": "M1",
+  "lemma": "executable_ts",
+  "result": "verified",
+  "detail": "verified (11 steps)",
+  "expected": "verified",
+  "as_expected": true
+ },
+ {
+  "key": "fresh.executable_after_car_reboot",
+  "label": "executable after a car reboot",
+  "model": "M1",
+  "lemma": "executable_after_car_reboot",
+  "result": "verified",
+  "detail": "verified (16 steps)",
+  "expected": "verified",
+  "as_expected": true
+ },
+ {
+  "key": "fresh.L4",
+  "label": "L4 replay outside the window",
+  "model": "M1",
+  "lemma": "L4_replay_outside_window",
+  "result": "verified",
+  "detail": "verified (14213 steps)",
+  "expected": "verified",
+  "as_expected": true
+ },
+ {
+  "key": "fresh.L4b",
+  "label": "L4b at most one acceptance while the seen-set is intact",
+  "model": "M1",
+  "lemma": "L4b_at_most_once",
+  "result": "verified",
+  "detail": "verified (62 steps)",
+  "expected": "verified",
+  "as_expected": true
+ },
+ {
+  "key": "fresh.L5_no_double",
+  "label": "L5 no double acceptance with a car reboot",
+  "model": "M1",
+  "lemma": "L5_no_double_accept_with_car_reboot",
+  "result": "verified",
+  "detail": "verified (124 steps)",
+  "expected": "verified",
+  "as_expected": true
+ },
+ {
+  "key": "fresh.L5_ids",
+  "label": "L5 alert ids not reused after a car reboot",
+  "model": "M1",
+  "lemma": "L5_car_alert_ids_unique",
+  "result": "timeout",
+  "detail": "no result within the limit (294 s wall time)",
+  "expected": "verified",
+  "as_expected": false
+ },
+ {
+  "key": "fresh.L5_ids_bounded",
+  "label": "L5 alert ids not reused after a car reboot, at most 3 ticks",
+  "model": "M1 (3 ticks)",
+  "lemma": "L5_car_alert_ids_unique",
+  "result": "timeout",
+  "detail": "no result within the limit (421 s wall time)",
+  "expected": "verified",
+  "as_expected": false
+ },
+ {
+  "key": "fresh.L6",
+  "label": "L6 replay inside the window after a base reboot",
+  "model": "M1",
+  "lemma": "L6_base_reboot_replay",
+  "result": "falsified",
+  "detail": "falsified - found trace (11 steps)",
+  "expected": "falsified",
+  "as_expected": true
+ },
+ {
+  "key": "fresh.L7",
+  "label": "L7 a no-time alert can be accepted epochs after it was sent",
+  "model": "M1",
+  "lemma": "L7_no_time_alert_can_be_stale",
+  "result": "verified",
+  "detail": "verified (15 steps)",
+  "expected": "verified",
+  "as_expected": true
+ }
+]

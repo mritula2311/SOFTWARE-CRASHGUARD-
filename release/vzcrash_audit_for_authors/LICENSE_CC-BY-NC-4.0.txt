@@ -1,0 +1,5 @@
+The files in this folder are derived from the VZCrash dataset (Bianconcini et al., arXiv 2606.06074;
+Hugging Face vzc-research-chapter/VZCrash, revision 42e1482d005c0e545379d6cfa4939486c9fe4249) and are released under
+the Creative Commons Attribution-NonCommercial 4.0 International licence (CC BY-NC 4.0),
+https://creativecommons.org/licenses/by-nc/4.0/ (full legal text at that address; not copied here).
+Attribution: VZCrash authors (Bianconcini et al.); modifications: duplicate-audit labels by Mritula S.

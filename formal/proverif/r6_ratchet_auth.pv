@@ -1,0 +1,55 @@
+(* Round 6, R6-3 H-R6-3a, authenticity part (docs/02_preregistration/PREREGISTRATION_V17.md section 5). ProVerif 2.05, symbolic.
+   Hash ratchet K_1 = h(K_0, lab), K_2 = h(K_1, lab), K_3 = h(K_2, lab) with K_0 = kdf(master, v), three alerts per vehicle (steps 1 to 3; the bound is three ratchet steps); the car erases K_(i-1) when it moves to K_i.
+   The attacker may compromise the vehicle at the time of step c in {1, 2, 3}: it then holds K_c (and can compute K_(c+1), ... because h is public) but not K_(c-1).
+   Query: an alert accepted for step i was sent by the vehicle unless the compromise happened at a step j <= i (the attacker held K_j, hence K_i). A past alert (i < c) cannot be forged. *)
+free c: channel.
+const lab: bitstring.
+const s1: bitstring.
+const s2: bitstring.
+const s3: bitstring.
+fun kdf(bitstring, bitstring): bitstring.
+fun h(bitstring, bitstring): bitstring.
+fun mac(bitstring, bitstring): bitstring.
+
+event CarSent(bitstring, bitstring, bitstring).
+event BaseAccept(bitstring, bitstring, bitstring).
+event CompAt(bitstring, bitstring).
+
+query v: bitstring, m: bitstring; event(BaseAccept(v, s1, m)) ==> event(CarSent(v, s1, m)) || event(CompAt(v, s1)).
+query v: bitstring, m: bitstring; event(BaseAccept(v, s2, m)) ==> event(CarSent(v, s2, m)) || event(CompAt(v, s1)) || event(CompAt(v, s2)).
+query v: bitstring, m: bitstring; event(BaseAccept(v, s3, m)) ==> event(CarSent(v, s3, m)) || event(CompAt(v, s1)) || event(CompAt(v, s2)) || event(CompAt(v, s3)).
+query v: bitstring, m: bitstring; event(BaseAccept(v, s2, m)).
+
+let Compromise(master: bitstring) =
+  in(c, v: bitstring);
+  let k0 = kdf(master, v) in
+  let k1 = h(k0, lab) in
+  let k2 = h(k1, lab) in
+  let k3 = h(k2, lab) in
+  ( ( event CompAt(v, s1); out(c, k1) )
+  | ( event CompAt(v, s2); out(c, k2) )
+  | ( event CompAt(v, s3); out(c, k3) ) ).
+
+let Car(master: bitstring) =
+  in(c, (v: bitstring, m1: bitstring, m2: bitstring, m3: bitstring));
+  let k0 = kdf(master, v) in
+  let k1 = h(k0, lab) in
+  let k2 = h(k1, lab) in
+  let k3 = h(k2, lab) in
+  event CarSent(v, s1, m1); out(c, (v, s1, m1, mac(k1, (s1, m1))));
+  event CarSent(v, s2, m2); out(c, (v, s2, m2, mac(k2, (s2, m2))));
+  event CarSent(v, s3, m3); out(c, (v, s3, m3, mac(k3, (s3, m3)))).
+
+let Base(master: bitstring) =
+  in(c, (v: bitstring, i: bitstring, m: bitstring, t: bitstring));
+  let k0 = kdf(master, v) in
+  let k1 = h(k0, lab) in
+  let k2 = h(k1, lab) in
+  let k3 = h(k2, lab) in
+  ( ( if i = s1 then if t = mac(k1, (s1, m)) then event BaseAccept(v, s1, m) )
+  | ( if i = s2 then if t = mac(k2, (s2, m)) then event BaseAccept(v, s2, m) )
+  | ( if i = s3 then if t = mac(k3, (s3, m)) then event BaseAccept(v, s3, m) ) ).
+
+process
+  new master: bitstring;
+  ( !Compromise(master) | !Car(master) | !Base(master) )

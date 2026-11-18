@@ -1,0 +1,13 @@
+lemma: forward_secrecy
+command: tamarin-prover  --prove=forward_secrecy formal/ratchet.spthy +RTS -N1 -M5g -RTS ; time limit 280 s
+maude tool: 'maude'
+ checking version: 3.5.1. OK.
+ checking installation: OK.
+[Theory Ratchet] Theory loaded
+[Theory Ratchet] Theory translated
+[Theory Ratchet] Derivation checks started
+[Theory Ratchet] Derivation checks ended
+[Theory Ratchet] Theory closed
+[Saturating Sources] Step 1 (Max 5)
+[Saturating Sources] Done
+exit code: 124 ; wall time 280 s ; peak memory 5777 MB

@@ -1,0 +1,12 @@
+quantity,recomputed,stored,difference,stored_key
+test_events_after_16g_drop.vs_stored,24172,,,
+exact.acc.groups_across_splits.vs_stored,217,217.0,0.0,leakage.exact_hash_groups_across_splits
+exact.acc.cross_events_total.vs_stored,439,439.0,0.0,leakage.cross_split_group_events.total
+exact.acc.cross_events.crash.vs_stored,426,426.0,0.0,leakage.cross_split_group_events.crash
+exact.acc.cross_events.near_miss.vs_stored,2,2.0,0.0,leakage.cross_split_group_events.near_miss
+exact.acc.cross_events.normal_driving.vs_stored,11,11.0,0.0,leakage.cross_split_group_events.normal_driving
+exact.acc.events_equal_to_an_earlier_event.vs_stored,437,437.0,0.0,leakage.exact_hash_duplicates_total
+near.test_windows_scanned.vs_stored,5863,5863.0,0.0,dupscan.neardup.n_scanned
+near.test_events_not_triggered.vs_stored,18309,18309.0,0.0,dupscan.neardup.n_not_triggered
+near.test_windows_both.vs_stored,1305,1305.0,0.0,dupscan.neardup.n_both
+near.test_windows_corr_only.vs_stored,6,6.0,0.0,dupscan.neardup.n_corr_only

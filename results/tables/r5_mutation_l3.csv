@@ -1,0 +1,28 @@
+id,file,description,status
+L305,src/crashguard/r5_l3.py,hold one sample longer,KILLED
+L306,src/crashguard/r5_l3.py,awake period start search stops early,KILLED
+L307,src/crashguard/r5_l3.py,idle node at the trigger still counted as woken,KILLED
+L308,src/crashguard/r5_l3.py,hold counted from sample 0 without an assertion,KILLED
+L301,src/crashguard/r5_l3.py,running mean off by one,KILLED
+L302,src/crashguard/r5_l3.py,history window doubled,KILLED
+L303,src/crashguard/r5_l3.py,no gravity prior at sample 0,KILLED
+L304,src/crashguard/r5_l3.py,deviation signed,KILLED
+L309,src/crashguard/r5_l3.py,zero-order hold looks forward,KILLED
+L310,src/crashguard/r5_l3.py,idle rate until one sample after the interrupt,KILLED
+L311,src/crashguard/r5_l3.py,no gyro start-up time,KILLED
+L312,src/crashguard/r5_l3.py,gyro available before the interrupt,KILLED
+L313,src/crashguard/r5_l3.py,FIFO use off by one,KILLED
+L314,src/crashguard/r5_l3.py,FIFO sample size with gyro,KILLED
+L315,src/crashguard/r5_l3.py,MCU sleep current left out,KILLED
+L316,src/crashguard/r5_l3.py,active share and idle share swapped,KILLED
+L317,src/crashguard/r5_l3.py,MCU active current left out of A,KILLED
+L318,src/crashguard/r5_l3.py,break-even formula sign,KILLED
+L319,src/crashguard/r5_l3.py,sensor current of A from the gyro-only entry,KILLED
+L320,src/crashguard/r5_l3.py,loss sign,KILLED
+L321,src/crashguard/r5_l3.py,recall margin of 5 points,KILLED
+L322,src/crashguard/r5_l3.py,p against zero instead of the margin,KILLED
+L323,src/crashguard/r5_l3.py,mask ignored,KILLED
+L324,src/crashguard/r5_l3.py,wrong class probability,KILLED
+L325,src/crashguard/r5_l3.py,missed events given score 0,KILLED
+L326,src/crashguard/r5_l3.py,detection flag ignored,KILLED
+L327,src/crashguard/r5_l3.py,interrupt after the trigger counts as detected,KILLED

@@ -1,0 +1,17 @@
+build/r6fp/cg_r6_anchor.o  :
+section              size   addr
+.literal.cg_anchor     36      0
+.text                   0      0
+.data                   0      0
+.bss                    0      0
+.text.cg_anchor       170      0
+.text.startup.main      7      0
+.bss.cg_sink_i          4      0
+.bss.cg_sink_f          4      0
+.comment               48      0
+.xtensa.info           56      0
+.xt.lit                 8      0
+.xt.prop              108      0
+Total                 441
+
+

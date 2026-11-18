@@ -1,0 +1,10 @@
+Range (g),Family,Area under mis-triage against escalation,Lower 95%,Upper 95%,Origin,results.json key
++-16,"point class (P0, P1, P2), thresholds scaled",0.0543,0.0269,0.0923,MEASURED_SOFTWARE,t2.r16.point.auc; t2.r16.point.auc_lo; t2.r16.point.auc_hi
++-16,"upper end of class interval (P3, P4), alpha varied",0.1258,0.073,0.1861,MEASURED_SOFTWARE,t2.r16.interval.auc; t2.r16.interval.auc_lo; t2.r16.interval.auc_hi
++-16,interval minus point (negative = interval better),0.0715,0.0321,0.1101,MEASURED_SOFTWARE,t2.r16.auc_interval_minus_point; t2.r16.auc_interval_minus_point_lo; t2.r16.auc_interval_minus_point_hi
++-32,"point class (P0, P1, P2), thresholds scaled",0.0172,0.0056,0.0471,MEASURED_SOFTWARE,t2.r32.point.auc; t2.r32.point.auc_lo; t2.r32.point.auc_hi
++-32,"upper end of class interval (P3, P4), alpha varied",0.0391,0.0123,0.073,MEASURED_SOFTWARE,t2.r32.interval.auc; t2.r32.interval.auc_lo; t2.r32.interval.auc_hi
++-32,interval minus point (negative = interval better),0.0219,-0.0136,0.0454,MEASURED_SOFTWARE,t2.r32.auc_interval_minus_point; t2.r32.auc_interval_minus_point_lo; t2.r32.auc_interval_minus_point_hi
++-64,"point class (P0, P1, P2), thresholds scaled",0.0122,0.0045,0.0424,MEASURED_SOFTWARE,t2.r64.point.auc; t2.r64.point.auc_lo; t2.r64.point.auc_hi
++-64,"upper end of class interval (P3, P4), alpha varied",0.0253,0.0033,0.0543,MEASURED_SOFTWARE,t2.r64.interval.auc; t2.r64.interval.auc_lo; t2.r64.interval.auc_hi
++-64,interval minus point (negative = interval better),0.0131,-0.0249,0.0289,MEASURED_SOFTWARE,t2.r64.auc_interval_minus_point; t2.r64.auc_interval_minus_point_lo; t2.r64.auc_interval_minus_point_hi

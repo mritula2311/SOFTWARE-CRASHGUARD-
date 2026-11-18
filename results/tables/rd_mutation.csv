@@ -1,0 +1,32 @@
+id,file,description,status
+M01,src/crashguard/rd_policy.py,time left: sign of elapsed time,KILLED
+M02,src/crashguard/rd_policy.py,retry allowed: strict comparison,KILLED
+M03,src/crashguard/rd_policy.py,retry allowed: airtime ignored,KILLED
+M04,src/crashguard/rd_policy.py,Beta update: failure and success swapped,KILLED
+M05,src/crashguard/rd_policy.py,Beta forgetting skipped on a,KILLED
+M06,src/crashguard/rd_policy.py,Beta mean inverted,KILLED
+M07,src/crashguard/rd_policy.py,loss bin edge side,KILLED
+M08,src/crashguard/rd_policy.py,load bin edge side,KILLED
+M09,src/crashguard/rd_policy.py,budget units rounded up,KILLED
+M10,src/crashguard/rd_policy.py,lookup: no time left check removed,KILLED
+M11,src/crashguard/rd_policy.py,lookup ignores the number of failed attempts,KILLED
+M12,src/crashguard/rd_policy.py,DP feasibility ignores the gap,KILLED
+M13,src/crashguard/rd_policy.py,DP budget charge rounded down,KILLED
+M14,src/crashguard/rd_policy.py,DP crowd term removed,KILLED
+M15,src/crashguard/rd_policy.py,monotone projection over time removed,KILLED
+M16,src/crashguard/rd_policy.py,monotone projection over loss removed,KILLED
+M17,src/crashguard/rd_policy.py,cluster ACK length: one byte per id,KILLED
+M18,src/crashguard/rd_policy.py,signature not verified,KILLED
+M19,src/crashguard/rd_policy.py,event id check inverted,KILLED
+M20,src/crashguard/rd_policy.py,freshness window one-sided,KILLED
+M21,src/crashguard/rd_policy.py,replay check removed,KILLED
+M22,src/crashguard/rd_policy.py,processed frames not remembered,KILLED
+M23,src/crashguard/rd_policy.py,listing test inverted,KILLED
+M24,src/crashguard/rd_policy.py,length consistency check removed,KILLED
+M25,src/crashguard/rd_policy.py,vehicle does not stop on a verified listing,KILLED
+M26,src/crashguard/rd_policy.py,a defer becomes a stop,KILLED
+M27,src/crashguard/rd_policy.py,defer interval unbounded above and may lower ready,KILLED
+M28,src/crashguard/verifier.py,base verifier: tag check skipped,KILLED
+M29,src/crashguard/verifier.py,base verifier: replay counter off by one,KILLED
+M30,src/crashguard/verifier.py,node: ACK counter not checked,KILLED
+M31,src/crashguard/packet.py,tag comparison always true,KILLED

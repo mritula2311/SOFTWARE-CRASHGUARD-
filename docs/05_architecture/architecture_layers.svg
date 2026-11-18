@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 714" width="980" height="714" font-family="Segoe UI, Arial, sans-serif" role="img" aria-label="Layered architecture of CrashGuard with the status of every element">
+<rect width="980" height="714" fill="#ffffff"/>
+<text x="14" y="28" font-size="18" font-weight="700" fill="#111">CrashGuard layers and the four candidates (R1 to R4)</text>
+<text x="14" y="46" font-size="12" fill="#444">Border and tag give the status: IMPL solid, SIM dashed, DESIGN dotted. Nothing here is measured on hardware.</text>
+<text x="14" y="72" font-size="13" font-weight="700" fill="#111">Sensing</text>
+<rect x="164.0" y="56" width="396.0" height="74" rx="6" fill="#cfe3f3" stroke="#0072B2" stroke-width="2"/>
+<text x="172.0" y="74" font-size="12" fill="#111">MPU6050 +-16 g, 100 Hz; 6 SW-420 switches</text>
+<text x="552.0" y="122" font-size="10" font-weight="700" fill="#0072B2" text-anchor="end">IMPL</text>
+<text x="172.0" y="122" font-size="10" fill="#444">software reads the logs; the sensors were not measured here</text>
+<rect x="570.0" y="56" width="396.0" height="74" rx="6" fill="#fbe9c4" stroke="#B07800" stroke-width="2" stroke-dasharray="6 3"/>
+<text x="578.0" y="74" font-size="12" fill="#111">simulated hardware-format logs (19 fault variants)</text>
+<text x="958.0" y="122" font-size="10" font-weight="700" fill="#B07800" text-anchor="end">SIM</text>
+<text x="578.0" y="122" font-size="10" fill="#444">Part S</text>
+<text x="14" y="156" font-size="13" font-weight="700" fill="#111">Edge detector</text>
+<rect x="164.0" y="140" width="260.7" height="74" rx="6" fill="#cfe3f3" stroke="#0072B2" stroke-width="2"/>
+<text x="172.0" y="158" font-size="12" fill="#111">2 g trigger, 2.8 s window, 14 features</text>
+<text x="416.7" y="206" font-size="10" font-weight="700" fill="#0072B2" text-anchor="end">IMPL</text>
+<rect x="434.7" y="140" width="260.7" height="74" rx="6" fill="#cfe3f3" stroke="#0072B2" stroke-width="2"/>
+<text x="442.7" y="158" font-size="12" fill="#111">15-tree forest, early-exit rule</text>
+<text x="687.3" y="206" font-size="10" font-weight="700" fill="#0072B2" text-anchor="end">IMPL</text>
+<rect x="705.3" y="140" width="260.7" height="74" rx="6" fill="#cfe3f3" stroke="#0072B2" stroke-width="2"/>
+<text x="713.3" y="158" font-size="12" fill="#111">impact side from one IMU</text>
+<text x="958.0" y="206" font-size="10" font-weight="700" fill="#0072B2" text-anchor="end">IMPL</text>
+<text x="713.3" y="206" font-size="10" fill="#444">fails under an axis flip and at 10 Hz (S2)</text>
+<text x="14" y="240" font-size="13" font-weight="700" fill="#111">Severity</text>
+<rect x="164.0" y="224" width="396.0" height="74" rx="6" fill="#cfe3f3" stroke="#0072B2" stroke-width="2"/>
+<text x="172.0" y="242" font-size="12" fill="#111">delta-V and ASI estimate, class table</text>
+<text x="552.0" y="290" font-size="10" font-weight="700" fill="#0072B2" text-anchor="end">IMPL</text>
+<rect x="570.0" y="224" width="396.0" height="74" rx="6" fill="#cfe3f3" stroke="#0072B2" stroke-width="2"/>
+<text x="578.0" y="242" font-size="12" fill="#111">clipping restoration, conformal class interval (UA-SCT)</text>
+<text x="958.0" y="290" font-size="10" font-weight="700" fill="#0072B2" text-anchor="end">IMPL</text>
+<text x="578.0" y="290" font-size="10" fill="#444">narrow evaluations</text>
+<text x="14" y="324" font-size="13" font-weight="700" fill="#111">Alert frame</text>
+<rect x="164.0" y="308" width="260.7" height="74" rx="6" fill="#cfe3f3" stroke="#0072B2" stroke-width="2"/>
+<text x="172.0" y="326" font-size="12" fill="#111">97-byte alert, 26-byte ACK, 14-byte</text>
+<text x="172.0" y="340" font-size="12" fill="#111">flash and CANCEL</text>
+<text x="416.7" y="374" font-size="10" font-weight="700" fill="#0072B2" text-anchor="end">IMPL</text>
+<rect x="434.7" y="308" width="260.7" height="74" rx="6" fill="#fbe9c4" stroke="#B07800" stroke-width="2" stroke-dasharray="6 3"/>
+<text x="442.7" y="326" font-size="12" fill="#111">R2: 24 to 40-byte frames with 7 to</text>
+<text x="442.7" y="340" font-size="12" fill="#111">8-byte tags</text>
+<text x="687.3" y="374" font-size="10" font-weight="700" fill="#B07800" text-anchor="end">SIM</text>
+<text x="442.7" y="374" font-size="10" fill="#444">fields not designed</text>
+<rect x="705.3" y="308" width="260.7" height="74" rx="6" fill="#fbe9c4" stroke="#B07800" stroke-width="2" stroke-dasharray="6 3"/>
+<text x="713.3" y="326" font-size="12" fill="#111">R3: provisional flash, then confirm or</text>
+<text x="713.3" y="340" font-size="12" fill="#111">cancel</text>
+<text x="958.0" y="374" font-size="10" font-weight="700" fill="#B07800" text-anchor="end">SIM</text>
+<text x="14" y="408" font-size="13" font-weight="700" fill="#111">Freshness and authentication</text>
+<rect x="164.0" y="392" width="260.7" height="74" rx="6" fill="#cfe3f3" stroke="#0072B2" stroke-width="2"/>
+<text x="172.0" y="410" font-size="12" fill="#111">HMAC-SHA256/64 and a persisted counter</text>
+<text x="416.7" y="458" font-size="10" font-weight="700" fill="#0072B2" text-anchor="end">IMPL</text>
+<text x="172.0" y="458" font-size="10" fill="#444">reference verifier; firmware not in the repos.</text>
+<rect x="434.7" y="392" width="260.7" height="74" rx="6" fill="#fbe9c4" stroke="#B07800" stroke-width="2" stroke-dasharray="6 3"/>
+<text x="442.7" y="410" font-size="12" fill="#111">R1: GPS-time freshness field (GTF)</text>
+<text x="687.3" y="458" font-size="10" font-weight="700" fill="#B07800" text-anchor="end">SIM</text>
+<text x="442.7" y="458" font-size="10" fill="#444">bounded model and Monte Carlo</text>
+<rect x="705.3" y="392" width="260.7" height="74" rx="6" fill="#fbe9c4" stroke="#B07800" stroke-width="2" stroke-dasharray="6 3"/>
+<text x="713.3" y="410" font-size="12" fill="#111">R4: per-vehicle keys, ACK bound to</text>
+<text x="713.3" y="424" font-size="12" fill="#111">vehicle and counter</text>
+<text x="958.0" y="458" font-size="10" font-weight="700" fill="#B07800" text-anchor="end">SIM</text>
+<text x="713.3" y="458" font-size="10" fill="#444">bounded model; ACK bytes tested</text>
+<text x="14" y="492" font-size="13" font-weight="700" fill="#111">MAC and retry policy</text>
+<rect x="164.0" y="476" width="396.0" height="74" rx="6" fill="#fbe9c4" stroke="#B07800" stroke-width="2" stroke-dasharray="6 3"/>
+<text x="172.0" y="494" font-size="12" fill="#111">duty-cycle token bucket, severity table, SCT and UA-SCT</text>
+<text x="552.0" y="542" font-size="10" font-weight="700" fill="#B07800" text-anchor="end">SIM</text>
+<text x="172.0" y="542" font-size="10" fill="#444">simulator</text>
+<rect x="570.0" y="476" width="396.0" height="74" rx="6" fill="#fbe9c4" stroke="#B07800" stroke-width="2" stroke-dasharray="6 3"/>
+<text x="578.0" y="494" font-size="12" fill="#111">listen-before-talk, slotted baselines</text>
+<text x="958.0" y="542" font-size="10" font-weight="700" fill="#B07800" text-anchor="end">SIM</text>
+<text x="14" y="576" font-size="13" font-weight="700" fill="#111">Base and ACK</text>
+<rect x="164.0" y="560" width="396.0" height="74" rx="6" fill="#cfe3f3" stroke="#0072B2" stroke-width="2"/>
+<text x="172.0" y="578" font-size="12" fill="#111">reference base verifier, idempotent re-ACK, ACK budget</text>
+<text x="552.0" y="626" font-size="10" font-weight="700" fill="#0072B2" text-anchor="end">IMPL</text>
+<rect x="570.0" y="560" width="396.0" height="74" rx="6" fill="#f1dce8" stroke="#A0446F" stroke-width="2" stroke-dasharray="2 3"/>
+<text x="578.0" y="578" font-size="12" fill="#111">base on an ESP32 with SX1278</text>
+<text x="958.0" y="626" font-size="10" font-weight="700" fill="#A0446F" text-anchor="end">DESIGN</text>
+<text x="578.0" y="626" font-size="10" fill="#444">built by the author, not measured here</text>
+<text x="14" y="676" font-size="12" fill="#111">Candidates: R1 freshness (supplement), R2 frame and tag length (supplement), R3 two-stage alert (main paper), R4 per-vehicle ACK keys (main paper).</text>
+<text x="14" y="694" font-size="11" fill="#444">Verdicts: see docs/03_results/COMBINED_VERDICTS.md. Evidence labels: SIMULATED, SIMULATED_HW_FORMAT, ANALYTICAL, MEASURED_SOFTWARE.</text>
+</svg>

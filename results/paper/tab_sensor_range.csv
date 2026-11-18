@@ -1,0 +1,7 @@
+Range (g),Rate (Hz),Share within 10%,Lower 95%,Upper 95%,Origin,results.json key
++-16,100,0.068,0.034,0.108,MEASURED_SOFTWARE,sevstudy.grid.r16.f100.dv_within10; sevstudy.grid.r16.f100.dv_within10_lo; sevstudy.grid.r16.f100.dv_within10_hi
++-16,200,0.068,0.034,0.108,MEASURED_SOFTWARE,sevstudy.grid.r16.f200.dv_within10; sevstudy.grid.r16.f200.dv_within10_lo; sevstudy.grid.r16.f200.dv_within10_hi
++-32,100,0.659,0.585,0.733,MEASURED_SOFTWARE,sevstudy.grid.r32.f100.dv_within10; sevstudy.grid.r32.f100.dv_within10_lo; sevstudy.grid.r32.f100.dv_within10_hi
++-32,200,0.733,0.665,0.801,MEASURED_SOFTWARE,sevstudy.grid.r32.f200.dv_within10; sevstudy.grid.r32.f200.dv_within10_lo; sevstudy.grid.r32.f200.dv_within10_hi
++-64,100,0.784,0.721,0.841,MEASURED_SOFTWARE,sevstudy.grid.r64.f100.dv_within10; sevstudy.grid.r64.f100.dv_within10_lo; sevstudy.grid.r64.f100.dv_within10_hi
++-64,200,0.881,0.83,0.926,MEASURED_SOFTWARE,sevstudy.grid.r64.f200.dv_within10; sevstudy.grid.r64.f200.dv_within10_lo; sevstudy.grid.r64.f200.dv_within10_hi

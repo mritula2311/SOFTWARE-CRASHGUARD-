@@ -1,0 +1,16 @@
+{
+ "chosen": 0,
+ "params": {
+  "a_min": 1.0,
+  "still_s": 2.0,
+  "g_still": 3.0,
+  "ang_stale": 10.0,
+  "a_still": 0.15,
+  "sd_still": 0.02,
+  "seg_min_s": 2.0,
+  "seg_trim_s": 0.25,
+  "straight_dps": 5.0,
+  "h_min_g": 0.05
+ },
+ "rule": "V16 3.5: highest pooled development side accuracy; defaults kept unless another iteration is better by more than 1 point"
+}

@@ -1,0 +1,4 @@
+Training,Recall at 1% false alarms (strict set),AP,Origin,results.json key
+standard,"0.5584 [0.5415, 0.5758]","0.8922 [0.8810, 0.9040]",MEASURED_SOFTWARE,x.x3.strict.standard.*
+down-weight by group size,"0.5595 [0.5429, 0.5775]","0.8924 [0.8813, 0.9045]",MEASURED_SOFTWARE,x.x3.strict.downweight.*
+merge (exploratory),"0.5622 [0.5449, 0.5796]","0.8920 [0.8806, 0.9043]",MEASURED_SOFTWARE,x.x3.strict.merge.*

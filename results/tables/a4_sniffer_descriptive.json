@@ -1,0 +1,43 @@
+{
+ "sites": {
+  "01_Brno": {
+   "uplink_rows": 131518,
+   "devices_seen": 1716,
+   "links_included": 195
+  },
+  "02_Liege": {
+   "uplink_rows": 11986,
+   "devices_seen": 3459,
+   "links_included": 11
+  },
+  "04_Graz": {
+   "uplink_rows": 81997,
+   "devices_seen": 766,
+   "links_included": 125
+  },
+  "05_Wien": {
+   "uplink_rows": 1216717,
+   "devices_seen": 20979,
+   "links_included": 677
+  },
+  "07_Brno": {
+   "uplink_rows": 620504,
+   "devices_seen": 5794,
+   "links_included": 949
+  }
+ },
+ "n_included": 1957,
+ "groups": {
+  "L": 157,
+  "M": 342,
+  "H": 1458
+ },
+ "loss_quantiles": {
+  "0.05": 0.05885944092827004,
+  "0.25": 0.37952559300873906,
+  "0.5": 0.7526799387442573,
+  "0.75": 0.8541846419327006,
+  "0.95": 0.9378179348119074
+ },
+ "rules": "PREREGISTRATION_V15 section 1.2 (V14 section 1.2 rules)"
+}

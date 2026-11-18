@@ -1,0 +1,13 @@
+set,model,metric,value
+dedup,cnn_float,ap,0.9613868536939727
+dedup,cnn_float,recall_1pct,0.7688336985634283
+dedup,cnn_float,recall_5pct,0.9499878256635013
+dedup,cnn_int8,ap,0.9613787406195081
+dedup,cnn_int8,recall_1pct,0.7685415144874603
+dedup,cnn_int8,recall_5pct,0.949890430971512
+strict,cnn_float,ap,0.9403720402926483
+strict,cnn_float,recall_1pct,0.7194341529134388
+strict,cnn_float,recall_5pct,0.93499494779387
+strict,cnn_int8,ap,0.9403448366816969
+strict,cnn_int8,recall_1pct,0.7188952509262377
+strict,cnn_int8,recall_5pct,0.9348602222970698

@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Results that did not clear their interval, went against the idea, or could not be run.}
+\label{tab:tab_null_results}
+\begin{tabular}{llllll}
+\toprule
+Result & Value & Lower 95\% & Upper 95\% & Origin & results.json key \\
+\midrule
+N20 conformal false-alarm guarantee at alpha 5\% (calibration de-duplicated) & 0.05457 & 0.05418 & 0.05502 & MEASURED\_SOFTWARE & n20c.clean.a5.nall.conformal.fa\_mean \\
+N24 class rule on delta-V intervals (drop in under-estimation, +-16 g, 90\%) & -0.4398 & -0.5121 & -0.3679 & MEASURED\_SOFTWARE & n24.r16.nom90.under\_drop \\
+N25 precision gain of the prior-shift rule at 0.02\% prevalence (recall change) & -0.893485 & -0.930175 & -0.856975 & MEASURED\_SOFTWARE & s10.rf15.pi0p02pct.b\_known.d\_recall\_vs\_a \\
+N14 M+ capped minus M+, 90th percentile (+-16 g) & 0.0 & 0.0 & 0.0 & MEASURED\_SOFTWARE & n14s.cap.R.r16.paired.Mpc\_vs\_Mp.d\_p90 \\
+UA-SCT P3 minus P1, steady-state critical reach within 10 s (+-16 g) & -0.00231 & -0.01188 & 0.00712 & SIMULATED & s11.diff.r16.steady.P3\_minus\_P1.reach10\_critical \\
+UA-SCT P3 minus P1e, mis-triage at equal escalation (+-16 g) & -0.0031 & -0.0109 & 0.0033 & MEASURED\_SOFTWARE & t1.r16.mis\_triage\_p3\_minus\_p1e \\
+Equal escalation: P3 minus P2e, burst critical reach within 10 s (+-16 g) & -0.00183 & -0.00427 & 0.00065 & SIMULATED & t1.r16.burst.P3\_minus\_P2e.reach10\_critical \\
+N19 early exit with the ensemble: recall change (5\% target) & 0.0 & 0.0 & 0.0 & MEASURED\_SOFTWARE & s6.a5.mean5.d.E\_minus\_Ep.recall \\
+Second public crash dataset (T13) & NOT\_RUN &  &  & NOT\_RUN & t13.second\_dataset.analysis \\
+\bottomrule
+\end{tabular}
+\end{table}

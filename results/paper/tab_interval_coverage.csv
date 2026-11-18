@@ -1,0 +1,13 @@
+Range (g),Target,Version,Coverage,Lower 95%,Upper 95%,Mean width (classes),Origin,results.json key
++-16,90%,pooled,0.955,0.923,0.981,2.44,MEASURED_SOFTWARE,ua.r16.a10.pooled.coverage; ua.r16.a10.pooled.coverage_lo; ua.r16.a10.pooled.coverage_hi; ua.r16.a10.pooled.width; ua.r16.a10.pooled.width_lo; ua.r16.a10.pooled.width_hi
++-16,90%,class-conditional,0.95,0.922,0.975,2.33,MEASURED_SOFTWARE,ua.r16.a10.cc.coverage; ua.r16.a10.cc.coverage_lo; ua.r16.a10.cc.coverage_hi; ua.r16.a10.cc.width; ua.r16.a10.cc.width_lo; ua.r16.a10.cc.width_hi
++-16,95%,pooled,0.982,0.967,0.993,3.01,MEASURED_SOFTWARE,ua.r16.a5.pooled.coverage; ua.r16.a5.pooled.coverage_lo; ua.r16.a5.pooled.coverage_hi; ua.r16.a5.pooled.width; ua.r16.a5.pooled.width_lo; ua.r16.a5.pooled.width_hi
++-16,95%,class-conditional,0.978,0.961,0.993,2.84,MEASURED_SOFTWARE,ua.r16.a5.cc.coverage; ua.r16.a5.cc.coverage_lo; ua.r16.a5.cc.coverage_hi; ua.r16.a5.cc.width; ua.r16.a5.cc.width_lo; ua.r16.a5.cc.width_hi
++-32,90%,pooled,0.983,0.964,0.997,2.33,MEASURED_SOFTWARE,ua.r32.a10.pooled.coverage; ua.r32.a10.pooled.coverage_lo; ua.r32.a10.pooled.coverage_hi; ua.r32.a10.pooled.width; ua.r32.a10.pooled.width_lo; ua.r32.a10.pooled.width_hi
++-32,90%,class-conditional,0.967,0.945,0.987,1.87,MEASURED_SOFTWARE,ua.r32.a10.cc.coverage; ua.r32.a10.cc.coverage_lo; ua.r32.a10.cc.coverage_hi; ua.r32.a10.cc.width; ua.r32.a10.cc.width_lo; ua.r32.a10.cc.width_hi
++-32,95%,pooled,0.986,0.968,1.0,2.5,MEASURED_SOFTWARE,ua.r32.a5.pooled.coverage; ua.r32.a5.pooled.coverage_lo; ua.r32.a5.pooled.coverage_hi; ua.r32.a5.pooled.width; ua.r32.a5.pooled.width_lo; ua.r32.a5.pooled.width_hi
++-32,95%,class-conditional,0.988,0.973,0.999,2.5,MEASURED_SOFTWARE,ua.r32.a5.cc.coverage; ua.r32.a5.cc.coverage_lo; ua.r32.a5.cc.coverage_hi; ua.r32.a5.cc.width; ua.r32.a5.cc.width_lo; ua.r32.a5.cc.width_hi
++-64,90%,pooled,0.94,0.899,0.974,1.41,MEASURED_SOFTWARE,ua.r64.a10.pooled.coverage; ua.r64.a10.pooled.coverage_lo; ua.r64.a10.pooled.coverage_hi; ua.r64.a10.pooled.width; ua.r64.a10.pooled.width_lo; ua.r64.a10.pooled.width_hi
++-64,90%,class-conditional,0.96,0.927,0.987,1.55,MEASURED_SOFTWARE,ua.r64.a10.cc.coverage; ua.r64.a10.cc.coverage_lo; ua.r64.a10.cc.coverage_hi; ua.r64.a10.cc.width; ua.r64.a10.cc.width_lo; ua.r64.a10.cc.width_hi
++-64,95%,pooled,0.986,0.97,0.999,2.25,MEASURED_SOFTWARE,ua.r64.a5.pooled.coverage; ua.r64.a5.pooled.coverage_lo; ua.r64.a5.pooled.coverage_hi; ua.r64.a5.pooled.width; ua.r64.a5.pooled.width_lo; ua.r64.a5.pooled.width_hi
++-64,95%,class-conditional,0.988,0.972,1.0,2.19,MEASURED_SOFTWARE,ua.r64.a5.cc.coverage; ua.r64.a5.cc.coverage_lo; ua.r64.a5.cc.coverage_hi; ua.r64.a5.cc.width; ua.r64.a5.cc.width_lo; ua.r64.a5.cc.width_hi

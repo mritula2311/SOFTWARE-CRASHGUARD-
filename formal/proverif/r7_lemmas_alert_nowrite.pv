@@ -1,0 +1,60 @@
+(* Round 7 B2.2 control: the boot counter is not written (every boot starts from the same value b0), otherwise as r7_lemmas_alert.pv. The uniqueness of sent ids (query 1) must FAIL, as in carid_bootctr_nowrite.pv. *)
+(* Round 7 B2.2: the C4 alert lemmas rerun with the pseudonymous id. Authenticity, anti-replay (injective) and the boot-counter fix.
+   Alert id a = (boot, epoch, seq) as in carid_bootctr_same_epoch.pv, but the frame carries the pseudonym p = prf(k_v, <tagP, a>) and the encrypted content instead of the vehicle id and the id; the base resolves p through its
+   window table, checks the tag mac(k_v, <tagA, p, ct>) and keeps a seen-set of (v, a). The boot counter is a fresh name per boot (one non-volatile write per boot); the environment chooses the epoch at every boot, so reboots
+   inside one second are covered and the number of boots is unbounded. The attacker may reveal the key of any vehicle (Revealed).
+   Queries: (1) the ids a vehicle sends are unique (boot-counter fix); (2) acceptance of an id implies that the vehicle sent it, unless its key was revealed; (3) the injective form: each acceptance is matched by its own send
+   (anti-replay with the seen-set); (4) executability. ProVerif 2.05. *)
+free c: channel.
+const tagA: bitstring.
+const tagP: bitstring.
+const tagE: bitstring.
+fun kdf(bitstring, bitstring): bitstring.
+fun prf(bitstring, bitstring): bitstring.
+fun mac(bitstring, bitstring): bitstring.
+fun senc(bitstring, bitstring, bitstring): bitstring.
+fun mkid(bitstring, bitstring, bitstring): bitstring [data].
+const b0: bitstring.
+const s1: bitstring.
+const s2: bitstring.
+free vehicle: bitstring.
+table window(bitstring, bitstring, bitstring).
+table seen(bitstring, bitstring).
+
+event CarSend(bitstring, bitstring, bitstring).
+event CarSendId(bitstring, bitstring).
+event BaseAccept(bitstring, bitstring).
+event Revealed(bitstring).
+
+query v: bitstring, a: bitstring, i1: bitstring, i2: bitstring; event(CarSend(v, a, i1)) && event(CarSend(v, a, i2)) ==> i1 = i2.
+query v: bitstring, a: bitstring; event(BaseAccept(v, a)) ==> (event(CarSendId(v, a)) || event(Revealed(v))).
+query v: bitstring, a: bitstring; inj-event(BaseAccept(v, a)) ==> (inj-event(CarSendId(v, a)) || event(Revealed(v))).
+query v: bitstring, a: bitstring; event(BaseAccept(v, a)).
+
+let SendOne(km: bitstring, v: bitstring, b: bitstring, e: bitstring, s: bitstring) =
+  new i: bitstring;
+  let a = mkid(b, e, s) in
+  let kv = kdf(km, v) in
+  let p = prf(kv, (tagP, a)) in
+  let ct = senc(kdf(kv, tagE), a, i) in
+  event CarSendId(v, a);
+  event CarSend(v, a, i);
+  insert window(p, v, a);
+  out(c, (p, ct, mac(kv, (tagA, p, ct, a)))).
+
+let Boot(km: bitstring, v: bitstring) =
+  in(c, e: bitstring);
+  ( SendOne(km, v, b0, e, s1) | SendOne(km, v, b0, e, s2) ).
+
+let Base(km: bitstring) =
+  !( in(c, (p: bitstring, ct: bitstring, t: bitstring));
+     get window(=p, v, a) in
+     if t = mac(kdf(km, v), (tagA, p, ct, a)) then
+     get seen(=v, =a) in 0 else
+     ( insert seen(v, a); event BaseAccept(v, a) ) ).
+
+let Reveal(km: bitstring) = !( in(c, w: bitstring); event Revealed(w); out(c, kdf(km, w)) ).
+
+process
+  new km: bitstring;
+  ( !Boot(km, vehicle) | Base(km) | Reveal(km) )

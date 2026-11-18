@@ -1,0 +1,194 @@
+# Regular expressions (one per line) matched against the 14 characters around a bare number in the result sections of main.tex. Each entry is a design constant, an identifier or a count of items in prose, not a result.
+# configuration constants
+\+\-?16 g|\\pm\$16 g|\\pm\$\s*16
+\\pm\$\s*10
+100 Hz
+10 Hz
+200 Hz
+SF\s*\d
+# design constants
+1\\% (target|false)
+5\\% target
+5\\% (and|at)
+10 s
+0\.80
+0\.90
+0\.10
+40\\%
+10\\% limit
+36 s
+two points
+5 points
+1\\% limit
+50 ms
+200 ms
+100 ms
+1\.8 s
+250 ms
+# ids and counts of items in prose
+Table~
+Fig\.~
+C\d
+R\d
+L\d
+M\d
+M0
+M1
+N\d+
+V\d+
+P\d
+D\d
+ns-3
+of 16
+of 8
+of 32
+three vehicles
+nine simulated
+one in five thousand
+2g|2 g
+12 boots
+100 alerts
+\$k=0\$
+\$k=\d
+\$10\^\{-6\}\$
+\$2\^
+20\d\d
+\$\\le\$ 0\.60
+0\.60
+60\\%
+40\\% or more
+between 10
+under 10
+at 1\\%
+at 5\\%
+24-byte
+97-byte
+14-byte
+26-byte
+8-byte
+three transmissions
+5\\% target
+\\textbf\{C
+# tight entries added after review of the first run
+\$ \$\d+
+\d+th-?\s?perc
+\d+-bit
+1\.12\.0|3\.5\.1
+lag-1
+95\\% upper
+0 to 0\.6
+SW-420
+sub-500 ms
+than 2 points
+97 bytes
+row 2
+gate of 0\.20
+# round-4 labels and the preregistered criteria quoted in the negative-results table (design constants, not results)
+round[ -]4
+up 3 points
+add 10 points
+# round-5 labels and the preregistered criteria quoted in the negative-results table (design constants, not results)
+round[ -]5
+down 3 points
+10 points more
+10\\% lower
+k = (200|400)
+2,000 vehicle
+95\\% (sens|for f)
+five transformations
+five flip
+180-degree
+of 2,000
+& 2 [a-z]
+Round[ -]5
+13 hypotheses
+of the 13 are
+10 points mo
+# final verification run: design constants in the edited text
+15-tree
+15 simulated
+15 bytes
+13 to 15
+reach 80
+95\\% (required|interval)
+1\\% unless
+433 MHz
+3pt
+\(round 6\)
+7-byte micro
+5-byte tag
+HMAC-SHA256
+at least 13 bytes
+has 13 bytes
+95\\% limit
+\(lower 95\\%
+round 6, 
+at most 2 points
+above 0\.999
+the 16 g clip
+15-byte
+set to 1\.
+of 7 bytes or
+duty is 1, 
+7-byte
+for 60; ANAL
+1\\% the larg
+1\\% off-time
+after 256 boots
+for 60, at the
+for 60 pending
+433\.05 to 434\.79
+allow 10 mW
+most 10\\% with
+LoRa at 125 kHz
+used a 1\\% hourly
+than the 10\\%
+of the 10\\% the
+a strict 1\\% per
+use 14 dBm
+a 10 dB extra
+the 10 mW limit
+delivers 14 dBm
+to a 0 dBi
+to 434\.79 MHz
+# round 7 design constants (allowances, window, bounds, thresholds quoted from the preregistration V18)
+\(round 7\)
+allowance of 1\\%
+the 1\\% allowanc
+a 1\\% allowanc
+at 10\\%\)
+time of 10\\% 
+run at 10\\% 
+a 10\\% off-time
+the 10\\% off-time
+bound of 1, 
+next 16 pseudonyms
+1,000 vehicl
+000 vehicl
+at the 2 bytes
+at the 4 bytes
+at 2 bytes and
+at 4 bytes \(
+a 16-byte authe
+least 99\\% of runs
+restores 100\\%
+at most 1 point on t
+ance of 1\\% takes
+# round 7b: design constants, thresholds copied from V18, round names
+\(rounds\ 7\ and\ 7b\)\.\}
+ds\ 7\ and\ 7b\)\.\}\ An\ att
+les\ \(the\ 10\\%\ duty\ cyc
+d\ with\ a\ 99\\%\ target\.
+reaches\ 100\\%\.\ Because
+he\ round\-7\ data,\ we\ p
+1\\%\ and\ 10\\%\ allowanc
+thin\ the\ 10\\%\ bound\ in
+indow\ of\ 70\ steps\ and
+indow\ of\ 30\ steps\ and
+tion;\ at\ 5\ bytes\ the
+that\ the\ 10\ dB\ is\ path
+om\ round\-7\ data,\ so\ a
+at\ most\ 1\ point\ and
+at\ most\ 10\\%\ on\ the\ t
+# round 7d: scenario constant of the flood study (genuine alert at 100 s)
+alert\ at\ 100\ s\ was\ acce

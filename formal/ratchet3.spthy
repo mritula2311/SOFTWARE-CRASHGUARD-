@@ -1,0 +1,85 @@
+/*
+ * Tamarin model for L7 (round 5, V16 section 15.3), bounded form: the same ratchet as ratchet.spthy with the index unrolled to the three steps '1', '2', '3' (public constants) instead of the built-in
+ * natural numbers. The model with natural numbers (ratchet.spthy) ran out of the 5 GB heap before it finished any lemma (outcome "undecided"); this model is the one whose lemmas decide H-L7a, and the
+ * claim it supports is limited to chains of three keys (two ratchet steps). Scope as in ratchet.spthy: window 0, no boot step.
+ *
+ * The car holds K_n for step n; it sends an alert under K_n; it advances to K_{n+1} = h(<K_n, 'ratchet'>) only on an ACK that names its vehicle and step and carries a valid tag under K_n, and erases K_n
+ * (the fact CarKey is consumed). The base advances on an accepted alert. Compromise of a vehicle reveals its current key and step. Symbolic model, perfect cryptography.
+ */
+theory Ratchet3
+begin
+
+builtins: hashing
+functions: kdf/2, mac/2
+
+rule BaseInit:
+  [ Fr(~km) ]
+  --[ BaseInit() ]->
+  [ !BaseMaster(~km) ]
+
+restriction OneBase:
+  "All #i #j. BaseInit()@i & BaseInit()@j ==> #i = #j"
+
+rule Enroll:
+  [ !BaseMaster(km) ]
+  --[ Enroll($v) ]->
+  [ CarKey($v, '1', kdf(km, $v)), BaseKey($v, '1', kdf(km, $v)) ]
+
+restriction OneEnroll:
+  "All v #i #j. Enroll(v)@i & Enroll(v)@j ==> #i = #j"
+
+rule Compromise:
+  [ CarKey(v, n, K) ]
+  --[ Compromise(v, n) ]->
+  [ CarKey(v, n, K), Out(<K, n>) ]
+
+rule CarSend:
+  [ CarKey(v, n, K), In(m) ]
+  --[ Sent(v, n, m) ]->
+  [ CarKey(v, n, K), Out(<'ALERT', v, n, m, mac(K, <'A', v, n, m>)>) ]
+
+rule BaseAccept1:
+  [ BaseKey(v, '1', K), In(<'ALERT', v, '1', m, mac(K, <'A', v, '1', m>)>) ]
+  --[ Accept(v, '1', m) ]->
+  [ BaseKey(v, '2', h(<K, 'ratchet'>)), Out(<'ACK', v, '1', mac(K, <'ACK', v, '1'>)>) ]
+
+rule BaseAccept2:
+  [ BaseKey(v, '2', K), In(<'ALERT', v, '2', m, mac(K, <'A', v, '2', m>)>) ]
+  --[ Accept(v, '2', m) ]->
+  [ BaseKey(v, '3', h(<K, 'ratchet'>)), Out(<'ACK', v, '2', mac(K, <'ACK', v, '2'>)>) ]
+
+rule BaseAccept3:
+  [ BaseKey(v, '3', K), In(<'ALERT', v, '3', m, mac(K, <'A', v, '3', m>)>) ]
+  --[ Accept(v, '3', m) ]->
+  [ Out(<'ACK', v, '3', mac(K, <'ACK', v, '3'>)>) ]
+
+rule CarAdvance1:
+  [ CarKey(v, '1', K), In(<'ACK', v, '1', mac(K, <'ACK', v, '1'>)>) ]
+  --[ Advance(v, '1') ]->
+  [ CarKey(v, '2', h(<K, 'ratchet'>)) ]
+
+rule CarAdvance2:
+  [ CarKey(v, '2', K), In(<'ACK', v, '2', mac(K, <'ACK', v, '2'>)>) ]
+  --[ Advance(v, '2') ]->
+  [ CarKey(v, '3', h(<K, 'ratchet'>)) ]
+
+lemma executable:
+  exists-trace
+  "Ex v m #a. Accept(v, '2', m)@a & (Ex #s. Sent(v, '2', m)@s) & (Ex #d. Advance(v, '2')@d)"
+
+lemma forward_secrecy:
+  "All v n m #a. Accept(v, n, m)@a & not (Ex #s. Sent(v, n, m)@s)
+     ==> (Ex k #c. Compromise(v, k)@c
+           & (   k = '1'
+               | (k = '2' & (n = '2' | n = '3'))
+               | (k = '3' & n = '3')))"
+
+lemma authenticity:
+  "All v n m #a. Accept(v, n, m)@a & not (Ex k #c. Compromise(v, k)@c)
+     ==> (Ex #s. Sent(v, n, m)@s)"
+
+lemma ack_binding:
+  "All v n #d. Advance(v, n)@d & not (Ex k #c. Compromise(v, k)@c)
+     ==> (Ex m #a. Accept(v, n, m)@a & #a < #d)"
+
+end

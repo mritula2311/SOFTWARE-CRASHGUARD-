@@ -1,0 +1,1761 @@
+[
+ {
+  "B": 40,
+  "m": 0,
+  "model": "H",
+  "policy": "old",
+  "by_n": {
+   "0": {
+    "runs": 20,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 20,
+    "inv1": 0
+   },
+   "1": {
+    "runs": 640,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 640,
+    "inv1": 0
+   },
+   "2": {
+    "runs": 20480,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 20480,
+    "inv1": 0
+   },
+   "3": {
+    "runs": 655360,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 655360,
+    "inv1": 0
+   },
+   "4": {
+    "runs": 20971520,
+    "inv2_unconditional": 1963520,
+    "inv2_conditional": 1310720,
+    "conditional_runs": 20316160,
+    "inv1": 0
+   },
+   "5": {
+    "runs": 671088640,
+    "inv2_unconditional": 279425024,
+    "inv2_conditional": 135987200,
+    "conditional_runs": 521297920,
+    "inv1": 0
+   }
+  },
+  "example": {
+   "4": [
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ]
+   ],
+   "5": [
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      true,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ]
+   ]
+  },
+  "states": {
+   "0": 1,
+   "1": 4,
+   "2": 32,
+   "3": 256,
+   "4": 2048,
+   "5": 15064
+  }
+ },
+ {
+  "B": 40,
+  "m": 1,
+  "model": "H",
+  "policy": "reserved",
+  "by_n": {
+   "0": {
+    "runs": 20,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 20,
+    "inv1": 0
+   },
+   "1": {
+    "runs": 640,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 640,
+    "inv1": 0
+   },
+   "2": {
+    "runs": 20480,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 20480,
+    "inv1": 0
+   },
+   "3": {
+    "runs": 655360,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 655360,
+    "inv1": 0
+   },
+   "4": {
+    "runs": 20971520,
+    "inv2_unconditional": 983040,
+    "inv2_conditional": 0,
+    "conditional_runs": 13926400,
+    "inv1": 0
+   },
+   "5": {
+    "runs": 671088640,
+    "inv2_unconditional": 172212224,
+    "inv2_conditional": 0,
+    "conditional_runs": 81592320,
+    "inv1": 0
+   }
+  },
+  "example": {
+   "4": [
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ]
+   ],
+   "5": [
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      true,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      true,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ]
+   ]
+  },
+  "states": {
+   "0": 1,
+   "1": 4,
+   "2": 32,
+   "3": 256,
+   "4": 2032,
+   "5": 10896
+  }
+ },
+ {
+  "B": 40,
+  "m": 4,
+  "model": "H",
+  "policy": "reserved",
+  "by_n": {
+   "0": {
+    "runs": 20,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 20,
+    "inv1": 0
+   },
+   "1": {
+    "runs": 640,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 320,
+    "inv1": 0
+   },
+   "2": {
+    "runs": 20480,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 0,
+    "inv1": 0
+   },
+   "3": {
+    "runs": 655360,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 0,
+    "inv1": 0
+   },
+   "4": {
+    "runs": 20971520,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 0,
+    "inv1": 0
+   },
+   "5": {
+    "runs": 671088640,
+    "inv2_unconditional": 45875200,
+    "inv2_conditional": 0,
+    "conditional_runs": 0,
+    "inv1": 0
+   }
+  },
+  "example": {
+   "5": [
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      true,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ]
+   ]
+  },
+  "states": {
+   "0": 1,
+   "1": 4,
+   "2": 20,
+   "3": 80,
+   "4": 320,
+   "5": 1264
+  }
+ },
+ {
+  "B": 44,
+  "m": 0,
+  "model": "H",
+  "policy": "old",
+  "by_n": {
+   "0": {
+    "runs": 20,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 20,
+    "inv1": 0
+   },
+   "1": {
+    "runs": 640,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 640,
+    "inv1": 0
+   },
+   "2": {
+    "runs": 20480,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 20480,
+    "inv1": 0
+   },
+   "3": {
+    "runs": 655360,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 655360,
+    "inv1": 0
+   },
+   "4": {
+    "runs": 20971520,
+    "inv2_unconditional": 176128,
+    "inv2_conditional": 176128,
+    "conditional_runs": 20971520,
+    "inv1": 0
+   },
+   "5": {
+    "runs": 671088640,
+    "inv2_unconditional": 103211008,
+    "inv2_conditional": 87031808,
+    "conditional_runs": 645898240,
+    "inv1": 0
+   }
+  },
+  "example": {
+   "4": [
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ]
+   ],
+   "5": [
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      true,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      true,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ]
+   ]
+  },
+  "states": {
+   "0": 1,
+   "1": 4,
+   "2": 32,
+   "3": 256,
+   "4": 2048,
+   "5": 15903
+  }
+ },
+ {
+  "B": 44,
+  "m": 1,
+  "model": "H",
+  "policy": "reserved",
+  "by_n": {
+   "0": {
+    "runs": 20,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 20,
+    "inv1": 0
+   },
+   "1": {
+    "runs": 640,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 640,
+    "inv1": 0
+   },
+   "2": {
+    "runs": 20480,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 20480,
+    "inv1": 0
+   },
+   "3": {
+    "runs": 655360,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 655360,
+    "inv1": 0
+   },
+   "4": {
+    "runs": 20971520,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 19333120,
+    "inv1": 0
+   },
+   "5": {
+    "runs": 671088640,
+    "inv2_unconditional": 26157056,
+    "inv2_conditional": 0,
+    "conditional_runs": 233103360,
+    "inv1": 0
+   }
+  },
+  "example": {
+   "5": [
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      true,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ]
+   ]
+  },
+  "states": {
+   "0": 1,
+   "1": 4,
+   "2": 32,
+   "3": 256,
+   "4": 2048,
+   "5": 14256
+  }
+ },
+ {
+  "B": 44,
+  "m": 4,
+  "model": "H",
+  "policy": "reserved",
+  "by_n": {
+   "0": {
+    "runs": 20,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 20,
+    "inv1": 0
+   },
+   "1": {
+    "runs": 640,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 640,
+    "inv1": 0
+   },
+   "2": {
+    "runs": 20480,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 3840,
+    "inv1": 0
+   },
+   "3": {
+    "runs": 655360,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 0,
+    "inv1": 0
+   },
+   "4": {
+    "runs": 20971520,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 0,
+    "inv1": 0
+   },
+   "5": {
+    "runs": 671088640,
+    "inv2_unconditional": 2490368,
+    "inv2_conditional": 0,
+    "conditional_runs": 0,
+    "inv1": 0
+   }
+  },
+  "example": {
+   "5": [
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ]
+   ]
+  },
+  "states": {
+   "0": 1,
+   "1": 4,
+   "2": 28,
+   "3": 112,
+   "4": 448,
+   "5": 1786
+  }
+ },
+ {
+  "B": 48,
+  "m": 0,
+  "model": "H",
+  "policy": "old",
+  "by_n": {
+   "0": {
+    "runs": 20,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 20,
+    "inv1": 0
+   },
+   "1": {
+    "runs": 640,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 640,
+    "inv1": 0
+   },
+   "2": {
+    "runs": 20480,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 20480,
+    "inv1": 0
+   },
+   "3": {
+    "runs": 655360,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 655360,
+    "inv1": 0
+   },
+   "4": {
+    "runs": 20971520,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 20971520,
+    "inv1": 0
+   },
+   "5": {
+    "runs": 671088640,
+    "inv2_unconditional": 1343488,
+    "inv2_conditional": 1269760,
+    "conditional_runs": 670873600,
+    "inv1": 0
+   }
+  },
+  "example": {
+   "5": [
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      true,
+      false
+     ],
+     [
+      true,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ]
+   ]
+  },
+  "states": {
+   "0": 1,
+   "1": 4,
+   "2": 32,
+   "3": 256,
+   "4": 2048,
+   "5": 15672
+  }
+ },
+ {
+  "B": 48,
+  "m": 1,
+  "model": "H",
+  "policy": "reserved",
+  "by_n": {
+   "0": {
+    "runs": 20,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 20,
+    "inv1": 0
+   },
+   "1": {
+    "runs": 640,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 640,
+    "inv1": 0
+   },
+   "2": {
+    "runs": 20480,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 20480,
+    "inv1": 0
+   },
+   "3": {
+    "runs": 655360,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 655360,
+    "inv1": 0
+   },
+   "4": {
+    "runs": 20971520,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 20894720,
+    "inv1": 0
+   },
+   "5": {
+    "runs": 671088640,
+    "inv2_unconditional": 212992,
+    "inv2_conditional": 0,
+    "conditional_runs": 514621440,
+    "inv1": 0
+   }
+  },
+  "example": {
+   "5": [
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      true,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      true,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ]
+   ]
+  },
+  "states": {
+   "0": 1,
+   "1": 4,
+   "2": 32,
+   "3": 256,
+   "4": 2048,
+   "5": 15563
+  }
+ },
+ {
+  "B": 48,
+  "m": 4,
+  "model": "H",
+  "policy": "reserved",
+  "by_n": {
+   "0": {
+    "runs": 20,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 20,
+    "inv1": 0
+   },
+   "1": {
+    "runs": 640,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 640,
+    "inv1": 0
+   },
+   "2": {
+    "runs": 20480,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 12800,
+    "inv1": 0
+   },
+   "3": {
+    "runs": 655360,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 10240,
+    "inv1": 0
+   },
+   "4": {
+    "runs": 20971520,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 0,
+    "inv1": 0
+   },
+   "5": {
+    "runs": 671088640,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 0,
+    "inv1": 0
+   }
+  },
+  "example": {},
+  "states": {
+   "0": 1,
+   "1": 4,
+   "2": 32,
+   "3": 160,
+   "4": 640,
+   "5": 2539
+  }
+ },
+ {
+  "B": 0,
+  "m": 1,
+  "model": "T",
+  "policy": "reserved",
+  "by_n": {
+   "0": {
+    "runs": 20,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 20,
+    "inv1": 0
+   },
+   "1": {
+    "runs": 640,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 640,
+    "inv1": 0
+   },
+   "2": {
+    "runs": 20480,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 20480,
+    "inv1": 0
+   },
+   "3": {
+    "runs": 655360,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 655360,
+    "inv1": 0
+   },
+   "4": {
+    "runs": 20971520,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 20971520,
+    "inv1": 0
+   },
+   "5": {
+    "runs": 671088640,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 671088640,
+    "inv1": 0
+   }
+  },
+  "example": {},
+  "states": {
+   "0": 1,
+   "1": 2,
+   "2": 8,
+   "3": 28,
+   "4": 36,
+   "5": 36
+  }
+ },
+ {
+  "B": 0,
+  "m": 4,
+  "model": "T",
+  "policy": "reserved",
+  "by_n": {
+   "0": {
+    "runs": 20,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 20,
+    "inv1": 0
+   },
+   "1": {
+    "runs": 640,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 640,
+    "inv1": 0
+   },
+   "2": {
+    "runs": 20480,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 20480,
+    "inv1": 0
+   },
+   "3": {
+    "runs": 655360,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 655360,
+    "inv1": 0
+   },
+   "4": {
+    "runs": 20971520,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 20971520,
+    "inv1": 0
+   },
+   "5": {
+    "runs": 671088640,
+    "inv2_unconditional": 0,
+    "inv2_conditional": 0,
+    "conditional_runs": 671088640,
+    "inv1": 0
+   }
+  },
+  "example": {},
+  "states": {
+   "0": 1,
+   "1": 2,
+   "2": 8,
+   "3": 28,
+   "4": 36,
+   "5": 36
+  }
+ },
+ {
+  "B": 0,
+  "m": 0,
+  "model": "T",
+  "policy": "old",
+  "by_n": {
+   "0": {
+    "runs": 20,
+    "inv2_unconditional": 20,
+    "inv2_conditional": 20,
+    "conditional_runs": 20,
+    "inv1": 0
+   },
+   "1": {
+    "runs": 640,
+    "inv2_unconditional": 640,
+    "inv2_conditional": 640,
+    "conditional_runs": 640,
+    "inv1": 0
+   },
+   "2": {
+    "runs": 20480,
+    "inv2_unconditional": 20480,
+    "inv2_conditional": 20480,
+    "conditional_runs": 20480,
+    "inv1": 0
+   },
+   "3": {
+    "runs": 655360,
+    "inv2_unconditional": 655360,
+    "inv2_conditional": 655360,
+    "conditional_runs": 655360,
+    "inv1": 0
+   },
+   "4": {
+    "runs": 20971520,
+    "inv2_unconditional": 20971520,
+    "inv2_conditional": 20971520,
+    "conditional_runs": 20971520,
+    "inv1": 0
+   },
+   "5": {
+    "runs": 671088640,
+    "inv2_unconditional": 671088640,
+    "inv2_conditional": 671088640,
+    "conditional_runs": 671088640,
+    "inv1": 0
+   }
+  },
+  "example": {
+   "0": [
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ]
+   ],
+   "1": [
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ]
+   ],
+   "2": [
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ]
+   ],
+   "3": [
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ]
+   ],
+   "4": [
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ]
+   ],
+   "5": [
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ]
+   ]
+  },
+  "states": {
+   "0": 1,
+   "1": 4,
+   "2": 32,
+   "3": 167,
+   "4": 238,
+   "5": 238
+  }
+ }
+]

@@ -1,0 +1,31 @@
+(* A3 (PREREGISTRATION_V15 section 4): FROZEN design with the timing assumption of the Tamarin model, ProVerif 2.05, BOUNDED in time.
+   The assumption: a car reboot completes in a strictly later epoch (the boot takes at least one GPS second). Time is modelled by ProVerif phases: epoch e1 is phase 0, e2 phase 1, e3 phase 2;
+   the car sends two alerts in e1 (seq s1, s2), reboots (the sequence counter is lost and starts again at s1) and sends from e2, then reboots again and sends from e3.
+   This is a bounded model (three epochs, two reboots): it is NOT a proof for any number of epochs. ProVerif has no state that persists across the branches of a process, so an unbounded chain of epochs
+   with a "later epoch" order was not expressible without false attacks (see docs/03_results/A4_A3_PROVERIF.md).
+   EXPECTED: the query is true; the result follows from the distinct epochs, which is the assumption itself. *)
+
+free c: channel.
+fun mk(bitstring, bitstring): bitstring [data].
+const s1: bitstring.
+const s2: bitstring.
+free e1: bitstring.
+free e2: bitstring.
+free e3: bitstring.
+free vehicle: bitstring.
+
+event CarSend(bitstring, bitstring, bitstring).
+
+query v: bitstring, a: bitstring, i1: bitstring, i2: bitstring;
+  event(CarSend(v, a, i1)) && event(CarSend(v, a, i2)) ==> i1 = i2.
+
+let CarLife(v: bitstring) =
+  new a1: bitstring; event CarSend(v, mk(e1, s1), a1); out(c, mk(e1, s1));
+  new a2: bitstring; event CarSend(v, mk(e1, s2), a2); out(c, mk(e1, s2));
+  phase 1;
+  new a3: bitstring; event CarSend(v, mk(e2, s1), a3); out(c, mk(e2, s1));
+  phase 2;
+  new a4: bitstring; event CarSend(v, mk(e3, s1), a4); out(c, mk(e3, s1)).
+
+process
+  CarLife(vehicle)

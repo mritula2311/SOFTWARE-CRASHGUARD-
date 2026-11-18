@@ -1,0 +1,154 @@
+
+
+
+Every hypothesis of \texttt{docs/04\_audits/HYPOTHESIS\_LEDGER.md} whose verdict is NOT SUPPORTED or PARTLY (70 rows), grouped by layer, with its number and the likely mechanism. A mechanism marked (inferred) was not tested; 'not diagnosed' means that none was recorded. Original verdicts are not softened. Hypotheses that were not run (13) are listed at the end.
+
+\subsection*{Sensing and severity estimation}
+
+{\scriptsize\raggedright
+\begin{longtable}{p{0.158\linewidth}p{0.158\linewidth}p{0.158\linewidth}p{0.158\linewidth}p{0.158\linewidth}p{0.158\linewidth}}
+\toprule
+Version & ID & Statement & Found & Label & Likely mechanism \\
+\midrule
+\endhead
+V2 & H-A2 & narrowing in the lowest tercile & no narrowing & MEASURED\_SOFTWARE & not diagnosed (no mechanism was tested) \\
+V2 & H-A3 & containment of reference delta-V at least 0.90 & below 0.90 & MEASURED\_SOFTWARE & containment of the reference delta-V is below 0.90 (not diagnosed) \\
+V3 & H-X5 & +-16 g fill + ridge preserves delta-V rank & Spearman 0.75 & MEASURED\_SOFTWARE & the fill + ridge correction adds noise to the ranking (inferred) \\
+V3 & H-X7 & two-part pair reaches 0.80 within +-10\% & not met & MEASURED\_SOFTWARE & mounting error and synchronisation are not modelled; pole and side modes dominate the shortfall (inferred) \\
+V4 & H-P1 & direct severity classifier beats the anchored estimator & not met & MEASURED\_SOFTWARE & small sealed fold (186 records, 7 Low) and 913 real pulses (inferred) \\
+V4 & H-P2 & anchored interval & not met & MEASURED\_SOFTWARE & a one-sided bound from the plain estimate cannot be much narrower when the plain estimate under-reads by a factor of about 2 (inferred) \\
+V4 & H-P3a & abstention at 70\% retention & not met & MEASURED\_SOFTWARE & the reliability score ranks errors weakly (inferred) \\
+V4 & H-P3b & abstain routing & not met & MEASURED\_SOFTWARE & the abstain signal is a noisier escalation signal than lowering thresholds (inferred) \\
+V5 & H-F1 & direct classifier against anchored estimator (EXPLORATORY-REVISED) & not met & MEASURED\_SOFTWARE & same as the original (H-P1) \\
+V5 & H-F1b & anchored interval (EXPLORATORY-REVISED) & not met & MEASURED\_SOFTWARE & same as H-P2 \\
+V5 & H-F1c & abstention at 70\% retention (EXPLORATORY-REVISED) & not met & MEASURED\_SOFTWARE & same as H-P3a \\
+V7 & H-Q1a & H-P1 rerun on real-only data & same verdict as the original & MEASURED\_SOFTWARE & same as the original (rerun on real-only data) \\
+V7 & H-Q1b & H-P2 rerun & same & MEASURED\_SOFTWARE & same as the original \\
+V7 & H-Q1c & H-P3a rerun & same & MEASURED\_SOFTWARE & same as the original \\
+V7 & H-Q1d & H-X5 rerun & same & MEASURED\_SOFTWARE & same as the original \\
+V7 & H-Q1f & H-X7 rerun & same & MEASURED\_SOFTWARE & same as the original \\
+\bottomrule
+\end{longtable}}
+
+\subsection*{Detection and the node}
+
+{\scriptsize\raggedright
+\begin{longtable}{p{0.158\linewidth}p{0.158\linewidth}p{0.158\linewidth}p{0.158\linewidth}p{0.158\linewidth}p{0.158\linewidth}}
+\toprule
+Version & ID & Statement & Found & Label & Likely mechanism \\
+\midrule
+\endhead
+V2 & H-D1 & early flag saves at least 100 ms & median 86 ms & MEASURED\_SOFTWARE & the flag saves 86 ms where 100 ms were needed; the window length sets the timing (inferred) \\
+V2 & H-D2 & second early-flag criterion & criterion met, Holm p 0.385 & MEASURED\_SOFTWARE & criterion met but the Holm-adjusted p is above 0.05 (statistical power) \\
+V3 & H-X1 & 16-bit fixed-point forest, AP loss at most 0.005 and 30\% flash cut & flash clause not met & MEASURED\_SOFTWARE & arithmetic of the node layout: 16-bit thresholds cut the flash estimate by 22\%, not 30\% \\
+V3 & H-X2 & cheap-trigger cascade, +2 points of crashes passing & not met & MEASURED\_SOFTWARE & the 2 g trigger already passes most crashes (stated in the preregistration) \\
+V3 & H-X3 & group-aware training +1 point recall at the 1\% target & +0.001 & MEASURED\_SOFTWARE & near-duplicates are few among the training windows relative to the whole set (inferred) \\
+V3 & H-X8 & sequential rule 100 ms earlier & not met & MEASURED\_SOFTWARE & the 5\% target favours the early-exit rule (as measured; why was not tested) \\
+V4 & H-P4b & augmentation at the 1\% false-alarm target & not met & MEASURED\_SOFTWARE & augmented crash copies shift the score distribution against the validation threshold (inferred) \\
+V4 & H-P4c & calibration over the trivial rule & not met & MEASURED\_SOFTWARE & structure of the vehicle-size categories (inferred) \\
+V5 & H-F2a & augmentation at the 1\% target (EXPLORATORY-REVISED) & not met & MEASURED\_SOFTWARE & same as H-P4b \\
+V5 & H-F2b & group-aware training (EXPLORATORY-REVISED) & +0.001 & MEASURED\_SOFTWARE & same as H-X3 \\
+V5 & H-F2d & fixed-point forest, AP and flash (EXPLORATORY-REVISED) & flash clause not met & MEASURED\_SOFTWARE & same as H-X1 (the flash clause is arithmetic) \\
+V7 & H-Q2b & H-P4b rerun & same & MEASURED\_SOFTWARE & same as the original \\
+V7 & H-Q2c & H-P4c rerun & same & MEASURED\_SOFTWARE & same as the original \\
+V7 & H-Q2d & H-X1 rerun & p 0.02 but criterion not met & MEASURED\_SOFTWARE & same as H-X1 \\
+V7 & H-Q2f & H-X3 rerun & same & MEASURED\_SOFTWARE & same as the original \\
+V7 & H-Q2g & H-X8 rerun & same & MEASURED\_SOFTWARE & same as the original \\
+V11 & H-S1 & impact-side rule keeps 0.90 in every sensor variant & 3 of 16 sets below 0.90 (axis flips, 10 Hz) & SIMULATED\_HW\_FORMAT & an axis-sign flip swaps front and rear (or left and right); at 10 Hz a 12 to 45 ms pulse is mostly missed (inferred from the confusion table) \\
+V11 & H-S2 & 2 g trigger recall 0.90 and false alarms at most 0.10 & false-alarm rate 0.640 in the base variant & SIMULATED\_HW\_FORMAT & the 2 g trigger passes many bench non-crash events (false-alarm rate 0.640 in the base variant; the cause per event kind was not separated) \\
+V11 & H-S6 & SW-420 confirmation lowers false alarms by 0.02 and loses at most 0.02 recall & recall loss 0.043 & SIMULATED\_HW\_FORMAT & the switch confirmation removes false alarms and also crashes; the balance depends on the assumed switch sensitivity \\
+V16 & H-L2a & post-event features cut near-miss false alarms by 25\% & -0.545 relative change & MEASURED\_SOFTWARE & the confirm stage already holds the false-alarm rate (inferred) \\
+V16 & H-L2b & retraction share falls by 3 points & 1.4 points & MEASURED\_SOFTWARE & same as H-L2a \\
+\bottomrule
+\end{longtable}}
+
+\subsection*{Protocol and security}
+
+{\scriptsize\raggedright
+\begin{longtable}{p{0.158\linewidth}p{0.158\linewidth}p{0.158\linewidth}p{0.158\linewidth}p{0.158\linewidth}p{0.158\linewidth}}
+\toprule
+Version & ID & Statement & Found & Label & Likely mechanism \\
+\midrule
+\endhead
+V7 & H-A3 & event ACK secure against a key holder & a forged ACK from a key holder stops every vehicle & ANALYTICAL & one forged event-level acknowledgement from a holder of the shared key stops every vehicle of the cell \\
+V11 & H-R1b & GTF replay acceptance zero outside, at most 1\% inside the window & largest rate 0.0325 & SIMULATED & the ring was smaller than the alerts per window at the held-out burst load; replays inside the window were accepted \\
+V11 & H-R2a & 40-byte frame with 7 or 8-byte tag raises burst delivery by 5 points & criterion met, Holm p 0.454 & SIMULATED & variance across cells; the fields dropped from the short frame were not designed (inferred) \\
+V12 & H-D4a & D4 24-byte provisional frame within the airtime bound & extra airtime 0.410 to 0.496; 0 of 48 cells below 0.25 & SIMULATED & a 24-byte frame costs more airtime than the 14-byte flash \\
+V13 & H-P1c & extra airtime under 40\% and no delivery loss & 2 of 4 cells supported (SF7 yes; SF9 no) & SIMULATED & at SF9 the flash and the three cancel transmissions add 54\% extra airtime against the 40\% bound; at SF7 they do not \\
+V14 & H-T2sec & Tamarin: authenticity, ACK binding, freshness, id uniqueness & all proved except id uniqueness after a car reboot (not decided) & FORMAL & alert-id uniqueness after a car reboot was not decided in Tamarin (timeouts); ProVerif finds an attack on the frozen design inside the same GPS second \\
+V15 & H-A1a & 24-byte repeated provisional frame: extra airtime at SF9 at most 40\% in all 8 cells & 2 of 8 cells met; 0.31 to 0.61 & SIMULATED & a 24-byte frame costs more airtime than the 14-byte flash; repeats add channel load (inferred) \\
+V16 & H-L7a & Tamarin proves forward secrecy, authenticity, ACK binding of the ratchet & undecided: heap exhausted & FORMAL & Tamarin heap of 5 GB exhausted for the ratchet model \\
+V16 & H-L8b & no legitimate alert quarantined & 1 of 2,000 vehicle-hours & SIMULATED and MEASURED\_SOFTWARE & the per-minute spacing rule quarantines a legitimate vehicle about once in 2,000 vehicle-hours \\
+\bottomrule
+\end{longtable}}
+
+\subsection*{Link, retry and channel access}
+
+{\scriptsize\raggedright
+\begin{longtable}{p{0.158\linewidth}p{0.158\linewidth}p{0.158\linewidth}p{0.158\linewidth}p{0.158\linewidth}p{0.158\linewidth}}
+\toprule
+Version & ID & Statement & Found & Label & Likely mechanism \\
+\midrule
+\endhead
+V2 & H-B1 & burst variant gains 3 points in 6 of 10 cells & no variant & SIMULATED & not diagnosed (no mechanism was tested) \\
+V2 & H-B2 & burst variant harms by at most 2 points & harm bound above 2 points for some cell & SIMULATED & not diagnosed (no mechanism was tested) \\
+V2 & H-B3 & ratio of gains & not evaluable because H-B1 failed & SIMULATED & not evaluable because H-B1 failed \\
+V2 & H-E1 & gain of at least 2 points & gain below 2 points & SIMULATED & gain below 2 points (not diagnosed) \\
+V2 & H-F1 & positive optimal Critical hold & 2 combinations positive & ANALYTICAL & same as the original (H-P1) \\
+V5 & H-B2 & P1+ against P0 (flash and hold on the severity table) & not met & SIMULATED & not diagnosed (no mechanism was tested) \\
+V5 & H-F3a & P3 against the lowered table at equal escalation & not met & SIMULATED & a lowered table reaches the same escalation \\
+V5 & H-F3b & abstain routing against the lowered table & not met & SIMULATED & same as H-P3b \\
+V5 & H-G3a & slotted fast path against pure ALOHA & not met & SIMULATED & 8 slots per 30 s frame for a burst of 30 cars (inferred; slot sweep in G5) \\
+V5 & H-G3b & listen-before-talk against duty-cycle-only access & not met & SIMULATED & hidden terminals (sensing probability 0.7, assumed) and the short backoff (inferred) \\
+V5 & H-G3c & V2V relay against no relay & not met & SIMULATED & the relayed copy meets the same loss and collisions as the sender's own retries (inferred) \\
+V7 & H-A1 & OS-DR protocol: 5-point gain in at least 20 of 32 cells & 7 cells; 8 cells lost by more than 2 points & SIMULATED & overheard frames are rare at the assumed load (inferred) \\
+V7 & H-A2 & GS-CA burst protocol: gain in at least 10 of 16 burst cells & 0 cells & SIMULATED & slots delay the opening attempt (inferred) \\
+V11 & H-S3 & UA-SCT delivery at least fixed-3 minus 0.02 on calibrated links & criterion met, Holm p 1 & SIMULATED\_HW\_FORMAT & criterion met on the point estimate but no difference from fixed-3 was detectable (raw p 0.39) \\
+V12 & H-D2b & D2 burst gain of 5 points & +0.011 & SIMULATED & burst gain +0.011 against 5 points required (not diagnosed further) \\
+V12 & H-D3 & D3 slotted retries gain 5 points in bursts & +0.001 & SIMULATED & 0.54 of failures were collisions or a deaf gateway; fixed K put 2.7 times as many frames on the channel \\
+V15 & H-A1b & provisional delivery within 10 s up by 3 points on fresh sniffer links & +1.4 points & TRACE\_DRIVEN & a 24-byte frame costs more airtime than the 14-byte flash; repeats add channel load (inferred) \\
+V15 & H-A1c & no cell worse than R3 by more than 1 point & ns-3 worst cell -2.1 points & SIMULATED and TRACE\_DRIVEN & repeated frames add channel load at a loss of 0.6 (inferred) \\
+V15 & H-A2a & two receivers raise 10 s delivery by 10 points on weak links (EXPLORATORY) & +4.9 points; 52\% of devices heard by one gateway & TRACE\_DRIVEN & a second gateway cannot help a device it does not hear (52\% of devices are heard by one gateway) \\
+V15 & H-A2b & share at 0.99 delivery rises from one to three receivers (EXPLORATORY) & +0.26 points & TRACE\_DRIVEN & same as H-A2a \\
+V16 & H-L5 & end-to-end threshold co-design lowers P90 time by 10\% & no change in any model & MEASURED\_SOFTWARE & the confirm stage is fixed and the early-exit grid is small (inferred) \\
+V16 & H-L6 & crash-weighted gateway placement covers 10 points more crashes & +1.8 to +5.6 points & MEASURED\_SOFTWARE and ANALYTICAL & placements overlap in cities (inferred) \\
+\bottomrule
+\end{longtable}}
+
+\subsection*{Benchmarks and data}
+
+{\scriptsize\raggedright
+\begin{longtable}{p{0.158\linewidth}p{0.158\linewidth}p{0.158\linewidth}p{0.158\linewidth}p{0.158\linewidth}p{0.158\linewidth}}
+\toprule
+Version & ID & Statement & Found & Label & Likely mechanism \\
+\midrule
+\endhead
+V16 & H-L10a & a further benchmark has more than 1\% identical test windows & 0 in UCI HAR and SisFall & MEASURED\_SOFTWARE & there is nothing to find: no duplicate windows across splits in UCI HAR or SisFall \\
+V16 & H-L11a & mirror-flip detection from turns (ADDED-AFTER-SESSION-1; own family of one) & both-channel 100\% of 100, false detection 0\%; accelerometer-only x 57\%, y 89\% against 95\% & MEASURED\_SOFTWARE & one of two estimates is changed by an accelerometer-only flip and the clips are short (inferred) \\
+\bottomrule
+\end{longtable}}
+
+\subsection*{Not run}
+
+{\scriptsize\raggedright
+\begin{longtable}{p{0.237\linewidth}p{0.237\linewidth}p{0.237\linewidth}p{0.237\linewidth}}
+\toprule
+Version & ID & Statement & Reason \\
+\midrule
+\endhead
+V5 & H-F1d & H-X6 on splits G and O & not run \\
+V5 & H-F1e & H-X5 rank preservation & not run \\
+V5 & H-F2c & trigger cascade (EXPLORATORY-REVISED) & not run \\
+V5 & H-F2e & sequential rule (EXPLORATORY-REVISED) & not run \\
+V5 & H-F2f & calibration over the trivial rule (EXPLORATORY-REVISED) & not run \\
+V7 & H-Q2e & H-X2 rerun & not run in advance (surrogate windows) \\
+V7 & H-Q2h & early-exit rule with surrogate-trained forests & not run \\
+V7 & H-Q3a & N28 equal-escalation comparison & not run in the rerun \\
+V7 & H-Q3b & H-B2 rerun & not run in the rerun \\
+V7 & H-Q3c & P3b abstain routing rerun & not run in the rerun \\
+V12 & H-D4b & D4 arrival time and burst delivery & not run \\
+V16 & H-L10b & removing leaked windows changes a baseline by more than 1 point & not run (no leak found) \\
+V16 & H-L11b & second L11 test & not run \\
+\bottomrule
+\end{longtable}}
+

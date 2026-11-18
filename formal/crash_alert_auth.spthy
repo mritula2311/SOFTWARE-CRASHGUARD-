@@ -1,0 +1,78 @@
+/*
+ * Tamarin model, part 1 of 2: authenticity of the alert and of the ACK (round 3, T2.1; docs/02_preregistration/PREREGISTRATION_V14.md section 2.1).
+ *
+ * Build with  -D=M0  for the earlier design (one shared cell key; the ACK names the alert field only) and without it for the final design M1
+ * (per-vehicle key kdf(master, vehicle); ACK bound to the vehicle id and the alert field).
+ *
+ * Symbolic model, perfect cryptography, Dolev-Yao network. The adversary may compromise any node (RevealNode) and then holds that node's key.
+ * Freshness, windows and reboots are in crash_alert_fresh.spthy; here every alert carries a fresh field ~c, so the lemmas are about who can
+ * produce an accepted alert and an accepted ACK.
+ */
+theory CrashAlertAuth
+begin
+
+builtins: hashing
+functions: kdf/2, mac/2
+
+#ifdef M0
+macros: nodekey(km, v) = kdf(km, 'cell'),
+        ackmsg(km, v, f) = <'ACK', f, mac(kdf(km, 'cell'), <'ACK', f>)>
+#else
+macros: nodekey(km, v) = kdf(km, v),
+        ackmsg(km, v, f) = <'ACK', v, f, mac(kdf(km, v), <'ACK', v, f>)>
+#endif
+
+rule BaseInit:
+  [ Fr(~km) ]
+  --[ BaseInit() ]->
+  [ !BaseMaster(~km) ]
+
+rule RevealNode:
+  [ !BaseMaster(km) ]
+  --[ RevealNode($w) ]->
+  [ Out(nodekey(km, $w)) ]
+
+rule CarSend:
+  [ Fr(~c), !BaseMaster(km), In($cls) ]
+  --[ CarSend($v, ~c) ]->
+  [ CarWait($v, ~c), Out(<'ALERT', $v, ~c, $cls, mac(nodekey(km, $v), <'A', $v, ~c, $cls>)>) ]
+
+#ifdef M0
+rule CarAck:
+  [ CarWait($v, f), !BaseMaster(km), In(<'ACK', f, mac(kdf(km, 'cell'), <'ACK', f>)>) ]
+  --[ CarStop($v, f) ]->
+  [ ]
+#else
+rule CarAck:
+  [ CarWait($v, f), !BaseMaster(km), In(<'ACK', $v, f, mac(kdf(km, $v), <'ACK', $v, f>)>) ]
+  --[ CarStop($v, f) ]->
+  [ ]
+#endif
+
+rule BaseAccept:
+  [ !BaseMaster(km), In(<'ALERT', $v, f, $cls, mac(nodekey(km, $v), <'A', $v, f, $cls>)>) ]
+  --[ BaseAccept($v, f) ]->
+  [ Out(ackmsg(km, $v, f)) ]
+
+restriction OneBase:
+  "All #i #j. BaseInit()@i & BaseInit()@j ==> #i = #j"
+
+/* sanity: the protocol can run */
+lemma executable:
+  exists-trace
+  "Ex v f #i #j #k. CarSend(v, f)@i & BaseAccept(v, f)@j & CarStop(v, f)@k & #i < #j & #j < #k"
+
+/* L1 alert authenticity: an accepted alert was sent by that vehicle, unless its node key was revealed */
+lemma L1_alert_authenticity:
+  "All v f #i. BaseAccept(v, f)@i ==> (Ex #j. CarSend(v, f)@j & #j < #i) | (Ex #r. RevealNode(v)@r)"
+
+/* L2 ACK authenticity: a car stops only on an ACK for its own alert that the base accepted, unless its own node key was revealed */
+lemma L2_ack_authenticity:
+  "All v f #i. CarStop(v, f)@i ==> (Ex #j. BaseAccept(v, f)@j & #j < #i) | (Ex #r. RevealNode(v)@r)"
+
+/* L3 no cross-vehicle suppression: with the key of another node w revealed, v's retries still stop only on a real acceptance */
+lemma L3_no_cross_vehicle_suppression:
+  "All v w f #i #r. CarStop(v, f)@i & RevealNode(w)@r & not (v = w) & not (Ex #r2. RevealNode(v)@r2) ==>
+     (Ex #j. BaseAccept(v, f)@j & #j < #i)"
+
+end

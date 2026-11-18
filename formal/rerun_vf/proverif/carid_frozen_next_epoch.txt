@@ -1,0 +1,54 @@
+tool: Proverif 2.05. Cryptographic protocol verifier, by Bruno Blanchet, Vincent Cheval, and Marc Sylvestre
+command: proverif formal/proverif/carid_frozen_next_epoch.pv ; time limit 320 s
+Process 0 (that is, the initial process):
+{1}let v: bitstring = vehicle in
+{2}new a1: bitstring;
+{3}event CarSend(v,mk(e1,s1),a1);
+{4}out(c, mk(e1,s1));
+{5}new a2: bitstring;
+{6}event CarSend(v,mk(e1,s2),a2);
+{7}out(c, mk(e1,s2));
+{8}phase 1;
+{9}new a3: bitstring;
+{10}event CarSend(v,mk(e2,s1),a3);
+{11}out(c, mk(e2,s1));
+{12}phase 2;
+{13}new a4: bitstring;
+{14}event CarSend(v,mk(e3,s1),a4);
+{15}out(c, mk(e3,s1))
+
+--  Process 1 (that is, process 0, with let moved downwards):
+{2}new a1: bitstring;
+{1}let v: bitstring = vehicle in
+{3}event CarSend(v,mk(e1,s1),a1);
+{4}out(c, mk(e1,s1));
+{5}new a2: bitstring;
+{6}event CarSend(v,mk(e1,s2),a2);
+{7}out(c, mk(e1,s2));
+{8}phase 1;
+{9}new a3: bitstring;
+{10}event CarSend(v,mk(e2,s1),a3);
+{11}out(c, mk(e2,s1));
+{12}phase 2;
+{13}new a4: bitstring;
+{14}event CarSend(v,mk(e3,s1),a4);
+{15}out(c, mk(e3,s1))
+
+-- Query event(CarSend(v_1,a,i1)) && event(CarSend(v_1,a,i2)) ==> i1 = i2 in process 1.
+Translating the process into Horn clauses...
+Completing...
+Starting query event(CarSend(v_1,a,i1)) && event(CarSend(v_1,a,i2)) ==> i1 = i2
+goal reachable: event(CarSend(vehicle[],mk(e3[],s1),a4[])) && event(CarSend(vehicle[],mk(e3[],s1),a4[]))
+goal reachable: event(CarSend(vehicle[],mk(e2[],s1),a3[])) && event(CarSend(vehicle[],mk(e2[],s1),a3[]))
+goal reachable: event(CarSend(vehicle[],mk(e1[],s1),a1[])) && event(CarSend(vehicle[],mk(e1[],s1),a1[]))
+goal reachable: event(CarSend(vehicle[],mk(e1[],s2),a2[])) && event(CarSend(vehicle[],mk(e1[],s2),a2[]))
+RESULT event(CarSend(v_1,a,i1)) && event(CarSend(v_1,a,i2)) ==> i1 = i2 is true.
+
+--------------------------------------------------------------
+Verification summary:
+
+Query event(CarSend(v_1,a,i1)) && event(CarSend(v_1,a,i2)) ==> i1 = i2 is true.
+
+--------------------------------------------------------------
+
+exit code: 0 ; wall time 0 s ; peak memory 9 MB

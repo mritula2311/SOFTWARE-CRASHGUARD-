@@ -1,0 +1,33 @@
+id,file,description,status
+L1101,src/crashguard/r5_l11.py,GPS time spacing,KILLED
+L1102,src/crashguard/r5_l11.py,speed unit (km/h kept),KILLED
+L1103,src/crashguard/r5_l11.py,NaN GPS accepted,KILLED
+L1104,src/crashguard/r5_l11.py,quasi-steady samples ignore the speed change,SURVIVED
+L1105,src/crashguard/r5_l11.py,up direction from all samples,KILLED
+L1106,src/crashguard/r5_l11.py,quasi-steady minimum never met,KILLED
+L1107,src/crashguard/r5_l11.py,gravity check dropped,KILLED
+L1108,src/crashguard/r5_l11.py,acceleration not scaled to m/s^2,SURVIVED
+L1109,src/crashguard/r5_l11.py,vertical part not removed,SURVIVED
+L1110,src/crashguard/r5_l11.py,yaw rate from the z sensor axis,KILLED
+L1111,src/crashguard/r5_l11.py,all samples longitudinal,KILLED
+L1112,src/crashguard/r5_l11.py,speed minimum dropped,KILLED
+L1113,src/crashguard/r5_l11.py,turn length check dropped,KILLED
+L1114,src/crashguard/r5_l11.py,turn length check tightened,KILLED
+L1115,src/crashguard/r5_l11.py,longitudinal fit not normalised,SURVIVED
+L1116,src/crashguard/r5_l11.py,turn coefficient sign,KILLED
+L1117,src/crashguard/r5_l11.py,forward from the turn: wrong cross order,KILLED
+L1118,src/crashguard/r5_l11.py,sign of the agreement dropped,KILLED
+L1119,src/crashguard/r5_l11.py,speed not multiplied into the yaw rate,SURVIVED
+L1120,src/crashguard/r5_l11.py,gyro transformed with the accelerometer matrix,KILLED
+L1121,src/crashguard/r5_l11.py,flipped axis index,KILLED
+L1122,src/crashguard/r5_l11.py,reference sign ignored,KILLED
+L1123,src/crashguard/r5_l11.py,decision boundary inclusive,KILLED
+L1124,src/crashguard/r5_l11.py,more than n valid events used,KILLED
+L1125,src/crashguard/r5_l11.py,fewer than n valid events accepted,KILLED
+L1126,src/crashguard/r5_l11.py,order by hashed key dropped,KILLED
+L1127,src/crashguard/r5_l11.py,overlapping groups,KILLED
+L1128,src/crashguard/r5_l11.py,undecided counted as detected,KILLED
+L1129,src/crashguard/r5_l11.py,false-detection weight,KILLED
+L1130,src/crashguard/r5_l11.py,reference sign always +1,KILLED
+L1131,src/crashguard/r5_l11.py,binomial p direction,KILLED
+L1132,src/crashguard/r5_l11.py,upper limit when all are false,KILLED

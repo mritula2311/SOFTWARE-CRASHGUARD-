@@ -1,0 +1,26 @@
+id,comparisons,test,interval,n_intervals_reported,n_keys,correction_or_flag
+F1,"Detector headline metrics (system recall, AP, false-alarm rate)","bootstrap of test events (1,000 resamples); mean over 5 seeds for the 5-seed rows",95% percentile,26,98,descriptive
+F2,N8 supplied against de-duplicated and window-level sets,paired bootstrap over the supplied test events (same drawn rows for both sets),95% percentile,80,277,descriptive (sensitivity)
+F3,N14 clipping methods: paired differences between methods,"paired grouped (make and model) bootstrap, 1,000 resamples",95% percentile,96,336,decision rule fixed in advance for 'M+ against spline and plain' per range and split; no multiplicity correction; fill + ridge was named primary after earlier results were seen
+F4,N16 and N22 scheduler against the table (X6 and the burst sweep),paired bootstrap over scenario seeds,95% percentile,6214,19128,EXPLORATORY: the burst scenario was added after the steady-state null result
+F5,"N19 arms (F, A, E, E')",paired bootstrap over test events,95% percentile,72,222,descriptive; the early-exit rule was chosen on validation
+F6,N20 conformal false-alarm rate against alpha,"bootstrap of the mean over (seed, draw) pairs plus one binomial standard error of the test set",95% percentile,120,1319,decision rule fixed in advance; the 3 variants of T7 are EXPLORATORY
+F7,N24 conformal delta-V intervals,grouped bootstrap,95% percentile,72,236,decision rule fixed in advance (two conditions); the 6 range and level combinations are not corrected
+F8,N25 prevalence-adaptive rules against the existing rule,percentile interval over 200 resampled populations,95% percentile,1128,3476,decision rule fixed in advance; 8 rules x 4 prevalences are not corrected
+F9,"UA-SCT class intervals (coverage, width, mis-triage)","grouped bootstrap (make and model groups, 1,000 resamples)",95% percentile,126,426,"preregistered: H-a, H-b, H-c (corrected below); other rows descriptive"
+F10,UA-SCT policy differences over the held-out cells,mean over cells of paired seed-mean differences; seeds resampled inside every cell,95% percentile,630,1890,"preregistered cells; 6 comparisons x 3 ranges x 2 cell types x 10 metrics reported, not corrected; read the preregistered metrics only"
+F11,T1 equal-escalation comparison,pool-level grouped bootstrap; cell-level seed bootstrap,95% percentile,186,582,preregistered in Addendum 1 (decision rule)
+F12,T2 Pareto areas,grouped bootstrap of the area,95% percentile,27,333,preregistered in Addendum 1; matched-escalation rows EXPLORATORY
+F13,T3 expected cost and break-even ratio,grouped bootstrap,95% percentile,444,1346,preregistered in Addendum 1; the delivery term is EXPLORATORY
+F14,T4 clarifications,grouped bootstrap; analytical expected values,95% percentile,123,416,descriptive
+F15,T5 near-duplicate sensitivity,"bootstrap over test events, paired between sets",95% percentile,40,148,EXPLORATORY (sensitivity analysis)
+F16,T6 threshold sensitivity (17 settings),grouped bootstrap,95% percentile,68,494,"preregistered in Addendum 1; 17 settings reported, H-a and H-c counted per setting, not corrected"
+F17,T7 conformal variants,grouped bootstrap (severity) and bootstrap over test events (false alarms),95% percentile,56,206,EXPLORATORY
+F18,T8 simulator sweep,paired bootstrap over seeds per cell; cells counted,95% percentile,1152,3489,preregistered cells; counts of cells reported
+F19,T9 ablations,paired bootstrap over seeds per cell,95% percentile,1404,4250,EXPLORATORY
+F20,"S11 exploratory blocks (ablations, false alarms, single car)",bootstrap over seeds,95% percentile,528,1584,EXPLORATORY
+F21,T13a held-out NHTSA modes: N13 grid and N14 methods,"grouped (make and model) bootstrap, 1,000 resamples",95% percentile,219,956,"decision rules written before the run (docs/DECISIONS.md); 25 grid cells and 12 paired comparisons are reported, not corrected"
+F22,T13c near-duplicate NHTSA pulses,counts; grouped bootstrap for the headline comparison without the flagged tests,95% percentile,87,347,EXPLORATORY
+F23,Sensor selection (S1 to S3),grouped (make and model) bootstrap,95% percentile,822,3369,"decision rule S3 written before the run; 99 configurations are reported, not corrected"
+F24,VZCrash leakage sensitivity (V4),paired bootstrap over the supplied test events,95% percentile,50,159,descriptive; the independent audit V1 has no interval (counts)
+F25,Blocks 4 and 4b (X1 to X8),grouped bootstrap (NHTSA) or paired bootstrap over test events (VZCrash),95% percentile,1236,4430,preregistered in docs/PREREGISTRATION_V3.md; Holm correction over the seven hypotheses (x.holm.*); every other row EXPLORATORY

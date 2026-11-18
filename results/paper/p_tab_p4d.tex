@@ -1,0 +1,12 @@
+% P4d (EXPLORATORY, no hypothesis): int8 tiny 1D CNN on the 280-sample accelerometer window; compare with the forest in p_tab_p4a. Weights are int8, activations float in the simulation.
+\begin{tabular}{lllll}
+\toprule
+Set & Model & AP [95\%] & Recall at 1\% [95\%] & Recall at 5\% [95\%] \\
+\midrule
+dedup & 1D CNN, float weights & 0.9614 [0.9571, 0.9658] & 0.769 [0.757, 0.780] & 0.950 [0.943, 0.956] \\
+dedup & 1D CNN, int8 weights & 0.9614 [0.9571, 0.9658] & 0.769 [0.757, 0.779] & 0.950 [0.943, 0.956] \\
+strict & 1D CNN, float weights & 0.9404 [0.9332, 0.9471] & 0.719 [0.705, 0.734] & 0.935 [0.926, 0.944] \\
+strict & 1D CNN, int8 weights & 0.9403 [0.9332, 0.9470] & 0.719 [0.705, 0.733] & 0.935 [0.926, 0.943] \\
+both & parameters / flash estimate (int8) & 1633 / 1756 bytes &  &  \\
+\bottomrule
+\end{tabular}

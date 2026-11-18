@@ -1,0 +1,55 @@
+# Preregistration V19: round 7b (re-test of the four-event reserve)
+
+<!-- header:start -->
+| Field | Value |
+|---|---|
+| Status | current |
+| Date | 2026-11-16 |
+| Owner | Mritula S |
+| Scope | Preregistration V19 (round 7b): a reserve sized for four follow-up events, tested on fresh seeds; hypotheses, thresholds, seeds, formal bounds and the Holm family, committed before any run. |
+| Evidence labels used | SIMULATED, TRACE_DRIVEN, FORMAL, ANALYTICAL, NOT_RUN |
+| Abbreviations | ACK = acknowledgement frame; SF = spreading factor (LoRa) |
+<!-- header:end -->
+
+Committed before any run of round 7b. Branch `round7b` from tag `submit-v4`. Key prefix `r7b.`. Nothing here changes a stored result, a frozen file or an earlier verdict. V18 stays as it is: its hypothesis H-R7-A1 (the reserve for one follow-up event) was not supported, and that verdict is not revised by this file.
+
+## 0. Status of this test (read before the results)
+
+The number of events that the reserve covers was chosen **from round-7 data**: after the registered V18 run, a post-run sweep (`r7.a1.posthoc.*`, outside the V18 family, labelled EXPLORATORY) showed that a reserve for four events reached 100% in the same cells. This file therefore **confirms a choice that was found after the fact, on fresh seeds**. It is not a blind test. The 99% and 1-point thresholds are copied unchanged from V18 (H-R7-A1 and H-R7-A2a); the 10% median-time threshold is copied unchanged from H-R7-A2b. Nothing was tuned on the new seeds, and no new-seed run exists yet.
+
+Notation. The brief calls the number of covered events k. In the code it is `n_res`, because `k` is already the retry cap per follow-up (4 tries, unchanged). Here it is written **k = 4 policy** (reserve for four follow-up events) and **k = 1 policy** (the V18 reserve). Every other parameter is as in V18.
+
+## 1. Policy
+
+The reserved policy of V18 (classes H and L, time reserve under an off-time, withdrawal of not-yet-started flash tries; `docs/02_preregistration/PREREGISTRATION_V18.md` sections 1 and 2.1) with the reserve R = k x 4 x A_97 + A_M, k = 4 (V18: k = 1), A_M the airtime of the 13-byte micro frame. At SF7 to SF9 this is the value of `r7.a1.posthoc.*` nres4 (R = 16 A_97 + A_M). Under the per-transmission off-time (T10) the reserve is a time reserve and does not depend on k. The engine is `src/crashguard/r7_engine.py` (parameter `n_res`), unchanged.
+
+## 2. Hypotheses (one Holm family of two, alpha = 0.05)
+
+**H-R7b-1 (confirmatory, SIMULATED).** As H-R7-A1 of V18, with the k = 4 policy and **new seeds**: under full ACK suppression (q = 1) at SF7, SF8 and SF9, under the hourly allowances H1 (1%) and H10 (10%) and under the 10% per-transmission off-time T10, the follow-up starts within D_max of becoming pending in at least 99% of runs **in every feasible cell**. Primary stress as in V18: n_prior = n*_old(SF, d) earlier fully suppressed two-stage events in the preceding hour (none under T10); target rows from the stored event table with E = 1; D_max from `r7_analytic.d_max`. Seeds: **100, 101, 102, 103, 104, 105** (V18 used 42 and 0 to 4), 200 runs each, 1,200 runs per cell. Supported iff the lower one-sided 95% Clopper-Pearson limit of the rate is at least 0.99 in every feasible cell. p-value: the worst feasible cell's one-sided exact binomial p-value of rate <= 0.99 (intersection-union, as V18). The old policy and the k = 1 policy are run on the same draws and reported next to it (descriptive, outside the family).
+
+**H-R7b-2 (confirmatory, TRACE_DRIVEN, benign cost).** With no attack, on the cells of V18's H-R7-A2 (LoED half-0 trace groups L, M, H at SF7; schemes R3 and R6-1; duty models H1, H10, T10; 18 cells, all with at least 20 devices), the paired comparison k = 4 policy minus old policy, both under the same duty model, on **fresh start points and event rows** (trace seed 4242: start points from `seeded("t1s", dev, 4242)`, event rows from `seeded("t1e", dev, q, 4242)`; the V18 run used seed 42; cluster-bootstrap seed 4242, 2,000 resamples, 300 start points per device):
+- delivery of crash events falls by at most 1 percentage point: one-sided 95% lower limit of (k = 4 minus old) at least -0.01 in every cell;
+- the median time to the earliest alert rises by at most 10%: one-sided 95% upper limit of the ratio of medians at most 1.10 in every cell.
+
+Supported iff both parts hold in every cell. p-value: the larger of the two parts' largest-cell bootstrap p-values (as V18). The "stored" cells are these 18 cells: the R3 and R6-1 airtime of the old path with no duty layer is checked, before the comparison, against the stored `r6.r1.trace.*` ratios (regression; a mismatch stops the run). The held-out half 1 is not touched; the V18 guard `results/tables/r7_held_started.json` is not used or changed; this run has its own guard `results/tables/r7b_held_started.json`, written before the run, and a second run stops.
+
+**Stated expectation before the run (not a criterion).** Under T10 the reserve is a time reserve and does not depend on k, so the T10 delivery cost of V18 (-2.4 points in group H) is expected to recur: H-R7b-2 is expected to fail in the T10 cells of group H, for the V18 reason. The same run also records the k = 1, 2 and 3 policies on the same start points, so that the trade-off of benign delivery and median time against k = 1 to 4 can be reported (**DESCRIPTIVE**, outside the family, reported whether or not H-R7b-2 holds).
+
+Holm over the two p-values. A part that is not run is NOT_RUN and enters with p = 1.
+
+## 3. Formal check (FORMAL, bounded; not a hypothesis of the family)
+
+`src/crashguard/r7b_formal.py`, an independent re-implementation of the V18 model with a reserve for m = k follow-up events, R = m x TC x C + M. Exact bounds, written before the run:
+- costs and tries: flash 1 (class L, 2 tries), confirm C = 4 (class H, TC = 2 tries), micro 1 (M = 1), cancel 1 (3 copies, 0.3 s apart as 1 step); a frame occupies the radio for its cost + 1 steps; so R = 9 (m = 1) and R = 33 (m = 4);
+- hourly model H: window W = 70 steps, allowance B in {40, 44, 48}; off-time model T: off-time 2 x cost after each frame, once for each m (it does not depend on B or m, which the run shows);
+- earlier events: **0 to 5** earlier confirm events (V18: at most 2), gap before each later event in {0, 2} steps, every combination of flash ACK outcomes (2 tries) and follow-up ACK outcomes (TC tries) of every event chosen by the attacker; target event: confirm or cancel, every gap in {0, 2} and every ACK pattern;
+- policies: old (control), reserved with m = 1 (the V18 reserve and the control for the claim below), reserved with m = 4;
+- the enumeration runs over canonical states (log relative to the end of the previous event, pruned to the window, with multiplicities), which gives the same counts as a flat enumeration.
+
+Checks. **F1** Invariant 1 (no class-L frame of the reserved policy leaves less than R of the allowance) has 0 violations for m = 1 and m = 4. **F2** Invariant 2, conditional form (the reserve intact at the instant the follow-up becomes pending, then the earliest frame starts within D_max = 2 steps; 0 under T) has 0 violations for m = 1 and m = 4 for every number of earlier events up to 5. **F3** the m-event guarantee: unconditional Invariant 2 has 0 violations for m = 4 with at most 3 earlier events. **F4 (control)** the k = 1 policy violates the unconditional Invariant 2 with at most 3 earlier events (at the bound of F3), and the old policy violates Invariant 2. The smallest number of earlier events at which the m = 4 policy violates the unconditional form, with a stored trace, is reported whatever it is; from the design it is expected to be 4 (the fifth follow-up draws on a reserve that four earlier follow-ups have used), which is stated here only as an expectation. A failed check is reported as a finding with its trace.
+
+## 4. Outputs, guards and wording
+
+Keys `r7b.*` only (`results/results.json`; `scripts/verify_keys_unchanged.py` against `submit-v4` at the end). Code `src/crashguard/r7b_*.py`, `scripts/r7b_*`. Seed 42 is the default of the repository; the seeds of this file are the ones above and no other. Every number in the paper comes from a macro. The wording rules of the repository apply. India's 10% rules are the main deployment regime; the 1% allowance is the stricter case; both are reported. No push, upload, e-mail, key request or background job.
+
+**Paper framing, whatever the result.** (1) The preregistered k = 1 reserve failed at the 1% allowance (H-R7-A1: 70%, 27% and 35% at SF7, SF8 and SF9). (2) k = 4 was then registered (this file) and tested on fresh seeds (H-R7b-1 and H-R7b-2). Both are reported, each with its verdict.

@@ -1,0 +1,24 @@
+id,file,description,status
+L801,src/crashguard/r5_l8.py,rate limit off by one,KILLED
+L802,src/crashguard/r5_l8.py,spacing rule dropped,KILLED
+L803,src/crashguard/r5_l8.py,rate limit dropped,KILLED
+L804,src/crashguard/r5_l8.py,plausibility check dropped,KILLED
+L805,src/crashguard/r5_l8.py,quarantine needs three strikes,KILLED
+L806,src/crashguard/r5_l8.py,one strike quarantines,KILLED
+L807,src/crashguard/r5_l8.py,quarantine forwards every alert,KILLED
+L808,src/crashguard/r5_l8.py,quarantine gap boundary,KILLED
+L809,src/crashguard/r5_l8.py,quarantine forwards high confidence,KILLED
+L810,src/crashguard/r5_l8.py,high forward not counted,KILLED
+L811,src/crashguard/r5_l8.py,last forward slot not updated,KILLED
+L812,src/crashguard/r5_l8.py,bound R,KILLED
+L813,src/crashguard/r5_l8.py,alerts per slot,KILLED
+L814,src/crashguard/r5_l8.py,horizon,KILLED
+L815,src/crashguard/r5_l8.py,attack kinds,KILLED
+L816,src/crashguard/r5_l8.py,longest slot pattern left out,KILLED
+L817,src/crashguard/r5_l8.py,last slot not explored,KILLED
+L818,src/crashguard/r5_l8.py,worst low-confidence count not kept,SURVIVED
+L819,src/crashguard/r5_l8.py,high-confidence maximum not tracked,KILLED
+L820,src/crashguard/r5_l8.py,legitimate alerts on even slots only,KILLED
+L821,src/crashguard/r5_l8.py,legitimate alerts treated as repeated positions,KILLED
+L822,src/crashguard/r5_l8.py,strike counted as quarantine,KILLED
+L823,src/crashguard/r5_l8.py,rate doubled,KILLED

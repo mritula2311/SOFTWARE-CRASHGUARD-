@@ -1,0 +1,167 @@
+/*
+ * DESIGN VARIANT (paper session, V13 section 4): the car keeps a boot counter in non-volatile memory, one write per boot, and adds it to the id of every time-stamped alert: id = <boot, epoch, seq>.
+ * The counter is modelled as a fresh value per boot (the assumption: the write succeeds and the counter never wraps). Everything else is the model crash_alert_fresh.spthy.
+ *
+ * Tamarin model, part 2 of 2: freshness, the seen-set and reboots of the alert (round 3, T2.1; docs/02_preregistration/PREREGISTRATION_V14.md section 2.1).
+ *
+ * Final design M1 (per-vehicle key). Time is a chain of epochs (one per GPS second, fresh names linked by !Next). The base accepts a time-stamped
+ * alert if its epoch is the current or the previous epoch (window of two epochs) and its (vehicle, field) pair is not in the seen-set. Sequence-in-second
+ * numbers are bounded to s1..s3. The seen-set is unbounded here (a finite ring is outside the model; see R1). The no-time fallback alert carries a boot
+ * marker (fresh per boot) and a counter; the base counter check for it is NOT modelled (only the seen-set). A car reboot loses all counters and the car
+ * is up again in a later epoch. A base reboot clears the seen-set. Adversary: Dolev-Yao network control and node compromise (RevealNode).
+ */
+theory CrashAlertFreshBootCtr
+begin
+
+builtins: hashing
+functions: kdf/2, mac/2
+
+rule BaseInit:
+  [ Fr(~km), Fr(~e0) ]
+  --[ BaseInit() ]->
+  [ !BaseMaster(~km), Clock(~e0), !Epoch(~e0), !Succ('s1', 's2'), !Succ('s2', 's3') ]
+
+rule Tick:
+  [ Clock(e), Fr(~en) ]
+  --[ Tick(e, ~en) ]->
+  [ Clock(~en), !Epoch(~en), !Next(e, ~en) ]
+
+rule BaseReboot:
+  [ ]
+  --[ BaseReboot() ]->
+  [ ]
+
+rule RevealNode:
+  [ !BaseMaster(km) ]
+  --[ RevealNode($w) ]->
+  [ Out(kdf(km, $w)) ]
+
+rule CarStart:
+  [ !Epoch(e), Fr(~b) ]
+  --[ CarStart($v), Now(e) ]->
+  [ CarSeq($v, ~b, e, 's1', 'ts') ]
+
+rule CarSendTS_new:
+  [ !Epoch(e), CarSeq($v, b, e, n, 'ts'), !BaseMaster(km) ]
+  --[ CarSend($v, <b, e, n>, 'ts'), Now(e) ]->
+  [ CarSeq($v, b, e, n, 'sent'), Out(<'ALERT', $v, <b, e, n>, mac(kdf(km, $v), <'A', $v, <b, e, n>>)>) ]
+
+rule CarSendTS_next:
+  [ !Epoch(e), CarSeq($v, b, e, n, 'sent'), !Succ(n, m), !BaseMaster(km) ]
+  --[ CarSend($v, <b, e, m>, 'ts'), Now(e) ]->
+  [ CarSeq($v, b, e, m, 'sent'), Out(<'ALERT', $v, <b, e, m>, mac(kdf(km, $v), <'A', $v, <b, e, m>>)>) ]
+
+rule CarNewEpoch:
+  [ CarSeq($v, b, e0, n, st), !Next(e0, e) ]
+  --[ CarNewEpoch($v), Now(e) ]->
+  [ CarSeq($v, b, e, 's1', 'ts') ]
+
+rule CarReboot:
+  [ !Epoch(e), CarSeq($v, b0, e0, n, st) ]
+  --[ CarReboot($v), Now(e) ]->
+  [ CarDown($v, e) ]
+
+/* the car stays down while time passes */
+rule CarDownWait:
+  [ CarDown($v, e0), !Next(e0, e) ]
+  --[ Now(e) ]->
+  [ CarDown($v, e) ]
+
+rule CarBootTS:
+  [ CarDown($v, e0), !Next(e0, e), Fr(~b) ]
+  --[ CarBootTS($v), Now(e) ]->
+  [ CarSeq($v, ~b, e, 's1', 'ts') ]
+
+rule CarBootNT:
+  [ CarDown($v, e0), Fr(~be) ]
+  --[ CarBootNT($v) ]->
+  [ CarNT($v, ~be, 's1') ]
+
+rule CarSendNT_first:
+  [ CarNT($v, be, n), !BaseMaster(km) ]
+  --[ CarSend($v, <'B', be, n>, 'nt') ]->
+  [ CarNTsent($v, be, n), Out(<'ALERT', $v, <'B', be, n>, mac(kdf(km, $v), <'A', $v, <'B', be, n>>)>) ]
+
+rule CarSendNT_next:
+  [ CarNTsent($v, be, n), !Succ(n, m), !BaseMaster(km) ]
+  --[ CarSend($v, <'B', be, m>, 'nt') ]->
+  [ CarNTsent($v, be, m), Out(<'ALERT', $v, <'B', be, m>, mac(kdf(km, $v), <'A', $v, <'B', be, m>>)>) ]
+
+/* time-stamped alert, current epoch */
+rule BaseAcceptCur:
+  [ !Epoch(e), !BaseMaster(km), In(<'ALERT', $v, <b, e, n>, mac(kdf(km, $v), <'A', $v, <b, e, n>>)>) ]
+  --[ Now(e), BaseAccept($v, <b, e, n>), NotSeen($v, <b, e, n>), Seen($v, <b, e, n>), AcceptTS($v, <b, e, n>, e) ]->
+  [ ]
+
+/* time-stamped alert, previous epoch */
+rule BaseAcceptPrev:
+  [ !Epoch(e), !BaseMaster(km), !Next(ep, e), In(<'ALERT', $v, <b, ep, n>, mac(kdf(km, $v), <'A', $v, <b, ep, n>>)>) ]
+  --[ Now(e), BaseAccept($v, <b, ep, n>), NotSeen($v, <b, ep, n>), Seen($v, <b, ep, n>), AcceptTS($v, <b, ep, n>, e) ]->
+  [ ]
+
+/* no-time alert: no window, only the seen-set */
+rule BaseAcceptNT:
+  [ !Epoch(e), !BaseMaster(km), In(<'ALERT', $v, <'B', be, n>, mac(kdf(km, $v), <'A', $v, <'B', be, n>>)>) ]
+  --[ Now(e), BaseAccept($v, <'B', be, n>), NotSeen($v, <'B', be, n>), Seen($v, <'B', be, n>), AcceptNT($v, <'B', be, n>, e) ]->
+  [ ]
+
+/* the seen-set: a (vehicle, field) pair is not accepted twice unless the base rebooted in between (RAM is cleared at reboot) */
+restriction SeenSet:
+  "All v f #i. NotSeen(v, f)@i ==>
+     not (Ex #j. Seen(v, f)@j & #j < #i & not (Ex #r. BaseReboot()@r & #j < #r & #r < #i))"
+
+/* "now" is epoch e: the epoch has started (its !Epoch fact exists) and has not been left by a Tick before this step */
+restriction CurrentEpoch:
+  "All e #i. Now(e)@i ==> not (Ex en #t. Tick(e, en)@t & #t < #i)"
+
+#ifdef BOUND
+/* bounded variant (-D=BOUND): at most three Tick events, i.e. at most four epochs; used for the car-reboot id lemma, whose proof needs an induction that the tool does not find */
+restriction MaxThreeTicks:
+  "not (Ex #a #b #c #d e1 e2 e3 e4 e5 e6 e7 e8.
+         Tick(e1, e2)@a & Tick(e3, e4)@b & Tick(e5, e6)@c & Tick(e7, e8)@d
+         & not (#a = #b) & not (#a = #c) & not (#a = #d) & not (#b = #c) & not (#b = #d) & not (#c = #d))"
+#endif
+
+restriction OneBase:
+  "All #i #j. BaseInit()@i & BaseInit()@j ==> #i = #j"
+
+restriction OneCarPerId:
+  "All v #i #j. CarStart(v)@i & CarStart(v)@j ==> #i = #j"
+
+/* ---------------------------------------------------------------- lemmas */
+
+lemma executable_ts:
+  exists-trace
+  "Ex v f #i #j. CarSend(v, f, 'ts')@i & BaseAccept(v, f)@j & #i < #j"
+
+lemma executable_after_car_reboot:
+  exists-trace
+  "Ex v f #r #i #j. CarReboot(v)@r & CarSend(v, f, 'ts')@i & BaseAccept(v, f)@j & #r < #i & #i < #j"
+
+/* L4 replay outside the window: a time-stamped alert is accepted only in its own epoch or the next one, and only if the car sent it */
+lemma L4_replay_outside_window:
+  "All v b ep n e #i. AcceptTS(v, <b, ep, n>, e)@i ==>
+     ((e = ep) | (Ex #t. Tick(ep, e)@t)) & ((Ex #j. CarSend(v, <b, ep, n>, 'ts')@j & #j < #i) | (Ex #r. RevealNode(v)@r))"
+
+/* L4b no second acceptance while the seen-set is intact (no base reboot) */
+lemma L4b_at_most_once:
+  "All v f #i #k. BaseAccept(v, f)@i & BaseAccept(v, f)@k & not (Ex #r. BaseReboot()@r) ==> #i = #k"
+
+/* L5 car reboot: a time-stamped alert id (epoch, seq) sent before a reboot is never reused after it (boot is in a strictly later epoch) */
+lemma L5_car_alert_ids_unique:
+  "All v f #i #r #j. CarSend(v, f, 'ts')@i & CarReboot(v)@r & CarSend(v, f, 'ts')@j & #i < #r & #r < #j ==> F"
+
+lemma L5_no_double_accept_with_car_reboot:
+  "All v f #i #k #r. BaseAccept(v, f)@i & BaseAccept(v, f)@k & CarReboot(v)@r & not (Ex #b. BaseReboot()@b) ==> #i = #k"
+
+/* L6 base reboot: no replay is accepted a second time (EXPECTED REFUTED: the seen-set is lost at a reboot) */
+lemma L6_base_reboot_replay:
+  "All v f #i #k. BaseAccept(v, f)@i & BaseAccept(v, f)@k ==> #i = #k"
+
+/* L7 staleness of no-time alerts (EXPECTED to exist: an alert with no time field can be accepted epochs after it was sent) */
+lemma L7_no_time_alert_can_be_stale:
+  exists-trace
+  "Ex v f #i #j #t1 #t2 e1 e2 e3.
+     CarSend(v, f, 'nt')@i & Tick(e1, e2)@t1 & Tick(e2, e3)@t2 & BaseAccept(v, f)@j & #i < #t1 & #t1 < #t2 & #t2 < #j"
+
+end

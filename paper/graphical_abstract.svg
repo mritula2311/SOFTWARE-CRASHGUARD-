@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="360" viewBox="0 0 1000 360" font-family="Arial, Helvetica, sans-serif">
+<rect width="1000" height="360" fill="#ffffff"/>
+<text x="500" y="34" text-anchor="middle" font-size="20" font-weight="bold">Sense, decide, report: what a low-cost crash-alert node needs</text>
+<g font-size="14">
+<rect x="30" y="70" width="280" height="200" rx="10" fill="#0072B2"/>
+<text x="170" y="100" text-anchor="middle" fill="#fff" font-weight="bold" font-size="17">1  Sense</text>
+<text x="170" y="135" text-anchor="middle" fill="#fff">+-32 g frontal, +-64 g pole</text>
+<text x="170" y="160" text-anchor="middle" fill="#fff">217 duplicate groups in the benchmark</text>
+<text x="170" y="185" text-anchor="middle" fill="#fff">recall at 1% target: 0.63 to 0.56</text>
+<text x="170" y="255" text-anchor="middle" fill="#fff" font-size="12">MEASURED_SOFTWARE</text>
+<rect x="360" y="70" width="280" height="200" rx="10" fill="#E69F00"/>
+<text x="500" y="100" text-anchor="middle" font-weight="bold" font-size="17">2  Decide</text>
+<text x="500" y="135" text-anchor="middle">compact forest, 16-bit nodes</text>
+<text x="500" y="160" text-anchor="middle">provisional decision 1750 ms earlier</text>
+<text x="500" y="185" text-anchor="middle">no severity class in the provisional frame</text>
+<text x="500" y="255" text-anchor="middle" font-size="12">MEASURED_SOFTWARE, SIMULATED</text>
+<rect x="690" y="70" width="280" height="200" rx="10" fill="#009E73"/>
+<text x="830" y="100" text-anchor="middle" fill="#fff" font-weight="bold" font-size="17">3  Report</text>
+<text x="830" y="135" text-anchor="middle" fill="#fff">ACK bound to the vehicle (Tamarin)</text>
+<text x="830" y="160" text-anchor="middle" fill="#fff">two-stage alert: 1.9 s earlier</text>
+<text x="830" y="185" text-anchor="middle" fill="#fff">extra airtime 37% (SF7), 54% (SF9)</text>
+<text x="830" y="255" text-anchor="middle" fill="#fff" font-size="12">FORMAL, SIMULATED, TRACE_DRIVEN</text>
+</g>
+<text x="500" y="310" text-anchor="middle" font-size="14">Preregistered; every result labelled; negatives reported. No physical hardware measurement.</text>
+</svg>

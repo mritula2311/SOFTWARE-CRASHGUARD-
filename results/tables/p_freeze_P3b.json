@@ -1,0 +1,28 @@
+{
+  "frozen_at": "2026-11-12 08:43",
+  "hypothesis": "P3b",
+  "model_files": {
+    "data\\processed\\pp_models\\p3_16.joblib": "f22e552a87857fc0aaa77b465e79b60ef1126434bbcf103fa18ef0bcd3ef5762",
+    "data\\processed\\pp_models\\p3_32.joblib": "a4a5811cc6fe2797449a7a1b6dfe462166314ceb5b439ad70141ecb4f50090b5"
+  },
+  "note": "factor f chosen on validation so the lowered table escalates as A does; no simulated outcome used",
+  "per_range": {
+    "16": {
+      "f": 0.875,
+      "threshold": 0.2995469430241056,
+      "val_escalation_A": 0.6116504854368932,
+      "val_escalation_lowered": 0.6116504854368932
+    },
+    "32": {
+      "f": 0.885,
+      "threshold": 0.10152833560670145,
+      "val_escalation_A": 0.6407766990291263,
+      "val_escalation_lowered": 0.6407766990291263
+    }
+  },
+  "sim": {
+    "cells": "S.STEADY + S.BURST",
+    "params": "s11.tuned.*",
+    "seeds": "3000 + hour, hours 0..29"
+  }
+}

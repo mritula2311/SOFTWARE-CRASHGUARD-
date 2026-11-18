@@ -1,0 +1,6 @@
+{
+ "rule": "int(sha256('l11|'+id),16) mod 2",
+ "n_half0_cached": 14780,
+ "n_half1_cached": 14671,
+ "half1_ids_sha256": "ac909cc5a9fe5c9a02845b71dc54a661d6d99a6550cd2028b45f851aa544d4e4"
+}

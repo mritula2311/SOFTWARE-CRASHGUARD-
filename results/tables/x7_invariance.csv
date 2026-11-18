@@ -1,0 +1,29 @@
+change,feature,n,median_rel_change
+amplitude x2,peak_a,125,0.5547329364668407
+amplitude x2,peak_ax,125,0.8912037274977812
+amplitude x2,peak_ay,125,0.9540323214836096
+amplitude x2,peak_az,125,0.4424276609906907
+amplitude x2,rms_a,125,1.0169571560226587
+amplitude x2,jerk_peak,125,0.7712151195602267
+amplitude x2,energy,125,3.0681161944790385
+amplitude x2,dur_above,125,4.0
+amplitude x2,peak_ratio_xy,125,0.07288992252946093
+amplitude x2,horiz_share,125,0.21191356106680528
+amplitude x2,kurtosis_a,125,0.3553604873584439
+amplitude x2,crest,125,0.2273354141215434
+amplitude x2,post_quiet,125,0.19893906835364086
+amplitude x2,gyro_peak,125,0.0
+time scale x2,peak_a,125,0.0
+time scale x2,peak_ax,125,0.0
+time scale x2,peak_ay,125,0.0
+time scale x2,peak_az,125,0.0
+time scale x2,rms_a,125,0.18645671325019791
+time scale x2,jerk_peak,125,0.4616183544733459
+time scale x2,energy,125,0.40767938930396497
+time scale x2,dur_above,125,0.3333333333333333
+time scale x2,peak_ratio_xy,125,0.0
+time scale x2,horiz_share,125,0.0
+time scale x2,kurtosis_a,125,0.5307096974818077
+time scale x2,crest,125,0.15299705915764836
+time scale x2,post_quiet,125,0.3460265583612843
+time scale x2,gyro_peak,125,0.0

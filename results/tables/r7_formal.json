@@ -1,0 +1,1198 @@
+[
+ {
+  "B": 16,
+  "k": 1,
+  "model": "H",
+  "policy": "old",
+  "runs": 21612,
+  "inv1_viol": 0,
+  "inv2_viol_uncond": {
+   "0": 0,
+   "1": 0,
+   "2": 5760
+  },
+  "inv2_viol_cond": 0,
+  "runs_by_n": {
+   "0": 12,
+   "1": 864,
+   "2": 20736
+  },
+  "cond_runs": 4332,
+  "example": {
+   "events": [
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false
+     ],
+     "confirm"
+    ]
+   ],
+   "log": [
+    [
+     1,
+     1,
+     "L",
+     0
+    ],
+    [
+     3,
+     1,
+     "L",
+     0
+    ],
+    [
+     5,
+     4,
+     "H",
+     0
+    ],
+    [
+     11,
+     1,
+     "L",
+     1
+    ],
+    [
+     13,
+     1,
+     "L",
+     1
+    ],
+    [
+     15,
+     4,
+     "H",
+     1
+    ],
+    [
+     21,
+     1,
+     "L",
+     2
+    ],
+    [
+     23,
+     1,
+     "L",
+     2
+    ],
+    [
+     33,
+     4,
+     "H",
+     2
+    ]
+   ],
+   "delay": 10,
+   "dmax": 2,
+   "intact": false
+  },
+  "example_n": 2
+ },
+ {
+  "B": 16,
+  "k": 1,
+  "model": "H",
+  "policy": "reserved",
+  "runs": 21612,
+  "inv1_viol": 0,
+  "inv2_viol_uncond": {
+   "0": 0,
+   "1": 0,
+   "2": 0
+  },
+  "inv2_viol_cond": 0,
+  "runs_by_n": {
+   "0": 12,
+   "1": 864,
+   "2": 20736
+  },
+  "cond_runs": 17004,
+  "example": null,
+  "example_n": null
+ },
+ {
+  "B": 16,
+  "k": 1,
+  "model": "T",
+  "policy": "old",
+  "runs": 21612,
+  "inv1_viol": 0,
+  "inv2_viol_uncond": {
+   "0": 12,
+   "1": 864,
+   "2": 20736
+  },
+  "inv2_viol_cond": 21612,
+  "runs_by_n": {
+   "0": 12,
+   "1": 864,
+   "2": 20736
+  },
+  "cond_runs": 21612,
+  "example": {
+   "events": [
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false
+     ],
+     "confirm"
+    ]
+   ],
+   "log": [
+    [
+     1,
+     1,
+     "L",
+     0
+    ],
+    [
+     4,
+     1,
+     "L",
+     0
+    ],
+    [
+     7,
+     4,
+     "H",
+     0
+    ]
+   ],
+   "delay": 4,
+   "dmax": 0,
+   "intact": true
+  },
+  "example_n": 0
+ },
+ {
+  "B": 16,
+  "k": 1,
+  "model": "T",
+  "policy": "reserved",
+  "runs": 21612,
+  "inv1_viol": 0,
+  "inv2_viol_uncond": {
+   "0": 0,
+   "1": 0,
+   "2": 0
+  },
+  "inv2_viol_cond": 0,
+  "runs_by_n": {
+   "0": 12,
+   "1": 864,
+   "2": 20736
+  },
+  "cond_runs": 21612,
+  "example": null,
+  "example_n": null
+ },
+ {
+  "B": 16,
+  "k": 2,
+  "model": "H",
+  "policy": "old",
+  "runs": 141140,
+  "inv1_viol": 0,
+  "inv2_viol_uncond": {
+   "0": 0,
+   "1": 0,
+   "2": 47040
+  },
+  "inv2_viol_cond": 0,
+  "runs_by_n": {
+   "0": 20,
+   "1": 2880,
+   "2": 138240
+  },
+  "cond_runs": 3020,
+  "example": {
+   "events": [
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      true,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ]
+   ],
+   "log": [
+    [
+     1,
+     1,
+     "L",
+     0
+    ],
+    [
+     3,
+     1,
+     "L",
+     0
+    ],
+    [
+     5,
+     4,
+     "H",
+     0
+    ],
+    [
+     10,
+     4,
+     "H",
+     0
+    ],
+    [
+     16,
+     1,
+     "L",
+     1
+    ],
+    [
+     18,
+     1,
+     "L",
+     1
+    ],
+    [
+     20,
+     4,
+     "H",
+     1
+    ],
+    [
+     31,
+     1,
+     "L",
+     2
+    ],
+    [
+     33,
+     1,
+     "L",
+     2
+    ],
+    [
+     35,
+     4,
+     "H",
+     2
+    ],
+    [
+     40,
+     4,
+     "H",
+     2
+    ]
+   ],
+   "delay": 7,
+   "dmax": 2,
+   "intact": false
+  },
+  "example_n": 2
+ },
+ {
+  "B": 16,
+  "k": 2,
+  "model": "H",
+  "policy": "reserved",
+  "runs": 141140,
+  "inv1_viol": 0,
+  "inv2_viol_uncond": {
+   "0": 0,
+   "1": 0,
+   "2": 29184
+  },
+  "inv2_viol_cond": 0,
+  "runs_by_n": {
+   "0": 20,
+   "1": 2880,
+   "2": 138240
+  },
+  "cond_runs": 1460,
+  "example": {
+   "events": [
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      true,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ]
+   ],
+   "log": [
+    [
+     1,
+     1,
+     "L",
+     0
+    ],
+    [
+     3,
+     1,
+     "L",
+     0
+    ],
+    [
+     5,
+     4,
+     "H",
+     0
+    ],
+    [
+     10,
+     4,
+     "H",
+     0
+    ],
+    [
+     18,
+     4,
+     "H",
+     1
+    ],
+    [
+     33,
+     4,
+     "H",
+     2
+    ],
+    [
+     38,
+     4,
+     "H",
+     2
+    ]
+   ],
+   "delay": 7,
+   "dmax": 2,
+   "intact": false
+  },
+  "example_n": 2
+ },
+ {
+  "B": 16,
+  "k": 2,
+  "model": "T",
+  "policy": "old",
+  "runs": 141140,
+  "inv1_viol": 0,
+  "inv2_viol_uncond": {
+   "0": 20,
+   "1": 2880,
+   "2": 138240
+  },
+  "inv2_viol_cond": 141140,
+  "runs_by_n": {
+   "0": 20,
+   "1": 2880,
+   "2": 138240
+  },
+  "cond_runs": 141140,
+  "example": {
+   "events": [
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ]
+   ],
+   "log": [
+    [
+     1,
+     1,
+     "L",
+     0
+    ],
+    [
+     4,
+     1,
+     "L",
+     0
+    ],
+    [
+     7,
+     4,
+     "H",
+     0
+    ],
+    [
+     19,
+     4,
+     "H",
+     0
+    ]
+   ],
+   "delay": 4,
+   "dmax": 0,
+   "intact": true
+  },
+  "example_n": 0
+ },
+ {
+  "B": 16,
+  "k": 2,
+  "model": "T",
+  "policy": "reserved",
+  "runs": 141140,
+  "inv1_viol": 0,
+  "inv2_viol_uncond": {
+   "0": 0,
+   "1": 0,
+   "2": 0
+  },
+  "inv2_viol_cond": 0,
+  "runs_by_n": {
+   "0": 20,
+   "1": 2880,
+   "2": 138240
+  },
+  "cond_runs": 141140,
+  "example": null,
+  "example_n": null
+ },
+ {
+  "B": 20,
+  "k": 1,
+  "model": "H",
+  "policy": "old",
+  "runs": 21612,
+  "inv1_viol": 0,
+  "inv2_viol_uncond": {
+   "0": 0,
+   "1": 0,
+   "2": 0
+  },
+  "inv2_viol_cond": 0,
+  "runs_by_n": {
+   "0": 12,
+   "1": 864,
+   "2": 20736
+  },
+  "cond_runs": 21612,
+  "example": null,
+  "example_n": null
+ },
+ {
+  "B": 20,
+  "k": 1,
+  "model": "H",
+  "policy": "reserved",
+  "runs": 21612,
+  "inv1_viol": 0,
+  "inv2_viol_uncond": {
+   "0": 0,
+   "1": 0,
+   "2": 0
+  },
+  "inv2_viol_cond": 0,
+  "runs_by_n": {
+   "0": 12,
+   "1": 864,
+   "2": 20736
+  },
+  "cond_runs": 21612,
+  "example": null,
+  "example_n": null
+ },
+ {
+  "B": 20,
+  "k": 2,
+  "model": "H",
+  "policy": "old",
+  "runs": 141140,
+  "inv1_viol": 0,
+  "inv2_viol_uncond": {
+   "0": 0,
+   "1": 0,
+   "2": 9216
+  },
+  "inv2_viol_cond": 0,
+  "runs_by_n": {
+   "0": 20,
+   "1": 2880,
+   "2": 138240
+  },
+  "cond_runs": 22700,
+  "example": {
+   "events": [
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      true,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ]
+   ],
+   "log": [
+    [
+     1,
+     1,
+     "L",
+     0
+    ],
+    [
+     3,
+     1,
+     "L",
+     0
+    ],
+    [
+     5,
+     4,
+     "H",
+     0
+    ],
+    [
+     10,
+     4,
+     "H",
+     0
+    ],
+    [
+     16,
+     1,
+     "L",
+     1
+    ],
+    [
+     18,
+     1,
+     "L",
+     1
+    ],
+    [
+     20,
+     4,
+     "H",
+     1
+    ],
+    [
+     26,
+     1,
+     "L",
+     2
+    ],
+    [
+     28,
+     1,
+     "L",
+     2
+    ],
+    [
+     33,
+     4,
+     "H",
+     2
+    ],
+    [
+     38,
+     4,
+     "H",
+     2
+    ]
+   ],
+   "delay": 5,
+   "dmax": 2,
+   "intact": false
+  },
+  "example_n": 2
+ },
+ {
+  "B": 20,
+  "k": 2,
+  "model": "H",
+  "policy": "reserved",
+  "runs": 141140,
+  "inv1_viol": 0,
+  "inv2_viol_uncond": {
+   "0": 0,
+   "1": 0,
+   "2": 2304
+  },
+  "inv2_viol_cond": 0,
+  "runs_by_n": {
+   "0": 20,
+   "1": 2880,
+   "2": 138240
+  },
+  "cond_runs": 48980,
+  "example": {
+   "events": [
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ],
+    [
+     0,
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     "confirm"
+    ]
+   ],
+   "log": [
+    [
+     1,
+     1,
+     "L",
+     0
+    ],
+    [
+     3,
+     1,
+     "L",
+     0
+    ],
+    [
+     5,
+     4,
+     "H",
+     0
+    ],
+    [
+     10,
+     4,
+     "H",
+     0
+    ],
+    [
+     16,
+     1,
+     "L",
+     1
+    ],
+    [
+     18,
+     4,
+     "H",
+     1
+    ],
+    [
+     23,
+     4,
+     "H",
+     1
+    ],
+    [
+     35,
+     4,
+     "H",
+     2
+    ],
+    [
+     40,
+     4,
+     "H",
+     2
+    ]
+   ],
+   "delay": 4,
+   "dmax": 2,
+   "intact": false
+  },
+  "example_n": 2
+ },
+ {
+  "B": 24,
+  "k": 1,
+  "model": "H",
+  "policy": "old",
+  "runs": 21612,
+  "inv1_viol": 0,
+  "inv2_viol_uncond": {
+   "0": 0,
+   "1": 0,
+   "2": 0
+  },
+  "inv2_viol_cond": 0,
+  "runs_by_n": {
+   "0": 12,
+   "1": 864,
+   "2": 20736
+  },
+  "cond_runs": 21612,
+  "example": null,
+  "example_n": null
+ },
+ {
+  "B": 24,
+  "k": 1,
+  "model": "H",
+  "policy": "reserved",
+  "runs": 21612,
+  "inv1_viol": 0,
+  "inv2_viol_uncond": {
+   "0": 0,
+   "1": 0,
+   "2": 0
+  },
+  "inv2_viol_cond": 0,
+  "runs_by_n": {
+   "0": 12,
+   "1": 864,
+   "2": 20736
+  },
+  "cond_runs": 21612,
+  "example": null,
+  "example_n": null
+ },
+ {
+  "B": 24,
+  "k": 2,
+  "model": "H",
+  "policy": "old",
+  "runs": 141140,
+  "inv1_viol": 0,
+  "inv2_viol_uncond": {
+   "0": 0,
+   "1": 0,
+   "2": 0
+  },
+  "inv2_viol_cond": 0,
+  "runs_by_n": {
+   "0": 20,
+   "1": 2880,
+   "2": 138240
+  },
+  "cond_runs": 94100,
+  "example": null,
+  "example_n": null
+ },
+ {
+  "B": 24,
+  "k": 2,
+  "model": "H",
+  "policy": "reserved",
+  "runs": 141140,
+  "inv1_viol": 0,
+  "inv2_viol_uncond": {
+   "0": 0,
+   "1": 0,
+   "2": 0
+  },
+  "inv2_viol_cond": 0,
+  "runs_by_n": {
+   "0": 20,
+   "1": 2880,
+   "2": 138240
+  },
+  "cond_runs": 127700,
+  "example": null,
+  "example_n": null
+ },
+ {
+  "B": 28,
+  "k": 1,
+  "model": "H",
+  "policy": "old",
+  "runs": 21612,
+  "inv1_viol": 0,
+  "inv2_viol_uncond": {
+   "0": 0,
+   "1": 0,
+   "2": 0
+  },
+  "inv2_viol_cond": 0,
+  "runs_by_n": {
+   "0": 12,
+   "1": 864,
+   "2": 20736
+  },
+  "cond_runs": 21612,
+  "example": null,
+  "example_n": null
+ },
+ {
+  "B": 28,
+  "k": 1,
+  "model": "H",
+  "policy": "reserved",
+  "runs": 21612,
+  "inv1_viol": 0,
+  "inv2_viol_uncond": {
+   "0": 0,
+   "1": 0,
+   "2": 0
+  },
+  "inv2_viol_cond": 0,
+  "runs_by_n": {
+   "0": 12,
+   "1": 864,
+   "2": 20736
+  },
+  "cond_runs": 21612,
+  "example": null,
+  "example_n": null
+ },
+ {
+  "B": 28,
+  "k": 2,
+  "model": "H",
+  "policy": "old",
+  "runs": 141140,
+  "inv1_viol": 0,
+  "inv2_viol_uncond": {
+   "0": 0,
+   "1": 0,
+   "2": 0
+  },
+  "inv2_viol_cond": 0,
+  "runs_by_n": {
+   "0": 20,
+   "1": 2880,
+   "2": 138240
+  },
+  "cond_runs": 139220,
+  "example": null,
+  "example_n": null
+ },
+ {
+  "B": 28,
+  "k": 2,
+  "model": "H",
+  "policy": "reserved",
+  "runs": 141140,
+  "inv1_viol": 0,
+  "inv2_viol_uncond": {
+   "0": 0,
+   "1": 0,
+   "2": 0
+  },
+  "inv2_viol_cond": 0,
+  "runs_by_n": {
+   "0": 20,
+   "1": 2880,
+   "2": 138240
+  },
+  "cond_runs": 141140,
+  "example": null,
+  "example_n": null
+ },
+ {
+  "B": 32,
+  "k": 1,
+  "model": "H",
+  "policy": "old",
+  "runs": 21612,
+  "inv1_viol": 0,
+  "inv2_viol_uncond": {
+   "0": 0,
+   "1": 0,
+   "2": 0
+  },
+  "inv2_viol_cond": 0,
+  "runs_by_n": {
+   "0": 12,
+   "1": 864,
+   "2": 20736
+  },
+  "cond_runs": 21612,
+  "example": null,
+  "example_n": null
+ },
+ {
+  "B": 32,
+  "k": 1,
+  "model": "H",
+  "policy": "reserved",
+  "runs": 21612,
+  "inv1_viol": 0,
+  "inv2_viol_uncond": {
+   "0": 0,
+   "1": 0,
+   "2": 0
+  },
+  "inv2_viol_cond": 0,
+  "runs_by_n": {
+   "0": 12,
+   "1": 864,
+   "2": 20736
+  },
+  "cond_runs": 21612,
+  "example": null,
+  "example_n": null
+ },
+ {
+  "B": 32,
+  "k": 2,
+  "model": "H",
+  "policy": "old",
+  "runs": 141140,
+  "inv1_viol": 0,
+  "inv2_viol_uncond": {
+   "0": 0,
+   "1": 0,
+   "2": 0
+  },
+  "inv2_viol_cond": 0,
+  "runs_by_n": {
+   "0": 20,
+   "1": 2880,
+   "2": 138240
+  },
+  "cond_runs": 141140,
+  "example": null,
+  "example_n": null
+ },
+ {
+  "B": 32,
+  "k": 2,
+  "model": "H",
+  "policy": "reserved",
+  "runs": 141140,
+  "inv1_viol": 0,
+  "inv2_viol_uncond": {
+   "0": 0,
+   "1": 0,
+   "2": 0
+  },
+  "inv2_viol_cond": 0,
+  "runs_by_n": {
+   "0": 20,
+   "1": 2880,
+   "2": 138240
+  },
+  "cond_runs": 141140,
+  "example": null,
+  "example_n": null
+ },
+ {
+  "B": 40,
+  "k": 1,
+  "model": "H",
+  "policy": "old",
+  "runs": 21612,
+  "inv1_viol": 0,
+  "inv2_viol_uncond": {
+   "0": 0,
+   "1": 0,
+   "2": 0
+  },
+  "inv2_viol_cond": 0,
+  "runs_by_n": {
+   "0": 12,
+   "1": 864,
+   "2": 20736
+  },
+  "cond_runs": 21612,
+  "example": null,
+  "example_n": null
+ },
+ {
+  "B": 40,
+  "k": 1,
+  "model": "H",
+  "policy": "reserved",
+  "runs": 21612,
+  "inv1_viol": 0,
+  "inv2_viol_uncond": {
+   "0": 0,
+   "1": 0,
+   "2": 0
+  },
+  "inv2_viol_cond": 0,
+  "runs_by_n": {
+   "0": 12,
+   "1": 864,
+   "2": 20736
+  },
+  "cond_runs": 21612,
+  "example": null,
+  "example_n": null
+ },
+ {
+  "B": 40,
+  "k": 2,
+  "model": "H",
+  "policy": "old",
+  "runs": 141140,
+  "inv1_viol": 0,
+  "inv2_viol_uncond": {
+   "0": 0,
+   "1": 0,
+   "2": 0
+  },
+  "inv2_viol_cond": 0,
+  "runs_by_n": {
+   "0": 20,
+   "1": 2880,
+   "2": 138240
+  },
+  "cond_runs": 141140,
+  "example": null,
+  "example_n": null
+ },
+ {
+  "B": 40,
+  "k": 2,
+  "model": "H",
+  "policy": "reserved",
+  "runs": 141140,
+  "inv1_viol": 0,
+  "inv2_viol_uncond": {
+   "0": 0,
+   "1": 0,
+   "2": 0
+  },
+  "inv2_viol_cond": 0,
+  "runs_by_n": {
+   "0": 20,
+   "1": 2880,
+   "2": 138240
+  },
+  "cond_runs": 141140,
+  "example": null,
+  "example_n": null
+ }
+]

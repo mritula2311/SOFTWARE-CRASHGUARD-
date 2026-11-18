@@ -1,0 +1,21 @@
+build/r6fp/image.elf  :
+section            size         addr
+.text             15223   1074593792
+.rodata           18336   1061158912
+.bss                 12   1073414144
+.comment             47            0
+.xtensa.info         56            0
+.xt.lit             272            0
+.xt.prop          11436            0
+.debug_frame        424            0
+.debug_info       11246            0
+.debug_abbrev      3331            0
+.debug_loclists    1228            0
+.debug_aranges      728            0
+.debug_rnglists      47            0
+.debug_line       10933            0
+.debug_str         2093            0
+.debug_line_str    2817            0
+Total             78229
+
+

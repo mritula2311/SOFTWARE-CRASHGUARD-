@@ -1,0 +1,18 @@
+{
+  "batch": 256,
+  "epochs": 20,
+  "frozen_at": "2026-11-12 09:13",
+  "hypothesis": "P4d",
+  "lr": 0.002,
+  "model_files": {},
+  "net": "conv 3-8 (k7,s2), conv 8-16 (k5,s2), conv 16-16 (k3,s2), global max, linear 16-1",
+  "note": "EXPLORATORY; epoch chosen by validation AP; test split not used",
+  "quantisation": "int8 weights, symmetric per tensor",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ]
+}

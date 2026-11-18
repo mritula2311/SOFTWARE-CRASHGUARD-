@@ -1,0 +1,38 @@
+{
+ "seed": 42,
+ "fractions": [
+  0.6,
+  0.2,
+  0.2
+ ],
+ "class_limits_kmh": [
+  24.0,
+  40.0,
+  56.0
+ ],
+ "class_names": [
+  "Low",
+  "Moderate",
+  "Severe",
+  "Critical"
+ ],
+ "n_records": 913,
+ "folds": {
+  "dev": {
+   "n_records": 543,
+   "n_groups": 189,
+   "digest_sha256": "c3d527f74ad4b59638381a5004cdb79efa2570e38d5e0ba537e96179186bda5e"
+  },
+  "val": {
+   "n_records": 184,
+   "n_groups": 65,
+   "digest_sha256": "df9ec2e8edaada36ebd42665ccb2725d005a27fa862c090d1cc05b89428382a0"
+  },
+  "test": {
+   "n_records": 186,
+   "n_groups": 71,
+   "digest_sha256": "ab69ec7a1a7d5d4ce618663227b54690c0c2b570101dbac0b236a1b84fc73365"
+  }
+ },
+ "note": "digest = SHA-256 of the sorted group keys (make + first word of the model, upper case) joined by newlines; group_hash in records.csv = first 12 hex characters of the SHA-256 of the key"
+}

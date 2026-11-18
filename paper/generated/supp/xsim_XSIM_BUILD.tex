@@ -1,0 +1,41 @@
+
+
+
+Built in WSL2 (Ubuntu, g++ and cmake from the system packages) outside the repository, in \texttt{\textasciitilde{}/ns3work/ns-3-dev}.
+
+{\scriptsize\raggedright
+\begin{longtable}{p{0.317\linewidth}p{0.317\linewidth}p{0.317\linewidth}}
+\toprule
+Item & Version & Commit \\
+\midrule
+\endhead
+ns-3 & ns-3.48 (tag, as named by \texttt{src/lorawan/NS3-VERSION}) & d2add90b452d600cfb4859baed8e9ea633519447 \\
+signetlabdei lorawan module & v0.3.7 plus 2 commits (\texttt{git describe}: v0.3.7-2-ge45b4af) & e45b4af428c92f30b2e6c201055809110758125f \\
+\bottomrule
+\end{longtable}}
+
+Local changes to the module (all in the ns-3 source tree, recorded here and not in this repository):
+\begin{itemize}
+\item \texttt{model/logical-lora-channel.cc}: the include of the ns-3 log header was added (the file did not compile against ns-3.48 without it).
+\item \texttt{model/gateway-lora-phy.cc} and \texttt{model/end-device-lora-phy.cc}: the sensitivity tables were set to the values of the custom simulator (-123, -126, -129, -132, -134.5, -137 dBm for SF7 to SF12) for the calibration; the shipped values are -130, -132.5, -135, -137.5, -140, -142.5 dBm (gateway) and -124, -127, -130, -133, -135, -137 dBm (end device).
+\end{itemize}
+
+\begin{itemize}
+\item Session 2: \texttt{model/network-scheduler.cc} and \texttt{model/class-a-end-device-lorawan-mac.cc}: the receive-window delays are run-time variables (\texttt{g\_xsimRx1}, \texttt{g\_xsimRx2}; defaults 1 s and 2 s, the LoRaWAN class A values). The application sets 0.1 s and 0.2 s for the policies p1, quick and d1 (the custom simulator's 0.1 s processing delay) and keeps 1 s and 2 s for the standard LoRaWAN baseline.
+\end{itemize}
+
+\begin{itemize}
+\item Paper session (2026-11-15): \texttt{model/logical-lora-channel-helper.cc}, functions \texttt{GetWaitTime(uint32\_t)}, \texttt{AddEvent(Time, uint32\_t)} and \texttt{GetTxPowerForChannel(uint32\_t)}: a frequency outside the known sub-bands (the RX2 frequency 869.525 MHz in the ALOHA region, whose only sub-band is 868.0 to 868.6 MHz) now gives a wait of 0, no duty-cycle bookkeeping and 14 dBm. The shipped code dereferenced a null pointer there (\texttt{NS\_ASSERT\_MSG} is compiled out in the optimized build): \texttt{SubBand::GetNextTransmissionTime} inside \texttt{GatewayStatus::IsAvailableForTransmission}, found with gdb. The crash occurs when the gateway is busy at the RX1 opportunity and the network scheduler tries RX2; it hit about 0.2\% of the earlier runs and 17\% of the two-stage runs at SF7 (many short frames). The change alters nothing in runs that did not crash. RX2 downlinks are therefore not duty-limited in the ns-3 runs of this paper (the ACK airtime is short; the effect is not quantified).
+\item Paper session: the application \texttt{xsim/ns3/xsim\_alert.cc} gained the policies \texttt{r3s} and \texttt{r3t} (the two-stage alert), the options \texttt{--radius}, \texttt{--rate} and \texttt{--events}, and a guard that never sends from inside the MAC's outcome callback. Existing policies are unchanged.
+\end{itemize}
+
+Status: built and running (the module's example programs, the calibration scenario \texttt{xsim/ns3/xsim\_calib.cc} and, in session 2, the alert scenario \texttt{xsim/ns3/xsim\_alert.cc}, which compiles the D1 part of the firmware C path \texttt{firmware\_rd/cg\_rd.c} with \texttt{CG\_NO\_CRYPTO}). Calibration results: \texttt{docs/03\_results/XSIM\_CALIBRATION.md}. The D1 application and the cross-simulator verdict table (X1.3): \texttt{docs/03\_results/XSIM\_VERDICTS.md}. Known problem: about 0.2\% of the alert-scenario runs crash inside the module (a segmentation fault right after the confirmed-uplink outcome callback returns, found with a debug trace; same arguments crash again; the cause in the module was not found); these runs are dropped for all policies of that cell and hour.
+
+\subsection*{Patch file and build record (final verification run, 2026-11-15)}
+
+The local changes to the lorawan module are now stored as a patch in the repository: \texttt{xsim/ns3/patches/lorawan-v0.3.7-2-ge45b4af-local.patch} (output of \texttt{git diff} in \texttt{src/lorawan}, 8 files, 34 insertions, 11 deletions; SHA-256 \texttt{852f0f8dd489582a7c8d3a81ea8eb2f5b7964690b8cf5ba91e3368efea54e02c}). Apply it to the module at commit e45b4af with \texttt{git apply}. Besides items 1 to 4 above it holds two small changes to \texttt{model/simple-end-device-lora-phy.cc} and \texttt{model/simple-gateway-lora-phy.cc} (a run-time sensitivity offset \texttt{g\_xsimSensDelta[6]} used by the sensitivity analysis; zero by default) and the \texttt{class-a-end-device-lorawan-mac.cc} receive-window variables of item 3. The scratch \texttt{CMakeLists.txt} of the build is \texttt{xsim/ns3/scratch\_CMakeLists.txt}; \texttt{xsim/ns3/xsim\_alert.cc}, \texttt{xsim/ns3/xsim\_calib.cc}, \texttt{firmware\_rd/cg\_rd.c} and \texttt{firmware\_rd/cg\_rd.h} are byte-identical to the files in the ns-3 \texttt{scratch/} folder.
+
+Build record: g++ 13.3.0 and cmake 3.28.3 (Ubuntu 24.04 in WSL2); \texttt{libns3.48-lorawan-optimized.so} SHA-256 \texttt{b9eb31027510c710b0d312fc623928c4d51a84deb09b17452f78b00daa0efa0e}; \texttt{ns3.48-xsim\_alert-optimized} SHA-256 \texttt{ad984fad3ad9ec6088e2064556aadbe5231420743ec9c652bd34c2ddec197bbd}.
+
+The null-pointer fix of item 4 (the RX2 frequency outside the known sub-bands) is part of this patch and of this build. Check: 100 runs (R3 cells at SF7 and SF9 with extra loss 0.3, both policies, seeds 1 to 20, and one D1 cell of the S-X grid, hours 0 to 19) were run again in this build and every output file is byte-identical to the stored one (\texttt{docs/03\_results/VF\_NS3\_RERUN.md}, keys \texttt{vf.ns3.*}).
+

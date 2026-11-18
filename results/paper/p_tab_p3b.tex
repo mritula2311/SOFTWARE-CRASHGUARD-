@@ -1,0 +1,15 @@
+% P3b: pool-level mis-triage and escalation on the sealed fold (MEASURED_SOFTWARE); the simulated cells are in results/tables/p3b_cells.csv (SIMULATED).
+\begin{tabular}{llll}
+\toprule
+Range (g) & System & Mis-triage [95\%] & Escalation of non-severe [95\%] \\
+\midrule
++-16 & abstain to the fast path & 0.081 [0.014, 0.170] & 0.653 [0.566, 0.757] \\
++-16 & severity table, lowered thresholds & 0.048 [0.000, 0.122] & 0.734 [0.661, 0.812] \\
++-16 & severity table, current thresholds & 0.145 [0.057, 0.245] & 0.331 [0.246, 0.427] \\
++-16 & difference A minus lowered table & 0.032 [-0.030, 0.114] & -0.081 [-0.216, 0.066] \\
++-32 & abstain to the fast path & 0.065 [0.000, 0.143] & 0.629 [0.520, 0.722] \\
++-32 & severity table, lowered thresholds & 0.000 [0.000, 0.000] & 0.694 [0.613, 0.776] \\
++-32 & severity table, current thresholds & 0.113 [0.018, 0.224] & 0.218 [0.140, 0.301] \\
++-32 & difference A minus lowered table & 0.065 [0.000, 0.143] & -0.065 [-0.214, 0.081] \\
+\bottomrule
+\end{tabular}

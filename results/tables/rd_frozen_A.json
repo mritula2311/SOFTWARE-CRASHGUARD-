@@ -1,0 +1,50 @@
+{
+ "code": {
+  "src/crashguard/capacity.py": "454c2e9b4e45f4a77946a67ea760a7f965ad837bfdcf4a069d4c3922fc0ebacb",
+  "src/crashguard/fin_g.py": "9381e93874d018a9f23526bcd163ed31fe7bb5f256e0d49b29fb2a9e7e188b4a",
+  "src/crashguard/fin_sim.py": "3d106d5d6ff86a762b5166381671460f1cc1f29709345571bf52ae963931838b",
+  "src/crashguard/lora.py": "ac1e7ff21bc68c025344da0c7d3a4050a3e0eff91832cf10b61417637ca5ef01",
+  "src/crashguard/pa_sim.py": "5f79c0df071ad50c96f4bb09313484e55672ea8a38add17aeb0cfe8e0d2c3636",
+  "src/crashguard/packet.py": "6b6684c18691238a93171828aafd73312d25890850bc593df08eb32146c30edc",
+  "src/crashguard/rd_common.py": "b2c4e99ee46fdcf7a8b96d8271602e4a3001907426077a8d85ed811f21e8107e",
+  "src/crashguard/rd_d2_model.py": "022827fe6bc3ebcb3b0f864b35c7c7ddfdd89616c9e75c0c2298acb413c3407d",
+  "src/crashguard/rd_dev.py": "9820d01e8bcd80acc9624149a48d303e01561743c6f354b0a1601048e51962ff",
+  "src/crashguard/rd_eval.py": "4fbf1cb90196438efda67d988721919aec5263d655e5c02fff2d6a0484069d73",
+  "src/crashguard/rd_fresh_a.py": "8aed778d3165abceddfc77bc7cf7cff957031d245fb719a6c7a3ae9a1a1e3fbf",
+  "src/crashguard/rd_policy.py": "290af15223591baea233a04305a8d9482b7de6345fb7c4202e5ebe5b71c9eeef",
+  "src/crashguard/replay.py": "b8d3ecd963804787c45a055809a646ed7f34dfe45b2ea7533b4c6add0ca2fa01",
+  "src/crashguard/s11_sct.py": "6a800a5acbb06571feb7699fe16425a1dfc77b43eddac5f0262cd23f5c2811c0",
+  "src/crashguard/sct_sim.py": "1af3f7f3b0c4883f32e3b44b9a393a9f4461354db9d97a7ecefd0e2f03e4dedb",
+  "src/crashguard/world_sim.py": "a546678394e0b630f9eb93e31d46ae1940b3f9070386676e680d7ba6bbfe7180"
+ },
+ "dev_base_note": "baselines run on the DEV grid before any redesign iteration",
+ "dev_log_sha256": "bdeccfebcd6f95dd5fde297aa300e91c14b53f92f6059698472aba001f1a4bf5",
+ "params": {
+  "d1": {
+   "forget": 0.97,
+   "g0": 1.5,
+   "l0": 0.3,
+   "n0": 6.0,
+   "rho": [
+    0.0,
+    0.2,
+    0.5,
+    0.8
+   ],
+   "share": [
+    0.0,
+    0.0,
+    0.3,
+    0.5
+   ]
+  },
+  "d2": {
+   "defer_scale": 1.0,
+   "max_defers": 3,
+   "max_ids": 24,
+   "sig_len": 64,
+   "tc": 3.0,
+   "thr": 2
+  }
+ }
+}

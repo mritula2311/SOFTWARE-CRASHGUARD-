@@ -1,0 +1,51 @@
+# Literature final check (round 7c)
+
+<!-- header:start -->
+| Field | Value |
+|---|---|
+| Status | current |
+| Date | 2026-11-16 |
+| Owner | Mritula S |
+| Scope | Round 7c literature corrections: the facts used, how each was checked, what could not be checked, and the absence rule. |
+| Evidence labels used | none (this file reports no result) |
+| Abbreviations | ACK = acknowledgement frame; GPS = Global Positioning System; GSM = Global System for Mobile communications; HTTP = Hypertext Transfer Protocol; IEEE = Institute of Electrical and Electronics Engineers; LoRa = long-range radio modulation; MAC = message authentication code; PDF = Portable Document Format |
+<!-- header:end -->
+
+## 1. Status of the source file
+
+The brief names `CrashGuard_Literature_Final_Check.md` as the source of every literature fact of round 7c. **That file was not in the session** (it was not attached to the conversation and a search of the user's folders and of `D:` to depth 6 found no file of that name). This document is therefore not a copy of it. Every fact below comes from the brief itself and was then checked against an independent record: Crossref (bibliographic data) and the OpenAlex abstract (content). Anything that rests on the brief alone and could not be checked is marked UNVERIFIED. When the file is available, the author should compare it with this table; the places where it could differ are marked.
+
+## 2. Facts used and how each was checked
+
+| No. | Fact (from the brief) | Check | Result |
+|---:|---|---|---|
+| 1 | Carneiro et al. (NOMS 2023) evaluated packet delivery ratio and latency in ns-3 | OpenAlex abstract (2026-11-16) | CONFIRMED: broadcast beacons build multi-hop routes, evaluated in ns-3 over a 10 km area, results for packet delivery ratio, network coverage and latency. The abstract names no security analysis. Full text not read |
+| 2 | Jabbari and Mohasefi, IEEE TII 18(1):56-65, 2022: formal checking with ProVerif and AVISPA | Crossref and OpenAlex abstract | CONFIRMED: January 2022, volume 18, issue 1, pages 56-65 (online 2021, doi 10.1109/TII.2021.3075440); the abstract states a real-or-random proof and checks with ProVerif and AVISPA. Scope: user authentication and key establishment for LoRaWAN. Closed access, full text not read |
+| 3 | Marciano et al., Mechatronika 2024, Brno, doi 10.1109/ME61309.2024.10789689, full author list from Crossref | Crossref | CONFIRMED: nine authors (Marciano, Seixas, Pereira, Cordeiro, Guerreiro, Lopes, Pires, Foito, Pinto); 2024 21st International Conference on Mechatronics, Brno, 4 to 6 December 2024, pp. 1-6. Abstract read: experimental tests of a GPS, accelerometer and LoRa warning device |
+| 4 | Vinodhini et al., IJCS 38(1):e5692, 2025 | Crossref | CONFIRMED (online 2023, print 2025; doi 10.1002/dac.5692); abstract read; the publisher page is blocked to scripts and was not bypassed |
+| 5 | Liu et al. 2026, IEEE IoT-J 13(18), doi 10.1109/JIOT.2026.3713221; authors as IEEE prints them: Gao Liu; Chaoyi Wei; Ouyang Deqiang; Ning Wang; Shichao Lv | Crossref | CONFIRMED for venue, volume, issue, pages 42080-42092, September 2026 and five authors. Crossref stores the given and family names of two authors in an inconsistent order, so the BibTeX entry carries each name in braces exactly as written in the brief. The publisher page was not opened. Abstract: crafted jamming and replay induce retransmissions and force processing of invalid data, depleting the device energy (58.9% lower battery efficiency in a real-world test) |
+| 6 | Kumar 2026, SIML, doi 10.1109/SIML69834.2026.11621259: gateway-side ACK limiting | Crossref and OpenAlex abstract | CONFIRMED: Smriti Kumar, "Detecting and Mitigating MAC Layer DoS Attacks in LoRaWAN", 2026 SIML, June 2026, pp. 1-6. The abstract models a DoS in which rogue nodes exhaust gateway downlink airtime with confirmed uplinks and downlink data-rate manipulation, and proposes rogue-node detection followed by a gateway-level ACK limiting policy. Full text not read |
+| 7 | Chen et al. 2023: confirmed-transmission DoS that uses up gateway downlink airtime | Crossref and OpenAlex abstract | PARTLY CONFIRMED: the abstract says two DoS attacks target the confirmed transmission and that the Aloha MAC and the duty-cycle limit are the weakness; it does not state the mechanism. The "gateway downlink airtime" description is supported by the abstract of Kumar 2026 for the same class and by Chapter VII of Chen's thesis, whose two additional attacks appear to be those of the letter. The letter is closed access and was not read. UNVERIFIED against the letter itself |
+| 8 | Chen's PhD thesis (theses.hal.science/tel-05328563): DoS countermeasure chapter | HAL API; the open-access PDF read as text | READ for Chapter VII, sections VII.2 and VII.3.1 (section 3); the rest not read. It confirms the gateway-downlink description of fact 7 for the thesis's own attacks |
+| 9 | Thangamani et al., ICCES 2026, doi 10.1109/ICCES70397.2026.11762530 (optional) | Crossref and OpenAlex abstract | CONFIRMED: six authors, ICCES 2026, pp. 125-132; a GSM crash-alert unit for vehicle classes outside the AIS-140 mandate, 40 drop tests and about 210 road events |
+| 10 | Al-Shammaa and Al-Hadrawi, JCOMSS 21(4), 2025, doi 10.24138/jcomss-2025-0058 (optional) | Crossref and OpenAlex abstract | CONFIRMED: JCOMSS 21(4):414-426, 2025; a LoRa vehicle-to-vehicle system with explicit event-termination packets ("finished frame passing") |
+| 11 | LoRaWAN key-exchange analyses "listed in the check file" | not possible: the file was not available | the paper cites Wesemeyer et al. (EuroS&P 2020: LoRaWAN 1.1 and 1.0 Join Procedure analysed in Tamarin, attacks and a patch), which was already in the bibliography and whose abstract was read; any further analyses in the check file are NOT cited |
+| 12 | The sources named in the absence rule (IEEE Xplore, OpenAlex, Crossref, DOAJ, publisher pages; Google Scholar blocked and not searched) | repository logs | OpenAlex, Crossref, DOAJ and publisher pages were queried (`docs/01_literature/`, `docs/06_references/LIT_QUERIES_2021PLUS.md`). **IEEE Xplore returned HTTP 418 to scripted access and, in round 7, only a page shell**; the rule names it because the brief does. The author should confirm that a manual Xplore search was made, or remove it from the rule |
+
+## 3. Chen's thesis
+
+**Read.** Mi Chen, "Sécurité et évaluation des performances de LoRaWAN pour l'Internet des objets", PhD thesis, Université Paris-Est Créteil, defended 2024-05-21 (HAL tel-05328563, open access; downloaded from the HAL document link in several resumed requests because the server is slow; nothing was bypassed). Text extracted with pypdf (192 pages). **Read in the text: the abstract, the contents, and Chapter VII sections VII.2 (the attacks) and VII.3.1 (the countermeasure). The rest of the thesis was not read.**
+
+**The attack (VII.2.1).** The gateway duty-cycle exhaustion DoS: attackers send small confirmed uplinks at short intervals; the duty cycle also limits the gateway's downlink, so the downlink is used up by the ACKs that the server sends to the attackers. At low spreading factors a large number of attackers is needed. Two further variants are described: a MAC DoS attack (a MAC-command field, RX1DROffset = 5, forces the server to send each ACK at the maximum spreading factor, so the gateway is occupied about 25 times longer than at SF7) and a double-ended DoS attack (a malicious application server answers with 51-byte downlink packets, about 2.5 times longer again). Table VII-1 of the thesis gives the occupied downlink time on EU863-870 bands. These two variants appear to be the two attacks of the 2023 letter ("two denial-of-service attacks that target the confirmed transmission"); the match was not verified against the letter.
+
+**The countermeasure (VII.3.1).** LoRaLOFT, a threshold and Local Outlier Factor detector over the number of packets received at the gateway and the energy use of each node, and a centralised hierarchical denylist: a node that LoRaLOFT lists rises one level, one that is not listed falls one level, at level 3 the gateway or server blocks the ACK to it, at level 0 it is removed; complexity O(N^2).
+
+**What it means for this paper.** The attack drains the *gateway's downlink* duty through ACKs to rogue nodes, and the defence is detection plus blocking ACKs. CrashGuard's attack (A) drains the *node's uplink* duty by suppressing ACKs of a legitimate node, and its defence is a node-side reserve. The base's rule that no ACK is sent before the tag verifies (K2) removes the keyless version of the thesis attack (a failed-tag frame gets no ACK) but not an attacker that holds a valid key or replays a captured valid frame; the quarantine and the re-acknowledgement limit are the answers for those. The paper states the thesis, the difference of direction and that the attacks and defences are known.
+
+## 4. Corrections that this document makes to earlier literature documents
+
+The following statements in earlier documents are superseded and are not changed in place (those documents record what was known at their date): `LITERATURE_STATUS.md` and `REFERENCES.md` list Carneiro et al. as "abstract not read" and Marciano et al. as record only; the introduction of the paper said that the abstract of one of these papers "mentions no delivery statistics". Carneiro et al. report delivery ratio and latency. The accurate gap is that none of the works read states a security analysis, an authenticated acknowledgement or a formal verification, and none studies a duty budget. The novelty matrix (`NOVELTY_MATRIX_2021PLUS.md`) states the C4 row against the sources of its own date; read it with section 2 above: Jabbari and Mohasefi (ProVerif and AVISPA) and Wesemeyer et al. (Tamarin) analyse LoRaWAN authentication and key establishment formally.
+
+## 5. The absence rule
+
+One rule is used everywhere in the paper, the supplement text, the cover letter and the README: **no work found in the sources checked (IEEE Xplore, OpenAlex, Crossref, DOAJ, publisher pages; Google Scholar blocked automated queries and was not searched)**. The earlier wording ("no open-access journal article from 2021 onwards") is replaced.

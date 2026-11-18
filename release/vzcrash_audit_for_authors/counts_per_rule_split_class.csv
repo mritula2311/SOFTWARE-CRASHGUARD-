@@ -1,0 +1,16 @@
+rule,split,class,n_events
+R1_identical_array_group,test,crash,114
+R1_identical_array_group,test,near_miss,1
+R1_identical_array_group,test,normal_driving,3
+R1_identical_array_group,train,crash,199
+R1_identical_array_group,train,near_miss,1
+R1_identical_array_group,train,normal_driving,6
+R1_identical_array_group,validation,crash,113
+R1_identical_array_group,validation,normal_driving,2
+R1b_test_event_with_identical_array_in_train_or_validation,test,crash,114
+R1b_test_event_with_identical_array_in_train_or_validation,test,near_miss,1
+R1b_test_event_with_identical_array_in_train_or_validation,test,normal_driving,3
+R2_primary_dedup_32bin_linf_below_0.005g,test,normal_driving,32
+R3_window_near_duplicate_corr_above_0.999_and_maxdiff_below_0.01g,test,crash,1249
+R3_window_near_duplicate_corr_above_0.999_and_maxdiff_below_0.01g,test,near_miss,18
+R3_window_near_duplicate_corr_above_0.999_and_maxdiff_below_0.01g,test,normal_driving,38

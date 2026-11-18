@@ -1,0 +1,235 @@
+tool: Proverif 2.05. Cryptographic protocol verifier, by Bruno Blanchet, Vincent Cheval, and Marc Sylvestre
+command: proverif /mnt/d/crashguard-software/crashguard-software/formal/proverif/r7_lemmas_quarantine_control.pv
+Process 0 (that is, the initial process):
+{1}new km: bitstring;
+(
+    {2}!
+    {3}let km_1: bitstring = km in
+    {4}in(c, (v: bitstring,kind: bitstring));
+    {5}new a: bitstring;
+    {6}let kv: bitstring = kdf(km_1,v) in
+    {7}let p: bitstring = prf(kv,(tagP,a)) in
+    {8}insert window(p,v,a);
+    {9}if (kind = bad) then
+        {10}event CarSentBad(v,a);
+        {11}out(c, (p,kind,mac(kv,(tagA,p,kind,a))))
+    else
+        {12}out(c, (p,kind,mac(kv,(tagA,p,kind,a))))
+) | (
+    {13}let km_2: bitstring = km in
+    {14}!
+    {15}in(c, (p_1: bitstring,kind_1: bitstring,t: bitstring));
+    {18}get window(=p_1,v_1: bitstring,a_1: bitstring) in
+    {16}if (kind_1 = bad) then
+    {17}event Strike(v_1,a_1)
+) | (
+    {19}let km_3: bitstring = km in
+    {20}!
+    {21}in(c, w: bitstring);
+    {22}event Revealed(w);
+    {23}out(c, kdf(km_3,w))
+)
+
+--  Process 1 (that is, process 0, with let moved downwards):
+{1}new km: bitstring;
+(
+    {2}!
+    {4}in(c, (v: bitstring,kind: bitstring));
+    {5}new a: bitstring;
+    {3}let km_1: bitstring = km in
+    {6}let kv: bitstring = kdf(km_1,v) in
+    {7}let p: bitstring = prf(kv,(tagP,a)) in
+    {8}insert window(p,v,a);
+    {9}if (kind = bad) then
+        {10}event CarSentBad(v,a);
+        {11}out(c, (p,kind,mac(kv,(tagA,p,kind,a))))
+    else
+        {12}out(c, (p,kind,mac(kv,(tagA,p,kind,a))))
+) | (
+    {14}!
+    {15}in(c, (p_1: bitstring,kind_1: bitstring,t: bitstring));
+    {18}get window(=p_1,v_1: bitstring,a_1: bitstring) in
+    {16}if (kind_1 = bad) then
+    {17}event Strike(v_1,a_1)
+) | (
+    {20}!
+    {21}in(c, w: bitstring);
+    {22}event Revealed(w);
+    {19}let km_3: bitstring = km in
+    {23}out(c, kdf(km_3,w))
+)
+
+-- Query inj-event(Strike(v_2,a_2)) ==> inj-event(CarSentBad(v_2,a_2)) || event(Revealed(v_2)) in process 1.
+Translating the process into Horn clauses...
+Completing...
+Starting query inj-event(Strike(v_2,a_2)) ==> inj-event(CarSentBad(v_2,a_2)) || event(Revealed(v_2))
+goal reachable: kind_2 ≠ bad && attacker(v_2) && attacker(kind_2) && attacker(t_1) -> inj-event(Strike(v_2,a_2),@occ17_1)
+Abbreviations:
+a_2 = a[kind = kind_2,v = v_2,!1 = @sid]
+@occ17_1 = @occ17[a_1 = a_2,v_1 = v_2,t = t_1,kind_1 = bad,p_1 = prf(kdf(km[],v_2),(tagP,a_2)),!1 = @sid_1]
+
+Derivation:
+Abbreviations:
+a_2 = a[kind = kind_2,v = v_2,!1 = @sid]
+@occ17_1 = @occ17[a_1 = a_2,v_1 = v_2,t = t_1,kind_1 = bad,p_1 = prf(kdf(km[],v_2),(tagP,a_2)),!1 = @sid_1]
+
+1. We assume as hypothesis that
+attacker(t_1).
+
+2. Using the function bad the attacker may obtain bad.
+attacker(bad).
+
+3. We assume as hypothesis that
+attacker(kind_2).
+
+4. We assume as hypothesis that
+attacker(v_2).
+
+5. By 4, the attacker may know v_2.
+By 3, the attacker may know kind_2.
+Using the function 2-tuple the attacker may obtain (v_2,kind_2).
+attacker((v_2,kind_2)).
+
+6. The message (v_2,kind_2) that the attacker may have by 5 may be received at input {4}.
+We have kind_2 ≠ bad.
+So the message (prf(kdf(km[],v_2),(tagP,a_2)),kind_2,mac(kdf(km[],v_2),(tagA,prf(kdf(km[],v_2),(tagP,a_2)),kind_2,a_2))) may be sent to the attacker at output {12}.
+attacker((prf(kdf(km[],v_2),(tagP,a_2)),kind_2,mac(kdf(km[],v_2),(tagA,prf(kdf(km[],v_2),(tagP,a_2)),kind_2,a_2)))).
+
+7. By 6, the attacker may know (prf(kdf(km[],v_2),(tagP,a_2)),kind_2,mac(kdf(km[],v_2),(tagA,prf(kdf(km[],v_2),(tagP,a_2)),kind_2,a_2))).
+Using the function 1-proj-3-tuple the attacker may obtain prf(kdf(km[],v_2),(tagP,a_2)).
+attacker(prf(kdf(km[],v_2),(tagP,a_2))).
+
+8. By 7, the attacker may know prf(kdf(km[],v_2),(tagP,a_2)).
+By 2, the attacker may know bad.
+By 1, the attacker may know t_1.
+Using the function 3-tuple the attacker may obtain (prf(kdf(km[],v_2),(tagP,a_2)),bad,t_1).
+attacker((prf(kdf(km[],v_2),(tagP,a_2)),bad,t_1)).
+
+9. The message (v_2,kind_2) that the attacker may have by 5 may be received at input {4}.
+So the entry window(prf(kdf(km[],v_2),(tagP,a_2)),v_2,a_2) may be inserted in a table at insert {8}.
+table(window(prf(kdf(km[],v_2),(tagP,a_2)),v_2,a_2)).
+
+10. The message (prf(kdf(km[],v_2),(tagP,a_2)),bad,t_1) that the attacker may have by 8 may be received at input {15}.
+The entry window(prf(kdf(km[],v_2),(tagP,a_2)),v_2,a_2) that may be in a table by 9 may be read at get {18}.
+So event Strike(v_2,a_2) may be executed at {17} in session @sid_1.
+inj-event(Strike(v_2,a_2),@occ17_1).
+
+11. By 10, inj-event(Strike(v_2,a_2),@occ17_1).
+The goal is reached, represented in the following fact:
+inj-event(Strike(v_2,a_2),@occ17_1).
+
+
+A more detailed output of the traces is available with
+  set traceDisplay = long.
+
+new km: bitstring creating km_4 at {1}
+
+in(c, (a_3,a_4)) at {4} in copy a_5
+
+new a: bitstring creating a_6 at {5} in copy a_5
+
+insert window(prf(kdf(km_4,a_3),(tagP,a_6)),a_3,a_6) at {8} in copy a_5
+
+out(c, (~M,~M_1,~M_2)) with ~M = prf(kdf(km_4,a_3),(tagP,a_6)), ~M_1 = a_4, ~M_2 = mac(kdf(km_4,a_3),(tagA,prf(kdf(km_4,a_3),(tagP,a_6)),a_4,a_6)) at {12} in copy a_5
+
+in(c, (~M,bad,a_7)) with ~M = prf(kdf(km_4,a_3),(tagP,a_6)) at {15} in copy a_8
+
+get window(prf(kdf(km_4,a_3),(tagP,a_6)),a_3,a_6) at {18} in copy a_8
+
+event Strike(a_3,a_6) at {17} in copy a_8 (goal)
+
+The event Strike(a_3,a_6) is executed at {17} in copy a_8.
+A trace has been found.
+RESULT inj-event(Strike(v_2,a_2)) ==> inj-event(CarSentBad(v_2,a_2)) || event(Revealed(v_2)) is false.
+RESULT (even event(Strike(v_2,a_2)) ==> event(CarSentBad(v_2,a_2)) || event(Revealed(v_2)) is false.)
+-- Query not event(Strike(v_2,a_2)) in process 1.
+Translating the process into Horn clauses...
+Completing...
+Starting query not event(Strike(v_2,a_2))
+goal reachable: kind_2 ≠ bad && attacker(v_2) && attacker(kind_2) -> event(Strike(v_2,a_2))
+Abbreviations:
+a_2 = a[kind = kind_2,v = v_2,!1 = @sid]
+
+Derivation:
+Abbreviations:
+a_2 = a[kind = kind_2,v = v_2,!1 = @sid]
+
+1. The attacker has some term t_1.
+attacker(t_1).
+
+2. Using the function bad the attacker may obtain bad.
+attacker(bad).
+
+3. We assume as hypothesis that
+attacker(kind_2).
+
+4. We assume as hypothesis that
+attacker(v_2).
+
+5. By 4, the attacker may know v_2.
+By 3, the attacker may know kind_2.
+Using the function 2-tuple the attacker may obtain (v_2,kind_2).
+attacker((v_2,kind_2)).
+
+6. The message (v_2,kind_2) that the attacker may have by 5 may be received at input {4}.
+We have kind_2 ≠ bad.
+So the message (prf(kdf(km[],v_2),(tagP,a_2)),kind_2,mac(kdf(km[],v_2),(tagA,prf(kdf(km[],v_2),(tagP,a_2)),kind_2,a_2))) may be sent to the attacker at output {12}.
+attacker((prf(kdf(km[],v_2),(tagP,a_2)),kind_2,mac(kdf(km[],v_2),(tagA,prf(kdf(km[],v_2),(tagP,a_2)),kind_2,a_2)))).
+
+7. By 6, the attacker may know (prf(kdf(km[],v_2),(tagP,a_2)),kind_2,mac(kdf(km[],v_2),(tagA,prf(kdf(km[],v_2),(tagP,a_2)),kind_2,a_2))).
+Using the function 1-proj-3-tuple the attacker may obtain prf(kdf(km[],v_2),(tagP,a_2)).
+attacker(prf(kdf(km[],v_2),(tagP,a_2))).
+
+8. By 7, the attacker may know prf(kdf(km[],v_2),(tagP,a_2)).
+By 2, the attacker may know bad.
+By 1, the attacker may know t_1.
+Using the function 3-tuple the attacker may obtain (prf(kdf(km[],v_2),(tagP,a_2)),bad,t_1).
+attacker((prf(kdf(km[],v_2),(tagP,a_2)),bad,t_1)).
+
+9. The message (v_2,kind_2) that the attacker may have by 5 may be received at input {4}.
+So the entry window(prf(kdf(km[],v_2),(tagP,a_2)),v_2,a_2) may be inserted in a table at insert {8}.
+table(window(prf(kdf(km[],v_2),(tagP,a_2)),v_2,a_2)).
+
+10. The message (prf(kdf(km[],v_2),(tagP,a_2)),bad,t_1) that the attacker may have by 8 may be received at input {15}.
+The entry window(prf(kdf(km[],v_2),(tagP,a_2)),v_2,a_2) that may be in a table by 9 may be read at get {18}.
+So event Strike(v_2,a_2) may be executed at {17}.
+event(Strike(v_2,a_2)).
+
+11. By 10, event(Strike(v_2,a_2)).
+The goal is reached, represented in the following fact:
+event(Strike(v_2,a_2)).
+
+
+A more detailed output of the traces is available with
+  set traceDisplay = long.
+
+new km: bitstring creating km_4 at {1}
+
+in(c, (a_3,a_4)) at {4} in copy a_5
+
+new a: bitstring creating a_6 at {5} in copy a_5
+
+insert window(prf(kdf(km_4,a_3),(tagP,a_6)),a_3,a_6) at {8} in copy a_5
+
+out(c, (~M,~M_1,~M_2)) with ~M = prf(kdf(km_4,a_3),(tagP,a_6)), ~M_1 = a_4, ~M_2 = mac(kdf(km_4,a_3),(tagA,prf(kdf(km_4,a_3),(tagP,a_6)),a_4,a_6)) at {12} in copy a_5
+
+in(c, (~M,bad,a_7)) with ~M = prf(kdf(km_4,a_3),(tagP,a_6)) at {15} in copy a_8
+
+get window(prf(kdf(km_4,a_3),(tagP,a_6)),a_3,a_6) at {18} in copy a_8
+
+event Strike(a_3,a_6) at {17} in copy a_8 (goal)
+
+The event Strike(a_3,a_6) is executed at {17} in copy a_8.
+A trace has been found.
+RESULT not event(Strike(v_2,a_2)) is false.
+
+--------------------------------------------------------------
+Verification summary:
+
+Query inj-event(Strike(v_2,a_2)) ==> inj-event(CarSentBad(v_2,a_2)) || event(Revealed(v_2)) is false.
+
+Query not event(Strike(v_2,a_2)) is false.
+
+--------------------------------------------------------------
+
+exit code: 0 ; wall time 0 s

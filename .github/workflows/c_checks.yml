@@ -1,0 +1,27 @@
+name: c-checks
+
+# Compiles and runs the C equivalence checks (forest 15x6, forest 10x9, severity.h, N14 estimator) with gcc on Linux and uploads the JSON.
+# The bundle in c_bundle/ has synthetic inputs only (no VZCrash or NHTSA data is committed). Import the artifact with
+#   python -m crashguard.merge_c_checks c_checks.json
+# The job fails if any check fails; the JSON is uploaded either way.
+on:
+  push:
+    paths: ["c_bundle/**", "firmware_export/**", "scripts/c_checks.sh", "scripts/c_compare.py", ".github/workflows/c_checks.yml"]
+  pull_request:
+    paths: ["c_bundle/**", "firmware_export/**", "scripts/c_checks.sh", "scripts/c_compare.py", ".github/workflows/c_checks.yml"]
+  workflow_dispatch: {}
+
+jobs:
+  c-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile and run the C checks
+        run: bash scripts/c_checks.sh build/c_checks.json
+      - name: Upload the JSON
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: c_checks_json
+          path: build/c_checks.json
+          if-no-files-found: error

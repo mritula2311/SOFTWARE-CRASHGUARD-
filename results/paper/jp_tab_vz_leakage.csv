@@ -1,0 +1,9 @@
+Model,Metric,Supplied,Exact copies removed,Near-duplicates also removed,Difference supplied minus near,Origin,results.json key
+15-tree forest,System recall,"0.901 [0.892, 0.910]","0.900 [0.891, 0.909]","0.873 [0.861, 0.884]","0.0280 [0.0235, 0.0326]",MEASURED_SOFTWARE,vz.v4.rf15.*.sys_recall
+15-tree forest,Recall at 1% false alarms,"0.631 [0.618, 0.645]","0.627 [0.613, 0.641]","0.558 [0.541, 0.576]","0.0727 [0.0641, 0.0809]",MEASURED_SOFTWARE,vz.v4.rf15.*.recall_at_1pct
+15-tree forest,Recall at 5%,"0.935 [0.928, 0.942]","0.934 [0.927, 0.941]","0.914 [0.904, 0.923]","0.0209 [0.0171, 0.0248]",MEASURED_SOFTWARE,vz.v4.rf15.*.recall_at_5pct
+15-tree forest,AP,"0.934 [0.927, 0.940]","0.931 [0.924, 0.939]","0.892 [0.881, 0.904]","0.0415 [0.0358, 0.0471]",MEASURED_SOFTWARE,vz.v4.rf15.*.ap
+10-tree depth-9 forest,System recall,"0.898 [0.888, 0.906]","0.897 [0.887, 0.905]","0.865 [0.853, 0.876]","0.0324 [0.0281, 0.0370]",MEASURED_SOFTWARE,vz.v4.rfsel.*.sys_recall
+10-tree depth-9 forest,Recall at 1% false alarms,"0.660 [0.647, 0.673]","0.655 [0.642, 0.668]","0.585 [0.568, 0.601]","0.0747 [0.0664, 0.0824]",MEASURED_SOFTWARE,vz.v4.rfsel.*.recall_at_1pct
+10-tree depth-9 forest,Recall at 5%,"0.940 [0.933, 0.946]","0.939 [0.932, 0.946]","0.919 [0.910, 0.928]","0.0205 [0.0171, 0.0241]",MEASURED_SOFTWARE,vz.v4.rfsel.*.recall_at_5pct
+10-tree depth-9 forest,AP,"0.941 [0.935, 0.948]","0.939 [0.933, 0.945]","0.903 [0.893, 0.913]","0.0386 [0.0333, 0.0437]",MEASURED_SOFTWARE,vz.v4.rfsel.*.ap

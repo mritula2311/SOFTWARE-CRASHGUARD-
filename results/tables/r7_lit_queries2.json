@@ -1,0 +1,820 @@
+[
+ {
+  "topic": "A",
+  "query": "reserved airtime duty cycle emergency alert LoRa",
+  "database": "OpenAlex",
+  "date": "2026-11-16",
+  "count": 8,
+  "error": null,
+  "top": [
+   {
+    "title": "SkySense: LoRa-Enabled Autonomous Weather Monitoring Drone",
+    "year": 2026,
+    "doi": "https://doi.org/10.55041/ijsrem68128"
+   },
+   {
+    "title": "Image Transmission over LoRa Networks: Challenges, Innovations, and Practical Solutions",
+    "year": 2026,
+    "doi": "https://doi.org/10.3390/jimaging12090442"
+   },
+   {
+    "title": "Multi-Hop and Mesh for LoRa Networks: Recent Advancements, Issues, and Recommended Applications",
+    "year": 2023,
+    "doi": "https://doi.org/10.1145/3638241"
+   },
+   {
+    "title": "Reliability Evaluation of RSrSF-LoRa and LoRaWAN for Dense Industrial IoT Networks in a Smelter Environment",
+    "year": 2026,
+    "doi": "https://doi.org/10.3390/s26165216"
+   },
+   {
+    "title": "A Survey on Scalable LoRaWAN for Massive IoT: Recent Advances, Potentials, and Challenges",
+    "year": 2023,
+    "doi": "https://doi.org/10.1109/comst.2023.3274934"
+   },
+   {
+    "title": "Long range network for river conservation management / Syarifah Nabilah Syed Taha@Tahir",
+    "year": 2024,
+    "doi": null
+   },
+   {
+    "title": "A Trust-Boundary Reference Architecture for Secure Cyber-Physical Agriculture: Design and Software-Based Proof-of-Concept for Smart Irrigation",
+    "year": 2026,
+    "doi": "https://doi.org/10.3390/s26206545"
+   },
+   {
+    "title": "Energy Footprint and Reliability of IoT Communication Protocols for Remote Sensor Networks",
+    "year": 2025,
+    "doi": "https://doi.org/10.3390/s25196042"
+   }
+  ]
+ },
+ {
+  "topic": "A",
+  "query": "reserved airtime duty cycle emergency alert LoRa",
+  "database": "Crossref",
+  "date": "2026-11-16",
+  "count": 440525,
+  "error": null,
+  "top": [
+   {
+    "title": "Airtime-budgeted quantum-resistant rekeying for duty-cycle-limited low-power wide-area uplinks",
+    "year": 2026,
+    "doi": "10.33545/2707661x.2026.v7.i3a.217"
+   },
+   {
+    "title": "Potential Counteractions to Duty Cycle-Compliant Jamming in LoRa Networks",
+    "year": 2024,
+    "doi": "10.1109/telfor63250.2024.10819113"
+   },
+   {
+    "title": "Observability- and Bandwidth-Aware Constraint Scheduling for Trust-Weighted Multi-Robot Map Fusion over Duty-Cycle-Limited LoRa Links",
+    "year": 2026,
+    "doi": "10.21203/rs.3.rs-11243516/v1"
+   },
+   {
+    "title": "A LoRa-Based GPS Tracking and Emergency Alert System for Remote Exploration",
+    "year": 2025,
+    "doi": "10.1109/mosicom67153.2025.11398157"
+   },
+   {
+    "title": "Child drowning prevention: GPS and LoRa based emergency alert system",
+    "year": 2023,
+    "doi": "10.33022/ijcs.v12i4.3277"
+   },
+   {
+    "title": "Potential Solution Against Duty Cycle Compliant Selective Jamming Attacks in LoRa Networks",
+    "year": 2025,
+    "doi": "10.1109/ccnc54725.2025.10976096"
+   },
+   {
+    "title": "Duty-Cycle-Based Pre-Emption Protocol for Emergency Networks",
+    "year": 2021,
+    "doi": "10.3390/s22010030"
+   },
+   {
+    "title": "Experimental analysis of low-duty cycle campus deployed IoT network using LoRa technology",
+    "year": 2024,
+    "doi": "10.1016/j.rineng.2024.102844"
+   }
+  ]
+ },
+ {
+  "topic": "A",
+  "query": "reserved airtime duty cycle emergency alert LoRa",
+  "database": "arXiv",
+  "date": "2026-11-16",
+  "count": 0,
+  "error": null,
+  "top": []
+ },
+ {
+  "topic": "A",
+  "query": "duty cycle budget reserve priority retransmission LoRaWAN",
+  "database": "OpenAlex",
+  "date": "2026-11-16",
+  "count": 18,
+  "error": null,
+  "top": [
+   {
+    "title": "Decentralized Multi-Hop Federated Reinforcement Learning for Energy-Efficient and Secure Routing in LoRaWAN-Based Smart City Infrastructure",
+    "year": 2025,
+    "doi": "https://doi.org/10.36227/techrxiv.174918090.00313472/v1"
+   },
+   {
+    "title": "Distributed priority-aware multi-objective routing for reliable data delivery in LoRa-enabled UAV networks",
+    "year": 2026,
+    "doi": "https://doi.org/10.1038/s41598-026-63420-3"
+   },
+   {
+    "title": "Multi-Layered Energy Efficiency in LoRa-WAN Networks: A Tutorial",
+    "year": 2022,
+    "doi": "https://doi.org/10.1109/access.2021.3140107"
+   },
+   {
+    "title": "Machine-to-Machine (M2M) Communications in Next Generation Networks : Spectrum management and energy efficiency.",
+    "year": 2019,
+    "doi": "https://doi.org/10.70675/84c353a3zb50bz4a43zaeb9z19b0b9ee97f7"
+   },
+   {
+    "title": "Energy-Efficient Strategies in Wireless Body Area Networks: A Comprehensive Survey",
+    "year": 2025,
+    "doi": "https://doi.org/10.3390/iot6030049"
+   },
+   {
+    "title": "CATO: Wake-Up reCeiver-bAsed communicaTiOn for Batteryless Devices",
+    "year": 2025,
+    "doi": "https://doi.org/10.3390/s25226813"
+   },
+   {
+    "title": "Jamming Attacks and Anti-Jamming Strategies in Wireless Networks: A Comprehensive Survey",
+    "year": 2022,
+    "doi": "https://doi.org/10.1109/comst.2022.3159185"
+   },
+   {
+    "title": "DRL-EH-WuRMesh: Deep Reinforcement Learning-Driven Energy Harvesting for Adaptive QoS-Aware IEEE 802.11ba Wake-Up Radio Mesh Networks",
+    "year": 2026,
+    "doi": "https://doi.org/10.2139/ssrn.7288922"
+   }
+  ]
+ },
+ {
+  "topic": "A",
+  "query": "duty cycle budget reserve priority retransmission LoRaWAN",
+  "database": "Crossref",
+  "date": "2026-11-16",
+  "count": 338124,
+  "error": null,
+  "top": [
+   {
+    "title": "Security analysis in Enhanced LoRaWAN duty cycle",
+    "year": 2018,
+    "doi": "10.1109/comnet.2018.8622296"
+   },
+   {
+    "title": "A Duty-Cycle-Efficient Synchronization Protocol for Slotted-Aloha in LoRaWAN",
+    "year": 2024,
+    "doi": "10.1109/globecom52923.2024.10901529"
+   },
+   {
+    "title": "Beyond Idealized Fragmentation: Duty-Cycle-Limited Completion Time of Post-Quantum Handshakes over LoRaWAN",
+    "year": 2026,
+    "doi": "10.1109/lnet.2026.3745920"
+   },
+   {
+    "title": "A Duty Cycle-Based Gateway Selection Algorithm for LoRaWAN Downlink Communication",
+    "year": 2023,
+    "doi": "10.32604/csse.2023.032965"
+   },
+   {
+    "title": "Securing IoT LoRaWAN Networks Against Duty Cycle Compliant Jamming Attacks",
+    "year": 2025,
+    "doi": "10.1109/wcnc61545.2025.10978509"
+   },
+   {
+    "title": "A LoRaWAN-MAC Protocol Based on WSN Residual Energy to Adjust Duty Cycle",
+    "year": 2020,
+    "doi": "10.1109/icdcs47774.2020.00187"
+   },
+   {
+    "title": "Bypassing Duty-Cycle Limitations for RL-Enhanced LoRaWAN Communications",
+    "year": 2025,
+    "doi": "10.1109/icc52391.2025.11161020"
+   },
+   {
+    "title": "A LoRaWAN Adaptive Retransmission Mechanism",
+    "year": 2023,
+    "doi": "10.1109/cscn60443.2023.10453118"
+   }
+  ]
+ },
+ {
+  "topic": "A",
+  "query": "duty cycle budget reserve priority retransmission LoRaWAN",
+  "database": "arXiv",
+  "date": "2026-11-16",
+  "count": 1,
+  "error": null,
+  "top": [
+   {
+    "title": "Joint Track-While-Scan Beam Scheduling for 6G Sub-Terahertz Multi-UE Clusters Using Resolving-Window Metrics at 140 GHz and 300 GHz",
+    "year": "2026",
+    "id": "http://arxiv.org/abs/2608.00088v1"
+   }
+  ]
+ },
+ {
+  "topic": "A",
+  "query": "confirmed uplink acknowledgement drop attack LoRaWAN duty cycle",
+  "database": "OpenAlex",
+  "date": "2026-11-16",
+  "count": 23,
+  "error": null,
+  "top": [
+   {
+    "title": "LoRaWAN Physical Layer-Based Attacks and Countermeasures, A Review",
+    "year": 2022,
+    "doi": "https://doi.org/10.3390/s22093127"
+   },
+   {
+    "title": "A Survey on Scalable LoRaWAN for Massive IoT: Recent Advances, Potentials, and Challenges",
+    "year": 2023,
+    "doi": "https://doi.org/10.1109/comst.2023.3274934"
+   },
+   {
+    "title": "IRONWAN: Increasing Reliability of Overlapping Networks in LoRaWAN",
+    "year": 2021,
+    "doi": "https://doi.org/10.1109/jiot.2021.3125842"
+   },
+   {
+    "title": "LoRIS: LoRaWAN-based IoT Platform for Sustainability Monitoring in Hotels",
+    "year": 2026,
+    "doi": "https://doi.org/10.48550/arxiv.2608.17467"
+   },
+   {
+    "title": "Urban LoRaWAN Resilience under EW Interference: an Operational Model for Municipal Networks",
+    "year": 2026,
+    "doi": "https://doi.org/10.18372/1990-5548.87.20885"
+   },
+   {
+    "title": "Performance Evaluation of a LoRaWAN Towards Development of an Optimised ADR (Adaptive Data Rate) Model",
+    "year": 2019,
+    "doi": null
+   },
+   {
+    "title": "Adaptive Antenna for Maritime LoRaWAN: A Systematic Review on Performance, Energy Efficiency, and Environmental Resilience",
+    "year": 2025,
+    "doi": "https://doi.org/10.3390/s25196110"
+   },
+   {
+    "title": "Design and Performance Evaluation of a LoRaWAN-Based Communication System for Enhanced Situational Awareness in Armored Vehicles",
+    "year": 2025,
+    "doi": "https://doi.org/10.37284/eaje.8.1.2870"
+   }
+  ]
+ },
+ {
+  "topic": "A",
+  "query": "confirmed uplink acknowledgement drop attack LoRaWAN duty cycle",
+  "database": "Crossref",
+  "date": "2026-11-16",
+  "count": 278263,
+  "error": null,
+  "top": [
+   {
+    "title": "On the Uplink Traffic Distribution in Time for Duty-cycle Constrained LoRaWAN Networks",
+    "year": 2021,
+    "doi": "10.1109/icumt54235.2021.9631708"
+   },
+   {
+    "title": "Unified Spatial Analytical Framework for Confirmed Uplinks in Multi-Gateway LoRaWAN Under Duty-Cycle Constraints",
+    "year": 2026,
+    "doi": "10.1109/ojcoms.2026.3667708"
+   },
+   {
+    "title": "Security analysis in Enhanced LoRaWAN duty cycle",
+    "year": 2018,
+    "doi": "10.1109/comnet.2018.8622296"
+   },
+   {
+    "title": "A Duty-Cycle-Efficient Synchronization Protocol for Slotted-Aloha in LoRaWAN",
+    "year": 2024,
+    "doi": "10.1109/globecom52923.2024.10901529"
+   },
+   {
+    "title": "Beyond Idealized Fragmentation: Duty-Cycle-Limited Completion Time of Post-Quantum Handshakes over LoRaWAN",
+    "year": 2026,
+    "doi": "10.1109/lnet.2026.3745920"
+   },
+   {
+    "title": "A Duty Cycle-Based Gateway Selection Algorithm for LoRaWAN Downlink Communication",
+    "year": 2023,
+    "doi": "10.32604/csse.2023.032965"
+   },
+   {
+    "title": "Securing IoT LoRaWAN Networks Against Duty Cycle Compliant Jamming Attacks",
+    "year": 2025,
+    "doi": "10.1109/wcnc61545.2025.10978509"
+   },
+   {
+    "title": "A LoRaWAN-MAC Protocol Based on WSN Residual Energy to Adjust Duty Cycle",
+    "year": 2020,
+    "doi": "10.1109/icdcs47774.2020.00187"
+   }
+  ]
+ },
+ {
+  "topic": "A",
+  "query": "confirmed uplink acknowledgement drop attack LoRaWAN duty cycle",
+  "database": "arXiv",
+  "date": "2026-11-16",
+  "count": 0,
+  "error": null,
+  "top": []
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN downlink acknowledgement jamming retransmission energy duty-cycle exhaustion",
+  "database": "OpenAlex",
+  "date": "2026-11-16",
+  "count": 5,
+  "error": null,
+  "top": [
+   {
+    "title": "Multi-Attribute Physical-Layer Authentication Against Jamming and Battery-Depletion Attacks in LoRaWAN",
+    "year": 2026,
+    "doi": "https://doi.org/10.3390/fi18010038"
+   },
+   {
+    "title": "IRONWAN: Increasing Reliability of Overlapping Networks in LoRaWAN",
+    "year": 2021,
+    "doi": "https://doi.org/10.1109/jiot.2021.3125842"
+   },
+   {
+    "title": "Energy aware optimization for low power radio technologies",
+    "year": 2020,
+    "doi": "https://doi.org/10.5821/dissertation-2117-183230"
+   },
+   {
+    "title": "Multi-Hop and Mesh for LoRa Networks: Recent Advancements, Issues, and Recommended Applications",
+    "year": 2023,
+    "doi": "https://doi.org/10.1145/3638241"
+   },
+   {
+    "title": "Black Networks in Smart Cities",
+    "year": 2018,
+    "doi": null
+   }
+  ]
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN downlink acknowledgement jamming retransmission energy duty-cycle exhaustion",
+  "database": "Crossref",
+  "date": "2026-11-16",
+  "count": 1842686,
+  "error": null,
+  "top": [
+   {
+    "title": "A Duty Cycle-Based Gateway Selection Algorithm for LoRaWAN Downlink Communication",
+    "year": 2023,
+    "doi": "10.32604/csse.2023.032965"
+   },
+   {
+    "title": "Securing IoT LoRaWAN Networks Against Duty Cycle Compliant Jamming Attacks",
+    "year": 2025,
+    "doi": "10.1109/wcnc61545.2025.10978509"
+   },
+   {
+    "title": "A LoRaWAN-MAC Protocol Based on WSN Residual Energy to Adjust Duty Cycle",
+    "year": 2020,
+    "doi": "10.1109/icdcs47774.2020.00187"
+   },
+   {
+    "title": "Downlink Spreading Factor Selection in Lorawan",
+    "year": 2023,
+    "doi": "10.2139/ssrn.4583940"
+   },
+   {
+    "title": "Security analysis in Enhanced LoRaWAN duty cycle",
+    "year": 2018,
+    "doi": "10.1109/comnet.2018.8622296"
+   },
+   {
+    "title": "Supporting Critical Downlink Traffic in Lorawan",
+    "year": 2024,
+    "doi": "10.2139/ssrn.4837896"
+   },
+   {
+    "title": "A Duty-Cycle-Efficient Synchronization Protocol for Slotted-Aloha in LoRaWAN",
+    "year": 2024,
+    "doi": "10.1109/globecom52923.2024.10901529"
+   },
+   {
+    "title": "Duty-cycle aware bit-mapping based energy-efficient MAC protocol for LoRaWAN",
+    "year": 2026,
+    "doi": "10.1016/j.adhoc.2026.104366"
+   }
+  ]
+ },
+ {
+  "topic": "A",
+  "query": "LoRaWAN downlink acknowledgement jamming retransmission energy duty-cycle exhaustion",
+  "database": "arXiv",
+  "date": "2026-11-16",
+  "count": 0,
+  "error": null,
+  "top": []
+ },
+ {
+  "topic": "B",
+  "query": "formal verification unlinkability LoRaWAN identifier ProVerif",
+  "database": "OpenAlex",
+  "date": "2026-11-16",
+  "count": 6,
+  "error": null,
+  "top": [
+   {
+    "title": "A lightweight hash-based quantum-resistant bidirectional authentication protocol for IoT devices integrating physical unclonable functions",
+    "year": 2026,
+    "doi": "https://doi.org/10.1038/s41598-026-56676-2"
+   },
+   {
+    "title": "An Anonymous Authentication and Key Update Mechanism for IoT Devices Based on EnOcean Protocol",
+    "year": 2022,
+    "doi": "https://doi.org/10.3390/s22176713"
+   },
+   {
+    "title": "Lightweight Authentication Protocols for Secure IoT Communication Networks: A Comprehensive Survey, Taxonomy, and Open Challenges",
+    "year": 2026,
+    "doi": "https://doi.org/10.1109/comst.2026.3691266"
+   },
+   {
+    "title": "Fine-Grained Trackability in Protocol Executions",
+    "year": 2023,
+    "doi": "https://doi.org/10.14722/ndss.2023.24289"
+   },
+   {
+    "title": "Design and analysis of lightweight and robust authentication protocol for securing the resource constrained IIoT environment",
+    "year": 2025,
+    "doi": "https://doi.org/10.1371/journal.pone.0318064"
+   },
+   {
+    "title": "A systematic literature mapping on the security of 5G and vertical applications",
+    "year": 2024,
+    "doi": "https://doi.org/10.5335/rbca.v16i3.16005"
+   }
+  ]
+ },
+ {
+  "topic": "B",
+  "query": "formal verification unlinkability LoRaWAN identifier ProVerif",
+  "database": "Crossref",
+  "date": "2026-11-16",
+  "count": 109085,
+  "error": null,
+  "top": [
+   {
+    "title": "Formal Verification of a V2X Privacy Preserving Scheme Using Proverif",
+    "year": 2023,
+    "doi": "10.1109/csr57506.2023.10224908"
+   },
+   {
+    "title": "Formal Security Verification for Searchable Symmetric Encryption Using ProVerif",
+    "year": 2024,
+    "doi": "10.23919/isita60732.2024.10858210"
+   },
+   {
+    "title": "Proving Unlinkability Using ProVerif Through Desynchronised Bi-Processes",
+    "year": 2023,
+    "doi": "10.1109/csf57540.2023.00022"
+   },
+   {
+    "title": "Formal Verification of Divide and Conquer Key Distribution Protocol Using ProVerif and TLA<sup>+</sup>",
+    "year": 2018,
+    "doi": "10.1109/icacsis.2018.8618173"
+   },
+   {
+    "title": "Formal Verification of Authentication and Service Authorization Protocols in 5G-Enabled Device-to-Device Communications Using ProVerif",
+    "year": 2021,
+    "doi": "10.3390/electronics10131608"
+   },
+   {
+    "title": "Formal Verification of Confidentiality in DNSSEC and E-DNSSEC Protocols using pi-calculus and ProVerif",
+    "year": 2019,
+    "doi": "10.1016/j.procs.2019.11.015"
+   },
+   {
+    "title": "Formal Verification of PKMv3 Protocol Using ProVerif",
+    "year": 2026,
+    "doi": "10.1109/access.2026.3712810"
+   },
+   {
+    "title": "Formal Verification of a Blockchain-Based Security Model for Personal Data Sharing Using the Dolev-Yao Model and ProVerif",
+    "year": 2025,
+    "doi": "10.14569/ijacsa.2025.0160942"
+   }
+  ]
+ },
+ {
+  "topic": "B",
+  "query": "formal verification unlinkability LoRaWAN identifier ProVerif",
+  "database": "arXiv",
+  "date": "2026-11-16",
+  "count": 0,
+  "error": null,
+  "top": []
+ },
+ {
+  "topic": "B",
+  "query": "LPWAN identifier privacy formal proof replay protection accountability",
+  "database": "OpenAlex",
+  "date": "2026-11-16",
+  "count": 37,
+  "error": null,
+  "top": [
+   {
+    "title": "Decentralized Proof-of-Location systems for trust, scalability, and privacy in digital societies",
+    "year": 2025,
+    "doi": "https://doi.org/10.1038/s41598-025-04566-4"
+   },
+   {
+    "title": "Security, Privacy and Trust for Smart Mobile- Internet of Things (M-IoT): A Survey",
+    "year": 2020,
+    "doi": "https://doi.org/10.1109/access.2020.3022661"
+   },
+   {
+    "title": "Security and Privacy in the Industrial Internet of Things: Current Standards and Future Challenges",
+    "year": 2020,
+    "doi": "https://doi.org/10.1109/access.2020.3016937"
+   },
+   {
+    "title": "Contribution to security and privacy in the Blockchain-based Internet of Things : Robustness, Reliability, and Scalability",
+    "year": 2023,
+    "doi": "https://doi.org/10.70675/6dadaa9az6103z46c0zb6f4ze6b87684aa42"
+   },
+   {
+    "title": "A PQC-Aware Secure Communication Architecture for NB-IoT: Control-Plane Post-Quantum Onboarding with Lightweight Data-Plane Protection",
+    "year": 2026,
+    "doi": "https://doi.org/10.48084/etasr.17220"
+   },
+   {
+    "title": "Security and Privacy Management of IoT Using Quantum Computing",
+    "year": 2026,
+    "doi": "https://doi.org/10.1007/978-981-95-6276-3_4"
+   },
+   {
+    "title": "Sustainable and Trustworthy Digital Health: Privacy-Preserving, Verifiable IoT Monitoring Aligned with SDGs",
+    "year": 2025,
+    "doi": "https://doi.org/10.3390/su17209020"
+   },
+   {
+    "title": "A Trust-Boundary Reference Architecture for Secure Cyber-Physical Agriculture: Design and Software-Based Proof-of-Concept for Smart Irrigation",
+    "year": 2026,
+    "doi": "https://doi.org/10.3390/s26206545"
+   }
+  ]
+ },
+ {
+  "topic": "B",
+  "query": "LPWAN identifier privacy formal proof replay protection accountability",
+  "database": "Crossref",
+  "date": "2026-11-16",
+  "count": 497046,
+  "error": null,
+  "top": [
+   {
+    "title": "More Lightweight, yet Stronger: Revisiting OSCORE’s Replay Protection",
+    "year": 2024,
+    "doi": "10.14722/sdiotsec.2024.23003"
+   },
+   {
+    "title": "Controlled Access, Privacy Protection Planning, and Data Retention",
+    "year": 2019,
+    "doi": "10.1017/9781108290364.008"
+   },
+   {
+    "title": "Drug Accountability Group Identifier",
+    "year": 2020,
+    "doi": "10.32388/lor5tk"
+   },
+   {
+    "title": "The Burden of Proof in Medical Negligence Litigation: Balancing Patient Protection and Professional Accountability in Nigeria",
+    "year": 2026,
+    "doi": "10.2139/ssrn.7279078"
+   },
+   {
+    "title": "Public Biometric Monitoring with Privacy Protection: Architectural Design for Transparent Accountability in Development Programs",
+    "year": 2026,
+    "doi": "10.2139/ssrn.6261638"
+   },
+   {
+    "title": "Drug Accountability Reference Identifier",
+    "year": 2020,
+    "doi": "10.32388/u99dg2"
+   },
+   {
+    "title": "How Efficient are Replay Attacks against Vote Privacy? A Formal Quantitative Analysis",
+    "year": 2022,
+    "doi": "10.1109/csf54842.2022.9979167"
+   },
+   {
+    "title": "Drug Accountability Sponsor Defined Identifier",
+    "year": 2020,
+    "doi": "10.32388/iuw7tf"
+   }
+  ]
+ },
+ {
+  "topic": "B",
+  "query": "LPWAN identifier privacy formal proof replay protection accountability",
+  "database": "arXiv",
+  "date": "2026-11-16",
+  "count": 0,
+  "error": null,
+  "top": []
+ },
+ {
+  "topic": "B",
+  "query": "LoRaWAN anonymity Tamarin ProVerif privacy DevAddr",
+  "database": "OpenAlex",
+  "date": "2026-11-16",
+  "count": 1,
+  "error": null,
+  "top": [
+   {
+    "title": "Fine-Grained Trackability in Protocol Executions",
+    "year": 2023,
+    "doi": "https://doi.org/10.14722/ndss.2023.24289"
+   }
+  ]
+ },
+ {
+  "topic": "B",
+  "query": "LoRaWAN anonymity Tamarin ProVerif privacy DevAddr",
+  "database": "Crossref",
+  "date": "2026-11-16",
+  "count": 110162,
+  "error": null,
+  "top": [
+   {
+    "title": "A Sound Translation from Tamarin to ProVerif: Enabling Comparative Analysis",
+    "year": 2026,
+    "doi": "10.1145/3830454.3832703"
+   },
+   {
+    "title": "Anonymity and the right to privacy",
+    "year": 2023,
+    "doi": "10.4324/9781003368700-4"
+   },
+   {
+    "title": "Formal Verification of a V2X Privacy Preserving Scheme Using Proverif",
+    "year": 2023,
+    "doi": "10.1109/csr57506.2023.10224908"
+   },
+   {
+    "title": "ProVerif with Lemmas, Induction, Fast Subsumption, and Much More",
+    "year": 2022,
+    "doi": "10.1109/sp46214.2022.9833653"
+   },
+   {
+    "title": "An Enhanced Key Management Scheme for LoRaWAN",
+    "year": 2018,
+    "doi": "10.1007/978-3-030-05345-1_35"
+   },
+   {
+    "title": "Privacy, Identity and Anonymity",
+    "year": 2019,
+    "doi": "10.2139/ssrn.3396076"
+   },
+   {
+    "title": "Juror Privacy Via Anonymity \n&lt;br&gt;",
+    "year": 2024,
+    "doi": "10.2139/ssrn.5053549"
+   },
+   {
+    "title": "Dual Privacy Protection in Financial AI: When k-Anonymity and Differential Privacy Improve Accuracy Together",
+    "year": 2026,
+    "doi": "10.2139/ssrn.5805184"
+   }
+  ]
+ },
+ {
+  "topic": "B",
+  "query": "LoRaWAN anonymity Tamarin ProVerif privacy DevAddr",
+  "database": "arXiv",
+  "date": "2026-11-16",
+  "count": 0,
+  "error": null,
+  "top": []
+ },
+ {
+  "topic": "B",
+  "query": "unlinkable pseudonym vehicle emergency alert accountability revocation formal",
+  "database": "OpenAlex",
+  "date": "2026-11-16",
+  "count": 27,
+  "error": null,
+  "top": [
+   {
+    "title": "Alert generation and Vehicle Authenticationin fog environment",
+    "year": 2024,
+    "doi": "https://doi.org/10.21203/rs.3.rs-3878651/v1"
+   },
+   {
+    "title": "Enhancing VANET Security with Lattice-Based Cryptography and Dynamic Pseudonym Updates",
+    "year": 2025,
+    "doi": "https://doi.org/10.15849/ijasca.250730.12"
+   },
+   {
+    "title": "Balancing Reliability, Privacy, and Accountability: A Decentralized Approach to Safety Message Dissemination in Vehicular Ad Hoc Network",
+    "year": 2026,
+    "doi": "https://doi.org/10.1016/j.bcra.2026.100556"
+   },
+   {
+    "title": "Post-Quantum Authentication for Emergency Messaging in 5G Vehicular Fog Networks",
+    "year": 2026,
+    "doi": "https://doi.org/10.18196/jrc.v7i1.28191"
+   },
+   {
+    "title": "Review and Perspectives on the Audit of Vehicle-to-Everything Communications",
+    "year": 2023,
+    "doi": "https://doi.org/10.1109/access.2023.3301182"
+   },
+   {
+    "title": "Effective Privacy-Preserving Mechanisms for Vehicle-to-Everything Services",
+    "year": 2020,
+    "doi": null
+   },
+   {
+    "title": "Distributed Reputation for Accurate Vehicle Misbehavior Reporting (DRAMBR)",
+    "year": 2025,
+    "doi": "https://doi.org/10.3390/fi17040174"
+   },
+   {
+    "title": "Next Generation Vehicles, Safety, and Cybersecurity—The CMX Framework",
+    "year": 2023,
+    "doi": "https://doi.org/10.1109/tits.2023.3318376"
+   }
+  ]
+ },
+ {
+  "topic": "B",
+  "query": "unlinkable pseudonym vehicle emergency alert accountability revocation formal",
+  "database": "Crossref",
+  "date": "2026-11-16",
+  "count": 491125,
+  "error": null,
+  "top": [
+   {
+    "title": "Pseudonym Revocation System for Iot-Based Medical Applications",
+    "year": 2024,
+    "doi": "10.2139/ssrn.4865840"
+   },
+   {
+    "title": "SD-BLS: Privacy Preserving Selective Disclosure of Verifiable Credentials with Unlinkable Threshold Revocation",
+    "year": 2024,
+    "doi": "10.1109/blockchain62396.2024.00074"
+   },
+   {
+    "title": "EMERGENCY ALERT SYSTEM FOR VEHICLE USING IOT",
+    "year": 2023,
+    "doi": "10.56726/irjmets34712"
+   },
+   {
+    "title": "Efficient and Privacy-Preserving Certificate Activation for V2X Pseudonym Certificate Revocation",
+    "year": 2022,
+    "doi": "10.3390/jsan11030051"
+   },
+   {
+    "title": "Pseudonym revocation system for IoT-based medical applications",
+    "year": 2025,
+    "doi": "10.1016/j.comnet.2024.110983"
+   },
+   {
+    "title": "A Strongly Unlinkable Group Signature Scheme with Matching-Based Verifier-Local Revocation for Privacy-Enhancing Crowdsensing",
+    "year": 2021,
+    "doi": "10.1109/candar53791.2021.00027"
+   },
+   {
+    "title": "Enhancing the Theft Detection of Vehicle and Emergency Alert Using Novel ResNet -50 over K-Nearest Neighbors Classifier",
+    "year": 2023,
+    "doi": "10.5220/0012505300003739"
+   },
+   {
+    "title": "Emergency Vehicle Alert System using IoT",
+    "year": 2025,
+    "doi": "10.1109/iciss63372.2025.11076191"
+   }
+  ]
+ },
+ {
+  "topic": "B",
+  "query": "unlinkable pseudonym vehicle emergency alert accountability revocation formal",
+  "database": "arXiv",
+  "date": "2026-11-16",
+  "count": 0,
+  "error": null,
+  "top": []
+ }
+]

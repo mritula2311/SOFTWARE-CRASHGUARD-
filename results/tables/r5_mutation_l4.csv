@@ -1,0 +1,27 @@
+id,file,description,status
+L401,src/crashguard/r5_l4.py,step interval off by one,KILLED
+L402,src/crashguard/r5_l4.py,no SF12 cap,KILLED
+L403,src/crashguard/r5_l4.py,deadline slack of one second,KILLED
+L404,src/crashguard/r5_l4.py,duty budget loosened,KILLED
+L405,src/crashguard/r5_l4.py,receive windows skipped,KILLED
+L406,src/crashguard/r5_l4.py,one try too many,KILLED
+L407,src/crashguard/r5_l4.py,first attempt at zero,KILLED
+L408,src/crashguard/r5_l4.py,normal CDF scale,KILLED
+L409,src/crashguard/r5_l4.py,no sensitivity gain per SF,KILLED
+L410,src/crashguard/r5_l4.py,extra loss not scaled with SF,KILLED
+L411,src/crashguard/r5_l4.py,fading not scaled by sigma,KILLED
+L412,src/crashguard/r5_l4.py,failure product uses the success,KILLED
+L413,src/crashguard/r5_l4.py,expected delivery inverted,KILLED
+L414,src/crashguard/r5_l4.py,tie goes to the later candidate,KILLED
+L415,src/crashguard/r5_l4.py,start SF scanned from high to low,KILLED
+L416,src/crashguard/r5_l4.py,start rule exclusive,KILLED
+L417,src/crashguard/r5_l4.py,no start SF found: SF7 instead of SF12,KILLED
+L418,src/crashguard/r5_l4.py,dropped events confused with undelivered,KILLED
+L419,src/crashguard/r5_l4.py,deadline not applied to delivery,KILLED
+L420,src/crashguard/r5_l4.py,deadline boundary exclusive,KILLED
+L421,src/crashguard/r5_l4.py,a crashed run kept for the other policies,KILLED
+L422,src/crashguard/r5_l4.py,interval lower limit,KILLED
+L423,src/crashguard/r5_l4.py,bootstrap p direction,KILLED
+L424,src/crashguard/r5_l4.py,only the first edge cell pooled,KILLED
+L425,src/crashguard/r5_l4.py,edge bounds exclusive,KILLED
+L426,src/crashguard/r5_l4.py,estimate error not passed,KILLED

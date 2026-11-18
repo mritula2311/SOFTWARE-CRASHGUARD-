@@ -1,0 +1,27 @@
+{
+ "0": {
+  "gap": 0.0,
+  "reserve": 4,
+  "after_confirm": true
+ },
+ "1": {
+  "gap": 0.05,
+  "reserve": 4,
+  "after_confirm": true
+ },
+ "2": {
+  "gap": 0.1,
+  "reserve": 4,
+  "after_confirm": true
+ },
+ "3": {
+  "gap": 0.0,
+  "reserve": 4,
+  "after_confirm": false
+ },
+ "4": {
+  "gap": 0.0,
+  "reserve": 2,
+  "after_confirm": true
+ }
+}

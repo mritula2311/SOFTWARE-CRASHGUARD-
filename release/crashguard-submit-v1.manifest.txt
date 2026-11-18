@@ -1,0 +1,11 @@
+commit 585c4d1ff97a5dd710cfce25cf751e439960211d
+sha256 09a7c1b4e3b98af918b615ed67c74f2e9d88f8728cb3a983ae398dd692c0dbd1
+files 1564
+size 37469966
+identical file list from the working copy: True
+files of the round-5 release absent now: 0
+files added since the round-5 release: 123
+required content missing: []
+excluded content present (raw data, variants): []
+
+absent now (round-5 release minus this release):

@@ -1,0 +1,488 @@
+test_no,role,mode,reason
+3114,moving,VEHICLE INTO BARRIER 30,no vehicle-CG or front-sill accelerometer
+3116,moving,VEHICLE INTO BARRIER 330,no vehicle-CG or front-sill accelerometer
+3117,moving,VEHICLE INTO BARRIER 330,no vehicle-CG or front-sill accelerometer
+3144,moving,VEHICLE INTO BARRIER 30,no vehicle-CG or front-sill accelerometer
+3190,moving,VEHICLE INTO BARRIER 30,no vehicle-CG or front-sill accelerometer
+3229,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+3230,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+3231,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+3232,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+3233,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+3234,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+3235,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+3236,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+3237,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+3240,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+3241,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+3242,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+3243,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+3246,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+3247,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+3344,moving,IMPACTOR INTO VEHICLE 338,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+3344,stationary,IMPACTOR INTO VEHICLE 338,no vehicle-CG or front-sill accelerometer
+3356,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+3357,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+3358,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+3359,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+3417,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+3418,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+3419,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+3420,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+3422,stationary,VEHICLE INTO VEHICLE 0,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+3424,stationary,VEHICLE INTO VEHICLE 22,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+3425,stationary,VEHICLE INTO VEHICLE 22,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+3427,stationary,VEHICLE INTO VEHICLE 180,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+3428,stationary,VEHICLE INTO VEHICLE 180,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+3429,moving,VEHICLE INTO VEHICLE 180,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+3430,stationary,VEHICLE INTO VEHICLE 180,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+3431,stationary,VEHICLE INTO VEHICLE 180,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+3433,stationary,VEHICLE INTO VEHICLE 22,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+3476,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+3477,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+3491,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+3491,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+3492,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+3492,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+3507,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+3507,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+3508,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+3508,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+3699,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+3699,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+3701,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+3701,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+3703,moving,VEHICLE INTO BARRIER 270,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+3705,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+3705,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+3706,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+3706,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+3707,moving,VEHICLE INTO BARRIER 270,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+3732,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+3732,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+3733,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+3733,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+3734,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+3734,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+3735,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+3735,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+3736,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+3736,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+3737,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+3737,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+3738,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+3738,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+3739,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+3739,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+3745,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+3746,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+3747,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+3748,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+3749,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+3750,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+3751,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+3752,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+3753,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+3754,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+3756,moving,VEHICLE INTO VEHICLE 270,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+3756,moving,VEHICLE INTO VEHICLE 270,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+3896,stationary,VEHICLE INTO VEHICLE 343,no vehicle-CG or front-sill accelerometer
+3896,stationary,VEHICLE INTO VEHICLE 343,no vehicle-CG or front-sill accelerometer
+3949,moving,IMPACTOR INTO VEHICLE 343,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+3949,stationary,IMPACTOR INTO VEHICLE 343,no vehicle-CG or front-sill accelerometer
+3950,stationary,IMPACTOR INTO VEHICLE 343,no vehicle-CG or front-sill accelerometer
+3953,moving,VEHICLE INTO VEHICLE 343,no vehicle-CG or front-sill accelerometer
+3953,stationary,VEHICLE INTO VEHICLE 343,no vehicle-CG or front-sill accelerometer
+3953,moving,VEHICLE INTO VEHICLE 343,no vehicle-CG or front-sill accelerometer
+3953,stationary,VEHICLE INTO VEHICLE 343,no vehicle-CG or front-sill accelerometer
+4085,stationary,VEHICLE INTO VEHICLE 343,no vehicle-CG or front-sill accelerometer
+4085,stationary,VEHICLE INTO VEHICLE 343,no vehicle-CG or front-sill accelerometer
+4160,moving,IMPACTOR INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+4161,moving,IMPACTOR INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+4162,moving,IMPACTOR INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+4178,moving,IMPACTOR INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+4245,moving,VEHICLE INTO BARRIER 285,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+4285,moving,VEHICLE INTO BARRIER 285,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+4313,moving,VEHICLE INTO BARRIER 285,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+4330,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+4331,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+4332,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+4333,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+4334,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+4335,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+4336,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+4337,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+4338,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+4363,moving,VEHICLE INTO VEHICLE 330,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+4363,moving,VEHICLE INTO VEHICLE 330,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+4364,moving,VEHICLE INTO VEHICLE 330,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+4364,moving,VEHICLE INTO VEHICLE 330,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+4379,moving,VEHICLE INTO BARRIER 285,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+4381,stationary,IMPACTOR INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+4382,stationary,IMPACTOR INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+4383,stationary,IMPACTOR INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+4424,moving,VEHICLE INTO BARRIER 285,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+4429,moving,VEHICLE INTO VEHICLE 0,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+4429,moving,VEHICLE INTO VEHICLE 0,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+4466,stationary,IMPACTOR INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+4467,stationary,IMPACTOR INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+4468,stationary,IMPACTOR INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+4474,moving,VEHICLE INTO VEHICLE 330,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+4474,moving,VEHICLE INTO VEHICLE 330,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+4481,moving,VEHICLE INTO BARRIER 285,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+4530,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+4530,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+4531,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+4531,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+4532,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+4532,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+4533,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+4533,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+4534,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+4534,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+4535,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+4535,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+4536,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+4536,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+4537,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+4537,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+4539,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+4539,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+4540,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+4540,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+4541,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+4541,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+4542,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+4542,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+4543,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+4543,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+4581,moving,VEHICLE INTO VEHICLE 330,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+4581,moving,VEHICLE INTO VEHICLE 330,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+4617,moving,VEHICLE INTO VEHICLE 330,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+4617,moving,VEHICLE INTO VEHICLE 330,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+4660,moving,VEHICLE INTO VEHICLE 330,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+4660,moving,VEHICLE INTO VEHICLE 330,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+4820,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+4821,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+4822,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+4823,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+4824,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+4825,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+4826,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+4827,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+4857,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+4858,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+4859,moving,VEHICLE INTO BARRIER 285,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+4966,stationary,IMPACTOR INTO VEHICLE 15,no vehicle-CG or front-sill accelerometer
+4968,stationary,IMPACTOR INTO VEHICLE 15,no vehicle-CG or front-sill accelerometer
+5040,moving,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5040,stationary,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5040,moving,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5040,stationary,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5041,moving,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5041,stationary,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5041,moving,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5041,stationary,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5080,moving,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5080,stationary,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5080,moving,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5080,stationary,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5081,moving,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5081,stationary,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5081,moving,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5081,stationary,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5082,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+5083,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+5084,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+5085,moving,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5085,stationary,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5085,moving,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5085,stationary,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5086,moving,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5086,stationary,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5086,moving,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5086,stationary,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5088,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+5089,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+5091,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+5109,moving,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5109,stationary,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5109,moving,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5109,stationary,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5110,moving,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5110,stationary,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5110,moving,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5110,stationary,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5111,moving,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5111,stationary,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5111,moving,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5111,stationary,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5112,moving,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5112,stationary,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5112,moving,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5112,stationary,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5113,moving,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5113,stationary,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5113,moving,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5113,stationary,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5116,moving,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5116,stationary,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5116,moving,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5116,stationary,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5141,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+5141,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+5142,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+5142,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+5146,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+5146,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+5151,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+5151,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+5156,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+5156,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+5161,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+5161,moving,VEHICLE INTO VEHICLE 270,no vehicle-CG or front-sill accelerometer
+5214,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+5243,stationary,IMPACTOR INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5247,moving,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5247,stationary,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5247,moving,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5247,stationary,VEHICLE INTO VEHICLE 0,no vehicle-CG or front-sill accelerometer
+5296,moving,VEHICLE INTO BARRIER 285,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+5300,moving,VEHICLE INTO BARRIER 285,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+5317,moving,VEHICLE INTO BARRIER 285,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+5408,moving,VEHICLE INTO BARRIER 285,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+5439,moving,VEHICLE INTO BARRIER 285,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+5448,moving,VEHICLE INTO VEHICLE 0,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+5448,moving,VEHICLE INTO VEHICLE 0,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+5470,moving,VEHICLE INTO BARRIER 285,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+5552,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+5553,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+5554,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+5555,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+5556,stationary,IMPACTOR INTO VEHICLE 180,no vehicle-CG or front-sill accelerometer
+5576,moving,VEHICLE INTO BARRIER 285,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+5684,moving,VEHICLE INTO VEHICLE 0,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+5684,moving,VEHICLE INTO VEHICLE 0,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+5686,moving,VEHICLE INTO VEHICLE 0,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+5686,moving,VEHICLE INTO VEHICLE 0,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+6085,moving,VEHICLE INTO VEHICLE 0,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+6085,moving,VEHICLE INTO VEHICLE 0,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+6087,moving,VEHICLE INTO VEHICLE 0,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+6087,moving,VEHICLE INTO VEHICLE 0,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+6088,moving,VEHICLE INTO VEHICLE 0,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+6088,moving,VEHICLE INTO VEHICLE 0,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+6147,moving,VEHICLE INTO VEHICLE 0,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+6147,moving,VEHICLE INTO VEHICLE 0,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+6372,moving,VEHICLE INTO VEHICLE 0,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+6372,moving,VEHICLE INTO VEHICLE 0,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+6439,moving,VEHICLE INTO BARRIER 285,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+6440,moving,VEHICLE INTO BARRIER 285,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+6441,moving,VEHICLE INTO BARRIER 285,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+6442,moving,VEHICLE INTO BARRIER 285,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+6443,moving,VEHICLE INTO BARRIER 285,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+6444,moving,VEHICLE INTO BARRIER 285,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+6445,moving,VEHICLE INTO BARRIER 285,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+6656,moving,VEHICLE INTO POLE 270,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+6657,moving,VEHICLE INTO POLE 270,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+6735,moving,VEHICLE INTO POLE 270,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+6741,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+6829,moving,VEHICLE INTO VEHICLE 15,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+6829,moving,VEHICLE INTO VEHICLE 15,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+6830,moving,VEHICLE INTO VEHICLE 345,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+6830,moving,VEHICLE INTO VEHICLE 345,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+6832,moving,VEHICLE INTO VEHICLE 15,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+6832,stationary,VEHICLE INTO VEHICLE 15,no vehicle-CG or front-sill accelerometer
+6832,moving,VEHICLE INTO VEHICLE 15,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+6832,stationary,VEHICLE INTO VEHICLE 15,no vehicle-CG or front-sill accelerometer
+6863,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+6865,moving,VEHICLE INTO VEHICLE 345,no vehicle-CG or front-sill accelerometer
+6865,moving,VEHICLE INTO VEHICLE 345,no vehicle-CG or front-sill accelerometer
+6874,stationary,VEHICLE INTO VEHICLE 15,no vehicle-CG or front-sill accelerometer
+6874,stationary,VEHICLE INTO VEHICLE 15,no vehicle-CG or front-sill accelerometer
+6928,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+6929,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+7021,moving,VEHICLE INTO BARRIER 30,no vehicle-CG or front-sill accelerometer
+7101,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+7159,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+7191,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+7274,moving,VEHICLE INTO BARRIER 30,no vehicle-CG or front-sill accelerometer
+7291,moving,VEHICLE INTO BARRIER 30,no vehicle-CG or front-sill accelerometer
+7292,moving,VEHICLE INTO VEHICLE 353,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+7292,moving,VEHICLE INTO VEHICLE 353,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+7293,moving,VEHICLE INTO VEHICLE 353,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+7293,moving,VEHICLE INTO VEHICLE 353,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+7322,moving,VEHICLE INTO BARRIER 30,no vehicle-CG or front-sill accelerometer
+7336,moving,VEHICLE INTO BARRIER 30,no vehicle-CG or front-sill accelerometer
+7340,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+7354,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+7371,moving,VEHICLE INTO VEHICLE 345,no vehicle-CG or front-sill accelerometer
+7371,moving,VEHICLE INTO VEHICLE 345,no vehicle-CG or front-sill accelerometer
+7474,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+7496,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+7522,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+7524,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+7533,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+7540,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+7542,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+7581,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+7590,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+7600,moving,VEHICLE INTO POLE 270,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+7601,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+7610,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+7634,moving,VEHICLE INTO POLE 270,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+7639,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+7662,moving,VEHICLE INTO BARRIER 285,no vehicle-CG or front-sill accelerometer
+7715,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+7730,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+7736,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+7742,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+7805,moving,VEHICLE INTO BARRIER 30,no vehicle-CG or front-sill accelerometer
+7878,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+7893,moving,VEHICLE INTO BARRIER 30,no vehicle-CG or front-sill accelerometer
+7917,moving,VEHICLE INTO BARRIER 30,no vehicle-CG or front-sill accelerometer
+7932,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+7955,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+7976,moving,VEHICLE INTO BARRIER 30,no vehicle-CG or front-sill accelerometer
+7979,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+7993,moving,VEHICLE INTO BARRIER 30,no vehicle-CG or front-sill accelerometer
+7997,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+8028,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+8029,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+8083,moving,VEHICLE INTO POLE 270,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+8090,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+8093,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+8098,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+8110,moving,VEHICLE INTO POLE 270,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+8148,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+8180,moving,VEHICLE INTO POLE 270,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+8197,moving,VEHICLE INTO BARRIER 30,no vehicle-CG or front-sill accelerometer
+8330,moving,VEHICLE INTO POLE 270,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+8387,moving,VEHICLE INTO BARRIER 30,no vehicle-CG or front-sill accelerometer
+8410,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+8453,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+8523,moving,VEHICLE INTO POLE 270,chosen channel shows no crash pulse (peak 0.00 g)
+8524,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+8534,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+8549,moving,VEHICLE INTO VEHICLE 180,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+8549,moving,VEHICLE INTO VEHICLE 180,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+8550,moving,VEHICLE INTO VEHICLE 180,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+8550,moving,VEHICLE INTO VEHICLE 180,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+8552,moving,VEHICLE INTO VEHICLE 180,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+8552,moving,VEHICLE INTO VEHICLE 180,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+8554,moving,VEHICLE INTO VEHICLE 180,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+8554,moving,VEHICLE INTO VEHICLE 180,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+8758,moving,VEHICLE INTO POLE 270,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+8947,moving,VEHICLE INTO BARRIER 30,no vehicle-CG or front-sill accelerometer
+8948,moving,VEHICLE INTO BARRIER 30,no vehicle-CG or front-sill accelerometer
+8990,moving,VEHICLE INTO POLE 270,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+9044,moving,VEHICLE INTO POLE 270,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+9055,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+9062,moving,VEHICLE INTO POLE 270,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+9088,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+9100,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+9169,moving,VEHICLE INTO POLE 270,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+9200,stationary,IMPACTOR INTO VEHICLE 345,no vehicle-CG or front-sill accelerometer
+9201,stationary,IMPACTOR INTO VEHICLE 353,no vehicle-CG or front-sill accelerometer
+9223,stationary,IMPACTOR INTO VEHICLE 345,no vehicle-CG or front-sill accelerometer
+9251,moving,VEHICLE INTO POLE 270,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+9352,moving,VEHICLE INTO POLE 270,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+9490,moving,VEHICLE INTO POLE 270,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+9507,moving,VEHICLE INTO POLE 270,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+9515,moving,VEHICLE INTO POLE 270,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+9548,moving,VEHICLE INTO POLE 270,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+9559,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+9746,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+9803,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+9960,stationary,IMPACTOR INTO VEHICLE 345,chosen channel shows no crash pulse (peak 0.00 g)
+9988,moving,VEHICLE INTO POLE 270,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+10006,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+10052,moving,VEHICLE INTO POLE 285,no vehicle-CG or front-sill accelerometer
+10061,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+10145,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+10158,moving,VEHICLE INTO POLE 270,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+10324,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+10345,moving,VEHICLE INTO POLE 270,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+10365,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+10386,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+10558,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+10639,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+10715,moving,VEHICLE INTO POLE 270,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+10821,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+10825,stationary,IMPACTOR INTO VEHICLE 345,chosen channel shows no crash pulse (peak 0.00 g)
+10911,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+10973,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+10989,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+11050,moving,VEHICLE INTO POLE 270,chosen channel shows no crash pulse (peak 0.00 g)
+11290,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+11384,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+11582,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+11588,moving,VEHICLE INTO POLE 270,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+11592,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+11601,moving,VEHICLE INTO POLE 285,no vehicle-CG or front-sill accelerometer
+11627,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+11825,moving,VEHICLE INTO POLE 270,chosen channel shows no crash pulse (peak 0.00 g)
+11827,moving,IMPACTOR INTO VEHICLE 15,no vehicle-CG or front-sill accelerometer
+13702,stationary,IMPACTOR INTO VEHICLE unknown,no vehicle-CG or front-sill accelerometer
+13703,stationary,IMPACTOR INTO VEHICLE unknown,no vehicle-CG or front-sill accelerometer
+13704,stationary,IMPACTOR INTO VEHICLE unknown,no vehicle-CG or front-sill accelerometer
+13705,stationary,IMPACTOR INTO VEHICLE unknown,no vehicle-CG or front-sill accelerometer
+13706,stationary,IMPACTOR INTO VEHICLE unknown,no vehicle-CG or front-sill accelerometer
+13707,stationary,IMPACTOR INTO VEHICLE unknown,no vehicle-CG or front-sill accelerometer
+13708,stationary,IMPACTOR INTO VEHICLE unknown,no vehicle-CG or front-sill accelerometer
+13709,stationary,IMPACTOR INTO VEHICLE unknown,no vehicle-CG or front-sill accelerometer
+14061,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+14064,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+14083,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+14320,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+14426,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+14443,moving,VEHICLE INTO POLE 270,no ISO MME zip
+14450,moving,VEHICLE INTO POLE 270,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+14492,moving,VEHICLE INTO POLE 270,chosen channel shows no crash pulse (peak 0.00 g)
+14494,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+14505,,VEHICLE INTO POLE 270,download failed (NHTSA request failed: https://nrd-static.nhtsa.dot.gov/compress/iso/vehdb/v10000)
+14507,moving,VEHICLE INTO POLE 270,no ISO MME zip
+14600,moving,VEHICLE INTO POLE 285,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+14601,moving,VEHICLE INTO POLE 285,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+15062,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+15082,moving,VEHICLE INTO POLE 270,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+15095,moving,VEHICLE INTO POLE 270,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+15269,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+15334,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+15365,moving,VEHICLE INTO POLE 270,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+15407,moving,VEHICLE INTO POLE 270,no vehicle-CG or front-sill accelerometer
+15466,,VEHICLE INTO POLE 270,download failed (NHTSA request failed: https://nrd-static.nhtsa.dot.gov/compress/iso/vehdb/v10000)
+15467,moving,VEHICLE INTO POLE 270,"record starts inside the pulse (less than 5 ms before the trigger, no baseline)"
+15474,,VEHICLE INTO POLE 270,download failed (NHTSA request failed: https://nrd-static.nhtsa.dot.gov/compress/iso/vehdb/v10000)
+15540,moving,VEHICLE INTO POLE 270,no ISO MME zip
+15547,moving,VEHICLE INTO POLE 270,no ISO MME zip
+15549,moving,VEHICLE INTO POLE 270,no ISO MME zip
+15553,moving,VEHICLE INTO POLE 270,no ISO MME zip
+15567,moving,VEHICLE INTO POLE 270,no ISO MME zip
+15570,moving,VEHICLE INTO POLE 270,no ISO MME zip
+15571,moving,VEHICLE INTO POLE 270,no ISO MME zip
+15576,moving,VEHICLE INTO POLE 270,no ISO MME zip
+15579,moving,VEHICLE INTO POLE 270,no ISO MME zip
+15587,moving,VEHICLE INTO POLE 270,no ISO MME zip
+15592,moving,VEHICLE INTO POLE 270,no ISO MME zip
+15596,moving,VEHICLE INTO POLE 270,no ISO MME zip
+15606,moving,VEHICLE INTO POLE 270,no ISO MME zip
+15611,moving,VEHICLE INTO POLE 270,no ISO MME zip
+15613,moving,VEHICLE INTO POLE 270,no ISO MME zip
+15629,moving,VEHICLE INTO POLE 270,no ISO MME zip
+15637,moving,VEHICLE INTO BARRIER unknown,no ISO MME zip
+15638,moving,VEHICLE INTO BARRIER unknown,no ISO MME zip
+15639,moving,VEHICLE INTO BARRIER unknown,no ISO MME zip
+15640,moving,VEHICLE INTO BARRIER unknown,no ISO MME zip
+15641,moving,VEHICLE INTO BARRIER unknown,no ISO MME zip
+15642,moving,VEHICLE INTO BARRIER unknown,no ISO MME zip
+15646,moving,VEHICLE INTO POLE 270,no ISO MME zip
+15705,moving,VEHICLE INTO POLE 270,no ISO MME zip
+15747,moving,VEHICLE INTO POLE 270,no ISO MME zip
+15748,moving,VEHICLE INTO POLE 270,no ISO MME zip
+15749,moving,VEHICLE INTO POLE 270,no ISO MME zip
+15751,moving,VEHICLE INTO POLE 270,no ISO MME zip
+15753,moving,VEHICLE INTO POLE 270,no ISO MME zip
+15754,moving,VEHICLE INTO POLE 270,no ISO MME zip
+15756,moving,VEHICLE INTO POLE 270,no ISO MME zip
+15757,moving,VEHICLE INTO POLE 270,no ISO MME zip
+15760,moving,VEHICLE INTO POLE 270,no ISO MME zip

@@ -1,0 +1,12 @@
+hypothesis,scored_at,freeze_commit,deviation
+P4a,2026-11-12 08:34,1a3aff90747d2cb9df4b468fa5faabdaab0737fd,
+P4b,2026-11-12 08:39,7a42da37747f66b178b5494c927de1b53172a11f,
+P4b,2026-11-12 08:39,7a42da37747f66b178b5494c927de1b53172a11f,initial run crashed before any test event was scored (AttributeError in mask construction); repeated after the fix
+P4c,2026-11-12 08:41,ab6239f47e17f165fa634a0a8677d823cb6f9b76,
+P1,2026-11-12 08:41,1d2251103c6f727c82783f84ccd4d1583ccd68fe,
+P2,2026-11-12 08:42,505ac57f68d97878f3d22f95d8dbc687ebb34c41,
+P3a,2026-11-12 08:43,23015883aa0b56728d828d758271bd46f3f6517b,
+P3b,2026-11-12 08:43,015e2b5a1af942640434ce08207c82f1b8136bb1,
+P4c,2026-11-12 08:53,ab6239f47e17f165fa634a0a8677d823cb6f9b76,"repeat after fixing a closure bug in the recall-gain statistic; models, settings and alarms unchanged"
+P3b,2026-11-12 08:55,015e2b5a1af942640434ce08207c82f1b8136bb1,repeat after a failed write of results.json (concurrent writers); simulated cells read back from p3b_cells.csv
+P4d,2026-11-12 09:13,35f77661ac8cec352fa83cf8b4ef463ede8b10e3,

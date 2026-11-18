@@ -1,0 +1,94 @@
+command: /opt/pv/proverif2.05/proverif formal/proverif/r6_ratchet_secrecy.pv
+Process 0 (that is, the initial process):
+{1}new master: bitstring;
+{2}let master_1: bitstring = master in
+{3}let v: bitstring = vehicleId in
+{4}let k0: bitstring = kdf(master_1,v) in
+{5}let k1: bitstring = h(k0,lab) in
+{6}let k2: bitstring = h(k1,lab) in
+{7}let k3: bitstring = h(k2,lab) in
+{8}out(c, (v,senc(p1,k1)));
+{9}out(c, (v,senc(p2,k2)));
+{10}out(c, (v,senc(p3,k3)));
+{11}out(c, k3)
+
+--  Process 1 (that is, process 0, with let moved downwards):
+{1}new master: bitstring;
+{3}let v: bitstring = vehicleId in
+{2}let master_1: bitstring = master in
+{4}let k0: bitstring = kdf(master_1,v) in
+{5}let k1: bitstring = h(k0,lab) in
+{8}out(c, (v,senc(p1,k1)));
+{6}let k2: bitstring = h(k1,lab) in
+{9}out(c, (v,senc(p2,k2)));
+{7}let k3: bitstring = h(k2,lab) in
+{10}out(c, (v,senc(p3,k3)));
+{11}out(c, k3)
+
+-- Query not attacker(p1[]) in process 1.
+Translating the process into Horn clauses...
+Completing...
+Starting query not attacker(p1[])
+RESULT not attacker(p1[]) is true.
+-- Query not attacker(p2[]) in process 1.
+Translating the process into Horn clauses...
+Completing...
+Starting query not attacker(p2[])
+RESULT not attacker(p2[]) is true.
+-- Query not attacker(p3[]) in process 1.
+Translating the process into Horn clauses...
+Completing...
+Starting query not attacker(p3[])
+goal reachable: attacker(p3[])
+
+Derivation:
+
+1. The message h(h(h(kdf(master[],vehicleId),lab),lab),lab) may be sent to the attacker at output {11}.
+attacker(h(h(h(kdf(master[],vehicleId),lab),lab),lab)).
+
+2. The message (vehicleId,senc(p3[],h(h(h(kdf(master[],vehicleId),lab),lab),lab))) may be sent to the attacker at output {10}.
+attacker((vehicleId,senc(p3[],h(h(h(kdf(master[],vehicleId),lab),lab),lab)))).
+
+3. By 2, the attacker may know (vehicleId,senc(p3[],h(h(h(kdf(master[],vehicleId),lab),lab),lab))).
+Using the function 2-proj-2-tuple the attacker may obtain senc(p3[],h(h(h(kdf(master[],vehicleId),lab),lab),lab)).
+attacker(senc(p3[],h(h(h(kdf(master[],vehicleId),lab),lab),lab))).
+
+4. By 3, the attacker may know senc(p3[],h(h(h(kdf(master[],vehicleId),lab),lab),lab)).
+By 1, the attacker may know h(h(h(kdf(master[],vehicleId),lab),lab),lab).
+Using the function sdec the attacker may obtain p3[].
+attacker(p3[]).
+
+5. By 4, attacker(p3[]).
+The goal is reached, represented in the following fact:
+attacker(p3[]).
+
+
+A more detailed output of the traces is available with
+  set traceDisplay = long.
+
+new master: bitstring creating master_2 at {1}
+
+out(c, (~M,~M_1)) with ~M = vehicleId, ~M_1 = senc(p1,h(kdf(master_2,vehicleId),lab)) at {8}
+
+out(c, (~M_2,~M_3)) with ~M_2 = vehicleId, ~M_3 = senc(p2,h(h(kdf(master_2,vehicleId),lab),lab)) at {9}
+
+out(c, (~M_4,~M_5)) with ~M_4 = vehicleId, ~M_5 = senc(p3,h(h(h(kdf(master_2,vehicleId),lab),lab),lab)) at {10}
+
+out(c, ~M_6) with ~M_6 = h(h(h(kdf(master_2,vehicleId),lab),lab),lab) at {11}
+
+The attacker has the message sdec(~M_5,~M_6) = p3.
+A trace has been found.
+RESULT not attacker(p3[]) is false.
+
+--------------------------------------------------------------
+Verification summary:
+
+Query not attacker(p1[]) is true.
+
+Query not attacker(p2[]) is true.
+
+Query not attacker(p3[]) is false.
+
+--------------------------------------------------------------
+
+exit code: 0 ; wall time 0 s ; peak memory 9 MB

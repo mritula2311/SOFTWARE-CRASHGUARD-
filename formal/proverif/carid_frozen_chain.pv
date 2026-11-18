@@ -1,0 +1,33 @@
+(* A3 (PREREGISTRATION_V15 section 4): FROZEN design, unbounded number of reboots with a "later epoch" order, ProVerif 2.05. An attempt to express the timing assumption of the Tamarin model
+   without a fixed number of epochs.
+   Each boot starts in the epoch that follows the last epoch of the previous boot (nxt is a free constructor, so every epoch built this way is different from the earlier ones) and sends in two
+   epochs; the last epoch is handed to the next boot on a private channel (the clock). OUTCOME: ProVerif 2.05 did not terminate within 300 s (timeout, exit code 124); the query is undecided in
+   this formulation and no reason for the non-termination was determined. The unbounded ordered-time version of the lemma is therefore reported as undecided in ProVerif. *)
+
+free c: channel.
+free ch: channel [private].
+fun mk(bitstring, bitstring): bitstring [data].
+fun nxt(bitstring): bitstring [data].
+const s1: bitstring.
+const e0: bitstring.
+free vehicle: bitstring.
+
+event CarSend(bitstring, bitstring, bitstring).
+
+query v: bitstring, a: bitstring, i1: bitstring, i2: bitstring;
+  event(CarSend(v, a, i1)) && event(CarSend(v, a, i2)) ==> i1 = i2.
+
+let Boot(v: bitstring) =
+  in(ch, el: bitstring);
+  let e1 = nxt(el) in
+  new i1: bitstring;
+  event CarSend(v, mk(e1, s1), i1);
+  out(c, mk(e1, s1));
+  let e2 = nxt(e1) in
+  new i2: bitstring;
+  event CarSend(v, mk(e2, s1), i2);
+  out(c, mk(e2, s1));
+  out(ch, e2).
+
+process
+  out(ch, e0) | !Boot(vehicle)

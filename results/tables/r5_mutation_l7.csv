@@ -1,0 +1,22 @@
+id,file,description,status
+L701,src/crashguard/r5_l7.py,window edge exclusive,KILLED
+L703,src/crashguard/r5_l7.py,base advances past the accepted index,KILLED
+L704,src/crashguard/r5_l7.py,car does not ratchet on a received ACK,KILLED
+L705,src/crashguard/r5_l7.py,rejection changes the state,KILLED
+L706,src/crashguard/r5_l7.py,boot does not ratchet,KILLED
+L707,src/crashguard/r5_l7.py,boot ratchets twice,KILLED
+L708,src/crashguard/r5_l7.py,lost ACK still ratchets the car,KILLED
+L709,src/crashguard/r5_l7.py,window,KILLED
+L710,src/crashguard/r5_l7.py,boots allowed in the claim,KILLED
+L711,src/crashguard/r5_l7.py,next-alert test off by one,KILLED
+L712,src/crashguard/r5_l7.py,base-ahead check loosened,KILLED
+L713,src/crashguard/r5_l7.py,gap bound loosened,KILLED
+L714,src/crashguard/r5_l7.py,accept check loosened,KILLED
+L715,src/crashguard/r5_l7.py,boot count boundary,KILLED
+L716,src/crashguard/r5_l7.py,window-exceeding count,KILLED
+L717,src/crashguard/r5_l7.py,longest sequences left out,KILLED
+L718,src/crashguard/r5_l7.py,lost-ACK event left out,KILLED
+L719,src/crashguard/r5_l7.py,cost: resync hash steps,KILLED
+L720,src/crashguard/r5_l7.py,cost: state bytes,KILLED
+L721,src/crashguard/r5_l7.py,wellformedness failure ignored,KILLED
+L722,src/crashguard/r5_l7.py,timeout counted as verified,KILLED

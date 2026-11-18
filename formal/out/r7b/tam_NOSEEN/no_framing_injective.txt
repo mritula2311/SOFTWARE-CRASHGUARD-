@@ -1,0 +1,156 @@
+lemma: no_framing_injective
+command: tamarin-prover -D=NOSEEN --prove=no_framing_injective /mnt/d/crashguard-software/crashguard-software/formal/r7b_quarantine_pseudo.spthy
+maude tool: 'maude'
+ checking version: 3.5.1. OK.
+ checking installation: OK.
+[Theory QuarantinePseudo] Theory loaded
+[Theory QuarantinePseudo] Theory translated
+[Theory QuarantinePseudo] Derivation checks started
+[Theory QuarantinePseudo] Derivation checks ended
+[Theory QuarantinePseudo] Theory closed
+[Saturating Sources] Step 1 (Max 5)
+[Saturating Sources] Done
+theory QuarantinePseudo
+
+begin
+
+// Function signature and definition of the equational theory E
+
+functions: fst/1, kdf/2, mac/2, pair/2, pseud/2, snd/1
+equations: fst(<x.1, x.2>) = x.1, snd(<x.1, x.2>) = x.2
+
+rule (modulo E) NewVehicle:
+   [ Fr( ~v ), Fr( ~kv ) ]
+  --[ NewVehicle( ~v ) ]->
+   [ !Key( ~v, ~kv ), Out( ~v ) ]
+
+  /* has exactly the trivial AC variant */
+
+rule (modulo E) Reveal:
+   [ !Key( v, kv ) ] --[ Revealed( v ) ]-> [ Out( kv ) ]
+
+  /* has exactly the trivial AC variant */
+
+rule (modulo E) CarSendBad:
+   [ !Key( v, kv ), Fr( ~a ) ]
+  --[ CarSentBad( v, ~a ) ]->
+   [
+   Out( <pseud(kv, ~a), 'bad', mac(kv, <'A', pseud(kv, ~a), 'bad', ~a>)> ),
+   !Window( pseud(kv, ~a), v, ~a ), Unseen( v, ~a )
+   ]
+
+  /* has exactly the trivial AC variant */
+
+rule (modulo E) CarSendGood:
+   [ !Key( v, kv ), Fr( ~a ) ]
+  --[ CarSentGood( v, ~a ) ]->
+   [
+   Out( <pseud(kv, ~a), 'good', mac(kv, <'A', pseud(kv, ~a), 'good', ~a>)>
+   ),
+   !Window( pseud(kv, ~a), v, ~a ), Unseen( v, ~a )
+   ]
+
+  /* has exactly the trivial AC variant */
+
+rule (modulo E) BaseStrike:
+   [
+   In( <p, 'bad', mac(kv, <'A', p, 'bad', a>)> ), !Window( p, v, a ),
+   !Key( v, kv )
+   ]
+  --[ Strike( v, a ) ]->
+   [ ]
+
+  /* has exactly the trivial AC variant */
+
+lemma executable_strike:
+  exists-trace "∃ v a #i. Strike( v, a ) @ #i"
+/*
+guarded formula characterizing all satisfying traces:
+"∃ v a #i. (Strike( v, a ) @ #i)"
+*/
+by sorry
+
+lemma no_framing_noninjective:
+  all-traces
+  "∀ v a #i.
+    (Strike( v, a ) @ #i) ⇒
+    ((∃ #j. (CarSentBad( v, a ) @ #j) ∧ (#j < #i)) ∨
+     (∃ #r. Revealed( v ) @ #r))"
+/*
+guarded formula characterizing all counter-examples:
+"∃ v a #i.
+  (Strike( v, a ) @ #i)
+ ∧
+  (∀ #j. (CarSentBad( v, a ) @ #j) ⇒ ¬(#j < #i)) ∧
+  (∀ #r. (Revealed( v ) @ #r) ⇒ ⊥)"
+*/
+by sorry
+
+lemma no_framing_injective:
+  all-traces
+  "∀ v a #i.
+    (Strike( v, a ) @ #i) ⇒
+    ((∃ #j.
+       ((CarSentBad( v, a ) @ #j) ∧ (#j < #i)) ∧
+       (∀ #k. (Strike( v, a ) @ #k) ⇒ (#k = #i))) ∨
+     (∃ #r. Revealed( v ) @ #r))"
+/*
+guarded formula characterizing all counter-examples:
+"∃ v a #i.
+  (Strike( v, a ) @ #i)
+ ∧
+  (∀ #j.
+    (CarSentBad( v, a ) @ #j)
+   ⇒
+    ((¬(#j < #i)) ∨ (∃ #k. (Strike( v, a ) @ #k) ∧ ¬(#k = #i)))) ∧
+  (∀ #r. (Revealed( v ) @ #r) ⇒ ⊥)"
+*/
+simplify
+solve( !Window( p, v, a ) ▶₁ #i )
+  case CarSendBad
+  solve( (#k < #i)  ∥ (#i < #k) )
+    case case_1
+    solve( !Key( ~v, kv.1 ) ▶₂ #i )
+      case NewVehicle
+      solve( !Window( p, ~v, ~a ) ▶₁ #k )
+        case CarSendBad
+        solve( !Key( ~v, kv.1 ) ▶₂ #k )
+          case NewVehicle
+          solve( !KU( mac(~kv, <'A', pseud(~kv, ~a), 'bad', ~a>) ) @ #vk.4 )
+            case CarSendBad
+            solve( !KU( pseud(~kv, ~a) ) @ #vk.2 )
+              case CarSendBad
+              SOLVED // trace found
+            qed
+          qed
+        qed
+      qed
+    qed
+  qed
+qed
+
+/* All wellformedness checks were successful. */
+
+/*
+Generated from:
+Tamarin version 1.12.0
+Maude version 3.5.1
+Git revision: 82780bbaf3328a45f624ddb41e51bf75425f851c (with uncommited changes), branch: master
+Compiled at: 2026-03-07 14:22:39.174278293 UTC
+*/
+
+end
+
+==============================================================================
+summary of summaries:
+
+analyzed: /mnt/d/crashguard-software/crashguard-software/formal/r7b_quarantine_pseudo.spthy
+
+  processing time: 2.47s
+  
+  executable_strike (exists-trace): analysis incomplete (1 steps)
+  no_framing_noninjective (all-traces): analysis incomplete (1 steps)
+  no_framing_injective (all-traces): falsified - found trace (9 steps)
+
+==============================================================================
+exit code: 0 ; wall time 3 s

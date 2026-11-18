@@ -1,0 +1,31 @@
+name: tests
+
+# Runs the test suite in two parts on Linux (the whole suite can stall in one process; see paper/REPRODUCE.md item 13).
+# No secrets are used and nothing is uploaded. Tests that need the host C compiler or data that is not committed skip themselves.
+# Not run by the author yet: the repository has no remote, so this file has not been executed.
+on:
+  push:
+    paths: ["src/**", "tests/**", "requirements.txt", "requirements.lock", ".github/workflows/tests.yml"]
+  pull_request:
+    paths: ["src/**", "tests/**", "requirements.txt", "requirements.lock", ".github/workflows/tests.yml"]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: src
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install the pinned requirements
+        run: pip install -r requirements.txt
+      - name: Part 1, tests/redesign
+        run: python -m pytest -q -p no:cacheprovider tests/redesign
+      - name: Part 2, the other tests
+        run: python -m pytest -q -p no:cacheprovider tests --ignore=tests/redesign

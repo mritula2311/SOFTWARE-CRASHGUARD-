@@ -1,0 +1,10 @@
+{
+ "chosen": 4,
+ "params": {
+  "w": 2,
+  "model": "logistic",
+  "class_weight": "balanced",
+  "alpha": 0.01
+ },
+ "rule": "V16 4.3: lowest validation near-miss false-alarm rate at the baseline's validation recall; ties go to the smaller window"
+}

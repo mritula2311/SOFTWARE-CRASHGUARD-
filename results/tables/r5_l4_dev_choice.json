@@ -1,0 +1,9 @@
+{
+ "chosen": 3,
+ "params": {
+  "k": 2,
+  "m0": 0.0,
+  "err": 2.0
+ },
+ "rule": "V16 6.3: highest mean development gain over the edge cells; ties go to the smaller k"
+}

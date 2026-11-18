@@ -1,0 +1,530 @@
+[
+ {
+  "topic": 28,
+  "date_run": "2026-11-15",
+  "database": "Crossref API",
+  "query": "rate limiting quarantine compromised vehicle false alerts plausibility check position",
+  "status": "OK",
+  "reason": "",
+  "top": [
+   {
+    "doi": "10.1177/00187208261436744",
+    "title": "Exploring False Warnings and Modalities for Emergency Vehicle Alerts and Their Impact on Driver Behavior",
+    "journal": "Human Factors: The Journal of the Human Factors and Ergonomics Society",
+    "year": 2026,
+    "abstract": "<jats:sec>\n                    <jats:title>Objective</jats:title>\n                    <jats:p>This study explores the order effects in false alarms and the effect of warning modality when drivers receive an Emergency Vehicle Approaching (EVA) alert.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Background</jats:title>\n                    <jats:"
+   },
+   {
+    "doi": "10.3390/math14010049",
+    "title": "The Probabilistic Foundations of Surveillance Failure: From False Alerts to Structural Bias",
+    "journal": "Mathematics",
+    "year": 2025,
+    "abstract": "<jats:p>Forensic statisticians have long debated whether searching large DNA databases undermines the evidential value of matches. Modern surveillance faces an exponentially harder problem: screening populations across thousands of attributes using threshold rules. Intuition suggests that requiring many coincidental matches should make false alerts astronomically unlikely. This intuition fails. Co"
+   },
+   {
+    "doi": "10.3928/25731777-20260601-17",
+    "title": "Pulse Check: Reminders and Alerts for Providers in 2026",
+    "journal": "Oncology Issues",
+    "year": 2026,
+    "abstract": ""
+   },
+   {
+    "doi": "10.3390/network6030053",
+    "title": "Machine Learning Framework for Detecting False Alerts in Safety Messages",
+    "journal": "Network",
+    "year": 2026,
+    "abstract": "<jats:p>The recent advances in Vehicular Ad Hoc Networks (VANETs) can have a tremendous positive impact on vehicle safety and traffic flow. In VANETs, vehicles communicate wirelessly with each other and with roadside infrastructure nodes to improve awareness of neighboring vehicles and traffic conditions. However, such communication also increases the potential for various safety and security chal"
+   },
+   {
+    "doi": "10.1515/jib-2023-0026",
+    "title": "PharmoCo: a graph-based visualization of pharmacogenomic plausibility check reports for clinical decision support systems",
+    "journal": "Journal of Integrative Bioinformatics",
+    "year": 2023,
+    "abstract": "<jats:title>Abstract</jats:title>\n               <jats:p>The first approaches in recent years for the integration of pharmacogenomic plausibility checks into clinical practice show both a promising improvement in the drug therapy safety, but also difficulties in application. One of the difficulties is the meaningful interpretation of the text-based results by the medical practitioner. We propose h"
+   },
+   {
+    "doi": "10.14569/ijacsa.2021.0121180",
+    "title": "Software Security Static Analysis False Alerts Handling Approaches",
+    "journal": "International Journal of Advanced Computer Science and Applications",
+    "year": 2021,
+    "abstract": ""
+   },
+   {
+    "doi": "10.54254/2754-1169/69/20231420",
+    "title": "The Plausibility Check of Governmental and Legal Intervention to the Free Market System",
+    "journal": "Advances in Economics, Management and Political Sciences",
+    "year": 2024,
+    "abstract": "<jats:p>The notion that the market plays a significant role in empowering national economies has been consistently supported by several academic studies and corroborated by historical evidence. However, the process of achieving sustainable and inclusive economic development necessitates more than just relying on the free market system as the sole driving force. This study employs a literature revi"
+   },
+   {
+    "doi": "10.1016/j.socscimed.2024.116653",
+    "title": "Reality check. The issue of social plausibility in Virtual reality therapy with addiction patients",
+    "journal": "Social Science &amp; Medicine",
+    "year": 2024,
+    "abstract": ""
+   }
+  ]
+ },
+ {
+  "topic": 28,
+  "date_run": "2026-11-15",
+  "database": "Crossref API",
+  "query": "misbehavior detection vehicle position plausibility speed alert flooding",
+  "status": "OK",
+  "reason": "",
+  "top": [
+   {
+    "doi": "10.4236/jtts.2021.112018",
+    "title": "Misbehavior Detection Method by Time Series Change of Vehicle Position in Vehicle-to-Everything Communication",
+    "journal": "Journal of Transportation Technologies",
+    "year": 2021,
+    "abstract": ""
+   },
+   {
+    "doi": "10.70729/se23424125746",
+    "title": "Vehicle Collision Detection and Alert System using Data Science",
+    "journal": "International Journal of Scientific Engineering and Research",
+    "year": 2023,
+    "abstract": ""
+   },
+   {
+    "doi": "10.21275/sr21606144632",
+    "title": "Smart Vehicle Connectivity for Safety Applications - Drowsiness Detection and System Alert",
+    "journal": "International Journal of Science and Research (IJSR)",
+    "year": 2021,
+    "abstract": ""
+   },
+   {
+    "doi": "10.1109/access.2021.3136706",
+    "title": "Misbehavior Detection for Position Falsification Attacks in VANETs Using Machine Learning",
+    "journal": "IEEE Access",
+    "year": 2022,
+    "abstract": ""
+   },
+   {
+    "doi": "10.21275/sr26521085403",
+    "title": "Vehicle Detection Counting and Speed Estimation",
+    "journal": "International Journal of Science and Research (IJSR)",
+    "year": 2026,
+    "abstract": ""
+   },
+   {
+    "doi": "10.55041/ijsrem68985",
+    "title": "Design and Implementation of a Low-Cost Microcontroller-Based Vehicle Speed Detection and Overspeed Alert System Using Dual IR Sensors",
+    "journal": "International Journal of Scientific Research in Engineering and Management",
+    "year": 2026,
+    "abstract": ""
+   },
+   {
+    "doi": "10.64388/irev9i10-1717029",
+    "title": "Vehicle Based Elephant Detection and Alert System",
+    "journal": "Iconic Research and Engineering Journals",
+    "year": 2026,
+    "abstract": ""
+   },
+   {
+    "doi": "10.3390/app16115605",
+    "title": "SMDEVC: Specification-Based Misbehavior Detection for Electric Vehicle Charging Stations",
+    "journal": "Applied Sciences",
+    "year": 2026,
+    "abstract": "<jats:p>Electric vehicle (EV) chargers are often deployed in public spaces, making them easily accessible targets for cyber attackers. Moreover, EV chargers are components of EV charging infrastructure in which IT and OT domains coexist; thus, if they are compromised and used as intrusion points, they may affect the entire EV charging infrastructure. To address this issue, this paper proposes SMDE"
+   }
+  ]
+ },
+ {
+  "topic": 29,
+  "date_run": "2026-11-15",
+  "database": "Crossref API",
+  "query": "data leakage overlapping windows accelerometer activity recognition benchmark",
+  "status": "OK",
+  "reason": "",
+  "top": [
+   {
+    "doi": "10.3390/s24248201",
+    "title": "Mitigating Data Leakage in a WiFi CSI Benchmark for Human Action Recognition",
+    "journal": "Sensors",
+    "year": 2024,
+    "abstract": "<jats:p>Human action recognition using WiFi channel state information (CSI) has gained attention due to its non-intrusive nature and potential applications in healthcare, smart environments, and security. However, the reliability of methods developed for CSI-based action recognition is often contingent on the quality of the datasets and evaluation protocols used. In this paper, we uncovered a crit"
+   },
+   {
+    "doi": "10.18178/ijmlc.2021.11.4.1051",
+    "title": "Smartphone Sensor Accelerometer Data for Human Activity Recognition Using Spiking Neural Network",
+    "journal": "International Journal of Machine Learning and Computing",
+    "year": 2021,
+    "abstract": "<jats:p>Recognizing human actions is a challenging task and actively research in computer vision community. The task of human activity recognition has been widely used in various application such as human monitoring in a hospital or public spaces. This work applied open dataset of smartphones accelerometer data for various type of activities. The analogue input data is encoded into the spike train"
+   },
+   {
+    "doi": "10.51257/a-v1-r1815",
+    "title": "Reconnaissance d’activités à partir des données d’un accéléromètre",
+    "journal": "Mesures mécaniques et dimensionnelles",
+    "year": 2021,
+    "abstract": ""
+   },
+   {
+    "doi": "10.70470/edraak/2026/003",
+    "title": "Human Activity Recognition Using Smartphone Sensor Data: A Lightweight Benchmark Study",
+    "journal": "EDRAAK",
+    "year": 2026,
+    "abstract": "<jats:p>Smartphone inertial sensors enable Human Activity Recognition (HAR) which serves as a fundamental task for mobile computing and digital health and context-aware systems because these devices offer both functional sensing abilities and extensive access to real-world environments. The study creates a journal-style lightweight benchmark for smartphone sensor-based HAR through a dataset which "
+   },
+   {
+    "doi": "10.3390/s22072618",
+    "title": "Smartphone-Based Activity Recognition Using Multistream Movelets Combining Accelerometer and Gyroscope Data",
+    "journal": "Sensors",
+    "year": 2022,
+    "abstract": "<jats:p>Physical activity patterns can reveal information about one’s health status. Built-in sensors in a smartphone, in comparison to a patient’s self-report, can collect activity recognition data more objectively, unobtrusively, and continuously. A variety of data analysis approaches have been proposed in the literature. In this study, we applied the movelet method to classify the activities pe"
+   },
+   {
+    "doi": "10.22266/ijies2025.0229.34",
+    "title": "Enhanced Human Activity Recognition (HAR): Leveraging Sub-Window Techniques and Feature Ratios from Triaxial Accelerometer Data",
+    "journal": "International Journal of Intelligent Engineering and Systems",
+    "year": 2025,
+    "abstract": ""
+   },
+   {
+    "doi": "10.5334/paah.441",
+    "title": "Impact of Sensor-Axis Combinations on Machine Learning Accuracy for Human Activity Recognition Using Accelerometer Data in Clinical Settings",
+    "journal": "Physical Activity and Health",
+    "year": 2025,
+    "abstract": "<jats:p>Background: Identifying patient activity during symptom onset is crucial in conditions such as chronic obstructive pulmonary disease (COPD) or arrhythmia. Accelerometer data can aid in this process; however, minimal data requirements are preferable. This study aimed to determine the minimum number of axes required to accurately recognize activities related to COPD or arrhythmia.\nMethods: T"
+   },
+   {
+    "doi": "10.3390/s21041214",
+    "title": "Machine Learning Algorithms for Activity-Intensity Recognition Using Accelerometer Data",
+    "journal": "Sensors",
+    "year": 2021,
+    "abstract": "<jats:p>In pervasive healthcare monitoring, activity recognition is critical information for adequate management of the patient. Despite the great number of studies on this topic, a contextually relevant parameter that has received less attention is intensity recognition. In the present study, we investigated the potential advantage of coupling activity and intensity, namely, Activity-Intensity, i"
+   }
+  ]
+ },
+ {
+  "topic": 29,
+  "date_run": "2026-11-15",
+  "database": "Crossref API",
+  "query": "fall detection accelerometer dataset subject-wise split leakage duplicate windows",
+  "status": "OK",
+  "reason": "",
+  "top": [
+   {
+    "doi": "10.1016/j.health.2026.100477",
+    "title": "A leakage-free analytics framework for subject-wise electrocardiogram-based sleep apnea detection using machine learning",
+    "journal": "Healthcare Analytics",
+    "year": 2026,
+    "abstract": ""
+   },
+   {
+    "doi": "10.3390/electronics15184179",
+    "title": "Beyond Random-Split Accuracy: Duplicate-Safe and Crypto-Agile Evaluation of Anomaly Detection for Post-Quantum TLS",
+    "journal": "Electronics",
+    "year": 2026,
+    "abstract": "<jats:p>Post-quantum cryptography changes the size, timing, and algorithmic context of Transport Layer Security (TLS) handshakes, creating a dynamic normal class for anomaly detectors. This study evaluates an assurance framework, rather than proposing a new classifier, on CIC-PQC_OAV v1: 40,010 sessions represented by 32 encrypted-metadata features. An audit finds 185 exact fingerprints shared acr"
+   },
+   {
+    "doi": "10.3390/app162010430",
+    "title": "Near-Duplicate Contamination in a Widely Used Safety Helmet Detection Benchmark: Audit, Controlled Experiments, and a Duplicate-Aware Evaluation Split",
+    "journal": "Applied Sciences",
+    "year": 2026,
+    "abstract": "<jats:p>Public benchmarks drive research on vision-based safety monitoring, and the Safety Helmet Wearing Dataset (SHWD) has become the de facto standard for helmet-wearing detection. This paper reports a systematic near-duplicate audit of SHWD and measures how the contamination it uncovers affects the accuracy reported on the benchmark. A two-stage matching procedure—64-bit perceptual hashing wit"
+   },
+   {
+    "doi": "10.3390/jimaging9080159",
+    "title": "Biased Deep Learning Methods in Detection of COVID-19 Using CT Images: A Challenge Mounted by Subject-Wise-Split ISFCT Dataset",
+    "journal": "Journal of Imaging",
+    "year": 2023,
+    "abstract": "<jats:p>Accurate detection of respiratory system damage including COVID-19 is considered one of the crucial applications of deep learning (DL) models using CT images. However, the main shortcoming of the published works has been unreliable reported accuracy and the lack of repeatability with new datasets, mainly due to slice-wise splits of the data, creating dependency between training and test se"
+   },
+   {
+    "doi": "10.47897/bilmes.1299289",
+    "title": "Fall Detection Systems Supported by TinyML and Accelerometer Sensors: An Approach for Ensuring the Safety and Quality of Life of the Elderly",
+    "journal": "International Scientific and Vocational Studies Journal",
+    "year": 2023,
+    "abstract": "<jats:p xml:lang=\"en\">Many elderly individuals live alone in their homes, which can lead to significant health and safety concerns due to the risk of falls. Falls not only cause physical injuries but also have social, psychological, and economic impacts that negatively affect the quality of life for older adults. In this context, early detection of falls and implementation of preventive measures a"
+   },
+   {
+    "doi": "10.5351/kjas.2026.39.4.385",
+    "title": "Segment-wise split leakage in hierarchical multimodal prediction: a case study on DAIC-WOZ",
+    "journal": "Korean Journal of Applied Statistics",
+    "year": 2026,
+    "abstract": ""
+   },
+   {
+    "doi": "10.58286/33951",
+    "title": "Development of Magnetic Flux Leakage Sensor for Local Damage Detection in Chain",
+    "journal": "e-Journal of Nondestructive Testing",
+    "year": 2026,
+    "abstract": "<jats:p>The Chain is discontinuous structures component widely used as critical components for power transmission and load bearing in various industrial facilities. However, local damage caused by repeated loading, friction, corrosion, and fatigue cracking can lead to catastrophic chain failure and unexpected equipment shutdown, resulting in severe safety risks. Accordingly, the objective of this "
+   },
+   {
+    "doi": "10.26599/tst.2024.9010187",
+    "title": "A Block-Wise Updating Strategy for Approximate Duplicate Detection",
+    "journal": "Tsinghua Science and Technology",
+    "year": 2025,
+    "abstract": "<jats:sec>\n                    <jats:title>Abstract</jats:title>\n                    <jats:p>Approximate duplicate detection in data streams aims to determine whether an item is present within a small subsequence of the data stream. It is a fundamental query problem needed in several network applications, such as web crawling and Radio Frequency Identification (RFID) tag management. Most of the ex"
+   }
+  ]
+ },
+ {
+  "topic": 30,
+  "date_run": "2026-11-15",
+  "database": "Crossref API",
+  "query": "smartphone accelerometer orientation alignment vehicle frame gyroscope yaw rate lateral acceleration",
+  "status": "OK",
+  "reason": "",
+  "top": [
+   {
+    "doi": "10.53671/pturj.v12i2.530",
+    "title": "Adaptive Model Predictive Control of Yaw Rate and Lateral Acceleration for an Active Steering Vehicle Based on Tire Stiffness Estimation",
+    "journal": "مجلة جامعة فلسطين التقنية للأبحاث",
+    "year": 2024,
+    "abstract": "<jats:p>Dynamic systems for vehicles are commonly established based on physical rules that are simplified and are not accurately reflective of their dynamic characteristics under certain operating conditions, affecting their accuracy and safety. This paper presents an adaptive model predictive controller (AMPC) with an estimator that controls the yaw rate and lateral acceleration of a realistic gr"
+   },
+   {
+    "doi": "10.12785/ijcds/160166",
+    "title": "Machine Learning Based Smartphone Screen GestureRecognition Using Smartphone Embedded Accelerometer and Gyroscope",
+    "journal": "International Journal of Computing and Digital Systems",
+    "year": 2024,
+    "abstract": ""
+   },
+   {
+    "doi": "10.3390/s22072618",
+    "title": "Smartphone-Based Activity Recognition Using Multistream Movelets Combining Accelerometer and Gyroscope Data",
+    "journal": "Sensors",
+    "year": 2022,
+    "abstract": "<jats:p>Physical activity patterns can reveal information about one’s health status. Built-in sensors in a smartphone, in comparison to a patient’s self-report, can collect activity recognition data more objectively, unobtrusively, and continuously. A variety of data analysis approaches have been proposed in the literature. In this study, we applied the movelet method to classify the activities pe"
+   },
+   {
+    "doi": "10.3390/wevj13070109",
+    "title": "Fuzzy Yaw Rate and Sideslip Angle Direct Yaw Moment Control for Student Electric Racing Vehicle with Independent Motors",
+    "journal": "World Electric Vehicle Journal",
+    "year": 2022,
+    "abstract": "<jats:p>In this paper, a new concurrent yaw rate, sideslip angle, and longitudinal-velocity direct yaw moment control (DYC) strategy is proposed to improve the handling and stability of a rear-wheel drive student electric racing vehicle (EV) equipped with two independent motors. In order to control these three parameters concurrently, three control schemes are developed: three fuzzy controllers, t"
+   },
+   {
+    "doi": "10.20884/1.jutif.2021.2.2.75",
+    "title": "INDOOR LOCALIZATION USING ACCELEROMETER AND GYROSCOPE SMARTPHONE BASED",
+    "journal": "Jurnal Teknik Informatika (Jutif)",
+    "year": 2021,
+    "abstract": "<jats:p>Indoor localization is one of the more accurate technologies to be used to determine indoors or buildings. Pedestrian Dead Reckoning (PDR) is a method of determining the user's position by adding a method that occurs to a known initial position. The displacement that occurs is estimated with the help of an accelerometer sensor attached to the user as a step detector and to determine the di"
+   },
+   {
+    "doi": "10.3390/bios12100834",
+    "title": "Comparison between Chest-Worn Accelerometer and Gyroscope Performance for Heart Rate and Respiratory Rate Monitoring",
+    "journal": "Biosensors",
+    "year": 2022,
+    "abstract": "<jats:p>The demand for wearable devices to simultaneously monitor heart rate (HR) and respiratory rate (RR) values has grown due to the incidence increase in cardiovascular and respiratory diseases. The use of inertial measurement unit (IMU) sensors, embedding both accelerometers and gyroscopes, may ensure a non-intrusive and low-cost monitoring. While both accelerometers and gyroscopes have been "
+   },
+   {
+    "doi": "10.3390/s23177609",
+    "title": "Smartphone MEMS Accelerometer and Gyroscope Measurement Errors: Laboratory Testing and Analysis of the Effects on Positioning Performance",
+    "journal": "Sensors",
+    "year": 2023,
+    "abstract": "<jats:p>Embedding various sensors with powerful computing and storage capabilities in a small communication device, smartphones have become a prominent platform for navigation. With the increasing popularity of Apple CarPlay and Android Auto, smartphones are quickly replacing built-in automotive navigation solutions. On the other hand, smartphones are equipped with low-performance Micro Electro Me"
+   },
+   {
+    "doi": "10.1016/j.measurement.2025.116806",
+    "title": "Yaw angle determination of a mobile robot operating on an inclined plane using accelerometer and gyroscope",
+    "journal": "Measurement",
+    "year": 2025,
+    "abstract": ""
+   }
+  ]
+ },
+ {
+  "topic": 30,
+  "date_run": "2026-11-15",
+  "database": "Crossref API",
+  "query": "inertial sensor axis sign error handedness calibration vehicle turn detection",
+  "status": "OK",
+  "reason": "",
+  "top": [
+   {
+    "doi": "10.1109/mcs.2022.3209059",
+    "title": "Inertial Measurement Unit Error Modeling Tutorial: Inertial Navigation System State Estimation with Real-Time Sensor Calibration",
+    "journal": "IEEE Control Systems",
+    "year": 2022,
+    "abstract": ""
+   },
+   {
+    "doi": "10.1016/j.measurement.2024.114808",
+    "title": "Research on propagation mechanism for gyro installation error of dual-axis rotational inertial navigation system in UAV coordinated U-turn",
+    "journal": "Measurement",
+    "year": 2024,
+    "abstract": ""
+   },
+   {
+    "doi": "10.31436/iiumej.v27i1.3654",
+    "title": "Inertial Sensor Self-Calibration Module Using Attitude Heading And Reference System For Autonomous Underwater Vehicle Navigation",
+    "journal": "IIUM Engineering Journal",
+    "year": 2026,
+    "abstract": "<jats:p>This research addresses the complex task of enhancing navigation accuracy in Autonomous Underwater Vehicles (AUVs), a self-propelled robotic system used for ocean exploration, environmental monitoring, and underwater interventions. A core component of AUV navigation is an Inertial Measurement Unit (IMU), a sensor suite that tracks orientation and motion by measuring accelerations and angul"
+   },
+   {
+    "doi": "10.1088/1742-6596/2456/1/012005",
+    "title": "Multi-Source Error Calibration and Observability Analysis of Integrated Inertial Navigation System/Polarization Sensor Navigation System",
+    "journal": "Journal of Physics: Conference Series",
+    "year": 2023,
+    "abstract": "<jats:title>Abstract</jats:title>\n               <jats:p>Accurate polarization information acquisition is the key technique of the integrated inertial navigation system (INS)/polarization sensor (PS) navigation system. To solve the problem of poor performance of polarization sensors that real-time error calibration by using a rotary table, we propose a fast calibration method that polarization sen"
+   },
+   {
+    "doi": "10.3390/s24237525",
+    "title": "Online Calibration of Inertial Sensors Based on Error Backpropagation",
+    "journal": "Sensors",
+    "year": 2024,
+    "abstract": "<jats:p>Global satellite navigation systems (GNSSs) are the most-used technology for the localization of vehicles in the outdoor environment, but in the case of a densely built-up area or during passage through a tunnel, the satellite signal is not available or has poor quality. Inertial navigation systems (INSs) allow localization dead reckoning, but they have an integration error that grows over"
+   },
+   {
+    "doi": "10.3390/electronics12030613",
+    "title": "Data Glove with Bending Sensor and Inertial Sensor Based on Weighted DTW Fusion for Sign Language Recognition",
+    "journal": "Electronics",
+    "year": 2023,
+    "abstract": "<jats:p>There are numerous communication barriers between people with and without hearing impairments. Writing and sign language are the most common modes of communication. However, written communication takes a long time. Furthermore, because sign language is difficult to learn, few people understand it. It is difficult to communicate between hearing-impaired people and hearing people because of "
+   },
+   {
+    "doi": "10.3390/aerospace12010047",
+    "title": "Research on Inertial Isolation Rotation Modulation of Dual-Axis Inertial Navigation Based on Multi-Error Coupling Characteristics",
+    "journal": "Aerospace",
+    "year": 2025,
+    "abstract": "<jats:p>Currently, research on the rotational modulation of dual-axis inertial navigation for isolated carrier motion does not provide sufficient solutions for the compensation of the gyroscope scale factor error caused by the Earth’s rotation. Moreover, it is primarily applied to ships with low maneuverability and has not yet been implemented in the field of pure inertial guidance weapons. A dual"
+   },
+   {
+    "doi": "10.18494/sam4882",
+    "title": "Five-axis Machine Tool Backlash Error Detection System Using Photoelectric Sensor",
+    "journal": "Sensors and Materials",
+    "year": 2024,
+    "abstract": ""
+   }
+  ]
+ },
+ {
+  "topic": 31,
+  "date_run": "2026-11-15",
+  "database": "Crossref API",
+  "query": "automatic crash notification false dispatch cost response delay decision analysis",
+  "status": "OK",
+  "reason": "",
+  "top": [
+   {
+    "doi": "10.55041/ijsrem.racces022",
+    "title": "Automatic Crash Notification System with Ambulance and Police Dispatch Support",
+    "journal": "International Journal of Scientific Research in Engineering and Management",
+    "year": 2026,
+    "abstract": ""
+   },
+   {
+    "doi": "10.3389/fenrg.2024.1378320",
+    "title": "Delay and cost-balanced communication resource management for IoT-empowered distribution grid energy dispatch",
+    "journal": "Frontiers in Energy Research",
+    "year": 2024,
+    "abstract": "<jats:p>The combination of internet of things (IoT), 5G, and power line communication (PLC) provides real-time and low-cost data transmission services to meet the quality of service (QoS) requirements for distribution grid energy dispatch. However, the IoT-empowered communication resource management system faces challenges in optimizing delay and traffic cost for distribution grid energy dispatch."
+   },
+   {
+    "doi": "10.1007/s12239-022-0090-2",
+    "title": "Self-Tuning Occupant Injury Prediction Algorithm for Advanced Automatic Crash Notification System",
+    "journal": "International Journal of Automotive Technology",
+    "year": 2022,
+    "abstract": ""
+   },
+   {
+    "doi": "10.1049/itr2.12153",
+    "title": "Injury prediction algorithm for rear‐seat occupants in advanced automatic crash notification systems",
+    "journal": "IET Intelligent Transport Systems",
+    "year": 2021,
+    "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:p>An advanced automatic crash notification (AACN) system can predict the injuries of a vehicle's occupants when the vehicle is involved in a collision accident. The rear‐seat occupants are at significant risk in collision accidents owing to an inferior protection system and the absence of mandatory seat belt laws. However, only a few studie"
+   },
+   {
+    "doi": "10.1097/xcs.0000000000002105",
+    "title": "Invited Commentary: No Time to Waste: Adopt Advanced Automatic Crash Notification Now",
+    "journal": "Journal of the American College of Surgeons",
+    "year": 2026,
+    "abstract": ""
+   },
+   {
+    "doi": "10.33168/liss.2022.0318",
+    "title": "2-Phase Crash Detection and Notification System",
+    "journal": "Journal of Logistics, Informatics and Service Science",
+    "year": 2022,
+    "abstract": ""
+   },
+   {
+    "doi": "10.1177/09544070221078467",
+    "title": "Crash recognition algorithm of automatic crash notification system with adaptive discrimination threshold",
+    "journal": "Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering",
+    "year": 2022,
+    "abstract": "<jats:p>Efficiency and notification accuracy are two critical criteria for evaluating the performance of automatic crash notification (ACN) systems. The discrimination threshold (DT) is used to assess whether a collision accident occurs. Typically, the DT value is determined based on the maximal acceleration peak from multiple road tests. Because an overlarge DT value is unnecessary in most drivin"
+   },
+   {
+    "doi": "10.1287/deca.2025.0390",
+    "title": "Optimizing Jumper Notification Timing to Minimize Vaccine Waste and Requester Waiting Time",
+    "journal": "Decision Analysis",
+    "year": 2026,
+    "abstract": "<jats:p>Vaccination sites face the operational decision of determining the timing for notifying standby recipients (“jumpers”) to claim doses that would otherwise expire. Such timing decisions arise broadly in health-security operations involving perishable medical resources and responses to emerging health threats. This study formulates and analyzes a simulation-based model to evaluate notificati"
+   }
+  ]
+ },
+ {
+  "topic": 31,
+  "date_run": "2026-11-15",
+  "database": "Crossref API",
+  "query": "eCall false alarm emergency dispatch cost time",
+  "status": "OK",
+  "reason": "",
+  "top": [
+   {
+    "doi": "10.3390/cancers14225548",
+    "title": "Merkel Cell Polyomavirus (MCPyV) and Cancers: Emergency Bell or False Alarm?",
+    "journal": "Cancers",
+    "year": 2022,
+    "abstract": "<jats:p>Merkel cell polyomavirus (MCPyV), the sole member of Polyomavirus associated with oncogenesis in humans, is the major causative factor of Merkel cell carcinoma (MCC), a rare, neuroendocrine neoplasia of the skin. Many aspects of MCPyV biology and oncogenic mechanisms remain poorly understood. However, it has been established that oncogenic transformation is the outcome of the integration o"
+   },
+   {
+    "doi": "10.64388/irev9i3-1710850-9241",
+    "title": "An Automated Real Time Oil Leakage Detection without False Alarm",
+    "journal": "Iconic Research and Engineering Journals",
+    "year": 2025,
+    "abstract": ""
+   },
+   {
+    "doi": "10.5603/demj.a2022.0019",
+    "title": "Factors affecting false calls to prehospital Emergency medical services and analyzing The recorded false calls in the dispatch center",
+    "journal": "Disaster and Emergency Medicine Journal",
+    "year": 2022,
+    "abstract": ""
+   },
+   {
+    "doi": "10.1016/j.automatica.2025.112623",
+    "title": "Fixed-time safe distributed optimization for cost-coupled weighted economic dispatch over time-varying networks",
+    "journal": "Automatica",
+    "year": 2026,
+    "abstract": ""
+   },
+   {
+    "doi": "10.4467/12307483pfs.23.011.19427",
+    "title": "False opinion or false alarm? About the criminal liability of an expert for giving a false opinion",
+    "journal": "Problems of Forensic Sciences",
+    "year": 2024,
+    "abstract": "<jats:p>This article aims to address the significance of the problem regarding the issuance of false expert opinions in practice. This issue is of great importance and considerably consequential for the public opinion. An expert opinion that is unfavorable to a party often raises suspicions of bribery and manipulation. However, not every litigant’s dissatisfaction necessarily implies a criminal of"
+   },
+   {
+    "doi": "10.13169/prometheus.40.2.0108",
+    "title": "Bjørn Lomborg, False Alarm",
+    "journal": "Prometheus",
+    "year": 2025,
+    "abstract": ""
+   },
+   {
+    "doi": "10.3390/aerospace13111049",
+    "title": "Time-Window Mismatch in Reactive Windshear Alerting During Approach and a False-Alarm Suppression Algorithm Based on a Physical-Consequence Criterion",
+    "journal": "Aerospace",
+    "year": 2026,
+    "abstract": "<jats:p>Low-level windshear is among the most hazardous weather on approach, and the reactive alerting chain fixed by certification standards such as TSO-C117 is the last line of defense. This paper asks whether the fixed five-second decision window of the certified F-factor criterion leaves a systematic false-alarm space in compact-microburst encounters, and whether a criterion based on physical "
+   },
+   {
+    "doi": "10.1186/s12873-025-01361-2",
+    "title": "Comparison of dispatching after motor vehicle accidents – effects of the TPS-eCall system on dispatching time",
+    "journal": "BMC Emergency Medicine",
+    "year": 2025,
+    "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:sec>\n                    <jats:title>Background/Objectives</jats:title>\n                    <jats:p>Over the past 50 years, the concept of the golden hour of shock was established as one of the central tenets of emergency trauma medicine. A shorter duration of prehospital care correlates with a positive change in outcome in numerous studies"
+   }
+  ]
+ }
+]

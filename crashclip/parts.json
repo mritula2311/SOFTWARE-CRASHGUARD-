@@ -1,0 +1,304 @@
+[
+ {
+  "key": "mpu6050",
+  "name": "MPU-6050",
+  "url": "https://www.haoyuelectronics.com/Attachment/GY-521/mpu6050.pdf",
+  "opened": "2026-11-12",
+  "document": "InvenSense MPU-6000/MPU-6050 Product Specification, Rev 3.3, 2012-05-16 (a Rev 3.2 copy was also opened: https://alliance.seas.upenn.edu/~medesign/wiki/uploads/Guides/MPU6050_datasheet.pdf)",
+  "ranges_g": [
+   2,
+   4,
+   8,
+   16
+  ],
+  "mg_per_lsb": {
+   "2": 0.06103515625,
+   "4": 0.1220703125,
+   "8": 0.244140625,
+   "16": 0.48828125
+  },
+  "bits": "16",
+  "odrs_hz": [
+   100,
+   1000
+  ],
+  "odr_offered": "accelerometer sample rate 4 to 1000 Hz (programmable)",
+  "bandwidth": "low-pass filter programmable 5 to 260 Hz",
+  "bw_rule": 260.0,
+  "noise_text": "power spectral density 400 ug/rtHz at 10 Hz, +-2 g, ODR 1 kHz (the unit prefix is lost in the PDF text; read as micro-g)",
+  "noise_ug_rthz": 400.0,
+  "interface": "I2C (MPU-6050); SPI also on MPU-6000",
+  "study_ranges": [
+   2,
+   4,
+   8,
+   16
+  ],
+  "notes": "Bandwidth in the model is 260 Hz (filter off) at both rates; the part's sample rate is 1 kHz at most",
+  "extra": {}
+ },
+ {
+  "key": "adxl345",
+  "name": "ADXL345",
+  "url": "https://people.ece.ubc.ca/edc/7660.jan2018/ADXL345.pdf",
+  "opened": "2026-11-12",
+  "document": "Analog Devices ADXL345 Data Sheet, Rev. E (copy hosted by UBC ECE)",
+  "ranges_g": [
+   2,
+   4,
+   8,
+   16
+  ],
+  "mg_per_lsb": {
+   "2": 3.9,
+   "4": 3.9,
+   "8": 3.9,
+   "16": 3.9
+  },
+  "bits": "10 to 13 (full resolution, 3.9 mg/LSB at every range)",
+  "odrs_hz": [
+   100,
+   400,
+   1600,
+   3200
+  ],
+  "odr_offered": "0.1 to 3200 Hz",
+  "bandwidth": "bandwidth = ODR/2",
+  "bw_rule": 0.5,
+  "noise_text": "0.75 LSB rms (x, y) and 1.1 LSB rms (z) at ODR 100 Hz, all ranges in full resolution",
+  "noise_ug_rthz": 0.41365746699413025,
+  "interface": "SPI (3- or 4-wire), I2C",
+  "study_ranges": [
+   2,
+   4,
+   8,
+   16
+  ],
+  "notes": "Noise density derived from 0.75 LSB rms x 3.9 mg/LSB at bandwidth 50 Hz (x, y axes); the z value is higher and is not used",
+  "extra": {}
+ },
+ {
+  "key": "adxl375",
+  "name": "ADXL375",
+  "url": "not recorded in the 2026-11-11 session (local copy data/raw/refs/adxl375.pdf, opened 2026-11-11)",
+  "opened": "2026-11-11",
+  "document": "Analog Devices ADXL375 Data Sheet, Rev. B (distributor copy; the extracted text is garbled in the specification table, so only the values listed here were read)",
+  "ranges_g": [
+   200
+  ],
+  "mg_per_lsb": {
+   "200": 49.0
+  },
+  "bits": "not read (scale factor 49 mg/LSB as printed)",
+  "odrs_hz": [
+   100,
+   400,
+   1600,
+   3200
+  ],
+  "odr_offered": "up to 3200 Hz",
+  "bandwidth": "bandwidth is the -3 dB frequency and is half the output data rate (footnote 5)",
+  "bw_rule": 0.5,
+  "noise_text": "not read",
+  "noise_ug_rthz": null,
+  "interface": "SPI (3- or 4-wire), I2C",
+  "study_ranges": [
+   200
+  ],
+  "notes": "Source URL not recorded in the earlier session: the URL field is therefore NOT verified. Bits and noise were not read",
+  "extra": {}
+ },
+ {
+  "key": "h3lis331dl",
+  "name": "H3LIS331DL",
+  "url": "https://static.chipdip.ru/lib/447/DOC029447674.pdf",
+  "opened": "2026-11-12",
+  "document": "STMicroelectronics H3LIS331DL data sheet DS9012, Rev 4, October 2022 (distributor copy)",
+  "ranges_g": [
+   100,
+   200,
+   400
+  ],
+  "mg_per_lsb": {
+   "100": 49.0,
+   "200": 98.0,
+   "400": 195.0
+  },
+  "bits": "12-bit representation as printed (16-bit data output in the feature list)",
+  "odrs_hz": [
+   100,
+   400,
+   1000
+  ],
+  "odr_offered": "0.5 Hz to 1 kHz (50, 100, 400, 1000 Hz in normal mode)",
+  "bandwidth": "system bandwidth = ODR/2",
+  "bw_rule": 0.5,
+  "noise_text": "noise density 15 mg/rtHz as printed (FS bit 00); the unit is used as printed and is large for a MEMS part, so it is not cross-checked",
+  "noise_ug_rthz": 15000.0,
+  "interface": "I2C, SPI",
+  "study_ranges": [
+   100,
+   200,
+   400
+  ],
+  "notes": "Noise value used as printed; no other source was opened to check it",
+  "extra": {}
+ },
+ {
+  "key": "lis3dh",
+  "name": "LIS3DH",
+  "url": "https://cdn-shop.adafruit.com/datasheets/LIS3DH.pdf",
+  "opened": "2026-11-12",
+  "document": "STMicroelectronics LIS3DH data sheet, Doc ID 17530 Rev 1, May 2010 (copy hosted by Adafruit; the earliest revision, a later one may differ)",
+  "ranges_g": [
+   2,
+   4,
+   8,
+   16
+  ],
+  "mg_per_lsb": {
+   "2": 1.0,
+   "4": 2.0,
+   "8": 4.0,
+   "16": 12.0
+  },
+  "bits": "12 (left-justified in 16 bits; mg/digit as printed)",
+  "odrs_hz": [
+   100,
+   400,
+   1250,
+   5000
+  ],
+  "odr_offered": "1, 10, 25, 50, 100, 200, 400 Hz, 1.6 kHz (low power), 1.25 kHz normal or 5 kHz low power",
+  "bandwidth": "system bandwidth = ODR/2",
+  "bw_rule": 0.5,
+  "noise_text": "noise density 220 ug/rtHz at FS 2 g, normal mode, ODR 100 Hz",
+  "noise_ug_rthz": 220.0,
+  "interface": "I2C, SPI",
+  "study_ranges": [
+   2,
+   4,
+   8,
+   16
+  ],
+  "notes": "1.25 kHz is the normal-mode rate and 5 kHz the low-power rate; both are used as bandwidth ODR/2",
+  "extra": {}
+ },
+ {
+  "key": "kx134",
+  "name": "KX134-1211",
+  "url": "https://fscdn.rohm.com/kionix/en/datasheet/kx134-1211-e.pdf",
+  "opened": "2026-11-12",
+  "document": "Kionix KX134-1211 Specifications, Rev. 4.0, 24-Nov-2021",
+  "ranges_g": [
+   8,
+   16,
+   32,
+   64
+  ],
+  "mg_per_lsb": {
+   "8": 0.244140625,
+   "16": 0.48828125,
+   "32": 0.9765625,
+   "64": 1.953125
+  },
+  "bits": "16",
+  "odrs_hz": [
+   100,
+   400,
+   1600,
+   6400,
+   25600
+  ],
+  "odr_offered": "0.781 Hz to 25600 Hz",
+  "bandwidth": "output bandwidth ODR/9 or ODR/2",
+  "bw_rule": 0.5,
+  "noise_text": "noise 1.6 mg rms, density 300 ug/rtHz (ODR 50 Hz, GSEL 0)",
+  "noise_ug_rthz": 300.0,
+  "interface": "I2C, SPI",
+  "study_ranges": [
+   8,
+   16,
+   32,
+   64
+  ],
+  "notes": "ODR/2 (the wider of the two bandwidth settings) is used in the model",
+  "extra": {}
+ },
+ {
+  "key": "adxl372",
+  "name": "ADXL372",
+  "url": "https://datasheet.chipsmall.com/ADXL372BCCZ-RL/497167.pdf",
+  "opened": "2026-11-12",
+  "document": "Analog Devices ADXL372 Data Sheet, Rev. 0, 2017 (distributor copy)",
+  "ranges_g": [
+   200
+  ],
+  "mg_per_lsb": {
+   "200": 100.0
+  },
+  "bits": "12",
+  "odrs_hz": [
+   400,
+   800,
+   1600,
+   3200,
+   6400
+  ],
+  "odr_offered": "400 to 6400 Hz",
+  "bandwidth": "low-pass 200 Hz to ODR/2 (user selectable, 4-pole)",
+  "bw_rule": 0.5,
+  "noise_text": "3.5 LSB rms normal operation at 3200 Hz ODR, 1600 Hz bandwidth",
+  "noise_ug_rthz": 8.75,
+  "interface": "SPI, limited I2C",
+  "study_ranges": [
+   200
+  ],
+  "notes": "Bandwidth ODR/2 used in the model (the widest setting)",
+  "extra": {}
+ },
+ {
+  "key": "lsm6dsk320x",
+  "name": "LSM6DSK320X (high-g channel)",
+  "url": "https://components101.com/sites/default/files/2026-10/DS_lsm6dsk320x-compressed.pdf",
+  "opened": "2026-11-12",
+  "document": "STMicroelectronics LSM6DSK320X data sheet DS15060, Rev 1, July 2026 (distributor copy). The part named in the task, LSM6DSV32X, could not be opened (its ST datasheet URL timed out), so it is NOT in the table",
+  "ranges_g": [
+   32,
+   64,
+   128,
+   256,
+   320
+  ],
+  "mg_per_lsb": {
+   "32": 0.976,
+   "64": 1.952,
+   "128": 3.904,
+   "256": 7.808,
+   "320": 10.417
+  },
+  "bits": "16 (mg/LSB as printed)",
+  "odrs_hz": [
+   480,
+   960,
+   1920,
+   3840,
+   7680
+  ],
+  "odr_offered": "480 Hz to 7.68 kHz (high-g channel)",
+  "bandwidth": "not read for the high-g channel; ODR/2 is assumed in the model",
+  "bw_rule": 0.5,
+  "noise_text": "density 1000 ug/rtHz (high-g channel, high-performance mode, FS +-32 to +-320 g)",
+  "noise_ug_rthz": 1000.0,
+  "interface": "SPI, I2C, I3C",
+  "study_ranges": [
+   32,
+   64,
+   128,
+   256,
+   320
+  ],
+  "notes": "Dual-channel part: the low-g channel (+-2 to +-16 g, 0.061 to 0.488 mg/LSB) is used in the pair study. Bandwidth is an assumption",
+  "extra": {}
+ }
+]

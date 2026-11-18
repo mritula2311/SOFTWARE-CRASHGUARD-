@@ -1,0 +1,13 @@
+commit b788e6420e6bf3b766c3a7e79c56f257bc3251cb
+ref final2
+sha256 4c25b697b9635011d1f10f94c2010441ffce68ca6710dd5e2889299ef8681c72
+files 1747
+files in supplementary_full 45
+size 38935806
+files of the submit-v2 release absent now: 0
+files added since the submit-v2 release: 16
+required content missing: []
+excluded content present (raw data, variants): []
+note: release/*.zip files of earlier rounds are tracked in git at these tags (inherited from round 6); this archive is not tracked
+
+absent now (submit-v2 release minus this release):

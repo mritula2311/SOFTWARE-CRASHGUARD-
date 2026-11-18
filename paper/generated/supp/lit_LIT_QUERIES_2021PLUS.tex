@@ -1,0 +1,609 @@
+
+
+
+Run date 2026-11-14. Database: OpenAlex API (no key, no personal detail sent; the key request in the service notice was ignored). Filters: \texttt{from\_publication\_date:2021-01-01,primary\_location.source.type:journal}; field \texttt{title\_and\_abstract.search}; at most 5 boolean operators per query; 1 s between queries; results sorted by relevance (the service default for a search). The same queries can be rerun with \texttt{python -m crashguard.lit\_search run} (counts change as the index changes). Raw log: \texttt{results/tables/lit\_queries.json}.
+
+\textbf{Not run.} Scopus, Google Scholar and TRID are not available to this run. IEEE Xplore (Journals, 2021 to 2026): the search page returned HTTP 418 to a scripted request, so the Xplore query set is NOT\_RUN here; it was not bypassed. Crossref was used for metadata only (\texttt{results/tables/lit\_crossref.json}, 51 of 51 DOIs found). OpenAlex source type \texttt{journal} includes some SAE technical papers and low-tier outlets; those are marked in the notes.
+
+\subsection*{Topic 1. LoRa or LPWAN crash or accident alerting}
+
+{\scriptsize\raggedright
+\begin{longtable}{p{0.317\linewidth}p{0.317\linewidth}p{0.317\linewidth}}
+\toprule
+\# & Query & Count \\
+\midrule
+\endhead
+1 & \texttt{LoRa AND (crash OR accident) AND (alert OR notification)} & 32 \\
+2 & \texttt{LPWAN AND (accident OR crash) AND detection} & 3 \\
+\bottomrule
+\end{longtable}}
+
+Query 1, top 15 by relevance (year, journal, DOI):
+
+\begin{itemize}
+\item 2026, International Journal of Research Publication and Reviews, 10.55248/gengpi.07.0526.a1231: \texttt{Lora Network for V2V Communication with Autonomous Accident Detection and Predictive Location-Based Hazard Alerts}
+\item 2025, Journal on Electronic and Automation Engineering, 10.46632/jeae/4/2/1: \texttt{U-Bend Accident Prevention Through Lora Communication}
+\item 2026, Journal of Emerging Technologies and Innovative Research, 10.56975/jetir.v13i3.577692: \texttt{Embedded Smart Accident Prevention With LoRa Based Accident Detection and Emergency Response System}
+\item 2022, CVR Journal of Science \& Technology, no DOI: \texttt{Advanced Coal Mine Safety Monitoring and Auto Alert system using LoRa Technology}
+\item 2026, INTERANTIONAL JOURNAL OF SCIENTIFIC RESEARCH IN ENGINEERING AND MANAGEMENT, 10.55041/ijsrem64473: \texttt{A Survey on LoRa-Based Multi-Hop Communication Systems for Vehicular Accident Detection and Emergency Response}
+\item 2026, International Journal of Technology \& Emerging Research, 10.64823/ijter.2610001: \texttt{LoRa-Based Live Tracking and SOS Alert System for Emergency Location Monitoring in Remote Areas}
+\item 2025, International Journal of Advanced Computer Science and Applications, 10.14569/ijacsa.2025.0160671: \texttt{Real Time Accident Detection and Emergency Response Using Drones, Machine Learning and LoRa Communication}
+\item 2023, International Journal of Communication Systems, 10.1002/dac.5692: \texttt{Real?time Internet of LoRa Things (IoLT)?based accident detection and prevention system in vehicular networks towards smart city}
+\item 2026, International Journal of Advanced Research in Science Communication and Technology, 10.48175/ijarsct-31448: \texttt{A Smart Vehicle Safety System using LoRa and CAN Integration}
+\item 2024, i-manager's Journal on Future Engineering and Technology, 10.26634/jfet.19.3.20595: \texttt{Intelligent safety life jacket using LoRa technology}
+\item 2026, IEEE Sensors Letters, 10.1109/lsens.2026.3667266: \texttt{A LoRa-Based V2I System for Collision Warning At Blind-Turn}
+\item 2025, International Journal of Advanced Research in Science Communication and Technology, 10.48175/ijarsct-25123: \texttt{Smart Wearable Suit for Coal Miners using LORA Module}
+\item 2026, International Scientific Journal of Engineering and Management, 10.55041/isjem06165: \texttt{Remote Monitoring of Hazardous Materials in Mining Sites using Lora Network}
+\item 2026, INTERANTIONAL JOURNAL OF SCIENTIFIC RESEARCH IN ENGINEERING AND MANAGEMENT, 10.55041/ijsrem61417: \texttt{Vehicle to vehicle communication system using lora for intelligent road safety}
+\item 2025, Scientific Reports, 10.1038/s41598-025-13465-7: \texttt{Developing real-time IoT-based public safety alert and emergency response systems}
+\end{itemize}
+
+Query 2, top 3 by relevance (year, journal, DOI):
+
+\begin{itemize}
+\item 2023, International Journal of Communication Systems, 10.1002/dac.5692: \texttt{Real?time Internet of LoRa Things (IoLT)?based accident detection and prevention system in vehicular networks towards smart city}
+\item 2021, Sensors, 10.3390/s21020338: \texttt{LoRa-Based Traffic Flow Detection for Smart-Road}
+\item 2024, Technologies, 10.3390/technologies12090166: \texttt{Wearable Fall Detectors Based on Low Power Transmission Systems: A Systematic Review}
+\end{itemize}
+
+\subsection*{Topic 2. Severity-aware or deadline-aware retransmission and scheduling for critical LoRa traffic}
+
+{\scriptsize\raggedright
+\begin{longtable}{p{0.317\linewidth}p{0.317\linewidth}p{0.317\linewidth}}
+\toprule
+\# & Query & Count \\
+\midrule
+\endhead
+1 & \texttt{LoRa AND retransmission AND (emergency OR critical)} & 10 \\
+2 & \texttt{LoRaWAN AND (deadline OR latency) AND (confirmed OR acknowledgment)} & 12 \\
+3 & \texttt{LoRaWAN AND "adaptive data rate" AND latency} & 17 \\
+\bottomrule
+\end{longtable}}
+
+Query 1, top 10 by relevance (year, journal, DOI):
+
+\begin{itemize}
+\item 2021, IEEE Communications Letters, 10.1109/lcomm.2021.3113134: \texttt{Reliability and Energy Consumption of LoRa With Bidirectional Traffic}
+\item 2024, Scientific Reports, 10.1038/s41598-024-59058-8: \texttt{A novel single-channel edge computing LoRa gateway for real-time confirmed messaging}
+\item 2025, Electronics, 10.3390/electronics14244977: \texttt{Secure LoRa-Based Transmission System: An IoT Solution for Smart Homes and Industries}
+\item 2025, Sensors, 10.3390/s25061931: \texttt{Adaptive Jamming Mitigation for Clustered Energy-Efficient LoRa-BLE Hybrid Wireless Sensor Networks}
+\item 2026, Peer-to-Peer Networking and Applications, 10.1007/s12083-026-02251-5: \texttt{Hybrid BLE--LoRa architectures for energy-efficient and resilient wireless sensor networks: Experimental validation and adaptive clustering strategies}
+\item 2023, IEEE Access, 10.1109/access.2023.3234188: \texttt{Delay Optimization in LoRaWAN by Employing Adaptive Scheduling Algorithm With Unsupervised Learning}
+\item 2021, Sustainability, 10.3390/su131810226: \texttt{Zigbee and Long-Range Architecture Based Monitoring System for Oil Pipeline Monitoring with the Internet of Things}
+\item 2025, Eastern-European Journal of Enterprise Technologies, 10.15587/1729-4061.2025.346938: \texttt{Development of an intelligent control and energy management system for stratospheric telecommunication airships}
+\item 2023, Computer Communications, 10.1016/j.comcom.2023.12.013: \texttt{Downlink Spreading Factor selection in LoRaWAN}
+\item 2026, Frontiers in Artificial Intelligence, 10.3389/frai.2026.1819135: \texttt{Correction: LSML-SF: a lightweight stacked ML approach for spreading factor allocation in mobile IoT LoRaWAN networks}
+\end{itemize}
+
+Query 2, top 12 by relevance (year, journal, DOI):
+
+\begin{itemize}
+\item 2026, Journal of Engineering Research, 10.1016/j.jer.2026.09.065: \texttt{TinyML-enabled LoRaWAN acoustic monitoring for illegal logging detection}
+\item 2025, Journal of Network and Computer Applications, 10.1016/j.jnca.2025.104268: \texttt{Seamless remote roaming activation in LoRaWAN via an API-driven gateway bridge service}
+\item 2026, TechMecha RoboSphere A Global Journal on Intelligent Automation Mechatronics Robotics Engineering Management and Sustainable Innovation, 10.62718/vmca.tech-robo.1.1.sc-0126-002: \texttt{Minimalistic LoRaWAN Communication: Solar Cell Configuration with Lithium Battery Characterization at Low Solar Irradiance}
+\item 2026, Frontiers in Artificial Intelligence, 10.3389/frai.2026.1819135: \texttt{Correction: LSML-SF: a lightweight stacked ML approach for spreading factor allocation in mobile IoT LoRaWAN networks}
+\item 2026, International Journal of Computing Programming and Database Management, 10.33545/27076636.2026.v7.i2a.163: \texttt{AI-assisted predictive modeling for latency reduction in next-generation IoT communication systems}
+\item 2025, Scientific Reports, 10.1038/s41598-025-30150-x: \texttt{Edge-AI integrated secure wireless IoT architecture for real time healthcare monitoring and federated anomaly detection}
+\item 2025, Frontiers in Communications and Networks, 10.3389/frcmn.2025.1672617: \texttt{Modular middleware for IoT: scalability, interoperability and energy efficiency in smart campus}
+\item 2025, Bulletin of V N Karazin Kharkiv National University series ?Mathematical modeling Information technology Automated control systems?, 10.26565/2304-6201-2025-68-07: \texttt{Method of power supply optimization for iot climate monitoring system based on adaptive algorithms}
+\item 2021, Sensors and Materials, 10.18494/sam.2021.3288: \texttt{Smart Rural E-Bus System Using Global Radio (GloRa)}
+\item 2025, Herald of Khmelnytskyi National University Technical sciences, 10.31891/2307-5732-2025-355-58: \texttt{???????? ?????????? ?????????? ?????????? ? ??????? ?????-????????}
+\item 2025, International Journal of Electronic Devices and Networking, 10.22271/27084477.2025.v6.i2a.85: \texttt{Design and implementation of ultra-low power Internet of Things (IoT) sensor nodes for smart cities}
+\item 2025, Arac?., 10.56238/arev7n3-270: \texttt{SMART METER DATA COMPRESSION: A SOLUTION FOR REDUCING AND OPTIMISING ENERGY METER RESOURCES IN NBIOT NETWORKS}
+\end{itemize}
+
+Query 3, top 15 by relevance (year, journal, DOI):
+
+\begin{itemize}
+\item 2026, IEEE Internet of Things Journal, 10.1109/jiot.2026.3659938: \texttt{Adaptive Data Rate Optimization in Mobile and Dense LoRaWAN IoT Environments}
+\item 2026, FUDMA Journal of Sciences, 10.33003/fjs-2026-1016-5713: \texttt{Reinforcement Learning-Based Adaptive Data Rate Control in Mobile LoRaWAN with Imperfect CSI}
+\item 2023, International Journal of Sensors Wireless Communications and Control, 10.2174/0122103279272388231026062241: \texttt{Multi-objective Stochastic Gradient Based ADR Mechanism for Throughput and Latency Optimization in LoRaWAN}
+\item 2021, Journal of ICT Standardization, 10.13052/jicts2245-800x.911: \texttt{LoRaWAN Link Layer}
+\item 2022, Electronics, 10.3390/electronics11010164: \texttt{A Survey on LoRaWAN Technology: Recent Trends, Opportunities, Simulation Tools and Future Directions}
+\item 2024, Mathematics, 10.3390/math12213371: \texttt{An Adaptive Data Rate Algorithm for Power-Constrained End Devices in Long Range Networks}
+\item 2025, Indonesian Journal of Electrical Engineering and Computer Science, 10.11591/ijeecs.v40.i3.pp1401-1416: \texttt{Quality of services LoRaWAN satellite communication}
+\item 2022, ITEGAM- Journal of Engineering and Technology for Industrial Applications (ITEGAM-JETIA), 10.5935/jetia.v8i34.798: \texttt{Heterogeneous LoRaWan deployment for application dependent IOT networks}
+\item 2025, Problems of Informatization and Management, 10.18372/2073-4751.84.20893: \texttt{A method to determine the criticality of gateways in a LoRaWAN network}
+\item 2026, INTERANTIONAL JOURNAL OF SCIENTIFIC RESEARCH IN ENGINEERING AND MANAGEMENT, 10.55041/ijsrem56732: \texttt{Comparative Study and Implementation of Efficient Bandwidth Utilization Technique for LoRaWAN}
+\item 2023, Sensors, 10.3390/s23052660: \texttt{Priority-Based Resource Allocation Optimization for Multi-Service LoRaWAN Harmonization in Compliance with IEEE 2668}
+\item 2026, Wireless Personal Communications, 10.1007/s11277-026-12024-1: \texttt{Priority-Driven Mobility-Aware Dynamic LoRaWAN Model for Enhanced IoT Connectivity and Energy Efficiency}
+\item 2026, IEEE Access, 10.1109/access.2026.3681393: \texttt{Joint Optimization of Gateway Placement, Resource Configuration, and Uplink Scheduling for LoRaWAN Bridge Health Monitoring}
+\item 2026, Jordan Journal of Electrical Engineering, 10.5455/jjee.204-1758157202: \texttt{A Review on Long Range Wide Area Network (LoRaWAN) for Internet of Things (IoT)-Based Smart Home Applications}
+\item 2026, Engineering Technology \& Applied Science Research, 10.48084/etasr.14958: \texttt{A Hybrid Quantum-Inspired Deep Reinforcement Learning Framework for Adaptive Scheduling and Energy-Efficient LoRaWAN in Smart IoT Networks}
+\end{itemize}
+
+\subsection*{Topic 3. Two-stage, provisional or early crash notification; eCall and next-generation eCall}
+
+{\scriptsize\raggedright
+\begin{longtable}{p{0.317\linewidth}p{0.317\linewidth}p{0.317\linewidth}}
+\toprule
+\# & Query & Count \\
+\midrule
+\endhead
+1 & \texttt{(eCall OR "automatic crash notification") AND severity} & 7 \\
+2 & \texttt{"next generation eCall" OR "minimum set of data"} & 39 \\
+3 & \texttt{crash AND notification AND (provisional OR "two-stage" OR early)} & 14 \\
+\bottomrule
+\end{longtable}}
+
+Query 1, top 7 by relevance (year, journal, DOI):
+
+\begin{itemize}
+\item 2022, Academic Pediatrics, 10.1016/j.acap.2022.02.016: \texttt{Advanced Automatic Crash Notification Algorithm for Children}
+\item 2021, International Journal of Vehicle Structures and Systems, 10.4273/ijvss.13.3.10: \texttt{Prediction of Occupant Injuries for Improved eCall Efficiency}
+\item 2022, IEEE Intelligent Transportation Systems Magazine, 10.1109/mits.2022.3155178: \texttt{Expected Effect of Adopting the eCall System on Reducing Traffic-Related Deaths and Social Costs}
+\item 2026, Annals of Faculty of Economics, 10.47535/1991auoes35(1)023: \texttt{A Cost--Benefit Analysis of NG-eCall Deployment for Cyclist Safety in the EU-27}
+\item 2026, Transportation Research Interdisciplinary Perspectives, 10.1016/j.trip.2026.102109: \texttt{Predicting specific injury patterns from crash data: a GIDAS-based and manufacturer-independent logistic regression approach for next generation eCall}
+\item 2022, SAE technical papers on CD-ROM/SAE technical paper series, 10.4271/2022-28-0399: \texttt{Motorcycle Crash Severity Estimation for Effective Emergency Response}
+\item 2022, Transportation Research Interdisciplinary Perspectives, 10.1016/j.trip.2022.100603: \texttt{Feasibility study for the estimation of a motorcycle helmet Centre of Gravity accelerations with 6 Degrees of Freedom (6DOF) system}
+\end{itemize}
+
+Query 2, top 15 by relevance (year, journal, DOI):
+
+\begin{itemize}
+\item 2026, Transportation Research Interdisciplinary Perspectives, 10.1016/j.trip.2026.102109: \texttt{Predicting specific injury patterns from crash data: a GIDAS-based and manufacturer-independent logistic regression approach for next generation eCall}
+\item 2026, Transportation research procedia, 10.1016/j.trpro.2025.12.032: \texttt{Concept of eCall for Transportation of Dangerous Goods}
+\item 2023, Scientific Data, 10.1038/s41597-023-02476-6: \texttt{A decade of urban fires: Portuguese events between 2013 and 2022}
+\item 2024, Energy Conversion and Management X, 10.1016/j.ecmx.2024.100849: \texttt{Online stability assessment for isolated microgrid via LASSO based neural network algorithm}
+\item 2023, Agriculture, 10.3390/agriculture13071380: \texttt{Soil Quality Assessment in Response to Water Erosion and Mining Activity}
+\item 2022, International Journal for Population Data Science, 10.23889/ijpds.v7i1.1732: \texttt{Development and implementation of a national online application system for cross-jurisdictional linked data}
+\item 2023, European Journal of Pharmaceutics and Biopharmaceutics, 10.1016/j.ejpb.2023.04.010: \texttt{A review of paediatric injectable drug delivery to inform the study of product acceptability -- An introduction}
+\item 2025, SMTA International, 10.37665/smisqxf42396: \texttt{Board Design Factors for Vibration Durability Testing of Solder Interconnects}
+\item 2023, BMC Family Practice, 10.1186/s12875-023-02076-8: \texttt{Identifying and validating the educational needs to develop a Celiac Self-Care System}
+\item 2021, Acta bio-medica dell'Ateneo parmense/Acta biomedica, 10.23750/abm.v92i4.9651: \texttt{Determining chronic pain data elements as a first step towards improving quality of care and research in chronic pain.}
+\item 2024, Applied Sciences, 10.3390/app14072858: \texttt{Corn Cropping Systems in Agricultural Soils from the Bajio Region of Guanajuato: Soil Quality Indexes (SQIs)}
+\item 2023, Frontiers in Dentistry, 10.18502/fid.v20i22.13049: \texttt{Development of a Minimum Data Set for Dental Implants Registry}
+\item 2025, BioNanoScience, 10.1007/s12668-024-01785-3: \texttt{Investigation of Dosimetric Properties for MAGAT Polymer Gel Dosimeter Embedded with Methylene Blue Dye and Zinc Oxide Nanoparticles Using 6 MV Photon Beam}
+\item 2024, Nutrici\'on Hospitalaria, 10.20960/nh.04702: \texttt{Consensus on criteria and minimum data set for the referral of candidate patients for home enteral nutrition teleconsultation: TELENUT project}
+\item 2025, FUDMA Journal of Agriculture and Agricultural Technology, 10.33003/jaat.2025.1103.04: \texttt{THE EFFECT OF LAND USAGE AND DEPTH ON SOIL QUALITY IN NORTHERN NIGERIA'S SEMI-ARID REGION}
+\end{itemize}
+
+Query 3, top 14 by relevance (year, journal, DOI):
+
+\begin{itemize}
+\item 2023, Journal of Transportation Safety \& Security, 10.1080/19439962.2023.2276195: \texttt{Enhancing bicyclist survival time in fatal crashes: Investigating the impact of faster crash notification time through explainable machine learning}
+\item 2023, International Journal of Epidemiology, 10.1093/ije/dyad125: \texttt{Associations of maternal motor vehicle crashes during pregnancy with offspring's neonatal birth outcomes}
+\item 2024, Journal of Safety Research, 10.1016/j.jsr.2024.09.015: \texttt{A vehicle occupant injury prediction algorithm based on road crash and emergency medical data}
+\item 2026, Injury, 10.1016/j.injury.2026.113300: \texttt{Emergency medical services response times to motor vehicle crashes increased in the USA over the period 1987--2020}
+\item 2024, ???????????????????????????????????????????, no DOI: \texttt{??????????????????????????????? ???????????????????????????????????????? ??????????? ????????????????? ?????? 29 ?????? 2562}
+\item 2024, IEEE Transactions on Intelligent Transportation Systems, 10.1109/tits.2024.3491994: \texttt{Multi-Factor Roadside Unit Deployment Optimization Considering Traffic Safety Risks}
+\item 2025, INTERANTIONAL JOURNAL OF SCIENTIFIC RESEARCH IN ENGINEERING AND MANAGEMENT, 10.55041/ijsrem45210: \texttt{Survey on: Cab Management System}
+\item 2026, Information Technology Education Journal, 10.59562/intec.v5i2.267: \texttt{IoT-Based Road Blackspot Detection via GPS and Web Integration: Design, EAN-Based Risk Classification, and Field Evaluation}
+\item 2026, International Journal of Creative and Open Research in Engineering and Management, 10.55041/ijcope.v2i5.234: \texttt{Drowsiness Detection System in Real Time Based on Behavioral Characteristics of Driver Using Machine Learning Approach}
+\item 2024, Cochrane Database of Systematic Reviews, 10.1002/14651858.cd011218.pub2: \texttt{Education, incentive, and engineering-based interventions to promote the use of seat belts}
+\item 2023, SLEEP Advances, 10.1093/sleepadvances/zpad021: \texttt{Fifty-five years in sleep research: contributions, experiences, and progress}
+\item 2025, Journal of Marine Medical Society, 10.4103/jmms.jmms\_98\_25: \texttt{On-site Trauma Care in India: Challenges, Progress, and the Road Ahead}
+\item 2025, Emergency Medicine News, 10.1097/01.eem.0000000000000152: \texttt{How AI Could Transform the Intersection of EM and EMS}
+\item 2023, The Journal of American Culture, 10.1111/jacc.13482: \texttt{Muppets take Windows 95: The queer failure of Muppets Inside: CD?ROM}
+\end{itemize}
+
+\subsection*{Topic 4. Authenticated alert and ACK protocols for LoRa or LoRaWAN; replay protection; per-device keys}
+
+{\scriptsize\raggedright
+\begin{longtable}{p{0.317\linewidth}p{0.317\linewidth}p{0.317\linewidth}}
+\toprule
+\# & Query & Count \\
+\midrule
+\endhead
+1 & \texttt{LoRaWAN AND (replay OR counter) AND (authentication OR acknowledgment)} & 20 \\
+2 & \texttt{LoRa AND "key derivation" AND device} & 1 \\
+\bottomrule
+\end{longtable}}
+
+Query 1, top 15 by relevance (year, journal, DOI):
+
+\begin{itemize}
+\item 2025, IEEE Internet of Things Journal, 10.1109/jiot.2025.3593886: \texttt{Privacy-Preserving Lightweight LoRaWAN Authentication Protocol for IoT Applications}
+\item 2024, IEEE Sensors Journal, 10.1109/jsen.2024.3431432: \texttt{A Lightweight Authentication Scheme for LoRaWAN Nodes Represented as On-Chain Nonfungible Tokens}
+\item 2021, Journal of ICT Standardization, 10.13052/jicts2245-800x.915: \texttt{LoRaWAN Security}
+\item 2026, IEEE Access, 10.1109/access.2026.3660731: \texttt{Hybrid Machine Learning Anomaly Detection and Lightweight Zero Trust Authentication for LoRaWAN Networks}
+\item 2026, Discover Internet of Things, 10.1007/s43926-026-00515-3: \texttt{Deep reinforcement learning-optimized adaptive authenticated encryption and dynamic transmission control for secure LoRaWAN IoT communication}
+\item 2024, Journal of Electrical Technology UMY, 10.18196/jet.v7i2.22360: \texttt{The Design of Security Framework for LoRaWAN FUOTA}
+\item 2022, IEEE Access, 10.1109/access.2022.3200397: \texttt{A Novel Session Key Update Scheme for LoRaWAN}
+\item 2021, Sensors, 10.3390/s21175838: \texttt{A Key Management Protocol Based on the Hash Chain Key Generation for Securing LoRaWAN Networks}
+\item 2024, SN Computer Science, 10.1007/s42979-024-02707-6: \texttt{A Survey on Secure Data Transfer in the Development of Internet of Things (IoT) Applications Using LoRaWAN Technology}
+\item 2022, Computers, materials \& continua/Computers, materials \& continua (Print), 10.32604/cmc.2022.026557: \texttt{Two-Stage High-Efficiency Encryption Key Update Scheme for LoRaWAN Based IoT Environment}
+\item 2026, SCCTS Journal of Embedded Systems Design and Applications, 10.31838/esa/03.01.07: \texttt{Lightweight Authentication Protocols for Secure Embedded Communication in LPWAN}
+\item 2026, Sensors, 10.3390/s26196276: \texttt{Securing AI-Driven Systems for Environmental Sustainability in IoT Applications: A Lightweight Message-Authentication Scheme Against Telemetry Poisoning}
+\item 2026, IEEE Internet of Things Journal, 10.1109/jiot.2026.3713221: \texttt{Energy Depletion Attack for LoRa-Based Wireless Sensor Network}
+\item 2022, Sensors, 10.3390/s22135065: \texttt{LPWAN Key Exchange: A Centralised Lightweight Approach}
+\item 2026, IEEE Internet of Things Journal, 10.1109/jiot.2026.3663551: \texttt{A Protocol-Agnostic Backscatter-Based Security Layer for Ultralow-Power SWIPT IoT Networks}
+\end{itemize}
+
+Query 2, top 1 by relevance (year, journal, DOI):
+
+\begin{itemize}
+\item 2026, Black Sea Journal of Engineering and Science, 10.34248/bsengineering.1894126: \texttt{Beyond the Gateway: A Secure P2MP Lora-Based Architecture for Rural Health via Iterative Key Derivation}
+\end{itemize}
+
+\subsection*{Topic 5. Formal verification of LoRa or LoRaWAN protocols, including timing}
+
+{\scriptsize\raggedright
+\begin{longtable}{p{0.317\linewidth}p{0.317\linewidth}p{0.317\linewidth}}
+\toprule
+\# & Query & Count \\
+\midrule
+\endhead
+1 & \texttt{(LoRa OR LoRaWAN) AND (Tamarin OR ProVerif OR UPPAAL)} & 5 \\
+2 & \texttt{LoRaWAN AND ("formal verification" OR "model checking")} & 1 \\
+3 & \texttt{LoRaWAN AND (AVISPA OR "timed automata")} & 2 \\
+\bottomrule
+\end{longtable}}
+
+Query 1, top 5 by relevance (year, journal, DOI):
+
+\begin{itemize}
+\item 2021, IEEE Transactions on Industrial Informatics, 10.1109/tii.2021.3075440: \texttt{A Secure and LoRaWAN Compatible User Authentication Protocol for Critical Applications in the IoT Environment}
+\item 2025, International Journal of Sensor Networks, 10.1504/ijsnet.2025.149892: \texttt{Security analysis and improvement of key exchange protocol in LoRaWAN network}
+\item 2023, IETE Journal of Research, 10.1080/03772063.2023.2225465: \texttt{MAKA: Multi-Factor Authentication and Key Agreement Scheme for LoRa-Based Smart Grid Communication Services}
+\item 2023, Symmetry, 10.3390/sym15101886: \texttt{Secure Registration Protocol for the Internet of Drones Using Blockchain and Physical Unclonable Function Technology}
+\item 2026, ??????? ??????? ??????????, 10.30748/soi.2026.185.18: \texttt{???????????? ?????? ?????? ??? ????????? ?????????? ??????? ????????? ????????? ????? ? ????????? ???????????? ???????}
+\end{itemize}
+
+Query 2, top 1 by relevance (year, journal, DOI):
+
+\begin{itemize}
+\item 2025, IEEE Internet of Things Journal, 10.1109/jiot.2025.3593886: \texttt{Privacy-Preserving Lightweight LoRaWAN Authentication Protocol for IoT Applications}
+\end{itemize}
+
+Query 3, top 2 by relevance (year, journal, DOI):
+
+\begin{itemize}
+\item 2025, IEEE Internet of Things Journal, 10.1109/jiot.2025.3593886: \texttt{Privacy-Preserving Lightweight LoRaWAN Authentication Protocol for IoT Applications}
+\item 2024, Performance Evaluation, 10.1016/j.peva.2024.102446: \texttt{Probabilistic performance evaluation of the class-A device in LoRaWAN protocol on the MAC layer}
+\end{itemize}
+
+\subsection*{Topic 6. Overhearing, cooperative suppression or aggregated ACKs in LPWAN}
+
+{\scriptsize\raggedright
+\begin{longtable}{p{0.317\linewidth}p{0.317\linewidth}p{0.317\linewidth}}
+\toprule
+\# & Query & Count \\
+\midrule
+\endhead
+1 & \texttt{LoRa AND (overhearing OR cooperative) AND acknowledgment} & 0 \\
+2 & \texttt{LoRaWAN AND ("aggregated acknowledgment" OR "group acknowledgment")} & 2 \\
+\bottomrule
+\end{longtable}}
+
+Query 1, top 0 by relevance (year, journal, DOI):
+
+
+Query 2, top 2 by relevance (year, journal, DOI):
+
+\begin{itemize}
+\item 2021, Sensors, 10.3390/s21041444: \texttt{DG-LoRa: Deterministic Group Acknowledgment Transmissions in LoRa Networks for Industrial IoT Applications}
+\item 2024, FUOYE Journal of Engineering and Technology, 10.4314/fuoyejet.v9i2.9: \texttt{Integrating Fairness in Current Consumption of End Devices in Time-Slotted LoRa-based Wireless Sensor Network}
+\end{itemize}
+
+\subsection*{Topic 7. Trace-driven or measurement-based evaluation of LoRaWAN MAC policies; LoED and other datasets}
+
+{\scriptsize\raggedright
+\begin{longtable}{p{0.317\linewidth}p{0.317\linewidth}p{0.317\linewidth}}
+\toprule
+\# & Query & Count \\
+\midrule
+\endhead
+1 & \texttt{LoRaWAN AND (trace-driven OR "real-world traces" OR "measurement dataset")} & 5 \\
+2 & \texttt{"LoRaWAN at the Edge" OR LoED} & 11 \\
+3 & \texttt{LoRaWAN AND dataset AND ("frame counter" OR "packet loss")} & 6 \\
+\bottomrule
+\end{longtable}}
+
+Query 1, top 5 by relevance (year, journal, DOI):
+
+\begin{itemize}
+\item 2025, International Journal of Advances in Soft Computing and its Applications, 10.15849/ijasca.250730.13: \texttt{Blockchain-Enabled Medical Waste Management System for Enhanced Traceability, Safety and Environmental Protection}
+\item 2026, Telecommunication Systems, 10.1007/s11235-026-01429-9: \texttt{Data-driven single gateway location estimation using improved channel model and LSTM}
+\item 2026, Revista Ciencia Innovadora, 10.64422/rci.v4n2.2026.196: \texttt{Precision agriculture in Ecuador: foundations based on a systematic review, trends based on a bibliometric analysis, and a proposed functional framework}
+\item 2025, Environmental management issues, 10.25726/f4396-3494-2129-r: \texttt{?????????? ??????? ??? ???????? ?????????????? ???????? ? ????? ???????? ?? ?????? ?????????????? ???????? ? ???????????????? ????????}
+\item 2026, Advances in Environmental Protection, 10.12677/aep.2026.169151: \texttt{Research Progress and Prospects of Network Engineering Technologies Empowering Low-Carbon Management in High-Speed Railway Construction}
+\end{itemize}
+
+Query 2, top 11 by relevance (year, journal, DOI):
+
+\begin{itemize}
+\item 2022, International Journal of Engineering Trends and Technology, 10.14445/22315381/ijett-v70i5p211: \texttt{LoED: LoRa and Edge Computing based System Architecture for Sustainable Forest Monitoring}
+\item 2026, Journal of Telecommunications and Information Technology, 10.26636/jtit.2026.4.2789: \texttt{Gateway-level Early Warning of LoRaWAN Link Degradation Using LoED Measurements}
+\item 2023, Journal of Agricultural and Food Chemistry, 10.1021/acs.jafc.3c07239: \texttt{Exploring the Transmembrane Behaviors of Dietary Flavonoids under Intestinal Digestive Products of Different Lipids: Insights into the Structure--Activity Relationship In Vitro}
+\item 2024, Journal of Music and Performing Arts Khon Kaen University, no DOI: \texttt{???????????????????????????????????? : ????????????????????????? ????????? ???????????????????? ?????????}
+\item 2026, ACS Agricultural Science \& Technology, 10.1021/acsagscitech.5c01175: \texttt{Blowing in the Wind: Can a Field Drift Bioassay Be Replicated in a Wind Tunnel Using Atrazine as a Case Study?}
+\item 2022, Mutation Research/Genetic Toxicology and Environmental Mutagenesis, 10.1016/j.mrgentox.2022.503503: \texttt{A comparison of the lowest effective concentration in culture media for detection of chromosomal damage in vitro and in blood or plasma for detection of micronuclei in vivo}
+\item 2021, Journal of Reliability and Statistical Studies, 10.13052/jrss0974-8024.14215: \texttt{Reliability Test Plan Based on Logistic-Exponential Distribution and Its Application}
+\item 2026, Matapena., 10.36815/matapena.v9i1.4776: \texttt{FROM HEALING TO FLEXING: A SEMANTIC STUDY ON POPULAR GENERATION Z TERMS ON SOCIAL MEDIA}
+\item 2022, Computer Communications, 10.1016/j.comcom.2022.02.017: \texttt{Discovery privacy threats via device de-anonymization in LoRaWAN}
+\item 2026, Ad Hoc Networks, 10.1016/j.adhoc.2026.104428: \texttt{Stability-constrained prequential link forecasting with evidence-gated residual proposals}
+\item 2023, Aquatic Toxicology, 10.1016/j.aquatox.2023.106726: \texttt{Soil pH influences the toxicity of Basamid? eluates to non-target species of primary consumers}
+\end{itemize}
+
+Query 3, top 6 by relevance (year, journal, DOI):
+
+\begin{itemize}
+\item 2026, IEEE Access, 10.1109/access.2026.3746655: \texttt{A Signal-Aware Framework for Data Quality Assessment and Missing Data Mitigation in LoRaWAN Environmental IoT Networks}
+\item 2026, Scientific Reports, 10.1038/s41598-026-44274-1: \texttt{HEAL: health-enhanced adaptive LoRaWAN for AI-based real-time soldier monitoring and status prediction}
+\item 2026, Frontiers in Artificial Intelligence, 10.3389/frai.2026.1819135: \texttt{Correction: LSML-SF: a lightweight stacked ML approach for spreading factor allocation in mobile IoT LoRaWAN networks}
+\item 2023, IEEE Transactions on Industrial Informatics, 10.1109/tii.2023.3248074: \texttt{AI-ERA: Artificial Intelligence-Empowered Resource Allocation for LoRa-Enabled IoT Applications}
+\item 2026, Journal of Cybersecurity and Privacy, 10.3390/jcp6020065: \texttt{An Examination of LPWAN Security in Maritime Applications}
+\item 2025, Scientific African, 10.1016/j.sciaf.2025.e02682: \texttt{Fog-IoPM: Fog computing for Internet of Plants data management}
+\end{itemize}
+
+\subsection*{Topic 8. Simulator validation for LoRa (ns-3, FLoRa, LoRaSim) against measurements}
+
+{\scriptsize\raggedright
+\begin{longtable}{p{0.317\linewidth}p{0.317\linewidth}p{0.317\linewidth}}
+\toprule
+\# & Query & Count \\
+\midrule
+\endhead
+1 & \texttt{(ns-3 OR FLoRa OR LoRaSim) AND LoRa AND (validation OR measurements)} & 17 \\
+2 & \texttt{LoRaWAN AND simulator AND "real deployment"} & 1 \\
+\bottomrule
+\end{longtable}}
+
+Query 1, top 15 by relevance (year, journal, DOI):
+
+\begin{itemize}
+\item 2025, Technologies and Engineering, 10.30857/2786-5371.2025.1.7: \texttt{Computer modelling of LoRa network parameters using the FLoRa simulator}
+\item 2025, Sensors, 10.3390/s25051602: \texttt{Performance Evaluation of a Mesh-Topology LoRa Network}
+\item 2025, International Journal of Innovations in Science and Technology, 10.33411/ijist/1635: \texttt{Leveraging Machine Learning for Spreading Factor Optimization in Lora WAN Networks}
+\item 2026, Internet of Things, 10.1016/j.iot.2026.102012: \texttt{A terrain-aware Fresnel zone simulator for LoRa link feasibility in non-Urban areas}
+\item 2026, International Journal of Communication Systems, 10.1002/dac.70602: \texttt{A Mechanism for Analyzing the Energy Consumption and Environmental Impact of LoRa Sensors Over Time}
+\item 2024, Indonesian Journal of Electrical Engineering and Computer Science, 10.11591/ijeecs.v34.i3.pp1452-1462: \texttt{An efficient and low cost realization of LoRa based real-time forest protection system}
+\item 2026, IEEE Transactions on Vehicular Technology, 10.1109/tvt.2026.3747288: \texttt{GLo-MAPPO: Multi-Agent Deep Reinforcement Learning for Energy-Efficient UAV-Assisted LoRa Networks}
+\item 2026, Informatica, 10.31449/inf.v50i10.11719: \texttt{Defense Against False Data Injection and Fault Tolerance Optimization for Resource Scheduling in Software-Defined Satellite-Terrestrial Networks Using SFT-LoRA}
+\item 2025, Sensors, 10.3390/s25071961: \texttt{Nanosecond Time Synchronization over a 2.4 GHz Long-Range Wireless Link}
+\item 2025, IEEE Internet of Things Journal, 10.1109/jiot.2025.3609239: \texttt{Enhanced Adaptive Data Rate and Power Control for Resilient and Energy-Efficient LoRaWAN}
+\item 2022, Agriculture, 10.3390/agriculture12060786: \texttt{Performance Evaluation of Communication Systems Used for Internet of Things in Agriculture}
+\item 2026, International Journal of Electronic Devices and Networking, 10.22271/27084477.2026.v7.i2a.108: \texttt{Design and fabrication of a compact hairpin-line microstrip bandpass filter with source-load coupling for harmonic suppression in sub-GHz LPWAN receiver front-end circuits}
+\item 2025, Letters in Drug Design \& Discovery, 10.1016/j.lddd.2026.100301: \texttt{Coumarin-3-carboxamide derivatives as promising anti-tubercular agents: An In-silico and In-vitro approach}
+\item 2025, IEEE Communications Letters, 10.1109/lcomm.2025.3633387: \texttt{Vehicle Profiling-Aware Personalized Federated Low-Rank Adaptation in IoVs}
+\item 2026, e-Journal of Nondestructive Testing, 10.58286/33825: \texttt{Comparative Gateway Placement Optimization for LoRaWAN-Based Structural Health Monitoring on Bridges}
+\end{itemize}
+
+Query 2, top 1 by relevance (year, journal, DOI):
+
+\begin{itemize}
+\item 2026, Internet of Things, 10.1016/j.iot.2026.102012: \texttt{A terrain-aware Fresnel zone simulator for LoRa link feasibility in non-Urban areas}
+\end{itemize}
+
+\subsection*{Topic 9. Accelerometer range, sampling rate and saturation in crash or impact sensing; delta-V}
+
+{\scriptsize\raggedright
+\begin{longtable}{p{0.317\linewidth}p{0.317\linewidth}p{0.317\linewidth}}
+\toprule
+\# & Query & Count \\
+\midrule
+\endhead
+1 & \texttt{accelerometer AND (saturation OR clipping) AND (impact OR crash)} & 22 \\
+2 & \texttt{"delta-V" AND accelerometer AND (estimation OR crash)} & 5 \\
+3 & \texttt{crash AND accelerometer AND ("sampling rate" OR "measurement range")} & 1 \\
+\bottomrule
+\end{longtable}}
+
+Query 1, top 15 by relevance (year, journal, DOI):
+
+\begin{itemize}
+\item 2026, IEEE Sensors Journal, 10.1109/jsen.2026.3724900: \texttt{Peak-Aware Saturation Compensation for Low-Range Accelerometer Channels in Transient Impact Sensing}
+\item 2022, Experimental Mechanics, 10.1007/s11340-021-00812-8: \texttt{Novel Crash Sled with a Translating Support Mass}
+\item 2026, Frontiers in Nutrition, 10.3389/fnut.2026.1892920: \texttt{Accelerometer-derived ``weekend warrior'' physical activity pattern and all-cause mortality in individuals with kidney stones: a prospective cohort study}
+\item 2023, Scientific Reports, 10.1038/s41598-023-28620-1: \texttt{Impact of test, vaccinate and remove protocol on home ranges and nightly movements of badgers in a medium density population}
+\item 2022, Critical Care, 10.1186/s13054-022-04010-3: \texttt{Impact of critical illness and withholding of early parenteral nutrition in the pediatric intensive care unit on long-term physical performance of children: a 4-year follow-up of the PEPaNIC randomized controlled trial}
+\item 2025, INTEK Jurnal Penelitian, 10.31963/intek.v12i1.5742: \texttt{A Wearable Solution for Continuous Health Monitoring and Fall Detection in Elderly Care}
+\item 2023, BMC Biomedical Engineering, 10.1186/s42490-023-00073-7: \texttt{A novel wearable device for automated real-time detection of epileptic seizures}
+\item 2026, Scientific Reports, 10.1038/s41598-026-47045-0: \texttt{Enhancing UAV survivability through real-time stall detection and parachute assisted recovery}
+\item 2025, Information systems engineering and management, 10.1007/978-3-031-91481-2\_14: \texttt{Optimization of Data Storage and Transmission in Wearable Devices for ADLs and Falls Using Bluetooth Low Energy: An Approach to Minimize Packet Loss}
+\item 2025, Mechanical Systems and Signal Processing, 10.1016/j.ymssp.2025.113603: \texttt{Optimized variable reluctance energy harvester with dual magnet arrays for self-powered multimodal monitoring of rotating machinery}
+\item 2023, Alzheimer s \& Dementia, 10.1002/alz.083248: \texttt{Ketogenic Dietary Effects on Sleep, Cognition and Behavior in MCI: Baseline Sleep Results}
+\item 2023, Sensors, 10.3390/s23177387: \texttt{A Machine Learning-Based Correlation Analysis between Driver Behaviour and Vital Signs: Approach and Case Study}
+\item 2024, Current Issues in Sport Science (CISS), 10.36950/2024.2ciss059: \texttt{Assessing the accuracy of photoplethysmography for wearable heart rate monitoring based on body location and body motion in uncontrolled outdoor environments}
+\item 2024, International Journal of Epidemiology, 10.1093/ije/dyae013: \texttt{Cohort Profile Update: The Young-HUNT Study, Norway}
+\item 2026, Modern information security, 10.31673/2409-7292.2026.026910: \texttt{Principles of collecting physiological biometric data from wearable devices for authentication systems}
+\end{itemize}
+
+Query 2, top 5 by relevance (year, journal, DOI):
+
+\begin{itemize}
+\item 2021, Traffic Injury Prevention, 10.1080/15389588.2021.1982615: \texttt{Delta-v slope as an indicator of injury}
+\item 2021, SAE technical papers on CD-ROM/SAE technical paper series, 10.4271/2021-01-0892: \texttt{Reconstructing Vehicle and Occupant Motion from EDR Data in High Yaw Velocity Crashes}
+\item 2026, International Journal of Latest Technology in Engineering Management \& Applied Science, 10.51583/ijltemas.2026.150600052: \texttt{Direction-Aware Telematics Crash Detection and Injury Plausibility Scoring for False Injury Claim Mitigation}
+\item 2025, Acta Astronautica, 10.1016/j.actaastro.2025.02.037: \texttt{Italian Spring Accelerometer measurements of unexpected Non Gravitational Perturbation during BepiColombo second Venus swing-by}
+\item 2026, SAE technical papers on CD-ROM/SAE technical paper series, 10.4271/2026-01-0552: \texttt{The Characterization of Longitudinal Lumbar Acceleration in Low-Speed Rear-End Impacts Across Different Surrogate Occupant Types}
+\end{itemize}
+
+Query 3, top 1 by relevance (year, journal, DOI):
+
+\begin{itemize}
+\item 2025, Chemical Engineering Journal, 10.1016/j.cej.2025.167545: \texttt{Self-assembled triboelectric nanogenerators with optimized surfaces for high-g accelerometers in extreme environments}
+\end{itemize}
+
+\subsection*{Topic 10. Dataset leakage, duplicates and validation-split problems in sensor-based detection benchmarks}
+
+{\scriptsize\raggedright
+\begin{longtable}{p{0.317\linewidth}p{0.317\linewidth}p{0.317\linewidth}}
+\toprule
+\# & Query & Count \\
+\midrule
+\endhead
+1 & \texttt{(leakage OR duplicate) AND (crash OR "fall detection" OR "activity recognition") AND dataset} & 54 \\
+2 & \texttt{("data leakage" OR "subject-wise") AND ("activity recognition" OR "fall detection") AND validation} & 15 \\
+\bottomrule
+\end{longtable}}
+
+Query 1, top 15 by relevance (year, journal, DOI):
+
+\begin{itemize}
+\item 2026, Machine Learning and Knowledge Extraction, 10.3390/make8100298: \texttt{Auditing Multimodal Fusion Benchmarks: Leakage, Attribution, and Calibration in Elderly Fall Detection}
+\item 2026, International Journal for Research in Applied Science and Engineering Technology, 10.22214/ijraset.2026.84411: \texttt{Trial-Efficient Crash and Fall Detection for Two-Wheeler Delivery Riders Using Smartphone Inertial Sensors}
+\item 2026, Measurement, 10.1016/j.measurement.2026.123369: \texttt{Evaluating pre-impact fall detection: A user-independent assessment of deep learning models on the KFall dataset}
+\item 2024, Journal of Safety Research, 10.1016/j.jsr.2024.12.002: \texttt{A pipeline to enhance animal vehicle collision analysis in crash report dataset}
+\item 2024, Sensors, 10.3390/s24237793: \texttt{VBCNet: A Hybird Network for Human Activity Recognition}
+\item 2026, Scientific Reports, 10.1038/s41598-026-73854-4: \texttt{High-optimized crash severity prediction: a calibrated, leakage-aware ensemble stacking framework for deployment-ready decision making}
+\item 2026, Cognitive Computation, 10.1007/s12559-026-10550-5: \texttt{Artificial Intelligence for Elderly Fall Detection: State-of-the-art Methods, Applications and Challenges}
+\item 2026, Scientific Journal of Intelligent Systems Research, 10.54691/w0v9vp33: \texttt{Research and Implementation of YOLOv8+Transformer in Human Fall Detection Image Recognition}
+\item 2025, Transportation Research Interdisciplinary Perspectives, 10.1016/j.trip.2025.101713: \texttt{Interpretable machine learning for driver fault attribution in road traffic crashes: Evidence from a nationwide police dataset}
+\item 2026, Data in Brief, 10.1016/j.dib.2026.113001: \texttt{Letter to the Editor. Re: ``AI-driven Internet of Things (IoT) dataset for remote health monitoring and fall detection in elderly people,'' Data in Brief 66 (2026) 112641}
+\item 2021, Lecture notes of the Institute for Computer Sciences, Social Informatics and Telecommunications Engineering, 10.1007/978-3-030-91421-9\_1: \texttt{Balancing Activity Recognition and Privacy Preservation with a Multi-objective Evolutionary Algorithm}
+\item 2026, Signal Image and Video Processing, 10.1007/s11760-026-05239-z: \texttt{Real-time, mobile-compatible, and low-cost fall detection system with deep learning}
+\item 2024, Algorithms, 10.3390/a17120556: \texttt{Human Activity Recognition: A Comparative Study of Validation Methods and Impact of Feature Extraction in Wearable Sensors}
+\item 2023, IEEE Transactions on Mobile Computing, 10.1109/tmc.2023.3333043: \texttt{Body RFID Skeleton-Based Human Activity Recognition Using Graph Convolution Neural Network}
+\item 2023, IEEE Transactions on Consumer Electronics, 10.1109/tce.2023.3340752: \texttt{High-Accuracy and Fine-Granularity Human Activity Recognition Method Based on Body RFID Skeleton}
+\end{itemize}
+
+Query 2, top 15 by relevance (year, journal, DOI):
+
+\begin{itemize}
+\item 2024, Algorithms, 10.3390/a17120556: \texttt{Human Activity Recognition: A Comparative Study of Validation Methods and Impact of Feature Extraction in Wearable Sensors}
+\item 2026, Machine Learning with Applications, 10.1016/j.mlwa.2026.101021: \texttt{Activity recognition via Riemannian optimization and multimodal Transformers}
+\item 2026, Machine Learning and Knowledge Extraction, 10.3390/make8100298: \texttt{Auditing Multimodal Fusion Benchmarks: Leakage, Attribution, and Calibration in Elderly Fall Detection}
+\item 2023, Sensors, 10.3390/s23135845: \texttt{Reducing the Impact of Sensor Orientation Variability in Human Activity Recognition Using a Consistent Reference System}
+\item 2026, IEEE Access, 10.1109/access.2026.3717226: \texttt{Enhanced Multi-Modal Human Activity Recognition Using STAR Transformer with Linformer Attention}
+\item 2026, Measurement, 10.1016/j.measurement.2026.123369: \texttt{Evaluating pre-impact fall detection: A user-independent assessment of deep learning models on the KFall dataset}
+\item 2026, International Journal of Computational Intelligence Systems, 10.1007/s44196-026-01196-0: \texttt{An Interpretable Deep Learning Framework for Human Activity Recognition in Smart Sport Using Wearable Devices}
+\item 2026, Applied Sciences, 10.3390/app162010046: \texttt{Compact and Explainable Human Activity Recognition with Boruta-RFE Feature Selection and SHAP Interpretation}
+\item 2026, IEEE Access, 10.1109/access.2026.3751679: \texttt{Lightweight 1D-CNN for Real-Time Human Activity Recognition on Raspberry Pi Using a Low-Cost IMU Sensor}
+\item 2026, IEEE Access, 10.1109/access.2026.3747756: \texttt{HF-GestureNET: A Hybrid Spatio-Spectral Graph Learning Framework for Gesture Recognition and Efficiency Assessment}
+\item 2025, Scientific Reports, 10.1038/s41598-025-25226-7: \texttt{Enhancing psychological resilience and decision-making in basketball players through emerging technologies}
+\item 2021, Sensors, 10.3390/s21217110: \texttt{Scoring Performance on the Y-Balance Test Using a Deep Learning Approach}
+\item 2026, Multimedia Tools and Applications, 10.1007/s11042-026-21942-y: \texttt{xAutoGA: an automated deep learning software to educate users}
+\item 2025, SLEEP, 10.1093/sleep/zsaf090.0444: \texttt{0444 Self-Supervised Pretraining for Wrist-Worn Accelerometer Data Improves Activity and Sleep-Wake Discrimination}
+\item 2026, Frontiers in Artificial Intelligence, 10.3389/frai.2026.1809361: \texttt{Uncertainty-aware federated temporal learning with explainable LLM-based coaching for privacy-preserving wearable health systems}
+\end{itemize}
+
+\subsection*{Topic 11. Compact or embedded crash detectors (tree models, TinyML)}
+
+{\scriptsize\raggedright
+\begin{longtable}{p{0.317\linewidth}p{0.317\linewidth}p{0.317\linewidth}}
+\toprule
+\# & Query & Count \\
+\midrule
+\endhead
+1 & \texttt{(crash OR accident) AND detection AND (TinyML OR "decision tree") AND embedded} & 10 \\
+\bottomrule
+\end{longtable}}
+
+Query 1, top 10 by relevance (year, journal, DOI):
+
+\begin{itemize}
+\item 2021, Computers, materials \& continua/Computers, materials \& continua (Print), 10.32604/cmc.2022.022610: \texttt{TinyML-Based Fall Detection for Connected Personal Mobility Vehicles}
+\item 2026, Applied System Innovation, 10.3390/asi9070147: \texttt{Uncertainty-Aware Continual TinyML Driver Fatigue Detection with Kolmogorov--Arnold Networks at the IoT Edge}
+\item 2025, PLoS ONE, 10.1371/journal.pone.0332577: \texttt{FastKAN-DDD: A novel fast Kolmogorov-Arnold network-based approach for driver drowsiness detection optimized for TinyML deployment}
+\item 2023, IEEE Sensors Journal, 10.1109/jsen.2023.3307766: \texttt{Behind-the-Ear EEG-Based Wearable Driver Drowsiness Detection System Using Embedded Tiny Neural Networks}
+\item 2023, Traitement du signal, 10.18280/ts.400302: \texttt{Real-Time Driver Drowsiness Detection and Classification on Embedded Systems Using Machine Learning Algorithms}
+\item 2026, International Journal of Creative and Open Research in Engineering and Management, 10.55041/ijcope.v2i5.043: \texttt{Smart Vehicle Safety System Using IoT and Machine Learning for Accident Detection and Adaptive Cruise Control}
+\item 2024, passer, 10.24271/psr.2023.403821.1342: \texttt{Advancements in Machine Learning and Data Mining Techniques for Collision Prediction and Hazard Detection in Internet of Vehicles}
+\item 2022, International Journal of Science and Research (IJSR), 10.21275/sr22610152506: \texttt{Driver Drowsiness Detection Using ECG Signals and Machine Learning Models}
+\item 2022, Fire Technology, 10.1007/s10694-022-01347-7: \texttt{Hybrid Ensemble Based Machine Learning for Smart Building Fire Detection Using Multi Modal Sensor Data}
+\item 2026, International Journal for Research in Applied Science and Engineering Technology, 10.22214/ijraset.2026.82728: \texttt{Advanced Smart Helmet}
+\end{itemize}
+
+\subsection*{Topic 12. Synthetic crash pulse generation and physics-based crash models}
+
+{\scriptsize\raggedright
+\begin{longtable}{p{0.317\linewidth}p{0.317\linewidth}p{0.317\linewidth}}
+\toprule
+\# & Query & Count \\
+\midrule
+\endhead
+1 & \texttt{"crash pulse" AND (synthetic OR generation)} & 5 \\
+2 & \texttt{vehicle AND crash AND ("lumped parameter" OR "spring-mass") AND pulse} & 0 \\
+\bottomrule
+\end{longtable}}
+
+Query 1, top 5 by relevance (year, journal, DOI):
+
+\begin{itemize}
+\item 2021, Accident Analysis \& Prevention, 10.1016/j.aap.2021.106149: \texttt{A data-driven, kinematic feature-based, near real-time algorithm for injury severity prediction of vehicle occupants}
+\item 2023, Journal of Biomechanical Engineering, 10.1115/1.4063033: \texttt{A Lightweight Pre-Crash Occupant Injury Prediction Model Distills Knowledge From Its Post-Crash Counterpart}
+\item 2026, Scientific Reports, 10.1038/s41598-026-43474-z: \texttt{High-fidelity numerical framework for crashworthiness evaluation of passenger car body structures under full-frontal impact}
+\item 2025, Proceedings of the Institution of Mechanical Engineers Part D Journal of Automobile Engineering, 10.1177/09544070251354871: \texttt{Optimal design of pre-inflation airbag of school bus in mixed conditions using NSGA-III-SAA}
+\item 2024, Journal of Biomechanical Engineering, 10.1115/1.4064641: \texttt{Special Issue: Current Trends in Impact and Injury Biomechanics}
+\end{itemize}
+
+Query 2, top 0 by relevance (year, journal, DOI):
+
+
+\subsection*{Topic 13. Energy budget or survivability of IoT nodes after power loss}
+
+{\scriptsize\raggedright
+\begin{longtable}{p{0.317\linewidth}p{0.317\linewidth}p{0.317\linewidth}}
+\toprule
+\# & Query & Count \\
+\midrule
+\endhead
+1 & \texttt{IoT AND (supercapacitor OR "backup power") AND (emergency OR alert) AND transmission} & 4 \\
+2 & \texttt{"last gasp" AND (IoT OR LoRa OR LPWAN)} & 0 \\
+\bottomrule
+\end{longtable}}
+
+Query 1, top 4 by relevance (year, journal, DOI):
+
+\begin{itemize}
+\item 2026, Pantao (International Journal of the Humanities and Social Sciences), 10.69651/pijhss05021060: \texttt{Development of an Integrated Disaster Detector and Alert System}
+\item 2023, Journal of Information Systems and Informatics, 10.51519/journalisi.v5i4.621: \texttt{Towards Sustainable Smart Living: Cloud-Based IoT Solutions for Home Automation}
+\item 2026, INTERANTIONAL JOURNAL OF SCIENTIFIC RESEARCH IN ENGINEERING AND MANAGEMENT, 10.55041/ijsrem57771: \texttt{IOT-Based Smart Microgrid Monitoring System for Real-Time Energy Management}
+\item 2026, Journal of Engineering Logic and Modelling Research, 10.70382/sjelmr.v12i5.020: \texttt{DESIGN AND IMPLEMENTATION OF AUTOMATIC GSM BASE FIRE ALARM SYSTEM}
+\end{itemize}
+
+Query 2, top 0 by relevance (year, journal, DOI):
+
+
+\subsection*{Items opened (abstract level, OpenAlex record, 2026-11-14)}
+
+URL form: \texttt{https://api.openalex.org/works/<id>} (read 2026-11-14); the DOI of each item is in \texttt{docs/06\_references/REFERENCES\_2021PLUS.bib} (metadata from Crossref). No full text was read in this run; "abstract level" means the abstract in the record. A record with no abstract is title-and-metadata only and stays UNVERIFIED for content.
+
+{\scriptsize\raggedright
+\begin{longtable}{p{0.317\linewidth}p{0.317\linewidth}p{0.317\linewidth}}
+\toprule
+OpenAlex id & Topics & What the record says \\
+\midrule
+\endhead
+W4389870150 & 1 & Vinodhini et al., IJCS 2023. LoRa accident detection with ultrasonic edge nodes, GPS LoRa shield, cloud, hospital notification. \\
+W4412036200 & 1 & IJACSA 2025. Accident detection with ML, IoT drones and LoRa. \\
+W4409590986 & 1 & J. Electron. Autom. Eng. 2025. Arduino LoRa vehicle coordination with ultrasonic sensors. \\
+W4413056091 & 1 & Zhang et al., Sci. Rep. 2025. IoT public-safety alert system (ESP32, cloud); LoRa not the focus. \\
+W3199272654 & 2 & IEEE Commun. Lett. 2021. Bidirectional LoRa: ACK collisions, maximum retransmissions as the critical parameter. \\
+W4394689617 & 2 & Sci. Rep. 2024. Single-channel LoRa gateway for rapid confirmed messaging (emergency alerting named as the target). \\
+W4313591022 & 2 & IEEE Access 2023. Delay optimisation by adaptive scheduling with unsupervised learning. \\
+W4403835654 & 2 & Mathematics 2024. ADR for power-constrained LoRa devices. \\
+W3210114490 & 2, 6 & Sisinni et al., IEEE TII 2022 (online 2021-11-02). Redundancy for LoRaWAN emergency communication on the factory floor. \\
+W4390277924 & 2 & Zorbas, Comput. Commun. 2023. Downlink SF selection. The record has no abstract: title and metadata only. \\
+W4327779085 & 2 & Farhad et al., CCNC 2023 (conference; context). \\
+W4414155287 & 2 & Alshaer et al., IEEE IoT J. 2025. Enhanced ADR and power control. \\
+W4243199167 & 3 & IJVSS 2021. Prediction of occupant injuries for eCall (simulation model, injury pattern and severity in an automated call). \\
+W4220716409 & 3 & IEEE ITS Mag. 2022. eCall system with injury severity, installed in service vehicles. \\
+W7165046622 & 3 & Transp. Res. Interdiscip. Perspect. 2026. GIDAS logistic regression for injury patterns for next-generation eCall. \\
+W4221066772 & 3 & Acad. Pediatr. 2022. Advanced ACN for children. The record has no abstract: title and metadata only. \\
+W4301595718 & 3 & SAE 2022-28-0399 (SAE technical paper). Motorcycle crash severity estimation for emergency response. \\
+W4412747859 & 4, 5 & IEEE IoT J. 2025. Privacy-preserving lightweight LoRaWAN authentication. \\
+W4292348028 & 4 & IEEE Access 2022. LoRaWAN session key update scheme (unique key per session). \\
+W3197586672 & 4 & Sensors 2021. Hash-chain key management for LoRaWAN. \\
+W3157897910 & 4, 5 & IEEE TII 2021. LoRaWAN-compatible user authentication for critical applications. \\
+W4416313224 & 5 & Int. J. Sens. Netw. 2025. Security analysis and improvement of the LoRaWAN key exchange. \\
+W4382699871 & 5 & IETE J. Res. 2023. MAKA, multi-factor authentication and key agreement for LoRa smart grid. \\
+W4396842943 & 5 & Performance Evaluation 2024. Probabilistic evaluation of class-A LoRaWAN. The record has no abstract: title and metadata only. \\
+W3131690400 & 6 & Sensors 2021. DG-LoRa: deterministic group acknowledgment in LoRa networks. \\
+W4401611171 & 6 & FUOYE J. Eng. Technol. 2024. Fairness of current use in time-slotted LoRa. \\
+W7224295386 & 7 & J. Telecommun. Inf. Technol. 2026. Gateway-level early warning of link degradation, built on LoED records. \\
+W7223685629 & 7 & IEEE Access 2026. Data quality and missing data in LoRaWAN environmental IoT (frame-counter anomalies named). \\
+W4281756149 & 7 & Int. J. Eng. Trends Technol. 2022, a different 'LoED' (forest monitoring system). Not the Imperial dataset. No abstract in the record. \\
+W4288786426 & 8 & Citoni et al., IEEE Sensors J. 2022. Urban LoRaWAN deployment, real world against simulation. \\
+W3043344477 & 8 & Magrin et al., IEEE TWC 2021. Configurable mathematical model for single-gateway LoRaWAN. \\
+W4410091983 & 8 & Technol. Eng. 2025. FLoRa simulator compared with measurements. \\
+W4408215394 & 8 & Sensors 2025. Mesh-topology LoRa network. \\
+W7204150407 & 9 & PEAR-VAE, IEEE Sensors J. 2026. Saturation compensation of low-range accelerometers in impact windows. \\
+W4381465825 & 9 & Chan et al., Sensors 2023. Spline restoration of clipped tibial acceleration. \\
+W3207999649 & 9 & Traffic Inj. Prev. 2021. Delta-v slope as an injury indicator (CIREN, EDR). \\
+W3125792140 & 9 & SAE technical paper 2021. Reconstructing vehicle motion from EDR delta-v in high-yaw crashes. \\
+W7167712123 & 9 & IJLTEMAS 2026. Direction-aware telematics crash detection. \\
+W7214642774 & 10 & Mach. Learn. Knowl. Extr. 2026. Leakage, attribution and calibration audit in fall-detection benchmarks. \\
+W7221480893 & 10 & Measurement 2026. User-independent pre-impact fall detection on KFall, with leakage prevention. \\
+W4405078322 & 10 & Algorithms 2024. HAR validation methods (subject-dependent k-fold against leave-one-subject-out). \\
+W7219830528 & 10 & Sci. Rep. 2026. Calibrated, leakage-aware crash severity stacking (tabular crash records). \\
+W4200514941 & 11 & CMC 2021. TinyML fall detection for personal mobility vehicles. \\
+W7160417041 & 11 & IJCOR 2026. ESP32 and MPU6050 TinyML accident detection. \\
+W3159454463 & 12 & Accid. Anal. Prev. 2021. Kinematic-feature injury-severity algorithm. The record has no abstract: title and metadata only. \\
+W4385230230 & 12 & J. Biomech. Eng. 2023. Lightweight pre-crash injury prediction by knowledge distillation. \\
+W7161695129 & 13 & Pantao 2026. Disaster detector with a 12 V backup supply; not an energy-survivability study. \\
+\bottomrule
+\end{longtable}}
+

@@ -1,0 +1,57 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Study A5: coverage and width of the 90\% intervals on held-out vehicles, overall and by clipped-fraction bin (split R).}
+\label{tab:v2_tab_intervals}
+\begin{tabular}{llllllll}
+\toprule
+Range (g) & Interval & Clipped-fraction bin & Coverage & Mean width (km/h) & Median relative width & Origin & results.json key \\
+\midrule
++-16 & plain split conformal & all & 0.8858 & 45.838 & 0.7527 & MEASURED\_SOFTWARE & v2.a.a5.r16.i.coverage \\
++-16 & plain split conformal & never clipped & 0.0536 & 10.625 & 0.4088 & MEASURED\_SOFTWARE & v2.a.a5.r16.i.bin\_none.coverage \\
++-16 & plain split conformal & lowest tercile & 0.8143 & 29.149 & 0.7527 & MEASURED\_SOFTWARE & v2.a.a5.r16.i.bin\_low.coverage \\
++-16 & plain split conformal & middle tercile & 0.9965 & 53.567 & 0.7446 & MEASURED\_SOFTWARE & v2.a.a5.r16.i.bin\_mid.coverage \\
++-16 & plain split conformal & highest tercile & 0.9328 & 59.255 & 0.765 & MEASURED\_SOFTWARE & v2.a.a5.r16.i.bin\_high.coverage \\
++-16 & conformalized quantile regression & all & 0.883 & 40.758 & 0.7517 & MEASURED\_SOFTWARE & v2.a.a5.r16.ii.coverage \\
++-16 & conformalized quantile regression & never clipped & 0.0536 & 10.625 & 0.4088 & MEASURED\_SOFTWARE & v2.a.a5.r16.ii.bin\_none.coverage \\
++-16 & conformalized quantile regression & lowest tercile & 0.8194 & 29.096 & 0.8085 & MEASURED\_SOFTWARE & v2.a.a5.r16.ii.bin\_low.coverage \\
++-16 & conformalized quantile regression & middle tercile & 0.9929 & 42.33 & 0.6768 & MEASURED\_SOFTWARE & v2.a.a5.r16.ii.bin\_mid.coverage \\
++-16 & conformalized quantile regression & highest tercile & 0.922 & 54.63 & 0.7936 & MEASURED\_SOFTWARE & v2.a.a5.r16.ii.bin\_high.coverage \\
++-16 & normalised score (adaptive) & all & 0.8932 & 54.123 & 0.5885 & MEASURED\_SOFTWARE & v2.a.a5.r16.iii.coverage \\
++-16 & normalised score (adaptive) & never clipped & 0.0536 & 10.625 & 0.4088 & MEASURED\_SOFTWARE & v2.a.a5.r16.iii.bin\_none.coverage \\
++-16 & normalised score (adaptive) & lowest tercile & 0.9012 & 50.719 & 0.9888 & MEASURED\_SOFTWARE & v2.a.a5.r16.iii.bin\_low.coverage \\
++-16 & normalised score (adaptive) & middle tercile & 0.9629 & 27.894 & 0.3792 & MEASURED\_SOFTWARE & v2.a.a5.r16.iii.bin\_mid.coverage \\
++-16 & normalised score (adaptive) & highest tercile & 0.8984 & 89.112 & 0.521 & MEASURED\_SOFTWARE & v2.a.a5.r16.iii.bin\_high.coverage \\
++-32 & plain split conformal & all & 0.9125 & 41.556 & 0.4659 & MEASURED\_SOFTWARE & v2.a.a5.r32.i.coverage \\
++-32 & plain split conformal & never clipped & 0.9322 & 78.079 & 2.4754 & MEASURED\_SOFTWARE & v2.a.a5.r32.i.bin\_none.coverage \\
++-32 & plain split conformal & lowest tercile & 0.8568 & 18.206 & 0.279 & MEASURED\_SOFTWARE & v2.a.a5.r32.i.bin\_low.coverage \\
++-32 & plain split conformal & middle tercile & 0.9736 & 20.739 & 0.2803 & MEASURED\_SOFTWARE & v2.a.a5.r32.i.bin\_mid.coverage \\
++-32 & plain split conformal & highest tercile & 0.8707 & 21.88 & 0.2729 & MEASURED\_SOFTWARE & v2.a.a5.r32.i.bin\_high.coverage \\
++-32 & conformalized quantile regression & all & 0.9136 & 40.756 & 0.4024 & MEASURED\_SOFTWARE & v2.a.a5.r32.ii.coverage \\
++-32 & conformalized quantile regression & never clipped & 0.9322 & 78.079 & 2.4754 & MEASURED\_SOFTWARE & v2.a.a5.r32.ii.bin\_none.coverage \\
++-32 & conformalized quantile regression & lowest tercile & 0.8854 & 16.724 & 0.2809 & MEASURED\_SOFTWARE & v2.a.a5.r32.ii.bin\_low.coverage \\
++-32 & conformalized quantile regression & middle tercile & 0.9604 & 18.351 & 0.2786 & MEASURED\_SOFTWARE & v2.a.a5.r32.ii.bin\_mid.coverage \\
++-32 & conformalized quantile regression & highest tercile & 0.8592 & 22.07 & 0.2923 & MEASURED\_SOFTWARE & v2.a.a5.r32.ii.bin\_high.coverage \\
++-32 & normalised score (adaptive) & all & 0.9176 & 41.258 & 0.4066 & MEASURED\_SOFTWARE & v2.a.a5.r32.iii.coverage \\
++-32 & normalised score (adaptive) & never clipped & 0.9322 & 78.079 & 2.4754 & MEASURED\_SOFTWARE & v2.a.a5.r32.iii.bin\_none.coverage \\
++-32 & normalised score (adaptive) & lowest tercile & 0.8906 & 18.077 & 0.2006 & MEASURED\_SOFTWARE & v2.a.a5.r32.iii.bin\_low.coverage \\
++-32 & normalised score (adaptive) & middle tercile & 0.9499 & 15.165 & 0.1747 & MEASURED\_SOFTWARE & v2.a.a5.r32.iii.bin\_mid.coverage \\
++-32 & normalised score (adaptive) & highest tercile & 0.8851 & 26.587 & 0.2565 & MEASURED\_SOFTWARE & v2.a.a5.r32.iii.bin\_high.coverage \\
++-64 & plain split conformal & all & 0.9136 & NOT\_RUN & 0.4673 & MEASURED\_SOFTWARE & v2.a.a5.r64.i.coverage \\
++-64 & plain split conformal & never clipped & 0.9157 & 25.233 & 0.4673 & MEASURED\_SOFTWARE & v2.a.a5.r64.i.bin\_none.coverage \\
++-64 & plain split conformal & lowest tercile & 1.0 & NOT\_RUN & 0.3912 & MEASURED\_SOFTWARE & v2.a.a5.r64.i.bin\_low.coverage \\
++-64 & plain split conformal & middle tercile & 0.8421 & NOT\_RUN & NOT\_RUN & MEASURED\_SOFTWARE & v2.a.a5.r64.i.bin\_mid.coverage \\
++-64 & plain split conformal & highest tercile & 0.6364 & NOT\_RUN & 0.3016 & MEASURED\_SOFTWARE & v2.a.a5.r64.i.bin\_high.coverage \\
++-64 & conformalized quantile regression & all & 0.9136 & NOT\_RUN & 0.4673 & MEASURED\_SOFTWARE & v2.a.a5.r64.ii.coverage \\
++-64 & conformalized quantile regression & never clipped & 0.9157 & 25.233 & 0.4673 & MEASURED\_SOFTWARE & v2.a.a5.r64.ii.bin\_none.coverage \\
++-64 & conformalized quantile regression & lowest tercile & 1.0 & NOT\_RUN & 0.4294 & MEASURED\_SOFTWARE & v2.a.a5.r64.ii.bin\_low.coverage \\
++-64 & conformalized quantile regression & middle tercile & 0.8421 & NOT\_RUN & NOT\_RUN & MEASURED\_SOFTWARE & v2.a.a5.r64.ii.bin\_mid.coverage \\
++-64 & conformalized quantile regression & highest tercile & 0.6364 & NOT\_RUN & 0.3016 & MEASURED\_SOFTWARE & v2.a.a5.r64.ii.bin\_high.coverage \\
++-64 & normalised score (adaptive) & all & 0.9136 & NOT\_RUN & 0.4781 & MEASURED\_SOFTWARE & v2.a.a5.r64.iii.coverage \\
++-64 & normalised score (adaptive) & never clipped & 0.9157 & 25.233 & 0.4673 & MEASURED\_SOFTWARE & v2.a.a5.r64.iii.bin\_none.coverage \\
++-64 & normalised score (adaptive) & lowest tercile & 1.0 & NOT\_RUN & 0.4429 & MEASURED\_SOFTWARE & v2.a.a5.r64.iii.bin\_low.coverage \\
++-64 & normalised score (adaptive) & middle tercile & 0.8421 & NOT\_RUN & NOT\_RUN & MEASURED\_SOFTWARE & v2.a.a5.r64.iii.bin\_mid.coverage \\
++-64 & normalised score (adaptive) & highest tercile & 0.6364 & NOT\_RUN & 0.3016 & MEASURED\_SOFTWARE & v2.a.a5.r64.iii.bin\_high.coverage \\
+\bottomrule
+\end{tabular}
+\end{table}

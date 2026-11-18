@@ -1,0 +1,137 @@
+{
+ "diff": {
+  "traces": 10000,
+  "ops": 409999,
+  "mismatched_ops": 0,
+  "mismatched_traces": 0,
+  "by_command": {
+   "AIR": {
+    "ops": 14940,
+    "mismatches": 0
+   },
+   "ALERT": {
+    "ops": 4936,
+    "mismatches": 0
+   },
+   "BETA": {
+    "ops": 53790,
+    "mismatches": 0
+   },
+   "BETA_RESET": {
+    "ops": 10000,
+    "mismatches": 0
+   },
+   "BINS": {
+    "ops": 16959,
+    "mismatches": 0
+   },
+   "CLUSTER": {
+    "ops": 45248,
+    "mismatches": 0
+   },
+   "D1": {
+    "ops": 16959,
+    "mismatches": 0
+   },
+   "D2DEC": {
+    "ops": 13855,
+    "mismatches": 0
+   },
+   "D3ACTIVE": {
+    "ops": 13855,
+    "mismatches": 0
+   },
+   "D3ALT": {
+    "ops": 13855,
+    "mismatches": 0
+   },
+   "D3IDX": {
+    "ops": 13855,
+    "mismatches": 0
+   },
+   "D3SLOTS": {
+    "ops": 13855,
+    "mismatches": 0
+   },
+   "D3TIME": {
+    "ops": 13855,
+    "mismatches": 0
+   },
+   "DEFER": {
+    "ops": 13855,
+    "mismatches": 0
+   },
+   "FRESH": {
+    "ops": 81706,
+    "mismatches": 0
+   },
+   "FRESH_RESET": {
+    "ops": 5008,
+    "mismatches": 0
+   },
+   "HMAC": {
+    "ops": 4936,
+    "mismatches": 0
+   },
+   "RETRYOK": {
+    "ops": 13855,
+    "mismatches": 0
+   },
+   "ROUND": {
+    "ops": 14940,
+    "mismatches": 0
+   },
+   "TAGOK": {
+    "ops": 24680,
+    "mismatches": 0
+   },
+   "VER_RESET": {
+    "ops": 5057,
+    "mismatches": 0
+   }
+  },
+  "first_mismatches": [],
+  "seed": 42
+ },
+ "replay": {
+  "records": 5140,
+  "by_kind": {
+   "D1": {
+    "ops": 3859,
+    "mismatches": 0
+   },
+   "D2DEC": {
+    "ops": 1019,
+    "mismatches": 0
+   },
+   "DEFER": {
+    "ops": 240,
+    "mismatches": 0
+   },
+   "D3TIME": {
+    "ops": 22,
+    "mismatches": 0
+   }
+  },
+  "mismatches": 0,
+  "first": []
+ },
+ "sizes": {
+  "cg_rd": {
+   "text": 5985,
+   "data": 0,
+   "bss": 0
+  },
+  "tweetnacl": {
+   "text": 12608,
+   "data": 0,
+   "bss": 0
+  },
+  "d1_table_bytes_one_sf": 186624,
+  "ring_and_state_bytes": {
+   "verifier": 1064,
+   "beta": 40,
+   "freshness_ring_R256": 4104
+  }
+ }
+}

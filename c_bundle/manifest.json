@@ -1,0 +1,115 @@
+{
+ "version": 1,
+ "real_data": false,
+ "n_checks": 4,
+ "win_n": 280,
+ "pre_n": 100,
+ "note": "inputs synthetic",
+ "checks": [
+  {
+   "name": "forest_15x6",
+   "kind": "forest",
+   "dir": "forest_15x6",
+   "n_rows": 4601,
+   "n_out": 1,
+   "fields": [
+    "prob"
+   ],
+   "tolerance": {
+    "prob": 1e-06
+   },
+   "exact_fields": [],
+   "reference": "scikit-learn predict_proba (float64) on float32 inputs",
+   "real_data": false,
+   "decision_threshold": 0.4608363715728181
+  },
+  {
+   "name": "forest_10x9",
+   "kind": "forest",
+   "dir": "forest_10x9",
+   "n_rows": 10601,
+   "n_out": 1,
+   "fields": [
+    "prob"
+   ],
+   "tolerance": {
+    "prob": 1e-06
+   },
+   "exact_fields": [],
+   "reference": "scikit-learn predict_proba (float64) on float32 inputs",
+   "real_data": false,
+   "decision_threshold": 0.48359139165035636
+  },
+  {
+   "name": "severity_synthetic",
+   "kind": "severity",
+   "dir": "severity_synthetic",
+   "n_rows": 144,
+   "n_out": 16,
+   "fields": [
+    "dvx_kmh",
+    "dvy_kmh",
+    "dv_res_kmh",
+    "asi",
+    "thiv_kmh",
+    "pulse_ms",
+    "peak_pulse_g",
+    "mean_pulse_g",
+    "roll_deg",
+    "pitch_deg",
+    "severity_class",
+    "rollover",
+    "thiv_hit",
+    "tilt_deg",
+    "tilt_corrected_deg",
+    "roll_corrected_applied"
+   ],
+   "tolerance": {
+    "dv_res_kmh": 0.001,
+    "asi": 0.0001,
+    "thiv_kmh": 0.001,
+    "pulse_ms": 0.1,
+    "peak_pulse_g": 0.0001,
+    "tilt_deg": 0.5,
+    "tilt_corrected_deg": 0.5
+   },
+   "exact_fields": [
+    "severity_class",
+    "rollover",
+    "thiv_hit",
+    "roll_corrected_applied"
+   ],
+   "reference": "severity.severity (float64) on the same float32 windows",
+   "real_data": false
+  },
+  {
+   "name": "n14_sat_synthetic",
+   "kind": "n14",
+   "dir": "n14_sat_synthetic",
+   "n_rows": 48,
+   "n_out": 7,
+   "fields": [
+    "dv_baseline_kmh",
+    "dv_fill_kmh",
+    "dv_fill_corrected_kmh",
+    "asi_fill",
+    "sat_share",
+    "applied",
+    "saturated"
+   ],
+   "tolerance": {
+    "dv_baseline_kmh": 0.001,
+    "dv_fill_kmh": 0.001,
+    "dv_fill_corrected_kmh": 0.001,
+    "asi_fill": 0.0001,
+    "sat_share": 1e-05
+   },
+   "exact_fields": [
+    "applied",
+    "saturated"
+   ],
+   "reference": "saturation.severity_sat (float64)",
+   "real_data": false
+  }
+ ]
+}

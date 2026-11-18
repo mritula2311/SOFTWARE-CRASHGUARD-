@@ -1,0 +1,10 @@
+Range (g),Comparison,Difference in median abs error (points),Whole interval below zero,Origin,results.json key
++-16,fill + ridge minus spline,"1.31 [-1.41, 4.37]",no,MEASURED_SOFTWARE,t13.heldout.all.r16.paired.M+_vs_SP.*
++-16,fill minus spline,"-3.00 [-4.61, -1.29]",yes,MEASURED_SOFTWARE,t13.heldout.all.r16.paired.M_vs_SP.*
++-16,fill + ridge minus plain,"1.46 [-1.16, 4.52]",no,MEASURED_SOFTWARE,t13.heldout.all.r16.paired.M+_vs_B.*
++-32,fill + ridge minus spline,"-1.10 [-1.67, -0.54]",yes,MEASURED_SOFTWARE,t13.heldout.all.r32.paired.M+_vs_SP.*
++-32,fill minus spline,"-0.58 [-0.91, -0.15]",yes,MEASURED_SOFTWARE,t13.heldout.all.r32.paired.M_vs_SP.*
++-32,fill + ridge minus plain,"-1.25 [-1.85, -0.71]",yes,MEASURED_SOFTWARE,t13.heldout.all.r32.paired.M+_vs_B.*
++-64,fill + ridge minus spline,"-0.03 [-0.08, 0.00]",no,MEASURED_SOFTWARE,t13.heldout.all.r64.paired.M+_vs_SP.*
++-64,fill minus spline,"-0.03 [-0.08, 0.00]",no,MEASURED_SOFTWARE,t13.heldout.all.r64.paired.M_vs_SP.*
++-64,fill + ridge minus plain,"0.00 [0.00, 0.00]",no,MEASURED_SOFTWARE,t13.heldout.all.r64.paired.M+_vs_B.*

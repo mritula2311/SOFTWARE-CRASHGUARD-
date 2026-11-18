@@ -1,0 +1,97 @@
+/*
+ * Tamarin model for A1 (round 4, docs/02_preregistration/PREREGISTRATION_V15.md section 2.6): the 24-byte provisional frame next to the full alert, with the per-vehicle ACK.
+ *
+ * Messages (symbolic names for the byte layout of section 2.1):
+ *   provisional  <'PROV', v, f, pos, mac(kdf(km, v), <'P', v, f, pos>)>   v = node_id, f = the id (freshness field and seq; a fresh name here), pos = flags and coarse position (public, chosen by the adversary)
+ *   full alert   <'ALERT', v, f, cls, mac(kdf(km, v), <'A', v, f, cls>)>
+ *   ACK          <'ACK', v, f, mac(kdf(km, v), <'ACK', v, f>)>              the same ACK frame names the vehicle and the id, for both kinds of frame
+ * The tag of each frame carries its own domain letter ('P' or 'A'). The file crash_alert_prov_nodomain.spthy is the same model with one letter for both (a negative control: the type-confusion lemma must then fail).
+ * The repetition of the provisional frame (the same bytes sent again) needs no rule of its own: the Dolev-Yao network may deliver any message it has seen any number of times, and the base's
+ * acceptance rule fires for each delivery (lemma executable_prov_repeat).
+ * Symbolic model, perfect cryptography; the adversary may compromise any node (RevealNode) and then holds that node's key.
+ * Freshness, the window and the seen-set of the provisional frame are in crash_alert_prov_fresh.spthy.
+ */
+theory CrashAlertProv
+begin
+
+builtins: hashing
+functions: kdf/2, mac/2
+
+rule BaseInit:
+  [ Fr(~km) ]
+  --[ BaseInit() ]->
+  [ !BaseMaster(~km) ]
+
+rule RevealNode:
+  [ !BaseMaster(km) ]
+  --[ RevealNode($w) ]->
+  [ Out(kdf(km, $w)) ]
+
+/* provisional frame */
+rule CarSendProv:
+  [ Fr(~f), !BaseMaster(km), In($pos) ]
+  --[ CarSendProv($v, ~f, $pos) ]->
+  [ CarWaitP($v, ~f), Out(<'PROV', $v, ~f, $pos, mac(kdf(km, $v), <'P', $v, ~f, $pos>)>) ]
+
+/* full alert (the confirm frame) */
+rule CarSendAlert:
+  [ Fr(~f), !BaseMaster(km), In($cls) ]
+  --[ CarSendAlert($v, ~f, $cls) ]->
+  [ CarWaitA($v, ~f), Out(<'ALERT', $v, ~f, $cls, mac(kdf(km, $v), <'A', $v, ~f, $cls>)>) ]
+
+/* the car stops its repetition only on an ACK that carries its own vehicle id, the id it sent and a valid per-vehicle tag */
+rule CarStopProv:
+  [ CarWaitP($v, f), !BaseMaster(km), In(<'ACK', $v, f, mac(kdf(km, $v), <'ACK', $v, f>)>) ]
+  --[ CarStopProv($v, f) ]->
+  [ ]
+
+rule CarStopAlert:
+  [ CarWaitA($v, f), !BaseMaster(km), In(<'ACK', $v, f, mac(kdf(km, $v), <'ACK', $v, f>)>) ]
+  --[ CarStopAlert($v, f) ]->
+  [ ]
+
+rule BaseAcceptProv:
+  [ !BaseMaster(km), In(<'PROV', $v, f, $pos, mac(kdf(km, $v), <'P', $v, f, $pos>)>) ]
+  --[ BaseAcceptProv($v, f, $pos) ]->
+  [ Out(<'ACK', $v, f, mac(kdf(km, $v), <'ACK', $v, f>)>) ]
+
+rule BaseAcceptAlert:
+  [ !BaseMaster(km), In(<'ALERT', $v, f, $cls, mac(kdf(km, $v), <'A', $v, f, $cls>)>) ]
+  --[ BaseAcceptAlert($v, f, $cls) ]->
+  [ Out(<'ACK', $v, f, mac(kdf(km, $v), <'ACK', $v, f>)>) ]
+
+restriction OneBase:
+  "All #i #j. BaseInit()@i & BaseInit()@j ==> #i = #j"
+
+/* sanity: the provisional path and the alert path can run; a repeated delivery of the same provisional frame is accepted again */
+lemma executable_prov:
+  exists-trace
+  "Ex v f pos #i #j #k. CarSendProv(v, f, pos)@i & BaseAcceptProv(v, f, pos)@j & CarStopProv(v, f)@k & #i < #j & #j < #k"
+
+lemma executable_prov_repeat:
+  exists-trace
+  "Ex v f pos #i #j #k. CarSendProv(v, f, pos)@i & BaseAcceptProv(v, f, pos)@j & BaseAcceptProv(v, f, pos)@k & #i < #j & #j < #k"
+
+lemma executable_alert:
+  exists-trace
+  "Ex v f cls #i #j #k. CarSendAlert(v, f, cls)@i & BaseAcceptAlert(v, f, cls)@j & CarStopAlert(v, f)@k & #i < #j & #j < #k"
+
+/* P1 authenticity of the provisional frame, including its flags and position: an accepted frame was sent by that vehicle with that content, unless its node key was revealed */
+lemma P1_prov_authenticity:
+  "All v f pos #i. BaseAcceptProv(v, f, pos)@i ==> (Ex #j. CarSendProv(v, f, pos)@j & #j < #i) | (Ex #r. RevealNode(v)@r)"
+
+/* P2 ACK authenticity per vehicle: a car stops its provisional repetition only on an ACK for an id of its own that the base accepted (as a provisional frame or as the confirm frame), unless its node key was revealed */
+lemma P2_ack_authenticity:
+  "All v f #i. CarStopProv(v, f)@i ==>
+     (Ex pos #j. BaseAcceptProv(v, f, pos)@j & #j < #i) | (Ex cls #j. BaseAcceptAlert(v, f, cls)@j & #j < #i) | (Ex #r. RevealNode(v)@r)"
+
+/* P3 no cross-vehicle suppression: with the key of another node w revealed, v still stops only on a real acceptance of its own id */
+lemma P3_no_cross_vehicle_suppression:
+  "All v w f #i #r. CarStopProv(v, f)@i & RevealNode(w)@r & not (v = w) & not (Ex #r2. RevealNode(v)@r2) ==>
+     (Ex pos #j. BaseAcceptProv(v, f, pos)@j & #j < #i) | (Ex cls #j. BaseAcceptAlert(v, f, cls)@j & #j < #i)"
+
+/* P4 no type confusion: the base accepts a full alert only if the car sent a full alert with that content (so a provisional frame, or its tag, is never taken for an alert), unless the key was revealed */
+lemma P4_no_type_confusion_alert:
+  "All v f cls #i. BaseAcceptAlert(v, f, cls)@i ==> (Ex #j. CarSendAlert(v, f, cls)@j & #j < #i) | (Ex #r. RevealNode(v)@r)"
+
+end

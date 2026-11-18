@@ -1,0 +1,239 @@
+command: /opt/pv/proverif2.05/proverif formal/proverif/r6_ratchet_auth.pv
+Process 0 (that is, the initial process):
+{1}new master: bitstring;
+(
+    {2}!
+    {3}let master_1: bitstring = master in
+    {4}in(c, v: bitstring);
+    {5}let k0: bitstring = kdf(master_1,v) in
+    {6}let k1: bitstring = h(k0,lab) in
+    {7}let k2: bitstring = h(k1,lab) in
+    {8}let k3: bitstring = h(k2,lab) in
+    (
+        {9}event CompAt(v,s1);
+        {10}out(c, k1)
+    ) | (
+        {11}event CompAt(v,s2);
+        {12}out(c, k2)
+    ) | (
+        {13}event CompAt(v,s3);
+        {14}out(c, k3)
+    )
+) | (
+    {15}!
+    {16}let master_2: bitstring = master in
+    {17}in(c, (v_1: bitstring,m1: bitstring,m2: bitstring,m3: bitstring));
+    {18}let k0_1: bitstring = kdf(master_2,v_1) in
+    {19}let k1_1: bitstring = h(k0_1,lab) in
+    {20}let k2_1: bitstring = h(k1_1,lab) in
+    {21}let k3_1: bitstring = h(k2_1,lab) in
+    {22}event CarSent(v_1,s1,m1);
+    {23}out(c, (v_1,s1,m1,mac(k1_1,(s1,m1))));
+    {24}event CarSent(v_1,s2,m2);
+    {25}out(c, (v_1,s2,m2,mac(k2_1,(s2,m2))));
+    {26}event CarSent(v_1,s3,m3);
+    {27}out(c, (v_1,s3,m3,mac(k3_1,(s3,m3))))
+) | (
+    {28}!
+    {29}let master_3: bitstring = master in
+    {30}in(c, (v_2: bitstring,i: bitstring,m: bitstring,t: bitstring));
+    {31}let k0_2: bitstring = kdf(master_3,v_2) in
+    {32}let k1_2: bitstring = h(k0_2,lab) in
+    {33}let k2_2: bitstring = h(k1_2,lab) in
+    {34}let k3_2: bitstring = h(k2_2,lab) in
+    (
+        {35}if (i = s1) then
+        {36}if (t = mac(k1_2,(s1,m))) then
+        {37}event BaseAccept(v_2,s1,m)
+    ) | (
+        {38}if (i = s2) then
+        {39}if (t = mac(k2_2,(s2,m))) then
+        {40}event BaseAccept(v_2,s2,m)
+    ) | (
+        {41}if (i = s3) then
+        {42}if (t = mac(k3_2,(s3,m))) then
+        {43}event BaseAccept(v_2,s3,m)
+    )
+)
+
+--  Process 1 (that is, process 0, with let moved downwards):
+{1}new master: bitstring;
+(
+    {2}!
+    {4}in(c, v: bitstring);
+    {3}let master_1: bitstring = master in
+    {5}let k0: bitstring = kdf(master_1,v) in
+    {6}let k1: bitstring = h(k0,lab) in
+    (
+        {9}event CompAt(v,s1);
+        {10}out(c, k1)
+    ) | (
+        {7}let k2: bitstring = h(k1,lab) in
+        (
+            {11}event CompAt(v,s2);
+            {12}out(c, k2)
+        ) | (
+            {13}event CompAt(v,s3);
+            {8}let k3: bitstring = h(k2,lab) in
+            {14}out(c, k3)
+        )
+    )
+) | (
+    {15}!
+    {17}in(c, (v_1: bitstring,m1: bitstring,m2: bitstring,m3: bitstring));
+    {22}event CarSent(v_1,s1,m1);
+    {16}let master_2: bitstring = master in
+    {18}let k0_1: bitstring = kdf(master_2,v_1) in
+    {19}let k1_1: bitstring = h(k0_1,lab) in
+    {23}out(c, (v_1,s1,m1,mac(k1_1,(s1,m1))));
+    {24}event CarSent(v_1,s2,m2);
+    {20}let k2_1: bitstring = h(k1_1,lab) in
+    {25}out(c, (v_1,s2,m2,mac(k2_1,(s2,m2))));
+    {26}event CarSent(v_1,s3,m3);
+    {21}let k3_1: bitstring = h(k2_1,lab) in
+    {27}out(c, (v_1,s3,m3,mac(k3_1,(s3,m3))))
+) | (
+    {28}!
+    {30}in(c, (v_2: bitstring,i: bitstring,m: bitstring,t: bitstring));
+    {29}let master_3: bitstring = master in
+    {31}let k0_2: bitstring = kdf(master_3,v_2) in
+    {32}let k1_2: bitstring = h(k0_2,lab) in
+    (
+        {35}if (i = s1) then
+        {36}if (t = mac(k1_2,(s1,m))) then
+        {37}event BaseAccept(v_2,s1,m)
+    ) | (
+        {33}let k2_2: bitstring = h(k1_2,lab) in
+        (
+            {38}if (i = s2) then
+            {39}if (t = mac(k2_2,(s2,m))) then
+            {40}event BaseAccept(v_2,s2,m)
+        ) | (
+            {41}if (i = s3) then
+            {34}let k3_2: bitstring = h(k2_2,lab) in
+            {42}if (t = mac(k3_2,(s3,m))) then
+            {43}event BaseAccept(v_2,s3,m)
+        )
+    )
+)
+
+-- Query event(BaseAccept(v_3,s1,m_1)) ==> event(CarSent(v_3,s1,m_1)) || event(CompAt(v_3,s1)) in process 1.
+Translating the process into Horn clauses...
+Completing...
+Starting query event(BaseAccept(v_3,s1,m_1)) ==> event(CarSent(v_3,s1,m_1)) || event(CompAt(v_3,s1))
+goal reachable: b-event(CarSent(v_3,s1,m_1)) && attacker(v_3) && attacker(m_1) -> event(BaseAccept(v_3,s1,m_1))
+goal reachable: b-event(CompAt(v_3,s1)) && attacker(v_3) && attacker(m_1) -> event(BaseAccept(v_3,s1,m_1))
+RESULT event(BaseAccept(v_3,s1,m_1)) ==> event(CarSent(v_3,s1,m_1)) || event(CompAt(v_3,s1)) is true.
+-- Query event(BaseAccept(v_3,s2,m_1)) ==> event(CarSent(v_3,s2,m_1)) || event(CompAt(v_3,s1)) || event(CompAt(v_3,s2)) in process 1.
+Translating the process into Horn clauses...
+Completing...
+Starting query event(BaseAccept(v_3,s2,m_1)) ==> event(CarSent(v_3,s2,m_1)) || event(CompAt(v_3,s1)) || event(CompAt(v_3,s2))
+goal reachable: b-event(CarSent(v_3,s2,m_1)) && b-event(CarSent(v_3,s1,m1_1)) && attacker(v_3) && attacker(m1_1) && attacker(m_1) -> event(BaseAccept(v_3,s2,m_1))
+goal reachable: b-event(CompAt(v_3,s2)) && attacker(v_3) && attacker(m_1) -> event(BaseAccept(v_3,s2,m_1))
+goal reachable: b-event(CompAt(v_3,s1)) && attacker(v_3) && attacker(m_1) -> event(BaseAccept(v_3,s2,m_1))
+RESULT event(BaseAccept(v_3,s2,m_1)) ==> event(CarSent(v_3,s2,m_1)) || event(CompAt(v_3,s1)) || event(CompAt(v_3,s2)) is true.
+-- Query event(BaseAccept(v_3,s3,m_1)) ==> event(CarSent(v_3,s3,m_1)) || event(CompAt(v_3,s1)) || event(CompAt(v_3,s2)) || event(CompAt(v_3,s3)) in process 1.
+Translating the process into Horn clauses...
+Completing...
+Starting query event(BaseAccept(v_3,s3,m_1)) ==> event(CarSent(v_3,s3,m_1)) || event(CompAt(v_3,s1)) || event(CompAt(v_3,s2)) || event(CompAt(v_3,s3))
+goal reachable: b-event(CarSent(v_3,s3,m_1)) && b-event(CarSent(v_3,s2,m2_1)) && b-event(CarSent(v_3,s1,m1_1)) && attacker(v_3) && attacker(m1_1) && attacker(m2_1) && attacker(m_1) -> event(BaseAccept(v_3,s3,m_1))
+goal reachable: b-event(CompAt(v_3,s3)) && attacker(v_3) && attacker(m_1) -> event(BaseAccept(v_3,s3,m_1))
+goal reachable: b-event(CompAt(v_3,s2)) && attacker(v_3) && attacker(m_1) -> event(BaseAccept(v_3,s3,m_1))
+goal reachable: b-event(CompAt(v_3,s1)) && attacker(v_3) && attacker(m_1) -> event(BaseAccept(v_3,s3,m_1))
+RESULT event(BaseAccept(v_3,s3,m_1)) ==> event(CarSent(v_3,s3,m_1)) || event(CompAt(v_3,s1)) || event(CompAt(v_3,s2)) || event(CompAt(v_3,s3)) is true.
+-- Query not event(BaseAccept(v_3,s2,m_1)) in process 1.
+Translating the process into Horn clauses...
+Completing...
+Starting query not event(BaseAccept(v_3,s2,m_1))
+goal reachable: attacker(v_3) && attacker(m_1) -> event(BaseAccept(v_3,s2,m_1))
+
+Derivation:
+
+1. We assume as hypothesis that
+attacker(m_1).
+
+2. Using the function s2 the attacker may obtain s2.
+attacker(s2).
+
+3. By 2, the attacker may know s2.
+By 1, the attacker may know m_1.
+Using the function 2-tuple the attacker may obtain (s2,m_1).
+attacker((s2,m_1)).
+
+4. Using the function lab the attacker may obtain lab.
+attacker(lab).
+
+5. We assume as hypothesis that
+attacker(v_3).
+
+6. The message v_3 that the attacker may have by 5 may be received at input {4}.
+So the message h(kdf(master[],v_3),lab) may be sent to the attacker at output {10}.
+attacker(h(kdf(master[],v_3),lab)).
+
+7. By 6, the attacker may know h(kdf(master[],v_3),lab).
+By 4, the attacker may know lab.
+Using the function h the attacker may obtain h(h(kdf(master[],v_3),lab),lab).
+attacker(h(h(kdf(master[],v_3),lab),lab)).
+
+8. By 7, the attacker may know h(h(kdf(master[],v_3),lab),lab).
+By 3, the attacker may know (s2,m_1).
+Using the function mac the attacker may obtain mac(h(h(kdf(master[],v_3),lab),lab),(s2,m_1)).
+attacker(mac(h(h(kdf(master[],v_3),lab),lab),(s2,m_1))).
+
+9. By 5, the attacker may know v_3.
+By 2, the attacker may know s2.
+By 1, the attacker may know m_1.
+By 8, the attacker may know mac(h(h(kdf(master[],v_3),lab),lab),(s2,m_1)).
+Using the function 4-tuple the attacker may obtain (v_3,s2,m_1,mac(h(h(kdf(master[],v_3),lab),lab),(s2,m_1))).
+attacker((v_3,s2,m_1,mac(h(h(kdf(master[],v_3),lab),lab),(s2,m_1)))).
+
+10. The message (v_3,s2,m_1,mac(h(h(kdf(master[],v_3),lab),lab),(s2,m_1))) that the attacker may have by 9 may be received at input {30}.
+So event BaseAccept(v_3,s2,m_1) may be executed at {40}.
+event(BaseAccept(v_3,s2,m_1)).
+
+11. By 10, event(BaseAccept(v_3,s2,m_1)).
+The goal is reached, represented in the following fact:
+event(BaseAccept(v_3,s2,m_1)).
+
+
+A more detailed output of the traces is available with
+  set traceDisplay = long.
+
+new master: bitstring creating master_4 at {1}
+
+in(c, a) at {4} in copy a_1
+
+event CompAt(a,s3) at {13} in copy a_1
+
+out(c, ~M) with ~M = h(h(h(kdf(master_4,a),lab),lab),lab) at {14} in copy a_1
+
+event CompAt(a,s2) at {11} in copy a_1
+
+out(c, ~M_1) with ~M_1 = h(h(kdf(master_4,a),lab),lab) at {12} in copy a_1
+
+event CompAt(a,s1) at {9} in copy a_1
+
+out(c, ~M_2) with ~M_2 = h(kdf(master_4,a),lab) at {10} in copy a_1
+
+in(c, (a,s2,a_2,mac(~M_1,(s2,a_2)))) with mac(~M_1,(s2,a_2)) = mac(h(h(kdf(master_4,a),lab),lab),(s2,a_2)) at {30} in copy a_3
+
+event BaseAccept(a,s2,a_2) at {40} in copy a_3 (goal)
+
+The event BaseAccept(a,s2,a_2) is executed at {40} in copy a_3.
+A trace has been found.
+RESULT not event(BaseAccept(v_3,s2,m_1)) is false.
+
+--------------------------------------------------------------
+Verification summary:
+
+Query event(BaseAccept(v_3,s1,m_1)) ==> event(CarSent(v_3,s1,m_1)) || event(CompAt(v_3,s1)) is true.
+
+Query event(BaseAccept(v_3,s2,m_1)) ==> event(CarSent(v_3,s2,m_1)) || event(CompAt(v_3,s1)) || event(CompAt(v_3,s2)) is true.
+
+Query event(BaseAccept(v_3,s3,m_1)) ==> event(CarSent(v_3,s3,m_1)) || event(CompAt(v_3,s1)) || event(CompAt(v_3,s2)) || event(CompAt(v_3,s3)) is true.
+
+Query not event(BaseAccept(v_3,s2,m_1)) is false.
+
+--------------------------------------------------------------
+
+exit code: 0 ; wall time 0 s ; peak memory 9 MB

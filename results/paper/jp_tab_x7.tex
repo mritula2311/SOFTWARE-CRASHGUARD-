@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Two-part fusion (X7), best four preregistered and best four exploratory combinations. No time synchronisation or mounting error is modelled.}
+\label{tab:jp_tab_x7}
+\begin{tabular}{lllllllll}
+\toprule
+Low-range part & High-range part & Fusion rule & Share within 10\% [95\% CI] & Low part alone, lower end & High part alone, lower end & Extra part & Origin & results.json key \\
+\midrule
+adxl345 +-16 g 3200 Hz & adxl372 +-200 g 3200 Hz & blend & 0.651 [0.588, 0.713] & 0.0 & 0.837 & 1 (count; no price) & MEASURED\_SOFTWARE & x.x7.adxl345\_r16\_f3200+adxl372\_r200\_f3200.blend.w10 \\
+adxl345 +-16 g 3200 Hz & adxl375 +-200 g 3200 Hz & blend & 0.649 [0.584, 0.712] & 0.0 & 0.837 & 1 (count; no price) & MEASURED\_SOFTWARE & x.x7.adxl345\_r16\_f3200+adxl375\_r200\_f3200.blend.w10 \\
+mpu6050 +-16 g 1000 Hz & h3lis331dl +-200 g 1000 Hz & blend & 0.651 [0.584, 0.717] & 0.04 & 0.76 & 1 (count; no price) & MEASURED\_SOFTWARE & x.x7.mpu6050\_r16\_f1000+h3lis331dl\_r200\_f1000.blend.w10 \\
+lis3dh +-16 g 1250 Hz & h3lis331dl +-200 g 1000 Hz & substitution & 0.648 [0.579, 0.722] & 0.017 & 0.76 & 1 (count; no price) & MEASURED\_SOFTWARE & x.x7.lis3dh\_r16\_f1250+h3lis331dl\_r200\_f1000.substitution.w10 \\
+adxl345 +-16 g 3200 Hz & adxl372 +-200 g 3200 Hz & blend\_wide (exploratory) & 0.917 [0.876, 0.953] & 0.0 & 0.837 & 1 (count; no price) & MEASURED\_SOFTWARE & x.x7.adxl345\_r16\_f3200+adxl372\_r200\_f3200.blend\_wide.w10 \\
+adxl345 +-16 g 3200 Hz & adxl375 +-200 g 3200 Hz & blend\_wide (exploratory) & 0.916 [0.875, 0.953] & 0.0 & 0.837 & 1 (count; no price) & MEASURED\_SOFTWARE & x.x7.adxl345\_r16\_f3200+adxl375\_r200\_f3200.blend\_wide.w10 \\
+adxl345 +-16 g 3200 Hz & adxl372 +-200 g 3200 Hz & substitution\_wide (exploratory) & 0.892 [0.844, 0.936] & 0.0 & 0.837 & 1 (count; no price) & MEASURED\_SOFTWARE & x.x7.adxl345\_r16\_f3200+adxl372\_r200\_f3200.substitution\_wide.w10 \\
+lis3dh +-16 g 1250 Hz & h3lis331dl +-200 g 1000 Hz & blend\_wide (exploratory) & 0.886 [0.841, 0.927] & 0.017 & 0.76 & 1 (count; no price) & MEASURED\_SOFTWARE & x.x7.lis3dh\_r16\_f1250+h3lis331dl\_r200\_f1000.blend\_wide.w10 \\
+\bottomrule
+\end{tabular}
+\end{table}

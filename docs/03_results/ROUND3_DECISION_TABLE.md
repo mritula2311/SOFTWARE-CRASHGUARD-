@@ -1,0 +1,35 @@
+# Round 3 decision table (T6)
+
+<!-- header:start -->
+| Field | Value |
+|---|---|
+| Status | current |
+| Date | 2026-11-14 |
+| Owner | Mritula S |
+| Scope | Round 3 decision table: result, label, interval, nearest prior work, allowed wording and placement for every hypothesis. |
+| Evidence labels used | MEASURED_SOFTWARE, TRACE_DRIVEN, SIMULATED, FORMAL, ANALYTICAL, NOT_RUN |
+| Abbreviations | ACK = acknowledgement frame; ESP32 = a Wi-Fi microcontroller family (Espressif); ESV = Enhanced Safety of Vehicles (conference); GPS = Global Positioning System; IEEE = Institute of Electrical and Electronics Engineers; LoRa = long-range radio modulation; NHTSA = National Highway Traffic Safety Administration |
+<!-- header:end -->
+
+Rule (V14 section 5): a protocol claim reaches the main text only if it holds in FORMAL or TRACE_DRIVEN evidence, or in at least two of the three link models. Seven preregistered tests share one Holm family (adjusted p about 0.0035, set by the resolution of the bootstrap); H-T2, H-T2sec and H-T3c are decided by their stated criteria. Nearest prior work is the closest item of `docs/06_references/NOVELTY_MATRIX_2021PLUS.md`.
+
+| Hypothesis | Result | Label | Interval | Nearest prior work | Allowed wording | Placement |
+|---|---|---|---|---|---|---|
+| H-T1a (L, M, H) | SUPPORTED, SUPPORTED, SUPPORTED: D1 is within 2 points of the best baseline in each group (it is above it: best minus D1 = -0.1, -1.4, -6.7 points) | TRACE_DRIVEN | upper limits 0.0, -0.8, -6.5 points | Nessa et al. (CNS 2020, conference); bidirectional LoRa (IEEE Commun. Lett. 2021); single-channel LoRa gateway (Sci. Rep. 2024) | On measured London loss sequences, a table-driven retry policy was not worse than six other retry rules on single-link delivery within 10 s; the replay has no crowd and its delivery follows the number of attempts that fit before the deadline. | Main text only together with the zero-spacing control |
+| H-T1b | SUPPORTED: D1 minus quick retries = 6.7 points on group H | TRACE_DRIVEN | 6.5 to 6.8 points | as above | On links with 40% loss or more, D1 delivered 6.7 points more than quick retries on the replay; a no-hold control that retries at once delivered 54.0 against D1's 49.3, so the gain is retry timing, not a mechanism shown by the traces. | Main text with the control (the rule admits it as TRACE_DRIVEN evidence); D1 stays a supplement item in the ns-3 reading |
+| H-T1c | SUPPORTED: the provisional alert arrives 1.87 s earlier (median) in every group; extra airtime 37% to 31%; delivery not lower | TRACE_DRIVEN | airtime upper limits below 40% in all groups; delivery lower limits 0.0 to 9.0 points | no journal article from 2021 onwards found in the sources checked on provisional-then-confirmed crash alerts | On the same measured traces, a 14-byte provisional flash arrived about 1.9 s before the full alert with about a third more airtime. | Main text |
+| H-T2 (timed) | SUPPORTED (FORMAL): D1's worst-case delivery time is not longer than quick retries' for k = 0 to 6; no duty breach | FORMAL (exhaustive enumeration of the frozen code; not UPPAAL) | exact values in ROUND3_RESULTS.md | none found for UPPAAL deadline bounds of LoRa alert retries in 2021+ journals | In a single-link timing model, D1 delivers within 10 s after up to six lost uplinks where quick retries do not, and never exceeds the 1% hourly allowance. | Main text with the tool named |
+| H-T2sec | PARTLY SUPPORTED: L1 to L4b and no double acceptance across a car reboot proved on M1; attack found on M0; L6 refuted as expected; id uniqueness after a car reboot not proved (timeout) | FORMAL | not applicable | Wesemeyer et al. (EuroS&P 2020); Dong et al. (ISSRE 2024); LoRaWAN authentication analyses (IEEE TII 2021, IJSNET 2025) | A Tamarin model of a crash-alert protocol with per-vehicle keys and an ACK bound to the vehicle: authenticity, per-vehicle ACK binding, window and seen-set properties proved; a replay after a base reboot is possible; one reboot lemma not completed. | Main text for L1 to L4b and the M0 attack (R4); the unfinished lemma in the limits |
+| H-T3a | SUPPORTED: median 1750 ms earlier | MEASURED_SOFTWARE | 1750 to 1750 ms | direction-aware telematics detection (IJLTEMAS 2026); eCall injury prediction papers | On the de-duplicated VZCrash test split, the early-exit rule decides a median of 1.75 s before the full window (a stored seed-42 decision set that R3 already used). | Main text |
+| H-T3b | SUPPORTED: retraction share 10.8% | MEASURED_SOFTWARE | 9.7% to 12.0% | as above | At the 1% false-alarm target, about 1 in 9 provisional alarms was withdrawn by the full window. | Main text |
+| H-T3c | SUPPORTED: holds in 2 of 3 link models (custom, trace-driven; ns-3 NOT_RUN) | SIMULATED and TRACE_DRIVEN | not applicable | as above | The earlier arrival of the provisional alert holds in the custom simulator and on the measured traces; ns-3 was not run for this alert. | Main text with ns-3 stated as NOT_RUN |
+| T3 class agreement | NHTSA frontal pulses: 3% agreement at 50 ms, 98% at 200 ms; VZCrash agreement 99.8% (uninformative: nearly all class 0) | MEASURED_SOFTWARE | VZCrash 99.7% to 100.0% | Stitzel et al. (OTDA, ESV); eCall injury papers | A severity class from the window truncated at 50 ms agrees with the full-window class for about 3% of frontal NHTSA pulses; at 200 ms for 98%. | Supplement (limit of the provisional alert) |
+| T4 energy budget | no hypothesis; at +17 dBm the all-lost schedule of D1 needs about 5 J, most of it for the ESP32 and GPS being awake | ANALYTICAL | not applicable | none found (topic 13) | Under stated assumptions, a 1 F capacitor between 5 V and 3 V can supply the whole 10 s schedule of every policy. | Supplement |
+
+## What the round does not support
+
+- A mechanism of D1 beyond retry timing: the zero-spacing control beats it on the traces, and the ns-3 gain did not reproduce.
+- Any statement about vehicles, ACK exchanges or crowds from the traces.
+- An implementation guarantee from the Tamarin models, and the id-uniqueness lemma after a car reboot (not proved).
+- Any severity class in the provisional alert: at 50 ms the class is not yet determined for frontal crashes.
+- Any claim that no prior work exists: use the wording of the novelty matrix (no journal article from 2021 onwards found in the sources checked; Scopus, Google Scholar and TRID not run; IEEE Xplore not run in this session).

@@ -1,0 +1,244 @@
+
+
+
+How to read it. A row is one preregistered hypothesis; test cells (for example the SF7 and SF9 cells of H-P1a) belong to their row. A hypothesis is called SUPPORTED only if its stated criterion holds and, where the version has a Holm family, the Holm-adjusted p is below 0.05. A p-value below 0.05 with a missed effect size is NOT SUPPORTED. NOT\_RUN rows enter their family with p = 1. PARTLY means some cells hold and others do not. The p-values are the stored ones (\texttt{results/results.json}); where a source gives only 'see REDESIGN\_B\_RESULTS' the value is in \texttt{docs/03\_results/REDESIGN\_B\_RESULTS.md}.
+
+\subsection*{Versions}
+
+{\scriptsize\raggedright
+\begin{longtable}{p{0.158\linewidth}p{0.158\linewidth}p{0.158\linewidth}p{0.158\linewidth}p{0.158\linewidth}p{0.158\linewidth}}
+\toprule
+Version & File & Commit and time of the file & Topic & Holm family & Data roles \\
+\midrule
+\endhead
+V1 & \texttt{PREREGISTRATION.md} & 4a14000 2026-11-13 23:58 & UA-SCT severity triage & H-a to H-c, Holm over 3 & real NHTSA and VZCrash records; grouped bootstrap; no separate held-out split named in the file \\
+V2 & \texttt{PREREGISTRATION\_V2.md} & 4a14000 2026-11-13 23:58 & studies A to F & Holm over 9 with a p-value (A1, A2, A3, B1, B2, D1, D2, E1, F2); B3, E2, F1 by formula or rule & VZCrash test split (held-out) and simulated grids \\
+V3 & \texttt{PREREGISTRATION\_V3.md} & 4a14000 2026-11-13 23:58 & X1 to X8 & Holm over 7 (X1, X2, X3, X5, X6, X7, X8); X4 is a statement about files & held-out VZCrash test split; T13a held-out harvested records \\
+V4 & \texttt{PREREGISTRATION\_V4.md} & 4a14000 2026-11-13 23:58 & P1 to P4 & Holm over 7 & sealed fold (P1 to P3) and test split (P4) \\
+V5 & \texttt{PREREGISTRATION\_V5.md} & 4a14000 2026-11-13 23:58 & blocks B, C, F, G & Holm over 18; NOT\_RUN enters with p = 1 & sealed fold, nested cross-validation, simulated grids \\
+V7 & \texttt{PREREGISTRATION\_V7.md} & b7afe02 2026-11-14 00:04 & release: reruns Q1 to Q3 and protocol block A & Holm over 20; NOT\_RUN enters with p = 1 & real-only reruns on the original splits; held-out grid of 32 cells \\
+V11 & \texttt{PREREGISTRATION\_V11.md} & bbaa794 2026-11-14 09:40 & simulated hardware-format validation (S) and protocol candidates (R) & two Holm families: S (6) and R (7) & simulated hardware-format logs; held-out grid of 16 cells \\
+V12 & \texttt{PREREGISTRATION\_V12.md} & 5d7aaa0 2026-11-14 11:45 & redesign D1 to D4 & Holm over 10; NOT\_RUN enters with p = 1 & design grid, then fresh grids (FRESH-A, FRESH-B), ns-3 cross-check on S-X \\
+V13 & \texttt{PREREGISTRATION\_V13.md} & e4d92b2 2026-11-15 03:47 & paper items P0 (H-C3 refit) and P1 (two-stage alert in ns-3) & H-C3 in the 18 of V5 (recomputed); P1 family of 8 (P1a and P1c in 4 cells) & development fold (P0); ns-3 runs (P1) \\
+V14 & \texttt{PREREGISTRATION\_V14.md} & 539e14c 2026-11-14 23:03 & round 3, T1 to T4 & Holm over 7 (T1a x3, T1b, T1c, T3a, T3b); T2, T2sec, T3c decided by rule & London trace dev/held-out groups (LoED), de-duplicated VZCrash test split, formal models \\
+V15 & \texttt{PREREGISTRATION\_V15.md} & 4d3278b 2026-11-15 07:05 & round 4, A1 to A3 & Holm over 5 & development on LoED; fresh sniffer links (Zenodo 7919213) for A1b; EXPLORATORY for A2 \\
+V16 & \texttt{PREREGISTRATION\_V16.md} & 57df2a8 2026-11-15 09:28 & round 5, L1 to L11 & Holm over 13 (L1 to L8b, L10a, L10b); L11 own family & development then freeze then held-out once: VZCrash halves, NHTSA, FARS 2022, UCI HAR, SisFall, simulated hardware-format logs \\
+V17 & \texttt{PREREGISTRATION\_V17.md} & 0c38d3a 2026-11-16 00:09 & round 6, R6-1 to R6-3 & Holm over 7 (H-R6-1a, 1b, 1c, 2a, 2b, 3a, 3b); formal rows p = 1e-300 if proved & ns-3 seeds 1 to 60 (held-out for this question), LoED half 0 for traces, VZCrash test half 1 (hash r6), bounded models \\
+V18 & \texttt{PREREGISTRATION\_V18.md} & b8405d1 2026-11-16 & round 7, A1 to A3 and B1 to B3 & Holm over 5 (H-R7-A1, A2, B1, B2, B3); H-R7-A3 descriptive & LoED half 0, stored event table, simulated events; measured resolver cost \\
+V19 & \texttt{PREREGISTRATION\_V19.md} & 3879320 2026-11-16 & round 7b, H-R7b-1 and H-R7b-2 & Holm over 2; the reserve size was chosen from round-7 data (confirmation on fresh seeds) & fresh seeds 100 to 105; LoED half 0 with fresh start points (seed 4242) \\
+\bottomrule
+\end{longtable}}
+
+Not counted: V1 to V16: X4 (labels), the T4 energy budget, the zero-spacing duty check (V13), A3 ProVerif (V15), L9 dispatch break-even (V16, descriptive) and the 'B1' and 'B3' checks of V5 are statements, checks or descriptive results with no hypothesis test; they are not counted in the totals. Versions V6, V8, V9 and V10 do not exist as files: the numbering skipped them. No preregistration was written and then left unrun.
+
+Addenda written after earlier results (handled as stated): V4 addendum 1 (clarifications after the P1 to P3 freezes, no change of a hypothesis); V5 addenda 1 to 3 (after Blocks B, C and G; the F-family rows marked EXPLORATORY-REVISED re-test earlier hypotheses after their results were seen and are labelled as such; H-C3 is tested for the frontal barrier only because the generator gate failed for the other modes); V12 (the Nessa-style baseline in H-D1s was added after session 1 and sits outside the Holm family); V16 addenda A1 and A2 (before any run) and S2, S2.1, S2.2 (session 2 datasets and designs, before any session-2 run); L11 was added after session 1 and is tested in its own family of one.
+
+\subsection*{Ledger}
+
+{\scriptsize\raggedright
+\begin{longtable}{p{0.106\linewidth}p{0.106\linewidth}p{0.106\linewidth}p{0.106\linewidth}p{0.106\linewidth}p{0.106\linewidth}p{0.106\linewidth}p{0.106\linewidth}p{0.106\linewidth}}
+\toprule
+Version & ID & Statement & Result & Verdict & Holm p & Label & Paper location & Note \\
+\midrule
+\endhead
+V1 & H-a & P3 mis-triage lower than P1 at +-16 g & interval -0.085 to -0.015 & SUPPORTED & 0.004 & MEASURED\_SOFTWARE & not in the combined paper &  \\
+V1 & H-b & P3 costs more escalations of non-severe events; P4 bounds fast-path airtime & interval 0.370 to 0.658 & SUPPORTED & < 0.001 & MEASURED\_SOFTWARE & not in the combined paper &  \\
+V1 & H-c & gain shrinks at +-64 g & reduction lower limit 0.0005 & SUPPORTED & 0.018 & MEASURED\_SOFTWARE & not in the combined paper &  \\
+V2 & H-A1 & difficulty-aware severity interval narrows p90 error & p90 reduction 16.1 points & SUPPORTED & 0.009 & MEASURED\_SOFTWARE & supplement &  \\
+V2 & H-A2 & narrowing in the lowest tercile & no narrowing & NOT SUPPORTED & 1.000 & MEASURED\_SOFTWARE & negatives &  \\
+V2 & H-A3 & containment of reference delta-V at least 0.90 & below 0.90 & NOT SUPPORTED & 1.000 & MEASURED\_SOFTWARE & negatives &  \\
+V2 & H-B1 & burst variant gains 3 points in 6 of 10 cells & no variant & NOT SUPPORTED & 1.000 & SIMULATED & negatives &  \\
+V2 & H-B2 & burst variant harms by at most 2 points & harm bound above 2 points for some cell & PARTLY & 1.000 & SIMULATED & negatives & labelled MIXED in the source \\
+V2 & H-B3 & ratio of gains & not evaluable because H-B1 failed & NOT SUPPORTED & no p (rule) & SIMULATED & negatives &  \\
+V2 & H-D1 & early flag saves at least 100 ms & median 86 ms & NOT SUPPORTED & 1.000 & MEASURED\_SOFTWARE & negatives &  \\
+V2 & H-D2 & second early-flag criterion & criterion met, Holm p 0.385 & PARTLY & 0.385 & MEASURED\_SOFTWARE & negatives & labelled MIXED in the source \\
+V2 & H-E1 & gain of at least 2 points & gain below 2 points & NOT SUPPORTED & 1.000 & SIMULATED & negatives &  \\
+V2 & H-E2 & work factors above 2\textasciicircum{}32 & both above & SUPPORTED & no p (formula) & ANALYTICAL & supplement &  \\
+V2 & H-F1 & positive optimal Critical hold & 2 combinations positive & NOT SUPPORTED & no p (formula) & ANALYTICAL & negatives &  \\
+V2 & H-F2 & reduction with the two-stage scheme & reduction 32\% & SUPPORTED & 0.009 & SIMULATED & supplement &  \\
+V3 & H-X1 & 16-bit fixed-point forest, AP loss at most 0.005 and 30\% flash cut & flash clause not met & NOT SUPPORTED & 0.007 & MEASURED\_SOFTWARE & negatives &  \\
+V3 & H-X2 & cheap-trigger cascade, +2 points of crashes passing & not met & NOT SUPPORTED & 1.000 & MEASURED\_SOFTWARE & negatives &  \\
+V3 & H-X3 & group-aware training +1 point recall at the 1\% target & +0.001 & NOT SUPPORTED & 1.000 & MEASURED\_SOFTWARE & negatives &  \\
+V3 & H-X5 & +-16 g fill + ridge preserves delta-V rank & Spearman 0.75 & NOT SUPPORTED & 1.000 & MEASURED\_SOFTWARE & negatives &  \\
+V3 & H-X6 & lower-bound-anchored estimator lowers p90 delta-V error by 5 points & p90 gain 31 points & SUPPORTED & 0.007 & MEASURED\_SOFTWARE & main (C3 clipping restoration is a different, later method) and supplement &  \\
+V3 & H-X7 & two-part pair reaches 0.80 within +-10\% & not met & NOT SUPPORTED & 1.000 & MEASURED\_SOFTWARE & negatives &  \\
+V3 & H-X8 & sequential rule 100 ms earlier & not met & NOT SUPPORTED & 1.000 & MEASURED\_SOFTWARE & negatives &  \\
+V4 & H-P1 & direct severity classifier beats the anchored estimator & not met & NOT SUPPORTED & 1.000 & MEASURED\_SOFTWARE & negatives & raw p 0.836 \\
+V4 & H-P2 & anchored interval & not met & NOT SUPPORTED & 1.000 & MEASURED\_SOFTWARE & negatives &  \\
+V4 & H-P3a & abstention at 70\% retention & not met & NOT SUPPORTED & 0.780 & MEASURED\_SOFTWARE & negatives & raw p 0.130 \\
+V4 & H-P3b & abstain routing & not met & NOT SUPPORTED & 1.000 & MEASURED\_SOFTWARE & negatives &  \\
+V4 & H-P4a & compact forest & criterion met & SUPPORTED & 0.007 & MEASURED\_SOFTWARE & main (detector, 15-tree forest) &  \\
+V4 & H-P4b & augmentation at the 1\% false-alarm target & not met & NOT SUPPORTED & 1.000 & MEASURED\_SOFTWARE & negatives &  \\
+V4 & H-P4c & calibration over the trivial rule & not met & NOT SUPPORTED & 1.000 & MEASURED\_SOFTWARE & negatives &  \\
+V5 & H-B2 & P1+ against P0 (flash and hold on the severity table) & not met & NOT SUPPORTED & 1.000 & SIMULATED & negatives &  \\
+V5 & H-C3 & synthetic requirement matches the real one within one range step & frontal barrier only; pole and side fail the generator gate & SUPPORTED & 0.018 & SIMULATED & main (range requirement) with the refit of V13 & re-tested in V13 on the development fold \\
+V5 & H-F1 & direct classifier against anchored estimator (EXPLORATORY-REVISED) & not met & NOT SUPPORTED & 1.000 & MEASURED\_SOFTWARE & negatives & rerun of H-P1 after its result \\
+V5 & H-F1b & anchored interval (EXPLORATORY-REVISED) & not met & NOT SUPPORTED & 1.000 & MEASURED\_SOFTWARE & negatives & rerun of H-P2 \\
+V5 & H-F1c & abstention at 70\% retention (EXPLORATORY-REVISED) & not met & NOT SUPPORTED & 1.000 & MEASURED\_SOFTWARE & negatives & rerun of H-P3a \\
+V5 & H-F1d & H-X6 on splits G and O & not run & NOT\_RUN & 1.000 (p = 1 rule) & NOT\_RUN & not reported &  \\
+V5 & H-F1e & H-X5 rank preservation & not run & NOT\_RUN & 1.000 (p = 1 rule) & NOT\_RUN & not reported &  \\
+V5 & H-F2a & augmentation at the 1\% target (EXPLORATORY-REVISED) & not met & NOT SUPPORTED & 1.000 & MEASURED\_SOFTWARE & negatives & rerun of H-P4b \\
+V5 & H-F2b & group-aware training (EXPLORATORY-REVISED) & +0.001 & NOT SUPPORTED & 1.000 & MEASURED\_SOFTWARE & negatives & rerun of H-X3 \\
+V5 & H-F2c & trigger cascade (EXPLORATORY-REVISED) & not run & NOT\_RUN & 1.000 (p = 1 rule) & NOT\_RUN & not reported &  \\
+V5 & H-F2d & fixed-point forest, AP and flash (EXPLORATORY-REVISED) & flash clause not met & NOT SUPPORTED & 0.018 & MEASURED\_SOFTWARE & negatives & rerun of H-X1 \\
+V5 & H-F2e & sequential rule (EXPLORATORY-REVISED) & not run & NOT\_RUN & 1.000 (p = 1 rule) & NOT\_RUN & not reported &  \\
+V5 & H-F2f & calibration over the trivial rule (EXPLORATORY-REVISED) & not run & NOT\_RUN & 1.000 (p = 1 rule) & NOT\_RUN & not reported &  \\
+V5 & H-F3a & P3 against the lowered table at equal escalation & not met & NOT SUPPORTED & 1.000 & SIMULATED & negatives &  \\
+V5 & H-F3b & abstain routing against the lowered table & not met & NOT SUPPORTED & 1.000 & SIMULATED & negatives & raw p 0.930 \\
+V5 & H-G3a & slotted fast path against pure ALOHA & not met & NOT SUPPORTED & 1.000 & SIMULATED & negatives &  \\
+V5 & H-G3b & listen-before-talk against duty-cycle-only access & not met & NOT SUPPORTED & 1.000 & SIMULATED & negatives &  \\
+V5 & H-G3c & V2V relay against no relay & not met & NOT SUPPORTED & 1.000 & SIMULATED & negatives &  \\
+V7 & H-Q1a & H-P1 rerun on real-only data & same verdict as the original & NOT SUPPORTED & 1.000 & MEASURED\_SOFTWARE & negatives &  \\
+V7 & H-Q1b & H-P2 rerun & same & NOT SUPPORTED & 1.000 & MEASURED\_SOFTWARE & negatives &  \\
+V7 & H-Q1c & H-P3a rerun & same & NOT SUPPORTED & 1.000 & MEASURED\_SOFTWARE & negatives &  \\
+V7 & H-Q1d & H-X5 rerun & same & NOT SUPPORTED & 1.000 & MEASURED\_SOFTWARE & negatives &  \\
+V7 & H-Q1e & H-X6 rerun & same & SUPPORTED & 0.020 & MEASURED\_SOFTWARE & supplement &  \\
+V7 & H-Q1f & H-X7 rerun & same & NOT SUPPORTED & 1.000 & MEASURED\_SOFTWARE & negatives &  \\
+V7 & H-Q2a & H-P4a rerun & same & SUPPORTED & 0.020 & MEASURED\_SOFTWARE & main (detector) &  \\
+V7 & H-Q2b & H-P4b rerun & same & NOT SUPPORTED & 1.000 & MEASURED\_SOFTWARE & negatives &  \\
+V7 & H-Q2c & H-P4c rerun & same & NOT SUPPORTED & 1.000 & MEASURED\_SOFTWARE & negatives &  \\
+V7 & H-Q2d & H-X1 rerun & p 0.02 but criterion not met & NOT SUPPORTED & 0.020 & MEASURED\_SOFTWARE & negatives &  \\
+V7 & H-Q2e & H-X2 rerun & not run in advance (surrogate windows) & NOT\_RUN & 1.000 (p = 1 rule) & NOT\_RUN & not reported &  \\
+V7 & H-Q2f & H-X3 rerun & same & NOT SUPPORTED & 1.000 & MEASURED\_SOFTWARE & negatives &  \\
+V7 & H-Q2g & H-X8 rerun & same & NOT SUPPORTED & 1.000 & MEASURED\_SOFTWARE & negatives &  \\
+V7 & H-Q2h & early-exit rule with surrogate-trained forests & not run & NOT\_RUN & 1.000 (p = 1 rule) & NOT\_RUN & not reported &  \\
+V7 & H-Q3a & N28 equal-escalation comparison & not run in the rerun & NOT\_RUN & 1.000 (p = 1 rule) & NOT\_RUN & not reported &  \\
+V7 & H-Q3b & H-B2 rerun & not run in the rerun & NOT\_RUN & 1.000 (p = 1 rule) & NOT\_RUN & not reported &  \\
+V7 & H-Q3c & P3b abstain routing rerun & not run in the rerun & NOT\_RUN & 1.000 (p = 1 rule) & NOT\_RUN & not reported &  \\
+V7 & H-A1 & OS-DR protocol: 5-point gain in at least 20 of 32 cells & 7 cells; 8 cells lost by more than 2 points & NOT SUPPORTED & 1.000 & SIMULATED & negatives & block A of the release \\
+V7 & H-A2 & GS-CA burst protocol: gain in at least 10 of 16 burst cells & 0 cells & NOT SUPPORTED & 1.000 & SIMULATED & negatives &  \\
+V7 & H-A3 & event ACK secure against a key holder & a forged ACK from a key holder stops every vehicle & NOT SUPPORTED & 1.000 & ANALYTICAL & negatives &  \\
+V11 & H-S1 & impact-side rule keeps 0.90 in every sensor variant & 3 of 16 sets below 0.90 (axis flips, 10 Hz) & NOT SUPPORTED & 1.000 & SIMULATED\_HW\_FORMAT & negatives & family S \\
+V11 & H-S2 & 2 g trigger recall 0.90 and false alarms at most 0.10 & false-alarm rate 0.640 in the base variant & NOT SUPPORTED & 1.000 & SIMULATED\_HW\_FORMAT & negatives & family S \\
+V11 & H-S3 & UA-SCT delivery at least fixed-3 minus 0.02 on calibrated links & criterion met, Holm p 1 & NOT SUPPORTED & 1.000 & SIMULATED\_HW\_FORMAT & negatives & family S \\
+V11 & H-S4 & median trigger-to-ACK latency at least 500 ms & median 519 ms & SUPPORTED & < 0.001 & SIMULATED\_HW\_FORMAT & supplement & family S \\
+V11 & H-S5 & no attack accepted; counter persisted & 0 of 289 attempts accepted & SUPPORTED & < 0.001 & SIMULATED\_HW\_FORMAT & supplement & family S \\
+V11 & H-S6 & SW-420 confirmation lowers false alarms by 0.02 and loses at most 0.02 recall & recall loss 0.043 & NOT SUPPORTED & < 0.001 & SIMULATED\_HW\_FORMAT & negatives & family S; sign of the criterion explained in the source \\
+V11 & H-R1a & GTF accepts at least 99\% of valid alerts after a car reboot & smallest availability 0.9965 & SUPPORTED & 0.003 & SIMULATED & supplement & family R \\
+V11 & H-R1b & GTF replay acceptance zero outside, at most 1\% inside the window & largest rate 0.0325 & NOT SUPPORTED & 1.000 & SIMULATED & negatives & family R \\
+V11 & H-R1c & GTF cuts flash writes 10 times & 16.7 times & SUPPORTED & < 0.001 & ANALYTICAL & main (boot-counter design cost) and supplement & family R \\
+V11 & H-R2a & 40-byte frame with 7 or 8-byte tag raises burst delivery by 5 points & criterion met, Holm p 0.454 & NOT SUPPORTED & 0.454 & SIMULATED & negatives & family R \\
+V11 & H-R2b & 97-byte frame dominated by shorter frames with tag at least 8 bytes & dominated & SUPPORTED & < 0.001 & SIMULATED & supplement & family R \\
+V11 & H-R3 & provisional flash at least 0.8 s earlier, under 20\% retractions, under 40\% airtime & 1.87 s earlier; retractions 0.108 & SUPPORTED & 0.014 & SIMULATED & main (C5) & family R; later tested in ns-3 (V13) \\
+V11 & H-R4 & per-vehicle ACK keys: a forged ACK stops only that node & suppressed fraction 1.0 to 0.333 & SUPPORTED & < 0.001 & ANALYTICAL & main (C4) & family R; later proved in Tamarin (V14) \\
+V12 & H-D1a & D1 loss-adaptive deadline table beats the severity table in every cell & FRESH-A smallest +0.026; ns-3 smallest -0.013 & SUPPORTED & see REDESIGN\_B\_RESULTS & SIMULATED & supplement (simulator-dependent) & supported in the custom simulator, not in ns-3 \\
+V12 & H-D1b & D1 gains at loss of 40\% or more & +0.162 custom; +0.021 ns-3 (S-X: +0.116 against +0.021) & SUPPORTED & see REDESIGN\_B\_RESULTS & SIMULATED & main (C6, evaluation finding) and supplement & not met in ns-3 \\
+V12 & H-D1c & D1 within the duty limit & 0 runs above the limit & SUPPORTED & see REDESIGN\_B\_RESULTS & SIMULATED & supplement &  \\
+V12 & H-D1s & D1 against six baselines & smallest -0.003, mean +0.031 (FRESH-A); S-X not met & SUPPORTED & see REDESIGN\_B\_RESULTS & SIMULATED & supplement & Nessa-style baseline ADDED-AFTER-SESSION-1, outside the family \\
+V12 & H-D2a & D2 gateway-signed cluster ACK loses no delivery & smallest change -0.001 & SUPPORTED & see REDESIGN\_B\_RESULTS & SIMULATED & supplement &  \\
+V12 & H-D2b & D2 burst gain of 5 points & +0.011 & NOT SUPPORTED & see REDESIGN\_B\_RESULTS & SIMULATED & negatives &  \\
+V12 & H-D2c & no vehicle-key holder stops another vehicle & bounded model, 2 vehicles & SUPPORTED & see REDESIGN\_B\_RESULTS & ANALYTICAL & supplement &  \\
+V12 & H-D3 & D3 slotted retries gain 5 points in bursts & +0.001 & NOT SUPPORTED & see REDESIGN\_B\_RESULTS & SIMULATED & negatives &  \\
+V12 & H-D4a & D4 24-byte provisional frame within the airtime bound & extra airtime 0.410 to 0.496; 0 of 48 cells below 0.25 & NOT SUPPORTED & see REDESIGN\_B\_RESULTS & SIMULATED & negatives &  \\
+V12 & H-D4b & D4 arrival time and burst delivery & not run & NOT\_RUN & 1.000 (p = 1 rule) & NOT\_RUN & not reported &  \\
+V13 & H-C3 (refit) & H-C3 refit on the development fold (P0) & frontal barrier only; duration statistic 0.191 against gate 0.20; pole and side fail & SUPPORTED & 0.018 (V5 family recomputed) & SIMULATED & main (C2) & re-test of the V5 hypothesis; counted once, under V5 \\
+V13 & H-P1a & provisional alert at least 0.8 s earlier in ns-3 & 4 of 4 cells supported (SF7, SF9, two settings) & SUPPORTED & 0.004 & SIMULATED & main (C5) & four cells in the family of 8 \\
+V13 & H-P1b & retractions under 20\% at the 1\% target & 0.108 & SUPPORTED & not in the family (data-side) & MEASURED\_SOFTWARE & main (C5) &  \\
+V13 & H-P1c & extra airtime under 40\% and no delivery loss & 2 of 4 cells supported (SF7 yes; SF9 no) & PARTLY & 0.004 (SF7), 1.000 (SF9) & SIMULATED & main (C5) & four cells in the family of 8 \\
+V14 & H-T1a-L & D1 within 2 points of the best baseline, low-loss group & best minus D1 = -0.1 points & SUPPORTED & \textasciitilde{}0.0035 & TRACE\_DRIVEN & supplement &  \\
+V14 & H-T1a-M & same, medium-loss group & -1.4 points & SUPPORTED & \textasciitilde{}0.0035 & TRACE\_DRIVEN & supplement &  \\
+V14 & H-T1a-H & same, high-loss group & -6.7 points & SUPPORTED & \textasciitilde{}0.0035 & TRACE\_DRIVEN & supplement &  \\
+V14 & H-T1b & D1 above quick retries at loss of 40\% or more & +6.7 points; zero-spacing control 54.0 against D1 49.3 & SUPPORTED & \textasciitilde{}0.0035 & TRACE\_DRIVEN & main (C6, with the control) & the control shows the gain is retry timing \\
+V14 & H-T1c & provisional alert earlier, extra airtime under 40\%, no delivery loss & 1.87 s; airtime 31\% to 37\% & SUPPORTED & \textasciitilde{}0.0035 & TRACE\_DRIVEN & main (C5) &  \\
+V14 & H-T2 & D1 worst-case delivery time not longer than quick retries, k = 0 to 6 & holds; no duty breach & SUPPORTED & no p (rule) & FORMAL & main (C6) & exhaustive enumeration, not UPPAAL \\
+V14 & H-T2sec & Tamarin: authenticity, ACK binding, freshness, id uniqueness & all proved except id uniqueness after a car reboot (not decided) & PARTLY & no p (rule) & FORMAL & main (C4) &  \\
+V14 & H-T3a & early-exit rule decides at least 0.8 s earlier & median 1750 ms & SUPPORTED & \textasciitilde{}0.0035 & MEASURED\_SOFTWARE & main (C5) &  \\
+V14 & H-T3b & retraction share under 20\% & 10.8\% & SUPPORTED & \textasciitilde{}0.0035 & MEASURED\_SOFTWARE & main (C5) &  \\
+V14 & H-T3c & earlier arrival in at least 2 of 3 link models & custom and trace; ns-3 NOT\_RUN at the time (later run in V13) & SUPPORTED & no p (rule) & SIMULATED and TRACE\_DRIVEN & main (C5) &  \\
+V15 & H-A1a & 24-byte repeated provisional frame: extra airtime at SF9 at most 40\% in all 8 cells & 2 of 8 cells met; 0.31 to 0.61 & NOT SUPPORTED & 1.000 & SIMULATED & negatives &  \\
+V15 & H-A1b & provisional delivery within 10 s up by 3 points on fresh sniffer links & +1.4 points & NOT SUPPORTED & 0.0025 & TRACE\_DRIVEN & negatives & p below 0.05 but the effect is under the 3 points required \\
+V15 & H-A1c & no cell worse than R3 by more than 1 point & ns-3 worst cell -2.1 points & NOT SUPPORTED & 1.000 & SIMULATED and TRACE\_DRIVEN & negatives &  \\
+V15 & H-A2a & two receivers raise 10 s delivery by 10 points on weak links (EXPLORATORY) & +4.9 points; 52\% of devices heard by one gateway & NOT SUPPORTED & 0.0025 & TRACE\_DRIVEN & negatives & p below 0.05 but under the 10 points required \\
+V15 & H-A2b & share at 0.99 delivery rises from one to three receivers (EXPLORATORY) & +0.26 points & NOT SUPPORTED & 0.051 & TRACE\_DRIVEN & negatives &  \\
+V16 & H-L1 & mounting calibration: side accuracy at least 0.90, NHTSA balanced at least 0.90 & 0.986 pooled; NHTSA 0.975; mirror flips not recovered & SUPPORTED & < 1e-9 & SIMULATED\_HW\_FORMAT and MEASURED\_SOFTWARE & main (C7) &  \\
+V16 & H-L2a & post-event features cut near-miss false alarms by 25\% & -0.545 relative change & NOT SUPPORTED & 1.000 & MEASURED\_SOFTWARE & negatives &  \\
+V16 & H-L2b & retraction share falls by 3 points & 1.4 points & NOT SUPPORTED & 0.472 & MEASURED\_SOFTWARE & negatives &  \\
+V16 & H-L3 & wake-on-motion: recall within 1 point, energy at least 50\% lower & recall 0.631 against 0.609 always-on; energy ratio 0.25 & SUPPORTED & 0.005 & MEASURED\_SOFTWARE and ANALYTICAL & main (C7) & active share 0.20 stated \\
+V16 & H-L4 & SF ladder gains 3 points near the SF7 edge & edge gain 0.098; worst lower limit -0.009 & SUPPORTED & 0.005 & SIMULATED (ns-3 only) & supplement & custom-simulator part NOT\_RUN \\
+V16 & H-L5 & end-to-end threshold co-design lowers P90 time by 10\% & no change in any model & NOT SUPPORTED & 1.000 & MEASURED\_SOFTWARE & negatives &  \\
+V16 & H-L6 & crash-weighted gateway placement covers 10 points more crashes & +1.8 to +5.6 points & NOT SUPPORTED & 0.005 & MEASURED\_SOFTWARE and ANALYTICAL & negatives & p below 0.05 but under the 10 points required \\
+V16 & H-L7a & Tamarin proves forward secrecy, authenticity, ACK binding of the ratchet & undecided: heap exhausted & NOT SUPPORTED & 1.000 & FORMAL & negatives & counted as not supported (undecided) \\
+V16 & H-L7b & resynchronisation within a window of 8 for every enumerated sequence & 1,398,101 sequences, no violation & SUPPORTED & < 1e-9 & FORMAL & supplement &  \\
+V16 & H-L8a & at most 6 high-confidence forwards per hour & 6 over 232,966 states & SUPPORTED & < 1e-9 & FORMAL & supplement & holds by construction of the counter \\
+V16 & H-L8b & no legitimate alert quarantined & 1 of 2,000 vehicle-hours & NOT SUPPORTED & 1.000 & SIMULATED and MEASURED\_SOFTWARE & negatives &  \\
+V16 & H-L10a & a further benchmark has more than 1\% identical test windows & 0 in UCI HAR and SisFall & NOT SUPPORTED & 1.000 & MEASURED\_SOFTWARE & main (C1, one sentence) and negatives &  \\
+V16 & H-L10b & removing leaked windows changes a baseline by more than 1 point & not run (no leak found) & NOT\_RUN & 1.000 (p = 1 rule) & NOT\_RUN & not reported &  \\
+V16 & H-L11a & mirror-flip detection from turns (ADDED-AFTER-SESSION-1; own family of one) & both-channel 100\% of 100, false detection 0\%; accelerometer-only x 57\%, y 89\% against 95\% & NOT SUPPORTED & own family & MEASURED\_SOFTWARE & supplement (descriptive) and negatives & added after session 1, before any L11 run \\
+V16 & H-L11b & second L11 test & not run & NOT\_RUN & own family & NOT\_RUN & not reported &  \\
+V17 & H-R6-1a & micro-confirm extra airtime at SF9 at most 40\% in each of 8 ns-3 cells & extra airtime -0.23 to +0.03 against single-stage; 0.47 to 0.77 of R3's airtime & SUPPORTED & 0.002 & SIMULATED & main (C8) & almost automatic because the micro-confirm replaces the 97-byte confirm; second statistic reported \\
+V17 & H-R6-1b & micro-confirm delivery not lower than R3 by more than 1 point in 16 ns-3 cells and 3 trace groups & largest loss 0.25 points; trace groups zero by construction & SUPPORTED & 0.002 & SIMULATED and TRACE\_DRIVEN & main (C8) & 13-byte ns-3 frame; trace part degenerate for delivery \\
+V17 & H-R6-1c & micro-confirm binding, anti-replay and cancel lemmas; control attack found & ProVerif and Tamarin: all lemmas proved; control without T1 attacked & SUPPORTED & < 1e-9 & FORMAL & main (C8) & symbolic model \\
+V17 & H-R6-2a & sequential early exit decides 200 ms earlier on average & 14.2 ms (lower limit 9.0 ms) & NOT SUPPORTED & 1.000 & MEASURED\_SOFTWARE & negatives & 200 ms is above the largest possible gain (62 ms) given a fixed-rule mean of 112 ms; V17 quoted the mean wrongly \\
+V17 & H-R6-2b & sequential early exit raises retraction by at most 2 points & +12.6 points (upper limit 14.3) & NOT SUPPORTED & 1.000 & MEASURED\_SOFTWARE & negatives &  \\
+V17 & H-R6-3a & forward secrecy of the hash ratchet (bounded at 3 steps) & ProVerif proves authenticity and secrecy of past alerts; Tamarin within the bound & SUPPORTED & < 1e-9 & FORMAL & main (C8) & the bound is part of the result \\
+V17 & H-R6-3b & quarantine cannot be triggered by unverified frames & variant B proved; variant A attacked with two frames & SUPPORTED & < 1e-9 & FORMAL & main (C8) & the count-before-verification rule of L8 is attackable \\
+\bottomrule
+\end{longtable}}
+
+\subsection*{Totals}
+
+{\scriptsize\raggedright
+\begin{longtable}{p{0.136\linewidth}p{0.136\linewidth}p{0.136\linewidth}p{0.136\linewidth}p{0.136\linewidth}p{0.136\linewidth}p{0.136\linewidth}}
+\toprule
+Version & Preregistered & Run & SUPPORTED & NOT SUPPORTED & PARTLY & NOT\_RUN \\
+\midrule
+\endhead
+V1 & 3 & 3 & 3 & 0 & 0 & 0 \\
+V2 & 12 & 12 & 3 & 7 & 2 & 0 \\
+V3 & 7 & 7 & 1 & 6 & 0 & 0 \\
+V4 & 7 & 7 & 1 & 6 & 0 & 0 \\
+V5 & 18 & 13 & 1 & 12 & 0 & 5 \\
+V7 & 20 & 15 & 2 & 13 & 0 & 5 \\
+V11 & 13 & 13 & 7 & 6 & 0 & 0 \\
+V12 & 10 & 9 & 6 & 3 & 0 & 1 \\
+V13 & 3 & 3 & 2 & 0 & 1 & 0 \\
+V14 & 10 & 10 & 9 & 0 & 1 & 0 \\
+V15 & 5 & 5 & 0 & 5 & 0 & 0 \\
+V16 & 15 & 13 & 5 & 8 & 0 & 2 \\
+V17 & 7 & 7 & 5 & 2 & 0 & 0 \\
+V18 & 6 & 6 & 2 & 3 & 0 & 0 \\
+V19 & 2 & 2 & 1 & 1 & 0 & 0 \\
+all & 138 & 125 & 48 & 72 & 4 & 13 \\
+\bottomrule
+\end{longtable}}
+
+Confirmatory-family rows (a Holm p-value in a stated family; V12 counted as one family of 10): 128 rows, 44 supported, 69 not supported, 3 partly, 12 NOT\_RUN (V18 adds five rows to the family: H-R7-A1, A2, B1, B2, B3; V19 adds two: H-R7b-1, H-R7b-2).
+Round 5 (V16) Holm family of 13: 5 supported according to \texttt{results.json} (\texttt{r5.verdict.n\_supported}); the ledger shows the same five (L1, L3, L4, L7b, L8a); L11 in its own family is not supported.
+
+The totals count hypotheses, not the hundreds of sub-tests inside them (cells, seeds, bootstrap intervals).
+
+\subsection*{Round 7 (V18)}
+
+\texttt{docs/02\_preregistration/PREREGISTRATION\_V18.md}, committed before any round-7 run (SHA-256 of the file with CRLF read as LF: 4433428af0a9617a9f990ef055d06ef58d9fcd5eaf9ac042bd6a8259d3fc3eef). Holm over five hypotheses; H-R7-A3 is descriptive and has no verdict (counted as preregistered and run).
+
+{\scriptsize\raggedright
+\begin{longtable}{p{0.119\linewidth}p{0.119\linewidth}p{0.119\linewidth}p{0.119\linewidth}p{0.119\linewidth}p{0.119\linewidth}p{0.119\linewidth}p{0.119\linewidth}}
+\toprule
+ID & Hypothesis & Family & Data role & Result & Holm p & Label & Paper \\
+\midrule
+\endhead
+H-R7-A1 & reserved policy keeps the follow-up within D\_max in at least 99\% of runs under full ACK suppression & V18, Holm over 5 & LoED half 0 (A2); the old policy as control; simulated events & NOT SUPPORTED & 1 & SIMULATED & C4 round-7 paragraph \\
+H-R7-A2 & benign cost of the reserve at most 1 point of delivery and 10\% of the median time & V18, Holm over 5 & LoED half 0 (A2); the old policy as control; simulated events & NOT SUPPORTED & 1 & TRACE\_DRIVEN & C4 and the negative-results table \\
+H-R7-B1 & pseudonym resolution at most 1 ms per frame (1,000 vehicles, m = 16) & V18, Holm over 5 & LoED half 0 (A2); the old policy as control; simulated events & SUPPORTED & 0 & MEASURED\_SOFTWARE & C4 round-7 paragraph \\
+H-R7-B2 & collision probability at most 1e-6 per frame & V18, Holm over 5 & LoED half 0 (A2); the old policy as control; simulated events & NOT SUPPORTED & 1 & ANALYTICAL & C4 round-7 paragraph and the negative-results table \\
+H-R7-B3 & diff-equivalence proved for the pseudonym design and the fixed-id control fails & V18, Holm over 5 & LoED half 0 (A2); the old policy as control; simulated events & SUPPORTED & 0 & FORMAL & C4 round-7 paragraph \\
+H-R7-A3 & link-aware gating rule re-derived with the reserve & descriptive & stored R6-7 gates & no verdict: the enabling spreading factor does not move (SF7) & n/a & ANALYTICAL & C5 round-7 paragraph \\
+\bottomrule
+\end{longtable}}
+
+
+\subsection*{Round 7b (V19)}
+
+\texttt{docs/02\_preregistration/PREREGISTRATION\_V19.md}, committed before any round-7b run (SHA-256 of the file with CRLF read as LF: 6b6f4a0d9085ce455bbb317ff36aaa7e9ec78f1389323ea741c6e2ef1566bd2d). Holm over two hypotheses. The reserve size (four events) was chosen from round-7 data, so this is a confirmation on fresh seeds and not a blind test; the thresholds are those of V18.
+
+{\scriptsize\raggedright
+\begin{longtable}{p{0.119\linewidth}p{0.119\linewidth}p{0.119\linewidth}p{0.119\linewidth}p{0.119\linewidth}p{0.119\linewidth}p{0.119\linewidth}p{0.119\linewidth}}
+\toprule
+ID & Hypothesis & Family & Data role & Result & Holm p & Label & Paper \\
+\midrule
+\endhead
+H-R7b-1 & reserve for four events keeps the follow-up within D\_max in at least 99\% of runs under full ACK suppression, every cell & V19, Holm over 2 & fresh seeds 100 to 105; stored event table & SUPPORTED & 5.78e-06 & SIMULATED & C4 round-7 paragraph \\
+H-R7b-2 & benign cost of the four-event reserve at most 1 point of delivery and 10\% of the median time, every cell & V19, Holm over 2 & LoED half 0, fresh start points (seed 4242); the old policy as control & NOT SUPPORTED & 1 & TRACE\_DRIVEN & C4 and the negative-results table \\
+\bottomrule
+\end{longtable}}
+

@@ -1,0 +1,38 @@
+(* Round 7 B2.1, strong form: the attacker sees unboundedly many alerts. Left: every alert comes from one vehicle. Right: every alert comes from a fresh vehicle. Same design as r7_unlink.pv. 
+   The boot counter of a vehicle is the same value in all its alerts of one boot (boot = prf(k_v, tagB)); the counter is fresh per alert. *)
+free c: channel.
+const tagA: bitstring.
+const tagP: bitstring.
+const tagB: bitstring.
+const tagE: bitstring.
+const tagACK: bitstring.
+const mAlert: bitstring.
+const mAck: bitstring.
+fun kdf(bitstring, bitstring): bitstring.
+fun prf(bitstring, bitstring): bitstring.
+fun mac(bitstring, bitstring): bitstring.
+fun senc(bitstring, bitstring, bitstring): bitstring.
+reduc forall k: bitstring, n: bitstring, m: bitstring; sdec(k, n, senc(k, n, m)) = m.
+table window(bitstring, bitstring, bitstring, bitstring).
+table seen(bitstring, bitstring, bitstring).
+
+let Alert(master: bitstring, v: bitstring) =
+  new ctr: bitstring; new payload: bitstring;
+  let kv = kdf(master, v) in
+  let boot = prf(kv, tagB) in
+  let p = prf(kv, (tagP, boot, ctr)) in
+  insert window(p, v, boot, ctr);
+  let ct = senc(kdf(kv, tagE), (boot, ctr), payload) in
+  out(c, (mAlert, p, ct, mac(kv, (tagA, p, ct, boot, ctr)))).
+
+let Base(master: bitstring) =
+  in(c, (=mAlert, p: bitstring, ct: bitstring, t: bitstring));
+  get window(=p, v, b, k) in
+  let kv = kdf(master, v) in
+  if t = mac(kv, (tagA, p, ct, b, k)) then
+  get seen(=v, =b, =k) in 0 else
+  ( insert seen(v, b, k); out(c, (mAck, p, mac(kv, (tagACK, p)))) ).
+
+process
+  new master: bitstring; new idA: bitstring;
+  ( !Base(master) | !( new idx: bitstring; Alert(master, choice[idA, idx]) ) )

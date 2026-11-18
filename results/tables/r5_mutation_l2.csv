@@ -1,0 +1,34 @@
+id,file,description,status
+L201,src/crashguard/r5_l2.py,edge repetition replaced by wrap-around,KILLED
+L202,src/crashguard/r5_l2.py,GPS sample times not spread over the event,KILLED
+L203,src/crashguard/r5_l2.py,pre-trigger speed window doubled,KILLED
+L204,src/crashguard/r5_l2.py,pre-trigger speed window reaches past the trigger,KILLED
+L205,src/crashguard/r5_l2.py,speed drop sign,KILLED
+L206,src/crashguard/r5_l2.py,relative drop denominator floor,KILLED
+L207,src/crashguard/r5_l2.py,relative drop clip,KILLED
+L208,src/crashguard/r5_l2.py,missing GPS values not detected,KILLED
+L209,src/crashguard/r5_l2.py,speed sample nearest the end of the window,KILLED
+L210,src/crashguard/r5_l2.py,window starts before the end of the full window,KILLED
+L211,src/crashguard/r5_l2.py,window length ignores w,KILLED
+L212,src/crashguard/r5_l2.py,pre-trigger reference window halved,KILLED
+L213,src/crashguard/r5_l2.py,quiet share over half a second,KILLED
+L214,src/crashguard/r5_l2.py,quiet tolerance loosened,KILLED
+L215,src/crashguard/r5_l2.py,orientation taken at the start of the window,KILLED
+L216,src/crashguard/r5_l2.py,energy not scaled by the sample time,KILLED
+L217,src/crashguard/r5_l2.py,rotation energy from the end of the full window only,KILLED
+L218,src/crashguard/r5_l2.py,missing values filled with zero,KILLED
+L219,src/crashguard/r5_l2.py,fill by the mean,KILLED
+L220,src/crashguard/r5_l2.py,class weight ignored,KILLED
+L221,src/crashguard/r5_l2.py,recall target rounded down,KILLED
+L222,src/crashguard/r5_l2.py,threshold one score too low,KILLED
+L223,src/crashguard/r5_l2.py,relative reduction inverted,KILLED
+L224,src/crashguard/r5_l2.py,bootstrap p direction,KILLED
+L225,src/crashguard/r5_l2.py,lower limit of the fall,KILLED
+L226,src/crashguard/r5_l2.py,near-miss events of both halves,KILLED
+L227,src/crashguard/r5_l2.py,provisional alarms of both halves,KILLED
+L228,src/crashguard/r5_l2.py,lower limit not required for H-L2a,KILLED
+L229,src/crashguard/r5_l2.py,recall condition dropped for H-L2a,KILLED
+L230,src/crashguard/r5_l2.py,H-L2b margin of 3 points reduced,KILLED
+L231,src/crashguard/r5_l2.py,L2 retractions taken from the baseline,KILLED
+L232,src/crashguard/r5_l2.py,wrong half,SURVIVED
+L233,src/crashguard/r5_l2.py,equal-budget threshold at twice the budget,SURVIVED

@@ -1,0 +1,432 @@
+lemma: executable_after_car_reboot
+command: tamarin-prover  --prove=executable_after_car_reboot formal/crash_alert_fresh_bootctr.spthy
+maude tool: 'maude'
+ checking version: 3.5.1. OK.
+ checking installation: OK.
+[Theory CrashAlertFreshBootCtr] Theory loaded
+[Theory CrashAlertFreshBootCtr] Theory translated
+[Theory CrashAlertFreshBootCtr] Derivation checks started
+[Theory CrashAlertFreshBootCtr] Derivation checks ended
+[Theory CrashAlertFreshBootCtr] Theory closed
+[Saturating Sources] Step 1 (Max 5)
+[Saturating Sources] Done
+theory CrashAlertFreshBootCtr
+
+begin
+
+// Function signature and definition of the equational theory E
+
+functions: fst/1, h/1, kdf/2, mac/2, pair/2, snd/1
+equations: fst(<x.1, x.2>) = x.1, snd(<x.1, x.2>) = x.2
+
+/* looping facts with injective instances: Clock/1 */
+
+rule (modulo E) BaseInit:
+   [ Fr( ~km ), Fr( ~e0 ) ]
+  --[ BaseInit( ) ]->
+   [
+   !BaseMaster( ~km ), Clock( ~e0 ), !Epoch( ~e0 ), !Succ( 's1', 's2' ),
+   !Succ( 's2', 's3' )
+   ]
+
+  /* has exactly the trivial AC variant */
+
+rule (modulo E) Tick:
+   [ Clock( e ), Fr( ~en ) ]
+  --[ Tick( e, ~en ) ]->
+   [ Clock( ~en ), !Epoch( ~en ), !Next( e, ~en ) ]
+
+  // loop breaker: [0]
+  /* has exactly the trivial AC variant */
+
+rule (modulo E) BaseReboot:
+   [ ] --[ BaseReboot( ) ]-> [ ]
+
+  /* has exactly the trivial AC variant */
+
+rule (modulo E) RevealNode:
+   [ !BaseMaster( km ) ] --[ RevealNode( $w ) ]-> [ Out( kdf(km, $w) ) ]
+
+  /* has exactly the trivial AC variant */
+
+rule (modulo E) CarStart:
+   [ !Epoch( e ), Fr( ~b ) ]
+  --[ CarStart( $v ), Now( e ) ]->
+   [ CarSeq( $v, ~b, e, 's1', 'ts' ) ]
+
+  /* has exactly the trivial AC variant */
+
+rule (modulo E) CarSendTS_new:
+   [ !Epoch( e ), CarSeq( $v, b, e, n, 'ts' ), !BaseMaster( km ) ]
+  --[ CarSend( $v, <b, e, n>, 'ts' ), Now( e ) ]->
+   [
+   CarSeq( $v, b, e, n, 'sent' ),
+   Out( <'ALERT', $v, <b, e, n>, mac(kdf(km, $v), <'A', $v, b, e, n>)> )
+   ]
+
+  /* has exactly the trivial AC variant */
+
+rule (modulo E) CarSendTS_next:
+   [
+   !Epoch( e ), CarSeq( $v, b, e, n, 'sent' ), !Succ( n, m ),
+   !BaseMaster( km )
+   ]
+  --[ CarSend( $v, <b, e, m>, 'ts' ), Now( e ) ]->
+   [
+   CarSeq( $v, b, e, m, 'sent' ),
+   Out( <'ALERT', $v, <b, e, m>, mac(kdf(km, $v), <'A', $v, b, e, m>)> )
+   ]
+
+  // loop breaker: [1]
+  /* has exactly the trivial AC variant */
+
+rule (modulo E) CarNewEpoch:
+   [ CarSeq( $v, b, e0, n, st ), !Next( e0, e ) ]
+  --[ CarNewEpoch( $v ), Now( e ) ]->
+   [ CarSeq( $v, b, e, 's1', 'ts' ) ]
+
+  // loop breaker: [0]
+  /* has exactly the trivial AC variant */
+
+rule (modulo E) CarReboot:
+   [ !Epoch( e ), CarSeq( $v, b0, e0, n, st ) ]
+  --[ CarReboot( $v ), Now( e ) ]->
+   [ CarDown( $v, e ) ]
+
+  // loop breaker: [1]
+  /* has exactly the trivial AC variant */
+
+rule (modulo E) CarDownWait:
+   [ CarDown( $v, e0 ), !Next( e0, e ) ]
+  --[ Now( e ) ]->
+   [ CarDown( $v, e ) ]
+
+  // loop breaker: [0]
+  /* has exactly the trivial AC variant */
+
+rule (modulo E) CarBootTS:
+   [ CarDown( $v, e0 ), !Next( e0, e ), Fr( ~b ) ]
+  --[ CarBootTS( $v ), Now( e ) ]->
+   [ CarSeq( $v, ~b, e, 's1', 'ts' ) ]
+
+  /* has exactly the trivial AC variant */
+
+rule (modulo E) CarBootNT:
+   [ CarDown( $v, e0 ), Fr( ~be ) ]
+  --[ CarBootNT( $v ) ]->
+   [ CarNT( $v, ~be, 's1' ) ]
+
+  /* has exactly the trivial AC variant */
+
+rule (modulo E) CarSendNT_first:
+   [ CarNT( $v, be, n ), !BaseMaster( km ) ]
+  --[ CarSend( $v, <'B', be, n>, 'nt' ) ]->
+   [
+   CarNTsent( $v, be, n ),
+   Out( <'ALERT', $v, <'B', be, n>, mac(kdf(km, $v), <'A', $v, 'B', be, n>)>
+   )
+   ]
+
+  /* has exactly the trivial AC variant */
+
+rule (modulo E) CarSendNT_next:
+   [ CarNTsent( $v, be, n ), !Succ( n, m ), !BaseMaster( km ) ]
+  --[ CarSend( $v, <'B', be, m>, 'nt' ) ]->
+   [
+   CarNTsent( $v, be, m ),
+   Out( <'ALERT', $v, <'B', be, m>, mac(kdf(km, $v), <'A', $v, 'B', be, m>)>
+   )
+   ]
+
+  // loop breaker: [0]
+  /* has exactly the trivial AC variant */
+
+rule (modulo E) BaseAcceptCur:
+   [
+   !Epoch( e ), !BaseMaster( km ),
+   In( <'ALERT', $v, <b, e, n>, mac(kdf(km, $v), <'A', $v, b, e, n>)> )
+   ]
+  --[
+  Now( e ), BaseAccept( $v, <b, e, n> ), NotSeen( $v, <b, e, n> ),
+  Seen( $v, <b, e, n> ), AcceptTS( $v, <b, e, n>, e )
+  ]->
+   [ ]
+
+  /* has exactly the trivial AC variant */
+
+rule (modulo E) BaseAcceptPrev:
+   [
+   !Epoch( e ), !BaseMaster( km ), !Next( ep, e ),
+   In( <'ALERT', $v, <b, ep, n>, mac(kdf(km, $v), <'A', $v, b, ep, n>)> )
+   ]
+  --[
+  Now( e ), BaseAccept( $v, <b, ep, n> ), NotSeen( $v, <b, ep, n> ),
+  Seen( $v, <b, ep, n> ), AcceptTS( $v, <b, ep, n>, e )
+  ]->
+   [ ]
+
+  /* has exactly the trivial AC variant */
+
+rule (modulo E) BaseAcceptNT:
+   [
+   !Epoch( e ), !BaseMaster( km ),
+   In( <'ALERT', $v, <'B', be, n>, mac(kdf(km, $v), <'A', $v, 'B', be, n>)>
+   )
+   ]
+  --[
+  Now( e ), BaseAccept( $v, <'B', be, n> ), NotSeen( $v, <'B', be, n> ),
+  Seen( $v, <'B', be, n> ), AcceptNT( $v, <'B', be, n>, e )
+  ]->
+   [ ]
+
+  /* has exactly the trivial AC variant */
+
+restriction SeenSet:
+  "∀ v f #i.
+    (NotSeen( v, f ) @ #i) ⇒
+    (¬(∃ #j.
+        ((Seen( v, f ) @ #j) ∧ (#j < #i)) ∧
+        (¬(∃ #r. ((BaseReboot( ) @ #r) ∧ (#j < #r)) ∧ (#r < #i)))))"
+
+  /*
+  expanded formula:
+  "∀ v f #i.
+    (NotSeen( v, f ) @ #i) ⇒
+    (¬(∃ #j.
+        ((Seen( v, f ) @ #j) ∧ (#j < #i)) ∧
+        (¬(∃ #r. ((BaseReboot( ) @ #r) ∧ (#j < #r)) ∧ (#r < #i)))))"
+  */
+
+restriction CurrentEpoch:
+  "∀ e #i.
+    (Now( e ) @ #i) ⇒ (¬(∃ en #t. (Tick( e, en ) @ #t) ∧ (#t < #i)))"
+  // safety formula
+
+  /*
+  expanded formula:
+  "∀ e #i.
+    (Now( e ) @ #i) ⇒ (¬(∃ en #t. (Tick( e, en ) @ #t) ∧ (#t < #i)))"
+  */
+
+restriction OneBase:
+  "∀ #i #j. ((BaseInit( ) @ #i) ∧ (BaseInit( ) @ #j)) ⇒ (#i = #j)"
+  // safety formula
+
+  /*
+  expanded formula:
+  "∀ #i #j. ((BaseInit( ) @ #i) ∧ (BaseInit( ) @ #j)) ⇒ (#i = #j)"
+  */
+
+restriction OneCarPerId:
+  "∀ v #i #j. ((CarStart( v ) @ #i) ∧ (CarStart( v ) @ #j)) ⇒ (#i = #j)"
+  // safety formula
+
+  /*
+  expanded formula:
+  "∀ v #i #j. ((CarStart( v ) @ #i) ∧ (CarStart( v ) @ #j)) ⇒ (#i = #j)"
+  */
+
+lemma executable_ts:
+  exists-trace
+  "∃ v f #i #j.
+    ((CarSend( v, f, 'ts' ) @ #i) ∧ (BaseAccept( v, f ) @ #j)) ∧ (#i < #j)"
+/*
+guarded formula characterizing all satisfying traces:
+"∃ v f #i #j.
+  (CarSend( v, f, 'ts' ) @ #i) ∧ (BaseAccept( v, f ) @ #j) ∧ #i < #j"
+*/
+by sorry
+
+lemma executable_after_car_reboot:
+  exists-trace
+  "∃ v f #r #i #j.
+    ((((CarReboot( v ) @ #r) ∧ (CarSend( v, f, 'ts' ) @ #i)) ∧
+      (BaseAccept( v, f ) @ #j)) ∧
+     (#r < #i)) ∧
+    (#i < #j)"
+/*
+guarded formula characterizing all satisfying traces:
+"∃ v f #r #i #j.
+  (CarReboot( v ) @ #r) ∧
+  (CarSend( v, f, 'ts' ) @ #i) ∧
+  (BaseAccept( v, f ) @ #j)
+ ∧
+  (#r < #i) ∧ (#i < #j)"
+*/
+simplify
+solve( !Epoch( e ) ▶₀ #r )
+  case BaseInit
+  solve( CarSend( $v, f, 'ts' ) @ #i )
+    case CarSendTS_new
+    solve( !Epoch( e ) ▶₀ #i )
+      case Tick
+      solve( CarSeq( $v, b, ~en, n, 'ts' ) ▶₁ #i )
+        case CarBootTS_case_1
+        solve( !BaseMaster( km ) ▶₂ #i )
+          case BaseInit
+          solve( BaseAccept( $v, <~b, ~en, 's1'> ) @ #j )
+            case BaseAcceptCur
+            solve( !Epoch( ~en ) ▶₀ #j )
+              case Tick
+              solve( !BaseMaster( km.1 ) ▶₁ #j )
+                case BaseInit
+                solve( CarSeq( $v, b0, e0.1, n, st ) ▶₁ #r )
+                  case CarSendTS_new_case_1
+                  solve( Clock( ~e0 ) ▶₀ #vr.1 )
+                    case BaseInit
+                    solve( CarSeq( $v, b0, e0.1, n, st ) ▶₁ #vr.3 )
+                      case CarSendTS_new_case_1
+                      solve( !KU( ~b ) @ #vk.6 )
+                        case CarSendTS_new_case_2
+                        solve( !KU( ~en ) @ #vk.8 )
+                          case CarSendTS_new_case_2
+                          solve( !KU( mac(kdf(~km, $v), <'A', $v, ~b, ~en, 's1'>) ) @ #vk.10 )
+                            case CarSendTS_new_case_2
+                            SOLVED // trace found
+                          qed
+                        qed
+                      qed
+                    qed
+                  qed
+                qed
+              qed
+            qed
+          qed
+        qed
+      qed
+    qed
+  qed
+qed
+
+lemma L4_replay_outside_window:
+  all-traces
+  "∀ v b ep n e #i.
+    (AcceptTS( v, <b, ep, n>, e ) @ #i) ⇒
+    (((e = ep) ∨ (∃ #t. Tick( ep, e ) @ #t)) ∧
+     ((∃ #j. (CarSend( v, <b, ep, n>, 'ts' ) @ #j) ∧ (#j < #i)) ∨
+      (∃ #r. RevealNode( v ) @ #r)))"
+/*
+guarded formula characterizing all counter-examples:
+"∃ v b ep n e #i.
+  (AcceptTS( v, <b, ep, n>, e ) @ #i)
+ ∧
+  (((¬(e = ep)) ∧ (∀ #t. (Tick( ep, e ) @ #t) ⇒ ⊥)) ∨
+   ((∀ #j. (CarSend( v, <b, ep, n>, 'ts' ) @ #j) ⇒ ¬(#j < #i)) ∧
+    (∀ #r. (RevealNode( v ) @ #r) ⇒ ⊥)))"
+*/
+by sorry
+
+lemma L4b_at_most_once:
+  all-traces
+  "∀ v f #i #k.
+    (((BaseAccept( v, f ) @ #i) ∧ (BaseAccept( v, f ) @ #k)) ∧
+     (¬(∃ #r. BaseReboot( ) @ #r))) ⇒
+    (#i = #k)"
+/*
+guarded formula characterizing all counter-examples:
+"∃ v f #i #k.
+  (BaseAccept( v, f ) @ #i) ∧ (BaseAccept( v, f ) @ #k)
+ ∧
+  (∀ #r. (BaseReboot( ) @ #r) ⇒ ⊥) ∧ (¬(#i = #k))"
+*/
+by sorry
+
+lemma L5_car_alert_ids_unique:
+  all-traces
+  "∀ v f #i #r #j.
+    (((((CarSend( v, f, 'ts' ) @ #i) ∧ (CarReboot( v ) @ #r)) ∧
+       (CarSend( v, f, 'ts' ) @ #j)) ∧
+      (#i < #r)) ∧
+     (#r < #j)) ⇒
+    (⊥)"
+/*
+guarded formula characterizing all counter-examples:
+"∃ v f #i #r #j.
+  (CarSend( v, f, 'ts' ) @ #i) ∧
+  (CarReboot( v ) @ #r) ∧
+  (CarSend( v, f, 'ts' ) @ #j)
+ ∧
+  (#i < #r) ∧ (#r < #j)"
+*/
+by sorry
+
+lemma L5_no_double_accept_with_car_reboot:
+  all-traces
+  "∀ v f #i #k #r.
+    ((((BaseAccept( v, f ) @ #i) ∧ (BaseAccept( v, f ) @ #k)) ∧
+      (CarReboot( v ) @ #r)) ∧
+     (¬(∃ #b. BaseReboot( ) @ #b))) ⇒
+    (#i = #k)"
+/*
+guarded formula characterizing all counter-examples:
+"∃ v f #i #k #r.
+  (BaseAccept( v, f ) @ #i) ∧
+  (BaseAccept( v, f ) @ #k) ∧
+  (CarReboot( v ) @ #r)
+ ∧
+  (∀ #b. (BaseReboot( ) @ #b) ⇒ ⊥) ∧ (¬(#i = #k))"
+*/
+by sorry
+
+lemma L6_base_reboot_replay:
+  all-traces
+  "∀ v f #i #k.
+    ((BaseAccept( v, f ) @ #i) ∧ (BaseAccept( v, f ) @ #k)) ⇒ (#i = #k)"
+/*
+guarded formula characterizing all counter-examples:
+"∃ v f #i #k.
+  (BaseAccept( v, f ) @ #i) ∧ (BaseAccept( v, f ) @ #k) ∧ ¬(#i = #k)"
+*/
+by sorry
+
+lemma L7_no_time_alert_can_be_stale:
+  exists-trace
+  "∃ v f #i #j #t1 #t2 e1 e2 e3.
+    ((((((CarSend( v, f, 'nt' ) @ #i) ∧ (Tick( e1, e2 ) @ #t1)) ∧
+        (Tick( e2, e3 ) @ #t2)) ∧
+       (BaseAccept( v, f ) @ #j)) ∧
+      (#i < #t1)) ∧
+     (#t1 < #t2)) ∧
+    (#t2 < #j)"
+/*
+guarded formula characterizing all satisfying traces:
+"∃ v f #i #j #t1 #t2 e1 e2 e3.
+  (CarSend( v, f, 'nt' ) @ #i) ∧
+  (Tick( e1, e2 ) @ #t1) ∧
+  (Tick( e2, e3 ) @ #t2) ∧
+  (BaseAccept( v, f ) @ #j)
+ ∧
+  (#i < #t1) ∧ (#t1 < #t2) ∧ (#t2 < #j)"
+*/
+by sorry
+
+/* All wellformedness checks were successful. */
+
+/*
+Generated from:
+Tamarin version 1.12.0
+Maude version 3.5.1
+Git revision: 82780bbaf3328a45f624ddb41e51bf75425f851c (with uncommited changes), branch: master
+Compiled at: 2026-03-07 14:22:39.174278293 UTC
+*/
+
+end
+
+==============================================================================
+summary of summaries:
+
+analyzed: formal/crash_alert_fresh_bootctr.spthy
+
+  processing time: 92.19s
+  
+  executable_ts (exists-trace): analysis incomplete (1 steps)
+  executable_after_car_reboot (exists-trace): verified (16 steps)
+  L4_replay_outside_window (all-traces): analysis incomplete (1 steps)
+  L4b_at_most_once (all-traces): analysis incomplete (1 steps)
+  L5_car_alert_ids_unique (all-traces): analysis incomplete (1 steps)
+  L5_no_double_accept_with_car_reboot (all-traces): analysis incomplete (1 steps)
+  L6_base_reboot_replay (all-traces): analysis incomplete (1 steps)
+  L7_no_time_alert_can_be_stale (exists-trace): analysis incomplete (1 steps)
+
+==============================================================================
+exit code: 0 ; wall time 93 s

@@ -1,0 +1,1 @@
+xtensa-esp32-elf-gcc (crosstool-NG esp-12.2.0_20230208) 12.2.0

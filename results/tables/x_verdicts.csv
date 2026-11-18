@@ -1,0 +1,8 @@
+hypothesis,verdict,p_raw,p_holm,criterion_met
+H-X1,NOT SUPPORTED,0.001,0.007,False
+H-X2,NOT SUPPORTED,1.0,1.0,False
+H-X3,NOT SUPPORTED,0.275,1.0,False
+H-X5,NOT SUPPORTED,1.0,1.0,False
+H-X6,SUPPORTED,0.001,0.007,True
+H-X7,NOT SUPPORTED,1.0,1.0,False
+H-X8,NOT SUPPORTED,1.0,1.0,False

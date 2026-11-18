@@ -1,0 +1,15 @@
+lemma: executable
+command: tamarin-prover  --prove=executable formal/ratchet3.spthy
+maude tool: 'maude'
+ checking version: 3.5.1. OK.
+ checking installation: OK.
+[Theory Ratchet3] Theory loaded
+[Theory Ratchet3] Theory translated
+[Theory Ratchet3] Derivation checks started
+[Theory Ratchet3] Derivation checks ended
+[Theory Ratchet3] Theory closed
+[Saturating Sources] Step 1 (Max 5)
+[Saturating Sources] Done
+
+stopped: the time box of three hours for H-L7a ended (V16 15.3); this lemma was not run to completion
+exit code: 124

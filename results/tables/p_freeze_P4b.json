@@ -1,0 +1,22 @@
+{
+  "copies": 2,
+  "forest": "RandomForest(15 trees, depth 6)",
+  "frozen_at": "2026-11-12 08:39",
+  "hypothesis": "P4b",
+  "model_files": {},
+  "note": "settings fixed by the preregistration; the test split is not used",
+  "primary": "aug_merge",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "variants": [
+    "standard",
+    "merge",
+    "aug",
+    "aug_merge"
+  ]
+}

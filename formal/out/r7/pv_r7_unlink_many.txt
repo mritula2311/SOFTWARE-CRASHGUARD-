@@ -1,0 +1,82 @@
+tool: Proverif 2.05. Cryptographic protocol verifier, by Bruno Blanchet, Vincent Cheval, and Marc Sylvestre
+command: proverif /mnt/d/crashguard-software/crashguard-software/formal/proverif/r7_unlink_many.pv
+Biprocess 0 (that is, the initial process):
+{1}new master: bitstring;
+{2}new idA: bitstring;
+(
+    {3}!
+    {4}let master_1: bitstring = master in
+    {5}in(c, (=mAlert,p: bitstring,ct: bitstring,t: bitstring));
+    {11}get window(=p,v: bitstring,b: bitstring,k: bitstring) in
+    {6}let kv: bitstring = kdf(master_1,v) in
+    {7}if (t = mac(kv,(tagA,p,ct,b,k))) then
+    {10}get seen(=v,=b,=k) in
+        0
+    else
+        {8}insert seen(v,b,k);
+        {9}out(c, (mAck,p,mac(kv,(tagACK,p))))
+) | (
+    {12}!
+    {13}new idx: bitstring;
+    {14}let master_2: bitstring = master in
+    {15}let v_1: bitstring = choice[idA,idx] in
+    {16}new ctr: bitstring;
+    {17}new payload: bitstring;
+    {18}let kv_1: bitstring = kdf(master_2,v_1) in
+    {19}let boot: bitstring = prf(kv_1,tagB) in
+    {20}let p_1: bitstring = prf(kv_1,(tagP,boot,ctr)) in
+    {21}insert window(p_1,v_1,boot,ctr);
+    {22}let ct_1: bitstring = senc(kdf(kv_1,tagE),(boot,ctr),payload) in
+    {23}out(c, (mAlert,p_1,ct_1,mac(kv_1,(tagA,p_1,ct_1,boot,ctr))))
+)
+
+-- Observational equivalence in biprocess 1 (that is, biprocess 0, with let moved downwards):
+{1}new master: bitstring;
+{2}new idA: bitstring;
+(
+    {3}!
+    {5}in(c, (=mAlert,p: bitstring,ct: bitstring,t: bitstring));
+    {11}get window(=p,v: bitstring,b: bitstring,k: bitstring) in
+    {4}let master_1: bitstring = master in
+    {6}let kv: bitstring = kdf(master_1,v) in
+    {7}if (t = mac(kv,(tagA,p,ct,b,k))) then
+    {10}get seen(=v,=b,=k) in
+        0
+    else
+        {8}insert seen(v,b,k);
+        {9}out(c, (mAck,p,mac(kv,(tagACK,p))))
+) | (
+    {12}!
+    {13}new idx: bitstring;
+    {16}new ctr: bitstring;
+    {17}new payload: bitstring;
+    {15}let v_1: bitstring = choice[idA,idx] in
+    {14}let master_2: bitstring = master in
+    {18}let kv_1: bitstring = kdf(master_2,v_1) in
+    {19}let boot: bitstring = prf(kv_1,tagB) in
+    {20}let p_1: bitstring = prf(kv_1,(tagP,boot,ctr)) in
+    {21}insert window(p_1,v_1,boot,ctr);
+    {22}let ct_1: bitstring = senc(kdf(kv_1,tagE),(boot,ctr),payload) in
+    {23}out(c, (mAlert,p_1,ct_1,mac(kv_1,(tagA,p_1,ct_1,boot,ctr))))
+)
+
+Translating the process into Horn clauses...
+Termination warning: v_2 ≠ v_3 && attacker2(v_4,v_2) && attacker2(v_4,v_3) -> bad
+Selecting 0
+Termination warning: v_2 ≠ v_3 && attacker2(v_2,v_4) && attacker2(v_3,v_4) -> bad
+Selecting 0
+Completing...
+Termination warning: v_2 ≠ v_3 && attacker2(v_4,v_2) && attacker2(v_4,v_3) -> bad
+Selecting 0
+Termination warning: v_2 ≠ v_3 && attacker2(v_2,v_4) && attacker2(v_3,v_4) -> bad
+Selecting 0
+RESULT Observational equivalence is true.
+
+--------------------------------------------------------------
+Verification summary:
+
+Observational equivalence is true.
+
+--------------------------------------------------------------
+
+exit code: 0 ; wall time 0 s

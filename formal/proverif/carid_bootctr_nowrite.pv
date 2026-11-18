@@ -1,0 +1,22 @@
+(* A3 negative control: BOOT-COUNTER VARIANT WHEN THE NON-VOLATILE WRITE FAILS, ProVerif 2.05.
+   The same as carid_bootctr_same_epoch.pv but the boot counter keeps one value for every boot (the write did not persist). EXPECTED: the query is false: the variant depends on its write assumption. *)
+
+free c: channel.
+fun mkb(bitstring, bitstring, bitstring): bitstring [data].
+const s1: bitstring.
+const b0: bitstring.
+free vehicle: bitstring.
+
+event CarSend(bitstring, bitstring, bitstring).
+
+query v: bitstring, a: bitstring, i1: bitstring, i2: bitstring;
+  event(CarSend(v, a, i1)) && event(CarSend(v, a, i2)) ==> i1 = i2.
+
+let Boot(v: bitstring) =
+  in(c, e: bitstring);
+  new i1: bitstring;
+  event CarSend(v, mkb(b0, e, s1), i1);
+  out(c, mkb(b0, e, s1)).
+
+process
+  !Boot(vehicle)

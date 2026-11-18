@@ -1,0 +1,64 @@
+# Round 5 results (L1 to L11)
+
+<!-- header:start -->
+| Field | Value |
+|---|---|
+| Status | current |
+| Date | 2026-11-15 |
+| Owner | Mritula S |
+| Scope | Round 5 session 1: results of L1 to L5 with development, held-out results, limits and contribution status. |
+| Evidence labels used | MEASURED_SOFTWARE, SIMULATED_HW_FORMAT, TRACE_DRIVEN, SIMULATED, FORMAL, ANALYTICAL, NOT_RUN |
+| Abbreviations | GPS = Global Positioning System; MCU = microcontroller unit; NHTSA = National Highway Traffic Safety Administration |
+<!-- header:end -->
+
+Preregistration `PREREGISTRATION_V16.md` (with addenda A1 and A2), committed before any development run. Branch `round5` from tag `algo4-v1`. Each algorithm: development (at most five logged iterations), freeze by hash (`results/tables/r5_frozen.json`), held-out run once. Code verification: `R5_CODE_VERIFICATION.md`. Session 2 (L6 to L11) is described in the sections below and in V16 section 15. Words: plain; nothing here is a claim of maturity beyond what is measured.
+
+**3 of the 6 session-1 hypotheses and 5 of the 13 hypotheses of the round-5 family are supported** (Holm over the family of 13; L9 is descriptive; L11 is its own family of one and is reported separately).
+
+## L1. Gravity-referenced mounting calibration
+
+Development: all five iterations give the same pooled development accuracy (0.984); the defaults were kept (rule of V16 3.5). Held-out, simulated hardware-format logs (13 physical installations, 1,040 horizontal crash events, seed 60261116): side accuracy 0.986 with L1 (95% interval over events 0.978 to 0.992; over installations 0.978 lower limit) against 0.490 for the unchanged rule on the raw axes; the lowest installation is 0.95. NHTSA part (real pulses at 16 g, synthetic rotations and calibration drive): balanced accuracy front against side 0.975 (lower limit 0.917) with L1 against 0.509 raw. H-L1 criterion met, raw p 0.0e+00. Labels: SIMULATED_HW_FORMAT (logs), MEASURED_SOFTWARE (NHTSA pulses; the rotations and the calibration drive are synthetic). The mirror variants of the earlier study (`F_x`, `F_y`) are NOT recovered (0.500 and 0.487), as stated before the run: a mirror image is not a rotation. Limits: the calibration needs GPS speed and a straight braking or acceleration; the drive is synthetic; stale-calibration handling is unit-tested only (no installation produced it).
+
+## L2. Post-event state corroboration
+
+Development: in every iteration the near-miss false-alarm rate at the baseline recall was higher than the baseline's (best iteration: balanced weights, window 2 s). Held-out (HALF1 of the test split, 1788 near-miss and 2086 crash events): H-L2a near-miss false-alarm rate 0.0062 for the baseline and 0.0095 for L2, a change of -0.545 in relative terms (interval -2.000 to 0.083); not supported. H-L2b retraction share 0.108 to 0.094: a fall of 0.014 against the 0.03 required (interval -0.003 to 0.031, p 0.067); not supported. L2 cancels 73 provisional alerts that the baseline confirms and rescues 93 that it retracts. Exploratory observation, not a hypothesis: at the equal-budget threshold (validation false-alarm rate 1%) the held-out crash recall is 0.741 against 0.620, with a held-out false-alarm rate of 0.0114 against 0.0094; no claim is made from it. The confirm frame would leave 2 s later. Label MEASURED_SOFTWARE. Folds for the cross-fitted detector scores are random by event (no vehicle id).
+
+## L3. Wake-on-motion with a pre-trigger FIFO
+
+Development chose T_MOT 0.3 g (lowest validation recall loss). Held-out (HALF0, 2021 crash events): recall 0.631 for B100 against 0.609 always-on; loss -0.022 (interval -0.032 to -0.013), so recall is not lower (B100 retrains the detector on its own windows; the gain is not claimed). Energy (ANALYTICAL, datasheet currents with page numbers): active share 0.203 (upper limit 0.207), ratio B over A 0.247 with the MCU at 20 mA and 0.233 at 31 mA; break-even share 0.471. H-L3 criterion met. Limits: the active share comes from dataset clips of normal driving, not from a continuous drive; the energy values are datasheet typical currents, not measurements; the idle accelerometer at 25 and 10 Hz arms assume the interrupt still fires and are descriptive (recall 0.620 and 0.620); the NHTSA side accuracy is equal by construction and not computed.
+
+## L4. Deadline-optimal spreading-factor ladder (ns-3)
+
+Development: Z0 delivery within 10 s between 0.30 and 0.95 defined 10 edge cells of 30 (radius 2,000 to 3,000 m, mostly the `calib` sensitivities); the best iteration was k = 2 with a required margin of 0 dB. Held-out (seeds 501 to 540, 3,600 runs): mean gain over the edge cells 0.098 (interval 0.091 to 0.106); the lowest lower limit over all 30 cells -0.0090 (limit -0.01); invariant violations 0. H-L4 criterion met in ns-3. The custom-simulator part is NOT_RUN, so under G0 rule 4 the result is SIMULATED in one link model and goes to the supplement. Nearest prior method: raising the spreading factor after failures is standard (the SF12 Well paper; the `quick` policy of this repository is run as a descriptive baseline). The start spreading factor uses a modelled margin estimate (error 2 dB).
+
+## L5. End-to-end threshold co-design
+
+Development: every iteration and every link model returned the baseline's own rule as the best member of the grid, so the validation reduction was 0. Held-out (HALF0): the co-designed point is the baseline point in all three link models; the 90th percentile of the time to awareness is 2.342 s (custom, SIMULATED), 2.321 s (ns-3, SIMULATED) and 4.220 s (LoED traces, TRACE_DRIVEN) in both arms; reduction 0 in each; tied at the cap in the primary statistic, so the conditional statistic was used. H-L5 not supported. Reading: with the confirm stage fixed, the early-exit grid of R3 has no member that is faster at the same false-alarm budget.
+
+## L6. Crash-weighted gateway placement (ADDED in session 2; MEASURED_SOFTWARE crash data, ANALYTICAL coverage)
+
+Data: FARS 2019 to 2021 place the gateways, FARS 2022 (39,022 crashes with coordinates) is the held-out year. Coverage radius 4.0 km (ns-3 log-distance model at SF9; the calibration on LoED is NOT_RUN because LoED has no positions). Population-weighted placement uses GeoNames places of at least 15,000 inhabitants (a proxy, stated); the road-length baseline is NOT_RUN. Held-out coverage, crash-weighted / population-weighted / uniform grid: k = 50: 3.3% / 2.2% / 0.0%; k = 100: 5.7% / 3.9% / 0.1%; k = 200: 9.5% / 6.0% / 0.2%; k = 400: 14.8% / 9.2% / 0.4%. The difference crash-weighted minus population-weighted is 1.1 points (k = 50), 1.8 points (k = 100), 3.4 points (k = 200), 5.6 points (k = 400); the criterion needs 10 points at every k, so H-L6 is not supported although the difference is positive with intervals above zero at every k. Crash-weighted placement helps, by less than the preregistered margin; at 2.5 km and 6 km the picture is in the result keys `r5.l6.sf7_2.5km.*` and `r5.l6.sf11_6km.*`.
+
+## L7. Forward-secure ratchet (FORMAL)
+
+Tamarin 1.12.0, bounded model of three keys (`formal/ratchet3.spthy`): executable undecided: time limit, forward_secrecy undecided: 5 GB heap exhausted, authenticity undecided: 5 GB heap exhausted, ack_binding not run: time box ended. The model with natural numbers (`formal/ratchet.spthy`) ran out of the 5 GB heap or of time before any lemma finished and is undecided. Scope of the model of record: window 0, no boot step, chain of three keys; the look-ahead window and the boot ratchet are checked only by the enumeration. H-L7b: every one of 1,398,101 event sequences of length 0 to 10 behaves as specified (resynchronisation inside the window of 8, rejection outside, no state change on rejection); lost ACKs do not open a gap in this design, only reboots do. Cost: no byte added to the frames, one hash per acknowledged alert and at most 8 per resynchronisation (ANALYTICAL).
+
+## L8. Flood containment (FORMAL for H-L8a, SIMULATED for H-L8b)
+
+H-L8a: no pattern of one compromised vehicle gets more than 6 high-confidence forwards in the hour (exhaustive exploration of 232,966 states). This is an invariant of the per-hour counter and the quarantine machine, true by construction of the counter; the plausibility test is abstracted to its outcome label and the counter has no refill inside the horizon, so it is not a proof about position and speed arithmetic. H-L8b: with the measured alert rate of 1.058 per vehicle-hour (10 events per vehicle-hour times the share of validation events that alarm at the 1% target), 1 of 2,000 legitimate vehicle-hours ended in quarantine and 13 had a strike; two plausible alerts in the same minute are an over-rate strike. H-L8b is not supported. A smoke run with a stand-in rate had shown this before the run (DECISIONS.md); the design was not changed.
+
+## L9. Provisional-dispatch rule (descriptive)
+
+With the stored T3 values (retraction share 0.108, median gain 1750 ms) acting on the provisional alert is cheaper than waiting for the confirm only if a false dispatch costs less than 0.241 minutes of delay (95% interval 0.216 to 0.275). With a pre-alert option (assumed: a retracted pre-alert costs 0.1 of a dispatch and captures half of the gain) the pre-alert is cheaper than waiting below 1.203 (1.078 to 1.373) and cheaper than acting above 0.134. The gain is 1.75 s, so unless a false dispatch is nearly free, the provisional alert should not dispatch on its own. No superiority claim; L2 did not pass, so no corroboration is used.
+
+## L10. Cross-benchmark leakage audit (MEASURED_SOFTWARE)
+
+UCI HAR, published subject split (7,352 train and 2,947 test windows, nine inertial channels): 0 test windows identical to a train window and 0 subjects in both splits. SisFall (153,705 windows of 200 samples), random 80/20 window split: 0 test windows identical to a train window (0.000%); subject split: 0; byte-identical trials under more than one subject: 0. H-L10a is not supported: neither benchmark has more than 1% identical windows, so the exact-duplicate problem of VZCrash is not general across these two accelerometer sets. H-L10b is NOT_RUN (it needs a leak). This narrows C1 to the dataset audited; the idea of a duplicate audit is established for other data types (novelty matrix).
+
+## L11. Mirror-flip detection from turns (ADDED-AFTER-SESSION-1; own family of one)
+
+Real VZCrash normal-driving events (train split, never a held-out set before; half 1 by hash is held out), synthetic transformations; 100 installations of 20 valid events each. Development chose the lowest turn threshold (5 deg/s); the median agreement of the identity installations on development was 0.434. Held-out: both-channel mirror flips of x, y and z are detected in 100%, 100% and 100% of installations with a false-detection rate of 0% (exact upper 95% limit 3.0%). Accelerometer-only flips are detected less often: x 57%, y 89%; an accelerometer-only flip of z and gyro-only flips of x or y cannot be detected by this statistic (sensitivity 0%, 0%, 0%, as derived before the run). H-L11a required at least 95% for all five criterion transformations, so it is **not supported**; the part that works is the both-channel mirror case, which is the error of a wrong axis sign applied to a whole sensor frame. On average 64 clips (17 minutes of driving) are needed for 20 valid events; 31% of the events are valid. H-L11b (simulated side accuracy) is NOT_RUN (cut). L1 keeps its mirror-flip limitation in the text.
+
+## Contribution status (G0 rule 4) and what changes in the paper
+
+See `ROUND5_DECISION_TABLE.md`. L1 and L3 meet the rule (supported; MEASURED_SOFTWARE labels, with the limits above). L4 goes to the supplement. L2, L5, L6, L8b and L10a are negative results. L7 and L8a are FORMAL (see the limits stated with each). L11 is reported in its own family.

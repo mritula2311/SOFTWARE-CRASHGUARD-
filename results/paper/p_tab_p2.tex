@@ -1,0 +1,25 @@
+% P2: intervals on the sealed fold at 100 Hz, target coverage 0.90. The frontal barrier share uses 20 records.
+\begin{tabular}{lllll}
+\toprule
+Range (g) & Interval & Coverage [95\%] & Mean upper/lower ratio [95\%] & Frontal barrier inside v..2v \\
+\midrule
++-16 & [plain, plain x q], global q & 0.914 [0.871, 0.957] & 1.93 [1.93, 1.93] & 0.00 \\
++-16 & q by clipped-duration bin & 0.919 [0.865, 0.969] & 2.10 [2.04, 2.18] & 0.05 \\
++-16 & q by inferred mode & 0.930 [0.885, 0.975] & 2.19 [2.00, 2.43] & 0.05 \\
++-16 & global q, group-weighted (exploratory) & 0.919 [0.874, 0.962] & 1.97 [1.97, 1.97] & 0.00 \\
++-16 & relative residual around fill + ridge (split form) & 0.914 [0.877, 0.952] & 1.96 [1.96, 1.96] & 0.00 \\
++-16 & grouped CV+ around fill + ridge (exploratory) & 0.957 [0.929, 0.983] & 2.39 [2.39, 2.39] & 0.00 \\
++-32 & [plain, plain x q], global q & 0.871 [0.826, 0.920] & 1.94 [1.94, 1.94] & 0.00 \\
++-32 & q by clipped-duration bin & 0.866 [0.819, 0.913] & 2.73 [2.58, 2.87] & 0.75 \\
++-32 & q by inferred mode & 0.866 [0.823, 0.913] & 1.38 [1.37, 1.39] & 0.80 \\
++-32 & global q, group-weighted (exploratory) & 0.871 [0.826, 0.920] & 3.18 [3.18, 3.18] & 0.00 \\
++-32 & relative residual around fill + ridge (split form) & 0.946 [0.916, 0.975] & 1.80 [1.80, 1.80] & 0.00 \\
++-32 & grouped CV+ around fill + ridge (exploratory) & 0.946 [0.916, 0.975] & 1.79 [1.79, 1.79] & 0.00 \\
++-64 & [plain, plain x q], global q & 0.833 [0.775, 0.887] & 1.69 [1.69, 1.69] & 1.00 \\
++-64 & q by clipped-duration bin & 0.833 [0.775, 0.887] & 1.69 [1.69, 1.69] & 1.00 \\
++-64 & q by inferred mode & 0.828 [0.773, 0.876] & 1.40 [1.39, 1.42] & 0.00 \\
++-64 & global q, group-weighted (exploratory) & 0.833 [0.775, 0.887] & 4.32 [4.32, 4.32] & 0.00 \\
++-64 & relative residual around fill + ridge (split form) & 0.930 [0.889, 0.967] & 1.45 [1.45, 1.45] & 0.00 \\
++-64 & grouped CV+ around fill + ridge (exploratory) & 0.930 [0.889, 0.967] & 1.46 [1.46, 1.46] & 0.00 \\
+\bottomrule
+\end{tabular}

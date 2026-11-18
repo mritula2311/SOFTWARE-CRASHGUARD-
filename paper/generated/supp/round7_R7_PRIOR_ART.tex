@@ -1,0 +1,206 @@
+
+
+
+Written before any round-7 experiment was run. Queries and hit counts are generated from \texttt{results/tables/r7\_lit\_queries.json} (initial pass, \texttt{scripts/r7\_lit.py}) and \texttt{results/tables/r7\_lit\_queries2.json} (second pass, \texttt{scripts/r7\_lit2.py}). Sources: OpenAlex, Crossref, DOAJ, arXiv (all four through their public APIs, no key, generic client name, 2018 onward), and the IEEE Xplore open search page. \textbf{The IEEE Xplore open search page returned only a page shell without results (results load by script); nothing was bypassed and no IEEE hit count exists} (the IEEE papers below were read from their OpenAlex abstract or from an open copy). Crossref totals are fuzzy-match totals over all fields and are not a measure of relevance; they are listed for the record only. The arXiv phrase queries returned 0 because the whole query is one quoted phrase; the second pass uses unquoted terms.
+
+\subsection*{1. Stop-rule decision (written before running anything)}
+
+{\scriptsize\raggedright
+\begin{longtable}{p{0.317\linewidth}p{0.317\linewidth}p{0.317\linewidth}}
+\toprule
+Stop rule & Test & Result \\
+\midrule
+\endhead
+A: a paper shows ACK suppression draining a regulatory duty budget and gives a reserved-budget defence & no opened paper does both & \textbf{Not triggered.} Papers that show energy drain from retransmissions have no reserve defence and are about battery energy, not the regulatory duty budget; papers about duty-cycle-compliant jamming attack throughput and propose detection (abstract level) \\
+B: a paper gives a formally proven unlinkable LoRa or LPWAN identifier scheme that keeps replay protection and per-device accountability & no opened paper does & \textbf{Not triggered.} The only LoRaWAN pseudonym scheme found (P\'elissier et al. 2024) argues unlinkability informally \\
+\bottomrule
+\end{longtable}}
+
+Limits of this decision: the full text of the paywalled IEEE and ACM items (section 3, depth "abstract") was not read, so a defence inside one of them cannot be excluded by this search; the search strings of the brief were run as written plus the second-pass strings; no result for \texttt{reserve} or \texttt{reserved budget} plus LoRa was returned by any database.
+
+\subsection*{2. Narrowed claims (what round 7 may and may not claim)}
+
+\textbf{A (not narrowed to a citation; claim stated narrowly).} Round 7 may claim only: for the two-stage crash alert, an analysis of how suppressed ACKs drain the node's legal duty budget so that the confirm or cancel cannot be sent, a reserved-budget retry policy, a bounded formal check of the invariants and a simulated comparison. It may not claim that ACK-triggered retransmission energy or duty drain is new: the energy side is in Mikhaylov et al. 2019, Nafees et al. 2020, the 2024 review and the 2026 EDA-LoRa paper. It may not claim the attack works on commercial LoRaWAN gear; nothing in round 7 is measured on hardware.
+
+\textbf{B (not narrowed to a citation; claim stated narrowly).} Round 7 may claim only: a keyed rotating pseudonym that keeps the existing frame sizes, a symbolic (ProVerif) unlinkability result for the stated attacker, the re-run of the C4 lemmas with the pseudonym, and resolution cost and collision numbers. Against P\'elissier et al. it may claim a formal model and compatibility with the boot counter, freshness, the micro-confirm index and per-vehicle quarantine; it may not claim the pseudonym idea, the sequential window or the use of a counter as new (all in P\'elissier et al.), and it does not claim to hide position, timing, radio fingerprints or a key-holding attacker.
+
+\subsection*{3. Papers opened}
+
+{\scriptsize\raggedright
+\begin{longtable}{p{0.190\linewidth}p{0.190\linewidth}p{0.190\linewidth}p{0.190\linewidth}p{0.190\linewidth}}
+\toprule
+Paper & Venue & Read depth & What it has & Difference from round 7 \\
+\midrule
+\endhead
+P\'elissier, Aalmoes, Mishra, Cunche, Roca, Donsez, Privacy-Preserving Pseudonyms for LoRaWAN, ACM WiSec 2024, pp. 14 to 19 (doi 10.1145/3643833.3656120) & conference & \textbf{full text} (HAL copy, 6 pages) & Resolvable pseudonyms (r and a truncated CMAC) and sequential pseudonyms (AES-CTR of the counter, truncated to NwkAddr, receiver keeps a window of m pregenerated values, MIC resolves collisions); goals P1 unlinkability, P2 low overhead, P3 legacy support, P4 low compute, P5 reliability; threat model: passive eavesdropper without keys; analysis on a dataset of 71 million messages (desynchronisation 30.5 \% of devices at the stated setting, collisions); security section is a list of side-channel remarks; FCnt in clear is a linking channel, so it proposes to encrypt it; replay is handled by the existing FCnt, with the remark that jam-and-replay is more advanced; says nothing of misbehaving devices or accountability; no formal model, no tool & No formal model or proof; passive attacker only; no per-device quarantine or accountability; no boot-counter reset case; replay "functionally available" through FCnt, not analysed. Round 7 B takes its sequential scheme as the baseline and adds a ProVerif model with an active attacker and the C4 lemmas \\
+Dossa, Burg, Amhoud, Impact of Reactive Jamming Attacks on LoRaWAN: a Theoretical and Experimental Study, arXiv:2501.18339, 2025 (preprint) & preprint & \textbf{full text} (PDF, 6 pages) & Frame success rate under a few jamming symbols; SDR reactive jammer in GNU Radio; names battery exhaustion and DoS as earlier results (refs 9 and 11) & No duty-budget or energy accounting of retransmissions; no defence (it calls for stealthy techniques). Cites Mikhaylov et al. 2019 (energy attack: jam the uplink, then impersonate the gateway in RX2 to keep the device active) and Nafees et al. 2020 \\
+Suciu, Pacho, Bartoli, Vilajosana, Authenticated Preambles for Denial of Service Mitigation in LPWANs, arXiv:1904.08179, 2019 & preprint & \textbf{full text} (PDF, 12 pages; abstract and the sections on duty cycle read) & Battery-exhaustion attack on Class B beacons and an authenticated-preamble defence (91 \% energy saving under attack, 4 \% overhead) & Different attack (forcing a node to listen to Class B beacons); defence is authentication of preambles, not a budget reserve; the energy is battery, not the regulatory duty budget \\
+P\'elissier, Cunche, Roca, Donsez, Device Re-identification in LoRaWAN through Messages Linkage, WiSec 2022 (doi 10.1145/3507657.3528556) & conference & \textbf{full text} (HAL copy, title page and the linkage method read) & Attack: devices are re-identified across DevAddr changes by linking messages & It is the attack that motivates B; no defence \\
+Mikhaylov, Fujdiak, Pouttu, Miroslav, Malina, Mlynek, Energy Attack in LoRaWAN: Experimental Validation, ARES 2019 (doi 10.1145/3339252.3340525) & conference & \textbf{abstract} (OpenAlex) and as summarised in Dossa et al. & Energy depletion attack vectors; experimentally 36 \% to 576 \% more energy per communication event depending on SF; needs no key & Battery energy, not the regulatory duty budget; no defence in the abstract; not specific to a two-stage alert \\
+Nafees, Saxena, Burnap, Choi, Impact of Energy Consumption Attacks on LoRaWAN-Enabled Devices in Industrial Context, 2020 (doi 10.1145/3372297.3420022) & conference & \textbf{abstract} (OpenAlex) & On-off DoS keeping the device in retransmission mode; at SF12 92 times the energy of SF7 without attack & Energy, not duty budget; no defence \\
+Denial-of-Service Attacks Against LoRaWAN on MAC Layer (the published title starts with an adjective that the wording rules of this repository do not allow), IEEE Communications Letters 2023 (doi 10.1109/lcomm.2023.3322119) & journal & \textbf{abstract} (OpenAlex) & Two DoS attacks on confirmed transmission that use the duty-cycle limitation and Aloha; simulation shows lower packet success and energy efficiency & Closest to A at abstract level (confirmed transmission plus duty cycle). Network-level success rate, no reserved-budget defence named in the abstract, nothing about a follow-up frame that must still go out. Full text not read: this is the paper to open next for the final related-work text \\
+Classification and Characterization of LoRaWAN Energy Depletion Attacks: A Review, IEEE Sensors Journal 2024 (doi 10.1109/jsen.2024.3504259) & journal & \textbf{abstract} & Classification of EDAs; review of defences & Energy of sensor; no duty-budget reserve in the abstract \\
+Energy Depletion Attack for LoRa-Based Wireless Sensor Network (EDA-LoRa), IEEE Internet of Things Journal 2026 (doi 10.1109/jiot.2026.3713221) & journal & \textbf{abstract} & Jamming plus replay forces retransmissions and RX2 processing; battery efficiency down 58.9 \%, communication energy up to 8 times & Battery energy; attack, no defence in the abstract \\
+Multi-Attribute Physical-Layer Authentication Against Jamming and Battery-Depletion Attacks in LoRaWAN, Future Internet 2026 (doi 10.3390/fi18010038) & journal & \textbf{abstract} & Classifier-based detection of jamming and battery depletion on semi-synthetic traces & Detection at the network server; no node-side budget policy \\
+Potential Solution Against Duty Cycle Compliant Selective Jamming Attacks in LoRa Networks, CCNC 2025 (doi 10.1109/ccnc54725.2025.10976096); Potential Counteractions to Duty Cycle-Compliant Jamming in LoRa Networks, TELFOR 2024; Securing IoT LoRaWAN Networks Against Duty Cycle Compliant Jamming Attacks, WCNC 2025 & conference & \textbf{abstract} & A jammer that obeys the duty-cycle rule for its own transmissions; mitigation and intrusion detection & The attacker's duty compliance, not the victim's budget; no reserve \\
+BlindSpot: Efficient Single-Node Selective Jamming for LoRaWAN, 2025 (doi 10.1145/3734477.3734724) & conference & \textbf{abstract} & Selective jamming of gateways with fabricated frames & Shows that an attacker can pick which frames reach the gateway; supports the assumption that ACK suppression is feasible \\
+Airtime-budgeted quantum-resistant rekeying for duty-cycle-limited LPWAN uplinks, 2026 (doi 10.33545/2707661x.2026.v7.i3a.217) & journal & \textbf{abstract} & Scheduler that tracks the cumulative airtime and defers a rekey when the remaining budget is too small & Budget-aware scheduling for key exchange, without an attacker and without a reserve for a follow-up frame \\
+Using Range-Revocable Pseudonyms to Provide Backward Unlinkability in the Edge, 2023 (doi 10.1145/3576915.3623111); Fine-Grained Trackability in Protocol Executions, 2023 & conference & \textbf{abstract} (title and metadata only for the second) & Pseudonyms with revocation (not LPWAN); a formal trackability notion & Not LoRa; related only as background for revocation and for the formal notion \\
+\bottomrule
+\end{longtable}}
+
+No paper found by the searches gives a reserved-budget policy for the follow-up frame of a two-stage alert, and none gives a formal unlinkability result for a LoRa identifier.
+
+\subsection*{4. Queries run}
+
+\subsubsection*{Initial pass}
+
+{\scriptsize\raggedright
+\begin{longtable}{p{0.158\linewidth}p{0.158\linewidth}p{0.158\linewidth}p{0.158\linewidth}p{0.158\linewidth}p{0.158\linewidth}}
+\toprule
+Topic & Query & Database & Date & Hits & Status \\
+\midrule
+\endhead
+A & LoRaWAN ACK spoofing & OpenAlex & 2026-11-16 & 129 & OK \\
+A & LoRaWAN ACK spoofing & Crossref & 2026-11-16 & 7810 & OK \\
+A & LoRaWAN ACK spoofing & DOAJ & 2026-11-16 & 0 & OK \\
+A & LoRaWAN ACK spoofing & arXiv & 2026-11-16 & 0 & OK \\
+A & LoRaWAN ACK spoofing & IEEE Xplore open page & 2026-11-16 &  & NO\_RESULTS\_IN\_PAGE \\
+A & LoRaWAN acknowledgement jamming & OpenAlex & 2026-11-16 & 163 & OK \\
+A & LoRaWAN acknowledgement jamming & Crossref & 2026-11-16 & 16081 & OK \\
+A & LoRaWAN acknowledgement jamming & DOAJ & 2026-11-16 & 0 & OK \\
+A & LoRaWAN acknowledgement jamming & arXiv & 2026-11-16 & 0 & OK \\
+A & LoRaWAN acknowledgement jamming & IEEE Xplore open page & 2026-11-16 &  & NO\_RESULTS\_IN\_PAGE \\
+A & LoRaWAN selective jamming & OpenAlex & 2026-11-16 & 454 & OK \\
+A & LoRaWAN selective jamming & Crossref & 2026-11-16 & 181204 & OK \\
+A & LoRaWAN selective jamming & DOAJ & 2026-11-16 & 0 & OK \\
+A & LoRaWAN selective jamming & arXiv & 2026-11-16 & 0 & OK \\
+A & LoRaWAN selective jamming & IEEE Xplore open page & 2026-11-16 &  & NO\_RESULTS\_IN\_PAGE \\
+A & LoRaWAN energy depletion & OpenAlex & 2026-11-16 & 1433 & OK \\
+A & LoRaWAN energy depletion & Crossref & 2026-11-16 & 1667688 & OK \\
+A & LoRaWAN energy depletion & DOAJ & 2026-11-16 & 3 & OK \\
+A & LoRaWAN energy depletion & arXiv & 2026-11-16 & 0 & OK \\
+A & LoRaWAN energy depletion & IEEE Xplore open page & 2026-11-16 &  & NO\_RESULTS\_IN\_PAGE \\
+A & LoRaWAN battery exhaustion & OpenAlex & 2026-11-16 & 229 & OK \\
+A & LoRaWAN battery exhaustion & Crossref & 2026-11-16 & 120710 & OK \\
+A & LoRaWAN battery exhaustion & DOAJ & 2026-11-16 & 1 & OK \\
+A & LoRaWAN battery exhaustion & arXiv & 2026-11-16 & 0 & OK \\
+A & LoRaWAN battery exhaustion & IEEE Xplore open page & 2026-11-16 &  & NO\_RESULTS\_IN\_PAGE \\
+A & LoRaWAN duty cycle denial of service & OpenAlex & 2026-11-16 & 268 & OK \\
+A & LoRaWAN duty cycle denial of service & Crossref & 2026-11-16 & 596091 & OK \\
+A & LoRaWAN duty cycle denial of service & DOAJ & 2026-11-16 & 0 & OK \\
+A & LoRaWAN duty cycle denial of service & arXiv & 2026-11-16 & 0 & OK \\
+A & LoRaWAN duty cycle denial of service & IEEE Xplore open page & 2026-11-16 &  & NO\_RESULTS\_IN\_PAGE \\
+A & LoRaWAN retransmission attack & OpenAlex & 2026-11-16 & 466 & OK \\
+A & LoRaWAN retransmission attack & Crossref & 2026-11-16 & 52934 & OK \\
+A & LoRaWAN retransmission attack & DOAJ & 2026-11-16 & 0 & OK \\
+A & LoRaWAN retransmission attack & arXiv & 2026-11-16 & 0 & OK \\
+A & LoRaWAN retransmission attack & IEEE Xplore open page & 2026-11-16 &  & NO\_RESULTS\_IN\_PAGE \\
+A & LoRaWAN airtime exhaustion & OpenAlex & 2026-11-16 & 15 & OK \\
+A & LoRaWAN airtime exhaustion & Crossref & 2026-11-16 & 11196 & OK \\
+A & LoRaWAN airtime exhaustion & DOAJ & 2026-11-16 & 0 & OK \\
+A & LoRaWAN airtime exhaustion & arXiv & 2026-11-16 & 0 & OK \\
+A & LoRaWAN airtime exhaustion & IEEE Xplore open page & 2026-11-16 &  & NO\_RESULTS\_IN\_PAGE \\
+A & LoRaWAN regulatory duty cycle attack & OpenAlex & 2026-11-16 & 271 & OK \\
+A & LoRaWAN regulatory duty cycle attack & Crossref & 2026-11-16 & 362878 & OK \\
+A & LoRaWAN regulatory duty cycle attack & DOAJ & 2026-11-16 & 0 & OK \\
+A & LoRaWAN regulatory duty cycle attack & arXiv & 2026-11-16 & 0 & OK \\
+A & LoRaWAN regulatory duty cycle attack & IEEE Xplore open page & 2026-11-16 &  & NO\_RESULTS\_IN\_PAGE \\
+A & LoRa ACK spoofing & OpenAlex & 2026-11-16 & 147 & OK \\
+A & LoRa ACK spoofing & Crossref & 2026-11-16 & 20923 & OK \\
+A & LoRa ACK spoofing & DOAJ & 2026-11-16 & 0 & OK \\
+A & LoRa ACK spoofing & arXiv & 2026-11-16 & 0 & OK \\
+A & LoRa ACK spoofing & IEEE Xplore open page & 2026-11-16 &  & NO\_RESULTS\_IN\_PAGE \\
+A & LoRa acknowledgement jamming & OpenAlex & 2026-11-16 & 545 & OK \\
+A & LoRa acknowledgement jamming & Crossref & 2026-11-16 & 29193 & OK \\
+A & LoRa acknowledgement jamming & DOAJ & 2026-11-16 & 0 & OK \\
+A & LoRa acknowledgement jamming & arXiv & 2026-11-16 & 0 & OK \\
+A & LoRa acknowledgement jamming & IEEE Xplore open page & 2026-11-16 &  & NO\_RESULTS\_IN\_PAGE \\
+A & LoRa selective jamming & OpenAlex & 2026-11-16 & 1448 & OK \\
+A & LoRa selective jamming & Crossref & 2026-11-16 & 194296 & OK \\
+A & LoRa selective jamming & DOAJ & 2026-11-16 & 0 & OK \\
+A & LoRa selective jamming & arXiv & 2026-11-16 & 0 & OK \\
+A & LoRa selective jamming & IEEE Xplore open page & 2026-11-16 &  & NO\_RESULTS\_IN\_PAGE \\
+A & LoRa energy depletion & OpenAlex & 2026-11-16 & 4794 & OK \\
+A & LoRa energy depletion & Crossref & 2026-11-16 & 1680483 & OK \\
+A & LoRa energy depletion & DOAJ & 2026-11-16 & 5 & OK \\
+A & LoRa energy depletion & arXiv & 2026-11-16 & 0 & OK \\
+A & LoRa energy depletion & IEEE Xplore open page & 2026-11-16 &  & NO\_RESULTS\_IN\_PAGE \\
+B & LoRaWAN pseudonym & OpenAlex & 2026-11-16 & 197 & OK \\
+B & LoRaWAN pseudonym & Crossref & 2026-11-16 & 3297 & OK \\
+B & LoRaWAN pseudonym & DOAJ & 2026-11-16 & 0 & OK \\
+B & LoRaWAN pseudonym & arXiv & 2026-11-16 & 0 & OK \\
+B & LoRaWAN pseudonym & IEEE Xplore open page & 2026-11-16 &  & NO\_RESULTS\_IN\_PAGE \\
+B & LoRaWAN DevAddr privacy & OpenAlex & 2026-11-16 & 95 & OK \\
+B & LoRaWAN DevAddr privacy & Crossref & 2026-11-16 & 107372 & OK \\
+B & LoRaWAN DevAddr privacy & DOAJ & 2026-11-16 & 0 & OK \\
+B & LoRaWAN DevAddr privacy & arXiv & 2026-11-16 & 0 & OK \\
+B & LoRaWAN DevAddr privacy & IEEE Xplore open page & 2026-11-16 &  & NO\_RESULTS\_IN\_PAGE \\
+B & device de-anonymization LoRaWAN & OpenAlex & 2026-11-16 & 404 & OK \\
+B & device de-anonymization LoRaWAN & Crossref & 2026-11-16 & 6068887 & OK \\
+B & device de-anonymization LoRaWAN & DOAJ & 2026-11-16 & 0 & OK \\
+B & device de-anonymization LoRaWAN & arXiv & 2026-11-16 & 0 & OK \\
+B & device de-anonymization LoRaWAN & IEEE Xplore open page & 2026-11-16 &  & NO\_RESULTS\_IN\_PAGE \\
+B & unlinkability ProVerif IoT & OpenAlex & 2026-11-16 & 185 & OK \\
+B & unlinkability ProVerif IoT & Crossref & 2026-11-16 & 181207 & OK \\
+B & unlinkability ProVerif IoT & DOAJ & 2026-11-16 & 3 & OK \\
+B & unlinkability ProVerif IoT & arXiv & 2026-11-16 & 0 & OK \\
+B & unlinkability ProVerif IoT & IEEE Xplore open page & 2026-11-16 &  & NO\_RESULTS\_IN\_PAGE \\
+B & vehicle alert unlinkability & OpenAlex & 2026-11-16 & 300 & OK \\
+B & vehicle alert unlinkability & Crossref & 2026-11-16 & 188135 & OK \\
+B & vehicle alert unlinkability & DOAJ & 2026-11-16 & 0 & OK \\
+B & vehicle alert unlinkability & arXiv & 2026-11-16 & 0 & OK \\
+B & vehicle alert unlinkability & IEEE Xplore open page & 2026-11-16 &  & NO\_RESULTS\_IN\_PAGE \\
+B & pseudonym accountability revocation LPWAN & OpenAlex & 2026-11-16 & 16 & OK \\
+B & pseudonym accountability revocation LPWAN & Crossref & 2026-11-16 & 34159 & OK \\
+B & pseudonym accountability revocation LPWAN & DOAJ & 2026-11-16 & 0 & OK \\
+B & pseudonym accountability revocation LPWAN & arXiv & 2026-11-16 & 0 & OK \\
+B & pseudonym accountability revocation LPWAN & IEEE Xplore open page & 2026-11-16 &  & NO\_RESULTS\_IN\_PAGE \\
+\bottomrule
+\end{longtable}}
+
+\subsubsection*{Second pass}
+
+{\scriptsize\raggedright
+\begin{longtable}{p{0.158\linewidth}p{0.158\linewidth}p{0.158\linewidth}p{0.158\linewidth}p{0.158\linewidth}p{0.158\linewidth}}
+\toprule
+Topic & Query & Database & Date & Hits & Status \\
+\midrule
+\endhead
+A & reserved airtime duty cycle emergency alert LoRa & OpenAlex & 2026-11-16 & 8 & OK \\
+A & reserved airtime duty cycle emergency alert LoRa & Crossref & 2026-11-16 & 440525 & OK \\
+A & reserved airtime duty cycle emergency alert LoRa & arXiv & 2026-11-16 & 0 & OK \\
+A & duty cycle budget reserve priority retransmission LoRaWAN & OpenAlex & 2026-11-16 & 18 & OK \\
+A & duty cycle budget reserve priority retransmission LoRaWAN & Crossref & 2026-11-16 & 338124 & OK \\
+A & duty cycle budget reserve priority retransmission LoRaWAN & arXiv & 2026-11-16 & 1 & OK \\
+A & confirmed uplink acknowledgement drop attack LoRaWAN duty cycle & OpenAlex & 2026-11-16 & 23 & OK \\
+A & confirmed uplink acknowledgement drop attack LoRaWAN duty cycle & Crossref & 2026-11-16 & 278263 & OK \\
+A & confirmed uplink acknowledgement drop attack LoRaWAN duty cycle & arXiv & 2026-11-16 & 0 & OK \\
+A & LoRaWAN downlink acknowledgement jamming retransmission energy duty-cycle exhaustion & OpenAlex & 2026-11-16 & 5 & OK \\
+A & LoRaWAN downlink acknowledgement jamming retransmission energy duty-cycle exhaustion & Crossref & 2026-11-16 & 1842686 & OK \\
+A & LoRaWAN downlink acknowledgement jamming retransmission energy duty-cycle exhaustion & arXiv & 2026-11-16 & 0 & OK \\
+B & formal verification unlinkability LoRaWAN identifier ProVerif & OpenAlex & 2026-11-16 & 6 & OK \\
+B & formal verification unlinkability LoRaWAN identifier ProVerif & Crossref & 2026-11-16 & 109085 & OK \\
+B & formal verification unlinkability LoRaWAN identifier ProVerif & arXiv & 2026-11-16 & 0 & OK \\
+B & LPWAN identifier privacy formal proof replay protection accountability & OpenAlex & 2026-11-16 & 37 & OK \\
+B & LPWAN identifier privacy formal proof replay protection accountability & Crossref & 2026-11-16 & 497046 & OK \\
+B & LPWAN identifier privacy formal proof replay protection accountability & arXiv & 2026-11-16 & 0 & OK \\
+B & LoRaWAN anonymity Tamarin ProVerif privacy DevAddr & OpenAlex & 2026-11-16 & 1 & OK \\
+B & LoRaWAN anonymity Tamarin ProVerif privacy DevAddr & Crossref & 2026-11-16 & 110162 & OK \\
+B & LoRaWAN anonymity Tamarin ProVerif privacy DevAddr & arXiv & 2026-11-16 & 0 & OK \\
+B & unlinkable pseudonym vehicle emergency alert accountability revocation formal & OpenAlex & 2026-11-16 & 27 & OK \\
+B & unlinkable pseudonym vehicle emergency alert accountability revocation formal & Crossref & 2026-11-16 & 491125 & OK \\
+B & unlinkable pseudonym vehicle emergency alert accountability revocation formal & arXiv & 2026-11-16 & 0 & OK \\
+\bottomrule
+\end{longtable}}
+
+
+\subsection*{Round 7b addendum (G2): Chen, Ben-Othman and Mokdad, 2023}
+
+"Denial-of-Service Attacks Against LoRaWAN on MAC Layer" (the title begins with a further word that the repository wording rules ban), IEEE Communications Letters 27(11):3123-3126, 2023, doi 10.1109/LCOMM.2023.3322119. Crossref record checked on 2026-11-16 (authors Mi Chen, Jalel Ben-Othman, Lynda Mokdad). OpenAlex reports the item as closed access with no repository copy, so the full text was \textbf{not reached and nothing was bypassed: abstract only; author to open via the institutional library.}
+
+What the abstract says (OpenAlex): LoRaWAN is exposed to denial of service because of the Aloha MAC protocol and the duty-cycle limitation; two attacks that aim at the confirmed transmission are proposed by investigating the MAC layer; simulation shows that they reduce the packet success rate and the network energy efficiency with fewer attackers than a baseline attack.
+
+Recorded questions that the abstract does not answer: (1) the exact mechanism; (2) whether it drains the duty budget through ACK suppression; (3) whether a defence is proposed. The abstract names no defence. The attack class of round 7 (suppression of acknowledgements against a duty budget) is therefore treated as known, and the paper does not describe it as new; its claim is the reserved-budget defence for a two-stage alert, the bounded model check with its control, and the preregistered results under India's rules.
+
+

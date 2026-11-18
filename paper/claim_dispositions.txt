@@ -1,0 +1,2 @@
+better than the severity table in any simulator	expectation column of the negative-results table; the finding column states the measured result with its label
+not a validated product	negated: the sentence denies validation; no validation claim is made

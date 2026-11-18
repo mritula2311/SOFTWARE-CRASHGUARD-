@@ -1,0 +1,57 @@
+(* Round 6, R6-1 control (H-R6-1c part iv): the micro-confirm and micro-cancel tags do NOT bind T1: m = mac(K_v, <tagM, x>) and mac(K_v, <tagX>). The model is otherwise identical to
+   r6_micro_confirm.pv. The attacker can replay a micro-confirm made for one flash of a vehicle onto another pending flash of the same vehicle, so queries (i) and (ii) must be falsified (an attack). *)
+free c: channel.
+const tagF: bitstring.
+const tagM: bitstring.
+const tagX: bitstring.
+const mFlash: bitstring.
+const mMicro: bitstring.
+const mCancel: bitstring.
+fun kdf(bitstring, bitstring): bitstring.
+fun mac(bitstring, bitstring): bitstring.
+table pending(bitstring, bitstring).
+
+event CarSentFlash(bitstring, bitstring).
+event BaseAcceptFlash(bitstring, bitstring).
+event CarSentMicro(bitstring, bitstring, bitstring).
+event BaseAcceptMicro(bitstring, bitstring, bitstring).
+event CarSentCancel(bitstring, bitstring).
+event BaseAcceptCancel(bitstring, bitstring).
+event Revealed(bitstring).
+
+query v: bitstring, t: bitstring, x: bitstring; event(BaseAcceptMicro(v, t, x)) ==> event(CarSentMicro(v, t, x)) || event(Revealed(v)).
+query v: bitstring, t: bitstring, x: bitstring; event(BaseAcceptMicro(v, t, x)) ==> event(CarSentFlash(v, t)) || event(Revealed(v)).
+query v: bitstring, t: bitstring; event(BaseAcceptCancel(v, t)) ==> event(CarSentCancel(v, t)) || event(Revealed(v)).
+
+let Reveal(master: bitstring) = in(c, v: bitstring); event Revealed(v); out(c, kdf(master, v)).
+
+let Car(master: bitstring) =
+  in(c, (v: bitstring, x: bitstring));
+  new id: bitstring;
+  let t = mac(kdf(master, v), (tagF, v, id)) in
+  event CarSentFlash(v, t);
+  out(c, (mFlash, v, id, t));
+  ( ( event CarSentMicro(v, t, x); out(c, (mMicro, v, t, x, mac(kdf(master, v), (tagM, x)))) )
+  | ( event CarSentCancel(v, t); out(c, (mCancel, v, t, mac(kdf(master, v), tagX))) ) ).
+
+let BaseFlash(master: bitstring) =
+  in(c, (=mFlash, v: bitstring, id: bitstring, t: bitstring));
+  if t = mac(kdf(master, v), (tagF, v, id)) then
+  event BaseAcceptFlash(v, t);
+  insert pending(v, t).
+
+let BaseMicro(master: bitstring) =
+  in(c, (=mMicro, v: bitstring, t: bitstring, x: bitstring, m: bitstring));
+  get pending(=v, =t) in
+  if m = mac(kdf(master, v), (tagM, x)) then
+  event BaseAcceptMicro(v, t, x).
+
+let BaseCancel(master: bitstring) =
+  in(c, (=mCancel, v: bitstring, t: bitstring, m: bitstring));
+  get pending(=v, =t) in
+  if m = mac(kdf(master, v), tagX) then
+  event BaseAcceptCancel(v, t).
+
+process
+  new master: bitstring;
+  ( !Reveal(master) | !Car(master) | !BaseFlash(master) | !BaseMicro(master) | !BaseCancel(master) )

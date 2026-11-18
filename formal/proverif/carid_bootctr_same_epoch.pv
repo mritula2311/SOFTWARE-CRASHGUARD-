@@ -1,0 +1,47 @@
+(* A3 (PREREGISTRATION_V15 section 4): BOOT-COUNTER VARIANT, ProVerif 2.05.
+   Alert id = (boot, epoch, seq): the car keeps a boot counter in non-volatile memory, one write per boot. The counter is modelled as a fresh name per boot (the assumption: the write succeeds
+   and the counter never wraps; the same assumption as in formal/crash_alert_fresh_bootctr.spthy). The environment chooses the epoch at every boot, so reboots inside one second are covered
+   and the number of boots is unbounded (replication).
+   EXPECTED: the query is true (proved), with no timing assumption. *)
+
+free c: channel.
+fun kdf(bitstring, bitstring): bitstring.
+fun mac(bitstring, bitstring): bitstring.
+fun mkb(bitstring, bitstring, bitstring): bitstring [data].
+const s1: bitstring.
+const s2: bitstring.
+free vehicle: bitstring.
+
+event CarSend(bitstring, bitstring, bitstring).
+event CarSendId(bitstring, bitstring).
+event BaseAccept(bitstring, bitstring).
+event Revealed(bitstring).
+
+query v: bitstring, a: bitstring, i1: bitstring, i2: bitstring;
+  event(CarSend(v, a, i1)) && event(CarSend(v, a, i2)) ==> i1 = i2.
+
+query v: bitstring, a: bitstring;
+  event(BaseAccept(v, a)) ==> (event(CarSendId(v, a)) || event(Revealed(v))).
+
+let Boot(km: bitstring, v: bitstring) =
+  new b: bitstring;              (* boot counter: one non-volatile write per boot *)
+  in(c, e: bitstring);
+  new i1: bitstring;
+  event CarSendId(v, mkb(b, e, s1));
+  event CarSend(v, mkb(b, e, s1), i1);
+  out(c, (v, mkb(b, e, s1), mac(kdf(km, v), (v, mkb(b, e, s1)))));
+  new i2: bitstring;
+  event CarSendId(v, mkb(b, e, s2));
+  event CarSend(v, mkb(b, e, s2), i2);
+  out(c, (v, mkb(b, e, s2), mac(kdf(km, v), (v, mkb(b, e, s2))))).
+
+let Base(km: bitstring) =
+  !( in(c, (v: bitstring, a: bitstring, t: bitstring));
+     if t = mac(kdf(km, v), (v, a)) then event BaseAccept(v, a) ).
+
+let Reveal(km: bitstring) =
+  !( in(c, w: bitstring); event Revealed(w); out(c, kdf(km, w)) ).
+
+process
+  new km: bitstring;
+  ( !Boot(km, vehicle) | Base(km) | Reveal(km) )

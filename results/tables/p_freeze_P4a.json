@@ -1,0 +1,38 @@
+{
+  "frozen_at": "2026-11-12 08:33",
+  "hypothesis": "P4a",
+  "margin": 0.005,
+  "model_files": {},
+  "rank": [
+    "peak_ax",
+    "peak_a",
+    "dur_above",
+    "peak_ay",
+    "horiz_share",
+    "energy",
+    "rms_a",
+    "peak_az",
+    "gyro_peak",
+    "peak_ratio_xy",
+    "kurtosis_a",
+    "crest",
+    "jerk_peak",
+    "post_quiet"
+  ],
+  "reference": {
+    "depth": 9,
+    "flash": 55119.6,
+    "k": 14,
+    "q": "float",
+    "trees": 10,
+    "val_ap": 0.9342621129081186
+  },
+  "selected": {
+    "depth": 8,
+    "flash": 20644.399999999998,
+    "k": 14,
+    "q": "q16",
+    "trees": 8,
+    "val_ap": 0.9299008008552437
+  }
+}

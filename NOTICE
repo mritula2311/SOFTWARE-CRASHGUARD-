@@ -1,0 +1,14 @@
+CrashGuard (software and data-science part)
+Copyright 2026 Mritula S
+
+The source code in this repository (src/, tests/, scripts/, Makefile, crashclip/, merge/) is licensed under the
+Apache License, Version 2.0 (see LICENSE). The licence covers code only.
+
+Data are NOT covered by the Apache-2.0 licence:
+- VZCrash (Hugging Face vzc-research-chapter/VZCrash, revision 42e1482d005c0e545379d6cfa4939486c9fe4249) is released
+  under CC BY-NC 4.0 (author reply recorded in docs/07_log/DECISIONS.md, 2026-11-12). It is not redistributed here. Artefacts
+  derived from it (the surrogate-generator parameters, audit lists and hashes) are released under CC BY-NC 4.0 with
+  attribution to the VZCrash authors (Bianconcini et al., arXiv 2606.06074).
+- NHTSA Vehicle Crash Test Database data keep their own terms (see docs/05_data_code/DATA_AND_CODE_STATEMENT.md). Raw NHTSA files
+  are not redistributed here.
+- Manufacturer data sheets are the property of their owners and are not redistributed.

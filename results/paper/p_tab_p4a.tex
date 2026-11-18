@@ -1,0 +1,10 @@
+% P4a: the configuration chosen on validation against the reference forest (10 trees, depth 9, 14 features, float). Flash and RAM are host arithmetic; the measured size is for the host, not an ESP32.
+\begin{tabular}{llllllllll}
+\toprule
+Model & Configuration & Flash estimate (bytes, analytical) & Measured host size (bytes, x86-64 -Os) & RAM estimate (bytes) & Validation AP & Test AP (de-duplicated) & Test AP (strict) & Recall at 1\% target & Recall at 5\% target \\
+\midrule
+reference & trees 10, depth 9, k 14, float & 55120 & 56004 & 76 & 0.9343 & 0.9383 & 0.9010 & 0.658 & 0.938 \\
+selected & trees 8, depth 8, k 14, q16 & 20644 & 21725 & 76 & 0.9299 & 0.9359 & 0.8982 & 0.647 & 0.936 \\
+AP loss, reference minus selected &  &  &  &  &  & 0.0023 [0.0013, 0.0036] & 0.0029 [0.0011, 0.0048] &  &  \\
+\bottomrule
+\end{tabular}

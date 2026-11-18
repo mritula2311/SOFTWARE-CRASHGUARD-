@@ -1,0 +1,79 @@
+tool: Proverif 2.05. Cryptographic protocol verifier, by Bruno Blanchet, Vincent Cheval, and Marc Sylvestre
+command: proverif formal/proverif/carid_bootctr_nowrite.pv
+Process 0 (that is, the initial process):
+{1}!
+{2}let v: bitstring = vehicle in
+{3}in(c, e: bitstring);
+{4}new i1: bitstring;
+{5}event CarSend(v,mkb(b0,e,s1),i1);
+{6}out(c, mkb(b0,e,s1))
+
+--  Process 1 (that is, process 0, with let moved downwards):
+{1}!
+{3}in(c, e: bitstring);
+{4}new i1: bitstring;
+{2}let v: bitstring = vehicle in
+{5}event CarSend(v,mkb(b0,e,s1),i1);
+{6}out(c, mkb(b0,e,s1))
+
+-- Query event(CarSend(v_1,a,i1_1)) && event(CarSend(v_1,a,i2)) ==> i1_1 = i2 in process 1.
+Translating the process into Horn clauses...
+Completing...
+Starting query event(CarSend(v_1,a,i1_1)) && event(CarSend(v_1,a,i2)) ==> i1_1 = i2
+goal reachable: attacker(e_1) -> event(CarSend(vehicle[],mkb(b0,e_1,s1),i1_1)) && event(CarSend(vehicle[],mkb(b0,e_1,s1),i1_2))
+Abbreviations:
+i1_1 = i1[e = e_1,!1 = @sid]
+i1_2 = i1[e = e_1,!1 = @sid_1]
+
+Derivation:
+Abbreviations:
+i1_1 = i1[e = e_1,!1 = @sid]
+i1_2 = i1[e = e_1,!1 = @sid_1]
+
+1. We assume as hypothesis that
+attacker(e_1).
+
+2. The message e_1 that the attacker may have by 1 may be received at input {3}.
+So event CarSend(vehicle[],mkb(b0,e_1,s1),i1_2) may be executed at {5}.
+event(CarSend(vehicle[],mkb(b0,e_1,s1),i1_2)).
+
+3. The message e_1 that the attacker may have by 1 may be received at input {3}.
+So event CarSend(vehicle[],mkb(b0,e_1,s1),i1_1) may be executed at {5}.
+event(CarSend(vehicle[],mkb(b0,e_1,s1),i1_1)).
+
+4. By 3, event(CarSend(vehicle[],mkb(b0,e_1,s1),i1_1)).
+By 2, event(CarSend(vehicle[],mkb(b0,e_1,s1),i1_2)).
+The goals are reached, combined in the following fact:
+event(CarSend(vehicle[],mkb(b0,e_1,s1),i1_1)) && event(CarSend(vehicle[],mkb(b0,e_1,s1),i1_2)).
+
+
+A more detailed output of the traces is available with
+  set traceDisplay = long.
+
+in(c, a) at {3} in copy a_1
+
+new i1: bitstring creating i1_3 at {4} in copy a_1
+
+event CarSend(vehicle,mkb(b0,a,s1),i1_3) at {5} in copy a_1 (goal)
+
+out(c, mkb(~M,~M_1,~M_2)) with ~M = b0, ~M_1 = a, ~M_2 = s1 at {6} in copy a_1
+
+in(c, a) at {3} in copy a_2
+
+new i1: bitstring creating i1_4 at {4} in copy a_2
+
+event CarSend(vehicle,mkb(b0,a,s1),i1_4) at {5} in copy a_2 (goal)
+
+The event CarSend(vehicle,mkb(b0,a,s1),i1_3) is executed at {5} in copy a_1.
+The event CarSend(vehicle,mkb(b0,a,s1),i1_4) is executed at {5} in copy a_2.
+A trace has been found.
+RESULT event(CarSend(v_1,a,i1_1)) && event(CarSend(v_1,a,i2)) ==> i1_1 = i2 is false.
+
+--------------------------------------------------------------
+Verification summary:
+
+Query event(CarSend(v_1,a,i1_1)) && event(CarSend(v_1,a,i2)) ==> i1_1 = i2 is false.
+
+--------------------------------------------------------------
+
+exit code: 0 ; wall time 0 s

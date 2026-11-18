@@ -1,0 +1,17 @@
+post-hoc choice,when,where logged,how it is handled
+X7 wide clipped-sample mask,after the preregistered X7 rule gave a poor initial result,docs/DECISIONS.md,EXPLORATORY; never counts toward H-X7
+H-X8 read as holding at both false-alarm targets,the preregistration does not say which target,docs/DECISIONS.md,the 1% and 5% results are both reported
+Two repeated records found among the 176 NHTSA tests,found by T13c after the tagged runs,docs/DECISIONS.md,tagged results not changed; T13c reports the comparison without them
+X2 crash mask corrected (label 0 is crash),after the initial run printed an impossible crash pass share,docs/DECISIONS.md,keys rewritten by the re-run; no result of the faulty run was used
+Fill + ridge named the primary N14 variant,after the earlier N14 results were seen,"docs/ALGORITHMS.md, docs/DECISIONS.md",stated next to every N14 headline number
+Burst scenario added to X6,after the N16 steady-state null result,docs/DECISIONS.md (S5),all burst results labelled exploratory; tuning and held-out bursts separated
+N14 saturation level made a tuned parameter; NHTSA split changed from test-number to vehicle group,after development and first results,"docs/DECISIONS.md, compliance W5",the grouped held-out set is not blind
+N15 decision rule tightened to the seed-averaged difference,after the seed-42 result was printed,"docs/DECISIONS.md, compliance W5",reported as no improvement found
+Window-level near-duplicate scan added,after the exact-hash audit; thresholds fixed in advance,"docs/DECISIONS.md (S2, T5)",primary test set not changed; sensitivity analysis
+M+ capped variant,after the N14 tail result,docs/EXPERIMENTS_EXTRA.md S4,EXPLORATORY; one variant only
+S9 class rule (report the class below plus a flag),defined before the S9 run; the UA-SCT idea was then chosen after S9 and S5 were seen,docs/PREREGISTRATION.md section 0,disclosed before the UA-SCT runs
+"UA-SCT preregistration written after S5, S9 and the SCT idea; addendum 1 written after the main UA-SCT results","after results of the main study were seen (T1 to T4, T6, T8 definitions)",docs/PREREGISTRATION.md section 0 and Addendum 1,the addendum lists what was seen
+Spaced-retry baseline P1b (S13),after the S5 tuning showed that spacing is the active ingredient,docs/EXPERIMENTS_EXTRA.md S13,decision rule fixed before the run
+"Bound sets of the protocol check split (REBB, REBC) and the in-flight copy semantics changed",after the first reboot bound set was truncated and after two modelling errors were found,docs/DECISIONS.md (Part C),reported as limits of the model
+Key-prefix collision repaired,after check_results reported errors,docs/DECISIONS.md,no number changed
+"T5, T7, T9, T10, T11, T12, T13 are exploratory by design",written in the closing-block prompt,this table,labelled EXPLORATORY in results.json

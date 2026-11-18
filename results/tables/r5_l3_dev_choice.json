@@ -1,0 +1,10 @@
+{
+ "chosen": 1,
+ "params": {
+  "t_mot": 0.3,
+  "l_gyro_ms": 30,
+  "retrain": true,
+  "alpha": 0.01
+ },
+ "rule": "V16 5.4: lowest validation recall loss against A; ties go to the lower active share"
+}
